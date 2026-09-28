@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "design": "design/cards/cycle_01/utilities/stability/SYSTEM.md",
+  "family": "stability_protection",
+  "values": {
+    "count": 6,
+    "restores_lost_color": false,
+    "role": "prevent or modify loss/persistence; includes support-bound Emergent Amplification",
+    "slots": [
+      {
+        "concept": "Color Guard",
+        "rank": "OPEN",
+        "effect": {
+          "operation": "absorb_next_degradation",
+          "amount": "OPEN"
+        }
+      },
+      {
+        "concept": "Prime Guard",
+        "rank": "OPEN",
+        "duration": "OPEN",
+        "timing": "OPEN",
+        "effect": {
+          "operation": "protect_next_eligible_degradation",
+          "object": "one Prime"
+        }
+      },
+      {
+        "concept": "Manifold Guard",
+        "rank": "OPEN",
+        "duration": "OPEN",
+        "timing": "OPEN",
+        "effect": {
+          "operation": "protect_next_eligible_degradation",
+          "object": "one Local Manifold"
+        }
+      },
+      {
+        "concept": "Shield Lock",
+        "rank": "OPEN",
+        "minimum_working_rank": "Blue",
+        "duration": "OPEN",
+        "effect": {
+          "operation": "temporarily_prevent_degradation",
+          "object": "existing Prime shield"
+        }
+      },
+      {
+        "concept": "Structural Anchor",
+        "rank": "OPEN",
+        "effect": {
+          "operation": "survive_next_otherwise_lethal_degradation",
+          "object": "one already-valid Local Manifold",
+          "survival_color": "Red",
+          "survival_charge": 1,
+          "bypasses_closure": false
+        }
+      },
+      {
+        "concept": "Emergent Amplification",
+        "rank": "OPEN",
+        "effect": {
+          "operation": "increase_active_emergent_charge",
+          "charge_delta": 1,
+          "maximum_color": "Violet",
+          "maximum_charge": 6,
+          "creates_field": false,
+          "changes_support_relation": false,
+          "makes_targetable": false,
+          "preserves_after_support_loss": false
+        }
+      }
+    ],
+    "excluded_concepts": [
+      "Coupling Stabilizer"
+    ]
+  }
+}

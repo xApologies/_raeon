@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "design": "design/topology/manifolds/SYSTEM.md",
+  "values": {
+    "qmo_inventory": {
+      "status": "SOURCE_IMPORT_REQUIRED",
+      "base_local_manifolds": 60,
+      "fusion_derived_local_manifolds": 343,
+      "emergent_fields": 1691,
+      "total_render_relevant": 2094,
+      "objects_imported": false
+    },
+    "mathematical_api": {
+      "outcomes": [
+        "VALID",
+        "TERMINATES",
+        "NOT_APPLICABLE",
+        "OPEN",
+        "UNTESTED"
+      ],
+      "missing_data_is_termination": false
+    }
+  }
+}

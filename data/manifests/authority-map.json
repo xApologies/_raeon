@@ -1,0 +1,482 @@
+{
+  "schema_version": 1,
+  "flow": [
+    "DESIGN",
+    "DATA",
+    "GAME",
+    "TESTS"
+  ],
+  "mathematics": "Mathematical legality authority; never overridden by downstream layers",
+  "development": "maturity/status/gates",
+  "provenance": "history/sources/decisions",
+  "content": "presentation assets",
+  "platform": "platform integration",
+  "current_specs": {
+    "ai": "design/ai/README.md",
+    "black-mode": "design/cards/black/black_mode/SYSTEM.md",
+    "black-primes": "design/cards/black/primes/SYSTEM.md",
+    "black": "design/cards/black/SYSTEM.md",
+    "black-utilities": "design/cards/black/utilities/SYSTEM.md",
+    "card-system": "design/cards/CARD_SYSTEM.md",
+    "cycle-01": "design/cards/cycle_01/CYCLE.md",
+    "field-generators": "design/cards/cycle_01/field_generators/SYSTEM.md",
+    "prime-fields": "design/cards/cycle_01/primes/SYSTEM.md",
+    "utility-activation": "design/cards/cycle_01/utilities/activation/SYSTEM.md",
+    "utility-draw_deck": "design/cards/cycle_01/utilities/draw_deck/SYSTEM.md",
+    "utility-recovery": "design/cards/cycle_01/utilities/recovery/SYSTEM.md",
+    "utility-sandbox_activation": "design/cards/cycle_01/utilities/sandbox_activation/SYSTEM.md",
+    "utility-stability": "design/cards/cycle_01/utilities/stability/SYSTEM.md",
+    "utilities": "design/cards/cycle_01/utilities/SYSTEM.md",
+    "utility-transduction": "design/cards/cycle_01/utilities/transduction/SYSTEM.md",
+    "collection": "design/collection/SYSTEM.md",
+    "economy": "design/economy/README.md",
+    "board": "design/game/board/SYSTEM.md",
+    "game": "design/game/GAME_DESIGN_DOCUMENT.md",
+    "match": "design/game/match/SYSTEM.md",
+    "progression": "design/game/progression/SYSTEM.md",
+    "multiplayer": "design/multiplayer/LOCAL_P2P.md",
+    "rendering": "design/rendering/SYSTEM.md",
+    "emergent-fields": "design/topology/emergent_fields/SYSTEM.md",
+    "generator-geometry": "design/topology/field_generators/SYSTEM.md",
+    "fusion": "design/topology/fusion/SYSTEM.md",
+    "manifolds": "design/topology/manifolds/SYSTEM.md",
+    "sandbox": "design/topology/sandbox/SYSTEM.md",
+    "transduction": "design/transduction/SYSTEM.md",
+    "ui-ux": "design/ui_ux/SYSTEM.md"
+  },
+  "modules": [
+    {
+      "module": "core-game",
+      "system": "game",
+      "design": "design/game/GAME_DESIGN_DOCUMENT.md",
+      "data": "data/game/product.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/core/README.md",
+      "tests": "tests/integration/README.md",
+      "development": "development/modules/core-game/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "turn-engine",
+      "system": "match",
+      "design": "design/game/match/SYSTEM.md",
+      "data": "data/game/match.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/match/README.md",
+      "tests": "tests/gameplay/README.md",
+      "development": "development/modules/turn-engine/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "board",
+      "system": "board",
+      "design": "design/game/board/SYSTEM.md",
+      "data": "data/board/presentation.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/board/README.md",
+      "tests": "tests/gameplay/sandbox/README.md",
+      "development": "development/modules/board/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "sandbox-domains",
+      "system": "sandbox",
+      "design": "design/topology/sandbox/SYSTEM.md",
+      "data": "data/topology/sandbox.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/sandbox/README.md",
+      "tests": "tests/gameplay/sandbox/README.md",
+      "development": "development/modules/sandbox-domains/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "card-system",
+      "system": "card-system",
+      "design": "design/cards/CARD_SYSTEM.md",
+      "data": "data/cycles/cycle_01/card-system.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/cards/README.md",
+      "tests": "tests/gameplay/cards/README.md",
+      "development": "development/modules/card-system/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "field-generators",
+      "system": "field-generators",
+      "design": "design/cards/cycle_01/field_generators/SYSTEM.md",
+      "data": "data/cycles/cycle_01/field_generators/status.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/cards/generators/README.md",
+      "tests": "tests/gameplay/cards/README.md",
+      "development": "development/modules/field-generators/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "qmo-engine",
+      "system": "manifolds",
+      "design": "design/topology/manifolds/SYSTEM.md",
+      "data": "data/qmo/inventory.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/qmo/README.md",
+      "tests": "tests/qmo/README.md",
+      "development": "development/modules/qmo-engine/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "chirality-fabric",
+      "system": "generator-geometry",
+      "design": "design/topology/field_generators/SYSTEM.md",
+      "data": "data/qmo/generators/status.json",
+      "mathematics": "mathematics/chirality/README.md",
+      "implementation": "game/qmo/README.md",
+      "tests": "tests/qmo/README.md",
+      "development": "development/modules/chirality-fabric/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "propagation-engine",
+      "system": "generator-geometry",
+      "design": "design/topology/field_generators/SYSTEM.md",
+      "data": "data/qmo/generators/status.json",
+      "mathematics": "mathematics/propagation/README.md",
+      "implementation": "game/qmo/README.md",
+      "tests": "tests/qmo/README.md",
+      "development": "development/modules/propagation-engine/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "manifold-closure",
+      "system": "manifolds",
+      "design": "design/topology/manifolds/SYSTEM.md",
+      "data": "data/qmo/manifolds/status.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/manifolds/README.md",
+      "tests": "tests/gameplay/manifolds/README.md",
+      "development": "development/modules/manifold-closure/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "fusion",
+      "system": "fusion",
+      "design": "design/topology/fusion/SYSTEM.md",
+      "data": "data/qmo/fusion/status.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/manifolds/README.md",
+      "tests": "tests/gameplay/manifolds/README.md",
+      "development": "development/modules/fusion/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "emergent-fields",
+      "system": "emergent-fields",
+      "design": "design/topology/emergent_fields/SYSTEM.md",
+      "data": "data/qmo/emergent/status.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/manifolds/README.md",
+      "tests": "tests/gameplay/manifolds/README.md",
+      "development": "development/modules/emergent-fields/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "transduction",
+      "system": "transduction",
+      "design": "design/transduction/SYSTEM.md",
+      "data": "data/cycles/cycle_01/utilities/transduction.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/transduction/README.md",
+      "tests": "tests/gameplay/transduction/README.md",
+      "development": "development/modules/transduction/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "prime-fields",
+      "system": "prime-fields",
+      "design": "design/cards/cycle_01/primes/SYSTEM.md",
+      "data": "data/cycles/cycle_01/primes/status.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/cards/primes/README.md",
+      "tests": "tests/gameplay/primes/README.md",
+      "development": "development/modules/prime-fields/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "utilities",
+      "system": "utilities",
+      "design": "design/cards/cycle_01/utilities/SYSTEM.md",
+      "data": "data/cycles/cycle_01/utilities/overview.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/cards/utilities/README.md",
+      "tests": "tests/gameplay/utilities/README.md",
+      "development": "development/modules/utilities/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "DESIGN"
+    },
+    {
+      "module": "deck-construction",
+      "system": "card-system",
+      "design": "design/cards/CARD_SYSTEM.md",
+      "data": "data/cycles/cycle_01/card-system.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/deck/README.md",
+      "tests": "tests/gameplay/cards/README.md",
+      "development": "development/modules/deck-construction/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "collection",
+      "system": "collection",
+      "design": "design/collection/SYSTEM.md",
+      "data": "data/collection/direction.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/collection/README.md",
+      "tests": "tests/integration/README.md",
+      "development": "development/modules/collection/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "card-shop",
+      "system": "economy",
+      "design": "design/economy/README.md",
+      "data": "data/collection/direction.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/shop/README.md",
+      "tests": "tests/integration/README.md",
+      "development": "development/modules/card-shop/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "black-rank",
+      "system": "black",
+      "design": "design/cards/black/SYSTEM.md",
+      "data": "data/black/design.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/cards/README.md",
+      "tests": "tests/gameplay/primes/README.md",
+      "development": "development/modules/black-rank/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "ai",
+      "system": "ai",
+      "design": "design/ai/README.md",
+      "data": "data/ai/direction.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/ai/README.md",
+      "tests": "tests/gameplay/README.md",
+      "development": "development/modules/ai/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "multiplayer",
+      "system": "multiplayer",
+      "design": "design/multiplayer/LOCAL_P2P.md",
+      "data": "data/multiplayer/direction.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/multiplayer/README.md",
+      "tests": "tests/multiplayer/README.md",
+      "development": "development/modules/multiplayer/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "rendering",
+      "system": "rendering",
+      "design": "design/rendering/SYSTEM.md",
+      "data": "data/render_specs/direction.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/rendering/README.md",
+      "tests": "tests/rendering/README.md",
+      "development": "development/modules/rendering/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "blender-pipeline",
+      "system": "rendering",
+      "design": "design/rendering/SYSTEM.md",
+      "data": "data/render_specs/direction.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/rendering/README.md",
+      "tests": "tests/rendering/README.md",
+      "development": "development/modules/blender-pipeline/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "gpu-runtime",
+      "system": "rendering",
+      "design": "design/rendering/SYSTEM.md",
+      "data": "data/render_specs/direction.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/rendering/README.md",
+      "tests": "tests/performance/README.md",
+      "development": "development/modules/gpu-runtime/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "ui-ux",
+      "system": "ui-ux",
+      "design": "design/ui_ux/SYSTEM.md",
+      "data": "data/board/presentation.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/ui/README.md",
+      "tests": "tests/gameplay/README.md",
+      "development": "development/modules/ui-ux/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "persistence",
+      "system": "match",
+      "design": "design/game/match/SYSTEM.md",
+      "data": "data/game/match.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/persistence/README.md",
+      "tests": "tests/integration/README.md",
+      "development": "development/modules/persistence/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    },
+    {
+      "module": "platform",
+      "system": "game",
+      "design": "design/game/GAME_DESIGN_DOCUMENT.md",
+      "data": "data/platform/targets.json",
+      "mathematics": "mathematics/README.md",
+      "implementation": "game/core/README.md",
+      "tests": "tests/integration/README.md",
+      "development": "development/modules/platform/README.md",
+      "provenance": "provenance/checkpoints/0004-repository-normalization.md",
+      "status": "OPEN"
+    }
+  ],
+  "utility_families": {
+    "transduction": {
+      "design": "design/cards/cycle_01/utilities/transduction/SYSTEM.md",
+      "data": "data/cycles/cycle_01/utilities/transduction.json",
+      "implementation": "game/cards/utilities/README.md",
+      "tests": "tests/gameplay/utilities/README.md"
+    },
+    "activation": {
+      "design": "design/cards/cycle_01/utilities/activation/SYSTEM.md",
+      "data": "data/cycles/cycle_01/utilities/activation.json",
+      "implementation": "game/cards/utilities/README.md",
+      "tests": "tests/gameplay/utilities/README.md"
+    },
+    "sandbox_activation": {
+      "design": "design/cards/cycle_01/utilities/sandbox_activation/SYSTEM.md",
+      "data": "data/cycles/cycle_01/utilities/sandbox_activation.json",
+      "implementation": "game/cards/utilities/README.md",
+      "tests": "tests/gameplay/utilities/README.md"
+    },
+    "draw_deck": {
+      "design": "design/cards/cycle_01/utilities/draw_deck/SYSTEM.md",
+      "data": "data/cycles/cycle_01/utilities/draw_deck.json",
+      "implementation": "game/cards/utilities/README.md",
+      "tests": "tests/gameplay/utilities/README.md"
+    },
+    "graveyard_recovery": {
+      "design": "design/cards/cycle_01/utilities/recovery/SYSTEM.md",
+      "data": "data/cycles/cycle_01/utilities/recovery.json",
+      "implementation": "game/cards/utilities/README.md",
+      "tests": "tests/gameplay/utilities/README.md"
+    },
+    "stability_protection": {
+      "design": "design/cards/cycle_01/utilities/stability/SYSTEM.md",
+      "data": "data/cycles/cycle_01/utilities/stability.json",
+      "implementation": "game/cards/utilities/README.md",
+      "tests": "tests/gameplay/utilities/README.md"
+    }
+  },
+  "redirects": [
+    {
+      "from": "design/cards/BLACK_RANK.md",
+      "to": "design/cards/black/SYSTEM.md",
+      "method": "relocate content and retain historical-link redirect"
+    },
+    {
+      "from": "design/progression/BLACK_MODE.md",
+      "to": "design/cards/black/black_mode/SYSTEM.md",
+      "method": "relocate content and retain historical-link redirect"
+    },
+    {
+      "from": "design/systems/RENDERING.md",
+      "to": "design/rendering/SYSTEM.md",
+      "method": "relocate content and retain historical-link redirect"
+    },
+    {
+      "from": "design/ui-ux/README.md",
+      "to": "design/ui_ux/SYSTEM.md",
+      "method": "relocate content and retain historical-link redirect"
+    },
+    {
+      "from": "design/progression/README.md",
+      "to": "design/collection/SYSTEM.md",
+      "method": "relocate content and retain historical-link redirect"
+    },
+    {
+      "from": "design/cards/cycle_01/UTILITIES.md",
+      "to": "design/cards/cycle_01/utilities/SYSTEM.md"
+    },
+    {
+      "from": "design/game/ACCEPTED_RULES.md",
+      "to": "design/game/GAME_DESIGN_DOCUMENT.md"
+    },
+    {
+      "from": "design/game/README.md",
+      "to": "design/game/GAME_DESIGN_DOCUMENT.md"
+    },
+    {
+      "from": "design/cards/cycle_01/README.md",
+      "to": "design/cards/cycle_01/CYCLE.md"
+    },
+    {
+      "from": "game/primes/README.md",
+      "to": "game/cards/primes/README.md"
+    },
+    {
+      "from": "game/utilities/README.md",
+      "to": "game/cards/utilities/README.md"
+    },
+    {
+      "from": "game/manifold/README.md",
+      "to": "game/manifolds/README.md"
+    },
+    {
+      "from": "data/render-specs/README.md",
+      "to": "data/render_specs/README.md"
+    },
+    {
+      "from": "data/cards/utilities/README.md",
+      "to": "data/cycles/cycle_01/utilities/README.md"
+    },
+    {
+      "from": "data/cards/generators/README.md",
+      "to": "data/cycles/cycle_01/field_generators/README.md"
+    },
+    {
+      "from": "data/cards/primes/README.md",
+      "to": "data/cycles/cycle_01/primes/README.md"
+    }
+  ]
+}

@@ -1,11 +1,12 @@
-# Tests
+# Validation and system tests
 
-Only repository/design-data validators exist; these are not game-system tests.
+Repository validators are implemented; game-system tests remain UNTESTED boundaries. No placeholder claims to test gameplay.
 
 ```sh
 node tools/validators/validate-bootstrap.mjs
 node tools/validators/validate-design-state.mjs
-node --test tests/regression/bootstrap-validator.test.mjs tests/regression/design-state-validator.test.mjs
+node tools/validators/validate-normalization.mjs
+node --test tests/regression/*.test.mjs
 ```
 
-Requires Node and Git. Bootstrap regressions use temporary copies of this repository; design regressions mutate structured data to verify rejection of contradictory rules and false completion. No fake gameplay tests exist. Mathematics, QMO closure, balance, Blender/GPU, AI and multiplayer correctness remain unvalidated. See [CONTRIBUTING.md](../CONTRIBUTING.md).
+System boundaries: unit, integration, regression, gameplay/cards, gameplay/sandbox, gameplay/manifolds, gameplay/transduction, gameplay/primes, gameplay/utilities, qmo, rendering, multiplayer, adversarial and performance. [Authority map](../data/manifests/authority-map.json) links each to upstream design/data. Checks do not validate QMO mathematics, balance, final timing, rendering, AI or multiplayer correctness.

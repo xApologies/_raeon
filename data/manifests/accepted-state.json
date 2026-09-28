@@ -1,195 +1,18 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
+  "current_design_checkpoint": "0004",
   "authority": "GAME_CANON",
   "source": "provenance/sources/bootstrap-request.txt",
+  "sources": [
+    "provenance/sources/bootstrap-request.txt",
+    "provenance/sources/current-state-recovery-0002.txt",
+    "provenance/sources/recovery-0003-block-2.txt",
+    "provenance/sources/recovery-0003-block-3.txt"
+  ],
   "production": {
     "phase": "PREPRODUCTION",
     "external_prototyping": "Substantial mathematical/system prototyping exists externally and awaits repository import.",
     "vertical_slice_complete": false
-  },
-  "cycle_01": {
-    "ordinary_cards": {
-      "field_generators": 120,
-      "prime_fields": 30,
-      "utilities": 50,
-      "total": 200
-    },
-    "constructed_deck_size": 60,
-    "normal_copy_limits": {
-      "field_generator": 2,
-      "utility": 3
-    },
-    "prime_identity": "unique",
-    "active_prime_positions": 3,
-    "catalog_status": "STRUCTURE_ACCEPTED_DETAILS_OPEN",
-    "utility_domains": {
-      "transduction": 18,
-      "activation": 7,
-      "sandbox_activation": 6,
-      "draw_deck": 7,
-      "graveyard_recovery": 6,
-      "stability_protection": 6
-    },
-    "copy_rule_scope": "card identity",
-    "additional_color_uniqueness_rule": false
-  },
-  "colors": {
-    "none": 0,
-    "Red": 1,
-    "Orange": 2,
-    "Yellow": 3,
-    "Green": 4,
-    "Blue": 5,
-    "Violet": 6,
-    "White": 7,
-    "Black": 8
-  },
-  "field_generators": {
-    "maximum_rank": "White",
-    "black_allowed": false
-  },
-  "sandbox": {
-    "permanent_start": 3,
-    "permanent_minimum": 3,
-    "temporary_domains_allowed": true,
-    "independent_extraction_after_commitment": false,
-    "whole_domain_merge_fusion_allowed": true,
-    "topology_basis": "participating Generator geometry, not Sandbox provenance",
-    "permanent_universal": true,
-    "permanent_uses_temporary_colored_capacity": false,
-    "temporary_capacity": {
-      "Red": 3,
-      "Orange": 4,
-      "Yellow": 5,
-      "Green": 6,
-      "Blue": 7,
-      "Violet": 8
-    },
-    "temporary_capacity_formula": "ColorCharge + 2, Red through Violet only",
-    "capacity_guarantees_closure": false,
-    "over_capacity_commitment_allowed": false,
-    "temporary_destruction_expiry": "OPEN"
-  },
-  "local_manifold": {
-    "closure_required_before_color": true,
-    "closed_generator_count_to_color": {
-      "3": "Red",
-      "4": "Orange",
-      "5": "Yellow",
-      "6": "Green",
-      "7": "Blue",
-      "8": "Violet"
-    },
-    "base_basis": {
-      "Red": 15,
-      "Orange": 13,
-      "Yellow": 11,
-      "Green": 9,
-      "Blue": 7,
-      "Violet": 5
-    },
-    "base_total": 60,
-    "basis_is_complete_recursive_closure": false
-  },
-  "qmo_inventory": {
-    "status": "SOURCE_IMPORT_REQUIRED",
-    "base_local_manifolds": 60,
-    "fusion_derived_local_manifolds": 343,
-    "emergent_fields": 1691,
-    "total_render_relevant": 2094,
-    "objects_imported": false
-  },
-  "mathematical_api": {
-    "outcomes": [
-      "VALID",
-      "TERMINATES",
-      "NOT_APPLICABLE",
-      "OPEN",
-      "UNTESTED"
-    ],
-    "missing_data_is_termination": false
-  },
-  "black": {
-    "rank": 8,
-    "ordinary_deck_legal": true,
-    "crafting": "extremely difficult/expensive endgame crafted cards",
-    "prime_identities": 3,
-    "utilities_exist": true,
-    "field_generators_exist": false,
-    "all_black_deck": {
-      "primes": 3,
-      "utilities": 57,
-      "total": 60
-    },
-    "legal_all_black_unlocks_hidden_mode": true,
-    "fourth_prime": {
-      "kind": "emergent/supported Prime",
-      "deck_card": false,
-      "availability": "true while all three supporting Black Primes remain alive; false if any dies",
-      "detailed_behavior": "OPEN"
-    },
-    "design_philosophy": {
-      "authority": "GAME_CANON",
-      "rank_above_white": true,
-      "bypasses_qmo_legality": false,
-      "exceptional_efficiency_or_setup_bypass_allowed": true,
-      "result_must_be_legal": true,
-      "black_mode_only": false,
-      "utility_catalog_outside_ordinary_cycle_01": true,
-      "final_utility_catalog": "OPEN"
-    },
-    "working_concepts": [
-      {
-        "working_name": "Shield of the Abyss",
-        "authority": "PROVISIONAL",
-        "status": "WORKING DESIGN",
-        "rank": "Black",
-        "final_printed_card": false,
-        "concept": {
-          "shield_charge": 8,
-          "lower_rank_prime_eligible": true,
-          "prime_identity_unchanged": true
-        },
-        "example": "Yellow Prime receives a Black shield while remaining its original Prime identity",
-        "wording": "OPEN",
-        "timing": "OPEN",
-        "cost": "OPEN"
-      },
-      {
-        "working_name": "Topaz Lake",
-        "authority": "PROVISIONAL",
-        "status": "WORKING DESIGN",
-        "rank": "Black",
-        "final_printed_card": false,
-        "concept": {
-          "manifest_color": "Yellow",
-          "bypasses_ordinary_generator_setup": true,
-          "requires_already_defined_legal_qmo": true,
-          "makes_illegal_geometry_legal": false
-        },
-        "target_qmo": "OPEN",
-        "timing": "OPEN",
-        "lifetime": "OPEN",
-        "implementation": "OPEN"
-      }
-    ],
-    "fourth_prime_condition": {
-      "authority": "GAME_CANON",
-      "operator": "AND",
-      "required_alive_flags": [
-        "BlackPrime1.alive",
-        "BlackPrime2.alive",
-        "BlackPrime3.alive"
-      ],
-      "false_result": "inaccessible",
-      "false_result_requires_destruction": false,
-      "reevaluate_if_future_legal_mechanics_restore_all_supports": true,
-      "authorizes_prime_resurrection": false
-    }
-  },
-  "platforms": {
-    "priority": "WINDOWS DESKTOP",
-    "secondary": "iPad / iPadOS"
   },
   "source_import_required": [
     "Genesis mathematics",
@@ -230,750 +53,135 @@
     "Utility ID ordering/assignment (UT-001 through UT-050)",
     "Turn/match rules explicitly listed in turn_match_open"
   ],
-  "sources": [
-    "provenance/sources/bootstrap-request.txt",
-    "provenance/sources/current-state-recovery-0002.txt",
-    "provenance/sources/recovery-0003-block-2.txt",
-    "provenance/sources/recovery-0003-block-3.txt"
-  ],
-  "current_design_checkpoint": "0003",
-  "governing_law": {
-    "statement": "THE MATHEMATICS IS THE PERMISSION SYSTEM.",
-    "qmo_determines_mathematical_legality": true,
-    "utilities_override_closure": false,
-    "rendering_determines_legality": false
-  },
-  "color_interpretation": {
-    "zero": "no active color / zero charge",
-    "direct_effects": "literal numerical magnitude",
-    "non_color_utilities": "may express approximate rank / rarity / strategic power",
-    "rank_always_equals_resource_cost": false
-  },
-  "emergent_fields": {
-    "directly_attackable": false,
-    "directly_destroyable": false,
-    "independently_targetable": false,
-    "required_support_loss": "inaccessible / gone according to support relation",
-    "amplification_preserves_support_dependency": true
-  },
-  "utility_structure": {
-    "authority": "GAME_CANON",
-    "status": "DESIGN STRUCTURE ACCEPTED",
-    "module_status": "DESIGN",
-    "total_slots": 50,
-    "final_card_catalog": false,
-    "final_ids": "OPEN",
-    "labels": "Structural concepts/positions, not finalized card names or runtime card IDs",
-    "remaining_work": [
-      "Final names",
-      "Final flavor",
-      "Final IDs",
-      "Exact wording",
-      "Unresolved ranks",
-      "Exact targeting",
-      "Exact timing",
-      "Exact duration",
-      "Balance testing",
-      "Implementation",
-      "Integration",
-      "Gameplay testing",
-      "Performance where applicable",
-      "Final release validation"
-    ],
-    "families": {
-      "transduction": {
-        "count": 18,
-        "restore": [
-          {
-            "rank": "Red",
-            "charge_delta": 1
-          },
-          {
-            "rank": "Orange",
-            "charge_delta": 2
-          },
-          {
-            "rank": "Yellow",
-            "charge_delta": 3
-          },
-          {
-            "rank": "Green",
-            "charge_delta": 4
-          },
-          {
-            "rank": "Blue",
-            "charge_delta": 5
-          },
-          {
-            "rank": "Violet",
-            "charge_delta": 6
-          }
-        ],
-        "degrade": [
-          {
-            "rank": "Red",
-            "charge_delta": -1
-          },
-          {
-            "rank": "Orange",
-            "charge_delta": -2
-          },
-          {
-            "rank": "Yellow",
-            "charge_delta": -3
-          },
-          {
-            "rank": "Green",
-            "charge_delta": -4
-          },
-          {
-            "rank": "Blue",
-            "charge_delta": -5
-          },
-          {
-            "rank": "Violet",
-            "charge_delta": -6
-          }
-        ],
-        "universal": [
-          {
-            "rank": "Orange",
-            "magnitude": 1,
-            "choices": [
-              "RESTORE",
-              "DEGRADE"
-            ],
-            "choice_time": "resolution"
-          },
-          {
-            "rank": "Yellow",
-            "magnitude": 2,
-            "choices": [
-              "RESTORE",
-              "DEGRADE"
-            ],
-            "choice_time": "resolution"
-          },
-          {
-            "rank": "Green",
-            "magnitude": 3,
-            "choices": [
-              "RESTORE",
-              "DEGRADE"
-            ],
-            "choice_time": "resolution"
-          },
-          {
-            "rank": "Blue",
-            "magnitude": 4,
-            "choices": [
-              "RESTORE",
-              "DEGRADE"
-            ],
-            "choice_time": "resolution"
-          },
-          {
-            "rank": "Violet",
-            "magnitude": 5,
-            "choices": [
-              "RESTORE",
-              "DEGRADE"
-            ],
-            "choice_time": "resolution"
-          },
-          {
-            "rank": "White",
-            "magnitude": 6,
-            "choices": [
-              "RESTORE",
-              "DEGRADE"
-            ],
-            "choice_time": "resolution"
-          }
-        ],
-        "red_universal": false,
-        "dedicated_white_restore_degrade": false
-      },
-      "activation": {
-        "count": 7,
-        "ranks": [
-          "Red",
-          "Orange",
-          "Yellow",
-          "Green",
-          "Blue",
-          "Violet",
-          "White"
-        ],
-        "ordinary_use": {
-          "from": "READY",
-          "to": "USED"
-        },
-        "normal_refresh": {
-          "from": "USED",
-          "to": "READY",
-          "timing": "OPEN"
-        },
-        "effect": {
-          "from": "USED",
-          "to": "READY",
-          "timing": "early",
-          "eligibility": "already-earned legal resource/object; exact eligibility OPEN"
-        },
-        "creates_color": false,
-        "creates_qmo_legality": false,
-        "per_rank_behavior": "OPEN"
-      },
-      "sandbox_activation": {
-        "count": 6,
-        "ranks": [
-          "Red",
-          "Orange",
-          "Yellow",
-          "Green",
-          "Blue",
-          "Violet"
-        ],
-        "capacity_ref": "sandbox.temporary_capacity",
-        "permanent_exempt": true,
-        "identity_copy_limit_ref": "cycle_01.normal_copy_limits.utility",
-        "color_uniqueness_rule": false,
-        "destruction_expiry": "OPEN"
-      },
-      "draw_deck": {
-        "count": 7,
-        "simple_rank_ladder": false,
-        "raw_draw_maximum": 3,
-        "graveyard_retrieval": false,
-        "hand_size_maximum": "OPEN",
-        "overflow_behavior": "OPEN",
-        "slots": [
-          {
-            "concept": "Draw 1",
-            "working_rank": {
-              "value": "Orange",
-              "authority": "PROVISIONAL",
-              "acceptance": "accepted current working design"
-            },
-            "effect": {
-              "operation": "draw",
-              "count": 1
-            }
-          },
-          {
-            "concept": "Draw 2",
-            "working_rank": {
-              "value": "Green",
-              "authority": "PROVISIONAL",
-              "acceptance": "accepted current working design"
-            },
-            "effect": {
-              "operation": "draw",
-              "count": 2
-            }
-          },
-          {
-            "concept": "Draw 3",
-            "working_rank": {
-              "value": "Violet",
-              "authority": "PROVISIONAL",
-              "acceptance": "accepted current working design"
-            },
-            "effect": {
-              "operation": "draw",
-              "count": 3
-            }
-          },
-          {
-            "concept": "Survey",
-            "working_rank": {
-              "value": "Yellow",
-              "authority": "PROVISIONAL",
-              "acceptance": "accepted current working design"
-            },
-            "effect": {
-              "operation": "survey",
-              "look_top": 3,
-              "return_to": "deck top",
-              "order": "any",
-              "direct_card_advantage": 0
-            }
-          },
-          {
-            "concept": "Selection",
-            "working_rank": {
-              "value": "Green",
-              "authority": "PROVISIONAL",
-              "acceptance": "accepted current working design"
-            },
-            "effect": {
-              "operation": "select",
-              "look_top": 3,
-              "take_to_hand": 1,
-              "remainder_to": "deck bottom",
-              "remainder_order": "OPEN"
-            }
-          },
-          {
-            "concept": "Exchange",
-            "working_rank": {
-              "value": "Blue",
-              "authority": "PROVISIONAL",
-              "acceptance": "accepted current working design"
-            },
-            "effect": {
-              "operation": "exchange",
-              "discard_from": "hand",
-              "discard_count": "any number",
-              "draw_count": "same number discarded",
-              "net_hand_count_change": 0,
-              "interacts_with_recovery": true
-            }
-          },
-          {
-            "concept": "Deep Survey",
-            "working_rank": {
-              "value": "White",
-              "authority": "PROVISIONAL",
-              "acceptance": "accepted current working design"
-            },
-            "effect": {
-              "operation": "deep_survey",
-              "look_top": 7,
-              "take_to_hand": 1,
-              "remainder": "shuffle back into deck",
-              "unrestricted_exact_card_tutor": false
-            }
-          }
-        ]
-      },
-      "graveyard_recovery": {
-        "count": 6,
-        "source": "Graveyard",
-        "prime_recovery_allowed": false,
-        "automatically_reconstructs_manifold": false,
-        "recovered_generators_require_normal_use_and_legal_topology": true,
-        "rank_meaning": "rarity/power, not direct color magnitude",
-        "slots": [
-          {
-            "concept": "Recover 1 Field Generator",
-            "working_rank": {
-              "value": "Yellow",
-              "authority": "PROVISIONAL",
-              "acceptance": "accepted current working design"
-            },
-            "effect": {
-              "card_type": "Field Generator",
-              "count": 1,
-              "destination": "hand"
-            }
-          },
-          {
-            "concept": "Recover 2 Field Generators",
-            "working_rank": {
-              "value": "Blue",
-              "authority": "PROVISIONAL",
-              "acceptance": "accepted current working design"
-            },
-            "effect": {
-              "card_type": "Field Generator",
-              "count": 2,
-              "destination": "hand"
-            }
-          },
-          {
-            "concept": "Recover 3 Field Generators",
-            "working_rank": {
-              "value": "White",
-              "authority": "PROVISIONAL",
-              "acceptance": "accepted current working design"
-            },
-            "effect": {
-              "card_type": "Field Generator",
-              "count": 3,
-              "destination": "hand"
-            }
-          },
-          {
-            "concept": "Recover 1 Utility",
-            "working_rank": {
-              "value": "Green",
-              "authority": "PROVISIONAL",
-              "acceptance": "accepted current working design"
-            },
-            "effect": {
-              "card_type": "Utility",
-              "count": 1,
-              "destination": "hand"
-            }
-          },
-          {
-            "concept": "Recover 1 non-Prime",
-            "working_rank": {
-              "value": "Blue",
-              "authority": "PROVISIONAL",
-              "acceptance": "accepted current working design"
-            },
-            "effect": {
-              "card_type": "non-Prime",
-              "count": 1,
-              "destination": "hand"
-            }
-          },
-          {
-            "concept": "Recover up to 3 to deck",
-            "working_rank": {
-              "value": "Violet",
-              "authority": "PROVISIONAL",
-              "acceptance": "accepted current working design"
-            },
-            "effect": {
-              "card_type": "non-Prime",
-              "maximum_count": 3,
-              "destination": "deck top",
-              "order": "any chosen"
-            }
-          }
-        ]
-      },
-      "stability_protection": {
-        "count": 6,
-        "restores_lost_color": false,
-        "role": "prevent or modify loss/persistence; includes support-bound Emergent Amplification",
-        "slots": [
-          {
-            "concept": "Color Guard",
-            "rank": "OPEN",
-            "effect": {
-              "operation": "absorb_next_degradation",
-              "amount": "OPEN"
-            }
-          },
-          {
-            "concept": "Prime Guard",
-            "rank": "OPEN",
-            "duration": "OPEN",
-            "timing": "OPEN",
-            "effect": {
-              "operation": "protect_next_eligible_degradation",
-              "object": "one Prime"
-            }
-          },
-          {
-            "concept": "Manifold Guard",
-            "rank": "OPEN",
-            "duration": "OPEN",
-            "timing": "OPEN",
-            "effect": {
-              "operation": "protect_next_eligible_degradation",
-              "object": "one Local Manifold"
-            }
-          },
-          {
-            "concept": "Shield Lock",
-            "rank": "OPEN",
-            "minimum_working_rank": "Blue",
-            "duration": "OPEN",
-            "effect": {
-              "operation": "temporarily_prevent_degradation",
-              "object": "existing Prime shield"
-            }
-          },
-          {
-            "concept": "Structural Anchor",
-            "rank": "OPEN",
-            "effect": {
-              "operation": "survive_next_otherwise_lethal_degradation",
-              "object": "one already-valid Local Manifold",
-              "survival_color": "Red",
-              "survival_charge": 1,
-              "bypasses_closure": false
-            }
-          },
-          {
-            "concept": "Emergent Amplification",
-            "rank": "OPEN",
-            "effect": {
-              "operation": "increase_active_emergent_charge",
-              "charge_delta": 1,
-              "maximum_color": "Violet",
-              "maximum_charge": 6,
-              "creates_field": false,
-              "changes_support_relation": false,
-              "makes_targetable": false,
-              "preserves_after_support_loss": false
-            }
-          }
-        ],
-        "excluded_concepts": [
-          "Coupling Stabilizer"
-        ]
-      }
+  "authority_map": "data/manifests/authority-map.json",
+  "datasets": {
+    "cards": {
+      "path": "data/cycles/cycle_01/card-system.json",
+      "keys": [
+        "cycle_01",
+        "colors",
+        "color_interpretation"
+      ]
     },
-    "catalog_formalization": "PARTIALLY FORMALIZED",
-    "implementation_ready": false,
-    "balance_status": "UNTESTED",
-    "gameplay_validation": "UNTESTED",
-    "runtime_status": "OPEN / UNIMPLEMENTED",
-    "identifier_direction": {
-      "range": "UT-001 through UT-050",
-      "assignment_status": "OPEN",
-      "ordering_convention": "OPEN",
-      "assigned_ids": []
+    "generators": {
+      "path": "data/cycles/cycle_01/field_generators/status.json",
+      "keys": [
+        "field_generators"
+      ]
+    },
+    "sandbox": {
+      "path": "data/topology/sandbox.json",
+      "keys": [
+        "sandbox"
+      ]
+    },
+    "manifolds": {
+      "path": "data/qmo/manifolds/status.json",
+      "keys": [
+        "local_manifold"
+      ]
+    },
+    "qmo": {
+      "path": "data/qmo/inventory.json",
+      "keys": [
+        "qmo_inventory",
+        "mathematical_api"
+      ]
+    },
+    "emergent": {
+      "path": "data/qmo/emergent/status.json",
+      "keys": [
+        "emergent_fields"
+      ]
+    },
+    "black": {
+      "path": "data/black/design.json",
+      "keys": [
+        "black",
+        "black_mode"
+      ]
+    },
+    "progression": {
+      "path": "data/collection/direction.json",
+      "keys": [
+        "long_term_direction"
+      ]
+    },
+    "product": {
+      "path": "data/game/product.json",
+      "keys": [
+        "product_intent",
+        "governing_law"
+      ]
+    },
+    "match": {
+      "path": "data/game/match.json",
+      "keys": [
+        "turn_match_open"
+      ]
+    },
+    "ai": {
+      "path": "data/ai/direction.json",
+      "keys": [
+        "ai_direction"
+      ]
+    },
+    "multiplayer": {
+      "path": "data/multiplayer/direction.json",
+      "keys": [
+        "multiplayer_direction"
+      ]
+    },
+    "rendering": {
+      "path": "data/render_specs/direction.json",
+      "keys": [
+        "rendering_direction"
+      ]
+    },
+    "board": {
+      "path": "data/board/presentation.json",
+      "keys": [
+        "board_presentation"
+      ]
+    },
+    "platform": {
+      "path": "data/platform/targets.json",
+      "keys": [
+        "platforms"
+      ]
+    },
+    "effect-schema": {
+      "path": "data/schemas/effect-direction.json",
+      "keys": [
+        "card_effect_direction"
+      ]
+    },
+    "cycle-production": {
+      "path": "data/cycles/production.json",
+      "keys": [
+        "cycle_production_direction"
+      ]
+    },
+    "utilities": {
+      "path": "data/cycles/cycle_01/utilities/overview.json",
+      "keys": [
+        "utility_structure",
+        "utility_clarifications"
+      ]
     }
   },
-  "long_term_direction": {
-    "authority": "PROVISIONAL",
-    "acceptance": "current design direction, not finalized implementation",
-    "long_term_collection": true,
-    "earn_progression_and_credits_through_play": true,
-    "purchase_of_gameplay_credits_required": false,
-    "future_cycles_possible": true,
-    "black_cards": "extremely difficult/expensive crafted endgame cards",
-    "duplicates_have_long_term_value_including_black_crafting": true,
-    "player_to_player_credit_wagering": false,
-    "pvp_rewards": "may grant game-generated progression/credits; exact rewards OPEN",
-    "open_details": [
-      "Crafting recipes",
-      "Credit values",
-      "Pack probabilities",
-      "Economy rates",
-      "Release pricing",
-      "Exact PvP rewards",
-      "Pack sizes",
-      "Credit costs",
-      "Reward rates"
-    ],
-    "monetization_implemented": false,
-    "starting_access": "sufficient to play",
-    "credit_use": "in-game card shop / pack-opening collection loop",
-    "collect_cycle_through_play": true,
-    "pack_size": "OPEN",
-    "credit_costs": "OPEN",
-    "reward_rates": "OPEN",
-    "gameplay_credit_bundles": false,
-    "subscription_dependent_gameplay": false,
-    "pay_to_win_credit_purchasing": false,
-    "pricing_direction": "inexpensive, player-friendly releases",
-    "exact_store_price": "OPEN",
-    "commercial_changes_require_explicit_approval": true
+  "utility_families": {
+    "transduction": "data/cycles/cycle_01/utilities/transduction.json",
+    "activation": "data/cycles/cycle_01/utilities/activation.json",
+    "sandbox_activation": "data/cycles/cycle_01/utilities/sandbox_activation.json",
+    "draw_deck": "data/cycles/cycle_01/utilities/draw_deck.json",
+    "graveyard_recovery": "data/cycles/cycle_01/utilities/recovery.json",
+    "stability_protection": "data/cycles/cycle_01/utilities/stability.json"
   },
-  "product_intent": {
-    "authority": "PROVISIONAL",
-    "session_style": "compact strategic game for short sessions, including brief matches while waiting or traveling",
-    "exact_match_duration": "OPEN",
-    "depth_sources": [
-      "deck construction",
-      "Field Generator placement",
-      "Sandbox configuration",
-      "mathematical closure",
-      "manifold discovery",
-      "color transduction",
-      "Prime management",
-      "Activation timing",
-      "fusion",
-      "emergent fields",
-      "card draw/selection",
-      "graveyard recovery",
-      "protection/stability",
-      "long-term collection",
-      "hidden Black progression"
-    ],
-    "approximate_session_target_minutes": 15,
-    "hard_duration_guarantee": false,
-    "action_level_understandability": true
-  },
-  "utility_clarifications": {
-    "authority": "GAME_CANON",
-    "draw_deck_composition": {
-      "raw_draw": 3,
-      "information_selection": 3,
-      "hand_cycling": 1
-    },
-    "survey_effect_hand_count_change": 0,
-    "selection_is_unrestricted_tutor": false,
-    "exchange": {
-      "discard_destination": "Graveyard",
-      "discard_n_draw_n": true,
-      "effect_net_hand_count_change": 0
-    },
-    "recovery_to_deck": {
-      "immediate_direct_card_advantage": false,
-      "may_combine_with_draw": true
-    },
-    "prime_guard_changes_qmo_identity": false,
-    "manifold_guard_can_close_invalid_geometry": false,
-    "emergent_amplification_changes_closure": false,
-    "emergent_amplification_changes_support_identity": false,
-    "emergent_amplification_overflow": "OPEN",
-    "coupling_stabilizer_rejection_reason": "Direct Emergent protection conflicts with or redundantly complicates the non-targetable, support-dependent model."
-  },
-  "black_mode": {
-    "authority": "PROVISIONAL",
-    "status": "ACCEPTED DESIGN DIRECTION / OPEN IMPLEMENTATION",
-    "unlock_condition_ref": "black.legal_all_black_unlocks_hidden_mode",
-    "hidden": true,
-    "ordinary_onboarding_progress_bar": false,
-    "intent": "Easter egg / long-term mastery reward; extreme/endgame difficulty around a legal full Black deck",
-    "opponent_uses_same_black_ecosystem": true,
-    "ai_may_violate_rules": false,
-    "challenge_sources": [
-      "Black card power",
-      "strong deck construction",
-      "strong strategic play",
-      "mastery of the same game systems"
-    ],
-    "exact_ai_behavior": "OPEN",
-    "production_priority": "later production concern"
-  },
-  "ai_direction": {
-    "authority": "PROVISIONAL",
-    "computer_opponents": "ACCEPTED DESIGN DIRECTION",
-    "multiple_difficulties": "ACCEPTED DESIGN DIRECTION",
-    "difficulty_basis": [
-      "strategy",
-      "deck construction",
-      "available cards",
-      "decision quality"
-    ],
-    "hidden_rules_violations": false,
-    "adaptive_player_modeling": {
-      "authority": "PROVISIONAL",
-      "status": "OPEN",
-      "implemented": false,
-      "ml_architecture": "OPEN"
-    },
-    "black_mode": "DESIGN DIRECTION / OPEN IMPLEMENTATION",
-    "implemented": false
-  },
-  "multiplayer_direction": {
-    "authority": "PROVISIONAL",
-    "status": "ACCEPTED DESIGN DIRECTION",
-    "model": "local peer-to-peer",
-    "host": "Device A hosts match state",
-    "join": "Device B joins",
-    "exchange": "compact actions/state",
-    "rendering": "each device renders locally",
-    "requires_centralized_gameplay_server_every_match": false,
-    "transmits_rendered_frames_as_gameplay_state": false,
-    "transport": "OPEN",
-    "matchmaking": "OPEN",
-    "competitive_balance_policy": "OPEN",
-    "black_cards_legal_in_normal_pvp": true,
-    "implemented": false
-  },
-  "rendering_direction": {
-    "authority": "CANON",
-    "pipeline": [
-      "QMO",
-      "deterministic RenderSpec",
-      "Blender procedural geometry",
-      "mesh",
-      "runtime GPU renderer",
-      "animated manifold"
-    ],
-    "qmo_defines_object": true,
-    "renderspec_defines_deterministic_visualization": true,
-    "rendering_changes_mathematical_legality": false,
-    "visual_qmo_conflict": "render is wrong; QMO does not change",
-    "higher_dimensional_state_possible": true,
-    "display": "explicit 3D projections/embeddings",
-    "blender_literally_renders_five_spatial_dimensions": false,
-    "possible_state_influences": [
-      "winding",
-      "phase",
-      "orientation",
-      "deformation",
-      "field-shell behavior",
-      "emissive flow",
-      "animation",
-      "topology-preserving motion"
-    ],
-    "projection_mathematics": "SOURCE_IMPORT_REQUIRED",
-    "qmo_renderspec_api_packages": "SOURCE_IMPORT_REQUIRED",
-    "implemented": false
-  },
-  "board_presentation": {
-    "authority": "PROVISIONAL",
-    "board_scale": "Sandboxes/manifolds occupy configuration positions",
-    "selection": "enter detailed Sandbox configuration view",
-    "detail_exposes": [
-      "committed Field Generators",
-      "construction geometry",
-      "configuration state"
-    ],
-    "return_to_board": "compact field representation",
-    "completed_manifold_intent": "coherent active field rather than unrelated card rectangles",
-    "exact_ui": "OPEN",
-    "camera": "OPEN",
-    "controls": "OPEN",
-    "platform_interaction_may_differ": true,
-    "platform_rules_identical": true
-  },
-  "turn_match_open": {
-    "starting_hand_size": "OPEN",
-    "maximum_hand_size": "OPEN",
-    "mulligan_rules": "OPEN",
-    "normal_draw_per_turn": "OPEN",
-    "turn_phases": "OPEN",
-    "normal_refresh_timing": "OPEN",
-    "first_player_rules": "OPEN",
-    "victory_condition": "OPEN",
-    "match_timer": "OPEN",
-    "temporary_sandbox_expiry": "OPEN",
-    "prime_timing": "OPEN",
-    "utility_timing_windows": "OPEN"
-  },
-  "card_effect_direction": {
-    "authority": "PROVISIONAL",
-    "human_readable_rules_text": true,
-    "machine_readable_effect_definitions": true,
-    "status": "schema direction, not final runtime schema",
-    "possible_fields": [
-      "id",
-      "family",
-      "rank_color",
-      "operator",
-      "magnitude",
-      "target_type",
-      "timing",
-      "duration",
-      "constraints",
-      "authority",
-      "status"
-    ],
-    "examples": [
-      {
-        "family": "TRANSDUCTION",
-        "operator": "RESTORE",
-        "rank_color": "YELLOW",
-        "magnitude": 3
-      },
-      {
-        "family": "DRAW_DECK",
-        "operator": "DRAW",
-        "rank_color": "VIOLET",
-        "magnitude": 3
-      }
-    ],
-    "unknown_values": "OPEN; no inferred defaults"
-  },
-  "cycle_production_direction": {
-    "authority": "CANON",
-    "steps": [
-      "seed",
-      "mathematical generation",
-      "Field Generator catalog",
-      "manifold/closure landscape",
-      "Prime design",
-      "Utility design",
-      "balance",
-      "RenderSpecs",
-      "assets",
-      "integration",
-      "testing",
-      "release"
-    ],
-    "existing_source_package": "SOURCE_IMPORT_REQUIRED"
+  "migration": {
+    "from_schema": 3,
+    "from_checkpoint": "0003",
+    "semantic_changes": false,
+    "baseline": "provenance/audits/0004-before-state.json"
   }
 }

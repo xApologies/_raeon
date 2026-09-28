@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {loadDesignState} from './load-design-state.mjs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
@@ -65,7 +66,7 @@ try {
   // Git cannot preserve the empty inbox; new checkouts create it locally after ignore validation.
   if (ignored.status === 0) fs.mkdirSync(path.join(root,'_inbox'), {recursive:true});
   check(fs.statSync(path.join(root,'_inbox')).isDirectory(), 'Local inbox directory missing');
-  const s = json('data/manifests/accepted-state.json');
+  const s = loadDesignState(root);
   same(s.authority,'GAME_CANON','Accepted state authority');
   same(s.production.phase,'PREPRODUCTION','Current whole-game phase must be PREPRODUCTION');
   same(s.production.vertical_slice_complete,false,'Vertical Slice cannot be complete');

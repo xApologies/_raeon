@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "design": "design/cards/CYCLE_PRODUCTION.md",
+  "values": {
+    "cycle_production_direction": {
+      "authority": "CANON",
+      "steps": [
+        "seed",
+        "mathematical generation",
+        "Field Generator catalog",
+        "manifold/closure landscape",
+        "Prime design",
+        "Utility design",
+        "balance",
+        "RenderSpecs",
+        "assets",
+        "integration",
+        "testing",
+        "release"
+      ],
+      "existing_source_package": "SOURCE_IMPORT_REQUIRED"
+    }
+  }
+}

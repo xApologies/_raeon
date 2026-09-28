@@ -1,9 +1,5 @@
-# provenance
+# Provenance and history
 
-Source lineage, decisions, checkpoints, and audits; GitHub holds accepted canonical state.
+Sources, decisions, audits and checkpoints explain origin, change, rationale and evidence. Historical records 0001–0003 remain byte-for-byte intact. They are not current gameplay specifications.
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
-
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+Start current work at the [design index](../design/README.md) and [data index](../data/README.md). See [normalization audit](audits/0004-repository-normalization.md) and [checkpoint 0004](checkpoints/0004-repository-normalization.md) for migration proof.

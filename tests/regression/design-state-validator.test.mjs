@@ -1,4 +1,5 @@
 import {test} from 'node:test';
+import {loadDesignState} from '../../tools/validators/load-design-state.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -6,7 +7,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {validateDesignState,validateDesignRepository} from '../../tools/validators/validate-design-state.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
-const baseline=JSON.parse(fs.readFileSync(path.join(root,'data/manifests/accepted-state.json'),'utf8'));
+const baseline=loadDesignState(root);
 const family=s=>s.utility_structure.families;
 // These tests exercise data-validation failures; none asserts executable gameplay.
 test('accepts supplied fifty-slot design with unresolved details',()=>assert.deepEqual(validateDesignState(baseline).errors,[]));
@@ -73,11 +74,11 @@ for(const [name,file,mutation,expected]of [
  ['rejects altered recovery 0003 source','provenance/sources/recovery-0003-block-3.txt',p=>fs.appendFileSync(p,'altered'),'Recovery 0003 block 3 integrity'],
  ['rejects altered recovery source','provenance/sources/current-state-recovery-0002.txt',p=>fs.appendFileSync(p,'altered'),'Recovery source integrity'],
  ['rejects constitution replacement','PROJECT_CONSTITUTION.md',p=>fs.appendFileSync(p,'altered'),'Protected baseline unchanged'],
- ['rejects missing design document','design/cards/cycle_01/UTILITIES.md',p=>fs.unlinkSync(p),'Inventory file exists']
+ ['rejects missing design document','design/cards/cycle_01/utilities/SYSTEM.md',p=>fs.unlinkSync(p),'Inventory file exists']
 ])test(name,()=>{
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'raeon-design-test-'));
  try {
-  const inventory=JSON.parse(fs.readFileSync(path.join(root,'data/manifests/design-checkpoint-0003.json'),'utf8'));
+  const inventory=JSON.parse(fs.readFileSync(path.join(root,'data/manifests/design-checkpoint-0004.json'),'utf8'));
   for(const p of inventory.files){fs.mkdirSync(path.dirname(path.join(dir,p)),{recursive:true});fs.copyFileSync(path.join(root,p),path.join(dir,p));}
   mutation(path.join(dir,file));assert.ok(validateDesignRepository(dir).errors.some(x=>x.includes(expected)));
  } finally {

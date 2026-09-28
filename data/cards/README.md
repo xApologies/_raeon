@@ -1,9 +1,3 @@
-# data/cards
+# Card data navigation
 
-cards structured data boundary.
-
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
-
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+Current Cycle-1 data lives in [data/cycles/cycle_01](../cycles/cycle_01/README.md). Child entries here are compatibility links, not competing catalogs. [Card System](../../design/cards/CARD_SYSTEM.md) governs behavior.

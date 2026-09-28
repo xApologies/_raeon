@@ -1,0 +1,1772 @@
+{
+  "source_branch": "design/cumulative-recovery-0003",
+  "starting_commit": "6e5bd716160f41cb4225a60a5ef3127cffcc1f84",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "category": "governance",
+      "placeholder": false,
+      "bytes": 393,
+      "sha256": "bae312193b5b44667a03b478181c731bf2a4d146cf3fb549e36c6903b9a0e4e9",
+      "findings": []
+    },
+    {
+      "path": ".gitignore",
+      "category": "governance",
+      "placeholder": false,
+      "bytes": 525,
+      "sha256": "178a0264d8661ac5d7036a77579b69e547bd3c1efc9cc82e401f9ac85a7a180e",
+      "findings": []
+    },
+    {
+      "path": "CHANGELOG.md",
+      "category": "governance",
+      "placeholder": false,
+      "bytes": 1456,
+      "sha256": "21ef33157749e2f0be56fa443245549820d37868e5b88b54782ec48b14cbdee6",
+      "findings": []
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "category": "governance",
+      "placeholder": false,
+      "bytes": 2537,
+      "sha256": "2e385cab0ec47e1d7716add5d5ef81e667138376701e783f0557716bdb3fdfde",
+      "findings": []
+    },
+    {
+      "path": "DEVELOPMENT_CONSTITUTION.md",
+      "category": "governance",
+      "placeholder": false,
+      "bytes": 1715,
+      "sha256": "5f54428d76685763c2d7701a26cd3735fc5b00dc5f4949100ed5f3ac8f3138f9",
+      "findings": []
+    },
+    {
+      "path": "PROJECT_CONSTITUTION.md",
+      "category": "governance",
+      "placeholder": false,
+      "bytes": 2229,
+      "sha256": "b9113ba3a7766152bf097dd5b0eee92e08bf525c9a71343e34a542573c4f2c59",
+      "findings": []
+    },
+    {
+      "path": "README.md",
+      "category": "governance",
+      "placeholder": false,
+      "bytes": 2724,
+      "sha256": "444e6bfaad875c588370428f01ef02a5d966db26807c5ea5507bdba651fb642d",
+      "findings": []
+    },
+    {
+      "path": "content/README.md",
+      "category": "content/asset boundary",
+      "placeholder": true,
+      "bytes": 469,
+      "sha256": "ad3168fb7daf7d68a79efa368aeff8a2924f9aee2a8c011073271efe04b914b9",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "content/audio/README.md",
+      "category": "content/asset boundary",
+      "placeholder": true,
+      "bytes": 411,
+      "sha256": "9f552fa05618542c322d9e1aae82fb6dd382ad47fd367e8230951222c4428080",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "content/blender/README.md",
+      "category": "content/asset boundary",
+      "placeholder": true,
+      "bytes": 415,
+      "sha256": "2b9e00c3a89903f5a88453f2995443a4d049139be49e99e71fa02e98f94dd0cc",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "content/cards/README.md",
+      "category": "content/asset boundary",
+      "placeholder": true,
+      "bytes": 411,
+      "sha256": "f7b19e0b14db68d8297cd03774fb76bc7b066d621598471140d34e7d94802585",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "content/icons/README.md",
+      "category": "content/asset boundary",
+      "placeholder": true,
+      "bytes": 411,
+      "sha256": "ec9046a78c20c990ca7e6f598266485217e3ba90ba424ad6a0e093c821dfd7c5",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "content/materials/README.md",
+      "category": "content/asset boundary",
+      "placeholder": true,
+      "bytes": 419,
+      "sha256": "fa98e198bbb1b8f402ba84f40623dc1e17d9e9aab4294f2bae611078acf26a8e",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "content/meshes/README.md",
+      "category": "content/asset boundary",
+      "placeholder": true,
+      "bytes": 413,
+      "sha256": "66063eb52efa9635f01e1b49d5d54b55d6b89f71a378548f89c236addaa125fd",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "content/reference/README.md",
+      "category": "content/asset boundary",
+      "placeholder": true,
+      "bytes": 541,
+      "sha256": "481c19246a899e6081311892e91ba0322df097218df04e116a829fe72dcef77c",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "content/shaders/README.md",
+      "category": "content/asset boundary",
+      "placeholder": true,
+      "bytes": 415,
+      "sha256": "fd506381dd7400b6cbc2ba547b3ab57d11010f50ab4dc7c951a478caecdcb613",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "content/ui/README.md",
+      "category": "content/asset boundary",
+      "placeholder": true,
+      "bytes": 405,
+      "sha256": "a60eb7aa424830faa8b179a98e7e34d5aa8cfd2726e64f8b240b809cb941dfe6",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "content/vfx/README.md",
+      "category": "content/asset boundary",
+      "placeholder": true,
+      "bytes": 407,
+      "sha256": "34544230b60979c2cbdd472d11e2c2ccfc11f03af601f603279c3899ddd0e83d",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 498,
+      "sha256": "db5fc32a69bc956127be896f8dd86a7a01f139dd904a7ccc7aadc740f25193e4",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/ai/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 398,
+      "sha256": "e14163d0b84bb6ebdf77ff890a1ae145998c770923e9e22d5c25ca5866ac8b2f",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/balance/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 408,
+      "sha256": "884f8bd243a0a44de176600aae9ab98f5cc409557a0af84aeb82d5305e1ca6a4",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/cards/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 404,
+      "sha256": "ef0f13c70beb1df5fd2ff6d5abff80602d7d8280eb081746790a673858c1e5f4",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/cards/generators/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 573,
+      "sha256": "b9cba30a6f7811d4c94ab6f02abbcc06e419d741907aa2e031df6dfb71e42545",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/cards/primes/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 423,
+      "sha256": "4fecff2ec5d958dfa519114b5b435964a1572d6ac38f1e395f7402a15f746b4d",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/cards/utilities/README.md",
+      "category": "machine data",
+      "placeholder": false,
+      "bytes": 544,
+      "sha256": "60bffffea5aa855c7ec320f0cde2a93479a6b53e02e7b85df4fcd4ac5da880ec",
+      "findings": []
+    },
+    {
+      "path": "data/closure/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 394,
+      "sha256": "7b4f0abf11fde5c23fa55dd6ffc523cf9969231425a06def83955fad2aa32895",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/cycles/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 406,
+      "sha256": "9b2ec4d8568264f43710115e54a1abd219418ffc069ce46781d50d0faa57663f",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/cycles/cycle_01/README.md",
+      "category": "machine data",
+      "placeholder": false,
+      "bytes": 517,
+      "sha256": "63e4e4407e81294e9930d4f231a14043cf3152ed78f4aad0169c87e0c3a0d79b",
+      "findings": []
+    },
+    {
+      "path": "data/cycles/cycle_01/manifest.json",
+      "category": "machine data",
+      "placeholder": false,
+      "bytes": 781,
+      "sha256": "032a6fac8cdc6b30799b3e5e86e1876624a69d6e6d3015fbbff9a325dd6fe426",
+      "findings": []
+    },
+    {
+      "path": "data/manifests/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 412,
+      "sha256": "c55d74fd30038ae9003306be31e9aea6895fa5563fd9316bea433a3574b07e9a",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/manifests/accepted-state.json",
+      "category": "machine data",
+      "placeholder": false,
+      "bytes": 29568,
+      "sha256": "3ebca3c0ec46210b65de1f2e2cc5740fdedf938539ee5ad9d916e4e9f8c4b53b",
+      "findings": [
+        "monolith: detailed system data misplaced in high-level state index"
+      ]
+    },
+    {
+      "path": "data/manifests/bootstrap-inventory.json",
+      "category": "machine data",
+      "placeholder": false,
+      "bytes": 10402,
+      "sha256": "6a9c04d64e459a016702192a30a320b55b91bbaf05a817c3bf7c5b062c56353c",
+      "findings": []
+    },
+    {
+      "path": "data/manifests/design-checkpoint-0002.json",
+      "category": "machine data",
+      "placeholder": false,
+      "bytes": 9325,
+      "sha256": "f89a6ad72137037e9f841bb9031720d65e9675ea627ef78444e821f49065b58b",
+      "findings": []
+    },
+    {
+      "path": "data/manifests/design-checkpoint-0003.json",
+      "category": "machine data",
+      "placeholder": false,
+      "bytes": 11102,
+      "sha256": "ab7fd158781bcf2fcaa313cc56facb744562a7a94544c2f1a83427ae4334ea39",
+      "findings": []
+    },
+    {
+      "path": "data/manifolds/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 398,
+      "sha256": "3a76931650965f3712aa68656400e019c4bd5594713562e7e02534d8d663d65a",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/manifolds/base/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 413,
+      "sha256": "b2ff6664d34d8d7b638edb67cb21747964dbcfdf5533bdbdded061bd1f33520b",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/manifolds/emergent/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 421,
+      "sha256": "5b57981d303fe5e27ba2e4dbc0c771212a72e2fe1b54aa28d341d1792c3e7923",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/manifolds/fusion/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 417,
+      "sha256": "270b83ed33c9621d71fd57b738912a1f7ffde49eb59ad3b0fcc686db48e669d8",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/qmo/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 386,
+      "sha256": "891cd31a408365380faf1cae62123316c11598513f67e08198e0e47335a76883",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/render-specs/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 404,
+      "sha256": "5e3a3ad0b501289186d46b8fe44e3c3e0369f41d0bf36d0ae1b74f3c7308516a",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "data/schemas/EFFECT_DEFINITIONS.md",
+      "category": "machine data",
+      "placeholder": false,
+      "bytes": 1126,
+      "sha256": "cc9d92aba774055970202c381c967c455af3c575675738637ba07c735639cbda",
+      "findings": []
+    },
+    {
+      "path": "data/schemas/README.md",
+      "category": "machine data",
+      "placeholder": false,
+      "bytes": 265,
+      "sha256": "ff53f72d97b7e134ab413746d2d039968e9bd224d6db8cff5ffbd77e3b21820f",
+      "findings": []
+    },
+    {
+      "path": "data/transduction/README.md",
+      "category": "machine data",
+      "placeholder": true,
+      "bytes": 404,
+      "sha256": "a347fa83ce721fae6287403e240b02f99f6c838975789748401a509bc38e1777",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "design/README.md",
+      "category": "design specification",
+      "placeholder": true,
+      "bytes": 442,
+      "sha256": "144cc78c7c77cb84e471429ee52dfac1749fbc826543dd656c9eac0c533c29ab",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "design/ai/README.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 775,
+      "sha256": "a7b59ff239eb28148e674fdb08019a6056be123edda138438335f401320bed09",
+      "findings": []
+    },
+    {
+      "path": "design/cards/BLACK_RANK.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 2433,
+      "sha256": "f3b93907d480f324d5d34e323de4d1c1a58597ff1ec48e342102c5b0aa9308d8",
+      "findings": []
+    },
+    {
+      "path": "design/cards/CYCLE_PRODUCTION.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 1648,
+      "sha256": "a9ac084a1fbbbcc1334eeff4500e6379bbfc28d3c95475124ced65d0f3a1415b",
+      "findings": []
+    },
+    {
+      "path": "design/cards/README.md",
+      "category": "design specification",
+      "placeholder": true,
+      "bytes": 412,
+      "sha256": "a98df5b58fcc4c5e571ba8dbc33ad1a95f7fb0a5bc91cb5f815c66325a03879a",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "design/cards/cycle_01/README.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 769,
+      "sha256": "0cd12ffccef3c738618259a95dd6a2c69ca4eb19bd4b881cd49b2b21a719c9bf",
+      "findings": []
+    },
+    {
+      "path": "design/cards/cycle_01/UTILITIES.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 9025,
+      "sha256": "23cfd4fe7a3adbf9586f3127f58f9ef85ebe549ea08510e72e924aa3e9154c1c",
+      "findings": [
+        "monolith: split current family specifications"
+      ]
+    },
+    {
+      "path": "design/economy/README.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 1480,
+      "sha256": "523ce401d96cebcc057cb95364dbdc3801ec01e4f21e34b3f5844ff771a4829e",
+      "findings": []
+    },
+    {
+      "path": "design/game/ACCEPTED_RULES.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 7993,
+      "sha256": "64e9a02ab83a378e87a863fde12765b49a8ef910a561e4baa6d4bb191317cda6",
+      "findings": [
+        "duplicate/redundant: consolidate current rules into system homes"
+      ]
+    },
+    {
+      "path": "design/game/README.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 1655,
+      "sha256": "c6b9f664e374f4ce9d43d249db63e177dfd3ca664bbbb45eb67482ce221da41b",
+      "findings": []
+    },
+    {
+      "path": "design/multiplayer/LOCAL_P2P.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 1063,
+      "sha256": "a0b35fa7a24d7b0018e1155b2a8f627a92905b753cb98263f87e563bd19c2481",
+      "findings": []
+    },
+    {
+      "path": "design/multiplayer/README.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 224,
+      "sha256": "a828d0962ae15a5c03ccf63db52ffcff964111d521614b63bc8d356d522b7507",
+      "findings": []
+    },
+    {
+      "path": "design/progression/BLACK_MODE.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 1001,
+      "sha256": "754656eb92a907b0a57c8807578a31227d484c8f42e4a7abd48de1aaa4c77d71",
+      "findings": []
+    },
+    {
+      "path": "design/progression/README.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 1340,
+      "sha256": "219a9ed57fd882e567b991355c241d2d82073af5f0778f88790f248a899a6a23",
+      "findings": []
+    },
+    {
+      "path": "design/systems/README.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 1382,
+      "sha256": "a429e7cba1ad950ae70eeff16a88c4e8d74df0a749d36b3c103b6a71be43e051",
+      "findings": []
+    },
+    {
+      "path": "design/systems/RENDERING.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 1388,
+      "sha256": "599d769260f44cff84ca2bca79d8377127ab61f46e679993af7deb6c7503a0bd",
+      "findings": []
+    },
+    {
+      "path": "design/ui-ux/README.md",
+      "category": "design specification",
+      "placeholder": false,
+      "bytes": 920,
+      "sha256": "3e63e9a1e171954693e5eb2c9d917988a844c0032cc0e7eab95373ae80c61c59",
+      "findings": []
+    },
+    {
+      "path": "development/PIPELINE.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2410,
+      "sha256": "4c5e5c2070f8438996d0002aa7fd1861ef8373cc5fb6ca633ea9888007bf7f76",
+      "findings": []
+    },
+    {
+      "path": "development/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 492,
+      "sha256": "68235e80efd15677285de49657ffe013211d51159b73166ecea8412c8c3c5f87",
+      "findings": []
+    },
+    {
+      "path": "development/builds/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 380,
+      "sha256": "c1498df732d513bcf2614db61360552d0ecac96b240b820583e7f9e4123342a8",
+      "findings": []
+    },
+    {
+      "path": "development/builds/alpha/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 339,
+      "sha256": "7d7be639a6552dc30ea3c5ec3421d916e3de41e82f13e2083f414f4f69c63166",
+      "findings": []
+    },
+    {
+      "path": "development/builds/beta/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 337,
+      "sha256": "99b86b9a072e6cf72c4834b350475e1efd5d82fc7ad93fba01152c9d599fcbc5",
+      "findings": []
+    },
+    {
+      "path": "development/builds/development/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 351,
+      "sha256": "1f5dad56763359d42ea393cb5244be0a69e8c6fd6fe875530981af1395e63f1e",
+      "findings": []
+    },
+    {
+      "path": "development/builds/nightly/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 343,
+      "sha256": "b8f92fe6e7397010ebe5dadb55d6e01b7b4e3d460e553c71ad20c37cf6f2d218",
+      "findings": []
+    },
+    {
+      "path": "development/builds/prototype/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 347,
+      "sha256": "541a51d2ede470f68d2dcace25a5bdb67df022f6e438ae2371c0acc7dbc55589",
+      "findings": []
+    },
+    {
+      "path": "development/builds/release-candidate/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 363,
+      "sha256": "17959da0917fc22042cd34864e9356269bb9661fe7ba59ab87fe163546696fbc",
+      "findings": []
+    },
+    {
+      "path": "development/checkpoints/0001-bootstrap.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 233,
+      "sha256": "8a6e263e3f405bcfeeb41e25ae03f5cb70f33cde7866f0508e9d601d06b79738",
+      "findings": []
+    },
+    {
+      "path": "development/checkpoints/0002-game-design.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 344,
+      "sha256": "a4b7ae40f98e30e73769fd0519473a0a3b6860bf76dbeed3e14ebf2ce87aa92f",
+      "findings": []
+    },
+    {
+      "path": "development/checkpoints/0003-cumulative-recovery.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 335,
+      "sha256": "0dbaa192dc4f7fce34698cba1b43a1ff90cbf221651b8cb335bc88afb9783dfb",
+      "findings": []
+    },
+    {
+      "path": "development/checkpoints/README.md",
+      "category": "development status",
+      "placeholder": true,
+      "bytes": 442,
+      "sha256": "ff7d2621cae7da03e558cbeef5d9d6b0b45c8f6461a4858212795c01fa5a7172",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "development/milestones/README.md",
+      "category": "development status",
+      "placeholder": true,
+      "bytes": 456,
+      "sha256": "b094761da341d3230b25639e5785cbe9e14bacfaa8983acbef03d9a0034bb204",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "development/modules/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 1381,
+      "sha256": "d79d45db162b490aa624408a613bcbcaa098ec08ff9696941ee4673d30ce1c17",
+      "findings": []
+    },
+    {
+      "path": "development/modules/ai/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2490,
+      "sha256": "7cdc89205a9abd4066f7e2f667e1bf9f5cc81b349503c3434d75a1262a5ffdfe",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/black-rank/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 3078,
+      "sha256": "b2dfce1474eacf1be73946570e0546d1a31bd27e2e4b6fa75ef72346d0e9f639",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/blender-pipeline/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2469,
+      "sha256": "3010ae8ec29d148c74aff46a45c35379918ff9ed722e359aec6db2a516f3c4bd",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/board/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2443,
+      "sha256": "757af8b5c8122afff1c5cad29592d9bb2b9c7e791c7af6047096671c569b6ad2",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/card-shop/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2971,
+      "sha256": "fe5f6994921706ad969d184385e76cbe869e50ebeeafb7250bdd14f732ed8896",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/card-system/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 1889,
+      "sha256": "08f10c32fb0b4f5c7e2aabf1be604570a1bfaf8e7821bf7226a837c741de8c85",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/chirality-fabric/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 1879,
+      "sha256": "158318c5532b6b8578c79d05a60056857e8425b2135d80177ab815fc6dd91150",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/collection/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2937,
+      "sha256": "4fde1875f56dbecc7d025c13f6d70fcedc8e12eb1ac167a24313ad90583621b7",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/core-game/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 1906,
+      "sha256": "1696628b7e295c8ea54a9110a8e780600575246c0a8a7d5f040f102c5210f6e7",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/deck-construction/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2423,
+      "sha256": "464496bcf447fd81168563df8718178fcb299fa030f94af34dfc575f26fd1d5a",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/emergent-fields/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 3027,
+      "sha256": "20273f63dd65c92c7e62b7acf86dfc3d4115670bc986baa5eb55466fa7daddf3",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/field-generators/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 1943,
+      "sha256": "45595a496624412902af9fff5dc40b2fa4a636befca2ecb50244ecf48e7c6cff",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/fusion/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 1896,
+      "sha256": "4ebf442fdc41d72308b9fab36e9947b7b0bb8382f3a487c39693756bafd2855a",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/gpu-runtime/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2396,
+      "sha256": "77eb7f9ae5ca8c93e1ecfc2d888333fdbf452e436bb3972f2bb2b6481ccb590d",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/manifold-closure/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 1936,
+      "sha256": "94a5606132dc72ccb8cbacdbd62e236e299ab6a4acb2d88af81d98223a122ab5",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/multiplayer/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2475,
+      "sha256": "4e521ffa74a36aa1559680252574057df960e486039635d1fee1a10917f0cdfe",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/persistence/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 1851,
+      "sha256": "8142a1a8e1785959eb3a3c4345489d954a4c150ab1b1f2ba2557717e6b14b17a",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/platform/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2434,
+      "sha256": "b088ad8ef4938c160e2aee58e4acd61c572f1302f112b382c221de43fcb593b9",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/prime-fields/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 1911,
+      "sha256": "a76bc14dc0ae44f129dade9951f0ea285ed2beeeab4920df6d2a0df11c3f0228",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/propagation-engine/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 1922,
+      "sha256": "b83542db92158281c5f115c37ba69974121ac990f02b4dc14a65504b04d17a2c",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/qmo-engine/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 1937,
+      "sha256": "83c344b240f01f1c5da55808a5672811ffe0d50f79e2dcb78832843ace2940e5",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/rendering/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2503,
+      "sha256": "9414cf01b0a05802f979602701eb2967ec05ffb14a6622872b7e3da91ba6ac1b",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/sandbox-domains/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2467,
+      "sha256": "277a7f34aa48a15487682d15da902ba86cdc379d71d7089ed64bcbe2615ce9f2",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/transduction/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2398,
+      "sha256": "3f2bf67aef33e12439f33969aa9b2c75e21ec61ad7ef3689a01f36f51aa61bc9",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/turn-engine/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2424,
+      "sha256": "30a21b2e0cfcda50e0a1d1eb91e538902293198f5d0d68fe02bde70692e78fab",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/ui-ux/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 2493,
+      "sha256": "9288a3f6189c002350639853e281cfc73e7652091e89da38b4e65d5b880be56b",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "development/modules/utilities/README.md",
+      "category": "development status",
+      "placeholder": false,
+      "bytes": 3871,
+      "sha256": "2c4536494e83171af4559a9e41b1330b202d173b56309f9421679e886c2a21b8",
+      "findings": [
+        "development status: replace accumulated rule copies with current-spec links"
+      ]
+    },
+    {
+      "path": "game/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 433,
+      "sha256": "7396d2583c50cbb132f4eb33519d634fa168f226276816a05ecd660891b2dbfd",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/ai/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 405,
+      "sha256": "0a888d71a99609ac8dfdca3bf3f6592f2e62e0682c8084de0d6cba9f0fa84be7",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/board/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 411,
+      "sha256": "e0ee0e5cfc006022c0f699a1d7874ea66a774063d5451de481644105e3b54bbc",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/cards/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 411,
+      "sha256": "4da64d8929ab642f438a20b7964b5cb527db300e71ea2c33ea802a708d9b1c00",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/collection/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 421,
+      "sha256": "a6892fcf5df17236f32fe27eee3cfa2d2b6e9b4dd9d6eb27521e0d83851d9708",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/core/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 409,
+      "sha256": "9b0d60333207d9e72c5ca6775f327ef09b78dbfa2a2b6cdebfbdb532919fbe60",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/deck/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 409,
+      "sha256": "970c1e80970ed7cebc2c81f0bf41f9566bba36787105521b6b844ed641700905",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/manifold/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 417,
+      "sha256": "0db3b12191dd4b5da33fc04121936040d6a91993bd11a1356051f0793d4e1cc7",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/multiplayer/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 423,
+      "sha256": "3fd7a67a541f4d27605825161ab1130476ac547f3d7f29ff2e0ec8aaf6d512a4",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/persistence/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 423,
+      "sha256": "ade075552863b64ab44e7b8e323cf2dd49564c80dc0d992223c5ff603f7afe69",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/primes/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 413,
+      "sha256": "343913fa1d5d91648f3e583d21eb048c6dcd6cf60ca93428ccf60482045ba66a",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/qmo/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 407,
+      "sha256": "94e36d8c63a606a1ba1537ba288e282f97b07c59182a8aa24485c25c9169a213",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/rendering/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 419,
+      "sha256": "1130381cc348cd42522497fb3be681a89e02809acc39e577c430b018da293f57",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/rules/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 411,
+      "sha256": "37f40f558842754033d28529c0c29423d42fa5320292fa1b2ffd627e448336ed",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/sandbox/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 415,
+      "sha256": "75b7cf91cc2f4d5009b1ee83c7d3b0cedf03c6e2c3ee0dae8862b0ed0ce263f8",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/shop/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 409,
+      "sha256": "1694b41ab5953f7e084d057940c7e259dd24f3ae60d46e56947f651d6e2e2683",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/state/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 411,
+      "sha256": "6bf20e53747236146abc6fe4ad3f151ab3c2f130a82d1fa9943712c6d0fdc466",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/transduction/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 425,
+      "sha256": "b32330f0ac5142e8687592bf84dcc83e0921b7b9baf56ae42b9d20b619b97885",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/ui/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 405,
+      "sha256": "489f24256d85e054908846cd362c5e94855e9666e5ac52adc91fdd634299d021",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "game/utilities/README.md",
+      "category": "runtime implementation boundary",
+      "placeholder": true,
+      "bytes": 419,
+      "sha256": "b793692af60ab67c4953135da20cd88c6b0c9d24be1a59939b76052d3b02f62f",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "mathematics/README.md",
+      "category": "mathematical authority",
+      "placeholder": false,
+      "bytes": 832,
+      "sha256": "13e40b1593f4715a55d29ab7ff8297b48fedb6e5cb2a0bcf5101d941cbe8e63b",
+      "findings": []
+    },
+    {
+      "path": "mathematics/chirality/README.md",
+      "category": "mathematical authority",
+      "placeholder": true,
+      "bytes": 424,
+      "sha256": "561e4371a895802993e85bd20ba81396159ed0a3eae978c1e3e66680dd57c496",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "mathematics/closure/README.md",
+      "category": "mathematical authority",
+      "placeholder": true,
+      "bytes": 420,
+      "sha256": "7323a3c8e2b42153e40f457ccadaec4643ea34d7a0c5a6f08037a77d5191b7ac",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "mathematics/genesis/README.md",
+      "category": "mathematical authority",
+      "placeholder": true,
+      "bytes": 420,
+      "sha256": "30ce98c911895a1205002d686ccc70e4470419e75f278eb181c036dc6188d4fe",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "mathematics/manifolds/README.md",
+      "category": "mathematical authority",
+      "placeholder": true,
+      "bytes": 424,
+      "sha256": "afa00487dea1283fce553a0225fe76f722b2ee60eb75638107f959d7577a2c97",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "mathematics/propagation/README.md",
+      "category": "mathematical authority",
+      "placeholder": true,
+      "bytes": 428,
+      "sha256": "6c278aa514ad0e7e3722f552aabf59607223cd2d33545d7e50d825a798ab1e9e",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "mathematics/qmo/README.md",
+      "category": "mathematical authority",
+      "placeholder": true,
+      "bytes": 412,
+      "sha256": "2b558f0b18f3ea702e9f08ea73f292663dc22d641565c0335f1948ddb9215292",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "mathematics/transduction/README.md",
+      "category": "mathematical authority",
+      "placeholder": true,
+      "bytes": 430,
+      "sha256": "7b1dd9066bb062f6f3ac35543361e6d06320d302eef000e41329cf5646e3f276",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "platform/README.md",
+      "category": "platform",
+      "placeholder": true,
+      "bytes": 477,
+      "sha256": "d69efe7d4d17bfa972155ed161d936a6d9dda295fd31e0af22953398c914c61d",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "platform/ipados/README.md",
+      "category": "platform",
+      "placeholder": true,
+      "bytes": 414,
+      "sha256": "70ba675a96789d2b1162f78b0f1b169092bb83687e551e8961f9ab54db292f2f",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "platform/shared/README.md",
+      "category": "platform",
+      "placeholder": true,
+      "bytes": 414,
+      "sha256": "558c8bef2aee46f6c4814ac608b92a5bac8e211a189ebe06e064fc3a88d01ef8",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "platform/windows/README.md",
+      "category": "platform",
+      "placeholder": true,
+      "bytes": 416,
+      "sha256": "37218984f0cfa47f7040f80fe59c758418f12345877d6a51982dc13c26140c01",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "production/00_concept/README.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 459,
+      "sha256": "d6dbfacbb55c187fdd68639b6f134fb990ef285be7c24219728fa0b35a929905",
+      "findings": []
+    },
+    {
+      "path": "production/01_preproduction/README.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 612,
+      "sha256": "fbe23372255e0c16a75e2108c5202d38783557c7d99a745386ad7b4c008b6adc",
+      "findings": []
+    },
+    {
+      "path": "production/02_prototype/README.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 572,
+      "sha256": "b3eb7eee1b1a2147782b8657957931a66f3b47b0e077e4a54f8a7055b6c6815c",
+      "findings": []
+    },
+    {
+      "path": "production/03_vertical_slice/EXIT_CRITERIA.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 882,
+      "sha256": "f5e47276543342962129a42a3227e3fbe978661210463ccb72fbab61b41e49ad",
+      "findings": []
+    },
+    {
+      "path": "production/03_vertical_slice/README.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 534,
+      "sha256": "11a6daa2620091e9f176d67b873e0ccd9cf0f594047d5347007b53c3fd38aee7",
+      "findings": []
+    },
+    {
+      "path": "production/04_production/README.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 525,
+      "sha256": "7f2caae3fe95a2de2ad4c31025865fd1084e2273ec8acca36af4a5191cb83139",
+      "findings": []
+    },
+    {
+      "path": "production/05_content_complete/README.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 517,
+      "sha256": "41b13e152e10c33130e79b4f9c22448822df7a82a259d5e9bb699f0ea7f425ec",
+      "findings": []
+    },
+    {
+      "path": "production/06_alpha/README.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 554,
+      "sha256": "1650cc917e9e7b19c463037a67653e5bf81abe2c2ba28a66c077b918a05a27ff",
+      "findings": []
+    },
+    {
+      "path": "production/07_beta/README.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 559,
+      "sha256": "39e76c68a9b0da7eb2ef73b824f9f1e43f9764cb80cbc3a057b4df73b95e6962",
+      "findings": []
+    },
+    {
+      "path": "production/08_release_candidate/README.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 523,
+      "sha256": "752069e0a3812db41ee68d6c447cda40987d8eda0e756337c8af652390d9a081",
+      "findings": []
+    },
+    {
+      "path": "production/09_certification/README.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 544,
+      "sha256": "7a86af3ddb160f3199fba7c494a01edb297b660a6d3c7f07abe6f53ff66943d3",
+      "findings": []
+    },
+    {
+      "path": "production/10_gold/README.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 528,
+      "sha256": "4572f9b4a6119c9f7663ccefe199eb07c8001840cc53742794cbf4ed1bec1002",
+      "findings": []
+    },
+    {
+      "path": "production/11_postlaunch/README.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 546,
+      "sha256": "1a788c4e4e34a2134181e89916aa8c0d6efd65e7fe9862508f995dafb3de703d",
+      "findings": []
+    },
+    {
+      "path": "production/README.md",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 960,
+      "sha256": "0608ea1d45a9a1825a24fecc5a3b9bc0025564287119857c98395624937f85e7",
+      "findings": []
+    },
+    {
+      "path": "production/phases.json",
+      "category": "production",
+      "placeholder": false,
+      "bytes": 1831,
+      "sha256": "1c5bdb7ba0f3a15a02ead7376863642d67c48b441dafefbf1537e06396355368",
+      "findings": []
+    },
+    {
+      "path": "provenance/README.md",
+      "category": "provenance/history",
+      "placeholder": true,
+      "bytes": 460,
+      "sha256": "773caa10684b28f2ad51b186935c087c960bea9a83170a9224cbba0930624de3",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "provenance/audits/0003-cumulative-recovery.md",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 1284,
+      "sha256": "d77a83a232718600d444d2c52095d327119b8c03b874072c7687f938f7602c82",
+      "findings": []
+    },
+    {
+      "path": "provenance/audits/README.md",
+      "category": "provenance/history",
+      "placeholder": true,
+      "bytes": 454,
+      "sha256": "aad84be55ddcf9cd89eac6a7627de91b4c28e8d6ed26638c07860ba8d1ea8dcc",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "provenance/audits/bootstrap-inventory.md",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 851,
+      "sha256": "e089da25e748bf8f481a2aa349bf34d5c60e8b19cf32d29be844a1b7bbd8e20f",
+      "findings": []
+    },
+    {
+      "path": "provenance/checkpoints/0001-bootstrap.md",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 1615,
+      "sha256": "8f8a5291d93dcd60b4f13c365e67a91388e528f79d21461e43980c54e7c5eae4",
+      "findings": []
+    },
+    {
+      "path": "provenance/checkpoints/0002-game-design.md",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 2418,
+      "sha256": "43bc671ebb07270d24f33bd826e631600acc27c03fd625f2bc17a98f5f50daa7",
+      "findings": []
+    },
+    {
+      "path": "provenance/checkpoints/0003-cumulative-recovery.md",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 4062,
+      "sha256": "a885d0729ad6446d008223abc6d97b2b5d44e0376f4a6934d5c018ba13382e2d",
+      "findings": []
+    },
+    {
+      "path": "provenance/checkpoints/README.md",
+      "category": "provenance/history",
+      "placeholder": true,
+      "bytes": 441,
+      "sha256": "797e400572b203fb53054802ca888a482a3d4c526fe1d80558aa65c6c99b62f8",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "provenance/decisions/0001-repository-bootstrap.md",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 2371,
+      "sha256": "1db7a70e0a601489ae7c22fd750e64850e65b0787cc8e4b1c69686bdfc5e6b7c",
+      "findings": []
+    },
+    {
+      "path": "provenance/decisions/0002-current-game-design.md",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 2986,
+      "sha256": "707d19fbeeabac66859eb440e5ba3d7e1c83beb02a84227eb32fe5fc2376fc5c",
+      "findings": []
+    },
+    {
+      "path": "provenance/decisions/0003-cumulative-recovery.md",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 4340,
+      "sha256": "d2faa93a326321dc039e479036a13749687cbd86c788e373dce093e8aa423cce",
+      "findings": []
+    },
+    {
+      "path": "provenance/decisions/README.md",
+      "category": "provenance/history",
+      "placeholder": true,
+      "bytes": 460,
+      "sha256": "834dafa17cb7bffc257d7da858aa94514bef285312435bf990e465d0ea1e13d3",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "provenance/sources/README.md",
+      "category": "provenance/history",
+      "placeholder": true,
+      "bytes": 441,
+      "sha256": "9d6c6d7e0d82198d6d72fa03fa0ebc5a89f1757e8f7fc947571b42053520b678",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "provenance/sources/bootstrap-request.json",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 653,
+      "sha256": "d7ee8bcfa18c99621c8ab03aba5474a3d57da90b147bb096dd77e5450cf4073e",
+      "findings": []
+    },
+    {
+      "path": "provenance/sources/bootstrap-request.txt",
+      "category": "provenance/history",
+      "placeholder": true,
+      "bytes": 22540,
+      "sha256": "44fa3a5b6bea27fc7904af9be21fc12ced69209c832a7106b17e0089b6c896cb",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "provenance/sources/current-state-recovery-0002.json",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 1034,
+      "sha256": "392debf3ddfe56750db7a246d276f8f194b0ac6e3f640c36f6d963e19e499b4c",
+      "findings": []
+    },
+    {
+      "path": "provenance/sources/current-state-recovery-0002.txt",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 22204,
+      "sha256": "f14d62cd3d9c043e59c28c4ead4960ffbf9b3cdd04be83a4ede519eea68636f6",
+      "findings": []
+    },
+    {
+      "path": "provenance/sources/recovery-0003-block-2.txt",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 24362,
+      "sha256": "5ac55ad44323365fc8cd0b8a0338a7741577bfdcb0a47dabfb1677b58992d100",
+      "findings": []
+    },
+    {
+      "path": "provenance/sources/recovery-0003-block-3.txt",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 20086,
+      "sha256": "22879d7bdb5bf765c98de992a32d5b5c1337f40b6edb723b8cb086af7a59bcff",
+      "findings": []
+    },
+    {
+      "path": "provenance/sources/recovery-0003.json",
+      "category": "provenance/history",
+      "placeholder": false,
+      "bytes": 1067,
+      "sha256": "d81d07e10c801514d2a82bf7c96b839f282684123f7b33f3805edc0507e12e22",
+      "findings": []
+    },
+    {
+      "path": "releases/README.md",
+      "category": "production",
+      "placeholder": true,
+      "bytes": 461,
+      "sha256": "0081c4041b6d41ad1bd5aa4afda31534efa9c30264ad91fdde52b838c917aa83",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tests/README.md",
+      "category": "test",
+      "placeholder": false,
+      "bytes": 665,
+      "sha256": "3958dfefc07fea321cbb788237f58885ca56822519e3491f4fb31a036b4844ad",
+      "findings": []
+    },
+    {
+      "path": "tests/adversarial/README.md",
+      "category": "test",
+      "placeholder": true,
+      "bytes": 429,
+      "sha256": "e48040bb18f9edcf530517c1c83b608ef10cfb203053a77a070c74bb7b0415ec",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tests/gameplay/README.md",
+      "category": "test",
+      "placeholder": true,
+      "bytes": 423,
+      "sha256": "9613bc0a1ee034658824637ec77cef8d7e3521d84cdf211ed1874c9e0451b33b",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tests/integration/README.md",
+      "category": "test",
+      "placeholder": true,
+      "bytes": 429,
+      "sha256": "90acaed1fb996c693ccb7d36c2d04249d7a038511b32f4e04c708d59a77197c2",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tests/multiplayer/README.md",
+      "category": "test",
+      "placeholder": true,
+      "bytes": 429,
+      "sha256": "df2d1f6996e169701ac6027cd6fd7a813d5f525e30faa73b1c39b91699786261",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tests/performance/README.md",
+      "category": "test",
+      "placeholder": true,
+      "bytes": 429,
+      "sha256": "d613c96254446c377619f9252dd4803378af51bf41f677d637449224fe2bfb07",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tests/qmo/README.md",
+      "category": "test",
+      "placeholder": true,
+      "bytes": 413,
+      "sha256": "3e5785197d625e10f235a31517ef63a093f2f146bbcee5f8b327e63e806f24a6",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tests/regression/README.md",
+      "category": "test",
+      "placeholder": true,
+      "bytes": 427,
+      "sha256": "19636c93c185b3e2f4cf763f1106d967998e89759d74f94a29d5126e1f953371",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tests/regression/bootstrap-validator.test.mjs",
+      "category": "test",
+      "placeholder": false,
+      "bytes": 3391,
+      "sha256": "ae8d5e2cf29977175cc2b00e41c3c2341327689553885cd6c5bfa48342d7d048",
+      "findings": []
+    },
+    {
+      "path": "tests/regression/design-state-validator.test.mjs",
+      "category": "test",
+      "placeholder": false,
+      "bytes": 9911,
+      "sha256": "130b17751e5ee602e2f368d8d599aacb5f0a6bb819fd4625e622559e4e9ebed2",
+      "findings": []
+    },
+    {
+      "path": "tests/rendering/README.md",
+      "category": "test",
+      "placeholder": true,
+      "bytes": 425,
+      "sha256": "97a47cf021a59166e3e4a8fc90a8c970eebce1215c38f99905a31d7fc635d346",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tests/unit/README.md",
+      "category": "test",
+      "placeholder": true,
+      "bytes": 415,
+      "sha256": "10baecdb96d8a6d92ed05c4c43e6b8c83ee229c53095e39326658de61fcb7fad",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tools/README.md",
+      "category": "tooling",
+      "placeholder": true,
+      "bytes": 491,
+      "sha256": "9b53b6322c6a4ee7cc2ef4cb1aa04322d840ddf08b935cf5782dd1be3f804ddc",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tools/blender/README.md",
+      "category": "tooling",
+      "placeholder": true,
+      "bytes": 412,
+      "sha256": "b73720de9b34c886093ac1e26f9bb8f84c0255bcd932fd540d6adffd691fabfa",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tools/data/README.md",
+      "category": "tooling",
+      "placeholder": true,
+      "bytes": 406,
+      "sha256": "3f1899d8620e07561af907ab243f1b18c4b4452238a3c12fc58c4a269fa6dd4c",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tools/generators/README.md",
+      "category": "tooling",
+      "placeholder": true,
+      "bytes": 418,
+      "sha256": "d41321f7ed03bcf4dd36701a848e80e0511a6c4348f7df2bc7cbadb9a8aa41ab",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tools/provenance/README.md",
+      "category": "tooling",
+      "placeholder": true,
+      "bytes": 418,
+      "sha256": "311ee8adbb6850a746a1a5cc584ec7f93fad63d94ff91c84968b5faa5ce33959",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tools/qmo/README.md",
+      "category": "tooling",
+      "placeholder": true,
+      "bytes": 404,
+      "sha256": "71fe596d60c6e7e7427553b0a7fb486c92fcaa84f0de419902657ee819f9e24e",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tools/rendering/README.md",
+      "category": "tooling",
+      "placeholder": true,
+      "bytes": 416,
+      "sha256": "81302363eb07b2e53e53a943101207d3fe6a13c0872db29373bca5451a55fbaa",
+      "findings": [
+        "placeholder: review against current system scope"
+      ]
+    },
+    {
+      "path": "tools/validators/README.md",
+      "category": "tooling",
+      "placeholder": false,
+      "bytes": 633,
+      "sha256": "6103c7a5e55c0a080cdcfff1257172823eabefef00f2ce712df18b9021be40d2",
+      "findings": []
+    },
+    {
+      "path": "tools/validators/validate-bootstrap.mjs",
+      "category": "tooling",
+      "placeholder": false,
+      "bytes": 13464,
+      "sha256": "1e4dfb6d51a635c28a2151861c35c3e9ad510a24ade1a7a224270f2a43501f31",
+      "findings": []
+    },
+    {
+      "path": "tools/validators/validate-design-state.mjs",
+      "category": "tooling",
+      "placeholder": false,
+      "bytes": 26313,
+      "sha256": "39b42ea60a94473ac7143adf4b27995270d2d1105396079e5544ab61526b964e",
+      "findings": []
+    }
+  ]
+}

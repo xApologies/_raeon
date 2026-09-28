@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "design": "design/cards/cycle_01/field_generators/SYSTEM.md",
+  "values": {
+    "field_generators": {
+      "maximum_rank": "White",
+      "black_allowed": false
+    }
+  },
+  "catalog_status": "OPEN",
+  "qmo_status": "SOURCE_IMPORT_REQUIRED",
+  "objects": []
+}

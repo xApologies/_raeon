@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "design": "design/topology/fusion/SYSTEM.md",
+  "status": "SOURCE_IMPORT_REQUIRED",
+  "expected_objects": 343,
+  "objects": []
+}

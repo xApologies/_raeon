@@ -1,9 +1,3 @@
-# game/rules
+# rules implementation boundary
 
-rules runtime implementation boundary.
-
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
-
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+OPEN / UNIMPLEMENTED. Upstream: [match design](../../design/game/match/SYSTEM.md), [data](../../data/game/match.json), [mathematical authority](../../mathematics/README.md). [Tests](../../tests/integration/README.md) will verify implementation when it exists.

@@ -1,5 +1,3 @@
-# Cycle 1 data
+# Cycle 1 datasets
 
-The [accepted state](../../manifests/accepted-state.json) records card architecture and all 50 ordinary Utility structural slots. The [Cycle manifest](manifest.json) links that structure; complete runtime card definitions remain absent.
-
-Utility design structure is accepted; final details are OPEN. No QMO objects or mathematics were imported. Follow [Cycle production](../../../design/cards/CYCLE_PRODUCTION.md); this checkpoint does not complete its formalization, balance, test, or release gates.
+[Manifest](manifest.json) links the current card system, Generator/Prime source boundaries and six Utility-family JSON encodings. [Design](../../../design/cards/cycle_01/CYCLE.md) defines behavior. Data preserves working authority/OPEN fields; no final catalogs or source objects are invented.

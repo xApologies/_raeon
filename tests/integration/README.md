@@ -1,9 +1,11 @@
-# tests/integration
+# Test boundary: integration
 
-integration test scenarios and evidence boundary.
+Status: OPEN / UNTESTED. This file defines navigation, not gameplay behavior or passing tests.
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+- [core-game design](../../design/game/GAME_DESIGN_DOCUMENT.md) → [data](../../data/game/product.json) → [maturity](../../development/modules/core-game/README.md)
+- [collection design](../../design/collection/SYSTEM.md) → [data](../../data/collection/direction.json) → [maturity](../../development/modules/collection/README.md)
+- [card-shop design](../../design/economy/README.md) → [data](../../data/collection/direction.json) → [maturity](../../development/modules/card-shop/README.md)
+- [persistence design](../../design/game/match/SYSTEM.md) → [data](../../data/game/match.json) → [maturity](../../development/modules/persistence/README.md)
+- [platform design](../../design/game/GAME_DESIGN_DOCUMENT.md) → [data](../../data/platform/targets.json) → [maturity](../../development/modules/platform/README.md)
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+No downstream layer may redefine accepted design or mathematical legality.

@@ -1,0 +1,10 @@
+{
+  "source": "User-authorized checkpoint 0004 ZIP",
+  "date": "2026-09-28",
+  "zip_sha256": "cdaa5344f4d1b6c04f599bc24d3398b032c3c553c1d62d484413a6794e11d585",
+  "directive_sha256": "ccd5f850ee245e27fbd01efb7b84ecdfed52dee85a9ddcd80d426314af0964a5",
+  "readme_sha256": "c184d1f204a39db8e5fd63939f0dd34b7b608775db185c771a5a0d8af1942253",
+  "source_branch": "design/cumulative-recovery-0003",
+  "starting_commit": "6e5bd716160f41cb4225a60a5ef3127cffcc1f84",
+  "scope": "Information architecture normalization only; no mechanic changes"
+}

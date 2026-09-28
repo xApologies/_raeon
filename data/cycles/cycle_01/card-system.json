@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "design": "design/cards/CARD_SYSTEM.md",
+  "values": {
+    "cycle_01": {
+      "ordinary_cards": {
+        "field_generators": 120,
+        "prime_fields": 30,
+        "utilities": 50,
+        "total": 200
+      },
+      "constructed_deck_size": 60,
+      "normal_copy_limits": {
+        "field_generator": 2,
+        "utility": 3
+      },
+      "prime_identity": "unique",
+      "active_prime_positions": 3,
+      "catalog_status": "STRUCTURE_ACCEPTED_DETAILS_OPEN",
+      "utility_domains": {
+        "transduction": 18,
+        "activation": 7,
+        "sandbox_activation": 6,
+        "draw_deck": 7,
+        "graveyard_recovery": 6,
+        "stability_protection": 6
+      },
+      "copy_rule_scope": "card identity",
+      "additional_color_uniqueness_rule": false
+    },
+    "colors": {
+      "none": 0,
+      "Red": 1,
+      "Orange": 2,
+      "Yellow": 3,
+      "Green": 4,
+      "Blue": 5,
+      "Violet": 6,
+      "White": 7,
+      "Black": 8
+    },
+    "color_interpretation": {
+      "zero": "no active color / zero charge",
+      "direct_effects": "literal numerical magnitude",
+      "non_color_utilities": "may express approximate rank / rarity / strategic power",
+      "rank_always_equals_resource_cost": false
+    }
+  }
+}

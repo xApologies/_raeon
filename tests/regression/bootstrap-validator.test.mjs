@@ -1,4 +1,5 @@
 import {test} from 'node:test';
+import {loadDesignState} from '../../tools/validators/load-design-state.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -10,7 +11,7 @@ import {spawnSync} from 'node:child_process';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 function fixture() {
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'raeon-bootstrap-test-'));
-  for(const file of JSON.parse(fs.readFileSync(path.join(root,'data/manifests/design-checkpoint-0003.json'),'utf8')).files) {
+  for(const file of JSON.parse(fs.readFileSync(path.join(root,'data/manifests/design-checkpoint-0004.json'),'utf8')).files) {
     fs.mkdirSync(path.dirname(path.join(dir,file)),{recursive:true});
     fs.copyFileSync(path.join(root,file),path.join(dir,file));
   }
@@ -19,7 +20,13 @@ function fixture() {
   return dir;
 }
 function run(dir) {return spawnSync(process.execPath,[path.join(dir,'tools/validators/validate-bootstrap.mjs')],{encoding:'utf8',windowsHide:true});}
-function change(dir,fn){const p=path.join(dir,'data/manifests/accepted-state.json'); const data=JSON.parse(fs.readFileSync(p,'utf8')); fn(data); fs.writeFileSync(p,JSON.stringify(data));}
+function change(dir,fn){
+ const p=path.join(dir,'data/manifests/accepted-state.json');const index=JSON.parse(fs.readFileSync(p,'utf8'));const data=loadDesignState(dir);fn(data);
+ for(const key of ['authority','source','sources','production','source_import_required','open_items'])index[key]=data[key];
+ fs.writeFileSync(p,JSON.stringify(index));
+ for(const pointer of Object.values(index.datasets)){const f=path.join(dir,pointer.path);const dataset=JSON.parse(fs.readFileSync(f,'utf8'));for(const key of pointer.keys){dataset.values[key]=structuredClone(data[key]);if(key==='utility_structure')delete dataset.values[key].families;}fs.writeFileSync(f,JSON.stringify(dataset));}
+ for(const [name,file]of Object.entries(index.utility_families)){const f=path.join(dir,file);const dataset=JSON.parse(fs.readFileSync(f,'utf8'));dataset.values=data.utility_structure.families[name];fs.writeFileSync(f,JSON.stringify(dataset));}
+}
 const cases=[
  ['accepts baseline and creates untracked local inbox',null,null],
  ['rejects missing required module',d=>fs.unlinkSync(path.join(d,'development/modules/qmo-engine/README.md')),'Required file missing'],

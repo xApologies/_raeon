@@ -1,9 +1,8 @@
-# tests/rendering
+# Test boundary: rendering
 
-rendering test scenarios and evidence boundary.
+Status: OPEN / UNTESTED. This file defines navigation, not gameplay behavior or passing tests.
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+- [rendering design](../../design/rendering/SYSTEM.md) → [data](../../data/render_specs/direction.json) → [maturity](../../development/modules/rendering/README.md)
+- [blender-pipeline design](../../design/rendering/SYSTEM.md) → [data](../../data/render_specs/direction.json) → [maturity](../../development/modules/blender-pipeline/README.md)
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+No downstream layer may redefine accepted design or mathematical legality.

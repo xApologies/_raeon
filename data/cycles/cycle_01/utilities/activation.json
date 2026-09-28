@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "design": "design/cards/cycle_01/utilities/activation/SYSTEM.md",
+  "family": "activation",
+  "values": {
+    "count": 7,
+    "ranks": [
+      "Red",
+      "Orange",
+      "Yellow",
+      "Green",
+      "Blue",
+      "Violet",
+      "White"
+    ],
+    "ordinary_use": {
+      "from": "READY",
+      "to": "USED"
+    },
+    "normal_refresh": {
+      "from": "USED",
+      "to": "READY",
+      "timing": "OPEN"
+    },
+    "effect": {
+      "from": "USED",
+      "to": "READY",
+      "timing": "early",
+      "eligibility": "already-earned legal resource/object; exact eligibility OPEN"
+    },
+    "creates_color": false,
+    "creates_qmo_legality": false,
+    "per_rank_behavior": "OPEN"
+  }
+}

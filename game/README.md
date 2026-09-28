@@ -1,9 +1,7 @@
-# game
+# Runtime implementation boundaries
 
-Executable game implementation; no speculative gameplay at bootstrap.
+OPEN / UNIMPLEMENTED. game/ contains executable implementation only when work is authorized; current READMEs are navigation boundaries.
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+core, match, state, rules, board, cards/generators, cards/primes, cards/utilities, sandbox, qmo, manifolds, transduction, deck, collection, shop, ai, multiplayer, rendering, ui and persistence are reserved. Singular/legacy paths redirect to current homes.
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+[Authority map](../data/manifests/authority-map.json) links DESIGN → DATA → GAME → TESTS per major module. Do not use this layer to invent missing rules.

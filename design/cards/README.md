@@ -1,9 +1,3 @@
-# design/cards
+# Cards
 
-cards player/product design boundary.
-
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
-
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+Start at [Card System](CARD_SYSTEM.md), then [Cycle 1](cycle_01/CYCLE.md) and [Black cards](black/SYSTEM.md). [Cycle production](CYCLE_PRODUCTION.md) governs reusable content work. Each family has one current specification; final catalogs are explicitly unfinished.

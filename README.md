@@ -1,48 +1,42 @@
 # raeon.
 
-Canonical game-development repository: https://github.com/xApologies/_raeon
+Canonical repository: https://github.com/xApologies/_raeon
 
-**Current whole-game phase: PREPRODUCTION.** Substantial mathematical/system prototypes exist externally and await import. The cumulative game-design checkpoint accepts all 50 ordinary Utility structural slots and records Sandbox, Black-rank, collection, AI, local multiplayer and rendering direction. Final details and runtime systems remain unfinished; this is not a playable prototype.
+**WHOLE-GAME PHASE REMAINS PREPRODUCTION.** No gameplay implementation or mechanic redesign is claimed by checkpoint 0004.
 
-**THE MATHEMATICS IS THE PERMISSION SYSTEM.** The QMO is the canonical mathematical game object.
+## Developer entry points
 
-## Start here
-
-- [Project constitution](PROJECT_CONSTITUTION.md) and [development constitution](DEVELOPMENT_CONSTITUTION.md)
-- [Contribution/inbox workflow](CONTRIBUTING.md)
-- [Accepted rules](design/game/ACCEPTED_RULES.md) and [structured state](data/manifests/accepted-state.json)
-- [Lifecycle](production/README.md), [pipeline](development/PIPELINE.md), [modules](development/modules/README.md)
-- [Utility structure](design/cards/cycle_01/UTILITIES.md) and [cumulative game-design checkpoint](provenance/checkpoints/0003-cumulative-recovery.md)
-- [Bootstrap inventory](provenance/audits/bootstrap-inventory.md) and [decision](provenance/decisions/0001-repository-bootstrap.md)
-
-## Boundaries
-
-| Directory | Responsibility |
+| Area | Start here |
 | --- | --- |
-| production/ | Concept through postlaunch gates |
-| development/ | Modules, milestones, build channels, checkpoints |
-| design/ | Player-facing/product design |
-| mathematics/ | Authoritative formal sources |
-| game/ | Future executable runtime |
-| content/ | Presentation assets |
-| data/ | Structured truth, schemas, manifests |
-| tools/ | Validation and future tooling |
-| tests/ | Repository and design-data checks; no gameplay validation |
-| platform/ | Shared, Windows desktop, secondary iPadOS |
-| releases/ | Release records/artifact identities |
-| provenance/ | Sources, decisions, checkpoints, audits |
-| _inbox/ | Local-only ignored transfer boundary |
+| Governance | [Project constitution](PROJECT_CONSTITUTION.md), [development constitution](DEVELOPMENT_CONSTITUTION.md), [contributing](CONTRIBUTING.md) |
+| Game design | [Current-state index](design/README.md), [Game Design Document](design/game/GAME_DESIGN_DOCUMENT.md) |
+| Cards | [Card System](design/cards/CARD_SYSTEM.md), [Cycle 1](design/cards/cycle_01/CYCLE.md) |
+| Topology | [Topology design](design/topology/README.md) |
+| Mathematics | [Formal authority and missing sources](mathematics/README.md) |
+| Machine data | [Data index](data/README.md), [accepted-state pointers](data/manifests/accepted-state.json) |
+| Runtime | [Implementation boundaries](game/README.md) |
+| Content | [Presentation assets](content/README.md) |
+| Tests | [Validation and system boundaries](tests/README.md) |
+| Development | [Maturity/gates](development/README.md), [modules](development/modules/README.md) |
+| Production | [Lifecycle status](production/README.md) |
+| Platform | [Integration targets](platform/README.md) |
+| Releases | [Release boundary](releases/README.md) |
+| Provenance | [History](provenance/README.md), [checkpoint 0004](provenance/checkpoints/0004-repository-normalization.md) |
+| Inbox | [Local-only intake workflow](CONTRIBUTING.md) — _inbox/ is ignored |
 
-## Validate
+## Authority flow
 
-With Node and Git available, from the repository root:
+DESIGN defines behavior → DATA encodes it → GAME implements it → TESTS verifies it. Mathematics determines legality; constitutions govern process. Development tracks readiness, provenance preserves history, content supplies presentation and platform supplies integration. No downstream layer silently redefines upstream decisions.
+
+Use the [cross-layer authority map](data/manifests/authority-map.json) to navigate systems. Legacy paths are concise redirects for historical links, not competing specifications.
+
+## Verify this repository
 
 ```sh
 node tools/validators/validate-bootstrap.mjs
 node tools/validators/validate-design-state.mjs
-node --test tests/regression/bootstrap-validator.test.mjs tests/regression/design-state-validator.test.mjs
+node tools/validators/validate-normalization.mjs
+node --test tests/regression/*.test.mjs
 ```
 
-Checks cover repository/bootstrap and recorded design-data invariants only, not Genesis/Chirality mathematics, QMO closure correctness, gameplay balance, Blender geometry, GPU rendering, multiplayer correctness, or AI correctness. No game build or launch command exists yet.
-
-This standalone project uses no other repository's material. Missing mathematics, QMO objects, and RenderSpec/API packages remain SOURCE_IMPORT_REQUIRED; unresolved designs remain OPEN.
+Node and Git required. Checks verify structure, preserved design data, migration and provenance; they do not validate QMO mathematics, gameplay balance, final timing, rendering, AI or multiplayer correctness. No game launch command exists.

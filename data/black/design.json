@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "design": "design/cards/black/SYSTEM.md",
+  "values": {
+    "black": {
+      "rank": 8,
+      "ordinary_deck_legal": true,
+      "crafting": "extremely difficult/expensive endgame crafted cards",
+      "prime_identities": 3,
+      "utilities_exist": true,
+      "field_generators_exist": false,
+      "all_black_deck": {
+        "primes": 3,
+        "utilities": 57,
+        "total": 60
+      },
+      "legal_all_black_unlocks_hidden_mode": true,
+      "fourth_prime": {
+        "kind": "emergent/supported Prime",
+        "deck_card": false,
+        "availability": "true while all three supporting Black Primes remain alive; false if any dies",
+        "detailed_behavior": "OPEN"
+      },
+      "design_philosophy": {
+        "authority": "GAME_CANON",
+        "rank_above_white": true,
+        "bypasses_qmo_legality": false,
+        "exceptional_efficiency_or_setup_bypass_allowed": true,
+        "result_must_be_legal": true,
+        "black_mode_only": false,
+        "utility_catalog_outside_ordinary_cycle_01": true,
+        "final_utility_catalog": "OPEN"
+      },
+      "working_concepts": [
+        {
+          "working_name": "Shield of the Abyss",
+          "authority": "PROVISIONAL",
+          "status": "WORKING DESIGN",
+          "rank": "Black",
+          "final_printed_card": false,
+          "concept": {
+            "shield_charge": 8,
+            "lower_rank_prime_eligible": true,
+            "prime_identity_unchanged": true
+          },
+          "example": "Yellow Prime receives a Black shield while remaining its original Prime identity",
+          "wording": "OPEN",
+          "timing": "OPEN",
+          "cost": "OPEN"
+        },
+        {
+          "working_name": "Topaz Lake",
+          "authority": "PROVISIONAL",
+          "status": "WORKING DESIGN",
+          "rank": "Black",
+          "final_printed_card": false,
+          "concept": {
+            "manifest_color": "Yellow",
+            "bypasses_ordinary_generator_setup": true,
+            "requires_already_defined_legal_qmo": true,
+            "makes_illegal_geometry_legal": false
+          },
+          "target_qmo": "OPEN",
+          "timing": "OPEN",
+          "lifetime": "OPEN",
+          "implementation": "OPEN"
+        }
+      ],
+      "fourth_prime_condition": {
+        "authority": "GAME_CANON",
+        "operator": "AND",
+        "required_alive_flags": [
+          "BlackPrime1.alive",
+          "BlackPrime2.alive",
+          "BlackPrime3.alive"
+        ],
+        "false_result": "inaccessible",
+        "false_result_requires_destruction": false,
+        "reevaluate_if_future_legal_mechanics_restore_all_supports": true,
+        "authorizes_prime_resurrection": false
+      }
+    },
+    "black_mode": {
+      "authority": "PROVISIONAL",
+      "status": "ACCEPTED DESIGN DIRECTION / OPEN IMPLEMENTATION",
+      "unlock_condition_ref": "black.legal_all_black_unlocks_hidden_mode",
+      "hidden": true,
+      "ordinary_onboarding_progress_bar": false,
+      "intent": "Easter egg / long-term mastery reward; extreme/endgame difficulty around a legal full Black deck",
+      "opponent_uses_same_black_ecosystem": true,
+      "ai_may_violate_rules": false,
+      "challenge_sources": [
+        "Black card power",
+        "strong deck construction",
+        "strong strategic play",
+        "mastery of the same game systems"
+      ],
+      "exact_ai_behavior": "OPEN",
+      "production_priority": "later production concern"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "design": "design/ui_ux/SYSTEM.md",
+  "values": {
+    "board_presentation": {
+      "authority": "PROVISIONAL",
+      "board_scale": "Sandboxes/manifolds occupy configuration positions",
+      "selection": "enter detailed Sandbox configuration view",
+      "detail_exposes": [
+        "committed Field Generators",
+        "construction geometry",
+        "configuration state"
+      ],
+      "return_to_board": "compact field representation",
+      "completed_manifold_intent": "coherent active field rather than unrelated card rectangles",
+      "exact_ui": "OPEN",
+      "camera": "OPEN",
+      "controls": "OPEN",
+      "platform_interaction_may_differ": true,
+      "platform_rules_identical": true
+    }
+  }
+}

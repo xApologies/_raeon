@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "design": "design/game/match/SYSTEM.md",
+  "values": {
+    "turn_match_open": {
+      "starting_hand_size": "OPEN",
+      "maximum_hand_size": "OPEN",
+      "mulligan_rules": "OPEN",
+      "normal_draw_per_turn": "OPEN",
+      "turn_phases": "OPEN",
+      "normal_refresh_timing": "OPEN",
+      "first_player_rules": "OPEN",
+      "victory_condition": "OPEN",
+      "match_timer": "OPEN",
+      "temporary_sandbox_expiry": "OPEN",
+      "prime_timing": "OPEN",
+      "utility_timing_windows": "OPEN"
+    }
+  }
+}

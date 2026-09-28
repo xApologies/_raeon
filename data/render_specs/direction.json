@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "design": "design/rendering/SYSTEM.md",
+  "values": {
+    "rendering_direction": {
+      "authority": "CANON",
+      "pipeline": [
+        "QMO",
+        "deterministic RenderSpec",
+        "Blender procedural geometry",
+        "mesh",
+        "runtime GPU renderer",
+        "animated manifold"
+      ],
+      "qmo_defines_object": true,
+      "renderspec_defines_deterministic_visualization": true,
+      "rendering_changes_mathematical_legality": false,
+      "visual_qmo_conflict": "render is wrong; QMO does not change",
+      "higher_dimensional_state_possible": true,
+      "display": "explicit 3D projections/embeddings",
+      "blender_literally_renders_five_spatial_dimensions": false,
+      "possible_state_influences": [
+        "winding",
+        "phase",
+        "orientation",
+        "deformation",
+        "field-shell behavior",
+        "emissive flow",
+        "animation",
+        "topology-preserving motion"
+      ],
+      "projection_mathematics": "SOURCE_IMPORT_REQUIRED",
+      "qmo_renderspec_api_packages": "SOURCE_IMPORT_REQUIRED",
+      "implemented": false
+    }
+  },
+  "status": "SOURCE_IMPORT_REQUIRED",
+  "render_specs": []
+}

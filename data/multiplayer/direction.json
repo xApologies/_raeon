@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "design": "design/multiplayer/LOCAL_P2P.md",
+  "values": {
+    "multiplayer_direction": {
+      "authority": "PROVISIONAL",
+      "status": "ACCEPTED DESIGN DIRECTION",
+      "model": "local peer-to-peer",
+      "host": "Device A hosts match state",
+      "join": "Device B joins",
+      "exchange": "compact actions/state",
+      "rendering": "each device renders locally",
+      "requires_centralized_gameplay_server_every_match": false,
+      "transmits_rendered_frames_as_gameplay_state": false,
+      "transport": "OPEN",
+      "matchmaking": "OPEN",
+      "competitive_balance_policy": "OPEN",
+      "black_cards_legal_in_normal_pvp": true,
+      "implemented": false
+    }
+  }
+}

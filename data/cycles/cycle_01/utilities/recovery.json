@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "design": "design/cards/cycle_01/utilities/recovery/SYSTEM.md",
+  "family": "graveyard_recovery",
+  "values": {
+    "count": 6,
+    "source": "Graveyard",
+    "prime_recovery_allowed": false,
+    "automatically_reconstructs_manifold": false,
+    "recovered_generators_require_normal_use_and_legal_topology": true,
+    "rank_meaning": "rarity/power, not direct color magnitude",
+    "slots": [
+      {
+        "concept": "Recover 1 Field Generator",
+        "working_rank": {
+          "value": "Yellow",
+          "authority": "PROVISIONAL",
+          "acceptance": "accepted current working design"
+        },
+        "effect": {
+          "card_type": "Field Generator",
+          "count": 1,
+          "destination": "hand"
+        }
+      },
+      {
+        "concept": "Recover 2 Field Generators",
+        "working_rank": {
+          "value": "Blue",
+          "authority": "PROVISIONAL",
+          "acceptance": "accepted current working design"
+        },
+        "effect": {
+          "card_type": "Field Generator",
+          "count": 2,
+          "destination": "hand"
+        }
+      },
+      {
+        "concept": "Recover 3 Field Generators",
+        "working_rank": {
+          "value": "White",
+          "authority": "PROVISIONAL",
+          "acceptance": "accepted current working design"
+        },
+        "effect": {
+          "card_type": "Field Generator",
+          "count": 3,
+          "destination": "hand"
+        }
+      },
+      {
+        "concept": "Recover 1 Utility",
+        "working_rank": {
+          "value": "Green",
+          "authority": "PROVISIONAL",
+          "acceptance": "accepted current working design"
+        },
+        "effect": {
+          "card_type": "Utility",
+          "count": 1,
+          "destination": "hand"
+        }
+      },
+      {
+        "concept": "Recover 1 non-Prime",
+        "working_rank": {
+          "value": "Blue",
+          "authority": "PROVISIONAL",
+          "acceptance": "accepted current working design"
+        },
+        "effect": {
+          "card_type": "non-Prime",
+          "count": 1,
+          "destination": "hand"
+        }
+      },
+      {
+        "concept": "Recover up to 3 to deck",
+        "working_rank": {
+          "value": "Violet",
+          "authority": "PROVISIONAL",
+          "acceptance": "accepted current working design"
+        },
+        "effect": {
+          "card_type": "non-Prime",
+          "maximum_count": 3,
+          "destination": "deck top",
+          "order": "any chosen"
+        }
+      }
+    ]
+  }
+}

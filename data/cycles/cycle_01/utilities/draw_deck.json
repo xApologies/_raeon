@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "design": "design/cards/cycle_01/utilities/draw_deck/SYSTEM.md",
+  "family": "draw_deck",
+  "values": {
+    "count": 7,
+    "simple_rank_ladder": false,
+    "raw_draw_maximum": 3,
+    "graveyard_retrieval": false,
+    "hand_size_maximum": "OPEN",
+    "overflow_behavior": "OPEN",
+    "slots": [
+      {
+        "concept": "Draw 1",
+        "working_rank": {
+          "value": "Orange",
+          "authority": "PROVISIONAL",
+          "acceptance": "accepted current working design"
+        },
+        "effect": {
+          "operation": "draw",
+          "count": 1
+        }
+      },
+      {
+        "concept": "Draw 2",
+        "working_rank": {
+          "value": "Green",
+          "authority": "PROVISIONAL",
+          "acceptance": "accepted current working design"
+        },
+        "effect": {
+          "operation": "draw",
+          "count": 2
+        }
+      },
+      {
+        "concept": "Draw 3",
+        "working_rank": {
+          "value": "Violet",
+          "authority": "PROVISIONAL",
+          "acceptance": "accepted current working design"
+        },
+        "effect": {
+          "operation": "draw",
+          "count": 3
+        }
+      },
+      {
+        "concept": "Survey",
+        "working_rank": {
+          "value": "Yellow",
+          "authority": "PROVISIONAL",
+          "acceptance": "accepted current working design"
+        },
+        "effect": {
+          "operation": "survey",
+          "look_top": 3,
+          "return_to": "deck top",
+          "order": "any",
+          "direct_card_advantage": 0
+        }
+      },
+      {
+        "concept": "Selection",
+        "working_rank": {
+          "value": "Green",
+          "authority": "PROVISIONAL",
+          "acceptance": "accepted current working design"
+        },
+        "effect": {
+          "operation": "select",
+          "look_top": 3,
+          "take_to_hand": 1,
+          "remainder_to": "deck bottom",
+          "remainder_order": "OPEN"
+        }
+      },
+      {
+        "concept": "Exchange",
+        "working_rank": {
+          "value": "Blue",
+          "authority": "PROVISIONAL",
+          "acceptance": "accepted current working design"
+        },
+        "effect": {
+          "operation": "exchange",
+          "discard_from": "hand",
+          "discard_count": "any number",
+          "draw_count": "same number discarded",
+          "net_hand_count_change": 0,
+          "interacts_with_recovery": true
+        }
+      },
+      {
+        "concept": "Deep Survey",
+        "working_rank": {
+          "value": "White",
+          "authority": "PROVISIONAL",
+          "acceptance": "accepted current working design"
+        },
+        "effect": {
+          "operation": "deep_survey",
+          "look_top": 7,
+          "take_to_hand": 1,
+          "remainder": "shuffle back into deck",
+          "unrestricted_exact_card_tutor": false
+        }
+      }
+    ]
+  }
+}

@@ -1,9 +1,8 @@
-# game/core
+# Implementation boundary: core
 
-core runtime implementation boundary.
+Status: OPEN / UNIMPLEMENTED. This file defines navigation, not gameplay behavior or passing tests.
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+- [core-game design](../../design/game/GAME_DESIGN_DOCUMENT.md) → [data](../../data/game/product.json) → [maturity](../../development/modules/core-game/README.md)
+- [platform design](../../design/game/GAME_DESIGN_DOCUMENT.md) → [data](../../data/platform/targets.json) → [maturity](../../development/modules/platform/README.md)
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+No downstream layer may redefine accepted design or mathematical legality.

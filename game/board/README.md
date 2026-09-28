@@ -1,9 +1,7 @@
-# game/board
+# Implementation boundary: board
 
-board runtime implementation boundary.
+Status: OPEN / UNIMPLEMENTED. This file defines navigation, not gameplay behavior or passing tests.
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+- [board design](../../design/game/board/SYSTEM.md) → [data](../../data/board/presentation.json) → [maturity](../../development/modules/board/README.md)
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+No downstream layer may redefine accepted design or mathematical legality.

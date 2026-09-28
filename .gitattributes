@@ -7,3 +7,6 @@
 /provenance/sources/recovery-0003-block-2.txt -text whitespace=cr-at-eol
 
 /provenance/sources/recovery-0003-block-3.txt -text whitespace=cr-at-eol
+
+/provenance/sources/0004-CODEX_PROMPT.md -text whitespace=cr-at-eol
+/provenance/sources/0004-handoff-README.md -text whitespace=cr-at-eol

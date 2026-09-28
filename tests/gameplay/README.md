@@ -1,9 +1,9 @@
-# tests/gameplay
+# Test boundary: gameplay
 
-gameplay test scenarios and evidence boundary.
+Status: OPEN / UNTESTED. This file defines navigation, not gameplay behavior or passing tests.
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+- [turn-engine design](../../design/game/match/SYSTEM.md) → [data](../../data/game/match.json) → [maturity](../../development/modules/turn-engine/README.md)
+- [ai design](../../design/ai/README.md) → [data](../../data/ai/direction.json) → [maturity](../../development/modules/ai/README.md)
+- [ui-ux design](../../design/ui_ux/SYSTEM.md) → [data](../../data/board/presentation.json) → [maturity](../../development/modules/ui-ux/README.md)
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+No downstream layer may redefine accepted design or mathematical legality.

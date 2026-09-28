@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "design": "design/ai/README.md",
+  "values": {
+    "ai_direction": {
+      "authority": "PROVISIONAL",
+      "computer_opponents": "ACCEPTED DESIGN DIRECTION",
+      "multiple_difficulties": "ACCEPTED DESIGN DIRECTION",
+      "difficulty_basis": [
+        "strategy",
+        "deck construction",
+        "available cards",
+        "decision quality"
+      ],
+      "hidden_rules_violations": false,
+      "adaptive_player_modeling": {
+        "authority": "PROVISIONAL",
+        "status": "OPEN",
+        "implemented": false,
+        "ml_architecture": "OPEN"
+      },
+      "black_mode": "DESIGN DIRECTION / OPEN IMPLEMENTATION",
+      "implemented": false
+    }
+  }
+}

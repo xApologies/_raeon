@@ -1,9 +1,7 @@
-# game/ai
+# Implementation boundary: ai
 
-ai runtime implementation boundary.
+Status: OPEN / UNIMPLEMENTED. This file defines navigation, not gameplay behavior or passing tests.
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+- [ai design](../../design/ai/README.md) → [data](../../data/ai/direction.json) → [maturity](../../development/modules/ai/README.md)
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+No downstream layer may redefine accepted design or mathematical legality.

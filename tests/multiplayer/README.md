@@ -1,9 +1,7 @@
-# tests/multiplayer
+# Test boundary: multiplayer
 
-multiplayer test scenarios and evidence boundary.
+Status: OPEN / UNTESTED. This file defines navigation, not gameplay behavior or passing tests.
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+- [multiplayer design](../../design/multiplayer/LOCAL_P2P.md) → [data](../../data/multiplayer/direction.json) → [maturity](../../development/modules/multiplayer/README.md)
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+No downstream layer may redefine accepted design or mathematical legality.

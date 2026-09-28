@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "authority": "GAME_CANON",
   "cycle": "cycle_01",
   "status": "OPEN",
@@ -16,9 +16,23 @@
     "RELEASE"
   ],
   "utility_structure_status": "DESIGN STRUCTURE ACCEPTED",
-  "utility_structure_ref": "../../manifests/accepted-state.json#/utility_structure",
+  "utility_structure_ref": "utilities/overview.json",
   "card_definitions_note": "Accepted structural design is recorded; complete runtime catalogs and source mathematical APIs are not imported.",
-  "current_design_checkpoint": "0003",
+  "current_design_checkpoint": "0004",
   "utility_catalog_formalization": "PARTIALLY FORMALIZED",
-  "cycle_source_package": "SOURCE_IMPORT_REQUIRED"
+  "cycle_source_package": "SOURCE_IMPORT_REQUIRED",
+  "card_system_ref": "card-system.json",
+  "categories": {
+    "field_generators": "field_generators/status.json",
+    "primes": "primes/status.json",
+    "utilities": "utilities/overview.json"
+  },
+  "utility_families": {
+    "transduction": "utilities/transduction.json",
+    "activation": "utilities/activation.json",
+    "sandbox_activation": "utilities/sandbox_activation.json",
+    "draw_deck": "utilities/draw_deck.json",
+    "graveyard_recovery": "utilities/recovery.json",
+    "stability_protection": "utilities/stability.json"
+  }
 }

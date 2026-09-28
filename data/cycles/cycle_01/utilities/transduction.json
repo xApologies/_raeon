@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "design": "design/cards/cycle_01/utilities/transduction/SYSTEM.md",
+  "family": "transduction",
+  "values": {
+    "count": 18,
+    "restore": [
+      {
+        "rank": "Red",
+        "charge_delta": 1
+      },
+      {
+        "rank": "Orange",
+        "charge_delta": 2
+      },
+      {
+        "rank": "Yellow",
+        "charge_delta": 3
+      },
+      {
+        "rank": "Green",
+        "charge_delta": 4
+      },
+      {
+        "rank": "Blue",
+        "charge_delta": 5
+      },
+      {
+        "rank": "Violet",
+        "charge_delta": 6
+      }
+    ],
+    "degrade": [
+      {
+        "rank": "Red",
+        "charge_delta": -1
+      },
+      {
+        "rank": "Orange",
+        "charge_delta": -2
+      },
+      {
+        "rank": "Yellow",
+        "charge_delta": -3
+      },
+      {
+        "rank": "Green",
+        "charge_delta": -4
+      },
+      {
+        "rank": "Blue",
+        "charge_delta": -5
+      },
+      {
+        "rank": "Violet",
+        "charge_delta": -6
+      }
+    ],
+    "universal": [
+      {
+        "rank": "Orange",
+        "magnitude": 1,
+        "choices": [
+          "RESTORE",
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      {
+        "rank": "Yellow",
+        "magnitude": 2,
+        "choices": [
+          "RESTORE",
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      {
+        "rank": "Green",
+        "magnitude": 3,
+        "choices": [
+          "RESTORE",
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      {
+        "rank": "Blue",
+        "magnitude": 4,
+        "choices": [
+          "RESTORE",
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      {
+        "rank": "Violet",
+        "magnitude": 5,
+        "choices": [
+          "RESTORE",
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      {
+        "rank": "White",
+        "magnitude": 6,
+        "choices": [
+          "RESTORE",
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      }
+    ],
+    "red_universal": false,
+    "dedicated_white_restore_degrade": false
+  }
+}

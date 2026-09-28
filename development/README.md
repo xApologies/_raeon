@@ -1,5 +1,5 @@
-# Development
+# Development maturity
 
-Use [PIPELINE.md](PIPELINE.md) for each major subsystem. Module readiness is independent of production phases. Milestones define outcomes; builds define channels; checkpoints preserve reviewed evidence.
+Development owns status, gates, milestones, build channels and checkpoints, not gameplay specifications. [Modules](modules/README.md) link upstream design/math/data and downstream implementation/test boundaries. [Pipeline](PIPELINE.md) is unchanged.
 
-States: OPEN → DESIGN → FORMALIZED → IMPLEMENTED → VALIDATED → GOLD. Transitions require evidence, never mere directories or code. Modules started OPEN at bootstrap. Utilities now record DESIGN — DESIGN STRUCTURE ACCEPTED in checkpoint 0002; no module is GOLD.
+Utilities remain DESIGN — DESIGN STRUCTURE ACCEPTED. Other modules remain OPEN. No full gate acceptance or phase promotion results from normalization. Use the [authority map](../data/manifests/authority-map.json) for system navigation and [checkpoint 0004](checkpoints/0004-repository-normalization.md) for migration evidence.

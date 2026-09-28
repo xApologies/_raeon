@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "design": "design/topology/emergent_fields/SYSTEM.md",
+  "values": {
+    "emergent_fields": {
+      "directly_attackable": false,
+      "directly_destroyable": false,
+      "independently_targetable": false,
+      "required_support_loss": "inaccessible / gone according to support relation",
+      "amplification_preserves_support_dependency": true
+    }
+  },
+  "status": "SOURCE_IMPORT_REQUIRED",
+  "expected_objects": 1691,
+  "objects": []
+}

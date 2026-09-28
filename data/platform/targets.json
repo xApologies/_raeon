@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "design": "design/game/GAME_DESIGN_DOCUMENT.md",
+  "values": {
+    "platforms": {
+      "priority": "WINDOWS DESKTOP",
+      "secondary": "iPad / iPadOS"
+    }
+  }
+}

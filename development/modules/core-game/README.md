@@ -6,19 +6,19 @@ Match coordination and win/loss lifecycle.
 
 ## Current status
 
-OPEN — intentionally unimplemented; validation UNTESTED.
+OPEN — intentionally unimplemented; validation UNTESTED. No status advancement in normalization.
 
 ## Authority
 
-CANON: repository/module boundaries. GAME_CANON: only supplied [accepted rules](../../../design/game/ACCEPTED_RULES.md). Mathematical/QMO/RenderSpec definitions are SOURCE_IMPORT_REQUIRED, not defined by this README.
+This dashboard tracks maturity, not game rules. [Current design](../../../design/game/GAME_DESIGN_DOCUMENT.md) and [mathematics](../../../mathematics/README.md) govern behavior and legality.
 
 ## Inputs
 
-Accepted design and legal transitions.
+[Machine data](../../../data/game/product.json) encodes upstream decisions; absent source artifacts remain SOURCE_IMPORT_REQUIRED.
 
 ## Outputs
 
-Match lifecycle contracts (planned, not delivered).
+[Implementation boundary](../../../game/core/README.md) remains unimplemented.
 
 ## Dependencies
 
@@ -26,31 +26,31 @@ PROVISIONAL coordination dependencies: turn-engine, board, card-system, persiste
 
 ## Development gates
 
-Follow [PIPELINE.md](../../PIPELINE.md). Acceptance requires evidence, revision, reviewer, date; NOT_APPLICABLE needs rationale.
+[Pipeline](../../PIPELINE.md). Gate acceptance requires evidence, revision, reviewer/date, and justified NOT_APPLICABLE entries. Partial design evidence from [0002](../../../provenance/checkpoints/0002-game-design.md), [0003](../../../provenance/checkpoints/0003-cumulative-recovery.md) and [0004](../../../provenance/checkpoints/0004-repository-normalization.md) does not certify a whole gate.
 
 | Gate | Status | Evidence |
 | --- | --- | --- |
-| 00 Canon | OPEN | None — bootstrap only |
-| 01 Design | OPEN | None — bootstrap only |
-| 02 Mathematics | OPEN | None — bootstrap only |
-| 03 Rules | OPEN | None — bootstrap only |
-| 04 State Model | OPEN | None — bootstrap only |
-| 05 Interfaces | OPEN | None — bootstrap only |
-| 06 Algorithms | OPEN | None — bootstrap only |
-| 07 Visualization | OPEN | None — bootstrap only |
-| 08 Interaction | OPEN | None — bootstrap only |
-| 09 Data & Schemas | OPEN | None — bootstrap only |
-| 10 Implementation | OPEN | None — bootstrap only |
-| 11 Testing | OPEN | None — bootstrap only |
-| 12 Integration | OPEN | None — bootstrap only |
-| 13 Performance | OPEN | None — bootstrap only |
-| 14 Provenance | OPEN | None — bootstrap only |
-| 15 Release | OPEN | None — bootstrap only |
+| 00 Canon | OPEN | Partial design/source navigation only; acceptance pending |
+| 01 Design | OPEN | Partial design/source navigation only; acceptance pending |
+| 02 Mathematics | OPEN | Partial design/source navigation only; acceptance pending |
+| 03 Rules | OPEN | Partial design/source navigation only; acceptance pending |
+| 04 State Model | OPEN | Partial design/source navigation only; acceptance pending |
+| 05 Interfaces | OPEN | Partial design/source navigation only; acceptance pending |
+| 06 Algorithms | OPEN | Partial design/source navigation only; acceptance pending |
+| 07 Visualization | OPEN | Partial design/source navigation only; acceptance pending |
+| 08 Interaction | OPEN | Partial design/source navigation only; acceptance pending |
+| 09 Data & Schemas | OPEN | Partial design/source navigation only; acceptance pending |
+| 10 Implementation | OPEN | Partial design/source navigation only; acceptance pending |
+| 11 Testing | OPEN | Partial design/source navigation only; acceptance pending |
+| 12 Integration | OPEN | Partial design/source navigation only; acceptance pending |
+| 13 Performance | OPEN | Partial design/source navigation only; acceptance pending |
+| 14 Provenance | OPEN | Partial design/source navigation only; acceptance pending |
+| 15 Release | OPEN | Partial design/source navigation only; acceptance pending |
 
 ## OPEN questions
 
-Exact setup, victory, loss, and draw rules?
+See [current specification](../../../design/game/GAME_DESIGN_DOCUMENT.md) and [OPEN/source-import index](../../../data/manifests/accepted-state.json). Do not duplicate unresolved rule definitions here.
 
 ## Validation requirements
 
-Full-match transitions and victory/loss regressions. These are future requirements, not passing tests. Repository validation does not validate this subsystem.
+[System test boundary](../../../tests/integration/README.md) is UNTESTED. Repository validators check architecture and design-data consistency, not subsystem correctness. [Provenance and migration evidence](../../../provenance/checkpoints/0004-repository-normalization.md).

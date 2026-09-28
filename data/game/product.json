@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "design": "design/game/GAME_DESIGN_DOCUMENT.md",
+  "values": {
+    "product_intent": {
+      "authority": "PROVISIONAL",
+      "session_style": "compact strategic game for short sessions, including brief matches while waiting or traveling",
+      "exact_match_duration": "OPEN",
+      "depth_sources": [
+        "deck construction",
+        "Field Generator placement",
+        "Sandbox configuration",
+        "mathematical closure",
+        "manifold discovery",
+        "color transduction",
+        "Prime management",
+        "Activation timing",
+        "fusion",
+        "emergent fields",
+        "card draw/selection",
+        "graveyard recovery",
+        "protection/stability",
+        "long-term collection",
+        "hidden Black progression"
+      ],
+      "approximate_session_target_minutes": 15,
+      "hard_duration_guarantee": false,
+      "action_level_understandability": true
+    },
+    "governing_law": {
+      "statement": "THE MATHEMATICS IS THE PERMISSION SYSTEM.",
+      "qmo_determines_mathematical_legality": true,
+      "utilities_override_closure": false,
+      "rendering_determines_legality": false
+    }
+  }
+}

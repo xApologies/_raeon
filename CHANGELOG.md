@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — checkpoint 0004 normalization (2026-09-28)
+
+- Normalize current system specifications and split Utility/Black monoliths.
+- Split machine data into losslessly reconstructable schema-4 datasets.
+- Link development, implementation and test boundaries through one authority map.
+- Preserve historical files, module states, PREPRODUCTION and accepted mechanics.
+
 ## Unreleased — cumulative recovery checkpoint 0003 (2026-09-28)
 
 - Integrate supplied Blocks 2/3 with accepted checkpoint 0002; preserve all ordinary Utility counts and baseline rules.

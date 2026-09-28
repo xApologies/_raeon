@@ -1,9 +1,3 @@
-# game/manifold
+# Relocated
 
-manifold runtime implementation boundary.
-
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
-
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+Current specification: [README.md](../manifolds/README.md). This compatibility entry preserves historical links; it defines no rules.

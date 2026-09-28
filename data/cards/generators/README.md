@@ -1,12 +1,3 @@
-# data/cards/generators
+# Relocated
 
-cards / generators structured data boundary.
-
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
-
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
-
-
-Authoritative Field Generator QMO data: SOURCE_IMPORT_REQUIRED. No Generator objects or definitions are created from this design directive.
+Current specification: [README.md](../../cycles/cycle_01/field_generators/README.md). This compatibility entry preserves historical links; it defines no rules.

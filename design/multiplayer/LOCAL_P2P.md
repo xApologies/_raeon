@@ -1,5 +1,7 @@
 # Local peer-to-peer match direction
 
+<!-- raeon:current-spec multiplayer -->
+
 Authority: PROVISIONAL — ACCEPTED DESIGN DIRECTION from [Block 3](../../provenance/sources/recovery-0003-block-3.txt). Machine-readable direction: [accepted state](../../data/manifests/accepted-state.json).
 
 Device A hosts match state; Device B joins. Devices exchange compact actions/state and each renders locally. A centralized gameplay server should not be required for every local match. Rendered frames are not gameplay state and must not be the exchanged gameplay representation.

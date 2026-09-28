@@ -1,0 +1,68 @@
+{
+  "source_commit": "6e5bd716160f41cb4225a60a5ef3127cffcc1f84",
+  "relocations": [
+    {
+      "from": "design/cards/BLACK_RANK.md",
+      "to": "design/cards/black/SYSTEM.md",
+      "method": "relocate content and retain historical-link redirect"
+    },
+    {
+      "from": "design/progression/BLACK_MODE.md",
+      "to": "design/cards/black/black_mode/SYSTEM.md",
+      "method": "relocate content and retain historical-link redirect"
+    },
+    {
+      "from": "design/systems/RENDERING.md",
+      "to": "design/rendering/SYSTEM.md",
+      "method": "relocate content and retain historical-link redirect"
+    },
+    {
+      "from": "design/ui-ux/README.md",
+      "to": "design/ui_ux/SYSTEM.md",
+      "method": "relocate content and retain historical-link redirect"
+    },
+    {
+      "from": "design/progression/README.md",
+      "to": "design/collection/SYSTEM.md",
+      "method": "relocate content and retain historical-link redirect"
+    }
+  ],
+  "utility_splits": [
+    {
+      "from": "design/cards/cycle_01/UTILITIES.md",
+      "section": "Transduction — 18",
+      "to": "design/cards/cycle_01/utilities/transduction/SYSTEM.md"
+    },
+    {
+      "from": "design/cards/cycle_01/UTILITIES.md",
+      "section": "Activation — 7",
+      "to": "design/cards/cycle_01/utilities/activation/SYSTEM.md"
+    },
+    {
+      "from": "design/cards/cycle_01/UTILITIES.md",
+      "section": "Sandbox Activation — 6",
+      "to": "design/cards/cycle_01/utilities/sandbox_activation/SYSTEM.md"
+    },
+    {
+      "from": "design/cards/cycle_01/UTILITIES.md",
+      "section": "Draw / Deck — 7",
+      "to": "design/cards/cycle_01/utilities/draw_deck/SYSTEM.md"
+    },
+    {
+      "from": "design/cards/cycle_01/UTILITIES.md",
+      "section": "Graveyard / Recovery — 6",
+      "to": "design/cards/cycle_01/utilities/recovery/SYSTEM.md"
+    },
+    {
+      "from": "design/cards/cycle_01/UTILITIES.md",
+      "section": "Stability / Protection — 6",
+      "to": "design/cards/cycle_01/utilities/stability/SYSTEM.md"
+    }
+  ],
+  "consolidations": [
+    "design/game/ACCEPTED_RULES.md → system specifications",
+    "development/modules/*/README.md → status and upstream/downstream links",
+    "accepted-state.json → per-system datasets and high-level pointers"
+  ],
+  "history_policy": "All pre-existing provenance checkpoints/decisions/sources/audits and development checkpoint files preserved byte-for-byte; provenance/README.md is the updated current history index. Compatibility stubs preserve historical links."
+}

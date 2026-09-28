@@ -1,9 +1,3 @@
-# data/manifolds
+# Manifold data navigation
 
-manifolds structured data boundary.
-
-Status: SOURCE_IMPORT_REQUIRED.
-
-Accepted authoritative artifacts exist externally and await inspected, validated import through _inbox. Do not reconstruct missing definitions or fabricate objects.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+Current QMO datasets live under [qmo](../qmo/README.md). Legacy child boundaries point to their source-status manifests. They contain no alternate object catalogs.

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "design": "design/cards/cycle_01/utilities/sandbox_activation/SYSTEM.md",
+  "family": "sandbox_activation",
+  "values": {
+    "count": 6,
+    "ranks": [
+      "Red",
+      "Orange",
+      "Yellow",
+      "Green",
+      "Blue",
+      "Violet"
+    ],
+    "capacity_ref": "sandbox.temporary_capacity",
+    "permanent_exempt": true,
+    "identity_copy_limit_ref": "cycle_01.normal_copy_limits.utility",
+    "color_uniqueness_rule": false,
+    "destruction_expiry": "OPEN"
+  }
+}

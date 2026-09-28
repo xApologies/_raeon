@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "design": "design/collection/SYSTEM.md",
+  "values": {
+    "long_term_direction": {
+      "authority": "PROVISIONAL",
+      "acceptance": "current design direction, not finalized implementation",
+      "long_term_collection": true,
+      "earn_progression_and_credits_through_play": true,
+      "purchase_of_gameplay_credits_required": false,
+      "future_cycles_possible": true,
+      "black_cards": "extremely difficult/expensive crafted endgame cards",
+      "duplicates_have_long_term_value_including_black_crafting": true,
+      "player_to_player_credit_wagering": false,
+      "pvp_rewards": "may grant game-generated progression/credits; exact rewards OPEN",
+      "open_details": [
+        "Crafting recipes",
+        "Credit values",
+        "Pack probabilities",
+        "Economy rates",
+        "Release pricing",
+        "Exact PvP rewards",
+        "Pack sizes",
+        "Credit costs",
+        "Reward rates"
+      ],
+      "monetization_implemented": false,
+      "starting_access": "sufficient to play",
+      "credit_use": "in-game card shop / pack-opening collection loop",
+      "collect_cycle_through_play": true,
+      "pack_size": "OPEN",
+      "credit_costs": "OPEN",
+      "reward_rates": "OPEN",
+      "gameplay_credit_bundles": false,
+      "subscription_dependent_gameplay": false,
+      "pay_to_win_credit_purchasing": false,
+      "pricing_direction": "inexpensive, player-friendly releases",
+      "exact_store_price": "OPEN",
+      "commercial_changes_require_explicit_approval": true
+    }
+  }
+}

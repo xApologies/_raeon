@@ -1,9 +1,7 @@
-# game/deck
+# Implementation boundary: deck
 
-deck runtime implementation boundary.
+Status: OPEN / UNIMPLEMENTED. This file defines navigation, not gameplay behavior or passing tests.
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+- [deck-construction design](../../design/cards/CARD_SYSTEM.md) → [data](../../data/cycles/cycle_01/card-system.json) → [maturity](../../development/modules/deck-construction/README.md)
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+No downstream layer may redefine accepted design or mathematical legality.

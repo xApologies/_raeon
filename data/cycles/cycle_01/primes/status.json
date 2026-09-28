@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "design": "design/cards/cycle_01/primes/SYSTEM.md",
+  "status": "OPEN",
+  "expected_identities": 30,
+  "objects": []
+}

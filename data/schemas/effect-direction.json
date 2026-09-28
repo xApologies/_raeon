@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "design": "data/schemas/EFFECT_DEFINITIONS.md",
+  "values": {
+    "card_effect_direction": {
+      "authority": "PROVISIONAL",
+      "human_readable_rules_text": true,
+      "machine_readable_effect_definitions": true,
+      "status": "schema direction, not final runtime schema",
+      "possible_fields": [
+        "id",
+        "family",
+        "rank_color",
+        "operator",
+        "magnitude",
+        "target_type",
+        "timing",
+        "duration",
+        "constraints",
+        "authority",
+        "status"
+      ],
+      "examples": [
+        {
+          "family": "TRANSDUCTION",
+          "operator": "RESTORE",
+          "rank_color": "YELLOW",
+          "magnitude": 3
+        },
+        {
+          "family": "DRAW_DECK",
+          "operator": "DRAW",
+          "rank_color": "VIOLET",
+          "magnitude": 3
+        }
+      ],
+      "unknown_values": "OPEN; no inferred defaults"
+    }
+  }
+}

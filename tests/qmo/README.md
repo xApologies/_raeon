@@ -1,9 +1,9 @@
-# tests/qmo
+# Test boundary: qmo
 
-qmo test scenarios and evidence boundary.
+Status: OPEN / UNTESTED. This file defines navigation, not gameplay behavior or passing tests.
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+- [qmo-engine design](../../design/topology/manifolds/SYSTEM.md) → [data](../../data/qmo/inventory.json) → [maturity](../../development/modules/qmo-engine/README.md)
+- [chirality-fabric design](../../design/topology/field_generators/SYSTEM.md) → [data](../../data/qmo/generators/status.json) → [maturity](../../development/modules/chirality-fabric/README.md)
+- [propagation-engine design](../../design/topology/field_generators/SYSTEM.md) → [data](../../data/qmo/generators/status.json) → [maturity](../../development/modules/propagation-engine/README.md)
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+No downstream layer may redefine accepted design or mathematical legality.

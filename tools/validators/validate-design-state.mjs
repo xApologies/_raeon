@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {loadDesignState} from './load-design-state.mjs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {isDeepStrictEqual} from 'node:util';
@@ -13,8 +14,8 @@ export function validateDesignState(s) {
   const ordinary=['Red','Orange','Yellow','Green','Blue','Violet','White'];
   const low=ordinary.slice(0,6);
   try {
-    same(s.schema_version,3,'Accepted-state schema version');
-    same(s.current_design_checkpoint,'0003','Current design checkpoint');
+    same(s.schema_version,4,'Accepted-state schema version');
+    same(s.current_design_checkpoint,'0004','Current design checkpoint');
     same(s.production.phase,'PREPRODUCTION','Whole-game phase');
     same(s.governing_law,{statement:'THE MATHEMATICS IS THE PERMISSION SYSTEM.',qmo_determines_mathematical_legality:true,utilities_override_closure:false,rendering_determines_legality:false},'Mathematics permission rule');
     same(s.cycle_01.catalog_status,'STRUCTURE_ACCEPTED_DETAILS_OPEN','Catalog structural status');
@@ -155,7 +156,7 @@ export function validateDesignRepository(root) {
   const check=(ok,label)=>{checks++;if(!ok)errors.push(label);};
   const read=p=>fs.readFileSync(path.join(root,p),'utf8');
   try {
-    const result=validateDesignState(JSON.parse(read('data/manifests/accepted-state.json')));
+    const result=validateDesignState(loadDesignState(root));
     checks+=result.checks;errors.push(...result.errors);
     const source=JSON.parse(read('provenance/sources/current-state-recovery-0002.json'));
     const hash=p=>createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
@@ -185,7 +186,7 @@ export function validateDesignRepository(root) {
     }
     const cycle=JSON.parse(read('data/cycles/cycle_01/manifest.json'));
     check(cycle.utility_structure_status==='DESIGN STRUCTURE ACCEPTED','Cycle structure status');
-    check(cycle.utility_structure_ref==='../../manifests/accepted-state.json#/utility_structure','Cycle points to single accepted-state model');
+    check(cycle.utility_structure_ref==='utilities/overview.json','Cycle points to normalized Utility overview');
     check(cycle.card_definitions_imported===false,'Cycle does not claim final runtime catalog');
     check(read('development/modules/utilities/README.md').includes('DESIGN — DESIGN STRUCTURE ACCEPTED'),'Utility module design status');
   }catch(error){errors.push(`Repository validation could not complete: ${error.message}`);}

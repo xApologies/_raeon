@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "design": "design/topology/manifolds/SYSTEM.md",
+  "values": {
+    "local_manifold": {
+      "closure_required_before_color": true,
+      "closed_generator_count_to_color": {
+        "3": "Red",
+        "4": "Orange",
+        "5": "Yellow",
+        "6": "Green",
+        "7": "Blue",
+        "8": "Violet"
+      },
+      "base_basis": {
+        "Red": 15,
+        "Orange": 13,
+        "Yellow": 11,
+        "Green": 9,
+        "Blue": 7,
+        "Violet": 5
+      },
+      "base_total": 60,
+      "basis_is_complete_recursive_closure": false
+    }
+  },
+  "status": "SOURCE_IMPORT_REQUIRED",
+  "expected_objects": 60,
+  "objects": []
+}

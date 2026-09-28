@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "design": "design/topology/sandbox/SYSTEM.md",
+  "values": {
+    "sandbox": {
+      "permanent_start": 3,
+      "permanent_minimum": 3,
+      "temporary_domains_allowed": true,
+      "independent_extraction_after_commitment": false,
+      "whole_domain_merge_fusion_allowed": true,
+      "topology_basis": "participating Generator geometry, not Sandbox provenance",
+      "permanent_universal": true,
+      "permanent_uses_temporary_colored_capacity": false,
+      "temporary_capacity": {
+        "Red": 3,
+        "Orange": 4,
+        "Yellow": 5,
+        "Green": 6,
+        "Blue": 7,
+        "Violet": 8
+      },
+      "temporary_capacity_formula": "ColorCharge + 2, Red through Violet only",
+      "capacity_guarantees_closure": false,
+      "over_capacity_commitment_allowed": false,
+      "temporary_destruction_expiry": "OPEN"
+    }
+  }
+}
