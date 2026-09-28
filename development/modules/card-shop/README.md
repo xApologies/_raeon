@@ -54,3 +54,8 @@ Currencies, offerings, crafting costs, transactions?
 ## Validation requirements
 
 Atomicity and approved economy rules. These are future requirements, not passing tests. Repository validation does not validate this subsystem.
+
+
+## Design checkpoint 0002
+
+Current direction does not require purchased gameplay credits and excludes player-to-player credit wagering. Game-generated PvP rewards are possible but amounts, recipes, pricing and transaction details remain OPEN. See [current rules](../../../design/game/ACCEPTED_RULES.md), [Utility design](../../../design/cards/cycle_01/UTILITIES.md), and [checkpoint](../../../provenance/checkpoints/0002-game-design.md). This adds design evidence only; subsystem gates are not accepted by these notes.

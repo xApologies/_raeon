@@ -1,6 +1,6 @@
 # Modules
 
-All modules begin OPEN under the [pipeline](../PIPELINE.md). Listed dependencies are PROVISIONAL coordination relationships, not implemented architecture or runtime initialization order.
+Modules began OPEN at bootstrap under the [pipeline](../PIPELINE.md). Utilities are now DESIGN — DESIGN STRUCTURE ACCEPTED; other modules retain OPEN pending their applicable gates. Listed dependencies are PROVISIONAL coordination relationships, not implemented architecture or runtime initialization order.
 
 - [core-game](core-game/README.md)
 - [turn-engine](turn-engine/README.md)

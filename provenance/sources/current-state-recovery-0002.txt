@@ -1,0 +1,815 @@
+CODEX DIRECTIVE — RAEON CURRENT-STATE RECOVERY / FIRST GAME-DESIGN CHECKPOINT
+
+TARGET REPOSITORY:
+https://github.com/xApologies/_raeon
+
+PURPOSE
+
+Update the EXISTING raeon repository with the current accepted game-design state.
+
+The repository scaffold already exists.
+
+DO NOT rebuild the repository architecture.
+DO NOT replace the existing project/development constitutions.
+DO NOT import another repository.
+DO NOT invent missing mathematics, QMO objects, cards, rules, or implementation.
+
+First inspect the existing repository and preserve its established architecture,
+authority labels, production lifecycle, development pipeline, provenance discipline,
+and machine-readable accepted-state model.
+
+This update represents the first substantial raeon GAME-DESIGN checkpoint after
+repository bootstrap.
+
+The repository is currently PREPRODUCTION and remains PREPRODUCTION after this update.
+
+======================================================================
+1. REQUIRED WORKFLOW
+======================================================================
+
+Before editing:
+
+1. Pull/fetch the current target repository.
+2. Inspect:
+   - README.md
+   - PROJECT_CONSTITUTION.md
+   - DEVELOPMENT_CONSTITUTION.md
+   - CONTRIBUTING.md
+   - development/PIPELINE.md
+   - design/game/ACCEPTED_RULES.md
+   - data/manifests/accepted-state.json
+   - production/
+   - development/modules/
+   - provenance/
+3. Preserve existing canonical architecture.
+4. Create an appropriate working branch/checkpoint for this update.
+5. Update existing documents instead of creating contradictory duplicate authority.
+6. Add new documents only where the existing architecture calls for them.
+7. Update machine-readable accepted state alongside prose.
+8. Add provenance for this design checkpoint.
+9. Run existing bootstrap validation and any new design-data validation added by this update.
+10. Inspect git diff/status before commit.
+11. Commit the completed checkpoint.
+12. Do not merge to main unless explicitly authorized.
+
+======================================================================
+2. GOVERNING LAW
+======================================================================
+
+Preserve the existing governing principle:
+
+    THE MATHEMATICS IS THE PERMISSION SYSTEM.
+
+The QMO mathematical layer determines mathematical legality.
+
+Utilities may manipulate legal game state but do not override QMO closure.
+
+Rendering does not determine mathematical legality.
+
+Do not fabricate SOURCE_IMPORT_REQUIRED mathematics or QMO data.
+
+======================================================================
+3. CYCLE-1 CARD ARCHITECTURE
+======================================================================
+
+Cycle 1 contains:
+
+    120 Field Generator cards
+     30 Prime Field cards
+     50 Utility cards
+    -------------------------
+    200 ordinary Cycle cards
+
+Constructed deck size:
+
+    60 cards
+
+Existing copy rules remain:
+
+    Field Generator identity: maximum 2 copies per deck
+    Utility identity: maximum 3 copies per deck
+    Prime identity: unique
+
+Do not introduce any additional color-based uniqueness rule.
+
+Example:
+
+A deck may legally contain multiple copies of the Red Sandbox Utility,
+up to the ordinary Utility identity copy limit.
+
+======================================================================
+4. COLOR-CHARGE SYSTEM
+======================================================================
+
+Canonical charge ladder:
+
+    0 = no active color / zero charge
+    1 = Red
+    2 = Orange
+    3 = Yellow
+    4 = Green
+    5 = Blue
+    6 = Violet
+    7 = White
+    8 = Black
+
+Represent this distinction carefully:
+
+For direct color-manipulation effects, color has literal numerical magnitude.
+
+For many non-color Utilities, card color may instead represent approximate
+rank / rarity / strategic power.
+
+Do not assume every Utility rank must equal a numerical resource cost.
+
+Black Field Generator cards do not exist.
+
+======================================================================
+5. UTILITY CATALOG — STRUCTURAL DESIGN NOW ACCEPTED
+======================================================================
+
+The 50 ordinary Cycle-1 Utility identities are structurally divided into:
+
+    18 Transduction
+     7 Activation / Tempo
+     6 Sandbox Activation
+     7 Draw / Deck
+     6 Graveyard / Recovery
+     6 Stability / Protection
+    -------------------------
+     50 TOTAL
+
+This allocation is GAME_CANON.
+
+The exact final card names, exact balance numbers, flavor text, and some detailed
+timing remain under design unless explicitly defined below.
+
+Update accepted-state.json and appropriate design documentation accordingly.
+
+The repository must no longer describe the entire 50-card Utility structure as
+undefined.
+
+The STRUCTURE is accepted.
+
+Some individual details remain OPEN.
+
+======================================================================
+6. TRANSDUCTION UTILITIES — 18
+======================================================================
+
+The Transduction family contains exactly:
+
+    6 Restore
+    6 Degrade
+    6 Universal Restore-or-Degrade
+
+Total:
+
+    18
+
+--------------------------------------------------
+6A. RESTORE
+--------------------------------------------------
+
+Dedicated Restore identities:
+
+    Red
+    Orange
+    Yellow
+    Green
+    Blue
+    Violet
+
+Their direct color magnitudes are:
+
+    Red    = +1
+    Orange = +2
+    Yellow = +3
+    Green  = +4
+    Blue   = +5
+    Violet = +6
+
+The card's rank/color corresponds directly to the generated restoration magnitude.
+
+--------------------------------------------------
+6B. DEGRADE
+--------------------------------------------------
+
+Dedicated Degrade identities:
+
+    Red
+    Orange
+    Yellow
+    Green
+    Blue
+    Violet
+
+Magnitudes:
+
+    Red    = -1
+    Orange = -2
+    Yellow = -3
+    Green  = -4
+    Blue   = -5
+    Violet = -6
+
+--------------------------------------------------
+6C. UNIVERSAL
+--------------------------------------------------
+
+Universal cards choose:
+
+    RESTORE
+    OR
+    DEGRADE
+
+when resolved.
+
+They pay a flexibility penalty relative to dedicated Restore/Degrade.
+
+Accepted structural progression:
+
+    Orange Universal -> ± Red magnitude     = ±1
+    Yellow Universal -> ± Orange magnitude = ±2
+    Green Universal  -> ± Yellow magnitude = ±3
+    Blue Universal   -> ± Green magnitude  = ±4
+    Violet Universal -> ± Blue magnitude   = ±5
+    White Universal  -> ± Violet magnitude = ±6
+
+Thus the six Universal ranks are:
+
+    Orange
+    Yellow
+    Green
+    Blue
+    Violet
+    White
+
+There is no Red Universal in this six-card family.
+
+There are no dedicated White Restore/Degrade cards in this 18-card ordinary
+Transduction family.
+
+======================================================================
+7. ACTIVATION / TEMPO UTILITIES — 7
+======================================================================
+
+Rename/understand this family primarily as:
+
+    ACTIVATION
+
+Tempo is its strategic function.
+
+There are exactly seven Activation Utility identities:
+
+    Red
+    Orange
+    Yellow
+    Green
+    Blue
+    Violet
+    White
+
+One identity at each ordinary rank.
+
+Core state model:
+
+    READY -> USED
+
+after ordinary use.
+
+Normal game refresh eventually returns:
+
+    USED -> READY
+
+An Activation Utility performs an early:
+
+    USED -> READY
+
+for an eligible game object.
+
+Conceptually:
+
+    Activation = temporal availability / tempo control.
+
+It does not create QMO legality.
+It does not itself create color.
+It allows an already-earned legal resource/object to become usable again earlier.
+
+The exact effect/scope of each of the seven ranked Activation cards is not yet
+fully finalized.
+
+Record the seven-rank family as accepted and detailed per-rank behavior as OPEN
+where unresolved.
+
+======================================================================
+8. SANDBOX ACTIVATION UTILITIES — 6
+======================================================================
+
+This family was previously called Sandbox / Geometry.
+
+Use the clearer concept:
+
+    SANDBOX ACTIVATION
+
+A Sandbox is an available configuration space.
+
+Each player begins with three permanent universal Sandbox Domains.
+
+The three permanent starting Sandboxes are NOT restricted by the temporary
+colored-capacity system below.
+
+The six Utility-created Sandbox identities are:
+
+    Red
+    Orange
+    Yellow
+    Green
+    Blue
+    Violet
+
+Their rank determines MAXIMUM FIELD GENERATOR CAPACITY:
+
+    Red Sandbox    -> 3 Field Generator capacity
+    Orange Sandbox -> 4
+    Yellow Sandbox -> 5
+    Green Sandbox  -> 6
+    Blue Sandbox   -> 7
+    Violet Sandbox -> 8
+
+Formally:
+
+    Capacity(SandboxColor) = ColorCharge + 2
+
+for Red through Violet.
+
+Examples:
+
+A Red temporary Sandbox may contain at most 3 committed Field Generator cards.
+
+A fourth Field Generator cannot be committed to that Red Sandbox even if doing
+so would otherwise produce interesting geometry.
+
+A Violet temporary Sandbox may contain at most 8.
+
+CRITICAL:
+
+Sandbox capacity does NOT guarantee a manifold.
+
+For example:
+
+    Violet Sandbox capacity = 8
+
+does NOT imply:
+
+    Violet manifold exists.
+
+The participating Field Generator configuration must still pass QMO closure.
+
+The Sandbox merely provides bounded configuration space.
+
+Normal Utility copy limits apply.
+
+Therefore a deck may contain, for example:
+
+    Red Sandbox
+    Red Sandbox
+    Yellow Sandbox
+    Blue Sandbox
+
+provided no Utility identity exceeds the normal maximum of 3 copies.
+
+There is NO rule saying only one Sandbox card of each color may appear in a deck.
+
+Temporary Sandbox destruction/expiry details should remain OPEN unless already
+canonically defined elsewhere.
+
+======================================================================
+9. DRAW / DECK UTILITIES — 7
+======================================================================
+
+This family intentionally does NOT form a simple Red-through-White ladder.
+
+It is a mixed set of card-access and deck-manipulation effects.
+
+Accepted structural seven-card set:
+
+--------------------------------------------------
+9A. RAW DRAW
+--------------------------------------------------
+
+1. Draw 1 card
+   Working rank: Orange
+
+2. Draw 2 cards
+   Working rank: Green
+
+3. Draw 3 cards
+   Working rank: Violet
+
+These ranks are accepted as current working design unless an existing repository
+authority conflicts.
+
+Do not increase raw draw beyond Draw 3 in Cycle 1 without a later design amendment.
+
+--------------------------------------------------
+9B. SURVEY
+--------------------------------------------------
+
+4. Look at the top 3 cards of the deck.
+   Put them back in any order.
+
+Working rank:
+
+    Yellow
+
+This provides information/order manipulation but no direct card advantage.
+
+--------------------------------------------------
+9C. SELECTION
+--------------------------------------------------
+
+5. Look at the top 3 cards.
+   Choose 1 and put it into the player's hand.
+   Put the remaining cards on the bottom of the deck.
+
+Working rank:
+
+    Green
+
+--------------------------------------------------
+9D. EXCHANGE
+--------------------------------------------------
+
+6. Discard any number of cards from the player's hand.
+   Draw the same number of cards.
+
+Working rank:
+
+    Blue
+
+This produces:
+
+    net card count change = 0
+
+but improves hand quality and intentionally interacts with Graveyard/Recovery.
+
+--------------------------------------------------
+9E. DEEP SURVEY
+--------------------------------------------------
+
+7. Look at the top 7 cards.
+   Choose 1 and put it into the player's hand.
+   Shuffle the remaining cards back into the deck.
+
+Working rank:
+
+    White
+
+This is NOT an unrestricted exact-card tutor.
+
+It preserves uncertainty.
+
+--------------------------------------------------
+9F. DOMAIN BOUNDARY
+--------------------------------------------------
+
+Draw / Deck manipulates cards still associated with the deck/hand flow.
+
+It does NOT retrieve cards from the Graveyard.
+
+That belongs to Recovery.
+
+The exact hand-size maximum and exact overflow behavior remain OPEN unless already
+accepted elsewhere.
+
+Do not silently canonize a hand-size value.
+
+======================================================================
+10. GRAVEYARD / RECOVERY UTILITIES — 6
+======================================================================
+
+Recovery moves cards from Graveyard back into usable circulation.
+
+Recovery does not automatically reconstruct a destroyed manifold.
+
+Recovered Field Generators must be used normally to construct new legal topology.
+
+Accepted six-card structural set:
+
+1. Return 1 Field Generator from Graveyard to hand.
+   Working rank: Yellow.
+
+2. Return 2 Field Generators from Graveyard to hand.
+   Working rank: Blue.
+
+3. Return 3 Field Generators from Graveyard to hand.
+   Working rank: White.
+
+4. Return 1 Utility from Graveyard to hand.
+   Working rank: Green.
+
+5. Return any 1 non-Prime card from Graveyard to hand.
+   Working rank: Blue.
+
+6. Return up to 3 cards from Graveyard to the top of the deck in any chosen order.
+   Working rank: Violet.
+
+Prime recovery/resurrection is NOT part of this ordinary six-card Recovery family.
+
+Do not invent ordinary Prime resurrection.
+
+The exact ranks here are current accepted working design; note that for Recovery,
+rank primarily expresses rarity/power rather than direct color magnitude.
+
+======================================================================
+11. STABILITY / PROTECTION UTILITIES — 6
+======================================================================
+
+This family does NOT duplicate Restoration.
+
+RESTORATION:
+
+    lost color -> replace color
+
+PROTECTION/STABILITY:
+
+    prevent or modify loss/persistence
+
+Accepted six concepts:
+
+--------------------------------------------------
+11A. COLOR GUARD
+--------------------------------------------------
+
+Reduce/absorb the next incoming degradation by a fixed amount.
+
+This behaves conceptually like a small absorption shield.
+
+Exact magnitude/rank remains OPEN unless separately accepted.
+
+--------------------------------------------------
+11B. PRIME GUARD
+--------------------------------------------------
+
+Protect one Prime from its next eligible degradation event.
+
+Exact duration/rank/timing remains OPEN.
+
+--------------------------------------------------
+11C. MANIFOLD GUARD
+--------------------------------------------------
+
+Protect one Local Manifold from its next eligible degradation event.
+
+Exact duration/rank/timing remains OPEN.
+
+--------------------------------------------------
+11D. SHIELD LOCK
+--------------------------------------------------
+
+Temporarily prevent an existing Prime shield from being degraded.
+
+This is recognized as a powerful effect.
+
+Working rank must be at least:
+
+    Blue
+
+Exact final rank/duration remains OPEN.
+
+--------------------------------------------------
+11E. STRUCTURAL ANCHOR
+--------------------------------------------------
+
+The next otherwise-lethal degradation event against one Local Manifold does not
+destroy it.
+
+Instead, the manifold survives at:
+
+    Red / charge 1
+
+Conceptually:
+
+    lethal -> Red
+
+rather than:
+
+    lethal -> destroyed
+
+This does not bypass QMO closure.
+It preserves an already-valid structure.
+
+--------------------------------------------------
+11F. EMERGENT AMPLIFICATION
+--------------------------------------------------
+
+Increase one currently active Emergent Field by:
+
+    +1 color charge
+
+Examples:
+
+    Red -> Orange
+    Orange -> Yellow
+    Yellow -> Green
+    Green -> Blue
+    Blue -> Violet
+
+Ordinary Emergent Amplification is capped at:
+
+    Violet / charge 6
+
+unless a later rule explicitly changes this.
+
+It does not:
+
+- create a new Emergent Field
+- change the field's QMO support relation
+- make it targetable
+- preserve it after its required supports disappear
+
+If a required support manifold disappears, the Emergent Field still disappears
+normally.
+
+======================================================================
+12. EMERGENT FIELD TARGETING RULE
+======================================================================
+
+Clarify this accepted rule in appropriate design/game documentation:
+
+Emergent Fields cannot be directly attacked or destroyed.
+
+They exist because required support manifolds/configurations maintain them.
+
+The opponent removes an Emergent Field by breaking its required support structure.
+
+If:
+
+    M_A + M_B -> E
+
+and a required support is destroyed:
+
+    M_A -> destroyed
+
+then:
+
+    E -> inaccessible / gone
+
+according to the support relation.
+
+This is why a proposed "Coupling Stabilizer" Utility was rejected.
+
+Do NOT create such a card in the ordinary Cycle-1 Utility catalog.
+
+Emergent Amplification occupies that sixth Stability slot instead.
+
+======================================================================
+13. CURRENT UTILITY DESIGN COMPLETION STATUS
+======================================================================
+
+The structural design of all 50 ordinary Cycle-1 Utility slots is now accounted for:
+
+    18 Transduction        STRUCTURALLY DEFINED
+     7 Activation          STRUCTURALLY DEFINED
+     6 Sandbox Activation  STRUCTURALLY DEFINED
+     7 Draw / Deck         STRUCTURALLY DEFINED
+     6 Recovery            STRUCTURALLY DEFINED
+     6 Stability           STRUCTURALLY DEFINED
+    --------------------------------------------
+     50 TOTAL
+
+Do NOT mark the Utility subsystem GOLD.
+
+Remaining work includes:
+
+- final card names
+- final flavor
+- final IDs if not already allocated
+- exact wording
+- unresolved ranks
+- exact targeting
+- exact timing
+- exact duration
+- balance testing
+- implementation
+- integration
+- gameplay testing
+- performance where applicable
+- final release validation
+
+Recommended status:
+
+    FORMALIZED / DESIGN STRUCTURE ACCEPTED
+
+Use the repository's actual status vocabulary correctly.
+
+======================================================================
+14. EXISTING GAME STATE TO PRESERVE
+======================================================================
+
+Do not remove or contradict existing accepted repository state concerning:
+
+- 120 Field Generators
+- 30 Prime Fields
+- 50 Utilities
+- 200-card Cycle
+- 60-card constructed deck
+- Field Generator maximum 2 copies
+- Utility maximum 3 copies
+- Prime uniqueness
+- three active Prime positions
+- three permanent Sandboxes
+- Generator commitment rule
+- Sandbox merge/fusion
+- closure-before-color
+- 3/4/5/6/7/8 Generator manifold ladder
+- 60 base manifold basis
+- 343 fusion-derived Local Manifolds
+- 1,691 Emergent Fields
+- 2,094 total render-relevant field/manifold QMOs
+- Black = charge 8
+- no Black Field Generators
+- exactly 3 Black Prime identities
+- Black Utilities
+- all-Black deck = 3 Black Primes + 57 Black Utilities
+- hidden Black Mode unlock
+- supported/emergent Fourth Black Prime
+- QMO -> RenderSpec -> Blender -> GPU rendering direction
+- Windows desktop development priority
+- iPad/iPadOS secondary target
+- PREPRODUCTION whole-game status
+
+Where authoritative machine artifacts have not yet been imported, preserve:
+
+    SOURCE_IMPORT_REQUIRED
+
+======================================================================
+15. BLACK PRIME SUPPORT RULE
+======================================================================
+
+Preserve/clarify:
+
+There are exactly three Black Prime cards.
+
+While all three remain alive:
+
+    FourthPrimeAvailable = true
+
+The Fourth Prime is not a fourth deck card.
+
+It is an emergent/supported Prime state.
+
+If ANY supporting Black Prime dies:
+
+    FourthPrimeAvailable = false
+
+The Fourth Prime becomes inaccessible.
+
+Detailed Fourth Prime abilities remain OPEN.
+
+======================================================================
+16. COLLECTION / SHOP / LONG-TERM DESIGN NOTES
+======================================================================
+
+Where appropriate under design/progression/economy, record these as current
+design direction without falsely marking unresolved details as final:
+
+- The game is intended to support long-term card collection.
+- Players earn in-game progression/credits through play.
+- The current design direction does NOT require purchasing gameplay credits.
+- New card Cycles may be released as later content.
+- Black-ranked cards are intended as extremely difficult/expensive crafted
+  endgame cards.
+- Duplicate collection is intended to have long-term value, including Black-card
+  crafting.
+- Exact crafting recipes, credit values, pack probabilities, economy rates, and
+  release pricing remain OPEN.
+- Do not introduce player-to-player credit wagering.
+- PvP may reward game-generated progression/credits, but exact rewards remain OPEN.
+- Black cards may legally appear in otherwise ordinary decks.
+- Completing a legal all-Black deck is the hidden Black Mode unlock condition.
+
+Do not invent monetization implementation.
+
+======================================================================
+17. GAME EXPERIENCE / PRODUCT INTENT
+======================================================================
+
+Record under appropriate design documentation:
+
+raeon is intended to work well as a compact strategic game that can be played in
+short sessions, approximately the kind of game a player can open for a brief match
+while waiting or traveling.
+
+The depth comes from:
+
+- deck construction
+- Field Generator topology
+- hidden mathematical closure relationships
+- Sandbox management
+- color transduction
+- Prime management
+- fusion
+- emergent fields
+-

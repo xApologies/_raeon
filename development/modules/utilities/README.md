@@ -6,7 +6,7 @@ Cycle Utility catalog and effects.
 
 ## Current status
 
-OPEN — intentionally unimplemented; validation UNTESTED.
+DESIGN — DESIGN STRUCTURE ACCEPTED for all 50 ordinary Cycle-1 Utility slots. Runtime implementation, balance, integration and gameplay validation remain UNTESTED. Not GOLD. FORMALIZED is not claimed because applicable gates 00–09 are not all accepted.
 
 ## Authority
 
@@ -14,11 +14,11 @@ CANON: repository/module boundaries. GAME_CANON: only supplied [accepted rules](
 
 ## Inputs
 
-Accepted allocation and future approved catalog.
+Accepted [50-slot design](../../../design/cards/cycle_01/UTILITIES.md) and [structured state](../../../data/manifests/accepted-state.json), backed by the [recovery source](../../../provenance/sources/current-state-recovery-0002.txt). Mathematics/API packages remain SOURCE_IMPORT_REQUIRED.
 
 ## Outputs
 
-Utility definitions and effect contracts (planned, not delivered).
+Delivered: accepted structural design, recorded working ranks and explicit OPEN details. Planned: final card definitions, interfaces, implementation and tested effect contracts.
 
 ## Dependencies
 
@@ -30,27 +30,30 @@ Follow [PIPELINE.md](../../PIPELINE.md). Acceptance requires evidence, revision,
 
 | Gate | Status | Evidence |
 | --- | --- | --- |
-| 00 Canon | OPEN | None — bootstrap only |
-| 01 Design | OPEN | None — bootstrap only |
+| 00 Canon | OPEN | Partial design evidence: checkpoint 0002; full gate acceptance remains pending |
+| 01 Design | OPEN | Partial design evidence: checkpoint 0002; full gate acceptance remains pending |
 | 02 Mathematics | OPEN | None — bootstrap only |
-| 03 Rules | OPEN | None — bootstrap only |
-| 04 State Model | OPEN | None — bootstrap only |
+| 03 Rules | OPEN | Partial design evidence: checkpoint 0002; full gate acceptance remains pending |
+| 04 State Model | OPEN | Partial design evidence: checkpoint 0002; full gate acceptance remains pending |
 | 05 Interfaces | OPEN | None — bootstrap only |
 | 06 Algorithms | OPEN | None — bootstrap only |
 | 07 Visualization | OPEN | None — bootstrap only |
 | 08 Interaction | OPEN | None — bootstrap only |
-| 09 Data & Schemas | OPEN | None — bootstrap only |
+| 09 Data & Schemas | OPEN | Partial design evidence: checkpoint 0002; full gate acceptance remains pending |
 | 10 Implementation | OPEN | None — bootstrap only |
 | 11 Testing | OPEN | None — bootstrap only |
 | 12 Integration | OPEN | None — bootstrap only |
 | 13 Performance | OPEN | None — bootstrap only |
-| 14 Provenance | OPEN | None — bootstrap only |
+| 14 Provenance | OPEN | Partial design evidence: checkpoint 0002; full gate acceptance remains pending |
 | 15 Release | OPEN | None — bootstrap only |
 
 ## OPEN questions
 
-Exact 50 cards, costs, and timing?
+Final names, flavor, IDs, wording, unresolved ranks, exact targeting/timing/duration, balance and effect interfaces remain OPEN. Seven Activation ranks exist but detailed behavior remains OPEN. No whole-family structural gap remains.
 
 ## Validation requirements
 
 Allocation, copy limits, approved magnitude/rank behavior. These are future requirements, not passing tests. Repository validation does not validate this subsystem.
+
+
+Checkpoint evidence: [0002](../../../provenance/checkpoints/0002-game-design.md), accepted by the user-supplied directive on 2026-09-28 for design structure only. Refer to the commit containing that checkpoint for revision identity; no reviewer approval for whole-module gates is inferred.

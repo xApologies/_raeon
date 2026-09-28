@@ -54,3 +54,8 @@ Acquisition, ownership, and duplicate rules?
 ## Validation requirements
 
 Inventory integrity and approved acquisition/recovery cases. These are future requirements, not passing tests. Repository validation does not validate this subsystem.
+
+
+## Design checkpoint 0002
+
+Long-term collection, play-earned progression/credits and duplicate value including Black crafting are PROVISIONAL current direction. Recipes, values and probabilities remain OPEN. See [current rules](../../../design/game/ACCEPTED_RULES.md), [Utility design](../../../design/cards/cycle_01/UTILITIES.md), and [checkpoint](../../../provenance/checkpoints/0002-game-design.md). This adds design evidence only; subsystem gates are not accepted by these notes.

@@ -54,3 +54,8 @@ Support loss and recomputation sequencing?
 ## Validation requirements
 
 Supports remain; emergent fields not independently targetable. These are future requirements, not passing tests. Repository validation does not validate this subsystem.
+
+
+## Design checkpoint 0002
+
+Accepted clarification: no direct attacks/destruction; loss of a required support removes access. Amplification is +1 capped at Violet/6 and cannot change support relations or preserve fields after support loss. Coupling Stabilizer is excluded. See [current rules](../../../design/game/ACCEPTED_RULES.md), [Utility design](../../../design/cards/cycle_01/UTILITIES.md), and [checkpoint](../../../provenance/checkpoints/0002-game-design.md). This adds design evidence only; subsystem gates are not accepted by these notes.

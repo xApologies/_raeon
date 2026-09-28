@@ -1,0 +1,13 @@
+{
+  "source_id": "raeon-current-state-recovery-0002",
+  "origin": "User-supplied replacement attachment e1e3109e-cceb-48a4-a05b-149a7620ebe6",
+  "received_date": "2026-09-28",
+  "file": "current-state-recovery-0002.txt",
+  "sha256": "f14d62cd3d9c043e59c28c4ead4960ffbf9b3cdd04be83a4ede519eea68636f6",
+  "integrity": "Exact attachment bytes; Git newline conversion disabled for this source.",
+  "authority": "GAME_CANON for accepted structure/rules; PROVISIONAL for stated working ranks and product/economy direction; OPEN for unresolved details",
+  "scope": "First substantial game-design checkpoint after bootstrap; not imported mathematical APIs or executable card definitions",
+  "completeness": "Supplied text ends in section 17 with a bare trailing bullet after emergent fields. Only complete supplied statements were incorporated; no missing continuation inferred.",
+  "other_repositories_used": false,
+  "permissions": "User explicitly requested incorporation in this repository; no broader redistribution license inferred."
+}

@@ -54,3 +54,8 @@ Fourth Prime behavior and crafting balance?
 ## Validation requirements
 
 Three Black Prime identities; all three alive for availability. These are future requirements, not passing tests. Repository validation does not validate this subsystem.
+
+
+## Design checkpoint 0002
+
+Exactly three Black Prime identities support FourthPrimeAvailable. Any supporting death makes the Fourth Prime inaccessible; it is not a fourth deck card. Detailed abilities remain OPEN. See [current rules](../../../design/game/ACCEPTED_RULES.md), [Utility design](../../../design/cards/cycle_01/UTILITIES.md), and [checkpoint](../../../provenance/checkpoints/0002-game-design.md). This adds design evidence only; subsystem gates are not accepted by these notes.

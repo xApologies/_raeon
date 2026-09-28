@@ -1,9 +1,9 @@
-# design/game
+# Game design and product intent
 
-game player/product design boundary.
+[Accepted rules](ACCEPTED_RULES.md) and [accepted state](../../data/manifests/accepted-state.json) hold current rules and explicit authority labels. Whole-game phase remains PREPRODUCTION.
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+PROVISIONAL product intent from [recovery source](../../provenance/sources/current-state-recovery-0002.txt): a compact strategic game suited to short sessions and brief matches while waiting or traveling. No exact match-duration target is invented.
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
+Depth comes from deck construction, Field Generator topology, hidden mathematical closure relationships, Sandbox management, color transduction, Prime management, fusion, and emergent fields. This is an experience direction, not evidence of gameplay implementation or testing.
 
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+See [Cycle-1 Utility structure](../cards/cycle_01/UTILITIES.md), [progression](../progression/README.md), and [economy](../economy/README.md).

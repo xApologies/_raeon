@@ -1,7 +1,11 @@
 # Tests
 
-Only repository/bootstrap checks exist today. Run `node tools/validators/validate-bootstrap.mjs`, then `node --test tests/regression/bootstrap-validator.test.mjs`. Node and Git are required. The regression suite checks that invalid repository states are rejected using temporary copies of this bootstrap.
+Only repository/design-data validators exist; these are not game-system tests.
 
-Unit, integration, gameplay, QMO, rendering, multiplayer, adversarial, and performance directories reserve future meaningful system evidence. No fake passing game tests exist.
+```sh
+node tools/validators/validate-bootstrap.mjs
+node tools/validators/validate-design-state.mjs
+node --test tests/regression/bootstrap-validator.test.mjs tests/regression/design-state-validator.test.mjs
+```
 
-These checks do not validate Genesis or Chirality mathematics, QMO closure correctness, gameplay balance, Blender geometry, GPU rendering, multiplayer correctness, or AI correctness. Follow [CONTRIBUTING.md](../CONTRIBUTING.md).
+Requires Node and Git. Bootstrap regressions use temporary copies of this repository; design regressions mutate structured data to verify rejection of contradictory rules and false completion. No fake gameplay tests exist. Mathematics, QMO closure, balance, Blender/GPU, AI and multiplayer correctness remain unvalidated. See [CONTRIBUTING.md](../CONTRIBUTING.md).

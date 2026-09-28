@@ -54,3 +54,8 @@ Further composition rules or exceptions?
 ## Validation requirements
 
 Normal limits and accepted all-Black 3+57 composition. These are future requirements, not passing tests. Repository validation does not validate this subsystem.
+
+
+## Design checkpoint 0002
+
+Copy limits apply to identity: Generator 2, Utility 3, Prime unique. There is no additional color uniqueness rule, including for Sandbox Activation Utilities. All-Black 3+57 composition remains accepted. See [current rules](../../../design/game/ACCEPTED_RULES.md), [Utility design](../../../design/cards/cycle_01/UTILITIES.md), and [checkpoint](../../../provenance/checkpoints/0002-game-design.md). This adds design evidence only; subsystem gates are not accepted by these notes.

@@ -54,3 +54,8 @@ Temporary creation, expiration, and merge resolution?
 ## Validation requirements
 
 Permanent floor of three, no extraction, geometry-based topology. These are future requirements, not passing tests. Repository validation does not validate this subsystem.
+
+
+## Design checkpoint 0002
+
+Accepted design now includes three permanent universal Domains exempt from colored temporary capacity, temporary Red–Violet capacity 3–8, and no color uniqueness rule. Capacity never proves QMO closure; expiry/destruction remains OPEN. See [current rules](../../../design/game/ACCEPTED_RULES.md), [Utility design](../../../design/cards/cycle_01/UTILITIES.md), and [checkpoint](../../../provenance/checkpoints/0002-game-design.md). This adds design evidence only; subsystem gates are not accepted by these notes.

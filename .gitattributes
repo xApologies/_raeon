@@ -1,3 +1,5 @@
 * text=auto eol=lf
 # Preserve exact source bytes, including original CRLF endings, for SHA-256.
 /provenance/sources/bootstrap-request.txt -text whitespace=cr-at-eol
+
+/provenance/sources/current-state-recovery-0002.txt -text whitespace=cr-at-eol

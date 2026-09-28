@@ -54,3 +54,8 @@ Admissibility, costs, timing?
 ## Validation requirements
 
 Imported cases and legality checks. These are future requirements, not passing tests. Repository validation does not validate this subsystem.
+
+
+## Design checkpoint 0002
+
+Accepted ordinary Utility structure is 6 Restore, 6 Degrade, 6 Universal, with explicit rank/magnitude ladders. Mathematical APIs, targeting, timing and implementation remain unresolved or SOURCE_IMPORT_REQUIRED. See [current rules](../../../design/game/ACCEPTED_RULES.md), [Utility design](../../../design/cards/cycle_01/UTILITIES.md), and [checkpoint](../../../provenance/checkpoints/0002-game-design.md). This adds design evidence only; subsystem gates are not accepted by these notes.

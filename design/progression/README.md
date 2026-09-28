@@ -1,9 +1,9 @@
-# design/progression
+# Collection and progression direction
 
-progression player/product design boundary.
+Authority: PROVISIONAL — current product direction from the [recovery source](../../provenance/sources/current-state-recovery-0002.txt), recorded in [accepted state](../../data/manifests/accepted-state.json). Detailed systems are not finalized or implemented.
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+raeon is intended to support long-term card collection, earning progression/credits through play, and later content Cycles. Duplicate collection should retain long-term value, including Black-card crafting. Black-ranked cards are intended as extremely difficult/expensive crafted endgame cards.
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
+GAME_CANON retained: Black cards may appear in ordinary decks; a legal all-Black deck unlocks hidden Black Mode. Exactly three Black Prime identities support the Fourth Prime; any support death makes it inaccessible.
 
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+Exact crafting recipes, credit values, pack probabilities, economy rates, and release pricing remain OPEN. See [economy direction](../economy/README.md).

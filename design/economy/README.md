@@ -1,9 +1,7 @@
-# design/economy
+# Economy and shop direction
 
-economy player/product design boundary.
+Authority: PROVISIONAL — current design direction from the [recovery source](../../provenance/sources/current-state-recovery-0002.txt); machine-readable direction is in [accepted state](../../data/manifests/accepted-state.json).
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+Players earn progression/credits through play. The current direction does not require purchasing gameplay credits. Do not introduce player-to-player credit wagering. PvP may reward game-generated progression/credits; exact rewards remain OPEN. Long-term duplicate collection may contribute to difficult/expensive Black-card endgame crafting. Later Cycles may be released as content.
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+OPEN: recipes, credit values, pack probabilities, economy rates, exact PvP rewards, release pricing, and transaction/implementation details. No monetization implementation or final pricing is introduced. See [collection/progression](../progression/README.md).

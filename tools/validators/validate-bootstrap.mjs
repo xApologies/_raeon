@@ -76,12 +76,12 @@ try {
   same(c.normal_copy_limits,{field_generator:2,utility:3},'Normal copy limits');
   same(c.prime_identity,'unique','Prime identity uniqueness');
   same(c.active_prime_positions,3,'Active Prime positions');
-  same(c.catalog_status,'OPEN — ACTIVE DESIGN','Utility catalog remains OPEN');
-  same(c.utility_domains,{transduction:18,activation_tempo:7,sandbox_geometry:6,draw_deck:7,graveyard_recovery:6,stability_protection:6},'Utility allocation');
+  same(c.catalog_status,'STRUCTURE_ACCEPTED_DETAILS_OPEN','Utility structure accepted; final details remain OPEN');
+  same(c.utility_domains,{transduction:18,activation:7,sandbox_activation:6,draw_deck:7,graveyard_recovery:6,stability_protection:6},'Utility allocation');
   same(Object.values(c.utility_domains).reduce((a,b)=>a+b,0),50,'Utility arithmetic: 18 + 7 + 6 + 7 + 6 + 6 = 50');
   same(s.colors,{none:0,Red:1,Orange:2,Yellow:3,Green:4,Blue:5,Violet:6,White:7,Black:8},'Color magnitudes');
   same(s.field_generators,{maximum_rank:'White',black_allowed:false},'Black Field Generators prohibited');
-  same(s.sandbox,{permanent_start:3,permanent_minimum:3,temporary_domains_allowed:true,independent_extraction_after_commitment:false,whole_domain_merge_fusion_allowed:true,topology_basis:'participating Generator geometry, not Sandbox provenance'},'Sandbox invariants');
+  for (const [key,value] of Object.entries({permanent_start:3,permanent_minimum:3,temporary_domains_allowed:true,independent_extraction_after_commitment:false,whole_domain_merge_fusion_allowed:true,topology_basis:'participating Generator geometry, not Sandbox provenance'})) same(s.sandbox[key],value,`Preserved Sandbox invariant: ${key}`);
   same(s.local_manifold.closure_required_before_color,true,'Closure must precede color');
   same(s.local_manifold.closed_generator_count_to_color,{'3':'Red','4':'Orange','5':'Yellow','6':'Green','7':'Blue','8':'Violet'},'Local Manifold ladder');
   same(s.local_manifold.base_basis,{Red:15,Orange:13,Yellow:11,Green:9,Blue:7,Violet:5},'Base Manifold basis');
@@ -119,7 +119,7 @@ try {
   for (const name of groups['development/modules']) {
     const doc=read(`development/modules/${name}/README.md`);
     for(const h of ['Purpose','Current status','Authority','Inputs','Outputs','Dependencies','Development gates','OPEN questions','Validation requirements']) check(doc.includes(`## ${h}`),`Module heading ${h}: ${name}`);
-    check(doc.includes('OPEN — intentionally unimplemented'),`Module must remain OPEN: ${name}`);
+    check(doc.includes(name === 'utilities' ? 'DESIGN — DESIGN STRUCTURE ACCEPTED' : 'OPEN — intentionally unimplemented'),`Module status mismatch: ${name}`);
     for(const [i,g] of gateNames.entries()) check(doc.includes(`| ${String(i).padStart(2,'0')} ${g} | OPEN |`),`Module gate ${i}: ${name}`);
   }
   const cycle=json('data/cycles/cycle_01/manifest.json');

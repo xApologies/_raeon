@@ -1,9 +1,5 @@
-# data/cards/utilities
+# Utility data
 
-cards / utilities structured data boundary.
+The accepted 50-slot ordinary Cycle-1 structure lives in [accepted-state.json](../../manifests/accepted-state.json), under utility_structure; it is not duplicated here as a competing catalog. See the [design interpretation](../../../design/cards/cycle_01/UTILITIES.md).
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
-
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+Status: DESIGN STRUCTURE ACCEPTED; final runtime IDs, wording, unresolved ranks/timing/targets, balance, and implementation remain OPEN. Future validated executable card definitions belong in this boundary. No such catalog is fabricated by this checkpoint.

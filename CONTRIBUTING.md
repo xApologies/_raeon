@@ -15,7 +15,7 @@ A source record includes identifier/origin, supplied authority, receipt date, pa
 1. Start a development branch from accepted state; bootstrap uses bootstrap/raeon-canonical.
 2. Assign a module and [pipeline](development/PIPELINE.md), applicable gates, and dependency evidence.
 3. Import/implement reviewed material in the correct boundary. Update sources, structured state, docs, inventories together.
-4. Run relevant checks. Bootstrap command: `node tools/validators/validate-bootstrap.mjs`. Node with ES modules and Git are required; bootstrap tested with Node 24.
+4. Run relevant checks: `node tools/validators/validate-bootstrap.mjs` and `node tools/validators/validate-design-state.mjs`. Validator regressions: `node --test tests/regression/bootstrap-validator.test.mjs tests/regression/design-state-validator.test.mjs`. Node with ES modules and Git are required; bootstrap tested with Node 24.
 5. Integrate dependencies; record actual results, limitations, source/artifact revisions.
 6. Write a provenance/checkpoints record and link it from development/checkpoints. Review `git status --short`, `git diff --check`, staged changes; never force-add inbox or compiled/cache files.
 7. Commit and submit for acceptance. GitHub is canonical accepted project state. Merge to main only when explicitly authorized.
