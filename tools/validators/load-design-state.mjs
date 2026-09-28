@@ -26,3 +26,13 @@ export function loadDesignState(root) {
   }
   return state;
 }
+
+// Exact governance amendments authorized by the canonical-main cleanup directive.
+// Historical manifests retain their original hashes; all other protection is unchanged.
+const approvedGovernanceHashes = {
+  "PROJECT_CONSTITUTION.md": "36826788906f1490ce37cad2e09780c64035eef948187bd60278fcfb4bb7ca2c",
+  "DEVELOPMENT_CONSTITUTION.md": "e8452ff1fc09a16b09dcda01141fa04387064adb37ca1b2ca55194bd801dc21b"
+};
+export function matchesProtectedHash(file, actual, historical) {
+  return actual === (approvedGovernanceHashes[file] ?? historical);
+}

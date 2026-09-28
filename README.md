@@ -1,6 +1,6 @@
 # raeon.
 
-Canonical repository: https://github.com/xApologies/_raeon
+Canonical repository: https://github.com/xApologies/_raeon — `main` is the current accepted project tree and default checkout. Temporary development branches are disposable.
 
 **WHOLE-GAME PHASE REMAINS PREPRODUCTION.** No gameplay implementation or mechanic redesign is claimed by checkpoint 0004.
 

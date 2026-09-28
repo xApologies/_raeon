@@ -16,4 +16,4 @@ Prefer versioned JSON, SQLite, schemas, and manifests over prose duplication. Pr
 
 ## Acceptance
 
-Run repository validation and relevant real subsystem/integration/performance checks. Record exact command, result, scope, revision, limitations in checkpoints. Review Git status/staged changes, exclude inbox/cache/binary material, commit on a branch, and submit for acceptance. Never claim unrun tests or completed phases.
+Run repository validation and relevant real subsystem/integration/performance checks. Record exact command, result, scope, revision and limitations in the relevant commit, review or durable evidence record. Numbered checkpoints are reserved for substantive accepted design, source, mathematical, milestone or migration evidence; ordinary commits and Git housekeeping do not require one. Review Git status/staged changes, exclude inbox/cache/binary material, commit on a branch, and submit for acceptance. Never claim unrun tests or completed phases.

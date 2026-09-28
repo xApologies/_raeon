@@ -4,7 +4,7 @@ Authority: CANON — governance; game rules are GAME_CANON only where explicitly
 
 ## Canonical state
 
-GitHub (https://github.com/xApologies/_raeon) is canonical accepted state. The Git repository is canonical storage; local changes/bootstrap branches are proposals until accepted through project workflow. Chats, Codex sessions, and _inbox are workspaces/transfer media, never canonical storage. No automatic merge to main is authorized.
+GitHub (https://github.com/xApologies/_raeon), branch main, is the single canonical accepted project tree. The Git repository is canonical storage; temporary working branches are proposals until validated and accepted into main, then deleted. Chats, Codex sessions, and _inbox are workspaces/transfer media, never canonical storage. No automatic merge to main is authorized.
 
 ## Game authority
 

@@ -22,7 +22,7 @@ const cases=[
  ['rejects duplicate current specification',d=>fs.appendFileSync(path.join(d,'design/cards/README.md'),'\n<!-- raeon:current-spec utilities -->\n'),'Competing current authority'],
  ['rejects disconnected module dashboard',d=>{const p=path.join(d,'development/modules/utilities/README.md');fs.writeFileSync(p,fs.readFileSync(p,'utf8').replaceAll('../../../design/cards/cycle_01/utilities/SYSTEM.md','missing-spec.md'));},'Dashboard upstream/downstream link'],
  ['rejects missing runtime boundary',d=>fs.unlinkSync(path.join(d,'game/cards/primes/README.md')),'Runtime boundary: cards/primes'],
- ['rejects historical checkpoint modification',d=>fs.appendFileSync(path.join(d,'provenance/checkpoints/0003-cumulative-recovery.md'),'changed'),'Historical/governance bytes unchanged'],
+ ['rejects historical checkpoint modification',d=>fs.appendFileSync(path.join(d,'provenance/checkpoints/0003-cumulative-recovery.md'),'changed'),'Historical bytes / authorized governance hash'],
  ['rejects family data reintroduced in overview',d=>edit(d,'data/cycles/cycle_01/utilities/overview.json',v=>v.values.utility_structure.families={}),'Utility overview must not duplicate'],
  ['rejects broken local link',d=>fs.appendFileSync(path.join(d,'design/cards/README.md'),'\n[broken](absent.md)\n'),'Broken Markdown link'],
  ['rejects loss of original family prose',d=>{const p=path.join(d,'design/cards/cycle_01/utilities/draw_deck/SYSTEM.md');fs.writeFileSync(p,fs.readFileSync(p,'utf8').replace('Raw draw cannot exceed Draw 3','Raw draw can exceed Draw 3'));},'Original Utility prose retained'],

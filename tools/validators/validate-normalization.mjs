@@ -4,7 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import {spawnSync} from 'node:child_process';
-import {loadDesignState,resolveRepositoryPath} from './load-design-state.mjs';
+import {loadDesignState,resolveRepositoryPath,matchesProtectedHash} from './load-design-state.mjs';
 
 export function validateNormalization(root) {
  const errors=[];let checks=0;
@@ -69,7 +69,7 @@ export function validateNormalization(root) {
   check(isDeepStrictEqual(json('data/render_specs/direction.json').render_specs,[]),'No fabricated RenderSpecs');
   const original=json('provenance/audits/0004-before-inventory.json');
   const history=original.files.filter(x=>(x.path.startsWith('provenance/')&&x.path!=='provenance/README.md')||x.path.startsWith('development/checkpoints/')||['PROJECT_CONSTITUTION.md','DEVELOPMENT_CONSTITUTION.md','development/PIPELINE.md','production/phases.json'].includes(x.path));
-  for(const f of history)check(exists(f.path)&&createHash('sha256').update(fs.readFileSync(path.join(root,f.path))).digest('hex')===f.sha256,`Historical/governance bytes unchanged: ${f.path}`);
+  for(const f of history)check(exists(f.path)&&matchesProtectedHash(f.path,createHash('sha256').update(fs.readFileSync(path.join(root,f.path))).digest('hex'),f.sha256),`Historical bytes / authorized governance hash: ${f.path}`);
   for(const r of map.redirects)check(exists(r.from)&&read(r.from).startsWith('# Relocated')&&read(r.from).includes(path.posix.relative(path.posix.dirname(r.from),r.to)),`Legacy redirect: ${r.from}`);
   const source=json('provenance/sources/0004-handoff.json');
   check(createHash('sha256').update(fs.readFileSync(path.join(root,'provenance/sources/0004-CODEX_PROMPT.md'))).digest('hex')===source.directive_sha256,'Handoff directive integrity');

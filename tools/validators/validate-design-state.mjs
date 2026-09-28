@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import {loadDesignState} from './load-design-state.mjs';
+import {loadDesignState,matchesProtectedHash} from './load-design-state.mjs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {isDeepStrictEqual} from 'node:util';
@@ -173,7 +173,7 @@ export function validateDesignRepository(root) {
     for(const p of baseline.files)check(inventory.files.includes(p),`Preserved bootstrap file: ${p}`);
     const required=['design/cards/cycle_01/UTILITIES.md','provenance/sources/current-state-recovery-0002.txt','provenance/sources/current-state-recovery-0002.json','provenance/decisions/0002-current-game-design.md','provenance/checkpoints/0002-game-design.md','development/checkpoints/0002-game-design.md','tools/validators/validate-design-state.mjs','tests/regression/design-state-validator.test.mjs','data/manifests/design-checkpoint-0002.json','data/manifests/design-checkpoint-0003.json','design/cards/BLACK_RANK.md','design/progression/BLACK_MODE.md','design/multiplayer/LOCAL_P2P.md','design/systems/RENDERING.md','data/schemas/EFFECT_DEFINITIONS.md','provenance/sources/recovery-0003.json','provenance/sources/recovery-0003-block-2.txt','provenance/sources/recovery-0003-block-3.txt','provenance/decisions/0003-cumulative-recovery.md','provenance/checkpoints/0003-cumulative-recovery.md','provenance/audits/0003-cumulative-recovery.md','development/checkpoints/0003-cumulative-recovery.md'];
     for(const p of required)check(inventory.files.includes(p),`Design inventory includes ${p}`);
-    for(const [p,expected]of Object.entries(inventory.preserved_sha256))check(hash(p)===expected,`Protected baseline unchanged: ${p}`);
+    for(const [p,expected]of Object.entries(inventory.preserved_sha256))check(matchesProtectedHash(p,hash(p),expected),`Protected baseline unchanged: ${p}`);
     for(const p of inventory.files) {
       const valid=typeof p==='string'&&!path.isAbsolute(p)&&!p.includes('\\')&&!p.split('/').some(x=>['..','.git','_inbox',''].includes(x));
       check(valid,`Safe inventory path: ${p}`);

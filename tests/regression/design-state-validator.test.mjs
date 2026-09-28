@@ -73,6 +73,7 @@ test('rejects malformed design data without throwing',()=>assert.ok(validateDesi
 for(const [name,file,mutation,expected]of [
  ['rejects altered recovery 0003 source','provenance/sources/recovery-0003-block-3.txt',p=>fs.appendFileSync(p,'altered'),'Recovery 0003 block 3 integrity'],
  ['rejects altered recovery source','provenance/sources/current-state-recovery-0002.txt',p=>fs.appendFileSync(p,'altered'),'Recovery source integrity'],
+ ['rejects development constitution replacement','DEVELOPMENT_CONSTITUTION.md',p=>fs.appendFileSync(p,'altered'),'Protected baseline unchanged'],
  ['rejects constitution replacement','PROJECT_CONSTITUTION.md',p=>fs.appendFileSync(p,'altered'),'Protected baseline unchanged'],
  ['rejects missing design document','design/cards/cycle_01/utilities/SYSTEM.md',p=>fs.unlinkSync(p),'Inventory file exists']
 ])test(name,()=>{

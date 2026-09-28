@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — canonical main cleanup (2026-09-28)
+
+- User-authorized governance amendment: main is the single canonical tree; temporary branches are removed after validated promotion and reachability checks. Source: supplied “RAEON — CANONICAL MAIN REPOSITORY CLEANUP” directive.
+- Supersedes the unconditional checkpoint step in the contribution workflow and development constitution: ordinary commits/Git housekeeping record evidence in commits or reviews; numbered checkpoints are reserved for useful substantive evidence. No new numbered checkpoint is required for this cleanup.
+- Preserve normalized checkpoint-0004 architecture, all historical provenance, accepted mechanics, schema 4, module status and PREPRODUCTION.
+- Validators continue protecting historical hashes; only the two explicitly authorized constitution amendments receive new exact expected hashes. Validation commands and results are recorded in the cleanup commit.
+
 ## Unreleased — checkpoint 0004 normalization (2026-09-28)
 
 - Normalize current system specifications and split Utility/Black monoliths.
