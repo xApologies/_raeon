@@ -1,9 +1,3 @@
-# design/multiplayer
+# Multiplayer design
 
-multiplayer player/product design boundary.
-
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
-
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+See [local peer-to-peer direction](LOCAL_P2P.md) for the accepted working architecture. Transport, matchmaking, competitive balance and network implementation remain OPEN. No networking is implemented.

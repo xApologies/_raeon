@@ -1,0 +1,23 @@
+{
+  "source_id": "raeon-user-approved-design-session-0003",
+  "date": "2026-09-28",
+  "source": "Current user-approved raeon design session",
+  "blocks": [
+    {
+      "block": 2,
+      "file": "recovery-0003-block-2.txt",
+      "sha256": "5ac55ad44323365fc8cd0b8a0338a7741577bfdcb0a47dabfb1677b58992d100"
+    },
+    {
+      "block": 3,
+      "file": "recovery-0003-block-3.txt",
+      "sha256": "22879d7bdb5bf765c98de992a32d5b5c1337f40b6edb723b8cb086af7a59bcff"
+    }
+  ],
+  "baseline_checkpoint": "0002",
+  "baseline_commit": "0efe353d8413c44b9558d76bee532c86f401de65",
+  "authority": "GAME_CANON for explicit rules/structures; PROVISIONAL for working concepts/direction; OPEN for unresolved details",
+  "limitations": "No separately labeled Block 1 was supplied in this task. Existing accepted checkpoint 0002 preserves earlier design. Block 2 ends mid-AI section; Block 3 supplies AI direction. No unseen text is inferred.",
+  "integrity": "Exact attachment bytes; source-specific Git attributes prevent newline conversion.",
+  "other_repositories_used": false
+}

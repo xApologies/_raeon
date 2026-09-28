@@ -1,9 +1,7 @@
-# design/ai
+# Computer opponent direction
 
-ai player/product design boundary.
+Authority: PROVISIONAL — ACCEPTED DESIGN DIRECTION from [Block 3](../../provenance/sources/recovery-0003-block-3.txt); see [accepted state](../../data/manifests/accepted-state.json).
 
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
+Computer opponents and multiple difficulty levels are intended. Increasing challenge should come from strategy, deck construction, available cards and decision quality. AI must obey the same game and QMO legality, not hidden rules violations.
 
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+Adaptive/player-modeling AI is possible future work: PROVISIONAL / OPEN. No adaptive behavior exists and no ML architecture is selected. [Black Mode](../progression/BLACK_MODE.md) is an extreme/endgame AI direction with implementation and exact behavior OPEN. No AI is implemented or validated in this checkpoint.

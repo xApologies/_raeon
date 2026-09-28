@@ -2,7 +2,7 @@
 
 Canonical game-development repository: https://github.com/xApologies/_raeon
 
-**Current whole-game phase: PREPRODUCTION.** Substantial mathematical/system prototypes exist externally and await import. The first game-design checkpoint accepts the structure of all 50 ordinary Cycle-1 Utility slots and clarifies Sandbox, charge, recovery and support rules. Final details and runtime systems remain unfinished; this is not a playable prototype.
+**Current whole-game phase: PREPRODUCTION.** Substantial mathematical/system prototypes exist externally and await import. The cumulative game-design checkpoint accepts all 50 ordinary Utility structural slots and records Sandbox, Black-rank, collection, AI, local multiplayer and rendering direction. Final details and runtime systems remain unfinished; this is not a playable prototype.
 
 **THE MATHEMATICS IS THE PERMISSION SYSTEM.** The QMO is the canonical mathematical game object.
 
@@ -12,7 +12,7 @@ Canonical game-development repository: https://github.com/xApologies/_raeon
 - [Contribution/inbox workflow](CONTRIBUTING.md)
 - [Accepted rules](design/game/ACCEPTED_RULES.md) and [structured state](data/manifests/accepted-state.json)
 - [Lifecycle](production/README.md), [pipeline](development/PIPELINE.md), [modules](development/modules/README.md)
-- [Utility structure](design/cards/cycle_01/UTILITIES.md) and [game-design checkpoint](provenance/checkpoints/0002-game-design.md)
+- [Utility structure](design/cards/cycle_01/UTILITIES.md) and [cumulative game-design checkpoint](provenance/checkpoints/0003-cumulative-recovery.md)
 - [Bootstrap inventory](provenance/audits/bootstrap-inventory.md) and [decision](provenance/decisions/0001-repository-bootstrap.md)
 
 ## Boundaries
@@ -27,7 +27,7 @@ Canonical game-development repository: https://github.com/xApologies/_raeon
 | content/ | Presentation assets |
 | data/ | Structured truth, schemas, manifests |
 | tools/ | Validation and future tooling |
-| tests/ | Meaningful evidence; bootstrap invariants only today |
+| tests/ | Repository and design-data checks; no gameplay validation |
 | platform/ | Shared, Windows desktop, secondary iPadOS |
 | releases/ | Release records/artifact identities |
 | provenance/ | Sources, decisions, checkpoints, audits |

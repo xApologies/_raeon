@@ -54,3 +54,10 @@ Blender version, export formats, generation contracts?
 ## Validation requirements
 
 Reproducible meshes and source-linked geometry. These are future requirements, not passing tests. Repository validation does not validate this subsystem.
+
+
+## Cumulative checkpoint 0003
+
+Blender realizes procedural geometry from authoritative RenderSpecs; it does not literally render five spatial dimensions. QMO/RenderSpec/atlas/projection sources remain missing.
+
+Partial evidence for gates 00 Canon, 01 Design, 03 Rules, 04 State Model and 14 Provenance: [checkpoint 0003](../../../provenance/checkpoints/0003-cumulative-recovery.md), sourced from the user-approved design session on 2026-09-28. Module status is unchanged; no complete gate acceptance, implementation or validation of runtime behavior is inferred.

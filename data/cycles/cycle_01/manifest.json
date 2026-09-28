@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "authority": "GAME_CANON",
   "cycle": "cycle_01",
   "status": "OPEN",
@@ -17,5 +17,8 @@
   ],
   "utility_structure_status": "DESIGN STRUCTURE ACCEPTED",
   "utility_structure_ref": "../../manifests/accepted-state.json#/utility_structure",
-  "card_definitions_note": "Accepted structural design is recorded; complete runtime catalogs and source mathematical APIs are not imported."
+  "card_definitions_note": "Accepted structural design is recorded; complete runtime catalogs and source mathematical APIs are not imported.",
+  "current_design_checkpoint": "0003",
+  "utility_catalog_formalization": "PARTIALLY FORMALIZED",
+  "cycle_source_package": "SOURCE_IMPORT_REQUIRED"
 }

@@ -54,3 +54,10 @@ Approved fidelity and animation requirements?
 ## Validation requirements
 
 Identity preservation and representative visual regressions. These are future requirements, not passing tests. Repository validation does not validate this subsystem.
+
+
+## Cumulative checkpoint 0003
+
+QMO → deterministic RenderSpec → Blender → mesh → GPU animation. A contradictory render is wrong, never a changed QMO. Display uses 3D projections/embeddings; projection math awaits import.
+
+Partial evidence for gates 00 Canon, 01 Design, 03 Rules, 04 State Model and 14 Provenance: [checkpoint 0003](../../../provenance/checkpoints/0003-cumulative-recovery.md), sourced from the user-approved design session on 2026-09-28. Module status is unchanged; no complete gate acceptance, implementation or validation of runtime behavior is inferred.

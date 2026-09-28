@@ -59,3 +59,10 @@ Supports remain; emergent fields not independently targetable. These are future 
 ## Design checkpoint 0002
 
 Accepted clarification: no direct attacks/destruction; loss of a required support removes access. Amplification is +1 capped at Violet/6 and cannot change support relations or preserve fields after support loss. Coupling Stabilizer is excluded. See [current rules](../../../design/game/ACCEPTED_RULES.md), [Utility design](../../../design/cards/cycle_01/UTILITIES.md), and [checkpoint](../../../provenance/checkpoints/0002-game-design.md). This adds design evidence only; subsystem gates are not accepted by these notes.
+
+
+## Cumulative checkpoint 0003
+
+Amplification cannot change closure/support identity or survive support loss. Ordinary charge cap is Violet/6 with overflow OPEN; rejected direct-field Coupling Stabilizer is not restored.
+
+Partial evidence for gates 00 Canon, 01 Design, 03 Rules, 04 State Model and 14 Provenance: [checkpoint 0003](../../../provenance/checkpoints/0003-cumulative-recovery.md), sourced from the user-approved design session on 2026-09-28. Module status is unchanged; no complete gate acceptance, implementation or validation of runtime behavior is inferred.

@@ -1,9 +1,3 @@
-# data/schemas
+# Data schemas
 
-schemas structured data boundary.
-
-Status: OPEN — intentionally reserved; no implementation or completion claimed.
-
-Add only reviewed material appropriate to this boundary. Placeholder documentation is not implementation or validation evidence.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+See [future effect-definition direction](EFFECT_DEFINITIONS.md). No final runtime schema or final Utility IDs are assigned. Future validated schemas belong here; current structural facts remain in [accepted state](../manifests/accepted-state.json).

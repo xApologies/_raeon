@@ -54,3 +54,10 @@ Spatial constraints and coordinate model?
 ## Validation requirements
 
 Placement legality, identity, domain representation. These are future requirements, not passing tests. Repository validation does not validate this subsystem.
+
+
+## Cumulative checkpoint 0003
+
+Board-scale configuration positions may expand to detailed Sandbox construction view and return to a compact coherent field. Exact presentation contracts remain OPEN.
+
+Partial evidence for gates 00 Canon, 01 Design, 03 Rules, 04 State Model and 14 Provenance: [checkpoint 0003](../../../provenance/checkpoints/0003-cumulative-recovery.md), sourced from the user-approved design session on 2026-09-28. Module status is unchanged; no complete gate acceptance, implementation or validation of runtime behavior is inferred.

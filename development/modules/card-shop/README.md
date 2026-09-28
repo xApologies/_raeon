@@ -59,3 +59,10 @@ Atomicity and approved economy rules. These are future requirements, not passing
 ## Design checkpoint 0002
 
 Current direction does not require purchased gameplay credits and excludes player-to-player credit wagering. Game-generated PvP rewards are possible but amounts, recipes, pricing and transaction details remain OPEN. See [current rules](../../../design/game/ACCEPTED_RULES.md), [Utility design](../../../design/cards/cycle_01/UTILITIES.md), and [checkpoint](../../../provenance/checkpoints/0002-game-design.md). This adds design evidence only; subsystem gates are not accepted by these notes.
+
+
+## Cumulative checkpoint 0003
+
+Play-earned credits may feed card-shop/pack opening. No gameplay-credit bundles, wagering or subscription-dependent gameplay. Prices, pack sizes/probabilities and costs remain OPEN.
+
+Partial evidence for gates 00 Canon, 01 Design, 03 Rules, 04 State Model and 14 Provenance: [checkpoint 0003](../../../provenance/checkpoints/0003-cumulative-recovery.md), sourced from the user-approved design session on 2026-09-28. Module status is unchanged; no complete gate acceptance, implementation or validation of runtime behavior is inferred.

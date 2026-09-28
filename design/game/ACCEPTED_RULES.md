@@ -1,6 +1,6 @@
 # Accepted raeon baseline
 
-Authority: GAME_CANON for accepted rules/structure from the [bootstrap source](../../provenance/sources/bootstrap-request.txt) and [current-state recovery source](../../provenance/sources/current-state-recovery-0002.txt). Explicit working ranks and product/economy direction remain PROVISIONAL; unresolved details remain OPEN. [accepted-state.json](../../data/manifests/accepted-state.json) is the machine-readable accepted-state model. Structural slots are not finalized runtime card definitions.
+Authority: GAME_CANON for accepted rules/structure from the [bootstrap source](../../provenance/sources/bootstrap-request.txt) and [current-state recovery source](../../provenance/sources/current-state-recovery-0002.txt). Explicit working ranks and product/economy direction remain PROVISIONAL; unresolved details remain OPEN. [accepted-state.json](../../data/manifests/accepted-state.json) is the machine-readable accepted-state model. Structural slots are not finalized runtime card definitions. The cumulative [recovery decision](../../provenance/decisions/0003-cumulative-recovery.md) integrates Blocks 2 and 3 while preserving the earlier accepted baseline.
 
 ## Mathematical authority
 
@@ -53,3 +53,10 @@ A legal all-Black 60-card deck is 3 Black Primes + 57 Black Utilities and unlock
 ## Rendering direction
 
 QMO → deterministic RenderSpec → Blender procedural geometry → mesh → runtime GPU renderer → animated manifold. Mathematics defines the object; rendering makes it visible. RenderSpec/API packages are SOURCE_IMPORT_REQUIRED. Blender mesh generation and GPU live effects are the current direction; no engine, graphics API, mesh, or RenderSpec is fabricated.
+
+
+## Cumulative design direction
+
+[Black-rank design](../cards/BLACK_RANK.md) records legal setup bypass/exceptional efficiency and provisional Shield of the Abyss / Topaz Lake concepts; neither is a final printed card. The [hidden mode](../progression/BLACK_MODE.md) does not restrict Black cards in normal PvP. Fourth Prime availability is the AND of all three support alive flags; loss means inaccessible, not necessarily destroyed. Future legal restoration would trigger reevaluation without authorizing resurrection now.
+
+[AI](../ai/README.md), [local P2P](../multiplayer/LOCAL_P2P.md), [rendering](../systems/RENDERING.md), and [board interaction](../ui-ux/README.md) are documented directions, not implementations. Rendering uses 3D projections of potentially higher-dimensional state; contradictions indicate a bad render, never changed QMO legality. Detailed turn/match rules remain OPEN in the [game design index](README.md).

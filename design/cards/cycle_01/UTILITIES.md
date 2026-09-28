@@ -119,3 +119,14 @@ Emergent Fields cannot be directly attacked or destroyed. Break their required s
 ## Remaining work
 
 Final names, flavor, IDs, wording, unresolved ranks, exact targeting, timing, duration, balance testing, implementation, integration, gameplay testing, applicable performance, and release validation remain OPEN/UNTESTED. Utilities cannot override mathematics. This design checkpoint supplies no executable card catalog, mathematics, QMO objects, or gameplay implementation.
+
+
+## Cumulative checkpoint 0003 clarifications
+
+The exact catalog is PARTIALLY FORMALIZED as a descriptive design status; the module remains DESIGN, with architecture GAME_CANON / STRUCTURALLY DEFINED. Balance and gameplay validation are UNTESTED; runtime is OPEN / UNIMPLEMENTED. None of the 50 slots is claimed implementation-ready. Final UT-001 through UT-050 assignment and ordering remain OPEN.
+
+Draw/Deck groups three raw-draw effects, three information/selection effects and one hand-cycling effect. Survey changes hand count by 0 for its effect; Selection only selects among the top three. Exchange moves n from hand to Graveyard and n from deck to hand. Recover up to 3 to deck has no immediate direct card advantage and may combine with Draw 3 when the player has the required effects; this does not define new timing windows.
+
+Prime Guard does not change Prime QMO identity. Manifold Guard protects an already-valid object and cannot close invalid geometry. Color Guard and Shield Lock timing remain OPEN. Amplification does not change closure or support identity; a Violet field does not become ordinary White/Black, and overflow behavior is OPEN.
+
+Coupling Stabilizer was rejected because direct protection of an already non-targetable, support-dependent field conflicts with or redundantly complicates the support model. Emergent Amplification remains the sixth Stability slot. Working Black concepts belong to the separate [Black-rank design](../BLACK_RANK.md), not these 50 ordinary slots.

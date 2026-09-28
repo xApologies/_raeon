@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "authority": "GAME_CANON",
   "source": "provenance/sources/bootstrap-request.txt",
   "production": {
@@ -127,6 +127,64 @@
       "deck_card": false,
       "availability": "true while all three supporting Black Primes remain alive; false if any dies",
       "detailed_behavior": "OPEN"
+    },
+    "design_philosophy": {
+      "authority": "GAME_CANON",
+      "rank_above_white": true,
+      "bypasses_qmo_legality": false,
+      "exceptional_efficiency_or_setup_bypass_allowed": true,
+      "result_must_be_legal": true,
+      "black_mode_only": false,
+      "utility_catalog_outside_ordinary_cycle_01": true,
+      "final_utility_catalog": "OPEN"
+    },
+    "working_concepts": [
+      {
+        "working_name": "Shield of the Abyss",
+        "authority": "PROVISIONAL",
+        "status": "WORKING DESIGN",
+        "rank": "Black",
+        "final_printed_card": false,
+        "concept": {
+          "shield_charge": 8,
+          "lower_rank_prime_eligible": true,
+          "prime_identity_unchanged": true
+        },
+        "example": "Yellow Prime receives a Black shield while remaining its original Prime identity",
+        "wording": "OPEN",
+        "timing": "OPEN",
+        "cost": "OPEN"
+      },
+      {
+        "working_name": "Topaz Lake",
+        "authority": "PROVISIONAL",
+        "status": "WORKING DESIGN",
+        "rank": "Black",
+        "final_printed_card": false,
+        "concept": {
+          "manifest_color": "Yellow",
+          "bypasses_ordinary_generator_setup": true,
+          "requires_already_defined_legal_qmo": true,
+          "makes_illegal_geometry_legal": false
+        },
+        "target_qmo": "OPEN",
+        "timing": "OPEN",
+        "lifetime": "OPEN",
+        "implementation": "OPEN"
+      }
+    ],
+    "fourth_prime_condition": {
+      "authority": "GAME_CANON",
+      "operator": "AND",
+      "required_alive_flags": [
+        "BlackPrime1.alive",
+        "BlackPrime2.alive",
+        "BlackPrime3.alive"
+      ],
+      "false_result": "inaccessible",
+      "false_result_requires_destruction": false,
+      "reevaluate_if_future_legal_mechanics_restore_all_supports": true,
+      "authorizes_prime_resurrection": false
     }
   },
   "platforms": {
@@ -143,7 +201,12 @@
     "60 base Local Manifold QMOs",
     "343 fusion-derived Local Manifold QMOs",
     "1,691 Emergent Field QMOs",
-    "Deterministic RenderSpec/API packages"
+    "Deterministic RenderSpec/API packages",
+    "Field Generator QMO data",
+    "Complete 2,094-object QMO atlas",
+    "Cycle Generation Constitution",
+    "Blender-facing manifold atlas/reference material",
+    "Higher-dimensional projection mathematics"
   ],
   "open_items": [
     "Utility final names, flavor, IDs, wording, unresolved ranks, targeting, timing, duration, balance and runtime definitions",
@@ -159,13 +222,21 @@
     "Activation detailed per-rank behavior",
     "Temporary Sandbox destruction/expiry",
     "Hand-size maximum and overflow behavior",
-    "Protection magnitudes, ranks, timing and duration where unspecified"
+    "Protection magnitudes, ranks, timing and duration where unspecified",
+    "Final Black Utility catalog and working Black-concept details",
+    "Adaptive/player-modeling AI and ML architecture",
+    "Local peer-to-peer transport, synchronization, matchmaking and competitive balance",
+    "Exact board UI, camera and controls",
+    "Utility ID ordering/assignment (UT-001 through UT-050)",
+    "Turn/match rules explicitly listed in turn_match_open"
   ],
   "sources": [
     "provenance/sources/bootstrap-request.txt",
-    "provenance/sources/current-state-recovery-0002.txt"
+    "provenance/sources/current-state-recovery-0002.txt",
+    "provenance/sources/recovery-0003-block-2.txt",
+    "provenance/sources/recovery-0003-block-3.txt"
   ],
-  "current_design_checkpoint": "0002",
+  "current_design_checkpoint": "0003",
   "governing_law": {
     "statement": "THE MATHEMATICS IS THE PERMISSION SYSTEM.",
     "qmo_determines_mathematical_legality": true,
@@ -638,6 +709,17 @@
           "Coupling Stabilizer"
         ]
       }
+    },
+    "catalog_formalization": "PARTIALLY FORMALIZED",
+    "implementation_ready": false,
+    "balance_status": "UNTESTED",
+    "gameplay_validation": "UNTESTED",
+    "runtime_status": "OPEN / UNIMPLEMENTED",
+    "identifier_direction": {
+      "range": "UT-001 through UT-050",
+      "assignment_status": "OPEN",
+      "ordering_convention": "OPEN",
+      "assigned_ids": []
     }
   },
   "long_term_direction": {
@@ -657,9 +739,24 @@
       "Pack probabilities",
       "Economy rates",
       "Release pricing",
-      "Exact PvP rewards"
+      "Exact PvP rewards",
+      "Pack sizes",
+      "Credit costs",
+      "Reward rates"
     ],
-    "monetization_implemented": false
+    "monetization_implemented": false,
+    "starting_access": "sufficient to play",
+    "credit_use": "in-game card shop / pack-opening collection loop",
+    "collect_cycle_through_play": true,
+    "pack_size": "OPEN",
+    "credit_costs": "OPEN",
+    "reward_rates": "OPEN",
+    "gameplay_credit_bundles": false,
+    "subscription_dependent_gameplay": false,
+    "pay_to_win_credit_purchasing": false,
+    "pricing_direction": "inexpensive, player-friendly releases",
+    "exact_store_price": "OPEN",
+    "commercial_changes_require_explicit_approval": true
   },
   "product_intent": {
     "authority": "PROVISIONAL",
@@ -667,13 +764,216 @@
     "exact_match_duration": "OPEN",
     "depth_sources": [
       "deck construction",
-      "Field Generator topology",
-      "hidden mathematical closure relationships",
-      "Sandbox management",
+      "Field Generator placement",
+      "Sandbox configuration",
+      "mathematical closure",
+      "manifold discovery",
       "color transduction",
       "Prime management",
+      "Activation timing",
       "fusion",
-      "emergent fields"
-    ]
+      "emergent fields",
+      "card draw/selection",
+      "graveyard recovery",
+      "protection/stability",
+      "long-term collection",
+      "hidden Black progression"
+    ],
+    "approximate_session_target_minutes": 15,
+    "hard_duration_guarantee": false,
+    "action_level_understandability": true
+  },
+  "utility_clarifications": {
+    "authority": "GAME_CANON",
+    "draw_deck_composition": {
+      "raw_draw": 3,
+      "information_selection": 3,
+      "hand_cycling": 1
+    },
+    "survey_effect_hand_count_change": 0,
+    "selection_is_unrestricted_tutor": false,
+    "exchange": {
+      "discard_destination": "Graveyard",
+      "discard_n_draw_n": true,
+      "effect_net_hand_count_change": 0
+    },
+    "recovery_to_deck": {
+      "immediate_direct_card_advantage": false,
+      "may_combine_with_draw": true
+    },
+    "prime_guard_changes_qmo_identity": false,
+    "manifold_guard_can_close_invalid_geometry": false,
+    "emergent_amplification_changes_closure": false,
+    "emergent_amplification_changes_support_identity": false,
+    "emergent_amplification_overflow": "OPEN",
+    "coupling_stabilizer_rejection_reason": "Direct Emergent protection conflicts with or redundantly complicates the non-targetable, support-dependent model."
+  },
+  "black_mode": {
+    "authority": "PROVISIONAL",
+    "status": "ACCEPTED DESIGN DIRECTION / OPEN IMPLEMENTATION",
+    "unlock_condition_ref": "black.legal_all_black_unlocks_hidden_mode",
+    "hidden": true,
+    "ordinary_onboarding_progress_bar": false,
+    "intent": "Easter egg / long-term mastery reward; extreme/endgame difficulty around a legal full Black deck",
+    "opponent_uses_same_black_ecosystem": true,
+    "ai_may_violate_rules": false,
+    "challenge_sources": [
+      "Black card power",
+      "strong deck construction",
+      "strong strategic play",
+      "mastery of the same game systems"
+    ],
+    "exact_ai_behavior": "OPEN",
+    "production_priority": "later production concern"
+  },
+  "ai_direction": {
+    "authority": "PROVISIONAL",
+    "computer_opponents": "ACCEPTED DESIGN DIRECTION",
+    "multiple_difficulties": "ACCEPTED DESIGN DIRECTION",
+    "difficulty_basis": [
+      "strategy",
+      "deck construction",
+      "available cards",
+      "decision quality"
+    ],
+    "hidden_rules_violations": false,
+    "adaptive_player_modeling": {
+      "authority": "PROVISIONAL",
+      "status": "OPEN",
+      "implemented": false,
+      "ml_architecture": "OPEN"
+    },
+    "black_mode": "DESIGN DIRECTION / OPEN IMPLEMENTATION",
+    "implemented": false
+  },
+  "multiplayer_direction": {
+    "authority": "PROVISIONAL",
+    "status": "ACCEPTED DESIGN DIRECTION",
+    "model": "local peer-to-peer",
+    "host": "Device A hosts match state",
+    "join": "Device B joins",
+    "exchange": "compact actions/state",
+    "rendering": "each device renders locally",
+    "requires_centralized_gameplay_server_every_match": false,
+    "transmits_rendered_frames_as_gameplay_state": false,
+    "transport": "OPEN",
+    "matchmaking": "OPEN",
+    "competitive_balance_policy": "OPEN",
+    "black_cards_legal_in_normal_pvp": true,
+    "implemented": false
+  },
+  "rendering_direction": {
+    "authority": "CANON",
+    "pipeline": [
+      "QMO",
+      "deterministic RenderSpec",
+      "Blender procedural geometry",
+      "mesh",
+      "runtime GPU renderer",
+      "animated manifold"
+    ],
+    "qmo_defines_object": true,
+    "renderspec_defines_deterministic_visualization": true,
+    "rendering_changes_mathematical_legality": false,
+    "visual_qmo_conflict": "render is wrong; QMO does not change",
+    "higher_dimensional_state_possible": true,
+    "display": "explicit 3D projections/embeddings",
+    "blender_literally_renders_five_spatial_dimensions": false,
+    "possible_state_influences": [
+      "winding",
+      "phase",
+      "orientation",
+      "deformation",
+      "field-shell behavior",
+      "emissive flow",
+      "animation",
+      "topology-preserving motion"
+    ],
+    "projection_mathematics": "SOURCE_IMPORT_REQUIRED",
+    "qmo_renderspec_api_packages": "SOURCE_IMPORT_REQUIRED",
+    "implemented": false
+  },
+  "board_presentation": {
+    "authority": "PROVISIONAL",
+    "board_scale": "Sandboxes/manifolds occupy configuration positions",
+    "selection": "enter detailed Sandbox configuration view",
+    "detail_exposes": [
+      "committed Field Generators",
+      "construction geometry",
+      "configuration state"
+    ],
+    "return_to_board": "compact field representation",
+    "completed_manifold_intent": "coherent active field rather than unrelated card rectangles",
+    "exact_ui": "OPEN",
+    "camera": "OPEN",
+    "controls": "OPEN",
+    "platform_interaction_may_differ": true,
+    "platform_rules_identical": true
+  },
+  "turn_match_open": {
+    "starting_hand_size": "OPEN",
+    "maximum_hand_size": "OPEN",
+    "mulligan_rules": "OPEN",
+    "normal_draw_per_turn": "OPEN",
+    "turn_phases": "OPEN",
+    "normal_refresh_timing": "OPEN",
+    "first_player_rules": "OPEN",
+    "victory_condition": "OPEN",
+    "match_timer": "OPEN",
+    "temporary_sandbox_expiry": "OPEN",
+    "prime_timing": "OPEN",
+    "utility_timing_windows": "OPEN"
+  },
+  "card_effect_direction": {
+    "authority": "PROVISIONAL",
+    "human_readable_rules_text": true,
+    "machine_readable_effect_definitions": true,
+    "status": "schema direction, not final runtime schema",
+    "possible_fields": [
+      "id",
+      "family",
+      "rank_color",
+      "operator",
+      "magnitude",
+      "target_type",
+      "timing",
+      "duration",
+      "constraints",
+      "authority",
+      "status"
+    ],
+    "examples": [
+      {
+        "family": "TRANSDUCTION",
+        "operator": "RESTORE",
+        "rank_color": "YELLOW",
+        "magnitude": 3
+      },
+      {
+        "family": "DRAW_DECK",
+        "operator": "DRAW",
+        "rank_color": "VIOLET",
+        "magnitude": 3
+      }
+    ],
+    "unknown_values": "OPEN; no inferred defaults"
+  },
+  "cycle_production_direction": {
+    "authority": "CANON",
+    "steps": [
+      "seed",
+      "mathematical generation",
+      "Field Generator catalog",
+      "manifold/closure landscape",
+      "Prime design",
+      "Utility design",
+      "balance",
+      "RenderSpecs",
+      "assets",
+      "integration",
+      "testing",
+      "release"
+    ],
+    "existing_source_package": "SOURCE_IMPORT_REQUIRED"
   }
 }

@@ -13,8 +13,8 @@ export function validateDesignState(s) {
   const ordinary=['Red','Orange','Yellow','Green','Blue','Violet','White'];
   const low=ordinary.slice(0,6);
   try {
-    same(s.schema_version,2,'Accepted-state schema version');
-    same(s.current_design_checkpoint,'0002','Current design checkpoint');
+    same(s.schema_version,3,'Accepted-state schema version');
+    same(s.current_design_checkpoint,'0003','Current design checkpoint');
     same(s.production.phase,'PREPRODUCTION','Whole-game phase');
     same(s.governing_law,{statement:'THE MATHEMATICS IS THE PERMISSION SYSTEM.',qmo_determines_mathematical_legality:true,utilities_override_closure:false,rendering_determines_legality:false},'Mathematics permission rule');
     same(s.cycle_01.catalog_status,'STRUCTURE_ACCEPTED_DETAILS_OPEN','Catalog structural status');
@@ -99,14 +99,54 @@ export function validateDesignState(s) {
     same(s.long_term_direction.authority,'PROVISIONAL','Economy direction authority');
     for(const key of ['long_term_collection','earn_progression_and_credits_through_play','future_cycles_possible','duplicates_have_long_term_value_including_black_crafting'])same(s.long_term_direction[key],true,`Collection direction: ${key}`);
     for(const key of ['purchase_of_gameplay_credits_required','player_to_player_credit_wagering','monetization_implemented'])same(s.long_term_direction[key],false,`Economy boundary: ${key}`);
-    same(s.long_term_direction.open_details,['Crafting recipes','Credit values','Pack probabilities','Economy rates','Release pricing','Exact PvP rewards'],'Economy details remain OPEN');
+    same(s.long_term_direction.open_details,['Crafting recipes','Credit values','Pack probabilities','Economy rates','Release pricing','Exact PvP rewards','Pack sizes','Credit costs','Reward rates'],'Economy details remain OPEN');
     same(s.long_term_direction.pvp_rewards,'may grant game-generated progression/credits; exact rewards OPEN','PvP rewards direction');
     same(s.product_intent.authority,'PROVISIONAL','Product intent authority');
     same(s.product_intent.exact_match_duration,'OPEN','No invented match duration');
-    same(s.product_intent.depth_sources,['deck construction','Field Generator topology','hidden mathematical closure relationships','Sandbox management','color transduction','Prime management','fusion','emergent fields'],'Supplied depth sources');
+    same(s.product_intent.depth_sources,['deck construction','Field Generator placement','Sandbox configuration','mathematical closure','manifold discovery','color transduction','Prime management','Activation timing','fusion','emergent fields','card draw/selection','graveyard recovery','protection/stability','long-term collection','hidden Black progression'],'Supplied depth sources');
     same(s.qmo_inventory.status,'SOURCE_IMPORT_REQUIRED','Missing QMO artifacts remain missing');
     same(s.qmo_inventory.objects_imported,false,'No fabricated QMO import');
   } catch(error) {errors.push(`Invalid design data: ${error.message}`);}
+  const recovery=validateRecoveryState(s); errors.push(...recovery.errors); checks+=recovery.checks;
+  return {errors,checks};
+}
+
+function validateRecoveryState(s) {
+  const errors=[];let checks=0;
+  const same=(a,b,label)=>{checks++;if(!isDeepStrictEqual(a,b))errors.push(label);};
+  try {
+    same(s.utility_structure.catalog_formalization,'PARTIALLY FORMALIZED','Catalog partial formalization');
+    same(s.utility_structure.implementation_ready,false,'No implementation-ready catalog');
+    same(s.utility_structure.balance_status,'UNTESTED','Balance remains UNTESTED');
+    same(s.utility_structure.gameplay_validation,'UNTESTED','Gameplay remains UNTESTED');
+    same(s.utility_structure.runtime_status,'OPEN / UNIMPLEMENTED','Runtime remains unimplemented');
+    same(s.utility_structure.identifier_direction,{range:'UT-001 through UT-050',assignment_status:'OPEN',ordering_convention:'OPEN',assigned_ids:[]},'No arbitrary final Utility IDs');
+    same(s.utility_clarifications,{authority:'GAME_CANON',draw_deck_composition:{raw_draw:3,information_selection:3,hand_cycling:1},survey_effect_hand_count_change:0,selection_is_unrestricted_tutor:false,exchange:{discard_destination:'Graveyard',discard_n_draw_n:true,effect_net_hand_count_change:0},recovery_to_deck:{immediate_direct_card_advantage:false,may_combine_with_draw:true},prime_guard_changes_qmo_identity:false,manifold_guard_can_close_invalid_geometry:false,emergent_amplification_changes_closure:false,emergent_amplification_changes_support_identity:false,emergent_amplification_overflow:'OPEN',coupling_stabilizer_rejection_reason:'Direct Emergent protection conflicts with or redundantly complicates the non-targetable, support-dependent model.'},'Utility clarification constraints');
+    same(s.black.design_philosophy,{authority:'GAME_CANON',rank_above_white:true,bypasses_qmo_legality:false,exceptional_efficiency_or_setup_bypass_allowed:true,result_must_be_legal:true,black_mode_only:false,utility_catalog_outside_ordinary_cycle_01:true,final_utility_catalog:'OPEN'},'Black legality and separate catalog');
+    same(s.black.working_concepts,[{working_name:'Shield of the Abyss',authority:'PROVISIONAL',status:'WORKING DESIGN',rank:'Black',final_printed_card:false,concept:{shield_charge:8,lower_rank_prime_eligible:true,prime_identity_unchanged:true},example:'Yellow Prime receives a Black shield while remaining its original Prime identity',wording:'OPEN',timing:'OPEN',cost:'OPEN'},{working_name:'Topaz Lake',authority:'PROVISIONAL',status:'WORKING DESIGN',rank:'Black',final_printed_card:false,concept:{manifest_color:'Yellow',bypasses_ordinary_generator_setup:true,requires_already_defined_legal_qmo:true,makes_illegal_geometry_legal:false},target_qmo:'OPEN',timing:'OPEN',lifetime:'OPEN',implementation:'OPEN'}],'Black concepts remain provisional and legal');
+    same(s.black.fourth_prime_condition,{authority:'GAME_CANON',operator:'AND',required_alive_flags:['BlackPrime1.alive','BlackPrime2.alive','BlackPrime3.alive'],false_result:'inaccessible',false_result_requires_destruction:false,reevaluate_if_future_legal_mechanics_restore_all_supports:true,authorizes_prime_resurrection:false},'Fourth Prime requires ALL three alive flags');
+    same(s.black_mode,{authority:'PROVISIONAL',status:'ACCEPTED DESIGN DIRECTION / OPEN IMPLEMENTATION',unlock_condition_ref:'black.legal_all_black_unlocks_hidden_mode',hidden:true,ordinary_onboarding_progress_bar:false,intent:'Easter egg / long-term mastery reward; extreme/endgame difficulty around a legal full Black deck',opponent_uses_same_black_ecosystem:true,ai_may_violate_rules:false,challenge_sources:['Black card power','strong deck construction','strong strategic play','mastery of the same game systems'],exact_ai_behavior:'OPEN',production_priority:'later production concern'},'Hidden Black Mode and honest AI challenge');
+    const direction=s.long_term_direction;
+    same(direction.starting_access,'sufficient to play','Starting access without invented card count');
+    same(direction.credit_use,'in-game card shop / pack-opening collection loop','Card shop direction');
+    same(direction.collect_cycle_through_play,true,'Collect through play');
+    for(const key of ['gameplay_credit_bundles','subscription_dependent_gameplay','pay_to_win_credit_purchasing'])same(direction[key],false,`Product boundary: ${key}`);
+    for(const key of ['pack_size','credit_costs','reward_rates','exact_store_price'])same(direction[key],'OPEN',`Economy OPEN field: ${key}`);
+    same(direction.pricing_direction,'inexpensive, player-friendly releases','Pricing direction without exact price');
+    same(direction.commercial_changes_require_explicit_approval,true,'Commercial changes need approval');
+    same(s.product_intent.approximate_session_target_minutes,15,'Approximate session target');
+    same(s.product_intent.hard_duration_guarantee,false,'Session target is not a duration guarantee');
+    same(s.product_intent.action_level_understandability,true,'Understandable action-level design');
+    same(s.ai_direction,{authority:'PROVISIONAL',computer_opponents:'ACCEPTED DESIGN DIRECTION',multiple_difficulties:'ACCEPTED DESIGN DIRECTION',difficulty_basis:['strategy','deck construction','available cards','decision quality'],hidden_rules_violations:false,adaptive_player_modeling:{authority:'PROVISIONAL',status:'OPEN',implemented:false,ml_architecture:'OPEN'},black_mode:'DESIGN DIRECTION / OPEN IMPLEMENTATION',implemented:false},'AI direction with no implementation or ML selection');
+    same(s.multiplayer_direction,{authority:'PROVISIONAL',status:'ACCEPTED DESIGN DIRECTION',model:'local peer-to-peer',host:'Device A hosts match state',join:'Device B joins',exchange:'compact actions/state',rendering:'each device renders locally',requires_centralized_gameplay_server_every_match:false,transmits_rendered_frames_as_gameplay_state:false,transport:'OPEN',matchmaking:'OPEN',competitive_balance_policy:'OPEN',black_cards_legal_in_normal_pvp:true,implemented:false},'Local P2P direction without transport selection');
+    same(s.rendering_direction,{authority:'CANON',pipeline:['QMO','deterministic RenderSpec','Blender procedural geometry','mesh','runtime GPU renderer','animated manifold'],qmo_defines_object:true,renderspec_defines_deterministic_visualization:true,rendering_changes_mathematical_legality:false,visual_qmo_conflict:'render is wrong; QMO does not change',higher_dimensional_state_possible:true,display:'explicit 3D projections/embeddings',blender_literally_renders_five_spatial_dimensions:false,possible_state_influences:['winding','phase','orientation','deformation','field-shell behavior','emissive flow','animation','topology-preserving motion'],projection_mathematics:'SOURCE_IMPORT_REQUIRED',qmo_renderspec_api_packages:'SOURCE_IMPORT_REQUIRED',implemented:false},'Rendering projection and mathematical authority');
+    same(s.board_presentation,{authority:'PROVISIONAL',board_scale:'Sandboxes/manifolds occupy configuration positions',selection:'enter detailed Sandbox configuration view',detail_exposes:['committed Field Generators','construction geometry','configuration state'],return_to_board:'compact field representation',completed_manifold_intent:'coherent active field rather than unrelated card rectangles',exact_ui:'OPEN',camera:'OPEN',controls:'OPEN',platform_interaction_may_differ:true,platform_rules_identical:true},'Board presentation with OPEN UI details');
+    same(s.turn_match_open,Object.fromEntries(['starting_hand_size','maximum_hand_size','mulligan_rules','normal_draw_per_turn','turn_phases','normal_refresh_timing','first_player_rules','victory_condition','match_timer','temporary_sandbox_expiry','prime_timing','utility_timing_windows'].map(k=>[k,'OPEN'])),'Unresolved turn/match rules remain OPEN');
+    same(s.card_effect_direction,{authority:'PROVISIONAL',human_readable_rules_text:true,machine_readable_effect_definitions:true,status:'schema direction, not final runtime schema',possible_fields:['id','family','rank_color','operator','magnitude','target_type','timing','duration','constraints','authority','status'],examples:[{family:'TRANSDUCTION',operator:'RESTORE',rank_color:'YELLOW',magnitude:3},{family:'DRAW_DECK',operator:'DRAW',rank_color:'VIOLET',magnitude:3}],unknown_values:'OPEN; no inferred defaults'},'Future effect schema is directional');
+    same(s.cycle_production_direction,{authority:'CANON',steps:['seed','mathematical generation','Field Generator catalog','manifold/closure landscape','Prime design','Utility design','balance','RenderSpecs','assets','integration','testing','release'],existing_source_package:'SOURCE_IMPORT_REQUIRED'},'Cycle flow and missing authoritative source');
+    const imports=['Genesis mathematics','Chirality mathematics','Propagation mathematics','QMO definitions and API','Closure operators','Transduction mathematics/API','60 base Local Manifold QMOs','343 fusion-derived Local Manifold QMOs','1,691 Emergent Field QMOs','Deterministic RenderSpec/API packages','Field Generator QMO data','Complete 2,094-object QMO atlas','Cycle Generation Constitution','Blender-facing manifold atlas/reference material','Higher-dimensional projection mathematics'];
+    same(s.source_import_required,imports,'Source import requirements retained and expanded');
+  }catch(error){errors.push(`Invalid cumulative recovery data: ${error.message}`);}
   return {errors,checks};
 }
 
@@ -120,12 +160,17 @@ export function validateDesignRepository(root) {
     const source=JSON.parse(read('provenance/sources/current-state-recovery-0002.json'));
     const hash=p=>createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
     check(hash('provenance/sources/current-state-recovery-0002.txt')===source.sha256,'Recovery source integrity');
-    const inventory=JSON.parse(read('data/manifests/design-checkpoint-0002.json'));
+    const current=JSON.parse(read('data/manifests/accepted-state.json')).current_design_checkpoint;
+    if(!/^\d{4}$/.test(current))throw Error('Invalid current checkpoint identifier');
+    const inventory=JSON.parse(read(`data/manifests/design-checkpoint-${current}.json`));
+    const recoverySource=JSON.parse(read('provenance/sources/recovery-0003.json'));
+    check(recoverySource.blocks.length===2,'Two supplied recovery blocks');
+    for(const block of recoverySource.blocks)check(hash(`provenance/sources/${block.file}`)===block.sha256,`Recovery 0003 block ${block.block} integrity`);
     check(inventory.file_count===inventory.files.length,'Current inventory count');
     check(new Set(inventory.files).size===inventory.files.length,'Current inventory duplicates');
     const baseline=JSON.parse(read('data/manifests/bootstrap-inventory.json'));
     for(const p of baseline.files)check(inventory.files.includes(p),`Preserved bootstrap file: ${p}`);
-    const required=['design/cards/cycle_01/UTILITIES.md','provenance/sources/current-state-recovery-0002.txt','provenance/sources/current-state-recovery-0002.json','provenance/decisions/0002-current-game-design.md','provenance/checkpoints/0002-game-design.md','development/checkpoints/0002-game-design.md','tools/validators/validate-design-state.mjs','tests/regression/design-state-validator.test.mjs','data/manifests/design-checkpoint-0002.json'];
+    const required=['design/cards/cycle_01/UTILITIES.md','provenance/sources/current-state-recovery-0002.txt','provenance/sources/current-state-recovery-0002.json','provenance/decisions/0002-current-game-design.md','provenance/checkpoints/0002-game-design.md','development/checkpoints/0002-game-design.md','tools/validators/validate-design-state.mjs','tests/regression/design-state-validator.test.mjs','data/manifests/design-checkpoint-0002.json','data/manifests/design-checkpoint-0003.json','design/cards/BLACK_RANK.md','design/progression/BLACK_MODE.md','design/multiplayer/LOCAL_P2P.md','design/systems/RENDERING.md','data/schemas/EFFECT_DEFINITIONS.md','provenance/sources/recovery-0003.json','provenance/sources/recovery-0003-block-2.txt','provenance/sources/recovery-0003-block-3.txt','provenance/decisions/0003-cumulative-recovery.md','provenance/checkpoints/0003-cumulative-recovery.md','provenance/audits/0003-cumulative-recovery.md','development/checkpoints/0003-cumulative-recovery.md'];
     for(const p of required)check(inventory.files.includes(p),`Design inventory includes ${p}`);
     for(const [p,expected]of Object.entries(inventory.preserved_sha256))check(hash(p)===expected,`Protected baseline unchanged: ${p}`);
     for(const p of inventory.files) {
@@ -151,7 +196,7 @@ if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.
   const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
   const {errors,checks}=validateDesignRepository(root);
   console.log('Scope: supplied design-data consistency, provenance and repository records only.');
-  console.log('Does NOT validate mathematical legality/QMO closure, gameplay balance, runtime effects, Blender/GPU geometry/rendering, AI or multiplayer correctness.');
+  console.log('Does NOT validate Genesis mathematics, Chirality mathematics, QMO closure correctness, balance, final timing, runtime effects, Blender geometry, rendering, AI or multiplayer correctness.');
   if(errors.length){for(const error of errors)console.error(`FAIL: ${error}`);process.exitCode=1;}
   console.log(`${errors.length?'FAIL':'PASS'} — ${checks} design checks; ${errors.length} error(s).`);
 }

@@ -59,3 +59,10 @@ Three Black Prime identities; all three alive for availability. These are future
 ## Design checkpoint 0002
 
 Exactly three Black Prime identities support FourthPrimeAvailable. Any supporting death makes the Fourth Prime inaccessible; it is not a fourth deck card. Detailed abilities remain OPEN. See [current rules](../../../design/game/ACCEPTED_RULES.md), [Utility design](../../../design/cards/cycle_01/UTILITIES.md), and [checkpoint](../../../provenance/checkpoints/0002-game-design.md). This adds design evidence only; subsystem gates are not accepted by these notes.
+
+
+## Cumulative checkpoint 0003
+
+Black design permits exceptional efficiency/setup bypass only into legal states. Named Black concepts are PROVISIONAL; larger Black Utility catalog outside ordinary Cycle-1 Utilities remains OPEN. Fourth Prime requires AND of all three alive flags; false means inaccessible.
+
+Partial evidence for gates 00 Canon, 01 Design, 03 Rules, 04 State Model and 14 Provenance: [checkpoint 0003](../../../provenance/checkpoints/0003-cumulative-recovery.md), sourced from the user-approved design session on 2026-09-28. Module status is unchanged; no complete gate acceptance, implementation or validation of runtime behavior is inferred.

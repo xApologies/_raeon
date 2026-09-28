@@ -54,3 +54,10 @@ Controls, layouts, accessibility requirements?
 ## Validation requirements
 
 End-to-end flows and readable action legality. These are future requirements, not passing tests. Repository validation does not validate this subsystem.
+
+
+## Cumulative checkpoint 0003
+
+Sandbox detail exposes Generators, geometry and configuration state. Exact UI/camera/controls OPEN. Platform input may differ with identical rules; hidden Black Mode has no ordinary onboarding progress bar.
+
+Partial evidence for gates 00 Canon, 01 Design, 03 Rules, 04 State Model and 14 Provenance: [checkpoint 0003](../../../provenance/checkpoints/0003-cumulative-recovery.md), sourced from the user-approved design session on 2026-09-28. Module status is unchanged; no complete gate acceptance, implementation or validation of runtime behavior is inferred.

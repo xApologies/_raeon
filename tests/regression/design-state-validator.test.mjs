@@ -39,17 +39,45 @@ const cases=[
  ['rejects player-to-player wagering',s=>s.long_term_direction.player_to_player_credit_wagering=true,'Economy boundary: player_to_player_credit_wagering'],
  ['rejects finalization of economy direction',s=>s.long_term_direction.authority='GAME_CANON','Economy direction authority'],
  ['rejects invented match duration',s=>s.product_intent.exact_match_duration=10,'No invented match duration'],
+
+ ['rejects premature implementation-ready catalog',s=>s.utility_structure.implementation_ready=true,'No implementation-ready catalog'],
+ ['rejects arbitrary final Utility IDs',s=>s.utility_structure.identifier_direction.assigned_ids=['UT-001'],'No arbitrary final Utility IDs'],
+ ['rejects invented Amplification overflow',s=>s.utility_clarifications.emergent_amplification_overflow='wrap to Red','Utility clarification constraints'],
+ ['rejects Black bypass of QMO legality',s=>s.black.design_philosophy.bypasses_qmo_legality=true,'Black legality and separate catalog'],
+ ['rejects printed-card claims for Black concepts',s=>s.black.working_concepts[0].final_printed_card=true,'Black concepts remain provisional and legal'],
+ ['rejects Shield changing Prime identity',s=>s.black.working_concepts[0].concept.prime_identity_unchanged=false,'Black concepts remain provisional and legal'],
+ ['rejects invented Topaz QMO',s=>s.black.working_concepts[1].target_qmo='invented-qmo','Black concepts remain provisional and legal'],
+ ['rejects OR support condition',s=>s.black.fourth_prime_condition.operator='OR','Fourth Prime requires ALL three alive flags'],
+ ['rejects missing support flag',s=>s.black.fourth_prime_condition.required_alive_flags.pop(),'Fourth Prime requires ALL three alive flags'],
+ ['rejects Fourth Prime automatically destroyed',s=>s.black.fourth_prime_condition.false_result_requires_destruction=true,'Fourth Prime requires ALL three alive flags'],
+ ['rejects restoration direction authorizing resurrection',s=>s.black.fourth_prime_condition.authorizes_prime_resurrection=true,'Fourth Prime requires ALL three alive flags'],
+ ['rejects Black Mode visible onboarding bar',s=>s.black_mode.ordinary_onboarding_progress_bar=true,'Hidden Black Mode and honest AI challenge'],
+ ['rejects exact store price',s=>s.long_term_direction.exact_store_price=0.99,'Economy OPEN field: exact_store_price'],
+ ['rejects purchased credit bundles',s=>s.long_term_direction.gameplay_credit_bundles=true,'Product boundary: gameplay_credit_bundles'],
+ ['rejects session target as guarantee',s=>s.product_intent.hard_duration_guarantee=true,'Session target is not a duration guarantee'],
+ ['rejects claimed adaptive AI',s=>s.ai_direction.adaptive_player_modeling.implemented=true,'AI direction with no implementation or ML selection'],
+ ['rejects selected ML architecture',s=>s.ai_direction.adaptive_player_modeling.ml_architecture='selected','AI direction with no implementation or ML selection'],
+ ['rejects selected transport',s=>s.multiplayer_direction.transport='Bluetooth','Local P2P direction without transport selection'],
+ ['rejects rendered frames as gameplay state',s=>s.multiplayer_direction.transmits_rendered_frames_as_gameplay_state=true,'Local P2P direction without transport selection'],
+ ['rejects literal five-dimensional Blender rendering',s=>s.rendering_direction.blender_literally_renders_five_spatial_dimensions=true,'Rendering projection and mathematical authority'],
+ ['rejects renders changing legality',s=>s.rendering_direction.rendering_changes_mathematical_legality=true,'Rendering projection and mathematical authority'],
+ ['rejects invented camera',s=>s.board_presentation.camera='fixed orbit','Board presentation with OPEN UI details'],
+ ['rejects invented starting hand size',s=>s.turn_match_open.starting_hand_size=5,'Unresolved turn/match rules remain OPEN'],
+ ['rejects invented victory condition',s=>s.turn_match_open.victory_condition='destroy all Primes','Unresolved turn/match rules remain OPEN'],
+ ['rejects fabricated Cycle source import',s=>s.cycle_production_direction.existing_source_package='IMPORTED','Cycle flow and missing authoritative source'],
+ ['rejects missing projection import requirement',s=>s.source_import_required.pop(),'Source import requirements retained and expanded'],
 ];
 for(const [name,mutate,expected]of cases)test(name,()=>{const state=structuredClone(baseline);mutate(state);const result=validateDesignState(state);assert.ok(result.errors.some(x=>x.includes(expected)),JSON.stringify(result));});
 test('rejects malformed design data without throwing',()=>assert.ok(validateDesignState({}).errors.length));
 for(const [name,file,mutation,expected]of [
+ ['rejects altered recovery 0003 source','provenance/sources/recovery-0003-block-3.txt',p=>fs.appendFileSync(p,'altered'),'Recovery 0003 block 3 integrity'],
  ['rejects altered recovery source','provenance/sources/current-state-recovery-0002.txt',p=>fs.appendFileSync(p,'altered'),'Recovery source integrity'],
  ['rejects constitution replacement','PROJECT_CONSTITUTION.md',p=>fs.appendFileSync(p,'altered'),'Protected baseline unchanged'],
  ['rejects missing design document','design/cards/cycle_01/UTILITIES.md',p=>fs.unlinkSync(p),'Inventory file exists']
 ])test(name,()=>{
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'raeon-design-test-'));
  try {
-  const inventory=JSON.parse(fs.readFileSync(path.join(root,'data/manifests/design-checkpoint-0002.json'),'utf8'));
+  const inventory=JSON.parse(fs.readFileSync(path.join(root,'data/manifests/design-checkpoint-0003.json'),'utf8'));
   for(const p of inventory.files){fs.mkdirSync(path.dirname(path.join(dir,p)),{recursive:true});fs.copyFileSync(path.join(root,p),path.join(dir,p));}
   mutation(path.join(dir,file));assert.ok(validateDesignRepository(dir).errors.some(x=>x.includes(expected)));
  } finally {

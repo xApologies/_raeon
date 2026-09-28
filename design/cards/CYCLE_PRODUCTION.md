@@ -14,3 +14,10 @@ Authority: CANON. Future Cycles follow this pipeline unless amended by recorded 
 | RELEASE | Accepted source/artifact revisions, manifest, provenance, checkpoint, approval |
 
 Use design/cards/cycle_NN/ for design, data/cycles/cycle_NN/ for data/manifests, and content/ for assets. Record stage status, evidence, reviewer, and revision. NOT_APPLICABLE requires reviewed rationale; missing mathematics never silently passes.
+
+
+## Detailed content flow
+
+Within these existing stage gates: seed → mathematical generation → Field Generator catalog → manifold/closure landscape → Prime design → Utility design → balance → RenderSpecs → assets → integration → testing → release. This refines the work order without replacing the shared SEED/GENERATE/FORMALIZE/BALANCE/RENDER/INTEGRATE/TEST/RELEASE gates.
+
+The authoritative Cycle-generation source package / Cycle Generation Constitution is SOURCE_IMPORT_REQUIRED. Do not reconstruct it from these design notes.

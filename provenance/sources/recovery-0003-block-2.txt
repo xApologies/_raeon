@@ -1,0 +1,1012 @@
+CODEX DIRECTIVE — RAEON CURRENT-STATE RECOVERY
+FIRST SUBSTANTIAL GAME-DESIGN CHECKPOINT
+
+BLOCK 2 OF 3
+
+IMPORTANT:
+
+This continues BLOCK 1 OF 3.
+
+Do not execute yet.
+
+Read and retain this block.
+Wait for BLOCK 3 OF 3 before beginning repository modifications.
+
+======================================================================
+17 — DRAW / DECK UTILITIES: 7
+======================================================================
+
+The Draw / Deck family contains exactly seven Utility identities.
+
+This family is intentionally NOT a simple Red-through-White ladder.
+
+It contains:
+
+    3 raw Draw effects
+    3 information/selection effects
+    1 hand-cycling effect
+
+The accepted structural set is:
+
+--------------------------------------------------
+17A — DRAW 1
+--------------------------------------------------
+
+Effect:
+
+    Draw 1 card.
+
+Working rank:
+
+    Orange
+
+This is direct card advantage.
+
+--------------------------------------------------
+17B — DRAW 2
+--------------------------------------------------
+
+Effect:
+
+    Draw 2 cards.
+
+Working rank:
+
+    Green
+
+--------------------------------------------------
+17C — DRAW 3
+--------------------------------------------------
+
+Effect:
+
+    Draw 3 cards.
+
+Working rank:
+
+    Violet
+
+Cycle 1 ordinary raw Draw Utilities should not exceed Draw 3 without a later
+explicit design amendment.
+
+--------------------------------------------------
+17D — SURVEY
+--------------------------------------------------
+
+Effect:
+
+    Look at the top 3 cards of the deck.
+    Put those cards back in any order.
+
+Working rank:
+
+    Yellow
+
+This changes information/order.
+
+It does NOT create direct card advantage.
+
+Hand count change:
+
+    0
+
+--------------------------------------------------
+17E — SELECTION
+--------------------------------------------------
+
+Effect:
+
+    Look at the top 3 cards of the deck.
+    Choose 1.
+    Put the chosen card into the player's hand.
+    Put the other 2 on the bottom of the deck.
+
+Working rank:
+
+    Green
+
+This provides constrained selection.
+
+It is intentionally NOT:
+
+    search the entire deck for an exact card.
+
+--------------------------------------------------
+17F — EXCHANGE
+--------------------------------------------------
+
+Effect:
+
+    Discard any number of cards from the player's hand.
+    Draw the same number of cards.
+
+Working rank:
+
+    Blue
+
+If n cards are discarded:
+
+    hand -> graveyard = n
+    deck -> hand = n
+
+Net hand-card-count change:
+
+    0
+
+This improves hand quality without generating raw card advantage.
+
+It intentionally creates interaction with Graveyard / Recovery strategies.
+
+--------------------------------------------------
+17G — DEEP SURVEY
+--------------------------------------------------
+
+Effect:
+
+    Look at the top 7 cards of the deck.
+    Choose 1.
+    Put the chosen card into the player's hand.
+    Shuffle the remaining 6 back into the deck.
+
+Working rank:
+
+    White
+
+This is a high-power selection effect.
+
+It is still not an unrestricted exact-card tutor.
+
+--------------------------------------------------
+17H — DRAW / DECK DOMAIN BOUNDARY
+--------------------------------------------------
+
+Draw / Deck effects manipulate:
+
+    deck
+    hand
+    future deck ordering
+    selection from the deck
+
+They do NOT retrieve cards from the Graveyard.
+
+Graveyard retrieval belongs to:
+
+    Recovery
+
+The exact maximum hand size is NOT finalized by this checkpoint.
+
+Earlier discussion considered a small bounded hand, but do not silently canonize a
+number unless the repository already contains an explicitly accepted value.
+
+Likewise, exact excess-draw/overflow behavior remains OPEN unless already accepted.
+
+======================================================================
+18 — GRAVEYARD / RECOVERY UTILITIES: 6
+======================================================================
+
+Exactly six Recovery identities exist in Cycle 1.
+
+Recovery moves previously spent/discarded/destroyed card resources from the
+Graveyard back toward usable circulation.
+
+Recovery does NOT automatically reconstruct destroyed topology.
+
+If Field Generator cards belonging to a destroyed manifold are recovered, the player
+must construct a new mathematically legal configuration normally.
+
+Accepted structural set:
+
+--------------------------------------------------
+18A — RECOVER ONE FIELD GENERATOR
+--------------------------------------------------
+
+Effect:
+
+    Return 1 Field Generator card from Graveyard to hand.
+
+Working rank:
+
+    Yellow
+
+--------------------------------------------------
+18B — RECOVER TWO FIELD GENERATORS
+--------------------------------------------------
+
+Effect:
+
+    Return 2 Field Generator cards from Graveyard to hand.
+
+Working rank:
+
+    Blue
+
+--------------------------------------------------
+18C — RECOVER THREE FIELD GENERATORS
+--------------------------------------------------
+
+Effect:
+
+    Return 3 Field Generator cards from Graveyard to hand.
+
+Working rank:
+
+    White
+
+--------------------------------------------------
+18D — RECOVER ONE UTILITY
+--------------------------------------------------
+
+Effect:
+
+    Return 1 Utility card from Graveyard to hand.
+
+Working rank:
+
+    Green
+
+--------------------------------------------------
+18E — RECOVER ANY ONE NON-PRIME CARD
+--------------------------------------------------
+
+Effect:
+
+    Return any 1 non-Prime card from Graveyard to hand.
+
+Working rank:
+
+    Blue
+
+Prime cards are explicitly excluded from this ordinary Recovery effect.
+
+--------------------------------------------------
+18F — RECOVER THREE TO DECK
+--------------------------------------------------
+
+Effect:
+
+    Choose up to 3 eligible cards in the Graveyard.
+    Put them on top of the player's deck in any chosen order.
+
+Working rank:
+
+    Violet
+
+This is recovery without immediate direct card advantage.
+
+It intentionally combos with Draw / Deck effects.
+
+Example:
+
+    Recover 3 to top of deck
+        ->
+    Draw 3
+
+is a valid strategic combination if the player has the required cards/effects.
+
+--------------------------------------------------
+18G — PRIME RECOVERY
+--------------------------------------------------
+
+Ordinary Cycle-1 Recovery Utilities do NOT provide Prime resurrection/recovery.
+
+Do not invent ordinary Prime resurrection during this update.
+
+Future:
+
+    White specialty
+    Black effect
+    later Cycle mechanic
+
+may potentially explore it, but no such rule is accepted here.
+
+--------------------------------------------------
+18H — RECOVERY RANK INTERPRETATION
+--------------------------------------------------
+
+For Recovery cards, card color/rank primarily represents:
+
+    rarity
+    strategic strength
+    card power
+
+It does NOT necessarily represent direct generated color magnitude.
+
+======================================================================
+19 — STABILITY / PROTECTION UTILITIES: 6
+======================================================================
+
+Exactly six identities.
+
+This family is distinct from Restoration.
+
+Restoration:
+
+    lost color -> replace color
+
+Protection / Stability:
+
+    prevent loss
+    modify loss
+    preserve an existing legal structure
+    strengthen an existing supported field
+
+Accepted six-card structural set:
+
+--------------------------------------------------
+19A — COLOR GUARD
+--------------------------------------------------
+
+Working name:
+
+    Color Guard
+
+Effect concept:
+
+    Reduce / absorb the next incoming degradation by a fixed amount.
+
+This acts as a small absorption layer.
+
+Exact magnitude:
+
+    OPEN
+
+Exact rank:
+
+    OPEN
+
+Exact timing:
+
+    OPEN
+
+Do not invent those details.
+
+--------------------------------------------------
+19B — PRIME GUARD
+--------------------------------------------------
+
+Working name:
+
+    Prime Guard
+
+Effect concept:
+
+    Protect one Prime from its next eligible degradation event.
+
+Exact rank/duration/timing:
+
+    OPEN
+
+The card protects an existing Prime.
+
+It does not alter Prime QMO identity.
+
+--------------------------------------------------
+19C — MANIFOLD GUARD
+--------------------------------------------------
+
+Working name:
+
+    Manifold Guard
+
+Effect concept:
+
+    Protect one Local Manifold from its next eligible degradation event.
+
+Exact rank/duration/timing:
+
+    OPEN
+
+It protects an already-valid Local Manifold.
+
+It cannot make invalid geometry close.
+
+--------------------------------------------------
+19D — SHIELD LOCK
+--------------------------------------------------
+
+Working name:
+
+    Shield Lock
+
+Effect concept:
+
+    Temporarily prevent an existing Prime shield from being degraded.
+
+This is recognized as a high-power protection effect.
+
+Accepted minimum working rank:
+
+    Blue or higher
+
+Exact final rank:
+
+    OPEN
+
+Exact duration:
+
+    OPEN
+
+Exact timing:
+
+    OPEN
+
+Do not silently choose these unresolved values.
+
+--------------------------------------------------
+19E — STRUCTURAL ANCHOR
+--------------------------------------------------
+
+Working name:
+
+    Structural Anchor
+
+Effect:
+
+The next otherwise-lethal degradation event against the protected Local Manifold
+does NOT destroy that manifold.
+
+Instead:
+
+    manifold survives at Red
+    charge = 1
+
+State transition:
+
+    otherwise lethal
+        ->
+    Red
+
+instead of:
+
+    otherwise lethal
+        ->
+    destroyed
+
+This preserves an already-valid topology.
+
+It does not generate new closure.
+
+It does not make an invalid QMO relationship legal.
+
+Exact rank/timing remains OPEN unless already accepted elsewhere.
+
+--------------------------------------------------
+19F — EMERGENT AMPLIFICATION
+--------------------------------------------------
+
+Working name:
+
+    Emergent Amplification
+
+Effect:
+
+    Increase one currently active Emergent Field by +1 color charge.
+
+Examples:
+
+    Red    -> Orange
+    Orange -> Yellow
+    Yellow -> Green
+    Green  -> Blue
+    Blue   -> Violet
+
+Ordinary Cycle-1 Emergent Amplification is capped at:
+
+    Violet
+    charge 6
+
+If an Emergent Field is already Violet, this ordinary effect does not create an
+ordinary White or Black Emergent Field.
+
+Do not invent overflow behavior beyond the cap.
+
+This effect:
+
+- does NOT create a new Emergent Field
+- does NOT alter QMO closure
+- does NOT alter support identity
+- does NOT make the Emergent Field directly targetable
+- does NOT preserve the Emergent Field after required support disappears
+
+The field remains governed by its original support relationship.
+
+======================================================================
+20 — REJECTED COUPLING STABILIZER
+======================================================================
+
+Record the design reasoning where appropriate.
+
+A proposed:
+
+    Coupling Stabilizer
+
+was rejected from the ordinary Cycle-1 Utility catalog.
+
+Reason:
+
+Emergent Fields are already not independently attackable/destructible.
+
+They disappear when their required supporting manifold relationship is broken.
+
+Creating a card whose job is merely to protect the Emergent Field directly would
+conflict with / redundantly complicate that support model.
+
+The sixth Stability slot is therefore:
+
+    Emergent Amplification
+
+not Coupling Stabilizer.
+
+Do not create Coupling Stabilizer as an ordinary Cycle-1 card.
+
+======================================================================
+21 — UTILITY STRUCTURAL COMPLETION
+======================================================================
+
+The ordinary Utility structure now accounts for all 50 identities:
+
+    Transduction          18
+    Activation             7
+    Sandbox Activation     6
+    Draw / Deck            7
+    Recovery               6
+    Stability              6
+    -------------------------
+    TOTAL                 50
+
+Mark the design status accurately.
+
+Appropriate interpretation:
+
+    Utility family architecture:
+        GAME_CANON / STRUCTURALLY DEFINED
+
+    Exact final card catalog:
+        PARTIALLY FORMALIZED
+
+    Final names:
+        OPEN where not supplied
+
+    Final IDs:
+        OPEN unless existing repository conventions assign them
+
+    Exact unresolved ranks:
+        OPEN
+
+    Exact timing:
+        OPEN where unspecified
+
+    Exact duration:
+        OPEN where unspecified
+
+    Balance:
+        UNTESTED
+
+    Runtime implementation:
+        OPEN / UNIMPLEMENTED
+
+    Gameplay validation:
+        UNTESTED
+
+Do NOT mark the Utility module GOLD.
+
+Do NOT claim all 50 individual cards are implementation-ready.
+
+======================================================================
+22 — BLACK RANK
+======================================================================
+
+Preserve and expand current accepted Black-rank design notes.
+
+Canonical rank ladder:
+
+    Red     1
+    Orange  2
+    Yellow  3
+    Green   4
+    Blue    5
+    Violet  6
+    White   7
+    Black   8
+
+Black is an actual card rank.
+
+It is above White.
+
+Black cards are legal in normal constructed decks.
+
+They are intended to be:
+
+    extremely difficult
+    expensive in game progression/crafting terms
+    long-term/endgame collection objects
+
+Black does not mean:
+
+    ignore game mechanics
+    ignore QMO legality
+
+Instead Black cards may exceed ordinary efficiency or bypass ordinary setup while
+still producing legal game states.
+
+======================================================================
+23 — BLACK CARD TYPES
+======================================================================
+
+Black rank applies to:
+
+    Prime Fields
+    Utilities
+
+Black rank does NOT apply to:
+
+    Field Generators
+
+Canonical rule:
+
+    BLACK FIELD GENERATORS DO NOT EXIST.
+
+White remains the highest Field Generator rank.
+
+Exactly three Black Prime Field identities exist.
+
+Black Utilities exist as a larger endgame catalog.
+
+The exact Black Utility catalog is NOT part of the ordinary Cycle-1 50-Utility set
+being formalized in this checkpoint.
+
+Do not invent a final Black catalog.
+
+======================================================================
+24 — BLACK UTILITIES: DESIGN LANGUAGE
+======================================================================
+
+Record the accepted design philosophy.
+
+Black Utilities may be deliberately game-bending in efficiency while preserving the
+underlying mechanics.
+
+Examples discussed as design language include:
+
+--------------------------------------------------
+SHIELD OF THE ABYSS
+--------------------------------------------------
+
+Working Black-card concept:
+
+    Shield of the Abyss
+
+Provides a Black shield:
+
+    Black charge = 8
+
+The purpose is to demonstrate that a Black Utility may provide exceptional
+overhealth/shield capacity even to a lower-ranked Prime.
+
+For example, a Yellow Prime may receive a Black shield even though its ordinary
+rank would not normally support that scale through ordinary mechanics.
+
+The Prime itself remains its original Prime identity.
+
+The shield is the exceptional Black effect.
+
+Exact final wording/timing/cost remains OPEN.
+
+--------------------------------------------------
+TOPAZ LAKE
+--------------------------------------------------
+
+Working Black-card concept:
+
+    Topaz Lake
+
+Effect concept:
+
+    directly manifest a Yellow field/manifold state
+
+rather than requiring the player to construct that field through the ordinary
+Field Generator setup path.
+
+IMPORTANT:
+
+Topaz Lake does not make illegal geometry legal.
+
+The Black card directly requests/manifests an already-defined legal QMO field state.
+
+Conceptually:
+
+    Black Utility
+        ->
+    manifest legal Yellow QMO field
+
+This illustrates the Black design philosophy:
+
+    bypass ordinary setup economy
+    while preserving legal game-state semantics
+
+Exact target QMO, timing, lifetime, and implementation remain OPEN.
+
+These names are working design concepts and should be documented as such rather than
+misrepresented as finalized printed cards unless the repository's authority model
+supports provisional card concepts.
+
+======================================================================
+25 — BLACK DECK / BLACK MODE
+======================================================================
+
+Black cards may be mixed into ordinary legal decks.
+
+There is no rule requiring Black cards to be used only in Black Mode.
+
+A player may encounter another human player who has one or more Black cards in an
+otherwise ordinary deck.
+
+The long-term hidden achievement is constructing a fully Black legal deck.
+
+A full Black deck contains:
+
+    3 Black Prime cards
+    57 Black Utility cards
+    ----------------------
+    60 cards
+
+There are no Black Field Generators in the full Black deck.
+
+The existence of this deck intentionally transforms the normal construction
+economy because Black Utilities can directly manipulate/manifest legal field states.
+
+When a player successfully possesses/constructs a legal full Black deck:
+
+    unlock hidden BLACK MODE
+
+This is intended as an Easter egg / long-term mastery reward.
+
+It should NOT be presented as an ordinary visible progression bar in normal player
+onboarding.
+
+Design intent:
+
+A player might play raeon casually for a long period before discovering the hidden
+all-Black condition.
+
+======================================================================
+26 — BLACK MODE DESIGN INTENT
+======================================================================
+
+Black Mode is an extreme/endgame difficulty designed around access to a full Black
+deck.
+
+The AI/opponent may use the same Black card ecosystem.
+
+The intent is NOT for the AI to cheat by violating game rules.
+
+The challenge should come from:
+
+    Black card power
+    strong deck construction
+    strong strategic play
+    mastery of the same game systems
+
+Exact Black AI behavior remains OPEN.
+
+Black Mode remains a later production concern.
+
+======================================================================
+27 — THREE BLACK PRIMES / FOURTH PRIME
+======================================================================
+
+Exactly three Black Prime identities exist.
+
+The player decks those three actual Prime cards.
+
+While all three Black Prime cards remain alive:
+
+    FourthPrimeAvailable = true
+
+Formal condition:
+
+    FourthPrimeAvailable =
+        BlackPrime1.alive
+        AND
+        BlackPrime2.alive
+        AND
+        BlackPrime3.alive
+
+The Fourth Prime is:
+
+    emergent
+    supported
+    not a fourth deck card
+
+It exists/accesses because the three Black Prime support condition is satisfied.
+
+If ANY one of the three supporting Black Primes dies:
+
+    FourthPrimeAvailable = false
+
+The Fourth Prime becomes inaccessible.
+
+Use:
+
+    inaccessible
+
+rather than necessarily:
+
+    destroyed
+
+because the supported condition ceased to exist.
+
+If future legal mechanics restore all three Black Primes, reevaluate the condition.
+
+Detailed Fourth Prime ability:
+
+    OPEN
+
+Do not invent it during this checkpoint.
+
+======================================================================
+28 — COLLECTION / CARD SHOP DIRECTION
+======================================================================
+
+Record the current design direction under the appropriate progression/economy/card
+design boundaries.
+
+The game is intended to have long-term card collection.
+
+Players begin with access sufficient to play the game.
+
+Players earn in-game progression/credits by playing.
+
+Those credits may be used in an in-game card shop / pack-opening collection loop.
+
+The design intent is that players can gradually collect the Cycle's cards through
+play.
+
+Duplicate cards retain value rather than being purely useless pulls.
+
+Duplicate accumulation is intended to participate in the future Black-card crafting
+system.
+
+Exact crafting recipes remain OPEN.
+
+Exact pack sizes remain OPEN.
+
+Exact probabilities remain OPEN.
+
+Exact credit costs remain OPEN.
+
+Exact reward rates remain OPEN.
+
+Do not invent them.
+
+======================================================================
+29 — NO REAL-MONEY CREDIT PURCHASE REQUIREMENT
+======================================================================
+
+Current product direction:
+
+Do NOT design the progression economy around purchasing gameplay credits with real
+money.
+
+The intended loop is:
+
+    play game
+        ->
+    earn game-generated progression/credits
+        ->
+    acquire/open cards
+        ->
+    build collection
+
+Do not implement or specify purchasable gameplay-credit bundles during this
+checkpoint.
+
+Future commercial decisions require explicit approval.
+
+======================================================================
+30 — PLAYER-TO-PLAYER PROGRESSION
+======================================================================
+
+Earlier discussion considered transferring/wagering player-owned credits between
+players.
+
+That concept was abandoned.
+
+Do NOT add player-to-player credit wagering.
+
+Current direction:
+
+A PvP victory may eventually grant game-generated progression/credits.
+
+The game itself creates the reward.
+
+Players do not ante/wager their existing balances.
+
+Exact PvP reward values remain OPEN.
+
+======================================================================
+31 — CYCLE RELEASE / PRODUCT DIRECTION
+======================================================================
+
+The game is intended to support additional card Cycles over time.
+
+Each Cycle may introduce another card set and associated QMO/content.
+
+The current design concept discussed a low-cost game / low-cost future Cycle model,
+but exact commercial pricing is NOT being locked by this checkpoint.
+
+Do not hard-code:
+
+    $0.99
+
+or any other store price as implementation canon unless an existing accepted product
+document explicitly does so.
+
+Record instead:
+
+    product direction favors inexpensive, player-friendly releases
+    no subscription-dependent gameplay
+    no pay-to-win gameplay-credit purchasing
+
+with exact pricing:
+
+    OPEN
+
+======================================================================
+32 — GAME EXPERIENCE INTENT
+======================================================================
+
+Record in design/game or appropriate product-design documentation:
+
+raeon is intended to support compact strategic sessions.
+
+The target experience includes the ability to play a meaningful match during short
+periods such as:
+
+    waiting
+    commuting
+    brief downtime
+
+approximately the type of game a player can open for a roughly 15-minute session.
+
+This is a design target, not a hard match-duration guarantee.
+
+Strategic depth comes from:
+
+    deck construction
+    Field Generator placement
+    Sandbox configuration
+    mathematical closure
+    manifold discovery
+    color transduction
+    Prime management
+    Activation timing
+    fusion
+    emergent fields
+    card draw/selection
+    graveyard recovery
+    protection/stability
+    long-term collection
+    hidden Black progression
+
+The game should remain understandable at the action level even though the underlying
+QMO landscape is deep.
+
+======================================================================
+33 — AI DESIGN DIRECTION
+======================================================================
+
+The game is intended to support computer opponents.
+
+Earlier design direction includes multiple difficulty levels.
+
+The long-term AI may model or learn aspects of how a player tends to play in order
+to provide stronger strategic opposition.
+
+Do NOT claim adaptive AI is implemented.
+
+Do NOT choose an ML architecture during this checkpoint.
+
+Record:
+
+    adaptive opponent

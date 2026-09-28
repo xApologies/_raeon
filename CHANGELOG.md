@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — cumulative recovery checkpoint 0003 (2026-09-28)
+
+- Integrate supplied Blocks 2/3 with accepted checkpoint 0002; preserve all ordinary Utility counts and baseline rules.
+- Record Black working concepts, hidden mode, explicit three-support condition, AI/local P2P direction, 3D visualization and board interaction.
+- Extend economy/product direction, unresolved turn/match fields, future effect schema/ID direction and missing-source inventory.
+- Increment accepted-state schema to 3; extend validators without adding gameplay systems.
+- Preserve PREPRODUCTION, architecture, constitutions and module statuses.
+
 ## Unreleased — first game-design checkpoint (2026-09-28)
 
 - Accept all 50 ordinary Cycle-1 Utility structural slots; retain unresolved final details.

@@ -1,0 +1,859 @@
+CODEX DIRECTIVE — RAEON CURRENT-STATE RECOVERY
+FIRST SUBSTANTIAL GAME-DESIGN CHECKPOINT
+
+BLOCK 3 OF 3 — FINAL BLOCK
+
+You now have BLOCKS 1, 2, AND 3.
+
+After reading this block, execute the complete three-block directive as ONE TASK.
+
+======================================================================
+32 — AI DESIGN
+======================================================================
+
+raeon supports computer opponents.
+
+Accepted direction:
+- multiple difficulty levels
+- increasingly strong strategic play
+- possible future adaptive/player-modeling AI
+- hidden Black Mode as extreme/endgame AI challenge
+
+Do NOT:
+- implement AI now
+- select an ML architecture
+- claim adaptive AI exists
+- allow AI to violate game/QMO legality
+
+Record:
+
+computer opponents:
+    ACCEPTED DESIGN DIRECTION
+
+multiple difficulties:
+    ACCEPTED DESIGN DIRECTION
+
+adaptive/player-modeling AI:
+    PROVISIONAL / OPEN
+
+Black Mode AI:
+    DESIGN DIRECTION / OPEN IMPLEMENTATION
+
+Difficulty should come from strategy, deck construction, available cards, and
+decision quality rather than hidden rules violations.
+
+======================================================================
+33 — LOCAL PEER-TO-PEER MULTIPLAYER
+======================================================================
+
+raeon is intended to support local user-to-user play without requiring a centralized
+gameplay server for every match.
+
+High-level model:
+
+    Device A hosts match state
+    Device B joins
+    devices exchange compact actions/state
+    each device renders locally
+
+Do NOT transmit rendered frames as gameplay state.
+
+Transport technology remains OPEN.
+
+Do NOT prematurely canonize:
+- Bluetooth
+- Wi-Fi Direct
+- Multipeer Connectivity
+- internet relay
+- Apple-specific transport
+- Windows-specific transport
+
+Do not implement networking in this checkpoint.
+
+======================================================================
+34 — PVP / BLACK CARDS
+======================================================================
+
+Black cards are legal in ordinary decks.
+
+Therefore a normal PvP opponent may possess Black cards.
+
+Black cards are NOT restricted to Black Mode.
+
+Black Mode is the hidden mode unlocked by constructing a legal all-Black deck.
+
+Exact matchmaking and competitive balance policy:
+    OPEN
+
+======================================================================
+35 — RENDERING ARCHITECTURE
+======================================================================
+
+Preserve:
+
+    QMO
+      ->
+    deterministic RenderSpec
+      ->
+    Blender procedural geometry
+      ->
+    mesh
+      ->
+    runtime GPU renderer
+      ->
+    animated manifold
+
+The QMO defines the mathematical object.
+
+RenderSpec defines deterministic visualization instructions.
+
+Blender realizes geometry.
+
+Runtime graphics animate it.
+
+Rendering never changes mathematical legality.
+
+If visual geometry contradicts the QMO:
+    the render is wrong
+not:
+    the QMO changed.
+
+Authoritative QMO/RenderSpec/API packages remain:
+    SOURCE_IMPORT_REQUIRED
+
+Do not fabricate them.
+
+======================================================================
+36 — HIGHER-DIMENSIONAL VISUALIZATION
+======================================================================
+
+QMO state may carry higher-dimensional mathematical information.
+
+The game displays explicit 3D projections/embeddings.
+
+Do NOT claim Blender literally renders five spatial dimensions.
+
+Higher-dimensional state may influence:
+- winding
+- phase
+- orientation
+- deformation
+- field-shell behavior
+- emissive flow
+- animation
+- topology-preserving motion
+
+Exact projection mathematics:
+    SOURCE_IMPORT_REQUIRED
+
+======================================================================
+37 — BOARD / SANDBOX PRESENTATION
+======================================================================
+
+Current interaction direction:
+
+At board scale:
+    Sandboxes/manifolds occupy configuration positions.
+
+The player may select a Sandbox to enter a detailed configuration view.
+
+Detailed view exposes:
+    committed Field Generators
+    construction geometry
+    configuration state
+
+Returning to board scale restores the compact field representation.
+
+Completed manifolds should visually read as coherent active fields rather than merely
+piles of unrelated card rectangles.
+
+Exact UI:
+    OPEN
+
+Exact camera:
+    OPEN
+
+Exact controls:
+    OPEN
+
+Desktop and iPad interaction may differ while preserving identical rules.
+
+======================================================================
+38 — PLATFORM
+======================================================================
+
+Preserve:
+
+Primary development target:
+    Windows desktop
+
+Secondary intended target:
+    iPad / iPadOS
+
+Keep core rules/data platform-independent where practical.
+
+Do not implement platform runtime during this checkpoint.
+
+======================================================================
+39 — TURN / MATCH RULES REMAIN OPEN
+======================================================================
+
+Do NOT invent:
+- exact starting hand size
+- maximum hand size
+- mulligan rules
+- normal draw-per-turn rule
+- exact turn phases
+- exact refresh timing
+- first-player rules
+- victory condition
+- match timer
+- temporary Sandbox expiry
+- exact Prime timing
+- Utility timing windows
+
+Concepts such as:
+    READY
+    USED
+    draw
+    Graveyard
+    restoration
+    degradation
+    activation
+
+may be documented without inventing unresolved sequencing.
+
+======================================================================
+40 — MACHINE-READABLE CARD EFFECTS
+======================================================================
+
+Prepare the design for cards to eventually have:
+
+1. human-readable rules text
+2. machine-readable effect definitions
+
+Possible future fields:
+
+    id
+    family
+    rank_color
+    operator
+    magnitude
+    target_type
+    timing
+    duration
+    constraints
+    authority
+    status
+
+Example:
+
+    family = TRANSDUCTION
+    operator = RESTORE
+    rank_color = YELLOW
+    magnitude = 3
+
+Example:
+
+    family = DRAW_DECK
+    operator = DRAW
+    rank_color = VIOLET
+    magnitude = 3
+
+These examples illustrate schema direction.
+
+Do not invent unresolved values.
+
+======================================================================
+41 — UTILITY IDENTIFIERS
+======================================================================
+
+Prepare for:
+
+    UT-001 through UT-050
+
+Do NOT arbitrarily assign final IDs unless a deterministic ordering convention is
+explicitly created and documented.
+
+If IDs are assigned:
+- preserve family counts
+- document ordering
+- distinguish working names from final names
+- preserve OPEN fields
+
+It is acceptable to leave final ID assignment for the next design checkpoint.
+
+======================================================================
+42 — CYCLE PRODUCTION
+======================================================================
+
+Preserve reusable Cycle-production direction:
+
+    seed
+      ->
+    mathematical generation
+      ->
+    Field Generator catalog
+      ->
+    manifold/closure landscape
+      ->
+    Prime design
+      ->
+    Utility design
+      ->
+    balance
+      ->
+    RenderSpecs
+      ->
+    assets
+      ->
+    integration
+      ->
+    testing
+      ->
+    release
+
+Existing Cycle-generation source package:
+    SOURCE_IMPORT_REQUIRED
+
+Do not reconstruct it from this prompt.
+
+======================================================================
+43 — PRODUCTION PHASE
+======================================================================
+
+After this update:
+
+    WHOLE GAME PHASE = PREPRODUCTION
+
+Do NOT promote to:
+    PROTOTYPE
+    VERTICAL SLICE
+    PRODUCTION
+    CONTENT COMPLETE
+    ALPHA
+    BETA
+    RELEASE CANDIDATE
+    CERTIFICATION
+    GOLD
+
+Design modules may advance independently where justified.
+
+Repository formalization is not a playable build.
+
+======================================================================
+44 — REPOSITORY PLACEMENT
+======================================================================
+
+Do NOT dump this three-block directive into one giant notes file.
+
+Integrate information into the existing repository architecture.
+
+Use appropriate existing destinations such as:
+
+design/game/
+    high-level gameplay
+
+design/cards/
+    Cycle 1
+    Utilities
+    Black rank
+
+design/systems/
+    Sandbox
+    Activation
+    Transduction
+    Emergent Fields
+    Recovery
+    Protection
+
+design/progression/
+    collection
+    Black Mode
+
+design/economy/
+    card shop / progression direction
+
+design/ai/
+    AI direction
+
+design/multiplayer/
+    peer-to-peer direction
+
+data/
+    machine-readable accepted state
+
+development/modules/
+    module status/gate evidence
+
+provenance/
+    decision/checkpoint/audit
+
+mathematics/
+    only source boundaries/status unless authoritative mathematics is supplied
+
+Inspect actual repository conventions first.
+
+Update existing authoritative files instead of creating conflicting duplicates.
+
+======================================================================
+45 — ACCEPTED-STATE UPDATE
+======================================================================
+
+Update:
+
+    data/manifests/accepted-state.json
+
+or its canonical equivalent.
+
+Represent at minimum:
+
+Utility totals:
+    Transduction = 18
+    Activation = 7
+    Sandbox Activation = 6
+    Draw/Deck = 7
+    Recovery = 6
+    Stability = 6
+
+Transduction:
+    Restore = 6
+    Degrade = 6
+    Universal = 6
+
+Restore:
+    Red through Violet
+    magnitudes 1 through 6
+
+Degrade:
+    Red through Violet
+    magnitudes 1 through 6
+
+Universal:
+    Orange -> 1
+    Yellow -> 2
+    Green -> 3
+    Blue -> 4
+    Violet -> 5
+    White -> 6
+
+Activation:
+    7 identities
+    Red through White
+
+Sandbox Activation:
+    Red = capacity 3
+    Orange = 4
+    Yellow = 5
+    Green = 6
+    Blue = 7
+    Violet = 8
+
+Draw/Deck:
+    7 identities
+
+Recovery:
+    6 identities
+
+Stability:
+    6 identities
+
+Emergent Field:
+    not directly targetable
+
+Emergent Amplification:
+    +1 charge
+    cap Violet / 6
+
+Black:
+    no Black Field Generators
+    3 Black Prime identities
+    Black Utilities exist
+    all-Black deck = 3 Primes + 57 Utilities
+    all-Black deck unlocks Black Mode
+
+Fourth Prime:
+    available iff all 3 Black Primes remain alive
+
+Represent unresolved details explicitly as OPEN/null/status fields.
+
+If accepted-state schema changes:
+- increment schema version
+- document migration
+- update validators
+- record provenance
+
+======================================================================
+46 — DESIGN DOCUMENTS
+======================================================================
+
+Create focused documents where equivalent files do not already exist.
+
+Possible structure:
+
+design/cards/cycle_01/UTILITIES.md
+design/cards/cycle_01/TRANSDUCTION.md
+design/cards/cycle_01/ACTIVATION.md
+design/cards/cycle_01/SANDBOX_ACTIVATION.md
+design/cards/cycle_01/DRAW_DECK.md
+design/cards/cycle_01/RECOVERY.md
+design/cards/cycle_01/STABILITY.md
+design/cards/BLACK_RANK.md
+
+design/systems/SANDBOX.md
+design/systems/EMERGENT_FIELDS.md
+
+design/progression/BLACK_MODE.md
+
+design/economy/COLLECTION_DIRECTION.md
+
+design/multiplayer/LOCAL_P2P.md
+
+Use existing naming conventions after inspection.
+
+Avoid redundant documents.
+
+======================================================================
+47 — PROVENANCE
+======================================================================
+
+Create the next repository decision/checkpoint using existing numbering conventions.
+
+Record:
+- date
+- source = current user-approved raeon design session
+- scope
+- accepted changes
+- unresolved details
+- rejected concepts
+- files changed
+- structured-data changes
+- validator changes
+- production phase before/after
+- module status changes
+- limitations
+
+Explicitly record:
+
+Rejected:
+    ordinary Coupling Stabilizer Utility
+
+Replacement:
+    Emergent Amplification
+
+Also record:
+
+Sandbox Utilities:
+    use ordinary Utility copy limit
+    no one-per-color deck restriction
+    capacities 3 through 8
+
+======================================================================
+48 — VALIDATION
+======================================================================
+
+Extend validation for accepted structural invariants.
+
+Validate:
+
+Cycle:
+    120 + 30 + 50 = 200
+
+Utilities:
+    18 + 7 + 6 + 7 + 6 + 6 = 50
+
+Transduction:
+    6 + 6 + 6 = 18
+
+Restore:
+    Red through Violet
+    magnitude 1..6
+
+Degrade:
+    Red through Violet
+    magnitude 1..6
+
+Universal:
+    Orange through White
+    magnitude 1..6
+
+Activation:
+    exactly 7
+    Red through White
+
+Sandbox Activation:
+    exactly 6
+    capacities 3,4,5,6,7,8
+
+Draw/Deck:
+    exactly 7
+
+Recovery:
+    exactly 6
+
+Stability:
+    exactly 6
+
+Emergent Amplification:
+    increment = 1
+    cap = Violet / 6
+
+Base manifolds:
+    15 + 13 + 11 + 9 + 7 + 5 = 60
+
+QMO inventory:
+    60 + 343 + 1691 = 2094
+
+Black:
+    Black Field Generators = prohibited
+    Black Prime identities = 3
+    3 + 57 = 60 all-Black deck
+
+Fourth Prime:
+    requires all three Black Prime alive flags
+
+Validation must explicitly NOT claim to validate:
+- Genesis mathematics
+- Chirality mathematics
+- QMO closure correctness
+- balance
+- final timing
+- Blender geometry
+- rendering
+- AI
+- multiplayer
+
+======================================================================
+49 — SOURCE_IMPORT_REQUIRED
+======================================================================
+
+Preserve SOURCE_IMPORT_REQUIRED for authoritative external project artifacts including:
+
+- Genesis mathematics
+- Chirality mathematics
+- Propagation Engine mathematics
+- QMO API
+- QMO definitions
+- closure operators
+- transduction mathematical API
+- Field Generator QMO data
+- 60 base Local Manifold QMO package
+- 343 fusion-derived Local Manifold QMO package
+- 1,691 Emergent Field QMO package
+- complete 2,094-object QMO atlas
+- Cycle Generation Constitution
+- deterministic RenderSpec/API packages
+- Blender-facing manifold atlas/reference material
+
+Do not fabricate or recreate these from this design prompt.
+
+They will be imported separately through the repository intake workflow.
+
+======================================================================
+50 — INBOX
+======================================================================
+
+Preserve:
+
+    _inbox/
+
+as local-only and gitignored.
+
+Future authoritative packages flow:
+
+    receive
+      ->
+    inspect
+      ->
+    classify
+      ->
+    validate
+      ->
+    provenance
+      ->
+    import
+      ->
+    test
+      ->
+    checkpoint
+      ->
+    accepted Git state
+
+Never commit _inbox contents.
+
+======================================================================
+51 — DO NOT OVER-CANONIZE
+======================================================================
+
+Maintain distinctions:
+
+GAME_CANON:
+    explicitly accepted rules/structures
+
+WORKING DESIGN:
+    accepted direction with unresolved details
+
+OPEN:
+    unresolved
+
+SOURCE_IMPORT_REQUIRED:
+    authoritative artifact exists but is not imported
+
+UNTESTED:
+    designed but not experimentally validated
+
+Examples such as:
+
+    Shield of the Abyss
+    Topaz Lake
+
+are Black-card design concepts, not necessarily final printed cards.
+
+Working ranks are not evidence of balance validation.
+
+======================================================================
+52 — DO NOT IMPLEMENT THE GAME
+======================================================================
+
+This checkpoint is:
+
+    recovery
+    design formalization
+    structured-data update
+    provenance
+    validation
+
+It is NOT:
+
+    gameplay implementation
+    AI implementation
+    networking implementation
+    renderer implementation
+    Blender generation
+    QMO regeneration
+
+Do not write speculative runtime systems.
+
+======================================================================
+53 — CHECKPOINT REQUIREMENT
+======================================================================
+
+Create a cumulative checkpoint using repository conventions.
+
+A future ChatGPT/Codex/developer session must be able to determine from Git alone:
+
+- current game architecture
+- current Utility architecture
+- Sandbox capacity rules
+- Emergent Field targeting rules
+- Black-rank design
+- Black Mode condition
+- Fourth Prime condition
+- collection/economy direction
+- multiplayer direction
+- rendering direction
+- what is GAME_CANON
+- what remains OPEN
+- what remains SOURCE_IMPORT_REQUIRED
+- current production phase
+- what changed since bootstrap
+
+The future session should NOT need this conversation to reconstruct accepted state.
+
+======================================================================
+54 — NEXT WORK — DO NOT EXECUTE
+======================================================================
+
+After this checkpoint, likely next work includes:
+
+1. Assign/finalize UT-001 through UT-050.
+2. Give each Utility:
+       final name
+       final rank
+       exact effect text
+       exact target
+       timing
+       duration
+       machine-readable operator
+3. Complete the 30 Prime Field catalog.
+4. Import authoritative QMO/API packages.
+5. Import the complete manifold atlas.
+6. Import Cycle Generation Constitution.
+7. Import RenderSpec packages.
+8. Begin representative graphics pipeline work.
+9. Formalize unresolved turn/match state machine.
+10. Define vertical-slice implementation plan.
+
+Recommend appropriate next work in the final report.
+
+Do NOT perform it automatically.
+
+======================================================================
+55 — EXECUTION
+======================================================================
+
+You now have all three blocks.
+
+EXECUTE THE COMPLETE DIRECTIVE.
+
+Sequence:
+
+1. Inspect current repository.
+2. Confirm existing architecture.
+3. Create/update appropriate working branch.
+4. Integrate accepted design into correct repository boundaries.
+5. Update structured accepted state.
+6. Update relevant module/gate status.
+7. Add provenance.
+8. Extend validation.
+9. Run all applicable repository/design validators.
+10. Run git diff --check.
+11. Inspect git status.
+12. Review changes for accidental over-canonization.
+13. Commit the checkpoint.
+14. Do not merge to main unless explicitly authorized.
+
+======================================================================
+56 — FINAL CODEX REPORT
+======================================================================
+
+When finished, report:
+
+1. repository
+2. working branch
+3. starting commit
+4. ending commit
+5. files created
+6. files modified
+7. files deleted, if any
+8. design documents added
+9. machine-readable state changes
+10. provenance records added
+11. validators added/changed
+12. validation commands executed
+13. validation results
+14. Utility structural status
+15. production phase
+16. module statuses changed
+17. GAME_CANON items added
+18. WORKING DESIGN items recorded
+19. OPEN items
+20. SOURCE_IMPORT_REQUIRED items
+21. rejected concepts recorded
+22. any conflicts discovered
+23. anything intentionally left unchanged
+24. exact recommended next development step
+
+Explicitly state:
+
+    WHOLE-GAME PHASE REMAINS PREPRODUCTION
+
+and:
+
+    NO GAMEPLAY IMPLEMENTATION WAS CLAIMED BY THIS CHECKPOINT
+
+unless actual pre-existing implementation independently proves otherwise.
+
+END BLOCK 3 OF 3
+
+BEGIN EXECUTION NOW.
