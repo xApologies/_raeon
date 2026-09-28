@@ -1,0 +1,12 @@
+{
+  "source_id": "raeon-bootstrap-request-2026-09-28",
+  "origin": "User-supplied attachment in this task",
+  "received_date": "2026-09-28",
+  "authority": "CANON and GAME_CANON only as explicitly supplied",
+  "file": "bootstrap-request.txt",
+  "sha256": "44fa3a5b6bea27fc7904af9be21fc12ced69209c832a7106b17e0089b6c896cb",
+  "scope": "Architecture and high-level state, not authoritative mathematical object data",
+  "other_repositories_used": false,
+  "permissions": "User requested incorporation; no broader redistribution license inferred.",
+  "integrity": "Exact original attachment bytes; protected from Git newline conversion by .gitattributes"
+}

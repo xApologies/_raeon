@@ -1,0 +1,89 @@
+{
+  "current_phase": "PREPRODUCTION",
+  "phases": [
+    {
+      "directory": "00_concept",
+      "name": "CONCEPT",
+      "status": "UNTESTED",
+      "complete": false,
+      "evidence": []
+    },
+    {
+      "directory": "01_preproduction",
+      "name": "PREPRODUCTION",
+      "status": "ACTIVE",
+      "complete": false,
+      "evidence": []
+    },
+    {
+      "directory": "02_prototype",
+      "name": "PROTOTYPE",
+      "status": "OPEN",
+      "complete": false,
+      "evidence": []
+    },
+    {
+      "directory": "03_vertical_slice",
+      "name": "VERTICAL SLICE",
+      "status": "OPEN",
+      "complete": false,
+      "evidence": []
+    },
+    {
+      "directory": "04_production",
+      "name": "PRODUCTION",
+      "status": "OPEN",
+      "complete": false,
+      "evidence": []
+    },
+    {
+      "directory": "05_content_complete",
+      "name": "CONTENT COMPLETE",
+      "status": "OPEN",
+      "complete": false,
+      "evidence": []
+    },
+    {
+      "directory": "06_alpha",
+      "name": "ALPHA",
+      "status": "OPEN",
+      "complete": false,
+      "evidence": []
+    },
+    {
+      "directory": "07_beta",
+      "name": "BETA",
+      "status": "OPEN",
+      "complete": false,
+      "evidence": []
+    },
+    {
+      "directory": "08_release_candidate",
+      "name": "RELEASE CANDIDATE",
+      "status": "OPEN",
+      "complete": false,
+      "evidence": []
+    },
+    {
+      "directory": "09_certification",
+      "name": "CERTIFICATION",
+      "status": "OPEN",
+      "complete": false,
+      "evidence": []
+    },
+    {
+      "directory": "10_gold",
+      "name": "GOLD",
+      "status": "OPEN",
+      "complete": false,
+      "evidence": []
+    },
+    {
+      "directory": "11_postlaunch",
+      "name": "POSTLAUNCH",
+      "status": "OPEN",
+      "complete": false,
+      "evidence": []
+    }
+  ]
+}

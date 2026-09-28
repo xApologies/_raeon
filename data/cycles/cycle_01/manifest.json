@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "authority": "GAME_CANON",
+  "cycle": "cycle_01",
+  "status": "OPEN",
+  "accepted_state": "../../manifests/accepted-state.json",
+  "card_definitions_imported": false,
+  "production_pipeline": [
+    "SEED",
+    "GENERATE",
+    "FORMALIZE",
+    "BALANCE",
+    "RENDER",
+    "INTEGRATE",
+    "TEST",
+    "RELEASE"
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "authority": "GAME_CANON",
+  "source": "provenance/sources/bootstrap-request.txt",
+  "production": {
+    "phase": "PREPRODUCTION",
+    "external_prototyping": "Substantial mathematical/system prototyping exists externally and awaits repository import.",
+    "vertical_slice_complete": false
+  },
+  "cycle_01": {
+    "ordinary_cards": {
+      "field_generators": 120,
+      "prime_fields": 30,
+      "utilities": 50,
+      "total": 200
+    },
+    "constructed_deck_size": 60,
+    "normal_copy_limits": {
+      "field_generator": 2,
+      "utility": 3
+    },
+    "prime_identity": "unique",
+    "active_prime_positions": 3,
+    "catalog_status": "OPEN — ACTIVE DESIGN",
+    "utility_domains": {
+      "transduction": 18,
+      "activation_tempo": 7,
+      "sandbox_geometry": 6,
+      "draw_deck": 7,
+      "graveyard_recovery": 6,
+      "stability_protection": 6
+    }
+  },
+  "colors": {
+    "none": 0,
+    "Red": 1,
+    "Orange": 2,
+    "Yellow": 3,
+    "Green": 4,
+    "Blue": 5,
+    "Violet": 6,
+    "White": 7,
+    "Black": 8
+  },
+  "field_generators": {
+    "maximum_rank": "White",
+    "black_allowed": false
+  },
+  "sandbox": {
+    "permanent_start": 3,
+    "permanent_minimum": 3,
+    "temporary_domains_allowed": true,
+    "independent_extraction_after_commitment": false,
+    "whole_domain_merge_fusion_allowed": true,
+    "topology_basis": "participating Generator geometry, not Sandbox provenance"
+  },
+  "local_manifold": {
+    "closure_required_before_color": true,
+    "closed_generator_count_to_color": {
+      "3": "Red",
+      "4": "Orange",
+      "5": "Yellow",
+      "6": "Green",
+      "7": "Blue",
+      "8": "Violet"
+    },
+    "base_basis": {
+      "Red": 15,
+      "Orange": 13,
+      "Yellow": 11,
+      "Green": 9,
+      "Blue": 7,
+      "Violet": 5
+    },
+    "base_total": 60,
+    "basis_is_complete_recursive_closure": false
+  },
+  "qmo_inventory": {
+    "status": "SOURCE_IMPORT_REQUIRED",
+    "base_local_manifolds": 60,
+    "fusion_derived_local_manifolds": 343,
+    "emergent_fields": 1691,
+    "total_render_relevant": 2094,
+    "objects_imported": false
+  },
+  "mathematical_api": {
+    "outcomes": [
+      "VALID",
+      "TERMINATES",
+      "NOT_APPLICABLE",
+      "OPEN",
+      "UNTESTED"
+    ],
+    "missing_data_is_termination": false
+  },
+  "black": {
+    "rank": 8,
+    "ordinary_deck_legal": true,
+    "crafting": "extremely difficult/expensive endgame crafted cards",
+    "prime_identities": 3,
+    "utilities_exist": true,
+    "field_generators_exist": false,
+    "all_black_deck": {
+      "primes": 3,
+      "utilities": 57,
+      "total": 60
+    },
+    "legal_all_black_unlocks_hidden_mode": true,
+    "fourth_prime": {
+      "kind": "emergent/supported Prime",
+      "deck_card": false,
+      "availability": "true while all three supporting Black Primes remain alive; false if any dies",
+      "detailed_behavior": "OPEN"
+    }
+  },
+  "platforms": {
+    "priority": "WINDOWS DESKTOP",
+    "secondary": "iPad / iPadOS"
+  },
+  "source_import_required": [
+    "Genesis mathematics",
+    "Chirality mathematics",
+    "Propagation mathematics",
+    "QMO definitions and API",
+    "Closure operators",
+    "Transduction mathematics/API",
+    "60 base Local Manifold QMOs",
+    "343 fusion-derived Local Manifold QMOs",
+    "1,691 Emergent Field QMOs",
+    "Deterministic RenderSpec/API packages"
+  ],
+  "open_items": [
+    "Exact 50-card Utility catalog",
+    "Other missing individual card definitions",
+    "Detailed Fourth Prime behavior",
+    "Exact effect costs, timing, and balance",
+    "Match setup, turn sequence, and victory/loss details",
+    "Engine, language, graphics API, toolchain, and target OS versions",
+    "AI and multiplayer design",
+    "Persistence and compatibility policy",
+    "Economy, collection, shop, and crafting detail",
+    "Release/certification requirements and performance budgets"
+  ]
+}

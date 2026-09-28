@@ -1,0 +1,47 @@
+# Local transfer boundary
+/_inbox/
+# Local tools and caches
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+*.py[cod]
+.cache/
+.godot/
+/Library/
+/Temp/
+/Logs/
+/obj/
+/bin/
+/dist/
+/build/
+# Compiled artifacts; build-channel docs remain tracked
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.obj
+*.a
+*.lib
+*.pdb
+*.class
+*.wasm
+*.app/
+*.ipa
+*.msix
+# Temporary Blender/render output; authored .blend files are allowed
+*.blend1
+*.blend2
+*.blend@
+blendcache_*/
+render-cache/
+render_cache/
+*.tmp
+*.temp
+*.log

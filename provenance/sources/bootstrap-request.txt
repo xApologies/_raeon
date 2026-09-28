@@ -1,0 +1,986 @@
+CODEX — BOOTSTRAP THE CANONICAL RAEON GAME-DEVELOPMENT REPOSITORY
+
+TARGET REPOSITORY:
+https://github.com/xApologies/_raeon
+
+PURPOSE
+
+Bootstrap this repository as the canonical development repository for the video
+game "raeon."
+
+This is a standalone project.
+
+Do NOT access, copy, import, reference, or derive content from any other repository.
+Do NOT import another game's development constitution.
+Do NOT invent cybersecurity, level, CTF, or unrelated systems.
+
+Build a professional game-production repository around raeon's own requirements.
+
+The repository must support the complete lifecycle:
+
+CONCEPT
+→ PREPRODUCTION
+→ PROTOTYPE
+→ VERTICAL SLICE
+→ PRODUCTION
+→ CONTENT COMPLETE
+→ ALPHA
+→ BETA
+→ RELEASE CANDIDATE
+→ CERTIFICATION
+→ GOLD
+→ POSTLAUNCH
+
+GitHub is the canonical accepted project state.
+
+======================================================================
+1. ROOT ARCHITECTURE
+======================================================================
+
+Create:
+
+_raeon/
+├── README.md
+├── PROJECT_CONSTITUTION.md
+├── DEVELOPMENT_CONSTITUTION.md
+├── CONTRIBUTING.md
+├── CHANGELOG.md
+├── .gitignore
+│
+├── production/
+├── development/
+├── design/
+├── mathematics/
+├── game/
+├── content/
+├── data/
+├── tools/
+├── tests/
+├── platform/
+├── releases/
+├── provenance/
+└── _inbox/                 LOCAL ONLY / GITIGNORED
+
+Do not create empty directories without purpose. Since Git does not preserve empty
+directories, place concise README.md files in intentionally reserved boundaries.
+
+======================================================================
+2. LOCAL INBOX
+======================================================================
+
+Create the local directory:
+
+_inbox/
+
+Add:
+
+/_inbox/
+
+to .gitignore.
+
+The inbox is the transfer boundary for:
+
+- ChatGPT thread handoffs
+- Codex handoffs
+- ZIP packages
+- generated artifacts
+- recovery packages
+- source imports
+- Blender handoffs
+- temporary files
+
+_inbox is NOT canonical project state.
+
+Canonical workflow:
+
+_inbox
+→ inspect
+→ classify
+→ validate
+→ import into proper repository boundary
+→ provenance record
+→ test
+→ checkpoint
+→ accepted Git state
+
+Create documentation describing this workflow.
+
+Never commit _inbox contents.
+
+======================================================================
+3. PRODUCTION LIFECYCLE
+======================================================================
+
+Create:
+
+production/
+├── README.md
+├── 00_concept/
+├── 01_preproduction/
+├── 02_prototype/
+├── 03_vertical_slice/
+├── 04_production/
+├── 05_content_complete/
+├── 06_alpha/
+├── 07_beta/
+├── 08_release_candidate/
+├── 09_certification/
+├── 10_gold/
+└── 11_postlaunch/
+
+Each phase must contain a README defining:
+
+- purpose
+- entry criteria
+- required deliverables
+- exit criteria
+- prohibited premature claims
+- current status
+
+Do not mark phases complete during bootstrap.
+
+Current whole-game status should be:
+
+PREPRODUCTION
+
+with substantial mathematical/system prototyping already existing externally and
+awaiting repository import.
+
+The repository architecture itself does not advance the game to Prototype.
+
+======================================================================
+4. DEVELOPMENT PIPELINE
+======================================================================
+
+Create:
+
+development/
+├── README.md
+├── modules/
+├── milestones/
+├── builds/
+└── checkpoints/
+
+Every major subsystem uses this development pipeline:
+
+00 Canon
+01 Design
+02 Mathematics
+03 Rules
+04 State Model
+05 Interfaces
+06 Algorithms
+07 Visualization
+08 Interaction
+09 Data & Schemas
+10 Implementation
+11 Testing
+12 Integration
+13 Performance
+14 Provenance
+15 Release
+
+Create:
+
+development/PIPELINE.md
+
+describing these gates.
+
+A module may mark a gate NOT_APPLICABLE when appropriate.
+
+A module is not COMPLETE merely because implementation exists.
+
+Recommended module states:
+
+OPEN
+DESIGN
+FORMALIZED
+IMPLEMENTED
+VALIDATED
+GOLD
+
+======================================================================
+5. DEVELOPMENT MODULES
+======================================================================
+
+Create module workspaces for:
+
+development/modules/
+├── core-game/
+├── turn-engine/
+├── board/
+├── sandbox-domains/
+├── card-system/
+├── field-generators/
+├── qmo-engine/
+├── chirality-fabric/
+├── propagation-engine/
+├── manifold-closure/
+├── fusion/
+├── emergent-fields/
+├── transduction/
+├── prime-fields/
+├── utilities/
+├── deck-construction/
+├── collection/
+├── card-shop/
+├── black-rank/
+├── ai/
+├── multiplayer/
+├── rendering/
+├── blender-pipeline/
+├── gpu-runtime/
+├── ui-ux/
+├── persistence/
+└── platform/
+
+Each module gets a README containing:
+
+- purpose
+- current status
+- authority
+- inputs
+- outputs
+- dependencies
+- development gates
+- OPEN questions
+- validation requirements
+
+Do not fabricate implementations.
+
+======================================================================
+6. DESIGN
+======================================================================
+
+Create:
+
+design/
+├── README.md
+├── game/
+├── cards/
+├── systems/
+├── progression/
+├── economy/
+├── ai/
+├── multiplayer/
+└── ui-ux/
+
+This boundary contains player-facing and product design.
+
+Do not put executable runtime state here.
+
+======================================================================
+7. MATHEMATICS
+======================================================================
+
+Create:
+
+mathematics/
+├── README.md
+├── genesis/
+├── chirality/
+├── propagation/
+├── qmo/
+├── closure/
+├── manifolds/
+└── transduction/
+
+The foundational raeon rule is:
+
+    THE MATHEMATICS IS THE PERMISSION SYSTEM.
+
+Mathematical legality determines whether QMO relationships and gameplay operations
+are permitted.
+
+Do NOT fabricate the authoritative mathematics during bootstrap.
+
+Existing authoritative mathematical artifacts will be imported later through _inbox.
+
+Mark appropriate areas:
+
+SOURCE_IMPORT_REQUIRED
+
+rather than reconstructing missing mathematics from this prompt.
+
+The QMO is the canonical mathematical game object.
+
+======================================================================
+8. GAME RUNTIME
+======================================================================
+
+Create:
+
+game/
+├── README.md
+├── core/
+├── state/
+├── rules/
+├── cards/
+├── board/
+├── sandbox/
+├── qmo/
+├── manifold/
+├── transduction/
+├── primes/
+├── utilities/
+├── deck/
+├── collection/
+├── shop/
+├── ai/
+├── multiplayer/
+├── rendering/
+├── ui/
+└── persistence/
+
+This boundary contains executable game implementation.
+
+Do not implement speculative gameplay during bootstrap.
+
+======================================================================
+9. CONTENT
+======================================================================
+
+Create:
+
+content/
+├── README.md
+├── cards/
+├── blender/
+├── meshes/
+├── materials/
+├── shaders/
+├── vfx/
+├── ui/
+├── icons/
+├── audio/
+└── reference/
+
+This contains authored/generated presentation assets.
+
+Do not commit temporary Blender caches, intermediate render caches, or local tool
+state.
+
+======================================================================
+10. DATA
+======================================================================
+
+Create:
+
+data/
+├── README.md
+├── cycles/
+├── cards/
+│   ├── generators/
+│   ├── primes/
+│   └── utilities/
+├── qmo/
+├── manifolds/
+│   ├── base/
+│   ├── fusion/
+│   └── emergent/
+├── transduction/
+├── closure/
+├── balance/
+├── render-specs/
+├── ai/
+├── schemas/
+└── manifests/
+
+Machine-readable executable project truth belongs here when appropriate.
+
+Prefer structured JSON, SQLite, schemas, and manifests over prose duplication.
+
+======================================================================
+11. CYCLE PRODUCTION
+======================================================================
+
+Create:
+
+data/cycles/cycle_01/
+design/cards/cycle_01/
+
+Document the accepted Cycle-1 high-level structure:
+
+200 ordinary Cycle cards:
+
+120 Field Generator cards
+30 Prime Field cards
+50 Utility cards
+
+120 + 30 + 50 = 200
+
+Constructed deck size:
+
+60 cards
+
+Field Generator normal copy limit:
+
+2
+
+Utility normal copy limit:
+
+3
+
+Prime identity:
+
+unique
+
+Active Prime positions:
+
+3
+
+Do NOT invent missing individual cards during bootstrap.
+
+Create documentation describing the reusable Cycle production pipeline:
+
+SEED
+→ GENERATE
+→ FORMALIZE
+→ BALANCE
+→ RENDER
+→ INTEGRATE
+→ TEST
+→ RELEASE
+
+Future Cycle directories must use the same production discipline unless amended.
+
+======================================================================
+12. ACCEPTED COLOR SYSTEM
+======================================================================
+
+Record:
+
+0       = no active color magnitude
+Red     = 1
+Orange  = 2
+Yellow  = 3
+Green   = 4
+Blue    = 5
+Violet  = 6
+White   = 7
+Black   = 8
+
+Field Generator cards terminate at White.
+
+BLACK FIELD GENERATORS DO NOT EXIST.
+
+Black rank applies to Prime Fields and Utilities.
+
+======================================================================
+13. SANDBOX MODEL
+======================================================================
+
+Record accepted high-level architecture:
+
+Each player begins with:
+
+3 permanent Sandbox Domains.
+
+Additional temporary Sandbox Domains may be created by game effects.
+
+The permanent base cannot fall below three.
+
+Field Generators committed to a Sandbox cannot be independently extracted and moved
+after commitment.
+
+Whole Sandbox Domains may participate in merge/fusion operations.
+
+Mathematical topology depends on participating Generator geometry, not Sandbox
+provenance.
+
+======================================================================
+14. LOCAL MANIFOLD LADDER
+======================================================================
+
+Record:
+
+3 Generators → Red
+4 Generators → Orange
+5 Generators → Yellow
+6 Generators → Green
+7 Generators → Blue
+8 Generators → Violet
+
+CRITICAL:
+
+Generator count determines color only AFTER mathematical closure succeeds.
+
+3 + 5 = 8 does not itself prove a Violet manifold.
+
+The closure operator must admit the configuration.
+
+======================================================================
+15. CYCLE-1 BASE MANIFOLD BASIS
+======================================================================
+
+Record accepted current basis:
+
+15 Red
+13 Orange
+11 Yellow
+9 Green
+7 Blue
+5 Violet
+
+Total:
+
+60 base Local Manifold QMOs.
+
+The 60 objects are a basis, not necessarily the complete recursive QMO closure.
+
+======================================================================
+16. DERIVED QMO STATE
+======================================================================
+
+Record as SOURCE_IMPORT_REQUIRED accepted project state:
+
+60 base Local Manifold QMOs
+343 fusion-derived Local Manifold QMOs
+1,691 Emergent Field QMOs
+
+Total render-relevant field/manifold QMO objects:
+
+2,094
+
+Do not fabricate these objects.
+
+Their authoritative API/data packages will be imported later.
+
+======================================================================
+17. FUSION / EMERGENCE / TERMINATION
+======================================================================
+
+Document:
+
+FUSION
+
+M_i ⊕ M_j → M*
+
+when mathematically admitted.
+
+Fusion produces one DerivedLocalManifoldQMO.
+
+EMERGENT COUPLING
+
+M_i + M_j → M_i + M_j + E
+
+when mathematically admitted.
+
+The support manifolds remain.
+
+E is not independently targetable and depends upon its supports.
+
+The mathematical API distinguishes:
+
+VALID
+TERMINATES
+NOT_APPLICABLE
+OPEN
+UNTESTED
+
+Missing data is NOT automatically mathematical termination.
+
+======================================================================
+18. UTILITIES — CURRENT DESIGN STATE
+======================================================================
+
+Record the accepted Cycle-1 Utility domain allocation:
+
+18 Transduction
+7 Activation / Tempo
+6 Sandbox / Geometry
+7 Draw / Deck
+6 Graveyard / Recovery
+6 Stability / Protection
+
+Total:
+
+50
+
+Direct color effects generally align rank and magnitude.
+
+Examples:
+
+Restore Yellow:
+rank Yellow
+magnitude +3
+
+Degrade Violet:
+rank Violet
+magnitude -6
+
+Universal Restore-or-Degrade effects trade magnitude for flexibility.
+
+The exact 50-card catalog remains:
+
+OPEN — ACTIVE DESIGN
+
+======================================================================
+19. BLACK RANK
+======================================================================
+
+Record:
+
+Black = 8.
+
+Black cards may legally appear in ordinary decks.
+
+Black cards are extremely difficult/expensive endgame crafted cards.
+
+There are NO Black Field Generator cards.
+
+There are exactly three Black Prime identities.
+
+Black Utilities exist.
+
+A legal all-Black 60-card deck is:
+
+3 Black Primes
+57 Black Utilities
+
+A legal all-Black deck unlocks hidden Black Mode.
+
+While all three Black Primes remain alive:
+
+FourthPrimeAvailable = true
+
+The Fourth Prime is an emergent/supported Prime, not a fourth deck card.
+
+If any supporting Black Prime dies:
+
+FourthPrimeAvailable = false
+
+Detailed Fourth Prime behavior remains OPEN.
+
+======================================================================
+20. RENDERING PIPELINE
+======================================================================
+
+Document and prepare boundaries for:
+
+QMO
+→ deterministic RenderSpec
+→ Blender procedural geometry
+→ mesh
+→ runtime GPU renderer
+→ animated manifold
+
+The mathematics defines the object.
+
+Rendering makes the object visible.
+
+The current production direction includes Blender for mesh generation and a GPU
+runtime for live effects.
+
+Do not fabricate RenderSpecs during bootstrap.
+
+Existing RenderSpec/API packages will be imported later.
+
+======================================================================
+21. PLATFORM
+======================================================================
+
+Create:
+
+platform/
+├── README.md
+├── shared/
+├── windows/
+└── ipados/
+
+Initial development priority:
+
+WINDOWS DESKTOP
+
+Secondary intended target:
+
+iPad / iPadOS
+
+Do not implement either platform during bootstrap.
+
+Architecture should avoid unnecessary platform coupling.
+
+======================================================================
+22. BUILDS
+======================================================================
+
+Create:
+
+development/builds/
+├── README.md
+├── prototype/
+├── development/
+├── nightly/
+├── alpha/
+├── beta/
+└── release-candidate/
+
+These directories describe build channels.
+
+Do not commit compiled binaries unless project policy later explicitly permits it.
+
+======================================================================
+23. VERTICAL SLICE
+======================================================================
+
+Create:
+
+production/03_vertical_slice/EXIT_CRITERIA.md
+
+Use these initial vertical-slice targets:
+
+- application launches
+- complete match can run from start to victory/loss
+- legal deck can be loaded
+- turn loop functions
+- three permanent Sandboxes function
+- Field Generator placement functions
+- representative QMO closure functions
+- at least one Red/Orange/Yellow manifold path functions
+- Prime activation/transduction functions
+- representative Utility cards function
+- representative fusion or emergent relationship functions
+- AI opponent can complete a match
+- representative manifold rendering functions
+- basic UI functions
+- save/load functions
+- automated regression tests cover the slice
+
+These are INITIAL exit criteria and may be amended.
+
+Do not mark the Vertical Slice complete during bootstrap.
+
+======================================================================
+24. TOOLS
+======================================================================
+
+Create:
+
+tools/
+├── README.md
+├── validators/
+├── generators/
+├── qmo/
+├── blender/
+├── rendering/
+├── data/
+└── provenance/
+
+Only implement bootstrap/repository validation now.
+
+Future tooling may include:
+
+QMO generators
+Cycle generators
+card generators
+RenderSpec exporters
+Blender automation
+schema validators
+balance tooling
+
+======================================================================
+25. TESTING
+======================================================================
+
+Create:
+
+tests/
+├── README.md
+├── unit/
+├── integration/
+├── regression/
+├── gameplay/
+├── qmo/
+├── rendering/
+├── multiplayer/
+├── adversarial/
+└── performance/
+
+Do not create fake passing tests for unimplemented systems.
+
+Bootstrap tests validate repository structure and known arithmetic/invariants only.
+
+======================================================================
+26. PROVENANCE
+======================================================================
+
+Create:
+
+provenance/
+├── README.md
+├── decisions/
+├── sources/
+├── checkpoints/
+└── audits/
+
+Create:
+
+provenance/decisions/0001-repository-bootstrap.md
+
+Record:
+
+- bootstrap purpose
+- production architecture
+- repository boundaries
+- GitHub canonical-state rule
+- inbox rule
+- current production phase
+- accepted high-level raeon invariants
+- SOURCE_IMPORT_REQUIRED areas
+- OPEN areas
+- intentionally unimplemented systems
+
+Create:
+
+provenance/audits/bootstrap-inventory.md
+
+and a machine-readable inventory manifest.
+
+Create a bootstrap checkpoint record.
+
+======================================================================
+27. AUTHORITY LABELS
+======================================================================
+
+Use consistently:
+
+CANON
+accepted raeon project state
+
+GAME_CANON
+accepted raeon-specific game/math rule
+
+SOURCE_IMPORT_REQUIRED
+accepted artifact exists but is not yet imported
+
+PROVISIONAL
+working state
+
+OPEN
+unresolved
+
+UNTESTED
+not validated
+
+TERMINATES
+explicit mathematical failure
+
+NOT_APPLICABLE
+gate/query does not apply
+
+Never silently promote OPEN to CANON.
+
+======================================================================
+28. BOOTSTRAP VALIDATOR
+======================================================================
+
+Implement:
+
+tools/validators/validate-bootstrap.mjs
+
+Validate at minimum:
+
+- root architecture exists
+- production phases exist
+- required development modules exist
+- required data boundaries exist
+- required platform boundaries exist
+- provenance bootstrap records exist
+- _inbox is gitignored
+- no _inbox content is tracked
+- Cycle arithmetic:
+    120 + 30 + 50 = 200
+- Utility allocation:
+    18 + 7 + 6 + 7 + 6 + 6 = 50
+- base manifolds:
+    15 + 13 + 11 + 9 + 7 + 5 = 60
+- closed-QMO accepted inventory:
+    60 + 343 + 1691 = 2094
+- Black Field Generators are prohibited
+- all-Black deck composition:
+    3 + 57 = 60
+- current production phase is PREPRODUCTION
+- Vertical Slice is NOT marked complete
+
+The validator validates repository/bootstrap invariants only.
+
+It must explicitly state that it does NOT validate:
+
+- Genesis mathematics
+- Chirality mathematics
+- QMO closure correctness
+- gameplay balance
+- Blender geometry
+- GPU rendering
+- multiplayer correctness
+- AI correctness
+
+======================================================================
+29. CONTRIBUTING WORKFLOW
+======================================================================
+
+Document this workflow in CONTRIBUTING.md:
+
+_inbox
+→ classify
+→ source/provenance record
+→ development branch
+→ appropriate module pipeline
+→ implementation/documentation/data
+→ tests
+→ integration
+→ checkpoint
+→ accepted canonical Git state
+
+Chat threads and Codex sessions are workspaces.
+
+They are NOT canonical storage.
+
+The Git repository is canonical storage.
+
+======================================================================
+30. BOOTSTRAP EXECUTION RULES
+======================================================================
+
+Do not merely print the proposed tree.
+
+ACTUALLY CREATE the repository structure and files.
+
+Work on a bootstrap branch.
+
+Do not overwrite existing meaningful project material without first inspecting it.
+
+If the repository contains only an empty/bootstrap placeholder, preserve anything
+useful and build around it.
+
+Do not invent missing mathematics or card definitions.
+
+Do not create speculative gameplay implementation.
+
+Use concise README placeholders rather than fake implementation.
+
+Run the bootstrap validator.
+
+Inspect git status.
+
+Commit the completed bootstrap.
+
+Do not merge to main unless the environment/workflow explicitly authorizes that
+operation.
+
+======================================================================
+31. FINAL REPORT
+======================================================================
+
+At completion report:
+
+1. branch name
+2. commit SHA
+3. number of files created
+4. repository tree summary
+5. bootstrap validator result
+6. current production phase
+7. SOURCE_IMPORT_REQUIRED items
+8. OPEN items
+9. intentionally unimplemented systems
+10. any conflicts or pre-existing files encountered
