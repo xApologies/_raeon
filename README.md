@@ -36,13 +36,20 @@ Use the [cross-layer authority map](data/manifests/authority-map.json) to naviga
 node tools/validators/validate-bootstrap.mjs
 node tools/validators/validate-design-state.mjs
 node tools/validators/validate-normalization.mjs
+node tools/validators/validate-continuity.mjs
+node tools/validators/validate-cycle1-import.mjs
 node --test tests/regression/*.test.mjs
 ```
 
-Node and Git required. Checks verify structure, preserved design data, migration and provenance; they do not validate QMO mathematics, gameplay balance, final timing, rendering, AI or multiplayer correctness. No game launch command exists.
+Node 24+ and Git required; Git LFS hydrates the preserved Propagation research archive. Checks verify structure, preserved design data, migration and provenance; they do not validate QMO mathematics, gameplay balance, final timing, rendering, AI or multiplayer correctness. No game launch command exists.
 
 ## Continue from current state
 
 Start with [Genesis Horizon board](design/game/board/SYSTEM.md), [Field Generator configuration](design/topology/field_generators/SYSTEM.md), [foundational backlog](development/FOUNDATIONAL_BACKLOG.md), and [Propagation source boundary](mathematics/propagation/README.md). The originating-thread material is reconciled in the [continuity audit](provenance/audits/final-continuity-import.md). Mathematical integration and gameplay remain unimplemented. Git LFS retrieves the full source archive; readable current specifications and key source extracts are ordinary Git files.
 
 Continuity verification: `node tools/validators/validate-continuity.mjs` checks recovered structure and source integrity, not external mathematics.
+
+
+## Recovered original Cycle-1 data
+
+The four original source archives, 120 FG records, complete 2,094-object atlas, all 1,770 base-pair relations, compatibility, Cycle Generation Constitution and 60 base RenderSpecs are now in Git. Start with [queries and data paths](data/qmo/README.md), [import audit](provenance/audits/cycle1-source-import.md) and [Live Model reconciliation](provenance/decisions/cycle1-source-import.md). Newer game design remains authoritative. No Cycle-1 mathematics was regenerated or fabricated; gameplay remains unimplemented.

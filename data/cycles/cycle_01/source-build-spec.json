@@ -1,0 +1,53 @@
+{
+  "cycle_template_version": "1.0",
+  "cycle_id": "REPLACE_ME",
+  "card_counts": {
+    "field_generators": 120,
+    "primes": 30,
+    "utilities": 50
+  },
+  "deck_size": 60,
+  "base_manifold_distribution": {
+    "RED": {
+      "generator_count": 3,
+      "manifolds": 15
+    },
+    "ORANGE": {
+      "generator_count": 4,
+      "manifolds": 13
+    },
+    "YELLOW": {
+      "generator_count": 5,
+      "manifolds": 11
+    },
+    "GREEN": {
+      "generator_count": 6,
+      "manifolds": 9
+    },
+    "BLUE": {
+      "generator_count": 7,
+      "manifolds": 7
+    },
+    "VIOLET": {
+      "generator_count": 8,
+      "manifolds": 5
+    }
+  },
+  "byte": {
+    "sites": 8,
+    "cradle": 4,
+    "void": 4,
+    "geometry": "2x2x2"
+  },
+  "required_outputs": [
+    "qmo.sqlite",
+    "field_generators.json",
+    "base_manifolds.json",
+    "pair_relations.json",
+    "derived_qmos.json",
+    "render_specs/",
+    "CANON_LOCK.json",
+    "MANIFEST.json",
+    "TEST_RESULTS.txt"
+  ]
+}

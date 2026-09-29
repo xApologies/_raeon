@@ -1,0 +1,31 @@
+{
+  "base_manifolds": 60,
+  "pair_space": 1770,
+  "fusion_status_counts": {
+    "TERMINATES": 825,
+    "NOT_APPLICABLE": 602,
+    "VALID": 343
+  },
+  "fusion_color_counts": {
+    "VIOLET": 169,
+    "BLUE": 120,
+    "GREEN": 54
+  },
+  "emergent_status_counts": {
+    "VALID": 1691,
+    "TERMINATES": 79
+  },
+  "emergent_color_counts": {
+    "BLUE": 318,
+    "VIOLET": 499,
+    "GREEN": 362,
+    "YELLOW": 237,
+    "ORANGE": 214,
+    "RED": 61
+  },
+  "derived_qmos": 2034,
+  "red_yellow_pairs": 165,
+  "red_yellow_fusion_valid": 111,
+  "red_yellow_fusion_terminates": 9,
+  "red_yellow_fusion_not_applicable": 45
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 428,
+    "sha256": "25019537a06cd2e101f4be7aad34079446655c3bef79eefd1f17a691e1f57e35"
+  },
+  {
+    "path": "api/qmo_api.py",
+    "bytes": 1985,
+    "sha256": "af15ade46729ecf35cd3fda8f44a60bb7b78e8f7cb62fdec5496af9103fdaa4f"
+  },
+  {
+    "path": "data/compatibility_edges.json",
+    "bytes": 451004,
+    "sha256": "0f7aa8b8097757a9e38724ea0f016926a6344ef71451c9f4686f63770df9d0bc"
+  },
+  {
+    "path": "data/field_generators.csv",
+    "bytes": 9254,
+    "sha256": "0cd327a27d8a7f380b29231b36e2bc62790c0db2564a3731a329c784f034b65a"
+  },
+  {
+    "path": "data/field_generators.json",
+    "bytes": 178108,
+    "sha256": "c8bd56021e95d80ffb677e31f69a864f4ff02bf6db97304edba9dfe8fa879e62"
+  },
+  {
+    "path": "data/manifolds.json",
+    "bytes": 28985,
+    "sha256": "d8c66b09e7f98e32e0d937afa231a99e15b3fb3924fcfd0546eebdec1eb2cde2"
+  },
+  {
+    "path": "database/RAEON_QMO_v0_2.sqlite",
+    "bytes": 1708032,
+    "sha256": "cb04ae7795dd6dfe4b4f94d0a2ca13ad08cb76e4c933064193abe05a6223ce7d"
+  },
+  {
+    "path": "docs/MATHEMATICAL_DESIGN.md",
+    "bytes": 1287,
+    "sha256": "16cc9832621536e5caaca3037f08ac028377433310424adb72d237fc541aeab3"
+  },
+  {
+    "path": "docs/QMO_SCHEMA.md",
+    "bytes": 421,
+    "sha256": "6936fc45763f0fd338a954791f411e814190d1df5ba25b1ef24830e7675217d8"
+  },
+  {
+    "path": "examples/query_fg001.py",
+    "bytes": 270,
+    "sha256": "86ed269934a0b84590871bed41a466f559e9c0d806d5abee3702e05e385f2700"
+  },
+  {
+    "path": "machine/LIVE_STATE.json",
+    "bytes": 1174,
+    "sha256": "bb344608f992a328be47886ff4adc991ff23e2813b8965ae9f171c172fc1da3f"
+  },
+  {
+    "path": "provenance/AUTHORITY.md",
+    "bytes": 553,
+    "sha256": "1186b1e1b230c28a1feb791833643e1770b8f22678701c6807b9f55a96d176b6"
+  },
+  {
+    "path": "tests/TEST_RESULTS.txt",
+    "bytes": 1547,
+    "sha256": "80870913465f185386cedd60ad3603aab90e3de59f051b494b1765e68239ecf1"
+  },
+  {
+    "path": "tests/__pycache__/test_qmo.cpython-313.pyc",
+    "bytes": 4180,
+    "sha256": "8a5196b708de2930461710f0aa633974126c62c9a8800eb8043977a0bbd8f83f"
+  },
+  {
+    "path": "tests/test_qmo.py",
+    "bytes": 1507,
+    "sha256": "4b27babf679b2afd6f5ba729fd0114d4d62d474aef6bae56915495c04544a40d"
+  }
+]

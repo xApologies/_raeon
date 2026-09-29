@@ -1,0 +1,44 @@
+{
+  "package": "RAEON_AUTHORITATIVE_CYCLE1_IMPORT",
+  "target": "xApologies/_raeon",
+  "branch": "main",
+  "files": [
+    {
+      "path": "00_READ_ME_FIRST.md",
+      "bytes": 1130,
+      "sha256": "52ee019c08bc22829d1ef0728075460bcf55fa99c9a4a5f8e51b3bc6e7228a77"
+    },
+    {
+      "path": "CODEX_IMPORT_DIRECTIVE.md",
+      "bytes": 8507,
+      "sha256": "2b8ef099df76aa04fde87638cd1a9a72b43723b17b752fd54385a52eede13619"
+    },
+    {
+      "path": "RECOVERED_ARTIFACT_MAP.md",
+      "bytes": 1484,
+      "sha256": "02d9c0726217debda9da70815a675adb06c2293a972651804f19eadc38d9846b"
+    },
+    {
+      "path": "authoritative_sources/RAEON_CLOSED_PLAYFIELD_API_v1_0.zip",
+      "bytes": 923446,
+      "sha256": "18282091bffbf8ae51a600f23a359e0a0d13f3109287db6e80fbabf3253d266e"
+    },
+    {
+      "path": "authoritative_sources/RAEON_COMPLETE_QMO_ATLAS_CYCLE1.zip",
+      "bytes": 146158,
+      "sha256": "abc2b1e18f58b77184483923b0bbccc11886462f1cd6d7bdc5b73b044792ebcd"
+    },
+    {
+      "path": "authoritative_sources/RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0.zip",
+      "bytes": 4253698,
+      "sha256": "5e39897b70a52e0cdf5a74f80cece2cc6eae69cb880c0f50f06aebd0cd63cc9c"
+    },
+    {
+      "path": "authoritative_sources/RAEON_LIVE_MODEL_v0_1_2026-09-13.zip",
+      "bytes": 2850206,
+      "sha256": "ba5758c7ab5fc9a6e1f9c634f8a0ac82432344bbf7234b601093f721978d3edf"
+    }
+  ],
+  "file_count": 7,
+  "total_bytes": 8184629
+}

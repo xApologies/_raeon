@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "raeon.render_spec.v0.3",
+  "type": "object",
+  "required": [
+    "schema",
+    "qmo_address",
+    "manifold_id",
+    "native_color",
+    "anchors",
+    "spline_edges",
+    "animation"
+  ],
+  "properties": {
+    "schema": {
+      "const": "raeon.render_spec.v0.3"
+    },
+    "qmo_address": {
+      "type": "string"
+    },
+    "manifold_id": {
+      "type": "string"
+    },
+    "native_color": {
+      "enum": [
+        "RED",
+        "ORANGE",
+        "YELLOW",
+        "GREEN",
+        "BLUE",
+        "VIOLET",
+        "WHITE"
+      ]
+    },
+    "anchors": {
+      "type": "array"
+    },
+    "spline_edges": {
+      "type": "array"
+    },
+    "animation": {
+      "type": "object"
+    }
+  }
+}

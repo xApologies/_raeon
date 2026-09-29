@@ -1,0 +1,13 @@
+Use the supplied raeon Cycle API as mathematical authority.
+
+For every requested QMO:
+1. Resolve the QMO.
+2. Resolve its deterministic RenderSpec.
+3. Build the mesh from the RenderSpec.
+4. Preserve the QMO address in asset metadata.
+5. Do not invent topology outside the RenderSpec.
+6. Export the mesh in the selected Apple-compatible production format.
+7. Record build logs and asset hashes.
+
+The QMO defines the object.
+Blender makes that object visible.

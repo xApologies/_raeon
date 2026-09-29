@@ -1,4 +1,5 @@
 import {test} from 'node:test';
+import {projectBeforeCycle1Import} from '../../tools/validators/cycle1-status.mjs';
 import {copyFixtureFile} from './fixture-files.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -11,7 +12,7 @@ import {validateNormalization} from '../../tools/validators/validate-normalizati
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const read=(dir,p)=>JSON.parse(fs.readFileSync(path.join(dir,p),'utf8'));
 function edit(dir,p,fn){const value=read(dir,p);fn(value);fs.writeFileSync(path.join(dir,p),JSON.stringify(value));}
-test('normalized state preserves every checkpoint-0003 value',()=>{const actual=loadDesignState(root),expected=read(root,'provenance/audits/0004-before-state.json');actual.schema_version=expected.schema_version;actual.current_design_checkpoint=expected.current_design_checkpoint;assert.deepEqual(actual,expected);});
+test('normalized state preserves checkpoint-0003 gameplay with explicit source-availability migration',()=>{const actual=projectBeforeCycle1Import(loadDesignState(root)),expected=read(root,'provenance/audits/0004-before-state.json');actual.schema_version=expected.schema_version;actual.current_design_checkpoint=expected.current_design_checkpoint;assert.deepEqual(actual,expected);});
 const cases=[
  ['accepts normalized repository',()=>{},null],
  ['rejects fabricated QMO source objects',d=>edit(d,'data/qmo/fusion/status.json',v=>v.objects=[{id:'invented'}]),'Unfabricated source/catalog boundary'],

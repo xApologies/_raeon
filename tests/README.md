@@ -6,6 +6,8 @@ Repository validators are implemented; game-system tests remain UNTESTED boundar
 node tools/validators/validate-bootstrap.mjs
 node tools/validators/validate-design-state.mjs
 node tools/validators/validate-normalization.mjs
+node tools/validators/validate-continuity.mjs
+node tools/validators/validate-cycle1-import.mjs
 node --test tests/regression/*.test.mjs
 ```
 

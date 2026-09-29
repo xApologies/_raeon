@@ -1,6 +1,6 @@
 # tools
 
-Repository/bootstrap validation only today. Future generators/exporters require authoritative sources and approved interfaces.
+Repository/source validation and read-only [Cycle-1 catalog queries](qmo/README.md) are available. Recovered generation/render references remain source snapshots; game runtime and future generators/exporters require reviewed implementation and integration.
 
 Status: OPEN — intentionally reserved; no implementation or completion claimed.
 

@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-28",
+  "starting_main": "2e81478055483f1b86abff278b3cbc9109e61c9d",
+  "origin": "Recovered original Cycle-1 artifacts supplied by user",
+  "permission": "Explicit user instruction to preserve sources and normalize actual contents into canonical main",
+  "source_version_date": "v1.0 locked Cycle-1 / Live Model v0.1 / Constitution v1.0, 2026-09-13",
+  "archives": [
+    {
+      "file": "RAEON_CLOSED_PLAYFIELD_API_v1_0.zip",
+      "bytes": 923446,
+      "sha256": "18282091bffbf8ae51a600f23a359e0a0d13f3109287db6e80fbabf3253d266e",
+      "path": "provenance/sources/cycle1-originals/authoritative_sources/RAEON_CLOSED_PLAYFIELD_API_v1_0.zip"
+    },
+    {
+      "file": "RAEON_COMPLETE_QMO_ATLAS_CYCLE1.zip",
+      "bytes": 146158,
+      "sha256": "abc2b1e18f58b77184483923b0bbccc11886462f1cd6d7bdc5b73b044792ebcd",
+      "path": "provenance/sources/cycle1-originals/authoritative_sources/RAEON_COMPLETE_QMO_ATLAS_CYCLE1.zip"
+    },
+    {
+      "file": "RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0.zip",
+      "bytes": 4253698,
+      "sha256": "5e39897b70a52e0cdf5a74f80cece2cc6eae69cb880c0f50f06aebd0cd63cc9c",
+      "path": "provenance/sources/cycle1-originals/authoritative_sources/RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0.zip"
+    },
+    {
+      "file": "RAEON_LIVE_MODEL_v0_1_2026-09-13.zip",
+      "bytes": 2850206,
+      "sha256": "ba5758c7ab5fc9a6e1f9c634f8a0ac82432344bbf7234b601093f721978d3edf",
+      "path": "provenance/sources/cycle1-originals/authoritative_sources/RAEON_LIVE_MODEL_v0_1_2026-09-13.zip"
+    }
+  ],
+  "outer_manifest": "all 7 listed files match",
+  "source_tests": {
+    "qmo": 6,
+    "closure": 6,
+    "render": 4,
+    "failed": 0,
+    "historical_live_model": 8
+  },
+  "regenerated_cycle1": false,
+  "internal_manifest_policy": "Latest locked manifests match. Earlier version manifests remain historical and are not rewritten. See internal-manifest-results.json."
+}

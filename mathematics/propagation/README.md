@@ -1,6 +1,6 @@
 # Propagation source boundary
 
-The supplied v8 source is IMPORTED AS SOURCE EVIDENCE. raeon integration/closure validity remains UNTESTED; missing raeon-specific operators and catalogs remain SOURCE_IMPORT_REQUIRED. This is not executable game implementation.
+The supplied v8 source is IMPORTED AS SOURCE EVIDENCE. raeon integration/closure validity remains UNTESTED; broader missing raeon-specific operators remain SOURCE_IMPORT_REQUIRED; the separately recovered Cycle-1 catalog is now imported. This is not executable game implementation.
 
 Read [canonical source continuity](source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/state/CANONICAL_FULL_CONTINUITY.md), [source API](source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/api/qmo_api.py), [SQLite source database](source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/database/PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8.sqlite), [live state](source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/machine/LIVE_STATE.json), [chronology](source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/provenance/CHRONOLOGY.json), [run receipts](source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/provenance/RUN_RECEIPTS.json) and [import receipt](../../provenance/sources/final-continuity/receipt.json).
 

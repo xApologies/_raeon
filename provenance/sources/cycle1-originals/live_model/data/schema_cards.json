@@ -1,0 +1,127 @@
+[
+  {
+    "id": "SC-000",
+    "name": "Cycle",
+    "status": "ESTABLISHED",
+    "state": {
+      "unique_cards": 200,
+      "field_generators": 120,
+      "primes": 30,
+      "utilities": 50
+    }
+  },
+  {
+    "id": "SC-001",
+    "name": "ConstructedDeck",
+    "status": "ESTABLISHED",
+    "state": {
+      "cards": 60,
+      "field_generator_copy_limit": 2,
+      "utility_copy_limit": 3,
+      "forced_class_ratio": null
+    }
+  },
+  {
+    "id": "SC-010",
+    "name": "FieldGenerator",
+    "status": "PARTIAL",
+    "state": {
+      "pose": [
+        "x",
+        "y",
+        "theta_degrees"
+      ],
+      "committed_to_sandbox": true,
+      "connection_signature": "OPEN",
+      "chirality": "OPEN",
+      "topology_memberships": "OPEN"
+    }
+  },
+  {
+    "id": "SC-020",
+    "name": "SandboxDomain",
+    "status": "PARTIAL",
+    "state": {
+      "base_count": 3,
+      "base_permanent": true,
+      "extra_possible": true,
+      "merge_allowed": true,
+      "individual_generator_extraction": false
+    }
+  },
+  {
+    "id": "SC-030",
+    "name": "LocalManifold",
+    "status": "PARTIAL",
+    "state": {
+      "generator_count_min": 3,
+      "generator_count_max": 8,
+      "color_from_count": {
+        "3": "RED",
+        "4": "ORANGE",
+        "5": "YELLOW",
+        "6": "GREEN",
+        "7": "BLUE",
+        "8": "VIOLET"
+      },
+      "targetable": true,
+      "collapse_to_graveyard": true
+    }
+  },
+  {
+    "id": "SC-040",
+    "name": "EmergentField",
+    "status": "PARTIAL",
+    "state": {
+      "supported_by_active_manifolds": true,
+      "direct_targeting": false,
+      "exact_relation_rules": "OPEN"
+    }
+  },
+  {
+    "id": "SC-050",
+    "name": "PrimeField",
+    "status": "PARTIAL",
+    "state": {
+      "active_slots": 3,
+      "unique": true,
+      "health_min": "YELLOW",
+      "health_max": "WHITE",
+      "shield_spendable": true,
+      "directionality": [
+        "RESTORE",
+        "DEGRADE",
+        "HYBRID"
+      ]
+    }
+  },
+  {
+    "id": "SC-060",
+    "name": "Utility",
+    "status": "OPEN",
+    "state": {
+      "unique_cards": 50,
+      "copy_limit": 3,
+      "exact_catalog": "OPEN"
+    }
+  },
+  {
+    "id": "SC-070",
+    "name": "Hand",
+    "status": "PARTIAL",
+    "state": {
+      "limit": "OPEN_5_TO_7_RANGE",
+      "overflow_to_graveyard": true
+    }
+  },
+  {
+    "id": "SC-080",
+    "name": "Journey",
+    "status": "PARTIAL",
+    "state": {
+      "profiles": 3,
+      "collection_progression": "offline/gameplay credits",
+      "adaptive_ai_goal": true
+    }
+  }
+]

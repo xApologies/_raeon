@@ -3,12 +3,12 @@
   "design": "design/topology/manifolds/SYSTEM.md",
   "values": {
     "qmo_inventory": {
-      "status": "SOURCE_IMPORT_REQUIRED",
+      "status": "IMPORTED_VALIDATED",
       "base_local_manifolds": 60,
       "fusion_derived_local_manifolds": 343,
       "emergent_fields": 1691,
       "total_render_relevant": 2094,
-      "objects_imported": false
+      "objects_imported": true
     },
     "mathematical_api": {
       "outcomes": [
@@ -20,5 +20,8 @@
       ],
       "missing_data_is_termination": false
     }
-  }
+  },
+  "atlas_ref": "data/qmo/cycle1/atlas.json",
+  "database_ref": "data/qmo/cycle1/qmo.sqlite",
+  "pair_relations_ref": "data/qmo/cycle1/manifold_pair_relations.json"
 }

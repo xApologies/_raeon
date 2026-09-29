@@ -1,9 +1,5 @@
-# mathematics/closure
+# Closure source authority
 
-closure authoritative mathematical sources boundary.
+Cycle-1 catalog closure is IMPORTED_VALIDATED: [locked source formalism](CYCLE1_CLOSED_PLAYFIELD.md), [1,770 pair records](../../data/qmo/cycle1/manifold_pair_relations.json), and [compatibility](../../data/qmo/generators/compatibility.json). Base records preserve their source connected/cycle-bearing closure criterion; 343 fusion results preserve detailed closure metadata.
 
-Status: SOURCE_IMPORT_REQUIRED.
-
-Accepted authoritative artifacts exist externally and await inspected, validated import through _inbox. Do not reconstruct missing definitions or fabricate objects.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+Pair outcomes remain VALID, TERMINATES and NOT_APPLICABLE as supplied; the repository also retains OPEN and UNTESTED for unresolved work. An absent query returns OPEN. A source shared-identity restriction must not silently decide physical-copy instance behavior. Broader operators and runtime admission remain SOURCE_IMPORT_REQUIRED/OPEN. See [reconciliation](../../provenance/decisions/cycle1-source-import.md).

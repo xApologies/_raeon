@@ -1,0 +1,1077 @@
+[
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-01",
+    "manifold_id": "M-R-01",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-001",
+      "FG-044",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-02",
+    "manifold_id": "M-R-02",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-011",
+      "FG-044",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-03",
+    "manifold_id": "M-R-03",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-014",
+      "FG-022",
+      "FG-053"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-04",
+    "manifold_id": "M-R-04",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-034",
+      "FG-044",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-05",
+    "manifold_id": "M-R-05",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-030",
+      "FG-047",
+      "FG-106"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-06",
+    "manifold_id": "M-R-06",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-044",
+      "FG-061",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-07",
+    "manifold_id": "M-R-07",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-039",
+      "FG-076",
+      "FG-100"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-08",
+    "manifold_id": "M-R-08",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-039",
+      "FG-092",
+      "FG-100"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-09",
+    "manifold_id": "M-R-09",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-030",
+      "FG-047",
+      "FG-109"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-10",
+    "manifold_id": "M-R-10",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-007",
+      "FG-044",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-11",
+    "manifold_id": "M-R-11",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-026",
+      "FG-044",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-12",
+    "manifold_id": "M-R-12",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-009",
+      "FG-026",
+      "FG-046"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-13",
+    "manifold_id": "M-R-13",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-030",
+      "FG-047",
+      "FG-067"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-14",
+    "manifold_id": "M-R-14",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-039",
+      "FG-089",
+      "FG-100"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-r-15",
+    "manifold_id": "M-R-15",
+    "type": "LocalManifoldQMO",
+    "native_color": "RED",
+    "generator_count": 3,
+    "generators": [
+      "FG-044",
+      "FG-112",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 3,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-o-01",
+    "manifold_id": "M-O-01",
+    "type": "LocalManifoldQMO",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "generators": [
+      "FG-016",
+      "FG-032",
+      "FG-042",
+      "FG-053"
+    ],
+    "induced_compatibility_edges": 6,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-o-02",
+    "manifold_id": "M-O-02",
+    "type": "LocalManifoldQMO",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "generators": [
+      "FG-027",
+      "FG-044",
+      "FG-060",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 6,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-o-03",
+    "manifold_id": "M-O-03",
+    "type": "LocalManifoldQMO",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "generators": [
+      "FG-039",
+      "FG-053",
+      "FG-100",
+      "FG-114"
+    ],
+    "induced_compatibility_edges": 6,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-o-04",
+    "manifold_id": "M-O-04",
+    "type": "LocalManifoldQMO",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "generators": [
+      "FG-022",
+      "FG-052",
+      "FG-060",
+      "FG-099"
+    ],
+    "induced_compatibility_edges": 6,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-o-05",
+    "manifold_id": "M-O-05",
+    "type": "LocalManifoldQMO",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "generators": [
+      "FG-039",
+      "FG-066",
+      "FG-100",
+      "FG-114"
+    ],
+    "induced_compatibility_edges": 6,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-o-06",
+    "manifold_id": "M-O-06",
+    "type": "LocalManifoldQMO",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "generators": [
+      "FG-036",
+      "FG-044",
+      "FG-081",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 6,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-o-07",
+    "manifold_id": "M-O-07",
+    "type": "LocalManifoldQMO",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "generators": [
+      "FG-014",
+      "FG-053",
+      "FG-097",
+      "FG-105"
+    ],
+    "induced_compatibility_edges": 6,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-o-08",
+    "manifold_id": "M-O-08",
+    "type": "LocalManifoldQMO",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "generators": [
+      "FG-030",
+      "FG-047",
+      "FG-106",
+      "FG-115"
+    ],
+    "induced_compatibility_edges": 6,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-o-09",
+    "manifold_id": "M-O-09",
+    "type": "LocalManifoldQMO",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "generators": [
+      "FG-012",
+      "FG-036",
+      "FG-044",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 6,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-o-10",
+    "manifold_id": "M-O-10",
+    "type": "LocalManifoldQMO",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "generators": [
+      "FG-009",
+      "FG-026",
+      "FG-031",
+      "FG-050"
+    ],
+    "induced_compatibility_edges": 6,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-o-11",
+    "manifold_id": "M-O-11",
+    "type": "LocalManifoldQMO",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "generators": [
+      "FG-036",
+      "FG-044",
+      "FG-051",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 6,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-o-12",
+    "manifold_id": "M-O-12",
+    "type": "LocalManifoldQMO",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "generators": [
+      "FG-036",
+      "FG-044",
+      "FG-072",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 6,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-o-13",
+    "manifold_id": "M-O-13",
+    "type": "LocalManifoldQMO",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "generators": [
+      "FG-009",
+      "FG-026",
+      "FG-032",
+      "FG-094"
+    ],
+    "induced_compatibility_edges": 6,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-y-01",
+    "manifold_id": "M-Y-01",
+    "type": "LocalManifoldQMO",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "generators": [
+      "FG-009",
+      "FG-026",
+      "FG-036",
+      "FG-044",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 10,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-y-02",
+    "manifold_id": "M-Y-02",
+    "type": "LocalManifoldQMO",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "generators": [
+      "FG-009",
+      "FG-010",
+      "FG-039",
+      "FG-100",
+      "FG-114"
+    ],
+    "induced_compatibility_edges": 10,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-y-03",
+    "manifold_id": "M-Y-03",
+    "type": "LocalManifoldQMO",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "generators": [
+      "FG-014",
+      "FG-022",
+      "FG-053",
+      "FG-105",
+      "FG-115"
+    ],
+    "induced_compatibility_edges": 10,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-y-04",
+    "manifold_id": "M-Y-04",
+    "type": "LocalManifoldQMO",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "generators": [
+      "FG-009",
+      "FG-026",
+      "FG-032",
+      "FG-037",
+      "FG-103"
+    ],
+    "induced_compatibility_edges": 10,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-y-05",
+    "manifold_id": "M-Y-05",
+    "type": "LocalManifoldQMO",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "generators": [
+      "FG-036",
+      "FG-044",
+      "FG-051",
+      "FG-060",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 10,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-y-06",
+    "manifold_id": "M-Y-06",
+    "type": "LocalManifoldQMO",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "generators": [
+      "FG-030",
+      "FG-047",
+      "FG-067",
+      "FG-106",
+      "FG-109"
+    ],
+    "induced_compatibility_edges": 10,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-y-07",
+    "manifold_id": "M-Y-07",
+    "type": "LocalManifoldQMO",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "generators": [
+      "FG-036",
+      "FG-044",
+      "FG-060",
+      "FG-084",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 10,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-y-08",
+    "manifold_id": "M-Y-08",
+    "type": "LocalManifoldQMO",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "generators": [
+      "FG-039",
+      "FG-053",
+      "FG-100",
+      "FG-102",
+      "FG-114"
+    ],
+    "induced_compatibility_edges": 10,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-y-09",
+    "manifold_id": "M-Y-09",
+    "type": "LocalManifoldQMO",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "generators": [
+      "FG-001",
+      "FG-036",
+      "FG-044",
+      "FG-050",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 10,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-y-10",
+    "manifold_id": "M-Y-10",
+    "type": "LocalManifoldQMO",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "generators": [
+      "FG-021",
+      "FG-022",
+      "FG-060",
+      "FG-063",
+      "FG-099"
+    ],
+    "induced_compatibility_edges": 9,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-y-11",
+    "manifold_id": "M-Y-11",
+    "type": "LocalManifoldQMO",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "generators": [
+      "FG-032",
+      "FG-038",
+      "FG-040",
+      "FG-042",
+      "FG-053"
+    ],
+    "induced_compatibility_edges": 10,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-g-01",
+    "manifold_id": "M-G-01",
+    "type": "LocalManifoldQMO",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "generators": [
+      "FG-012",
+      "FG-036",
+      "FG-064",
+      "FG-067",
+      "FG-077",
+      "FG-086"
+    ],
+    "induced_compatibility_edges": 15,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-g-02",
+    "manifold_id": "M-G-02",
+    "type": "LocalManifoldQMO",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "generators": [
+      "FG-009",
+      "FG-026",
+      "FG-036",
+      "FG-044",
+      "FG-077",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 15,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-g-03",
+    "manifold_id": "M-G-03",
+    "type": "LocalManifoldQMO",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "generators": [
+      "FG-030",
+      "FG-032",
+      "FG-050",
+      "FG-085",
+      "FG-091",
+      "FG-096"
+    ],
+    "induced_compatibility_edges": 14,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-g-04",
+    "manifold_id": "M-G-04",
+    "type": "LocalManifoldQMO",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "generators": [
+      "FG-030",
+      "FG-032",
+      "FG-047",
+      "FG-050",
+      "FG-106",
+      "FG-109"
+    ],
+    "induced_compatibility_edges": 15,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-g-05",
+    "manifold_id": "M-G-05",
+    "type": "LocalManifoldQMO",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "generators": [
+      "FG-002",
+      "FG-009",
+      "FG-026",
+      "FG-036",
+      "FG-044",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 15,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-g-06",
+    "manifold_id": "M-G-06",
+    "type": "LocalManifoldQMO",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "generators": [
+      "FG-009",
+      "FG-019",
+      "FG-026",
+      "FG-044",
+      "FG-103",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 15,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-g-07",
+    "manifold_id": "M-G-07",
+    "type": "LocalManifoldQMO",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "generators": [
+      "FG-009",
+      "FG-026",
+      "FG-032",
+      "FG-037",
+      "FG-039",
+      "FG-103"
+    ],
+    "induced_compatibility_edges": 14,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-g-08",
+    "manifold_id": "M-G-08",
+    "type": "LocalManifoldQMO",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "generators": [
+      "FG-009",
+      "FG-026",
+      "FG-039",
+      "FG-056",
+      "FG-100",
+      "FG-114"
+    ],
+    "induced_compatibility_edges": 15,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-g-09",
+    "manifold_id": "M-G-09",
+    "type": "LocalManifoldQMO",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "generators": [
+      "FG-032",
+      "FG-039",
+      "FG-053",
+      "FG-076",
+      "FG-100",
+      "FG-114"
+    ],
+    "induced_compatibility_edges": 15,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-b-01",
+    "manifold_id": "M-B-01",
+    "type": "LocalManifoldQMO",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "generators": [
+      "FG-014",
+      "FG-034",
+      "FG-053",
+      "FG-093",
+      "FG-097",
+      "FG-105",
+      "FG-115"
+    ],
+    "induced_compatibility_edges": 21,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-b-02",
+    "manifold_id": "M-B-02",
+    "type": "LocalManifoldQMO",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "generators": [
+      "FG-017",
+      "FG-039",
+      "FG-045",
+      "FG-100",
+      "FG-111",
+      "FG-113",
+      "FG-114"
+    ],
+    "induced_compatibility_edges": 21,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-b-03",
+    "manifold_id": "M-B-03",
+    "type": "LocalManifoldQMO",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "generators": [
+      "FG-006",
+      "FG-009",
+      "FG-026",
+      "FG-036",
+      "FG-044",
+      "FG-050",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 21,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-b-04",
+    "manifold_id": "M-B-04",
+    "type": "LocalManifoldQMO",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "generators": [
+      "FG-014",
+      "FG-022",
+      "FG-034",
+      "FG-053",
+      "FG-093",
+      "FG-105",
+      "FG-115"
+    ],
+    "induced_compatibility_edges": 21,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-b-05",
+    "manifold_id": "M-B-05",
+    "type": "LocalManifoldQMO",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "generators": [
+      "FG-009",
+      "FG-026",
+      "FG-032",
+      "FG-039",
+      "FG-053",
+      "FG-100",
+      "FG-114"
+    ],
+    "induced_compatibility_edges": 21,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-b-06",
+    "manifold_id": "M-B-06",
+    "type": "LocalManifoldQMO",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "generators": [
+      "FG-032",
+      "FG-039",
+      "FG-053",
+      "FG-057",
+      "FG-100",
+      "FG-113",
+      "FG-114"
+    ],
+    "induced_compatibility_edges": 21,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-b-07",
+    "manifold_id": "M-B-07",
+    "type": "LocalManifoldQMO",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "generators": [
+      "FG-032",
+      "FG-039",
+      "FG-053",
+      "FG-076",
+      "FG-100",
+      "FG-113",
+      "FG-114"
+    ],
+    "induced_compatibility_edges": 21,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-v-01",
+    "manifold_id": "M-V-01",
+    "type": "LocalManifoldQMO",
+    "native_color": "VIOLET",
+    "generator_count": 8,
+    "generators": [
+      "FG-009",
+      "FG-026",
+      "FG-036",
+      "FG-044",
+      "FG-050",
+      "FG-085",
+      "FG-096",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 28,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-v-02",
+    "manifold_id": "M-V-02",
+    "type": "LocalManifoldQMO",
+    "native_color": "VIOLET",
+    "generator_count": 8,
+    "generators": [
+      "FG-017",
+      "FG-039",
+      "FG-045",
+      "FG-057",
+      "FG-100",
+      "FG-111",
+      "FG-113",
+      "FG-114"
+    ],
+    "induced_compatibility_edges": 28,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-v-03",
+    "manifold_id": "M-V-03",
+    "type": "LocalManifoldQMO",
+    "native_color": "VIOLET",
+    "generator_count": 8,
+    "generators": [
+      "FG-001",
+      "FG-007",
+      "FG-036",
+      "FG-044",
+      "FG-050",
+      "FG-085",
+      "FG-096",
+      "FG-117"
+    ],
+    "induced_compatibility_edges": 28,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-v-04",
+    "manifold_id": "M-V-04",
+    "type": "LocalManifoldQMO",
+    "native_color": "VIOLET",
+    "generator_count": 8,
+    "generators": [
+      "FG-007",
+      "FG-022",
+      "FG-024",
+      "FG-056",
+      "FG-060",
+      "FG-063",
+      "FG-068",
+      "FG-099"
+    ],
+    "induced_compatibility_edges": 24,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  },
+  {
+    "id": "@qmo/raeon/cycle1/manifold/m-v-05",
+    "manifold_id": "M-V-05",
+    "type": "LocalManifoldQMO",
+    "native_color": "VIOLET",
+    "generator_count": 8,
+    "generators": [
+      "FG-013",
+      "FG-027",
+      "FG-032",
+      "FG-038",
+      "FG-040",
+      "FG-042",
+      "FG-053",
+      "FG-110"
+    ],
+    "induced_compatibility_edges": 27,
+    "closure_rule": "connected/cycle-bearing compatibility subgraph in v0.2 game profile",
+    "fractal_family": "hypercubic/dyadic",
+    "status": "GAME_DERIVED_v0_2"
+  }
+]

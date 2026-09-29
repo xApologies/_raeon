@@ -4,7 +4,7 @@
 
 Authority: GAME_CANON for the established geometric role. Participating Generator geometry, not Sandbox provenance, determines topology. Mathematical closure must admit a configuration before count-based manifold color applies.
 
-Authoritative Generator geometry/QMO data and propagation/closure mathematics are SOURCE_IMPORT_REQUIRED. No geometry is reconstructed here. Card identity/rank/copy rules belong to [Field Generator cards](../../cards/cycle_01/field_generators/SYSTEM.md).
+The original [120 Generator records](../../../data/cycles/cycle_01/field_generators/objects.json) and [compatibility data](../../../data/qmo/generators/compatibility.json) are IMPORTED_VALIDATED. Broader propagation/closure mathematics and runtime admissible-state coverage remain SOURCE_IMPORT_REQUIRED/OPEN. No geometry is reconstructed here. Card identity/rank/copy rules belong to [Field Generator cards](../../cards/cycle_01/field_generators/SYSTEM.md).
 
 ## Recovered configuration interaction
 
@@ -16,4 +16,4 @@ QMO closure evaluates that configuration. VALID closure precedes count-based col
 
 A non-closing configuration remains unresolved; it does not automatically route cards to Graveyard. Exact resolved-manifold reopening and relation-check timing remain OPEN. Individual committed Generators cannot be independently extracted; whole domains may merge/fuse.
 
-[Configuration Space states](../sandbox/SYSTEM.md), [machine interaction](../../../data/cycles/cycle_01/field_generators/interaction.json), [Propagation source boundary](../../../mathematics/propagation/README.md). The supplied research does not complete the Generator catalog, admissible-state tables or raeon closure API.
+[Configuration Space states](../sandbox/SYSTEM.md), [machine interaction](../../../data/cycles/cycle_01/field_generators/interaction.json), [Propagation source boundary](../../../mathematics/propagation/README.md). The recovered Cycle-1 import supplies the Generator catalog and locked catalog closure API independently of the research source. It does not resolve broader R88 mapping or all runtime admissible-state tables.

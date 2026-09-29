@@ -2,7 +2,7 @@
 
 <!-- raeon:current-spec sandbox -->
 
-Authority: GAME_CANON for supplied high-level rules. Mathematical operators/objects remain SOURCE_IMPORT_REQUIRED.
+Authority: GAME_CANON for supplied high-level rules. The original Cycle-1 objects and catalog relations are [imported](../../../data/qmo/README.md); broader operators and runtime-instance admission remain OPEN/SOURCE_IMPORT_REQUIRED.
 
 Each player begins with 3 permanent universal Sandbox Domains; the permanent base cannot fall below three. Effects may create additional temporary domains. Committed Field Generators cannot be independently extracted and moved. Whole Sandbox Domains may participate in merge/fusion. Topology depends on participating Generator geometry, not Sandbox provenance.
 

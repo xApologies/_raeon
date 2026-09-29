@@ -29,7 +29,7 @@
     "Inter-space relation-check timing",
     "Permanent-base identity/minimum versus fused-space accounting",
     "Unspecified discard timing/other routing; Exchange still sends cards to Graveyard",
-    "Generator admitted-state/closure/RenderSpec mappings",
+    "Physical-instance/orientation transitions and Generator/derived rendering beyond recovered Cycle-1 catalog operators",
     "R88 environmental generator map",
     "All prior accepted-state OPEN items remain OPEN"
   ],
@@ -37,25 +37,20 @@
     "Genesis mathematics",
     "Chirality mathematics",
     "Propagation mathematics",
-    "QMO definitions and API",
-    "Closure operators",
+    "Broader QMO definitions/API beyond imported Cycle-1 game profile",
+    "Closure operators beyond imported Cycle-1 game profile",
     "Transduction mathematics/API",
-    "60 base Local Manifold QMOs",
-    "343 fusion-derived Local Manifold QMOs",
-    "1,691 Emergent Field QMOs",
-    "Deterministic RenderSpec/API packages",
-    "Field Generator QMO data",
-    "Complete 2,094-object QMO atlas",
-    "Cycle Generation Constitution",
-    "Blender-facing manifold atlas/reference material",
+    "Generator and derived-QMO RenderSpecs beyond the supplied 60 base specs",
+    "Blender-facing Generator/derived geometry references not supplied",
     "Higher-dimensional projection mathematics"
   ],
-  "source_requirement_note": "Prior categories remain required for complete authoritative raeon integration; Propagation source receipt is now partial evidence, not a claim that the package is absent.",
+  "source_requirement_note": "Original Cycle-1 game artifacts are now imported through cycle1_source_import. Propagation research receipt and its R88 unresolved boundary remain independent.",
   "conflicts": [
     "fusion-permanent-base",
     "propagation-scope-mapping",
     "nested-manifest-self-entry"
   ],
   "gameplay_implemented": false,
-  "phase": "PREPRODUCTION"
+  "phase": "PREPRODUCTION",
+  "cycle1_source_import": "data/manifests/cycle1-source-import.json"
 }

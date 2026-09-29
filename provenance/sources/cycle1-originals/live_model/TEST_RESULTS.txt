@@ -1,0 +1,24 @@
+
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+test_blue_into_red_health_yellow_prime (test_core.TestRaeonCore.test_blue_into_red_health_yellow_prime) ... ok
+test_color_scale (test_core.TestRaeonCore.test_color_scale) ... ok
+test_degradation_hits_shield_then_health (test_core.TestRaeonCore.test_degradation_hits_shield_then_health) ... ok
+test_generator_is_committed (test_core.TestRaeonCore.test_generator_is_committed) ... ok
+test_manifold_ladder (test_core.TestRaeonCore.test_manifold_ladder) ... ok
+test_merge_preserves_generators (test_core.TestRaeonCore.test_merge_preserves_generators) ... ok
+test_spend_shield_reduces_protection (test_core.TestRaeonCore.test_spend_shield_reduces_protection) ... ok
+test_white_generators_do_not_make_white_by_count (test_core.TestRaeonCore.test_white_generators_do_not_make_white_by_count) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.000s
+
+OK

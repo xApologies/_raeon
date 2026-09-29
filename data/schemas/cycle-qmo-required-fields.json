@@ -1,0 +1,84 @@
+{
+  "FieldGeneratorQMO": {
+    "required": [
+      "address",
+      "cycle",
+      "card_id",
+      "fractal_seed",
+      "fractal_address",
+      "byte_sites",
+      "cradle_sites",
+      "void_sites",
+      "orientation_class",
+      "chirality",
+      "resolution",
+      "bandwidth",
+      "boundary_signatures",
+      "compatibility_edges",
+      "manifold_memberships",
+      "provenance"
+    ]
+  },
+  "LocalManifoldQMO": {
+    "required": [
+      "address",
+      "cycle",
+      "manifold_id",
+      "generator_qmos",
+      "generator_count",
+      "closure_operator",
+      "closure_evidence",
+      "native_color",
+      "provenance"
+    ]
+  },
+  "DerivedLocalManifoldQMO": {
+    "required": [
+      "address",
+      "operator",
+      "support_manifolds",
+      "generator_instances",
+      "closure_evidence",
+      "native_color",
+      "provenance"
+    ]
+  },
+  "EmergentFieldQMO": {
+    "required": [
+      "address",
+      "operator",
+      "support_manifolds",
+      "cross_interface",
+      "coupling_score_or_evidence",
+      "native_color",
+      "directly_targetable",
+      "collapse_condition",
+      "provenance"
+    ]
+  },
+  "TerminationRecord": {
+    "required": [
+      "operator",
+      "supports",
+      "status",
+      "reason",
+      "evidence",
+      "provenance"
+    ]
+  },
+  "RenderSpec": {
+    "required": [
+      "qmo_address",
+      "projection",
+      "anchors",
+      "topological_edges",
+      "splines",
+      "resolution_parameters",
+      "bandwidth_parameters",
+      "chirality_parameters",
+      "field_shell",
+      "animation",
+      "deterministic_seed"
+    ]
+  }
+}

@@ -13,3 +13,7 @@ Cycle manifest schema 4 points directly to category/family datasets. Previous ma
 ## Additive continuity import
 
 The optional high-level `continuity_import` pointer now identifies recovered specifications and separate typed datasets. The checkpoint-0004 payload remains reconstructable without modification; its board vocabulary is a historical compatibility projection. The Genesis Horizon dataset is the current explicit board detail. This extension does not promote provisional Prime/research statements or erase missing-source categories. `data/manifests/current-files.json` is the maintained inventory; numbered checkpoint inventories remain immutable historical evidence.
+
+## Recovered Cycle-1 availability migration
+
+The `cycle1_source_import` pointer now records original imported objects, hashes, relations and render coverage. Four availability values and the explicitly scoped missing-source list change; gameplay semantics do not. The normalization validator projects only those documented availability fields back to the historical checkpoint before comparison, and separately verifies their current imported values. [Cycle-1 schema mapping](CYCLE1_IMPORT.md) documents actual records and preserved field names.

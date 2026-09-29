@@ -1,0 +1,112 @@
+[
+  {
+    "path": "00_START_HERE/README_FIRST.md",
+    "bytes": 2738,
+    "sha256": "0590ef3c2814831e3742748233ba7ce16c105c572397bde4aac1131b5be49104"
+  },
+  {
+    "path": "01_CONSTITUTION/RAEON_CONSTITUTION.md",
+    "bytes": 5003,
+    "sha256": "8f86fa6a7adfaaebb845ff94e3389a012defb09be52187d3655cbcb608f031e7"
+  },
+  {
+    "path": "02_RECOVERY_ORDER/RECOVERY_SEQUENCE.md",
+    "bytes": 3182,
+    "sha256": "0dec1a6aa72cd51526c2700442d2113bfe5044b5f89bb7217753cdf0241f6c86"
+  },
+  {
+    "path": "03_MATHEMATICAL_PIPELINE/CYCLE_DERIVATION.md",
+    "bytes": 2941,
+    "sha256": "7a5f315f8fb280b10af5462a20603584c820de23a9838ffa51ed82b65a237cd9"
+  },
+  {
+    "path": "04_QMO_SCHEMAS/ADDRESSING_CONVENTION.md",
+    "bytes": 501,
+    "sha256": "767314184c775dac3bac90009eca849bf0be14e1c2cbb54f3b5433c957a97203"
+  },
+  {
+    "path": "04_QMO_SCHEMAS/QMO_REQUIRED_FIELDS.json",
+    "bytes": 1612,
+    "sha256": "26c5a5eddc1c5e818c0ef5fcd5fdae5a166cfc1eb01d4e3575e86bee4a7d8a38"
+  },
+  {
+    "path": "05_CYCLE_GENERATOR/CYCLE_BUILD_SPEC.json",
+    "bytes": 974,
+    "sha256": "6db5c6a593cc7c6e0cd1e6182c0592f47ff47d1242459859ba45ca9191e93273"
+  },
+  {
+    "path": "05_CYCLE_GENERATOR/GENERATION_ALGORITHM.md",
+    "bytes": 1569,
+    "sha256": "22e1a74b3d80691aaf0710331f64d97d6c8adde4e8e863a162bbfa927ac5207a"
+  },
+  {
+    "path": "05_CYCLE_GENERATOR/reference_cycle_builder.py",
+    "bytes": 949,
+    "sha256": "e2fd924aaeea954ca12aa5e0cb4be17ea377824be1e0e7aff13785832cc3b7d6"
+  },
+  {
+    "path": "06_VALIDATION/REQUIRED_TESTS.md",
+    "bytes": 1319,
+    "sha256": "4d8a1c479b30e841bad7ac5483bf87661a03d6603567b9bb4af4620f76b83507"
+  },
+  {
+    "path": "07_RENDER_HANDOFF/RENDER_PIPELINE.md",
+    "bytes": 1263,
+    "sha256": "4ade01063b50bdfadc70fe4300f0b7a50b5b064dd0ff6cbb39ae52bfad3a3fc6"
+  },
+  {
+    "path": "08_PROVENANCE/AUTHORITY_LABELS.md",
+    "bytes": 572,
+    "sha256": "4906acbfe8d2f7d8dbf5bd3c9cd5c1a0d8ca68a45bde0247ed633963cf4c76dd"
+  },
+  {
+    "path": "08_PROVENANCE/DO_NOT_LOSE.md",
+    "bytes": 854,
+    "sha256": "c9df68baae723a73dca338a5bedf720edf7cd3170f6a536f1e9251984fb3d863"
+  },
+  {
+    "path": "09_CURRENT_REFERENCE/Cycle1_game_rules_reference.zip",
+    "bytes": 2850206,
+    "sha256": "ba5758c7ab5fc9a6e1f9c634f8a0ac82432344bbf7234b601093f721978d3edf"
+  },
+  {
+    "path": "09_CURRENT_REFERENCE/Cycle1_locked_playfield_reference.zip",
+    "bytes": 923446,
+    "sha256": "18282091bffbf8ae51a600f23a359e0a0d13f3109287db6e80fbabf3253d266e"
+  },
+  {
+    "path": "09_CURRENT_REFERENCE/Cycle1_qmo_derivation_reference.zip",
+    "bytes": 188811,
+    "sha256": "83e0019a17ef45e341d7408c653d16d50dfa4e18353dd03f6d892641ebd12da0"
+  },
+  {
+    "path": "09_CURRENT_REFERENCE/Cycle1_render_pipeline_reference.zip",
+    "bytes": 336546,
+    "sha256": "f63130fea87b32358aaa3735459bcec48df849d9a516709709d2c7d1b20bae36"
+  },
+  {
+    "path": "09_CURRENT_REFERENCE/REFERENCE_INDEX.md",
+    "bytes": 385,
+    "sha256": "35f7000920cc09b81d1fcbcdb2fbfef08c3a939a99a34800ad4d155a1bd3f84d"
+  },
+  {
+    "path": "10_TEMPLATES/BLENDER_HANDOFF_PROMPT.txt",
+    "bytes": 457,
+    "sha256": "dbb24484e6b2bccd1835072dbe711e2923efd661a6a7c644f1c4e8d8d0a2ab46"
+  },
+  {
+    "path": "10_TEMPLATES/CYCLE_AMENDMENT_TEMPLATE.md",
+    "bytes": 698,
+    "sha256": "645c6528ef9311285dc74be61f38b6c28b540b6cb258d22fa16b4c5938ffc8dd"
+  },
+  {
+    "path": "10_TEMPLATES/RECOVERY_PROMPT.txt",
+    "bytes": 843,
+    "sha256": "f785635ddf1149e29e903a223aff50e7ea5df76e30816e6806995f484234eb5c"
+  },
+  {
+    "path": "CONSTITUTION_INDEX.json",
+    "bytes": 1035,
+    "sha256": "39143c196a88161ceeccc6b6c845e06a15e6a931d8b5c27816461cd93a695e6b"
+  }
+]

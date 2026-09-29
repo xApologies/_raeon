@@ -18,7 +18,7 @@
         "testing",
         "release"
       ],
-      "existing_source_package": "SOURCE_IMPORT_REQUIRED"
+      "existing_source_package": "IMPORTED_VALIDATED"
     }
   }
 }

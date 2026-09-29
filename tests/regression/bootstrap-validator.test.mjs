@@ -33,7 +33,7 @@ const cases=[
  ['rejects missing required module',d=>fs.unlinkSync(path.join(d,'development/modules/qmo-engine/README.md')),'Required file missing'],
  ['rejects compensating Cycle count changes',d=>change(d,s=>{s.cycle_01.ordinary_cards.field_generators--;s.cycle_01.ordinary_cards.utilities++;}),'Cycle-1 card counts'],
  ['rejects Black Field Generators',d=>change(d,s=>s.field_generators.black_allowed=true),'Black Field Generators prohibited'],
- ['rejects fabricated QMO import claims',d=>change(d,s=>s.qmo_inventory.objects_imported=true),'External QMO inventory claim'],
+ ['rejects false missing QMO claims',d=>change(d,s=>s.qmo_inventory.objects_imported=false),'External QMO inventory claim'],
  ['rejects premature production promotion',d=>change(d,s=>s.production.phase='PROTOTYPE'),'Current whole-game phase'],
  ['rejects completed slice criteria',d=>{const p=path.join(d,'production/03_vertical_slice/EXIT_CRITERIA.md');fs.writeFileSync(p,fs.readFileSync(p,'utf8').replace('- [ ]','- [x]'));},'Slice criteria must not be marked complete'],
  ['rejects missing inbox ignore rule',d=>fs.writeFileSync(path.join(d,'.gitignore'),''),'Root /_inbox/ ignore rule missing'],

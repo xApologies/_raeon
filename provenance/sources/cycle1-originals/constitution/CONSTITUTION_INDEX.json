@@ -1,0 +1,43 @@
+{
+  "name": "RAEON_CYCLE_GENERATION_CONSTITUTION",
+  "version": "1.0",
+  "date": "2026-09-13",
+  "authority": "GAME_PIPELINE_CONSTITUTION",
+  "governing_principle": "The mathematics is the permission system.",
+  "required_source_families": [
+    "Genesis Field",
+    "Chirality Fabric",
+    "Propagation Engine"
+  ],
+  "cycle1_reference": {
+    "cycle_size": 200,
+    "field_generators": 120,
+    "primes": 30,
+    "utilities": 50,
+    "base_manifolds": 60,
+    "distribution": {
+      "RED": 15,
+      "ORANGE": 13,
+      "YELLOW": 11,
+      "GREEN": 9,
+      "BLUE": 7,
+      "VIOLET": 5
+    }
+  },
+  "required_pipeline": [
+    "recover_sources",
+    "choose_closed_recursive_seed",
+    "generate_chirality_byte_states",
+    "instantiate_field_generator_qmos",
+    "derive_generator_compatibility",
+    "generate_base_manifolds",
+    "enumerate_pair_space",
+    "evaluate_fusion",
+    "evaluate_emergent_coupling",
+    "store_terminations",
+    "materialize_derived_qmos",
+    "generate_renderspecs",
+    "validate",
+    "lock"
+  ]
+}

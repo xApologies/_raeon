@@ -54,3 +54,6 @@ See [current specification](../../../design/topology/manifolds/SYSTEM.md) and [O
 ## Validation requirements
 
 [System test boundary](../../../tests/qmo/README.md) is UNTESTED. Repository validators check architecture and design-data consistency, not subsystem correctness. [Provenance and migration evidence](../../../provenance/checkpoints/0004-repository-normalization.md).
+
+
+Cycle-1 source evidence is now [imported and queryable](../../../data/manifests/cycle1-source-import.json). This receipt does not close development gates or claim gameplay/render integration. Broader missing-source and implementation work remains OPEN.

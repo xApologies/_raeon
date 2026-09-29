@@ -89,7 +89,7 @@ try {
   same(Object.values(s.local_manifold.base_basis).reduce((a,b)=>a+b,0),60,'Base arithmetic: 15 + 13 + 11 + 9 + 7 + 5 = 60');
   same(s.local_manifold.base_total,60,'Base total');
   same(s.local_manifold.basis_is_complete_recursive_closure,false,'Basis must not claim complete recursive closure');
-  same(s.qmo_inventory,{status:'SOURCE_IMPORT_REQUIRED',base_local_manifolds:60,fusion_derived_local_manifolds:343,emergent_fields:1691,total_render_relevant:2094,objects_imported:false},'External QMO inventory claim');
+  same(s.qmo_inventory,{status:'IMPORTED_VALIDATED',base_local_manifolds:60,fusion_derived_local_manifolds:343,emergent_fields:1691,total_render_relevant:2094,objects_imported:true},'External QMO inventory claim');
   same(s.qmo_inventory.base_local_manifolds+s.qmo_inventory.fusion_derived_local_manifolds+s.qmo_inventory.emergent_fields,2094,'QMO arithmetic: 60 + 343 + 1691 = 2094');
   same(s.mathematical_api,{outcomes:['VALID','TERMINATES','NOT_APPLICABLE','OPEN','UNTESTED'],missing_data_is_termination:false},'Mathematical API outcomes and missing-data distinction');
   same(s.black.rank,8,'Black rank');
@@ -102,7 +102,7 @@ try {
   same(s.black.legal_all_black_unlocks_hidden_mode,true,'Black Mode unlock');
   same(s.black.fourth_prime,{kind:'emergent/supported Prime',deck_card:false,availability:'true while all three supporting Black Primes remain alive; false if any dies',detailed_behavior:'OPEN'},'Fourth Prime support/OPEN behavior');
   same(s.platforms,{priority:'WINDOWS DESKTOP',secondary:'iPad / iPadOS'},'Platform priorities');
-  check(s.source_import_required.length >= 10 && s.open_items.length >= 10,'Source import and OPEN lists must remain explicit');
+  check(s.source_import_required.length === 9 && s.open_items.length >= 10,'Source import and OPEN lists must remain explicit');
   const phases=json('production/phases.json');
   same(phases.current_phase,'PREPRODUCTION','Phase registry current phase');
   same(phases.phases.map(p=>p.directory),groups.production,'Phase registry directories');

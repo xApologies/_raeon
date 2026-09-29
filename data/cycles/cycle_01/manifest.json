@@ -17,10 +17,10 @@
   ],
   "utility_structure_status": "DESIGN STRUCTURE ACCEPTED",
   "utility_structure_ref": "utilities/overview.json",
-  "card_definitions_note": "Accepted structural design is recorded; complete runtime catalogs and source mathematical APIs are not imported.",
+  "card_definitions_note": "120 Field Generator QMO identities imported from original locked source; complete playable Prime/Utility catalogs and runtime remain OPEN.",
   "current_design_checkpoint": "0004",
   "utility_catalog_formalization": "PARTIALLY FORMALIZED",
-  "cycle_source_package": "SOURCE_IMPORT_REQUIRED",
+  "cycle_source_package": "IMPORTED_VALIDATED",
   "card_system_ref": "card-system.json",
   "categories": {
     "field_generators": "field_generators/status.json",
@@ -34,5 +34,7 @@
     "draw_deck": "utilities/draw_deck.json",
     "graveyard_recovery": "utilities/recovery.json",
     "stability_protection": "utilities/stability.json"
-  }
+  },
+  "field_generator_qmos_imported": true,
+  "source_import": "../../manifests/cycle1-source-import.json"
 }

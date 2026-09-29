@@ -58,3 +58,6 @@ See [current specification](../../../design/cards/cycle_01/field_generators/SYST
 ## Continuity evidence
 
 [Final continuity reconciliation](../../../provenance/audits/final-continuity-import.md) adds design/source context. Current maturity and all gate statuses remain unchanged; external source PASS/CLOSED claims are not module completion evidence.
+
+
+Cycle-1 source evidence is now [imported and queryable](../../../data/manifests/cycle1-source-import.json). This receipt does not close development gates or claim gameplay/render integration. Broader missing-source and implementation work remains OPEN.

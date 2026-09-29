@@ -1,0 +1,127 @@
+{
+  "model": {
+    "name": "raeon",
+    "version": "0.1",
+    "date": "2026-09-13",
+    "status": "live recovery model before API construction"
+  },
+  "fixed_numbers": {
+    "cycle_size": 200,
+    "field_generator_unique_cards": 120,
+    "prime_unique_cards": 30,
+    "utility_unique_cards": 50,
+    "deck_size": 60,
+    "field_generator_copy_limit": 2,
+    "utility_copy_limit": 3,
+    "active_prime_positions": 3,
+    "permanent_base_sandboxes": 3,
+    "white_field_generators_in_cycle_1": 8
+  },
+  "color_scale": {
+    "ZERO": 0,
+    "RED": 1,
+    "ORANGE": 2,
+    "YELLOW": 3,
+    "GREEN": 4,
+    "BLUE": 5,
+    "VIOLET": 6,
+    "WHITE": 7
+  },
+  "ordinary_manifold_strength_by_generator_count": {
+    "3": "RED",
+    "4": "ORANGE",
+    "5": "YELLOW",
+    "6": "GREEN",
+    "7": "BLUE",
+    "8": "VIOLET"
+  },
+  "card_classes": {
+    "FIELD_GENERATOR": {
+      "purpose": "construct sandbox geometry and local manifolds",
+      "copy_limit": 2,
+      "complexity": "primary high-complexity system"
+    },
+    "PRIME_FIELD": {
+      "purpose": "persistent health-bearing transduction infrastructure",
+      "copy_rule": "unique identity",
+      "active_positions": 3,
+      "minimum_rank": "YELLOW",
+      "maximum_rank": "WHITE"
+    },
+    "UTILITY": {
+      "purpose": "tactical/temporary manipulation; exact catalog unresolved",
+      "copy_limit": 3
+    }
+  },
+  "sandbox": {
+    "base_count": 3,
+    "base_sandboxes_permanent": true,
+    "extra_sandboxes_possible": true,
+    "generator_commitment_rule": "generator cannot be independently removed or transferred after play into sandbox",
+    "sandbox_merge_allowed": true,
+    "manifold_legality_ignores_sandbox_provenance": true,
+    "generator_pose": [
+      "x",
+      "y",
+      "orientation_degrees_0_to_360"
+    ],
+    "candidate_geometry_visualized": true
+  },
+  "manifold": {
+    "ordinary_color_ceiling": "VIOLET",
+    "local_manifold_built_from_generators": true,
+    "multiple_configurations_per_generator_set_possible": true,
+    "nested_and_overlapping_configurations_intended": true,
+    "collapse_sends_constituent_generators_to_graveyard": true,
+    "base_sandbox_returns_available_after_collapse": true
+  },
+  "emergent_field": {
+    "supported_by_multiple_active_manifolds": true,
+    "direct_targeting": false,
+    "collapses_when_support_relation_breaks": true,
+    "exact_compatibility_rules": "OPEN"
+  },
+  "prime": {
+    "health_rank_min": "YELLOW",
+    "health_rank_max": "WHITE",
+    "shield_is_transduction_reservoir": true,
+    "friendly_color_repairs_health_first": true,
+    "friendly_remainder_becomes_shield": true,
+    "incoming_degradation_hits_shield_first": true,
+    "shield_spend_reduces_defense": true,
+    "zero_health_destroyed": true,
+    "ordinary_revive": false,
+    "directionality_classes": [
+      "RESTORE",
+      "DEGRADE",
+      "HYBRID"
+    ],
+    "specific_prime_profiles": "OPEN"
+  },
+  "white": {
+    "white_numeric_rank": 7,
+    "white_prime_health": 7,
+    "white_generator_count": 8,
+    "white_generators_universal": true,
+    "three_to_eight_white_generators_map_to_red_through_violet": true,
+    "ordinary_white_manifold_generation": "OPEN"
+  },
+  "hand_and_draw": {
+    "hand_limit": "OPEN: workshop range approximately 5-7",
+    "overflow_draw_to_graveyard": true,
+    "starting_hand": "OPEN; 7 discussed as example",
+    "draw_rate": "OPEN"
+  },
+  "product": {
+    "journey_save_profiles": 3,
+    "offline_progression": true,
+    "credits_earned_by_play": true,
+    "cash_purchase_of_credits": false,
+    "cash_purchase_of_card_packs": false,
+    "randomized_in_game_packs": true,
+    "deterministic_expensive_card_purchase": true,
+    "adaptive_ai_goal": true,
+    "nearby_peer_multiplayer_goal": true,
+    "central_server_required_for_nearby_play": false
+  }
+}

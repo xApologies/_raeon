@@ -1,0 +1,184 @@
+{
+  "schema": "raeon.render_spec.v0.3",
+  "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-10",
+  "manifold_id": "M-R-10",
+  "native_color": "RED",
+  "native_color_value": 1,
+  "generator_count": 3,
+  "generators": [
+    "FG-007",
+    "FG-044",
+    "FG-117"
+  ],
+  "anchors": [
+    {
+      "generator": "FG-007",
+      "position": [
+        1.8202466837441766,
+        0.0,
+        0.3267531492740206
+      ],
+      "chirality_parity": 1,
+      "fractal_address": "6.2.7.1"
+    },
+    {
+      "generator": "FG-044",
+      "position": [
+        -0.9101233418720879,
+        1.576379869276836,
+        -0.13111230769556884
+      ],
+      "chirality_parity": 0,
+      "fractal_address": "7.7.0.6"
+    },
+    {
+      "generator": "FG-117",
+      "position": [
+        -0.9101233418720891,
+        -1.5763798692768354,
+        0.34235166025683206
+      ],
+      "chirality_parity": 0,
+      "fractal_address": "4.0.5.7"
+    }
+  ],
+  "topological_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "spline_edges": [
+    {
+      "edge_id": 0,
+      "a": 0,
+      "b": 1,
+      "p0": [
+        1.8202466837441766,
+        0.0,
+        0.3267531492740206
+      ],
+      "p1": [
+        2.645796852230369,
+        0.7741208103959689,
+        0.3743711567988579
+      ],
+      "p2": [
+        -0.6524901387140781,
+        2.6783876924823873,
+        -0.17873031522040617
+      ],
+      "p3": [
+        -0.9101233418720879,
+        1.576379869276836,
+        -0.13111230769556884
+      ],
+      "curve_samples": 48,
+      "ring_samples": 16,
+      "tube_radius": 0.0504
+    },
+    {
+      "edge_id": 1,
+      "a": 0,
+      "b": 2,
+      "p0": [
+        1.8202466837441766,
+        0.0,
+        0.3267531492740206
+      ],
+      "p1": [
+        1.5682294510378347,
+        1.0922806770494575,
+        0.32513090413180823
+      ],
+      "p2": [
+        -1.730057539906614,
+        -0.8119862050369597,
+        0.34397390539904443
+      ],
+      "p3": [
+        -0.9101233418720891,
+        -1.5763798692768354,
+        0.34235166025683206
+      ],
+      "curve_samples": 48,
+      "ring_samples": 16,
+      "tube_radius": 0.0504
+    },
+    {
+      "edge_id": 2,
+      "a": 1,
+      "b": 2,
+      "p0": [
+        -0.9101233418720879,
+        1.576379869276836,
+        -0.13111230769556884
+      ],
+      "p1": [
+        -1.9940816337487333,
+        1.9042668820864184,
+        -0.18035256036261854
+      ],
+      "p2": [
+        -1.9940816337487348,
+        -1.9042668820864168,
+        0.39159191292388174
+      ],
+      "p3": [
+        -0.9101233418720891,
+        -1.5763798692768354,
+        0.34235166025683206
+      ],
+      "curve_samples": 48,
+      "ring_samples": 16,
+      "tube_radius": 0.0504
+    }
+  ],
+  "chirality_sign": -1,
+  "resolution": {
+    "mean": 4.0,
+    "curve_samples": 48,
+    "ring_samples": 16
+  },
+  "bandwidth": {
+    "mean": 12.0,
+    "tube_radius_scale": 1.12
+  },
+  "field_shell": {
+    "enabled": true,
+    "kernel": "gaussian",
+    "sigma": 0.6100000000000001,
+    "iso_threshold": 0.65,
+    "grid_resolution": 60
+  },
+  "animation": {
+    "energy_wave_number": 2.45,
+    "energy_angular_frequency": 1.5,
+    "emission_power": 2.25,
+    "tap_pulse_decay": 2.5,
+    "breath_frequency": 0.43999999999999995,
+    "vertex_displacement": 0.034999999999999996
+  },
+  "projection_3plus1plus1": {
+    "alpha": 0.08,
+    "beta": 0.06,
+    "tau_frequency": 0.7,
+    "chi": -1.0
+  },
+  "deterministic_seed": 12238528932634567150,
+  "render_states": [
+    "PREVIEW",
+    "LOCK",
+    "MANIFEST",
+    "ACTIVE"
+  ],
+  "authority": "DOWNSTREAM_RENDER_ADAPTER"
+}

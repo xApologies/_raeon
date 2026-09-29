@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "IMPORTED_VALIDATED",
+  "scope": "Recovered original Cycle-1 game-model artifacts; no regeneration",
+  "source_receipt": "provenance/sources/cycle1-originals/receipt.json",
+  "counts": {
+    "field_generators": 120,
+    "base": 60,
+    "fusion": 343,
+    "emergent": 1691,
+    "atlas": 2094,
+    "pairs": 1770,
+    "compatibility": 2482,
+    "render_specs": 60
+  },
+  "datasets": {
+    "field_generators": "data/cycles/cycle_01/field_generators/objects.json",
+    "base": "data/qmo/manifolds/objects.json",
+    "fusion": "data/qmo/fusion/objects.json",
+    "emergent": "data/qmo/emergent/objects.json",
+    "derived": "data/qmo/cycle1/derived_qmos.json",
+    "atlas": "data/qmo/cycle1/atlas.json",
+    "pairs": "data/qmo/cycle1/manifold_pair_relations.json",
+    "compatibility": "data/qmo/generators/compatibility.json",
+    "summary": "data/qmo/cycle1/playfield_summary.json",
+    "database": "data/qmo/cycle1/qmo.sqlite",
+    "render_catalog": "data/render_specs/cycle_01/catalog.json"
+  },
+  "render_source_path_mapping": {
+    "source_prefix": "data/render_specs/",
+    "repository_prefix": "data/render_specs/cycle_01/"
+  },
+  "constitution": "design/cards/CYCLE_GENERATION_CONSTITUTION.md",
+  "cleared_source_import_required": [
+    "Field Generator QMO data",
+    "60 base Local Manifold QMOs",
+    "343 fusion-derived Local Manifold QMOs",
+    "1,691 Emergent Field QMOs",
+    "Complete 2,094-object QMO atlas",
+    "Cycle Generation Constitution"
+  ],
+  "partially_satisfied": {
+    "QMO definitions and API": "Cycle-1 locked API/database imported; broader research remains missing",
+    "Closure operators": "Cycle-1 graph criteria and all 1,770 base pairs imported; broader/runtime-instance domains not inferred",
+    "Deterministic RenderSpec/API packages": "60 base RenderSpecs and source adapter imported; Generator/derived specs absent",
+    "Blender-facing manifold atlas/reference material": "2,094 atlas plus base render and Blender/Metal reference material imported; remaining asset realization not claimed"
+  },
+  "remaining_source_import_required": [
+    "Genesis mathematics",
+    "Chirality mathematics",
+    "Propagation mathematics",
+    "Broader QMO definitions/API beyond imported Cycle-1 game profile",
+    "Closure operators beyond imported Cycle-1 game profile",
+    "Transduction mathematics/API",
+    "Generator and derived-QMO RenderSpecs beyond the supplied 60 base specs",
+    "Blender-facing Generator/derived geometry references not supplied",
+    "Higher-dimensional projection mathematics"
+  ],
+  "authority": "Locked raeon GAME_CANON v1.0; original per-record GAME_DERIVED_v0_2 labels preserved",
+  "no_regeneration": true,
+  "runtime_implemented": false,
+  "production_phase": "PREPRODUCTION"
+}

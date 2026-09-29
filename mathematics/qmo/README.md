@@ -1,11 +1,14 @@
-# mathematics/qmo
+# Cycle-1 QMO authority
 
-qmo authoritative mathematical sources boundary.
+Status: original locked Cycle-1 game profile IMPORTED_VALIDATED; broader QMO/research definitions and runtime integration remain OPEN/SOURCE_IMPORT_REQUIRED.
 
-Status: SOURCE_IMPORT_REQUIRED.
+The recovered Closed Playfield v1.0 fixes the raeon game-model operators and catalog. Original record labels such as GAME_DERIVED_v0_2 are retained alongside the later lock; neither label claims equivalence to unimported external research mathematics.
 
-Accepted authoritative artifacts exist externally and await inspected, validated import through _inbox. Do not reconstruct missing definitions or fabricate objects.
+- [Mathematical source design](CYCLE1_MATHEMATICAL_DESIGN.md) and [legacy schema](CYCLE1_SOURCE_SCHEMA.md)
+- [Closure rules and outcomes](../closure/CYCLE1_CLOSED_PLAYFIELD.md)
+- [Actual machine data and queries](../../data/qmo/README.md)
+- [Render mathematics](CYCLE1_RENDER_MATHEMATICS.md), downstream of QMO
+- [Future Cycle derivation](CYCLE_DERIVATION.md) and [schema migration](../../data/schemas/CYCLE1_IMPORT.md)
+- [Import decision and limitations](../../provenance/decisions/cycle1-source-import.md)
 
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
-
-[Propagation continuity source](../propagation/README.md) is now available as research evidence. Its scope does not supply or validate the missing raeon-specific definitions/catalog. The recovered 2×2×2 chirality-byte description (four occupied cradle positions, four void positions; six views and orientation-dependent ordering) is PROVISIONAL source context, not a reconstructed labeling, color assignment or mathematical operator.
+The supplied 2×2×2 occupancy, faces, chirality and rotation-class fields are source data. They do not define every current runtime orientation or solve the [Propagation R88 boundary](../propagation/README.md).

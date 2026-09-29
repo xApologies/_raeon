@@ -4,7 +4,7 @@
 
 Authority: GAME_CANON. M_i ⊕ M_j → M*, when mathematically admitted, produces one DerivedLocalManifoldQMO. Whole Sandbox Domains may participate in merge/fusion; committed Generators cannot be independently extracted.
 
-The accepted external fusion-derived Local Manifold inventory is 343 objects, SOURCE_IMPORT_REQUIRED. Missing data is not mathematical termination. Admission/API details remain unimported. This is distinct from [emergent coupling](../emergent_fields/SYSTEM.md), whose support manifolds remain.
+The [343 original fusion-derived QMOs](../../../data/qmo/fusion/objects.json) and [catalog pair relations](../../../data/qmo/cycle1/manifold_pair_relations.json) are IMPORTED_VALIDATED. Missing data is not mathematical termination. Admission outside this finite catalog and runtime copy-instance accounting remain OPEN. This is distinct from [emergent coupling](../emergent_fields/SYSTEM.md), whose support manifolds remain.
 
 ## Recovered board relationship
 

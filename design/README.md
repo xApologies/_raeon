@@ -11,7 +11,7 @@ raeon is a compact strategic card game whose mathematical QMO layer governs lega
 
 GAME_CANON is explicitly accepted rules/structures. PROVISIONAL / WORKING DESIGN includes stated working ranks, Black concepts and product direction. Utility architecture is structurally defined; exact catalog only partially formalized.
 
-OPEN: IDs, final catalogs, unresolved targets/timing/duration/ranks, turn/match sequencing, balance, engine, transport, AI, economy values and UI detail. SOURCE_IMPORT_REQUIRED: mathematics/APIs, Generator/QMO catalogs/atlas, Cycle Generation Constitution, RenderSpecs, Blender references and projection math. The [state index](../data/manifests/accepted-state.json) retains the exact lists.
+OPEN: IDs, final catalogs, unresolved targets/timing/duration/ranks, turn/match sequencing, balance, engine, transport, AI, economy values and UI detail. IMPORTED_VALIDATED: original Cycle-1 Generator/QMO catalog, complete atlas, pair/compatibility data, Constitution and 60 base RenderSpecs. SOURCE_IMPORT_REQUIRED: broader mathematics/APIs, Generator/derived RenderSpecs and geometry references, and projection mathematics. The [state index](../data/manifests/accepted-state.json) retains the exact lists.
 
 Implemented: repository/data validation tooling only. No game/AI/network/renderer implementation, gameplay tests or production completion claimed. Next design task: foundational turn/match design; Utility ordering/IDs remain OPEN.
 

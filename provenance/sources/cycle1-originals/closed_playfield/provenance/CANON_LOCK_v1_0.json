@@ -1,0 +1,27 @@
+{
+  "name": "raeon Closed Playing Field API",
+  "version": "1.0",
+  "date": "2026-09-13",
+  "status": "LOCKED_GAME_CANON",
+  "principle": "Mathematics is the permission system.",
+  "base_manifolds": 60,
+  "pair_space": 1770,
+  "all_pairs_explicitly_evaluated": true,
+  "fusion_status_counts": {
+    "TERMINATES": 825,
+    "NOT_APPLICABLE": 602,
+    "VALID": 343
+  },
+  "emergent_status_counts": {
+    "VALID": 1691,
+    "TERMINATES": 79
+  },
+  "red_yellow": {
+    "total": 165,
+    "valid": 111,
+    "terminates": 9,
+    "not_applicable": 45
+  },
+  "render_pipeline": "QMO -> RenderSpec -> Blender -> Metal",
+  "provenance_note": "Game canon; not asserted as external physics theorem."
+}

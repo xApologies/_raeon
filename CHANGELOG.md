@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — recovered original Cycle-1 import (2026-09-28)
+
+- Preserve four recovered source archives and normalize the original 120 FG records, 2,094-object atlas, pair/compatibility data, Constitution and 60 base RenderSpecs.
+- Add read-only queries and original-archive integrity validation; reconcile historical Live Model rules without changing newer accepted design.
+- Clear only recovered source requirements; keep PREPRODUCTION and open runtime/research scope. See the [audit](provenance/audits/cycle1-source-import.md).
+
 ## Unreleased — canonical main cleanup (2026-09-28)
 
 - User-authorized governance amendment: main is the single canonical tree; temporary branches are removed after validated promotion and reachability checks. Source: supplied “RAEON — CANONICAL MAIN REPOSITORY CLEANUP” directive.

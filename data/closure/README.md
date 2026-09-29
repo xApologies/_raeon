@@ -1,9 +1,3 @@
-# data/closure
+# Closure data
 
-closure structured data boundary.
-
-Status: SOURCE_IMPORT_REQUIRED.
-
-Accepted authoritative artifacts exist externally and await inspected, validated import through _inbox. Do not reconstruct missing definitions or fabricate objects.
-
-Follow [CONTRIBUTING.md](../../CONTRIBUTING.md) and the relevant module gates. Record source, authority, validation, and checkpoint references.
+Canonical Cycle-1 [pair relations](../qmo/cycle1/manifold_pair_relations.json), [compatibility](../qmo/generators/compatibility.json), and [source summary](../qmo/cycle1/playfield_summary.json) are IMPORTED_VALIDATED. No duplicate catalog is maintained here. Broader operators and runtime instances remain OPEN/SOURCE_IMPORT_REQUIRED.

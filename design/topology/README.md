@@ -1,6 +1,6 @@
 # Topology design
 
-**THE MATHEMATICS IS THE PERMISSION SYSTEM.** The QMO is the canonical mathematical game object. Mathematical legality determines permitted relationships and gameplay operations. Authoritative mathematics/APIs are SOURCE_IMPORT_REQUIRED. Utilities manipulate legal game state but cannot override QMO closure. Rendering does not determine mathematical legality.
+**THE MATHEMATICS IS THE PERMISSION SYSTEM.** The QMO is the canonical mathematical game object. Mathematical legality determines permitted relationships and gameplay operations. The recovered [Cycle-1 game profile](../../mathematics/qmo/README.md) supplies the original catalog, closure relations and reference API; broader mathematics/APIs remain SOURCE_IMPORT_REQUIRED. Utilities manipulate legal game state but cannot override QMO closure. Rendering does not determine mathematical legality.
 
 API outcomes: VALID, TERMINATES, NOT_APPLICABLE, OPEN, UNTESTED. TERMINATES is explicit mathematical failure; missing data is not automatically termination.
 

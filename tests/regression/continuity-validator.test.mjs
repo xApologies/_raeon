@@ -21,7 +21,7 @@ for(const [name,change,label] of [
  ['resolved permanent conflict',s=>s.relationships.values.fusion.permanent_base_identity_accounting='destroy base','Do not silently resolve'],
  ['selected R88 branch',s=>s.manifest.propagation.selected_branch='A','R88 branches'],
  ['research as validated math',s=>s.manifest.propagation.integration_status='VALID','Source claims'],
- ['fabricated Generator',s=>s.generator_interaction.values.objects.push({id:'FG-001'}),'No fabricated'],
+ ['competing Generator catalog',s=>s.generator_interaction.values.objects=[{id:'FG-001'}],'No competing'],
  ['Prime model promoted',s=>s.prime_working_model.authority='GAME_CANON','Prime model remains'],
  ['invented expiry',s=>s.configuration_spaces.values.temporary_expiry='turn end','Unresolved Configuration Space'],
  ['missing data termination',s=>s.generator_interaction.values.missing_data_is_termination=true,'Missing data is not'],

@@ -1,0 +1,95 @@
+[
+  {
+    "archive": "RAEON_CLOSED_PLAYFIELD_API_v1_0.zip",
+    "manifest": "RAEON_CLOSED_PLAYFIELD_API_v1_0/provenance/MANIFEST.json",
+    "checks": 15,
+    "failures": [
+      "README.md",
+      "database/RAEON_QMO_v0_2.sqlite",
+      "tests/__pycache__/test_qmo.cpython-313.pyc"
+    ]
+  },
+  {
+    "archive": "RAEON_CLOSED_PLAYFIELD_API_v1_0.zip",
+    "manifest": "RAEON_CLOSED_PLAYFIELD_API_v1_0/provenance/MANIFEST_LOCKED_v1_0.json",
+    "checks": 102,
+    "failures": []
+  },
+  {
+    "archive": "RAEON_CLOSED_PLAYFIELD_API_v1_0.zip",
+    "manifest": "RAEON_CLOSED_PLAYFIELD_API_v1_0/provenance/MANIFEST_v0_3.json",
+    "checks": 90,
+    "failures": [
+      "database/RAEON_QMO_v0_2.sqlite",
+      "render/__pycache__/render_spec.cpython-313.pyc",
+      "tests/__pycache__/test_qmo.cpython-313.pyc",
+      "tests_render/__pycache__/test_render.cpython-313.pyc"
+    ]
+  },
+  {
+    "archive": "RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0.zip",
+    "manifest": "RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0/MANIFEST.json",
+    "checks": 22,
+    "failures": []
+  },
+  {
+    "archive": "RAEON_LIVE_MODEL_v0_1_2026-09-13.zip",
+    "manifest": "RAEON_LIVE_MODEL_v0_1_2026-09-13/MANIFEST_SHA256.txt",
+    "checks": 26,
+    "failures": []
+  },
+  {
+    "archive": "RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0.zip!/RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0/09_CURRENT_REFERENCE/Cycle1_game_rules_reference.zip",
+    "manifest": "RAEON_LIVE_MODEL_v0_1_2026-09-13/MANIFEST_SHA256.txt",
+    "checks": 26,
+    "failures": []
+  },
+  {
+    "archive": "RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0.zip!/RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0/09_CURRENT_REFERENCE/Cycle1_locked_playfield_reference.zip",
+    "manifest": "RAEON_CLOSED_PLAYFIELD_API_v1_0/provenance/MANIFEST.json",
+    "checks": 15,
+    "failures": [
+      "README.md",
+      "database/RAEON_QMO_v0_2.sqlite",
+      "tests/__pycache__/test_qmo.cpython-313.pyc"
+    ]
+  },
+  {
+    "archive": "RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0.zip!/RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0/09_CURRENT_REFERENCE/Cycle1_locked_playfield_reference.zip",
+    "manifest": "RAEON_CLOSED_PLAYFIELD_API_v1_0/provenance/MANIFEST_LOCKED_v1_0.json",
+    "checks": 102,
+    "failures": []
+  },
+  {
+    "archive": "RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0.zip!/RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0/09_CURRENT_REFERENCE/Cycle1_locked_playfield_reference.zip",
+    "manifest": "RAEON_CLOSED_PLAYFIELD_API_v1_0/provenance/MANIFEST_v0_3.json",
+    "checks": 90,
+    "failures": [
+      "database/RAEON_QMO_v0_2.sqlite",
+      "render/__pycache__/render_spec.cpython-313.pyc",
+      "tests/__pycache__/test_qmo.cpython-313.pyc",
+      "tests_render/__pycache__/test_render.cpython-313.pyc"
+    ]
+  },
+  {
+    "archive": "RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0.zip!/RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0/09_CURRENT_REFERENCE/Cycle1_qmo_derivation_reference.zip",
+    "manifest": "RAEON_CHIRALITY_QMO_API_v0_2/provenance/MANIFEST.json",
+    "checks": 15,
+    "failures": []
+  },
+  {
+    "archive": "RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0.zip!/RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0/09_CURRENT_REFERENCE/Cycle1_render_pipeline_reference.zip",
+    "manifest": "RAEON_RENDER_API_v0_3/provenance/MANIFEST.json",
+    "checks": 15,
+    "failures": [
+      "README.md",
+      "tests/__pycache__/test_qmo.cpython-313.pyc"
+    ]
+  },
+  {
+    "archive": "RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0.zip!/RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0/09_CURRENT_REFERENCE/Cycle1_render_pipeline_reference.zip",
+    "manifest": "RAEON_RENDER_API_v0_3/provenance/MANIFEST_v0_3.json",
+    "checks": 90,
+    "failures": []
+  }
+]

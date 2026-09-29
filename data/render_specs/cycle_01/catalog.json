@@ -1,0 +1,422 @@
+[
+  {
+    "manifold_id": "M-R-01",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-01",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-01.json"
+  },
+  {
+    "manifold_id": "M-R-02",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-02",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-02.json"
+  },
+  {
+    "manifold_id": "M-R-03",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-03",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-03.json"
+  },
+  {
+    "manifold_id": "M-R-04",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-04",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-04.json"
+  },
+  {
+    "manifold_id": "M-R-05",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-05",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-05.json"
+  },
+  {
+    "manifold_id": "M-R-06",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-06",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-06.json"
+  },
+  {
+    "manifold_id": "M-R-07",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-07",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-07.json"
+  },
+  {
+    "manifold_id": "M-R-08",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-08",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-08.json"
+  },
+  {
+    "manifold_id": "M-R-09",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-09",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-09.json"
+  },
+  {
+    "manifold_id": "M-R-10",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-10",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-10.json"
+  },
+  {
+    "manifold_id": "M-R-11",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-11",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-11.json"
+  },
+  {
+    "manifold_id": "M-R-12",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-12",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-12.json"
+  },
+  {
+    "manifold_id": "M-R-13",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-13",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-13.json"
+  },
+  {
+    "manifold_id": "M-R-14",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-14",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-14.json"
+  },
+  {
+    "manifold_id": "M-R-15",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-r-15",
+    "native_color": "RED",
+    "generator_count": 3,
+    "render_spec": "data/render_specs/M-R-15.json"
+  },
+  {
+    "manifold_id": "M-O-01",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-o-01",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "render_spec": "data/render_specs/M-O-01.json"
+  },
+  {
+    "manifold_id": "M-O-02",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-o-02",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "render_spec": "data/render_specs/M-O-02.json"
+  },
+  {
+    "manifold_id": "M-O-03",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-o-03",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "render_spec": "data/render_specs/M-O-03.json"
+  },
+  {
+    "manifold_id": "M-O-04",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-o-04",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "render_spec": "data/render_specs/M-O-04.json"
+  },
+  {
+    "manifold_id": "M-O-05",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-o-05",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "render_spec": "data/render_specs/M-O-05.json"
+  },
+  {
+    "manifold_id": "M-O-06",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-o-06",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "render_spec": "data/render_specs/M-O-06.json"
+  },
+  {
+    "manifold_id": "M-O-07",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-o-07",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "render_spec": "data/render_specs/M-O-07.json"
+  },
+  {
+    "manifold_id": "M-O-08",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-o-08",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "render_spec": "data/render_specs/M-O-08.json"
+  },
+  {
+    "manifold_id": "M-O-09",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-o-09",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "render_spec": "data/render_specs/M-O-09.json"
+  },
+  {
+    "manifold_id": "M-O-10",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-o-10",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "render_spec": "data/render_specs/M-O-10.json"
+  },
+  {
+    "manifold_id": "M-O-11",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-o-11",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "render_spec": "data/render_specs/M-O-11.json"
+  },
+  {
+    "manifold_id": "M-O-12",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-o-12",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "render_spec": "data/render_specs/M-O-12.json"
+  },
+  {
+    "manifold_id": "M-O-13",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-o-13",
+    "native_color": "ORANGE",
+    "generator_count": 4,
+    "render_spec": "data/render_specs/M-O-13.json"
+  },
+  {
+    "manifold_id": "M-Y-01",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-y-01",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "render_spec": "data/render_specs/M-Y-01.json"
+  },
+  {
+    "manifold_id": "M-Y-02",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-y-02",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "render_spec": "data/render_specs/M-Y-02.json"
+  },
+  {
+    "manifold_id": "M-Y-03",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-y-03",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "render_spec": "data/render_specs/M-Y-03.json"
+  },
+  {
+    "manifold_id": "M-Y-04",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-y-04",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "render_spec": "data/render_specs/M-Y-04.json"
+  },
+  {
+    "manifold_id": "M-Y-05",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-y-05",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "render_spec": "data/render_specs/M-Y-05.json"
+  },
+  {
+    "manifold_id": "M-Y-06",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-y-06",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "render_spec": "data/render_specs/M-Y-06.json"
+  },
+  {
+    "manifold_id": "M-Y-07",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-y-07",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "render_spec": "data/render_specs/M-Y-07.json"
+  },
+  {
+    "manifold_id": "M-Y-08",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-y-08",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "render_spec": "data/render_specs/M-Y-08.json"
+  },
+  {
+    "manifold_id": "M-Y-09",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-y-09",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "render_spec": "data/render_specs/M-Y-09.json"
+  },
+  {
+    "manifold_id": "M-Y-10",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-y-10",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "render_spec": "data/render_specs/M-Y-10.json"
+  },
+  {
+    "manifold_id": "M-Y-11",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-y-11",
+    "native_color": "YELLOW",
+    "generator_count": 5,
+    "render_spec": "data/render_specs/M-Y-11.json"
+  },
+  {
+    "manifold_id": "M-G-01",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-g-01",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "render_spec": "data/render_specs/M-G-01.json"
+  },
+  {
+    "manifold_id": "M-G-02",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-g-02",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "render_spec": "data/render_specs/M-G-02.json"
+  },
+  {
+    "manifold_id": "M-G-03",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-g-03",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "render_spec": "data/render_specs/M-G-03.json"
+  },
+  {
+    "manifold_id": "M-G-04",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-g-04",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "render_spec": "data/render_specs/M-G-04.json"
+  },
+  {
+    "manifold_id": "M-G-05",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-g-05",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "render_spec": "data/render_specs/M-G-05.json"
+  },
+  {
+    "manifold_id": "M-G-06",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-g-06",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "render_spec": "data/render_specs/M-G-06.json"
+  },
+  {
+    "manifold_id": "M-G-07",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-g-07",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "render_spec": "data/render_specs/M-G-07.json"
+  },
+  {
+    "manifold_id": "M-G-08",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-g-08",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "render_spec": "data/render_specs/M-G-08.json"
+  },
+  {
+    "manifold_id": "M-G-09",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-g-09",
+    "native_color": "GREEN",
+    "generator_count": 6,
+    "render_spec": "data/render_specs/M-G-09.json"
+  },
+  {
+    "manifold_id": "M-B-01",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-b-01",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "render_spec": "data/render_specs/M-B-01.json"
+  },
+  {
+    "manifold_id": "M-B-02",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-b-02",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "render_spec": "data/render_specs/M-B-02.json"
+  },
+  {
+    "manifold_id": "M-B-03",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-b-03",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "render_spec": "data/render_specs/M-B-03.json"
+  },
+  {
+    "manifold_id": "M-B-04",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-b-04",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "render_spec": "data/render_specs/M-B-04.json"
+  },
+  {
+    "manifold_id": "M-B-05",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-b-05",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "render_spec": "data/render_specs/M-B-05.json"
+  },
+  {
+    "manifold_id": "M-B-06",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-b-06",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "render_spec": "data/render_specs/M-B-06.json"
+  },
+  {
+    "manifold_id": "M-B-07",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-b-07",
+    "native_color": "BLUE",
+    "generator_count": 7,
+    "render_spec": "data/render_specs/M-B-07.json"
+  },
+  {
+    "manifold_id": "M-V-01",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-v-01",
+    "native_color": "VIOLET",
+    "generator_count": 8,
+    "render_spec": "data/render_specs/M-V-01.json"
+  },
+  {
+    "manifold_id": "M-V-02",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-v-02",
+    "native_color": "VIOLET",
+    "generator_count": 8,
+    "render_spec": "data/render_specs/M-V-02.json"
+  },
+  {
+    "manifold_id": "M-V-03",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-v-03",
+    "native_color": "VIOLET",
+    "generator_count": 8,
+    "render_spec": "data/render_specs/M-V-03.json"
+  },
+  {
+    "manifold_id": "M-V-04",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-v-04",
+    "native_color": "VIOLET",
+    "generator_count": 8,
+    "render_spec": "data/render_specs/M-V-04.json"
+  },
+  {
+    "manifold_id": "M-V-05",
+    "qmo_address": "@qmo/raeon/cycle1/manifold/m-v-05",
+    "native_color": "VIOLET",
+    "generator_count": 8,
+    "render_spec": "data/render_specs/M-V-05.json"
+  }
+]
