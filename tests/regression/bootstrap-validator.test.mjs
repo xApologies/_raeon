@@ -1,4 +1,5 @@
 import {test} from 'node:test';
+import {copyFixtureFile} from './fixture-files.mjs';
 import {loadDesignState} from '../../tools/validators/load-design-state.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -11,9 +12,9 @@ import {spawnSync} from 'node:child_process';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 function fixture() {
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'raeon-bootstrap-test-'));
-  for(const file of JSON.parse(fs.readFileSync(path.join(root,'data/manifests/design-checkpoint-0004.json'),'utf8')).files) {
+  for(const file of JSON.parse(fs.readFileSync(path.join(root,'data/manifests/current-files.json'),'utf8')).files) {
     fs.mkdirSync(path.dirname(path.join(dir,file)),{recursive:true});
-    fs.copyFileSync(path.join(root,file),path.join(dir,file));
+    copyFixtureFile(root,dir,file);
   }
   const init=spawnSync('git',['init',dir],{encoding:'utf8',windowsHide:true});
   assert.equal(init.status,0,init.stderr);

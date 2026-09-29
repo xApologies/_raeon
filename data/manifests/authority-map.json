@@ -478,5 +478,13 @@
       "from": "data/cards/primes/README.md",
       "to": "data/cycles/cycle_01/primes/README.md"
     }
-  ]
+  ],
+  "continuity_import": "data/manifests/final-continuity-import.json",
+  "supplemental_data": {
+    "board": "data/board/genesis-horizon.json",
+    "field-generators": "data/cycles/cycle_01/field_generators/interaction.json",
+    "sandbox": "data/topology/configuration-spaces.json",
+    "fusion": "data/topology/relationships.json",
+    "prime-fields": "data/cycles/cycle_01/primes/working-model.json"
+  }
 }

@@ -16,7 +16,7 @@ export function validateNormalization(root) {
   const index=json('data/manifests/accepted-state.json'),map=json('data/manifests/authority-map.json');
   check(index.schema_version===4&&index.current_design_checkpoint==='0004','Schema/checkpoint must be 4/0004');
   check(!('utility_structure'in index)&&!('black'in index)&&!('cycle_01'in index),'High-level state must point to detailed datasets');
-  check(isDeepStrictEqual(Object.keys(index).sort(),['schema_version','current_design_checkpoint','authority','source','sources','production','source_import_required','open_items','authority_map','datasets','utility_families','migration'].sort()),'High-level index has only declared metadata/pointers');
+  check(isDeepStrictEqual(Object.keys(index).sort(),['schema_version','current_design_checkpoint','authority','source','sources','production','source_import_required','open_items','authority_map','datasets','utility_families','migration','continuity_import'].sort()),'High-level index has only declared metadata/pointers');
   const snapshot=json('provenance/audits/0004-before-state.json');
   const state=loadDesignState(root);const compared=structuredClone(state);
   compared.schema_version=snapshot.schema_version;compared.current_design_checkpoint=snapshot.current_design_checkpoint;
@@ -25,7 +25,7 @@ export function validateNormalization(root) {
   check(isDeepStrictEqual(map.flow,['DESIGN','DATA','GAME','TESTS']),'Authority chain');
   const expectedSpecs=['game','match','board','progression','card-system','cycle-01','field-generators','prime-fields','utilities','utility-transduction','utility-activation','utility-sandbox_activation','utility-draw_deck','utility-recovery','utility-stability','black','black-primes','black-utilities','black-mode','sandbox','generator-geometry','manifolds','fusion','emergent-fields','transduction','collection','economy','ai','multiplayer','rendering','ui-ux'];
   check(isDeepStrictEqual(Object.keys(map.current_specs).sort(),expectedSpecs.sort()),'All expected current-specification homes');
-  const manifest=json('data/manifests/design-checkpoint-0004.json');
+  const manifest=json('data/manifests/current-files.json');
   const markers=new Map();
   for(const p of manifest.files.filter(x=>x.startsWith('design/')&&x.endsWith('.md'))){
    if(!exists(p)){check(false,`Missing design file: ${p}`);continue;}

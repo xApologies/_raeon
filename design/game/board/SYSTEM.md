@@ -1,7 +1,15 @@
-# Board system
+# Genesis Horizon board
 
 <!-- raeon:current-spec board -->
 
-Authority: PROVISIONAL / WORKING DESIGN for board configuration positions. Game objects are represented at board scale; detailed interactions belong to [UI/UX](../../ui_ux/SYSTEM.md).
+Authority: GAME_CANON for the explicitly recovered board objects, zone exclusions, identity and state relationships. Layout/animation direction is WORKING DESIGN; exact geometry, camera and controls remain OPEN.
 
-Board geometry/coordinate contracts remain OPEN. Domain commitment and capacity rules belong to [Sandbox topology](../../topology/sandbox/SYSTEM.md). No platform-dependent rule differences are introduced.
+Each side has a bounded infrastructure band: Deck, Hand, Graveyard. There is no discard pile or exile zone. The opponent occupies the reflected upper side and their hand is hidden. “Discard” names an action, not a new zone. Existing Exchange sends cards to Graveyard; preserve that accepted destination. Unspecified timing and other routing questions remain OPEN.
+
+Immediately above each infrastructure band are three fixed Prime positions. They may animate, activate, shield, degrade and transduce; their screen positions are spatially invariant. The central divider is the Genesis Horizon. The dynamic Configuration Field lies between each Prime band and the Horizon.
+
+Permanent universal Configuration Spaces A/B/C start centered. Sandbox Activation adds temporary spaces such as S1. Spaces redistribute as the population changes and close ranks when a temporary space disappears; its expiry rule is still OPEN. Space identity persists while screen coordinates change. Coordinates are presentation state, never game identity.
+
+Strategic view shows compact EMPTY/CONFIGURING/RESOLVED spaces, unresolved fields, Local Manifolds, relations, Primes and the Horizon. Selecting a space enters detailed configuration view exposing committed Generators and admitted mathematical manipulation. Returning preserves the same state. The views are two projections of one state, never duplicate game state.
+
+[Configuration Space states](../../topology/sandbox/SYSTEM.md), [Generator interaction](../../topology/field_generators/SYSTEM.md), [fusion](../../topology/fusion/SYSTEM.md), [emergence](../../topology/emergent_fields/SYSTEM.md), [UI realization](../../ui_ux/SYSTEM.md), [board data](../../../data/board/genesis-horizon.json).

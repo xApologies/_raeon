@@ -1,4 +1,5 @@
 import {test} from 'node:test';
+import {copyFixtureFile} from './fixture-files.mjs';
 import {loadDesignState} from '../../tools/validators/load-design-state.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -79,8 +80,8 @@ for(const [name,file,mutation,expected]of [
 ])test(name,()=>{
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'raeon-design-test-'));
  try {
-  const inventory=JSON.parse(fs.readFileSync(path.join(root,'data/manifests/design-checkpoint-0004.json'),'utf8'));
-  for(const p of inventory.files){fs.mkdirSync(path.dirname(path.join(dir,p)),{recursive:true});fs.copyFileSync(path.join(root,p),path.join(dir,p));}
+  const inventory=JSON.parse(fs.readFileSync(path.join(root,'data/manifests/current-files.json'),'utf8'));
+  for(const p of inventory.files){fs.mkdirSync(path.dirname(path.join(dir,p)),{recursive:true});copyFixtureFile(root,dir,p);}
   mutation(path.join(dir,file));assert.ok(validateDesignRepository(dir).errors.some(x=>x.includes(expected)));
  } finally {
   const resolved=path.resolve(dir);assert.equal(path.dirname(resolved),path.resolve(os.tmpdir()));assert.ok(path.basename(resolved).startsWith('raeon-design-test-'));fs.rmSync(resolved,{recursive:true,force:true});

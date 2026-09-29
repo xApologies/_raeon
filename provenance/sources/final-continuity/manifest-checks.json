@@ -1,0 +1,302 @@
+[
+  {
+    "manifest": ".",
+    "path": "00_READ_ME_FIRST.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "CODEX_EXECUTION_DIRECTIVE.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "source_imports/GENESIS_PROPAGATION_FULL_CONTINUITY_v8.zip",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "source_imports/PROPAGATION_SOURCE_NOTE.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_delta/01_GENESIS_HORIZON_BOARD.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_delta/02_FIELD_GENERATOR_INTERACTION_RECOVERY.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_delta/03_FIELD_GENERATOR_STATE_MACHINE.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_delta/04_BOARD_RENDERING_RULES.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_delta/05_BLACKGLASS_STUDIOS_CONTEXT.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "git_audit/CURRENT_MAIN_AND_GAPS.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/00_RECOVERY_BOOT.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/01_MASTER_LIVE_MODEL.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/02_CHRONOLOGY_AND_CORRECTIONS.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/03_GAME_CONSTITUTION.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/09_NEXT_THREAD_CHECKLIST.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/10_ALL_IN_ONE_REFERENCE.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/11_REDUNDANT_RECOVERY_ARCHIVE.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/MANIFEST.json",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/mathematics/MANIFOLDS_FUSION_EMERGENCE.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/mathematics/QMO_CHIRALITY_PROPAGATION.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/provenance/DECISION_LEDGER.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/provenance/RECOVERY_AUDIT.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/provenance/SUPERSEDED_AND_REJECTED.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/development/FOUNDATIONAL_BACKLOG.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/development/OPEN_QUESTIONS.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/development/SOURCE_IMPORT_REQUIRED.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/development/VERTICAL_SLICE_PLAN.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/repository/AUTHORITY_MODEL.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/repository/GIT_CONTINUITY.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/product/COLLECTION_ECONOMY_AI_MULTIPLAYER.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/BLACK_SYSTEM.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/CYCLE_01_AND_GENERATORS.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/PRIME_FIELDS_30.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/UTILITIES_50_MASTER.md",
+    "match": true
+  },
+  {
+    "manifest": ".",
+    "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/rendering/VISUAL_PIPELINE.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "00_RECOVERY_BOOT.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "01_MASTER_LIVE_MODEL.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "02_CHRONOLOGY_AND_CORRECTIONS.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "03_GAME_CONSTITUTION.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "09_NEXT_THREAD_CHECKLIST.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "10_ALL_IN_ONE_REFERENCE.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "11_REDUNDANT_RECOVERY_ARCHIVE.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "MANIFEST.json",
+    "match": false
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "development/FOUNDATIONAL_BACKLOG.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "development/OPEN_QUESTIONS.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "development/SOURCE_IMPORT_REQUIRED.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "development/VERTICAL_SLICE_PLAN.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "provenance/DECISION_LEDGER.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "provenance/RECOVERY_AUDIT.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "provenance/SUPERSEDED_AND_REJECTED.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "repository/AUTHORITY_MODEL.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "repository/GIT_CONTINUITY.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "mathematics/MANIFOLDS_FUSION_EMERGENCE.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "mathematics/QMO_CHIRALITY_PROPAGATION.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "cards/BLACK_SYSTEM.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "cards/CYCLE_01_AND_GENERATORS.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "cards/PRIME_FIELDS_30.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "cards/UTILITIES_50_MASTER.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "product/COLLECTION_ECONOMY_AI_MULTIPLAYER.md",
+    "match": true
+  },
+  {
+    "manifest": "thread_recovery\\RAEON_THREAD_RECOVERY_FULL",
+    "path": "rendering/VISUAL_PIPELINE.md",
+    "match": true
+  }
+]

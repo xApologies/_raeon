@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "final-originating-thread-continuity",
+  "date": "2026-09-28",
+  "design_baseline_checkpoint": "0004",
+  "starting_main": "89eb50292b31c204620e21a3456142c1188722b8",
+  "authority": "Item-specific; preserves prior GAME_CANON and OPEN values",
+  "datasets": {
+    "configuration_spaces": "data/topology/configuration-spaces.json",
+    "generator_interaction": "data/cycles/cycle_01/field_generators/interaction.json",
+    "board": "data/board/genesis-horizon.json",
+    "relationships": "data/topology/relationships.json",
+    "prime_working_model": "data/cycles/cycle_01/primes/working-model.json"
+  },
+  "source_receipt": "provenance/sources/final-continuity/receipt.json",
+  "propagation": {
+    "receipt_status": "IMPORTED_SOURCE_EVIDENCE",
+    "integration_status": "UNTESTED",
+    "closed_through_source_claim": "R87",
+    "r88_status": "OPEN",
+    "branch_A": "primitive environmental admissibility data",
+    "branch_B": "derived from closed fractal geometry",
+    "selected_branch": null,
+    "raeon_generator_mapping": "OPEN",
+    "game_catalogs_imported": false
+  },
+  "open_items": [
+    "Resolved manifold reopening/reconfiguration",
+    "Inter-space relation-check timing",
+    "Permanent-base identity/minimum versus fused-space accounting",
+    "Unspecified discard timing/other routing; Exchange still sends cards to Graveyard",
+    "Generator admitted-state/closure/RenderSpec mappings",
+    "R88 environmental generator map",
+    "All prior accepted-state OPEN items remain OPEN"
+  ],
+  "source_import_required": [
+    "Genesis mathematics",
+    "Chirality mathematics",
+    "Propagation mathematics",
+    "QMO definitions and API",
+    "Closure operators",
+    "Transduction mathematics/API",
+    "60 base Local Manifold QMOs",
+    "343 fusion-derived Local Manifold QMOs",
+    "1,691 Emergent Field QMOs",
+    "Deterministic RenderSpec/API packages",
+    "Field Generator QMO data",
+    "Complete 2,094-object QMO atlas",
+    "Cycle Generation Constitution",
+    "Blender-facing manifold atlas/reference material",
+    "Higher-dimensional projection mathematics"
+  ],
+  "source_requirement_note": "Prior categories remain required for complete authoritative raeon integration; Propagation source receipt is now partial evidence, not a claim that the package is absent.",
+  "conflicts": [
+    "fusion-permanent-base",
+    "propagation-scope-mapping",
+    "nested-manifest-self-entry"
+  ],
+  "gameplay_implemented": false,
+  "phase": "PREPRODUCTION"
+}

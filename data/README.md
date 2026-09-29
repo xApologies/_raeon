@@ -9,3 +9,5 @@ Data encodes accepted upstream design/math; it never silently defines new rules.
 - [RenderSpec source boundary](render_specs/direction.json), [schemas](schemas/README.md)
 
 Detailed data preserves checkpoint-0003 values exactly. [Schema migration](schemas/ACCEPTED_STATE_V4.md) describes pointers and lossless reconstruction. Historical manifests remain historical; do not use them as current runtime catalogs.
+
+[Final continuity datasets](manifests/final-continuity-import.json) extend the preserved checkpoint-0004 payload with current Configuration Space, Generator interaction, board and relationship detail.

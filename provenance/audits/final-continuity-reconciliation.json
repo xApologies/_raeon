@@ -1,0 +1,218 @@
+[
+  {
+    "artifact": "00_READ_ME_FIRST.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/00_READ_ME_FIRST.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "CODEX_EXECUTION_DIRECTIVE.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/CODEX_EXECUTION_DIRECTIVE.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "git_audit/CURRENT_MAIN_AND_GAPS.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/git_audit/CURRENT_MAIN_AND_GAPS.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "MANIFEST.json",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/MANIFEST.json",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "source_imports/GENESIS_PROPAGATION_FULL_CONTINUITY_v8.zip",
+    "classification": "Imported source evidence; integration UNTESTED; R88 OPEN",
+    "destination": "mathematics/propagation/README.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "source_imports/PROPAGATION_SOURCE_NOTE.md",
+    "classification": "Imported source evidence; integration UNTESTED; R88 OPEN",
+    "destination": "mathematics/propagation/README.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_delta/01_GENESIS_HORIZON_BOARD.md",
+    "classification": "GAME_CANON recovered constraints; WORKING DESIGN details / OPEN as marked",
+    "destination": "design/game/board/SYSTEM.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_delta/02_FIELD_GENERATOR_INTERACTION_RECOVERY.md",
+    "classification": "GAME_CANON recovered constraints; WORKING DESIGN details / OPEN as marked",
+    "destination": "design/topology/field_generators/SYSTEM.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_delta/03_FIELD_GENERATOR_STATE_MACHINE.md",
+    "classification": "GAME_CANON recovered constraints; WORKING DESIGN details / OPEN as marked",
+    "destination": "design/topology/sandbox/SYSTEM.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_delta/04_BOARD_RENDERING_RULES.md",
+    "classification": "GAME_CANON recovered constraints; WORKING DESIGN details / OPEN as marked",
+    "destination": "design/ui_ux/SYSTEM.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_delta/05_BLACKGLASS_STUDIOS_CONTEXT.md",
+    "classification": "GAME_CANON recovered constraints; WORKING DESIGN details / OPEN as marked",
+    "destination": "content/BRANDING.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/00_RECOVERY_BOOT.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/00_RECOVERY_BOOT.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/01_MASTER_LIVE_MODEL.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/01_MASTER_LIVE_MODEL.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/02_CHRONOLOGY_AND_CORRECTIONS.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/02_CHRONOLOGY_AND_CORRECTIONS.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/03_GAME_CONSTITUTION.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/03_GAME_CONSTITUTION.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/09_NEXT_THREAD_CHECKLIST.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/09_NEXT_THREAD_CHECKLIST.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/10_ALL_IN_ONE_REFERENCE.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/10_ALL_IN_ONE_REFERENCE.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/11_REDUNDANT_RECOVERY_ARCHIVE.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/11_REDUNDANT_RECOVERY_ARCHIVE.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/BLACK_SYSTEM.md",
+    "classification": "Reconciled with existing GAME_CANON; working/missing-source distinctions retained",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/BLACK_SYSTEM.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/CYCLE_01_AND_GENERATORS.md",
+    "classification": "Reconciled with existing GAME_CANON; working/missing-source distinctions retained",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/CYCLE_01_AND_GENERATORS.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/PRIME_FIELDS_30.md",
+    "classification": "PROVISIONAL; catalog OPEN",
+    "destination": "design/cards/cycle_01/primes/SYSTEM.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/UTILITIES_50_MASTER.md",
+    "classification": "Reconciled with existing GAME_CANON; working/missing-source distinctions retained",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/UTILITIES_50_MASTER.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/development/FOUNDATIONAL_BACKLOG.md",
+    "classification": "OPEN / SOURCE_IMPORT_REQUIRED / PROVISIONAL planning",
+    "destination": "development/FOUNDATIONAL_BACKLOG.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/development/OPEN_QUESTIONS.md",
+    "classification": "OPEN / SOURCE_IMPORT_REQUIRED / PROVISIONAL planning",
+    "destination": "development/FOUNDATIONAL_BACKLOG.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/development/SOURCE_IMPORT_REQUIRED.md",
+    "classification": "OPEN / SOURCE_IMPORT_REQUIRED / PROVISIONAL planning",
+    "destination": "development/FOUNDATIONAL_BACKLOG.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/development/VERTICAL_SLICE_PLAN.md",
+    "classification": "OPEN / SOURCE_IMPORT_REQUIRED / PROVISIONAL planning",
+    "destination": "development/FOUNDATIONAL_BACKLOG.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/MANIFEST.json",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/MANIFEST.json",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/mathematics/MANIFOLDS_FUSION_EMERGENCE.md",
+    "classification": "Reconciled with existing GAME_CANON; working/missing-source distinctions retained",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/mathematics/MANIFOLDS_FUSION_EMERGENCE.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/mathematics/QMO_CHIRALITY_PROPAGATION.md",
+    "classification": "Reconciled with existing GAME_CANON; working/missing-source distinctions retained",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/mathematics/QMO_CHIRALITY_PROPAGATION.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/product/COLLECTION_ECONOMY_AI_MULTIPLAYER.md",
+    "classification": "Reconciled with existing GAME_CANON; working/missing-source distinctions retained",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/product/COLLECTION_ECONOMY_AI_MULTIPLAYER.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/provenance/DECISION_LEDGER.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/provenance/DECISION_LEDGER.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/provenance/RECOVERY_AUDIT.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/provenance/RECOVERY_AUDIT.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/provenance/SUPERSEDED_AND_REJECTED.md",
+    "classification": "SUPERSEDED / REJECTED history",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/provenance/SUPERSEDED_AND_REJECTED.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/rendering/VISUAL_PIPELINE.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/rendering/VISUAL_PIPELINE.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/repository/AUTHORITY_MODEL.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/repository/AUTHORITY_MODEL.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  },
+  {
+    "artifact": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/repository/GIT_CONTINUITY.md",
+    "classification": "Historical recovery / evidence",
+    "destination": "provenance/sources/final-continuity/handoff/thread_recovery/RAEON_THREAD_RECOVERY_FULL/repository/GIT_CONTINUITY.md",
+    "disposition": "Preserved exact source; reconciled without replacing higher-authority current rules"
+  }
+]

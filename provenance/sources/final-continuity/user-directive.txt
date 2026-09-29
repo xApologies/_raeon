@@ -1,0 +1,856 @@
+RAEON — FINAL ORIGINATING-THREAD CONTINUITY IMPORT
+
+TARGET REPOSITORY:
+https://github.com/xApologies/_raeon
+
+CANONICAL BRANCH:
+main
+
+ATTACHED HANDOFF:
+raeon_codex_final_continuity_import.zip
+
+
+MISSION
+
+The attached ZIP is the final exhaustive recovery package from the originating
+raeon design thread.
+
+Its purpose is to move the recoverable project state from that thread into the
+canonical GitHub repository before development continues in a new chat thread.
+
+This is NOT a repository bootstrap.
+
+This is NOT a repository redesign.
+
+This is NOT permission to invent missing game mechanics or mathematics.
+
+The repository already has a normalized architecture.
+
+Your job is to:
+
+    RECOVER
+    INSPECT
+    RECONCILE
+    INTEGRATE
+    VALIDATE
+    UPDATE MAIN
+
+Do not merely summarize the ZIP.
+
+ACTUALLY UPDATE THE REPOSITORY.
+
+
+======================================================================
+1. EXTRACT AND READ THE HANDOFF
+======================================================================
+
+Extract:
+
+    raeon_codex_final_continuity_import.zip
+
+into a temporary working directory.
+
+Begin with:
+
+    RAEON_CODEX_FINAL_CONTINUITY_IMPORT/00_READ_ME_FIRST.md
+
+Then read:
+
+    RAEON_CODEX_FINAL_CONTINUITY_IMPORT/CODEX_EXECUTION_DIRECTIVE.md
+
+Then inspect EVERY artifact in the package.
+
+This includes:
+
+    thread_recovery/
+    thread_delta/
+    git_audit/
+    source_imports/
+    MANIFEST.json
+
+Do not skip the nested recovery material.
+
+Do not skip the supplied Propagation Engine package.
+
+
+======================================================================
+2. INSPECT CURRENT GITHUB MAIN
+======================================================================
+
+Fetch:
+
+    https://github.com/xApologies/_raeon
+
+and inspect current:
+
+    main
+
+before making changes.
+
+Treat current main as canonical committed state.
+
+The recovery package contains thread state that may be newer or more detailed,
+but it must be RECONCILED against Git rather than blindly overwriting Git.
+
+Preserve the existing normalized repository architecture:
+
+    DESIGN
+      ->
+    DATA
+      ->
+    GAME
+      ->
+    TESTS
+
+with:
+
+    MATHEMATICS = mathematical legality
+    DEVELOPMENT = maturity/status/gates
+    PROVENANCE = history/sources/decisions
+    CONTENT = presentation assets
+    PLATFORM = platform integration
+    PRODUCTION = lifecycle state
+
+
+======================================================================
+3. AUTHORITY / RECONCILIATION RULE
+======================================================================
+
+For every recovered item classify it as appropriate:
+
+    GAME_CANON
+    PROVISIONAL / WORKING DESIGN
+    OPEN
+    SOURCE_IMPORT_REQUIRED
+    UNTESTED
+    SUPERSEDED
+    REJECTED
+
+Do NOT turn working discussion into GAME_CANON merely because it appears in the
+recovery package.
+
+Do NOT downgrade an accepted Git rule merely because older recovery prose differs.
+
+If a genuine conflict exists:
+
+    preserve the conflict
+    document it
+    do not silently choose
+
+The foundational law remains:
+
+    THE MATHEMATICS IS THE PERMISSION SYSTEM.
+
+
+======================================================================
+4. FIELD GENERATOR CONTINUITY — HIGH PRIORITY
+======================================================================
+
+Current Git preserves the Field Generator skeleton but not all of the interaction
+mathematics recovered from the originating thread.
+
+Integrate the recovered Field Generator model into the appropriate current
+repository specifications.
+
+Preserve:
+
+    120 Field Generator identities
+
+    Field Generator identity copy limit = 2
+
+    maximum Field Generator rank = White
+
+    Black Field Generators do not exist
+
+A Field Generator is a first-class:
+
+    QMO / mathematical configuration object
+
+not merely an arbitrary spell/effect card.
+
+Field Generators are intended to derive from:
+
+    Chirality Fabric
+        ->
+    Propagation Engine
+        ->
+    QMO landscape
+        ->
+    Field Generator catalog
+
+Do NOT manually fabricate FG-001 through FG-120.
+
+
+======================================================================
+5. CONFIGURATION SPACE MODEL
+======================================================================
+
+Use:
+
+    Configuration Space
+
+as the general board/system term.
+
+Each player begins with three permanent universal Configuration Spaces:
+
+    A
+    B
+    C
+
+Historically these have also been called Sandboxes / Fields A-B-C.
+
+A Sandbox Activation Utility creates an additional temporary Configuration Space.
+
+Thus:
+
+    Configuration Space = general object
+
+    Sandbox Activation = mechanic/card that creates additional bounded
+                         Configuration Space
+
+
+======================================================================
+6. FIELD GENERATOR CONFIGURATION
+======================================================================
+
+A player selects a Configuration Space and commits Field Generators into it.
+
+Working mathematical representation:
+
+    C =
+    (
+        C_i;
+        FG_1^(o_1),
+        FG_2^(o_2),
+        ...,
+        FG_n^(o_n)
+    )
+
+where:
+
+    C_i = Configuration Space
+
+    FG_i = Field Generator QMO
+
+    o_i = currently selected admissible orientation/configuration state
+
+Committed individual Field Generators cannot simply be extracted and moved into
+another Configuration Space.
+
+Whole configuration domains may participate in fusion/merge.
+
+
+======================================================================
+7. ORIENTATION / ROTATION
+======================================================================
+
+The originating thread established player manipulation of Generator
+orientation/configuration.
+
+However:
+
+DO NOT canonize arbitrary free XYZ rotation for every Generator.
+
+The correct recovered principle is:
+
+    The player may move among orientation/configuration states admitted by the
+    Generator/domain/QMO model.
+
+The visual interaction may appear rotational.
+
+The mathematical state is authoritative.
+
+Changing orientation changes configuration state, not merely rendering.
+
+
+======================================================================
+8. CLOSURE
+======================================================================
+
+The QMO/closure system evaluates the active Generator configuration.
+
+Only AFTER closure returns VALID does Generator count assign ordinary manifold color.
+
+    3 Generators -> Red
+    4 -> Orange
+    5 -> Yellow
+    6 -> Green
+    7 -> Blue
+    8 -> Violet
+
+Therefore:
+
+    8 Generators != automatically Violet
+
+Instead:
+
+    VALID closure with 8 participating Generators
+        ->
+    Violet Local Manifold
+
+Arithmetic does not authorize topology.
+
+
+======================================================================
+9. CONFIGURATION-SPACE STATES
+======================================================================
+
+Preserve at minimum:
+
+    EMPTY
+
+    CONFIGURING
+
+    RESOLVED
+
+EMPTY:
+    available Configuration Space
+    no committed Generator configuration
+
+CONFIGURING:
+    one or more Generators committed
+    no accepted closed Local Manifold yet
+
+RESOLVED:
+    QMO closure succeeded
+    Configuration Space presents the resulting Local Manifold
+
+A CONFIGURING space is still an active visual/game object.
+
+Do NOT treat unresolved configuration as an empty slot.
+
+Failed/non-closing configuration does NOT automatically send cards to Graveyard.
+
+No such penalty has been canonized.
+
+Exact rules for reopening/reconfiguring a RESOLVED manifold remain OPEN.
+
+
+======================================================================
+10. MATHEMATICAL OUTCOMES
+======================================================================
+
+Preserve:
+
+    VALID
+    TERMINATES
+    NOT_APPLICABLE
+    OPEN
+    UNTESTED
+
+Missing data is NOT automatically:
+
+    TERMINATES
+
+Negative mathematical knowledge is first-class state.
+
+
+======================================================================
+11. MANIFOLD LANDSCAPE
+======================================================================
+
+Preserve:
+
+Base Local Manifold basis:
+
+    15 Red
+    13 Orange
+    11 Yellow
+     9 Green
+     7 Blue
+     5 Violet
+    ---------
+     60
+
+Accepted external inventory:
+
+      60 base Local Manifold QMOs
+     343 fusion-derived Local Manifold QMOs
+   1,691 Emergent Field QMOs
+   ---------------------------
+   2,094 render-relevant field/manifold QMOs
+
+Do not fabricate the actual objects if they are absent.
+
+Use SOURCE_IMPORT_REQUIRED where appropriate.
+
+
+======================================================================
+12. FUSION
+======================================================================
+
+Preserve:
+
+    M_i ⊕ M_j -> M*
+
+when mathematically admitted.
+
+Fusion produces:
+
+    DerivedLocalManifoldQMO
+
+On the strategic board, two resolved Configuration Spaces may converge and become
+one derived Configuration Space representing M*.
+
+Conceptually:
+
+    two independent configuration spaces
+        ->
+    one derived configuration space
+
+The supports do not continue as independent Local Manifolds while fused.
+
+Arithmetic/color compatibility alone does not authorize fusion.
+
+
+======================================================================
+13. EMERGENCE
+======================================================================
+
+Preserve:
+
+    M_A + M_B
+        ->
+    M_A + M_B + E
+
+when mathematically admitted.
+
+Unlike fusion:
+
+    M_A remains
+    M_B remains
+
+E is relational/support-dependent.
+
+Emergent Fields:
+
+    cannot be independently attacked
+    cannot be independently destroyed
+    disappear/become inaccessible when required support is broken
+
+Emergent Amplification does not alter that rule.
+
+
+======================================================================
+14. GENESIS HORIZON BOARD
+======================================================================
+
+Integrate the newly recovered board model.
+
+The central board divider is:
+
+    GENESIS HORIZON
+
+Each player's side contains:
+
+PLAYER INFRASTRUCTURE BAND:
+
+    Deck
+    Hand
+    Graveyard
+
+There is currently:
+
+    NO discard pile
+    NO exile zone
+
+Do not add them.
+
+Above the infrastructure band:
+
+    three fixed Prime positions
+
+Prime screen positions are spatially invariant.
+
+Between the Primes and Genesis Horizon:
+
+    dynamic Configuration Field
+
+
+======================================================================
+15. ELASTIC CONFIGURATION FIELD
+======================================================================
+
+Configuration Spaces are dynamically positioned.
+
+At match start:
+
+    A
+    B
+    C
+
+are centered.
+
+If temporary Sandbox S1 is created:
+
+    A
+    B
+    C
+    S1
+
+reorganize dynamically.
+
+Additional spaces continue to redistribute.
+
+If a temporary space disappears:
+
+    remaining spaces close ranks
+
+Configuration Space identity persists while its screen position changes.
+
+Screen coordinates are presentation state.
+
+They are NOT game identity.
+
+
+======================================================================
+16. STRATEGIC VIEW / CONFIGURATION VIEW
+======================================================================
+
+The board has two representations of the same underlying state.
+
+STRATEGIC VIEW:
+
+    compact Configuration Spaces
+    unresolved fields
+    resolved Local Manifolds
+    relationships
+    Primes
+    Genesis Horizon
+
+CONFIGURATION VIEW:
+
+    committed Field Generators
+    mathematical configuration
+    admitted orientation/configuration manipulation
+
+Selecting a Configuration Space enters detailed configuration view.
+
+Leaving it returns to strategic view.
+
+No duplicate game state is created.
+
+These are two visual projections of the same state.
+
+
+======================================================================
+17. VISUAL STATE
+======================================================================
+
+The Configuration Field is the primary dynamic visual region.
+
+Static/bounded:
+
+    Deck
+    Hand
+    Graveyard
+    Prime positions
+
+Dynamic:
+
+    Configuration Spaces
+    unresolved topology
+    Local Manifolds
+    temporary Sandboxes
+    QMO connections
+    fusion
+    emergence
+
+Visual relationships must correspond to actual state.
+
+Rendering cannot imply mathematical legality that does not exist.
+
+
+======================================================================
+18. RENDERING PIPELINE
+======================================================================
+
+Preserve:
+
+    QMO
+      ->
+    deterministic RenderSpec
+      ->
+    Blender procedural geometry
+      ->
+    mesh
+      ->
+    runtime GPU renderer
+      ->
+    animated manifold
+
+If visual geometry contradicts QMO state:
+
+    render is wrong
+
+not:
+
+    QMO changed
+
+Higher-dimensional mathematical state may influence the 3D projection, but Blender
+does not literally render five spatial dimensions.
+
+
+======================================================================
+19. PROPAGATION ENGINE SOURCE PACKAGE
+======================================================================
+
+The handoff contains the supplied Propagation Engine continuity package.
+
+Inspect it directly.
+
+Preserve its provenance.
+
+Use it as source material for Field Generator/QMO formalization where appropriate.
+
+Do NOT silently promote every external research statement into raeon GAME_CANON.
+
+In particular, preserve unresolved mathematical boundaries.
+
+The supplied source lineage includes work through R83-R88.
+
+R88 contains an intentionally unresolved environmental/bandwidth generator-map
+question.
+
+Do NOT silently choose between unresolved branches.
+
+
+======================================================================
+20. EXISTING GAME DESIGN MUST SURVIVE
+======================================================================
+
+Do not damage or redesign existing accepted state, including:
+
+    200-card Cycle
+
+    120 Field Generators
+
+    30 Prime Fields
+
+    50 Utilities
+
+    60-card deck
+
+    Utility structural catalog
+
+    Sandbox capacities
+
+    Black rank
+
+    Black Mode
+
+    Fourth Prime support rule
+
+    fusion/emergence distinction
+
+    QMO inventory counts
+
+    collection direction
+
+    multiplayer direction
+
+    rendering direction
+
+
+======================================================================
+21. DO NOT INVENT REMAINING GAME RULES
+======================================================================
+
+Still OPEN unless current Git proves otherwise:
+
+    starting hand
+
+    maximum hand
+
+    mulligan
+
+    normal draw-per-turn
+
+    first-player rule
+
+    complete turn phases
+
+    ordinary refresh timing
+
+    exact Utility timing windows
+
+    exact victory/loss condition
+
+    deck exhaustion
+
+    temporary Sandbox expiry
+
+    actual 30-card Prime catalog
+
+    final UT-001 through UT-050 assignment
+
+Do not solve these during continuity import.
+
+
+======================================================================
+22. BLACKGLASS STUDIOS CONTEXT
+======================================================================
+
+The originating thread established:
+
+    BLACKGLASS
+
+as the umbrella organization.
+
+Game-development identity:
+
+    Blackglass Studios
+
+Tagline:
+
+    Build Worlds Beyond.
+
+This is branding context.
+
+Do NOT confuse:
+
+    BLACKGLASS / Blackglass Studios
+
+with:
+
+    raeon Black rank / Black Mode
+
+or with:
+
+    pre-existing BLACKGLASS technical architecture
+
+Do not modify gameplay merely because this branding exists.
+
+
+======================================================================
+23. REPOSITORY UPDATE
+======================================================================
+
+Integrate recovered information into the EXISTING normalized repository structure.
+
+Do not create another documentation dump.
+
+Use current authoritative homes.
+
+Update:
+
+    design/
+    data/
+    development/
+    mathematics/source boundaries
+    provenance/
+
+where appropriate.
+
+GAME/ remains implementation-only.
+
+TESTS/ remains verification.
+
+Do not claim gameplay implementation.
+
+
+======================================================================
+24. VALIDATION
+======================================================================
+
+Run all existing repository validators.
+
+At minimum run the repository's current equivalents of:
+
+    validate-bootstrap
+    validate-design-state
+    validate-normalization
+    regression tests
+
+Also run:
+
+    git diff --check
+
+Extend validation only where appropriate for newly formalized structural invariants.
+
+Do NOT claim validators prove the external mathematics.
+
+
+======================================================================
+25. GIT WORKFLOW
+======================================================================
+
+Use a temporary working branch if needed.
+
+After successful reconciliation and validation:
+
+    merge/promote accepted work into main
+
+Push:
+
+    main
+
+Verify all accepted commits are reachable from main.
+
+Delete the temporary remote branch after successful promotion if safe.
+
+Do NOT leave accepted state stranded on another feature/checkpoint branch.
+
+Do NOT change GitHub default branch away from:
+
+    main
+
+
+======================================================================
+26. FINAL VERIFICATION
+======================================================================
+
+After pushing:
+
+Fetch the repository again WITHOUT specifying a branch.
+
+Verify default access returns:
+
+    main
+
+Verify the newly recovered Field Generator and Genesis Horizon material is visible
+from default checkout.
+
+The new chat thread must be able to recover the current game from Git without
+requiring the originating thread.
+
+
+======================================================================
+27. FINAL REPORT
+======================================================================
+
+Report:
+
+1. starting main SHA
+2. ending main SHA
+3. temporary branch used
+4. whether temporary branch was deleted
+5. files created
+6. files modified
+7. files moved
+8. files deleted
+9. Field Generator mechanics integrated
+10. Genesis Horizon board mechanics integrated
+11. Propagation source material imported/referenced
+12. machine-readable data changes
+13. provenance changes
+14. validators executed
+15. validation results
+16. regression results
+17. OPEN items remaining
+18. SOURCE_IMPORT_REQUIRED items remaining
+19. conflicts discovered
+20. conflict resolutions
+21. default-branch verification
+
+Explicitly state:
+
+    MAIN IS THE CANONICAL RAEON STATE
+
+    THE ORIGINATING THREAD CONTINUITY IMPORT IS COMPLETE
+
+    NO UNRESOLVED MATHEMATICS WAS FABRICATED
+
+    WHOLE-GAME PHASE REMAINS PREPRODUCTION
+
+Begin execution now.

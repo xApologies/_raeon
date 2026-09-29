@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "design": "design/game/board/SYSTEM.md",
+  "authority": "GAME_CANON",
+  "values": {
+    "center_divider": "Genesis Horizon",
+    "infrastructure": [
+      "Deck",
+      "Hand",
+      "Graveyard"
+    ],
+    "discard_pile": false,
+    "exile_zone": false,
+    "prime_positions": 3,
+    "prime_positions_fixed": true,
+    "opponent_hand_hidden": true,
+    "configuration_field": "between Prime band and Genesis Horizon",
+    "starting_spaces": [
+      "A",
+      "B",
+      "C"
+    ],
+    "space_layout": "elastic; center and redistribute on space population changes",
+    "identity_persists_on_reposition": true,
+    "screen_coordinates_are_presentation": true,
+    "views": [
+      "strategic",
+      "configuration"
+    ],
+    "shared_underlying_state": true,
+    "configuring_space_visible": true,
+    "exact_layout_camera_controls": "OPEN",
+    "animation_direction_authority": "WORKING DESIGN"
+  }
+}

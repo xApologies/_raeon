@@ -35,3 +35,10 @@
 - Record supplied rules/inventory without inventing missing objects.
 - Add local inbox policy, provenance, inventory, checkpoint, validator.
 - Keep PREPRODUCTION; no game systems or phases are completed.
+
+## Final originating-thread continuity import (2026-09-28)
+
+- Recover Configuration Space/Generator interaction, Genesis Horizon board and foundational backlog in existing homes.
+- Preserve Utility mechanics, accepted data, source history, module status and PREPRODUCTION.
+- Import supplied Propagation v8 as source evidence; retain R88 and game-mapping boundaries as OPEN.
+- Add structural continuity validation; no gameplay/math implementation or proof claimed.

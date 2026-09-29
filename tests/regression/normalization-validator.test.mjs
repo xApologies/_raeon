@@ -1,4 +1,5 @@
 import {test} from 'node:test';
+import {copyFixtureFile} from './fixture-files.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -30,7 +31,7 @@ const cases=[
 for(const [name,mutate,expected]of cases)test(name,()=>{
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'raeon-normalization-test-'));
  try{
-  for(const p of read(root,'data/manifests/design-checkpoint-0004.json').files){fs.mkdirSync(path.dirname(path.join(dir,p)),{recursive:true});fs.copyFileSync(path.join(root,p),path.join(dir,p));}
+  for(const p of read(root,'data/manifests/current-files.json').files){fs.mkdirSync(path.dirname(path.join(dir,p)),{recursive:true});copyFixtureFile(root,dir,p);}
   const init=spawnSync('git',['init',dir],{encoding:'utf8',windowsHide:true});assert.equal(init.status,0,init.stderr);
   mutate(dir);const result=validateNormalization(dir);if(expected)assert.ok(result.errors.some(x=>x.includes(expected)),JSON.stringify(result.errors));else assert.deepEqual(result.errors,[]);
  }finally{const resolved=path.resolve(dir);assert.equal(path.dirname(resolved),path.resolve(os.tmpdir()));assert.ok(path.basename(resolved).startsWith('raeon-normalization-test-'));fs.rmSync(resolved,{recursive:true,force:true});}

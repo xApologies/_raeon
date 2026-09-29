@@ -1,0 +1,87 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 526,
+    "sha256": "e67a3274b757b325b394d7d35876930c97d2e44fb450648e87a1c326bc27042d"
+  },
+  {
+    "path": "api/qmo_api.py",
+    "bytes": 1411,
+    "sha256": "e03654b92672c3690477392b7195a48634eb506b75ad46fc32d350f9ab79b787"
+  },
+  {
+    "path": "database/PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8.sqlite",
+    "bytes": 36864,
+    "sha256": "e53f2a7c0b546419a3af24ef307f1a0b0ffc71377173e613bbf5b859866eed09"
+  },
+  {
+    "path": "machine/LIVE_STATE.json",
+    "bytes": 368,
+    "sha256": "74c7434cc530516b87f7c04a598808fe73f6af2f972df86cf0eb492c79a57feb"
+  },
+  {
+    "path": "provenance/CHRONOLOGY.json",
+    "bytes": 1148,
+    "sha256": "736dccdb4e491fd117592e7cc4d92aa8abecd4c7306b318019732877b080af74"
+  },
+  {
+    "path": "provenance/RUN_RECEIPTS.json",
+    "bytes": 2379,
+    "sha256": "3742bf2503fb744bb8509510822d46dd612cd4703300dc15896d04f2c1037459"
+  },
+  {
+    "path": "recovery/RECOVERY_PROMPT.md",
+    "bytes": 918,
+    "sha256": "8258fc6699ad259b81d7aad84bb76fa34c087b762923a5f11231159f70e108f2"
+  },
+  {
+    "path": "runs/Bandwidth Algebra(2).zip",
+    "bytes": 1163433,
+    "sha256": "2672e910b989db5d03ff419c3024f50c35b9e1ed9eb47ab720811177514f3b53"
+  },
+  {
+    "path": "runs/GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828.zip",
+    "bytes": 3642,
+    "sha256": "10c9cc870c2dfe1f77e14b5393cdfe0fbf4f5dd685a9675afb1d076f29947842"
+  },
+  {
+    "path": "runs/GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828.zip",
+    "bytes": 3757,
+    "sha256": "712b2d174ed412d3991b08a7011a3af46c059707e6f2ff1933ff87ee241ba9ac"
+  },
+  {
+    "path": "runs/GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828.zip",
+    "bytes": 3777,
+    "sha256": "568c5d9636922d1973932298607bc5245f5e9fd2d157257febd7e2406b4d6edd"
+  },
+  {
+    "path": "runs/GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828.zip",
+    "bytes": 4122,
+    "sha256": "22799cf5472a78135bd5a6160cf07095c2dfd3cd347994703404c09adea3abf4"
+  },
+  {
+    "path": "runs/GENESIS_FIELD_RESOLUTION_BANDWIDTH_QMO_API_v1_0_20260827.zip",
+    "bytes": 17619,
+    "sha256": "8461a4f5e40dcf97d2cc6ec2dfef474dc81805b2fda93e4db0d83fb2f1b36d4d"
+  },
+  {
+    "path": "runs/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_UPDATE_v7_0_20260828.zip",
+    "bytes": 232415400,
+    "sha256": "5d04bb2a497f2a26552201138f22d3d6c30e2d84a65f1f6af75a2db4fcc41d86"
+  },
+  {
+    "path": "runs/GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828.zip",
+    "bytes": 3831,
+    "sha256": "655024ab61120ed6d71af68e13fe565e31293666579b563e74f6135dae1c07a6"
+  },
+  {
+    "path": "runs/GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828.zip",
+    "bytes": 3711,
+    "sha256": "b2bd6f7ec87700faa2b0cc29c5b4eb14f945fa9576295f8612a9ae6bb0a854f6"
+  },
+  {
+    "path": "state/CANONICAL_FULL_CONTINUITY.md",
+    "bytes": 3616,
+    "sha256": "f48b307d6d0e14ef0ae86b3a11afdf515fe044be2d9113188364284832ecb2fe"
+  }
+]

@@ -10,3 +10,7 @@
 
 /provenance/sources/0004-CODEX_PROMPT.md -text whitespace=cr-at-eol
 /provenance/sources/0004-handoff-README.md -text whitespace=cr-at-eol
+
+/provenance/sources/final-continuity/** -text whitespace=cr-at-eol
+/mathematics/propagation/source_v8/** -text whitespace=cr-at-eol
+/provenance/sources/final-continuity/handoff/source_imports/GENESIS_PROPAGATION_FULL_CONTINUITY_v8.zip filter=lfs diff=lfs merge=lfs -text

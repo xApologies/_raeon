@@ -54,3 +54,7 @@ See [current specification](../../../design/topology/sandbox/SYSTEM.md) and [OPE
 ## Validation requirements
 
 [System test boundary](../../../tests/gameplay/sandbox/README.md) is UNTESTED. Repository validators check architecture and design-data consistency, not subsystem correctness. [Provenance and migration evidence](../../../provenance/checkpoints/0004-repository-normalization.md).
+
+## Continuity evidence
+
+[Final continuity reconciliation](../../../provenance/audits/final-continuity-import.md) adds design/source context. Current maturity and all gate statuses remain unchanged; external source PASS/CLOSED claims are not module completion evidence.

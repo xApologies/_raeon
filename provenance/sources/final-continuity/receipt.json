@@ -1,0 +1,25 @@
+{
+  "received": "2026-09-28",
+  "origin": "User-supplied originating-thread recovery handoff",
+  "authority": "Source evidence; raeon acceptance is item-specific in the reconciliation audit",
+  "permission": "User explicitly authorized import into xApologies/_raeon; no broader license inferred",
+  "starting_main": "89eb50292b31c204620e21a3456142c1188722b8",
+  "outer_zip_sha256": "e0942b2492612b5692ab2be12309b359ba6c58b73feb62a9716e4ffc98782da2",
+  "propagation_archive": {
+    "path": "provenance/sources/final-continuity/handoff/source_imports/GENESIS_PROPAGATION_FULL_CONTINUITY_v8.zip",
+    "bytes": 233685828,
+    "sha256": "4ecef0cc37f61292403311078426674ff874e4f4d1814a8ed468d59d0e62eae6",
+    "storage": "Git LFS"
+  },
+  "inspection": {
+    "archive_entries": 6523,
+    "unique_blobs": 5526,
+    "archive_named_blobs": 236,
+    "appledouble_metadata_not_zip": 86,
+    "valid_zip_blobs": 150,
+    "source_code_executed": false,
+    "mathematics_verified": false
+  },
+  "manifest_exception": "Nested recovery MANIFEST.json has a stale self-entry; outer manifest matches all supplied files. Preserve original, do not repair evidence.",
+  "redundancy": "All-in-one contains 22 source sections; redundant archive repeats it exactly three times."
+}

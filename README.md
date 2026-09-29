@@ -40,3 +40,9 @@ node --test tests/regression/*.test.mjs
 ```
 
 Node and Git required. Checks verify structure, preserved design data, migration and provenance; they do not validate QMO mathematics, gameplay balance, final timing, rendering, AI or multiplayer correctness. No game launch command exists.
+
+## Continue from current state
+
+Start with [Genesis Horizon board](design/game/board/SYSTEM.md), [Field Generator configuration](design/topology/field_generators/SYSTEM.md), [foundational backlog](development/FOUNDATIONAL_BACKLOG.md), and [Propagation source boundary](mathematics/propagation/README.md). The originating-thread material is reconciled in the [continuity audit](provenance/audits/final-continuity-import.md). Mathematical integration and gameplay remain unimplemented. Git LFS retrieves the full source archive; readable current specifications and key source extracts are ordinary Git files.
+
+Continuity verification: `node tools/validators/validate-continuity.mjs` checks recovered structure and source integrity, not external mathematics.

@@ -1,0 +1,5 @@
+{
+  "pure_resolution_no_motion": "PASS",
+  "distance_readout_vs_distance": "PASS",
+  "propagation_required_for_relation_change": "PASS"
+}

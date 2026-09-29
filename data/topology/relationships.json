@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "design": "design/topology/fusion/SYSTEM.md",
+  "authority": "GAME_CANON",
+  "values": {
+    "fusion": {
+      "equation": "M_i ⊕ M_j -> M*",
+      "requires_mathematical_admission": true,
+      "result": "DerivedLocalManifoldQMO",
+      "resolved_spaces_before": 2,
+      "derived_spaces_after": 1,
+      "supports_independently_operational": false,
+      "permanent_base_identity_accounting": "OPEN"
+    },
+    "emergence": {
+      "equation": "M_A + M_B -> M_A + M_B + E",
+      "requires_mathematical_admission": true,
+      "supports_remain_distinct": true,
+      "directly_attackable": false,
+      "independently_destroyable": false,
+      "required_support_loss": "removed/inaccessible",
+      "amplification_changes_support_rule": false
+    },
+    "relation_check_timing": "OPEN"
+  }
+}

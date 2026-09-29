@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "design": "design/topology/sandbox/SYSTEM.md",
+  "authority": "GAME_CANON",
+  "values": {
+    "general_term": "Configuration Space",
+    "historical_aliases": [
+      "Sandbox",
+      "Field A/B/C"
+    ],
+    "permanent_ids": [
+      "A",
+      "B",
+      "C"
+    ],
+    "permanent_universal": true,
+    "minimum_states": [
+      "EMPTY",
+      "CONFIGURING",
+      "RESOLVED"
+    ],
+    "transitions": {
+      "first_commitment": "EMPTY -> CONFIGURING",
+      "valid_closure": "CONFIGURING -> RESOLVED"
+    },
+    "configuring_is_active": true,
+    "failed_closure_auto_graveyard": false,
+    "screen_position_is_identity": false,
+    "resolved_reopening": "OPEN",
+    "temporary_expiry": "OPEN",
+    "fusion_permanent_base_accounting": "OPEN",
+    "provisional_states": [
+      "FUSED",
+      "INACTIVE/REMOVED"
+    ],
+    "provisional_generator_lifecycle": [
+      "IN_HAND",
+      "COMMITTED",
+      "CONFIGURED",
+      "CONTRIBUTING_TO_RESOLVED_MANIFOLD"
+    ],
+    "graveyard_requires_separate_accepted_rule": true
+  }
+}

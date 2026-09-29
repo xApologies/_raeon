@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "design": "design/topology/field_generators/SYSTEM.md",
+  "authority": "GAME_CANON",
+  "values": {
+    "object_kind": "QMO / mathematical configuration object",
+    "derivation": [
+      "Chirality Fabric",
+      "Propagation Engine",
+      "QMO landscape",
+      "Field Generator catalog"
+    ],
+    "configuration_notation": {
+      "authority": "WORKING DESIGN",
+      "expression": "C = (C_i; FG_1^(o_1), ..., FG_n^(o_n))"
+    },
+    "orientation_permission": "Generator/domain/QMO-admitted states",
+    "arbitrary_free_xyz_rotation": false,
+    "orientation_changes_mathematical_state": true,
+    "individual_committed_extraction": false,
+    "closure_before_color": true,
+    "count_alone_authorizes_closure": false,
+    "outcomes": [
+      "VALID",
+      "TERMINATES",
+      "NOT_APPLICABLE",
+      "OPEN",
+      "UNTESTED"
+    ],
+    "missing_data_is_termination": false,
+    "failed_closure_auto_graveyard": false,
+    "catalog_status": "SOURCE_IMPORT_REQUIRED",
+    "objects": []
+  }
+}

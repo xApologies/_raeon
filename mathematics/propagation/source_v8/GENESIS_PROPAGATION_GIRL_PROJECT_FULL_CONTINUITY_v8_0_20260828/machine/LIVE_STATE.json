@@ -1,0 +1,14 @@
+{
+  "version": "8.0",
+  "scope": [
+    "Genesis Field",
+    "Resolution",
+    "Bandwidth"
+  ],
+  "closed_through": "R87",
+  "stop": "R88",
+  "stop_type": "BRANCH_ROADBLOCK",
+  "failure": false,
+  "current_qmo": "@qmo/environment_to_bandwidth_generator_map",
+  "locked_statement": "Relationship propagates first. Motion is a resolved description of that propagation."
+}

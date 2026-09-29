@@ -1,0 +1,5 @@
+{
+  "run": "R88",
+  "status": "BRANCH_ROADBLOCK_NO_FAILURE",
+  "next_qmo": "@qmo/environment_to_bandwidth_generator_map"
+}

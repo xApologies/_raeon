@@ -9,3 +9,7 @@ Each dataset has schema_version, design (the upstream current-spec path), and va
 The read-only tooling adapter tools/validators/load-design-state.mjs resolves pointers within the repository, rejects duplicate/unlisted keys or mismatched family names, and reconstructs the prior semantic shape. This is validation tooling, not game code. The migration validator compares all values to the historical source snapshot after excluding only schema/checkpoint metadata. Current data is always read from normalized datasets, never from that snapshot.
 
 Cycle manifest schema 4 points directly to category/family datasets. Previous manifests/checkpoints remain byte-for-byte history. Update dataset and upstream specification together through a decision; this checkpoint changes storage only.
+
+## Additive continuity import
+
+The optional high-level `continuity_import` pointer now identifies recovered specifications and separate typed datasets. The checkpoint-0004 payload remains reconstructable without modification; its board vocabulary is a historical compatibility projection. The Genesis Horizon dataset is the current explicit board detail. This extension does not promote provisional Prime/research statements or erase missing-source categories. `data/manifests/current-files.json` is the maintained inventory; numbered checkpoint inventories remain immutable historical evidence.

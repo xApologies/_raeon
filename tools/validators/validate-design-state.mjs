@@ -163,7 +163,7 @@ export function validateDesignRepository(root) {
     check(hash('provenance/sources/current-state-recovery-0002.txt')===source.sha256,'Recovery source integrity');
     const current=JSON.parse(read('data/manifests/accepted-state.json')).current_design_checkpoint;
     if(!/^\d{4}$/.test(current))throw Error('Invalid current checkpoint identifier');
-    const inventory=JSON.parse(read(`data/manifests/design-checkpoint-${current}.json`));
+    const inventory=JSON.parse(read('data/manifests/current-files.json'));
     const recoverySource=JSON.parse(read('provenance/sources/recovery-0003.json'));
     check(recoverySource.blocks.length===2,'Two supplied recovery blocks');
     for(const block of recoverySource.blocks)check(hash(`provenance/sources/${block.file}`)===block.sha256,`Recovery 0003 block ${block.block} integrity`);

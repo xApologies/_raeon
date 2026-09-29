@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "design": "design/cards/cycle_01/primes/SYSTEM.md",
+  "authority": "PROVISIONAL",
+  "values": {
+    "intrinsic_health_color": true,
+    "possible_active_shield_overhealth": true,
+    "possible_active_color_offense": true,
+    "restoration_before_excess_shield": "WORKING DESIGN",
+    "higher_rank_capability": "WORKING DESIGN",
+    "exact_operators": "OPEN",
+    "catalog": "OPEN"
+  }
+}

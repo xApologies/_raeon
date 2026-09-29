@@ -1,0 +1,27 @@
+[
+  {
+    "path": "database/R84.sqlite",
+    "bytes": 12288,
+    "sha256": "5a36f4348fcd844aec389e63d1d3edcf06106653b22cf6f21e565791e74ca4d7"
+  },
+  {
+    "path": "machine/STATE.json",
+    "bytes": 95,
+    "sha256": "af305f6612602db12c9883ecb7f5471fd454af02c12875f59acfc91b670bab7f"
+  },
+  {
+    "path": "recovery/RECOVERY_PROMPT.md",
+    "bytes": 124,
+    "sha256": "fd13705abc9251103a99efa29ef2c4ef731faba8fa76af786bc380bfbab0c63a"
+  },
+  {
+    "path": "reports/R84_REPORT.md",
+    "bytes": 1215,
+    "sha256": "02561ab3cc91f29965946c9b6f57d9b2726a7d79193eff1513752af9e85fdee8"
+  },
+  {
+    "path": "tests/TEST_RESULTS.json",
+    "bytes": 136,
+    "sha256": "f55aaf04ea051648c397ed3882680127746bed083055bdd58dfa636673be20bd"
+  }
+]

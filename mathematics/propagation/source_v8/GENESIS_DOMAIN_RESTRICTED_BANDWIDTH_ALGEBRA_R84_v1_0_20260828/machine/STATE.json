@@ -1,0 +1,5 @@
+{
+  "run": "R84",
+  "status": "CLOSED",
+  "next_qmo": "@qmo/resolution_separation_invariance"
+}

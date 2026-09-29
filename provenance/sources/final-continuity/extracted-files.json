@@ -1,0 +1,262 @@
+[
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/README.md",
+    "sha256": "e67a3274b757b325b394d7d35876930c97d2e44fb450648e87a1c326bc27042d",
+    "archive_path": "GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/README.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/api/qmo_api.py",
+    "sha256": "e03654b92672c3690477392b7195a48634eb506b75ad46fc32d350f9ab79b787",
+    "archive_path": "GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/api/qmo_api.py"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/database/PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8.sqlite",
+    "sha256": "e53f2a7c0b546419a3af24ef307f1a0b0ffc71377173e613bbf5b859866eed09",
+    "archive_path": "GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/database/PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8.sqlite"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/machine/LIVE_STATE.json",
+    "sha256": "74c7434cc530516b87f7c04a598808fe73f6af2f972df86cf0eb492c79a57feb",
+    "archive_path": "GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/machine/LIVE_STATE.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/provenance/CHRONOLOGY.json",
+    "sha256": "736dccdb4e491fd117592e7cc4d92aa8abecd4c7306b318019732877b080af74",
+    "archive_path": "GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/provenance/CHRONOLOGY.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/provenance/RUN_RECEIPTS.json",
+    "sha256": "3742bf2503fb744bb8509510822d46dd612cd4703300dc15896d04f2c1037459",
+    "archive_path": "GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/provenance/RUN_RECEIPTS.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/recovery/RECOVERY_PROMPT.md",
+    "sha256": "8258fc6699ad259b81d7aad84bb76fa34c087b762923a5f11231159f70e108f2",
+    "archive_path": "GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/recovery/RECOVERY_PROMPT.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/database/R87.sqlite",
+    "sha256": "62e4c3f096fd0c11ab60fadd35dfe719fdb4f555d08c910dc3aab36f62b1df7e",
+    "archive_path": "GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/database/R87.sqlite"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/machine/STATE.json",
+    "sha256": "eac2be086ed72b81298665daa22203b5fd01f69b8a59ff9c2c01cfc99572d870",
+    "archive_path": "GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/machine/STATE.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/recovery/RECOVERY_PROMPT.md",
+    "sha256": "ecdd4f36b0460269b60758ca785963cc4a3b13b774e1862476468f22b07cf73f",
+    "archive_path": "GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/recovery/RECOVERY_PROMPT.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/reports/R87_REPORT.md",
+    "sha256": "f115ee3345e0098c6ac02c1c7b98fdf514a39613a44399cd5a002ae4c23e403c",
+    "archive_path": "GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/reports/R87_REPORT.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/tests/TEST_RESULTS.json",
+    "sha256": "16c5e0d6186d45e40795e1bd0accbc79ab7d00c1b512adc5b7e22700bee77830",
+    "archive_path": "GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/tests/TEST_RESULTS.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/verification/MANIFEST.json",
+    "sha256": "213ddce519e5786d87d4a26a0db970ab44dbdee7802c1429e9af41b5f794d060",
+    "archive_path": "GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/verification/MANIFEST.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/verification/SHA256SUMS.txt",
+    "sha256": "56b3b1c021ed18ea08966e38554a844b5c3f67c8274a139c2710b068d9157486",
+    "archive_path": "GENESIS_DOMAIN_REACHABILITY_CLOSURE_R87_v1_0_20260828/verification/SHA256SUMS.txt"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/database/R83.sqlite",
+    "sha256": "b71fc1770a52509308e426631309cfd3611b0a738bd805df30d43d7895c30536",
+    "archive_path": "GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/database/R83.sqlite"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/machine/STATE.json",
+    "sha256": "f07323a895c3da6d3b7cde464ad33699cda540fd88aae5891ccf352a6e424197",
+    "archive_path": "GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/machine/STATE.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/recovery/RECOVERY_PROMPT.md",
+    "sha256": "b91773f8ee8ff1525028a7891fec7367e83e59a546c80fe5be8fcfa074280e59",
+    "archive_path": "GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/recovery/RECOVERY_PROMPT.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/reports/R83_REPORT.md",
+    "sha256": "68f76c78bcfdc789639967333c8fbc72afcdca1f51038a4d2d04631c4278eeee",
+    "archive_path": "GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/reports/R83_REPORT.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/tests/TEST_RESULTS.json",
+    "sha256": "aadd05b31ca11f3c623d15270c29f74ddc47c3e4e4290322c791e27dc125a01f",
+    "archive_path": "GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/tests/TEST_RESULTS.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/verification/MANIFEST.json",
+    "sha256": "15d793f127b46e130525b2787df3b66f41e6fe0790e774e05f18ab73358528be",
+    "archive_path": "GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/verification/MANIFEST.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/verification/SHA256SUMS.txt",
+    "sha256": "f22689ede135905b5f846f37817f46028bbc5f4f96574d5d813d18d3068a7513",
+    "archive_path": "GENESIS_DOMAIN_RELATIVE_SCOPE_R83_v1_0_20260828/verification/SHA256SUMS.txt"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/database/R84.sqlite",
+    "sha256": "5a36f4348fcd844aec389e63d1d3edcf06106653b22cf6f21e565791e74ca4d7",
+    "archive_path": "GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/database/R84.sqlite"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/machine/STATE.json",
+    "sha256": "af305f6612602db12c9883ecb7f5471fd454af02c12875f59acfc91b670bab7f",
+    "archive_path": "GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/machine/STATE.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/recovery/RECOVERY_PROMPT.md",
+    "sha256": "fd13705abc9251103a99efa29ef2c4ef731faba8fa76af786bc380bfbab0c63a",
+    "archive_path": "GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/recovery/RECOVERY_PROMPT.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/reports/R84_REPORT.md",
+    "sha256": "02561ab3cc91f29965946c9b6f57d9b2726a7d79193eff1513752af9e85fdee8",
+    "archive_path": "GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/reports/R84_REPORT.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/tests/TEST_RESULTS.json",
+    "sha256": "f55aaf04ea051648c397ed3882680127746bed083055bdd58dfa636673be20bd",
+    "archive_path": "GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/tests/TEST_RESULTS.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/verification/MANIFEST.json",
+    "sha256": "591dca2fbf2a1b86cef8fb700a6bd73b9410214d8e82a4f0a7f318546bc3846f",
+    "archive_path": "GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/verification/MANIFEST.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/verification/SHA256SUMS.txt",
+    "sha256": "8567ca8dfa1bfe9d18f24004feb29347786d830a8d4d66f0c57f1e45db994a78",
+    "archive_path": "GENESIS_DOMAIN_RESTRICTED_BANDWIDTH_ALGEBRA_R84_v1_0_20260828/verification/SHA256SUMS.txt"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/database/R88.sqlite",
+    "sha256": "b5870c599a57c44c982d32a6e955716d7b20ade7fc808400593f84704fa4a72f",
+    "archive_path": "GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/database/R88.sqlite"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/machine/STATE.json",
+    "sha256": "1c5fa81e844d567259d0a7e0d2dbbf09e0ac1822eb8e8f7615c3e7c947a8647c",
+    "archive_path": "GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/machine/STATE.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/recovery/RECOVERY_PROMPT.md",
+    "sha256": "4ceb649824ed64f5455448997de0debb8f30b4610de94e01524bb113b0139929",
+    "archive_path": "GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/recovery/RECOVERY_PROMPT.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/reports/R88_REPORT.md",
+    "sha256": "e52960e5a7eb0895d433add369feed90124b022fb5d9ce8fb038b6500b7abe8a",
+    "archive_path": "GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/reports/R88_REPORT.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/tests/TEST_RESULTS.json",
+    "sha256": "72f62189b28792f0c14ec2182ab80f049a851be2915406c62ff37b860f4784d5",
+    "archive_path": "GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/tests/TEST_RESULTS.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/verification/MANIFEST.json",
+    "sha256": "e0600571b087980b30a4440ca4bf99f4d758ae577e3d540dd8db704afb43f89f",
+    "archive_path": "GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/verification/MANIFEST.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/verification/SHA256SUMS.txt",
+    "sha256": "84c43880947955813a8f54e3fe2a546d10f23f3fc8f658398a71e548e64d49d9",
+    "archive_path": "GENESIS_ENVIRONMENT_BANDWIDTH_GENERATOR_MAP_R88_v1_0_20260828/verification/SHA256SUMS.txt"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/database/R86.sqlite",
+    "sha256": "e85b0cb01cf021e4b6dc705333092bb933f5a93289389f65f1611df51fff9113",
+    "archive_path": "GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/database/R86.sqlite"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/machine/STATE.json",
+    "sha256": "887a8bcf6bbf840d8f876721296d6a5a7db849517bc6fda07ea98675bcd07e31",
+    "archive_path": "GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/machine/STATE.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/recovery/RECOVERY_PROMPT.md",
+    "sha256": "c41e07872eedc040e4dd79a771a7fc5304b59a5aba77210881c8de1d29d147a5",
+    "archive_path": "GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/recovery/RECOVERY_PROMPT.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/reports/R86_REPORT.md",
+    "sha256": "3845f15732d3add6ab93e5967d221c037b7f60fe7f42ea84464961a3960d97e8",
+    "archive_path": "GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/reports/R86_REPORT.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/tests/TEST_RESULTS.json",
+    "sha256": "42fae577f8d03e5467b99ba943cb5e2656e7a6da3bcfd1f0384dba4a3d857b86",
+    "archive_path": "GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/tests/TEST_RESULTS.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/verification/MANIFEST.json",
+    "sha256": "59472d16f0ff7b4a913fc01a21688f6499297a1d82aa6b75d3acaf204d480780",
+    "archive_path": "GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/verification/MANIFEST.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/verification/SHA256SUMS.txt",
+    "sha256": "3d49b61635711c5de60af4dd4287a33a6bb9a38e85bcc15ced9893d6b653ba61",
+    "archive_path": "GENESIS_RELATIONAL_MOTION_BEYOND_DISTANCE_R86_v1_0_20260828/verification/SHA256SUMS.txt"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/database/R85.sqlite",
+    "sha256": "c0a6fa4537d2840d60556ed2698c461c43bee6df791f3cd0f90bbd360d188277",
+    "archive_path": "GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/database/R85.sqlite"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/machine/STATE.json",
+    "sha256": "d03f79d4cd1bc2d8c9afc538b11b9971be8900184eb95665198f3f562a007654",
+    "archive_path": "GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/machine/STATE.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/recovery/RECOVERY_PROMPT.md",
+    "sha256": "17b4abc25dfef3a6d3cdaaa13b2a67f6b4da4fac3efda53dc7705be7615415cd",
+    "archive_path": "GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/recovery/RECOVERY_PROMPT.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/reports/R85_REPORT.md",
+    "sha256": "a58e9fc299b9187f13c63fb84dce0e90ca22fbad21ef1b58e9253ad37ed56851",
+    "archive_path": "GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/reports/R85_REPORT.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/tests/TEST_RESULTS.json",
+    "sha256": "27c52837e0ce257dd3b9a1499fce0dd170b6feb320fc9a6f5f8ca62d872c6649",
+    "archive_path": "GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/tests/TEST_RESULTS.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/verification/MANIFEST.json",
+    "sha256": "be394fb1d8f01a1eaa76f58d2b08765f82a670d463b70fd1db7f0e0c9d4f3cff",
+    "archive_path": "GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/verification/MANIFEST.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/verification/SHA256SUMS.txt",
+    "sha256": "afea587e9225bd1357f336f14a5c7c2216a98cd7c9945dcfb7b633c34854ad89",
+    "archive_path": "GENESIS_RESOLUTION_SEPARATION_INVARIANCE_R85_v1_0_20260828/verification/SHA256SUMS.txt"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/state/CANONICAL_FULL_CONTINUITY.md",
+    "sha256": "f48b307d6d0e14ef0ae86b3a11afdf515fe044be2d9113188364284832ecb2fe",
+    "archive_path": "GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/state/CANONICAL_FULL_CONTINUITY.md"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/verification/MANIFEST.json",
+    "sha256": "1adbc58b10331642a98288d8c55414192757095d492803c88d93d79530b7aaca",
+    "archive_path": "GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/verification/MANIFEST.json"
+  },
+  {
+    "path": "mathematics/propagation/source_v8/GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/verification/SHA256SUMS.txt",
+    "sha256": "a53a1bbeb9fc3af3fcf5ffe5bc5b218799589af61fbfe202c49e81ff012c4725",
+    "archive_path": "GENESIS_PROPAGATION_GIRL_PROJECT_FULL_CONTINUITY_v8_0_20260828/verification/SHA256SUMS.txt"
+  }
+]

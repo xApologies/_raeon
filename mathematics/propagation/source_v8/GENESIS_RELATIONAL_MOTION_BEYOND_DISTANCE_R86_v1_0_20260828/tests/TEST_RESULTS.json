@@ -1,0 +1,6 @@
+{
+  "constant_distance_propagation": "PASS",
+  "anchor_duality": "PASS",
+  "transverse_relation_relative": "PASS",
+  "distance_not_complete_relation": "PASS"
+}

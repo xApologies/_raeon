@@ -1,0 +1,185 @@
+{
+  "package": "RAEON_CODEX_FINAL_CONTINUITY_IMPORT",
+  "canonical_repository": "https://github.com/xApologies/_raeon",
+  "canonical_branch": "main",
+  "purpose": "Final exhaustive thread-to-Git continuity import before chat migration.",
+  "file_count": 35,
+  "total_uncompressed_bytes": 233835254,
+  "files": [
+    {
+      "path": "00_READ_ME_FIRST.md",
+      "bytes": 1281,
+      "sha256": "ad1404d652b463e3f4dec96481e495f9163cc05c0492452d0973b312dddb9101"
+    },
+    {
+      "path": "CODEX_EXECUTION_DIRECTIVE.md",
+      "bytes": 4487,
+      "sha256": "256c2bcd3996255b4ea7fc229e49e984acaebe9e0ab1c3c5e9349e8a68036e89"
+    },
+    {
+      "path": "source_imports/GENESIS_PROPAGATION_FULL_CONTINUITY_v8.zip",
+      "bytes": 233685828,
+      "sha256": "4ecef0cc37f61292403311078426674ff874e4f4d1814a8ed468d59d0e62eae6"
+    },
+    {
+      "path": "source_imports/PROPAGATION_SOURCE_NOTE.md",
+      "bytes": 781,
+      "sha256": "a926135b494b5a2aeebfcf9c57697c28a1385a804de61384b11ff40ad40f26a8"
+    },
+    {
+      "path": "thread_delta/01_GENESIS_HORIZON_BOARD.md",
+      "bytes": 2910,
+      "sha256": "78fb2839211dc15319ade1530bddc97e36fa37a11d2f7dc32b7a255abf9bca20"
+    },
+    {
+      "path": "thread_delta/02_FIELD_GENERATOR_INTERACTION_RECOVERY.md",
+      "bytes": 3749,
+      "sha256": "0788365e3ad601cc3a2611a6dafe4ddec59ddc7858033cc01d5dfc9b2278cd71"
+    },
+    {
+      "path": "thread_delta/03_FIELD_GENERATOR_STATE_MACHINE.md",
+      "bytes": 1213,
+      "sha256": "01db891067410c3e18dd6be126614451dbb8ca0ff9b3a3d12b39e03004bf1ba1"
+    },
+    {
+      "path": "thread_delta/04_BOARD_RENDERING_RULES.md",
+      "bytes": 901,
+      "sha256": "6214a267233576af8dfc9701646711bb8849b0ca3cc225e0dd5e732736d13bee"
+    },
+    {
+      "path": "thread_delta/05_BLACKGLASS_STUDIOS_CONTEXT.md",
+      "bytes": 709,
+      "sha256": "58766e458c5a009728255d7649aec3f61cd7af9771bc36d03199072960af9803"
+    },
+    {
+      "path": "git_audit/CURRENT_MAIN_AND_GAPS.md",
+      "bytes": 1684,
+      "sha256": "0baac562731c7d8e1f52002740382ddc5342ab3adaca93f9ced19c9604d277fb"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/00_RECOVERY_BOOT.md",
+      "bytes": 789,
+      "sha256": "db54ab9ba62d6bf1ddc2bd6699b7073dc76f43fbf94ab6aa25e38837507ec32f"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/01_MASTER_LIVE_MODEL.md",
+      "bytes": 2489,
+      "sha256": "95bbf54bc676f77be451f887fcacc6e48026b6b922504355be66ac473326a7e5"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/02_CHRONOLOGY_AND_CORRECTIONS.md",
+      "bytes": 1366,
+      "sha256": "e9ed9adb47462994984ecbe0e4d52a78cdc1e5e2ca59895b825abd60a494b2f9"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/03_GAME_CONSTITUTION.md",
+      "bytes": 853,
+      "sha256": "70a33ad7d903d944a685fa5418340c551cfdae89793cd6bbe0251292c29946ed"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/09_NEXT_THREAD_CHECKLIST.md",
+      "bytes": 829,
+      "sha256": "a105389626f5e76b3cc708ab3bb7daabe492af8610d1ace18ccac3c7696ae0ba"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/10_ALL_IN_ONE_REFERENCE.md",
+      "bytes": 25895,
+      "sha256": "9214af4b0fdea07c1792885e61b18d0a267797cd78a0c1555c5ea1d3d59360b9"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/11_REDUNDANT_RECOVERY_ARCHIVE.md",
+      "bytes": 78188,
+      "sha256": "9c1e15acb71679617a8c169fa74609d49d0e0893d6f319ba3a075ff903a34d87"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/MANIFEST.json",
+      "bytes": 4467,
+      "sha256": "384b8a253f98aa6506bb89d08ca2b6f6cfb1a40c5504cf93468e7e26f9e2f13d"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/mathematics/MANIFOLDS_FUSION_EMERGENCE.md",
+      "bytes": 806,
+      "sha256": "4c67098925e75b98b840c513d5ffef5aedbeb59f34e89c0a679905b82fe0ea03"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/mathematics/QMO_CHIRALITY_PROPAGATION.md",
+      "bytes": 1385,
+      "sha256": "1d1deb3b719c7561c84f123728adc954d839dba241ba344b345a599e111b2b4e"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/provenance/DECISION_LEDGER.md",
+      "bytes": 847,
+      "sha256": "ca3b02a3c07556afb9de1b2fde66660968ba78971c9f3cdf9d1b6858844f7454"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/provenance/RECOVERY_AUDIT.md",
+      "bytes": 766,
+      "sha256": "5c8fc61bb6fb58db515a3e1008ab57cd80a85296dbd9aa0144044b165aaead74"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/provenance/SUPERSEDED_AND_REJECTED.md",
+      "bytes": 548,
+      "sha256": "52df94046b59f67ef584d271f5681fc550ab94f4c4552bd88fda24b9395c883f"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/development/FOUNDATIONAL_BACKLOG.md",
+      "bytes": 2173,
+      "sha256": "d00ccc53917140d4f22a3806d0cf6fd59ee0ca5dee9c3e9e36036a34324b0ce6"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/development/OPEN_QUESTIONS.md",
+      "bytes": 816,
+      "sha256": "8da5e70c6eb5fce192c4192d53cec1460f6be1577579d6fa41b977d650b97307"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/development/SOURCE_IMPORT_REQUIRED.md",
+      "bytes": 715,
+      "sha256": "40512aee36bd9fecc96221cbf984a54ce18eb6ecd069702b2792d22217301daa"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/development/VERTICAL_SLICE_PLAN.md",
+      "bytes": 686,
+      "sha256": "5f22020c5b60aa9bc87e9b0f63c031ea46c2851e85516cc5364cc25f877efbcb"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/repository/AUTHORITY_MODEL.md",
+      "bytes": 560,
+      "sha256": "e3bf73c5a3296e6a70ee829a8bbf5fd567cd2ca69906ee4e370b10eea54a3d76"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/repository/GIT_CONTINUITY.md",
+      "bytes": 770,
+      "sha256": "1b9ecf6e137c249790f4ea98d091c263582311292957daf6bdefa36ecc5523dd"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/product/COLLECTION_ECONOMY_AI_MULTIPLAYER.md",
+      "bytes": 1163,
+      "sha256": "1d8d2fe798ad324ec59f77fd21d9220e76193fe3332522258c0ac1f63915e9d4"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/BLACK_SYSTEM.md",
+      "bytes": 970,
+      "sha256": "0107d62ec685782620dc4eb5e6cd64cd545c11fdb0d0507321d8c92b19f81016"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/CYCLE_01_AND_GENERATORS.md",
+      "bytes": 800,
+      "sha256": "579c49280870ab38b153bbf7833818c5a1e6cad9b54b50873212d5d076359a25"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/PRIME_FIELDS_30.md",
+      "bytes": 860,
+      "sha256": "2ad545769c4bc54eac814371faff10575898fe14f586c10e02a28de2147bd3e7"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/cards/UTILITIES_50_MASTER.md",
+      "bytes": 1950,
+      "sha256": "22d1690846afb66264a2836595961b811d5644b8d4a1f2f0078d887fdd0f3cdf"
+    },
+    {
+      "path": "thread_recovery/RAEON_THREAD_RECOVERY_FULL/rendering/VISUAL_PIPELINE.md",
+      "bytes": 1020,
+      "sha256": "90e7e980fd4b48d72c0f429786cacd19a493d9a46760c07e7dfd3b8df0bdc7bb"
+    }
+  ]
+}

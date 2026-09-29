@@ -183,5 +183,6 @@
     "from_checkpoint": "0003",
     "semantic_changes": false,
     "baseline": "provenance/audits/0004-before-state.json"
-  }
+  },
+  "continuity_import": "data/manifests/final-continuity-import.json"
 }

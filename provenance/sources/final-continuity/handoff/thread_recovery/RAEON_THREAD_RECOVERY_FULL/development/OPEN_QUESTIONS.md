@@ -1,0 +1,22 @@
+# Open Questions
+
+-   Exact match setup and chronology.
+-   Starting/max hand, mulligan, normal draw, overflow.
+-   Exact victory/loss and deck exhaustion.
+-   Temporary Sandbox lifetime.
+-   Exact ordinary refresh timing.
+-   Seven detailed Activation effects.
+-   Color Guard magnitude/rank/timing.
+-   Prime Guard timing/rank/duration.
+-   Manifold Guard timing/rank/duration.
+-   Shield Lock final rank/duration.
+-   Structural Anchor final rank/timing.
+-   Emergent Amplification final rank/timing.
+-   Complete 30 Prime catalog.
+-   Detailed Fourth Prime ability.
+-   Final Black Utility catalog.
+-   Exact collection/economy values.
+-   AI architecture and difficulty implementation.
+-   Multiplayer transport/synchronization.
+-   Exact UI/camera/controls.
+-   Engine/language/graphics API/toolchain details.
