@@ -8,3 +8,6 @@ Start current work at the [design index](../design/README.md) and [data index](.
 
 
 [Recovered original Cycle-1 import audit](audits/cycle1-source-import.md), [reconciliation decision](decisions/cycle1-source-import.md), and [four original source artifacts](sources/cycle1-originals/receipt.json) preserve the source chain for the queryable catalog.
+
+
+[Full exhaustive migration audit](audits/full-migration-2026-09-29.md) and [decision](decisions/full-migration-2026-09-29.md) reconcile the newest accepted 185-identity design with unchanged historical/QMO sources. The original full package is preserved with Git LFS.

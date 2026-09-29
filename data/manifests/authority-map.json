@@ -42,7 +42,8 @@
     "manifolds": "design/topology/manifolds/SYSTEM.md",
     "sandbox": "design/topology/sandbox/SYSTEM.md",
     "transduction": "design/transduction/SYSTEM.md",
-    "ui-ux": "design/ui_ux/SYSTEM.md"
+    "ui-ux": "design/ui_ux/SYSTEM.md",
+    "utility-restore-prime": "design/cards/cycle_01/utilities/restore_prime/SYSTEM.md"
   },
   "modules": [
     {
@@ -485,7 +486,11 @@
     "field-generators": "data/cycles/cycle_01/field_generators/interaction.json",
     "sandbox": "data/topology/configuration-spaces.json",
     "fusion": "data/topology/relationships.json",
-    "prime-fields": "data/cycles/cycle_01/primes/working-model.json"
+    "prime-fields": "data/cycles/cycle_01/primes/working-model.json",
+    "prime-catalog": "data/cycles/cycle_01/primes/status.json",
+    "restore-prime": "data/cycles/cycle_01/utilities/restore_prime.json",
+    "runtime-direction": "data/platform/runtime-direction.json"
   },
-  "cycle1_source_import": "data/manifests/cycle1-source-import.json"
+  "cycle1_source_import": "data/manifests/cycle1-source-import.json",
+  "full_migration": "data/manifests/full-migration-2026-09-29.json"
 }

@@ -15,7 +15,6 @@
       "expression": "C = (C_i; FG_1^(o_1), ..., FG_n^(o_n))"
     },
     "orientation_permission": "Generator/domain/QMO-admitted states",
-    "arbitrary_free_xyz_rotation": false,
     "orientation_changes_mathematical_state": true,
     "individual_committed_extraction": false,
     "closure_before_color": true,
@@ -30,6 +29,62 @@
     "missing_data_is_termination": false,
     "failed_closure_auto_graveyard": false,
     "catalog_status": "IMPORTED_VALIDATED",
-    "catalog_ref": "data/cycles/cycle_01/field_generators/objects.json"
+    "catalog_ref": "data/cycles/cycle_01/field_generators/objects.json",
+    "zone_form": {
+      "Deck": "CARD",
+      "Hand": "CARD",
+      "Graveyard": "CARD"
+    },
+    "commitment_form": "deployed Chirality/QMO orientation object",
+    "lifecycle": "CARD -> deployed FG -> configuration -> resolved field",
+    "camera": "FIXED_TOP_DOWN",
+    "position_dimensions": [
+      "x",
+      "y"
+    ],
+    "orientation_dimensions": 3,
+    "orientation_symbol": "R",
+    "player_controlled_position_z": false,
+    "orbit_camera": false,
+    "cad_navigation": false,
+    "controls": [
+      "select",
+      "move in XY",
+      "orient/rotate"
+    ],
+    "gesture_tuning": "OPEN",
+    "continuous_looking_motion_may_snap_to_admitted_states": true,
+    "partial_feedback": {
+      "one_fg_forms_field": false,
+      "two_fg_may_show_compatible_relationships": true,
+      "cues": [
+        "faint lines",
+        "particles",
+        "growing topology",
+        "stronger coherence",
+        "magnetic snapping/hysteresis"
+      ],
+      "presentation_only": true,
+      "creates_legality": false
+    },
+    "source_fields": [
+      "occupancy",
+      "void",
+      "rotation_class",
+      "chirality_parity",
+      "faces",
+      "face_color_view",
+      "compatible_generators",
+      "manifold_memberships"
+    ],
+    "learning_goal": [
+      "orientation",
+      "chirality",
+      "relationships",
+      "topology",
+      "closure",
+      "manifolds"
+    ],
+    "unrestricted_orientation_grants_legality": false
   }
 }

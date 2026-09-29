@@ -10,7 +10,11 @@
       "resolved_spaces_before": 2,
       "derived_spaces_after": 1,
       "supports_independently_operational": false,
-      "permanent_base_identity_accounting": "OPEN"
+      "permanent_base_identity_accounting": "OPEN",
+      "lookup_driven": true,
+      "catalog_objects": 343,
+      "new_minigame": false,
+      "presentation": "animate admitted snap/merge"
     },
     "emergence": {
       "equation": "M_A + M_B -> M_A + M_B + E",
@@ -19,8 +23,36 @@
       "directly_attackable": false,
       "independently_destroyable": false,
       "required_support_loss": "removed/inaccessible",
-      "amplification_changes_support_rule": false
+      "amplification_changes_support_rule": false,
+      "automatic_on_admitted_relationship": true,
+      "catalog_objects": 1691,
+      "separate_fg_construction": false,
+      "presentation": "supported relational field animation"
     },
-    "relation_check_timing": "OPEN"
+    "relation_check_timing": "OPEN",
+    "merge": {
+      "interaction": "bring two Configuration Spaces together; snap/merge if admitted",
+      "composition": "C_A(m FG) + C_B(n FG) -> C_AB((m+n) FG)",
+      "independent_spaces_before": 2,
+      "independent_spaces_after": 1,
+      "tradeoff": "tempo / board width for combined topology",
+      "committed_contents_preserved": true,
+      "reconfiguration_allowed": true,
+      "snap_to_admitted_topology_allowed": true,
+      "count_guarantees_closure": false,
+      "merged_capacity_ceiling": "OPEN",
+      "runtime_admission": "OPEN",
+      "sandbox_utilities_add_configuration_space_economy": true,
+      "example": {
+        "input_counts": [
+          3,
+          4
+        ],
+        "output_count": 7,
+        "possible_field": "Blue",
+        "requires_admitted_closure": true
+      }
+    },
+    "mechanically_demanding_interaction": "Field Generator configuration"
   }
 }

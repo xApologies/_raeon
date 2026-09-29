@@ -17,3 +17,10 @@ The optional high-level `continuity_import` pointer now identifies recovered spe
 ## Recovered Cycle-1 availability migration
 
 The `cycle1_source_import` pointer now records original imported objects, hashes, relations and render coverage. Four availability values and the explicitly scoped missing-source list change; gameplay semantics do not. The normalization validator projects only those documented availability fields back to the historical checkpoint before comparison, and separately verifies their current imported values. [Cycle-1 schema mapping](CYCLE1_IMPORT.md) documents actual records and preserved field names.
+
+
+## Accepted full migration — 2026-09-29
+
+The `full_migration` pointer and `runtime` dataset extend the existing schema-4 index. No parallel architecture is introduced. The [reviewed amendment ledger](../../provenance/audits/full-migration-2026-09-29-semantic-changes.json) records thirteen precise semantic before/after changes and the new supplemental dataset contracts. The validator pins its hash, checks actual current values against each accepted change before projecting them back, then compares all unamended values to the original checkpoint. A mismatch is rejected, not hidden by the projection.
+
+Ordinary counts are 120/14/51 = 185. The six prior Utility families retain 50 unchanged slots; `additional_slots` references the separate White Restore Prime definition. No arbitrary final UT-051 ID is assigned. Prime `identity_key` is a structural family/rank lookup key, not a finalized printed ID. `working-model.json` retains its path but now holds the accepted ordinary Prime H/C constitution. The imported source build specification and old handoff manifests retain historical budgets; current Cycle design/data supersede those older design counts without modifying original source bytes.

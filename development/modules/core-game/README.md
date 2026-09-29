@@ -54,3 +54,6 @@ See [current specification](../../../design/game/GAME_DESIGN_DOCUMENT.md) and [O
 ## Validation requirements
 
 [System test boundary](../../../tests/integration/README.md) is UNTESTED. Repository validators check architecture and design-data consistency, not subsystem correctness. [Provenance and migration evidence](../../../provenance/checkpoints/0004-repository-normalization.md).
+
+
+Accepted 2026-09-29 design is recorded in the [full migration manifest](../../../data/manifests/full-migration-2026-09-29.json). This resolves only its named design items; implementation and every development gate remain OPEN.

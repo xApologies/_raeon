@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "design": "design/cards/cycle_01/utilities/restore_prime/SYSTEM.md",
+  "authority": "GAME_CANON",
+  "status": "STRUCTURALLY_DEFINED",
+  "count": 1,
+  "working_name": "Restore Prime",
+  "rank": "White",
+  "final_id": "OPEN",
+  "final_name": "OPEN",
+  "flavor": "OPEN",
+  "effect": {
+    "operation": "REACTIVATE_PRIME",
+    "target": "one INACTIVE Prime",
+    "from": {
+      "H": 0,
+      "C": 0
+    },
+    "to": {
+      "H": 1,
+      "C": 0
+    },
+    "position_unchanged": true,
+    "identity_unchanged": true,
+    "graveyard_recovery": false,
+    "fully_heals": false,
+    "fully_charges": false
+  },
+  "black_scope": "OPEN; Black mechanics unchanged by this ordinary-Cycle delta",
+  "timing": "OPEN",
+  "cost": "OPEN",
+  "balance": "UNTESTED",
+  "implemented": false
+}

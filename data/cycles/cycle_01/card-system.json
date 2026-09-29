@@ -5,9 +5,9 @@
     "cycle_01": {
       "ordinary_cards": {
         "field_generators": 120,
-        "prime_fields": 30,
-        "utilities": 50,
-        "total": 200
+        "prime_fields": 14,
+        "utilities": 51,
+        "total": 185
       },
       "constructed_deck_size": 60,
       "normal_copy_limits": {
@@ -26,7 +26,10 @@
         "stability_protection": 6
       },
       "copy_rule_scope": "card identity",
-      "additional_color_uniqueness_rule": false
+      "additional_color_uniqueness_rule": false,
+      "additional_utilities": {
+        "restore_prime": 1
+      }
     },
     "colors": {
       "none": 0,

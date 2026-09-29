@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "authority": "GAME_CANON",
+  "status": "ACCEPTED DESIGN / OPEN IMPLEMENTATION",
+  "source_receipt": "provenance/sources/full-migration-2026-09-29/receipt.json",
+  "source_precedence": "2026-09-29 current_delta supersedes conflicting earlier design; prior sources retain historical authority",
+  "datasets": {
+    "prime_catalog": "data/cycles/cycle_01/primes/status.json",
+    "prime_model": "data/cycles/cycle_01/primes/working-model.json",
+    "restore_prime": "data/cycles/cycle_01/utilities/restore_prime.json",
+    "configuration_spaces": "data/topology/configuration-spaces.json",
+    "generator_interaction": "data/cycles/cycle_01/field_generators/interaction.json",
+    "relationships": "data/topology/relationships.json",
+    "board": "data/board/genesis-horizon.json",
+    "runtime": "data/platform/runtime-direction.json"
+  },
+  "semantic_amendments": "provenance/audits/full-migration-2026-09-29-semantic-changes.json",
+  "counts": {
+    "field_generators": 120,
+    "ordinary_primes": 14,
+    "ordinary_utilities": 51,
+    "ordinary_total": 185,
+    "preserved_atlas": 2094
+  },
+  "closed_open_items": [
+    "14 ordinary Prime family/rank identities",
+    "Ordinary Prime health/charge mechanics and INACTIVE state",
+    "White Restore Prime reactivation",
+    "Resolved-space reopening/reconfiguration",
+    "Fixed top-down configuration camera and XY placement + 3D orientation",
+    "Configuration Space content merge and board-width cost",
+    "Genesis language / VM / Python boundary architecture direction"
+  ],
+  "remaining_open_items": [
+    "Turn/match timing, victory/loss, setup, draw and hand rules",
+    "Prime starting H/C, Restore overflow and targeting details",
+    "Exact gesture tuning and layout",
+    "Merged-domain capacity ceiling and runtime admission",
+    "Permanent-base identity accounting, split/un-fusion behavior",
+    "Final card IDs/names/flavor/wording and remaining Utility ranks/timing",
+    "Balance, runtime implementation, integration and release gates",
+    "Black mechanics unchanged; detailed Black scope remains OPEN"
+  ],
+  "qmo_data_changed": false,
+  "mathematics_regenerated": false,
+  "gameplay_implemented": false,
+  "phase": "PREPRODUCTION"
+}

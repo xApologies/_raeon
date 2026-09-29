@@ -1,14 +1,120 @@
 {
   "schema_version": 1,
   "design": "design/cards/cycle_01/primes/SYSTEM.md",
-  "authority": "PROVISIONAL",
+  "authority": "GAME_CANON",
+  "status": "DESIGN_ACCEPTED",
+  "legacy_filename_note": "The prior working model is superseded by the accepted 2026-09-29 ordinary Prime constitution",
   "values": {
-    "intrinsic_health_color": true,
-    "possible_active_shield_overhealth": true,
-    "possible_active_color_offense": true,
-    "restoration_before_excess_shield": "WORKING DESIGN",
-    "higher_rank_capability": "WORKING DESIGN",
-    "exact_operators": "OPEN",
-    "catalog": "OPEN"
+    "scope": "ordinary Prime Fields; Black mechanics unchanged",
+    "catalog": "data/cycles/cycle_01/primes/status.json",
+    "identity_and_rank_change_with_charge": false,
+    "health_symbol": "H",
+    "charge_symbol": "C",
+    "intrinsic_maximum_health": "rank",
+    "active_charge_maximum": "rank",
+    "full_health_charge_durability": "2 * rank; rank unchanged",
+    "friendly_restore": {
+      "order": [
+        "H",
+        "C"
+      ],
+      "charge_requires_full_intrinsic_health": true,
+      "health_added": "min(amount, H_max - H)",
+      "charge_added": "min(amount - health_added, C_max - C)",
+      "overflow": "OPEN",
+      "inactive_reactivation": "requires explicit Restore Prime Utility"
+    },
+    "spend": {
+      "source": "C",
+      "partial_allowed": true,
+      "maximum": "current C",
+      "Restore": [
+        "RESTORE"
+      ],
+      "Degrade": [
+        "DEGRADE"
+      ],
+      "Universal": [
+        "RESTORE",
+        "DEGRADE"
+      ],
+      "universal_maximum_rank": "Green",
+      "changes_H": false
+    },
+    "hostile_degradation": {
+      "order": [
+        "C",
+        "H"
+      ],
+      "charge_lost": "min(amount, C)",
+      "health_lost": "min(amount - charge_lost, H)"
+    },
+    "inactive": {
+      "condition": "H = 0",
+      "state": "INACTIVE",
+      "charge": 0,
+      "remains_in_fixed_prime_position": true,
+      "moves_to_graveyard": false
+    },
+    "reactivation": {
+      "utility_ref": "data/cycles/cycle_01/utilities/restore_prime.json",
+      "from": {
+        "H": 0,
+        "C": 0,
+        "state": "INACTIVE"
+      },
+      "to": {
+        "H": 1,
+        "C": 0
+      },
+      "changes_identity": false,
+      "changes_position": false
+    },
+    "examples": [
+      {
+        "operation": "RESTORE",
+        "rank": "Green",
+        "before": {
+          "H": 1,
+          "C": 0
+        },
+        "amount": 4,
+        "after": {
+          "H": 4,
+          "C": 1
+        }
+      },
+      {
+        "operation": "SPEND",
+        "rank": "Green",
+        "before": {
+          "H": 4,
+          "C": 4
+        },
+        "amount": 2,
+        "after": {
+          "H": 4,
+          "C": 2
+        },
+        "remaining_charge_color": "Orange"
+      },
+      {
+        "operation": "DEGRADE",
+        "rank": "Green",
+        "before": {
+          "H": 4,
+          "C": 2
+        },
+        "amount": 3,
+        "after": {
+          "H": 3,
+          "C": 0
+        }
+      }
+    ],
+    "starting_state": "OPEN",
+    "timing_windows": "OPEN",
+    "targeting_details": "OPEN",
+    "implementation": "OPEN"
   }
 }

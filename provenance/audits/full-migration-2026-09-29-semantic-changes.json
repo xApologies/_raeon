@@ -1,0 +1,872 @@
+{
+  "starting_main": "dff71b9504b36b2c49496932688ba5f00c10ab10",
+  "scope": "Explicit accepted 2026-09-29 semantic amendments; all other historical values remain protected",
+  "semantic_changes": [
+    {
+      "path": [
+        "open_items"
+      ],
+      "before": [
+        "Utility final names, flavor, IDs, wording, unresolved ranks, targeting, timing, duration, balance and runtime definitions",
+        "Other missing individual card definitions",
+        "Detailed Fourth Prime behavior",
+        "Exact effect costs, timing, and balance",
+        "Match setup, turn sequence, and victory/loss details",
+        "Engine, language, graphics API, toolchain, and target OS versions",
+        "AI and multiplayer design",
+        "Persistence and compatibility policy",
+        "Economy, collection, shop, and crafting detail",
+        "Release/certification requirements and performance budgets",
+        "Activation detailed per-rank behavior",
+        "Temporary Sandbox destruction/expiry",
+        "Hand-size maximum and overflow behavior",
+        "Protection magnitudes, ranks, timing and duration where unspecified",
+        "Final Black Utility catalog and working Black-concept details",
+        "Adaptive/player-modeling AI and ML architecture",
+        "Local peer-to-peer transport, synchronization, matchmaking and competitive balance",
+        "Exact board UI, camera and controls",
+        "Utility ID ordering/assignment (UT-001 through UT-050)",
+        "Turn/match rules explicitly listed in turn_match_open"
+      ],
+      "after": [
+        "Utility final names, flavor, IDs, wording, unresolved ranks, targeting, timing, duration, balance and runtime definitions",
+        "Final printed Prime/Utility IDs, names, wording and unresolved targeting details",
+        "Detailed Fourth Prime behavior",
+        "Exact effect costs, timing, and balance",
+        "Match setup, turn sequence, and victory/loss details",
+        "Genesis VM / Python boundary integration, graphics API, toolchain, and target OS versions",
+        "AI and multiplayer design",
+        "Persistence and compatibility policy",
+        "Economy, collection, shop, and crafting detail",
+        "Release/certification requirements and performance budgets",
+        "Activation detailed per-rank behavior",
+        "Temporary Sandbox destruction/expiry",
+        "Hand-size maximum and overflow behavior",
+        "Protection magnitudes, ranks, timing and duration where unspecified",
+        "Final Black Utility catalog and working Black-concept details",
+        "Adaptive/player-modeling AI and ML architecture",
+        "Local peer-to-peer transport, synchronization, matchmaking and competitive balance",
+        "Exact board UI/layout and mouse/touch gesture tuning; fixed top-down XY + 3D orientation accepted",
+        "Final ID ordering/assignment for 51 ordinary Utilities",
+        "Turn/match rules explicitly listed in turn_match_open",
+        "Prime starting H/C and Restore overflow behavior",
+        "Merged Configuration Space capacity ceiling and runtime admission",
+        "Permanent-base identity accounting after merge; no split/un-fusion rule inferred"
+      ]
+    },
+    {
+      "path": [
+        "cycle_01",
+        "ordinary_cards",
+        "prime_fields"
+      ],
+      "before": 30,
+      "after": 14
+    },
+    {
+      "path": [
+        "cycle_01",
+        "ordinary_cards",
+        "utilities"
+      ],
+      "before": 50,
+      "after": 51
+    },
+    {
+      "path": [
+        "cycle_01",
+        "ordinary_cards",
+        "total"
+      ],
+      "before": 200,
+      "after": 185
+    },
+    {
+      "path": [
+        "cycle_01",
+        "additional_utilities"
+      ],
+      "before_absent": true,
+      "after": {
+        "restore_prime": 1
+      }
+    },
+    {
+      "path": [
+        "board_presentation",
+        "authority"
+      ],
+      "before": "PROVISIONAL",
+      "after": "GAME_CANON"
+    },
+    {
+      "path": [
+        "board_presentation",
+        "camera"
+      ],
+      "before": "OPEN",
+      "after": "FIXED_TOP_DOWN"
+    },
+    {
+      "path": [
+        "board_presentation",
+        "controls"
+      ],
+      "before": "OPEN",
+      "after": [
+        "select",
+        "move in XY",
+        "orient/rotate"
+      ]
+    },
+    {
+      "path": [
+        "board_presentation",
+        "gesture_tuning"
+      ],
+      "before_absent": true,
+      "after": "OPEN"
+    },
+    {
+      "path": [
+        "utility_structure",
+        "total_slots"
+      ],
+      "before": 50,
+      "after": 51
+    },
+    {
+      "path": [
+        "utility_structure",
+        "identifier_direction",
+        "range"
+      ],
+      "before": "UT-001 through UT-050",
+      "after": "OPEN for 51 slots; prior UT-001 through UT-050 direction retained as history"
+    },
+    {
+      "path": [
+        "utility_structure",
+        "additional_slots"
+      ],
+      "before_absent": true,
+      "after": [
+        {
+          "count": 1,
+          "definition_ref": "data/cycles/cycle_01/utilities/restore_prime.json"
+        }
+      ]
+    },
+    {
+      "path": [
+        "runtime_direction"
+      ],
+      "before_absent": true,
+      "after": {
+        "authority": "CANON",
+        "status": "ACCEPTED ARCHITECTURE DIRECTION / OPEN IMPLEMENTATION",
+        "semantics_home": "Genesis Horizon",
+        "language": "Genesis",
+        "chain": [
+          "Genesis game semantics",
+          "Genesis VM",
+          "Python hypervisor/translation boundary",
+          "platform shell"
+        ],
+        "bidirectional_boundary": true,
+        "game_truth": [
+          "Genesis state",
+          "QMO state"
+        ],
+        "platform_services": [
+          "graphics",
+          "input",
+          "audio",
+          "storage",
+          "network"
+        ],
+        "platform_returns": "input events",
+        "blender_role": "offline asset generation",
+        "asset_pipeline": [
+          "QMO",
+          "RenderSpec/geometry",
+          "Blender",
+          "runtime assets"
+        ],
+        "initial_target": "Windows",
+        "later_shells": [
+          "Apple/Metal",
+          "Android"
+        ],
+        "rewrite_authoritative_semantics_per_platform": false,
+        "implemented": false,
+        "vm_integration": "OPEN",
+        "graphics_api_and_toolchain": "OPEN"
+      }
+    }
+  ],
+  "datasets": {
+    "prime_catalog": {
+      "path": "data/cycles/cycle_01/primes/status.json",
+      "accepted": {
+        "schema_version": 1,
+        "design": "design/cards/cycle_01/primes/SYSTEM.md",
+        "status": "STRUCTURE_ACCEPTED_DETAILS_OPEN",
+        "expected_identities": 14,
+        "objects": [
+          {
+            "identity_key": "restore_yellow",
+            "family": "Restore",
+            "rank": "Yellow",
+            "rank_value": 3,
+            "maximum_magnitude": 3,
+            "directions": [
+              "RESTORE"
+            ],
+            "copy_limit": 1
+          },
+          {
+            "identity_key": "restore_green",
+            "family": "Restore",
+            "rank": "Green",
+            "rank_value": 4,
+            "maximum_magnitude": 4,
+            "directions": [
+              "RESTORE"
+            ],
+            "copy_limit": 1
+          },
+          {
+            "identity_key": "restore_blue",
+            "family": "Restore",
+            "rank": "Blue",
+            "rank_value": 5,
+            "maximum_magnitude": 5,
+            "directions": [
+              "RESTORE"
+            ],
+            "copy_limit": 1
+          },
+          {
+            "identity_key": "restore_violet",
+            "family": "Restore",
+            "rank": "Violet",
+            "rank_value": 6,
+            "maximum_magnitude": 6,
+            "directions": [
+              "RESTORE"
+            ],
+            "copy_limit": 1
+          },
+          {
+            "identity_key": "restore_white",
+            "family": "Restore",
+            "rank": "White",
+            "rank_value": 7,
+            "maximum_magnitude": 7,
+            "directions": [
+              "RESTORE"
+            ],
+            "copy_limit": 1
+          },
+          {
+            "identity_key": "degrade_yellow",
+            "family": "Degrade",
+            "rank": "Yellow",
+            "rank_value": 3,
+            "maximum_magnitude": 3,
+            "directions": [
+              "DEGRADE"
+            ],
+            "copy_limit": 1
+          },
+          {
+            "identity_key": "degrade_green",
+            "family": "Degrade",
+            "rank": "Green",
+            "rank_value": 4,
+            "maximum_magnitude": 4,
+            "directions": [
+              "DEGRADE"
+            ],
+            "copy_limit": 1
+          },
+          {
+            "identity_key": "degrade_blue",
+            "family": "Degrade",
+            "rank": "Blue",
+            "rank_value": 5,
+            "maximum_magnitude": 5,
+            "directions": [
+              "DEGRADE"
+            ],
+            "copy_limit": 1
+          },
+          {
+            "identity_key": "degrade_violet",
+            "family": "Degrade",
+            "rank": "Violet",
+            "rank_value": 6,
+            "maximum_magnitude": 6,
+            "directions": [
+              "DEGRADE"
+            ],
+            "copy_limit": 1
+          },
+          {
+            "identity_key": "degrade_white",
+            "family": "Degrade",
+            "rank": "White",
+            "rank_value": 7,
+            "maximum_magnitude": 7,
+            "directions": [
+              "DEGRADE"
+            ],
+            "copy_limit": 1
+          },
+          {
+            "identity_key": "universal_red",
+            "family": "Universal",
+            "rank": "Red",
+            "rank_value": 1,
+            "maximum_magnitude": 1,
+            "directions": [
+              "RESTORE",
+              "DEGRADE"
+            ],
+            "copy_limit": 1
+          },
+          {
+            "identity_key": "universal_orange",
+            "family": "Universal",
+            "rank": "Orange",
+            "rank_value": 2,
+            "maximum_magnitude": 2,
+            "directions": [
+              "RESTORE",
+              "DEGRADE"
+            ],
+            "copy_limit": 1
+          },
+          {
+            "identity_key": "universal_yellow",
+            "family": "Universal",
+            "rank": "Yellow",
+            "rank_value": 3,
+            "maximum_magnitude": 3,
+            "directions": [
+              "RESTORE",
+              "DEGRADE"
+            ],
+            "copy_limit": 1
+          },
+          {
+            "identity_key": "universal_green",
+            "family": "Universal",
+            "rank": "Green",
+            "rank_value": 4,
+            "maximum_magnitude": 4,
+            "directions": [
+              "RESTORE",
+              "DEGRADE"
+            ],
+            "copy_limit": 1
+          }
+        ],
+        "authority": "GAME_CANON",
+        "copy_limit": 1,
+        "active_positions": 3,
+        "final_printed_ids": "OPEN",
+        "identity_key_note": "Structural family/rank lookup key, not an assigned printed card ID"
+      }
+    },
+    "prime_model": {
+      "path": "data/cycles/cycle_01/primes/working-model.json",
+      "accepted": {
+        "schema_version": 1,
+        "design": "design/cards/cycle_01/primes/SYSTEM.md",
+        "authority": "GAME_CANON",
+        "status": "DESIGN_ACCEPTED",
+        "legacy_filename_note": "The prior working model is superseded by the accepted 2026-09-29 ordinary Prime constitution",
+        "values": {
+          "scope": "ordinary Prime Fields; Black mechanics unchanged",
+          "catalog": "data/cycles/cycle_01/primes/status.json",
+          "identity_and_rank_change_with_charge": false,
+          "health_symbol": "H",
+          "charge_symbol": "C",
+          "intrinsic_maximum_health": "rank",
+          "active_charge_maximum": "rank",
+          "full_health_charge_durability": "2 * rank; rank unchanged",
+          "friendly_restore": {
+            "order": [
+              "H",
+              "C"
+            ],
+            "charge_requires_full_intrinsic_health": true,
+            "health_added": "min(amount, H_max - H)",
+            "charge_added": "min(amount - health_added, C_max - C)",
+            "overflow": "OPEN",
+            "inactive_reactivation": "requires explicit Restore Prime Utility"
+          },
+          "spend": {
+            "source": "C",
+            "partial_allowed": true,
+            "maximum": "current C",
+            "Restore": [
+              "RESTORE"
+            ],
+            "Degrade": [
+              "DEGRADE"
+            ],
+            "Universal": [
+              "RESTORE",
+              "DEGRADE"
+            ],
+            "universal_maximum_rank": "Green",
+            "changes_H": false
+          },
+          "hostile_degradation": {
+            "order": [
+              "C",
+              "H"
+            ],
+            "charge_lost": "min(amount, C)",
+            "health_lost": "min(amount - charge_lost, H)"
+          },
+          "inactive": {
+            "condition": "H = 0",
+            "state": "INACTIVE",
+            "charge": 0,
+            "remains_in_fixed_prime_position": true,
+            "moves_to_graveyard": false
+          },
+          "reactivation": {
+            "utility_ref": "data/cycles/cycle_01/utilities/restore_prime.json",
+            "from": {
+              "H": 0,
+              "C": 0,
+              "state": "INACTIVE"
+            },
+            "to": {
+              "H": 1,
+              "C": 0
+            },
+            "changes_identity": false,
+            "changes_position": false
+          },
+          "examples": [
+            {
+              "operation": "RESTORE",
+              "rank": "Green",
+              "before": {
+                "H": 1,
+                "C": 0
+              },
+              "amount": 4,
+              "after": {
+                "H": 4,
+                "C": 1
+              }
+            },
+            {
+              "operation": "SPEND",
+              "rank": "Green",
+              "before": {
+                "H": 4,
+                "C": 4
+              },
+              "amount": 2,
+              "after": {
+                "H": 4,
+                "C": 2
+              },
+              "remaining_charge_color": "Orange"
+            },
+            {
+              "operation": "DEGRADE",
+              "rank": "Green",
+              "before": {
+                "H": 4,
+                "C": 2
+              },
+              "amount": 3,
+              "after": {
+                "H": 3,
+                "C": 0
+              }
+            }
+          ],
+          "starting_state": "OPEN",
+          "timing_windows": "OPEN",
+          "targeting_details": "OPEN",
+          "implementation": "OPEN"
+        }
+      }
+    },
+    "restore_prime": {
+      "path": "data/cycles/cycle_01/utilities/restore_prime.json",
+      "accepted": {
+        "schema_version": 1,
+        "design": "design/cards/cycle_01/utilities/restore_prime/SYSTEM.md",
+        "authority": "GAME_CANON",
+        "status": "STRUCTURALLY_DEFINED",
+        "count": 1,
+        "working_name": "Restore Prime",
+        "rank": "White",
+        "final_id": "OPEN",
+        "final_name": "OPEN",
+        "flavor": "OPEN",
+        "effect": {
+          "operation": "REACTIVATE_PRIME",
+          "target": "one INACTIVE Prime",
+          "from": {
+            "H": 0,
+            "C": 0
+          },
+          "to": {
+            "H": 1,
+            "C": 0
+          },
+          "position_unchanged": true,
+          "identity_unchanged": true,
+          "graveyard_recovery": false,
+          "fully_heals": false,
+          "fully_charges": false
+        },
+        "black_scope": "OPEN; Black mechanics unchanged by this ordinary-Cycle delta",
+        "timing": "OPEN",
+        "cost": "OPEN",
+        "balance": "UNTESTED",
+        "implemented": false
+      }
+    },
+    "configuration_spaces": {
+      "path": "data/topology/configuration-spaces.json",
+      "accepted": {
+        "schema_version": 1,
+        "design": "design/topology/sandbox/SYSTEM.md",
+        "authority": "GAME_CANON",
+        "values": {
+          "general_term": "Configuration Space",
+          "historical_aliases": [
+            "Sandbox",
+            "Field A/B/C"
+          ],
+          "permanent_ids": [
+            "A",
+            "B",
+            "C"
+          ],
+          "permanent_universal": true,
+          "minimum_states": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "transitions": {
+            "first_commitment": "EMPTY -> CONFIGURING",
+            "valid_closure": "CONFIGURING -> RESOLVED",
+            "add_generator_to_resolved": "RESOLVED -> CONFIGURING; previous field destabilizes",
+            "reconfigure": "reposition/reorient committed contents within the domain; new VALID closure -> RESOLVED"
+          },
+          "configuring_is_active": true,
+          "failed_closure_auto_graveyard": false,
+          "screen_position_is_identity": false,
+          "resolved_reopening": "ACCEPTED",
+          "temporary_expiry": "OPEN",
+          "fusion_permanent_base_accounting": "OPEN",
+          "provisional_states": [
+            "FUSED",
+            "INACTIVE/REMOVED"
+          ],
+          "provisional_generator_lifecycle": [
+            "IN_HAND",
+            "COMMITTED",
+            "CONFIGURED",
+            "CONTRIBUTING_TO_RESOLVED_MANIFOLD"
+          ],
+          "graveyard_requires_separate_accepted_rule": true,
+          "persistent_container": true,
+          "field_is_current_resolved_state": true,
+          "owns": [
+            "identity",
+            "capacity",
+            "committed FG contents",
+            "XY positions",
+            "3D orientations",
+            "relationship/closure state",
+            "resolved field QMO if any"
+          ],
+          "within_domain_reconfiguration": true,
+          "individual_extraction_or_transfer": false,
+          "capacity_is_maximum_not_required_count": true,
+          "capacity_color_independent_of_field_color": true,
+          "strategic_presentation": {
+            "EMPTY": "dormant",
+            "CONFIGURING": "unresolved animated",
+            "RESOLVED": "stable active field"
+          },
+          "reconfiguration_example": {
+            "capacity_rank": "Violet",
+            "initial_generators": 3,
+            "initial_field": "Red",
+            "added_generators": 1,
+            "intermediate": "CONFIGURING",
+            "possible_result": "Orange",
+            "requires_admitted_closure": true
+          }
+        }
+      }
+    },
+    "generator_interaction": {
+      "path": "data/cycles/cycle_01/field_generators/interaction.json",
+      "accepted": {
+        "schema_version": 1,
+        "design": "design/topology/field_generators/SYSTEM.md",
+        "authority": "GAME_CANON",
+        "values": {
+          "object_kind": "QMO / mathematical configuration object",
+          "derivation": [
+            "Chirality Fabric",
+            "Propagation Engine",
+            "QMO landscape",
+            "Field Generator catalog"
+          ],
+          "configuration_notation": {
+            "authority": "WORKING DESIGN",
+            "expression": "C = (C_i; FG_1^(o_1), ..., FG_n^(o_n))"
+          },
+          "orientation_permission": "Generator/domain/QMO-admitted states",
+          "orientation_changes_mathematical_state": true,
+          "individual_committed_extraction": false,
+          "closure_before_color": true,
+          "count_alone_authorizes_closure": false,
+          "outcomes": [
+            "VALID",
+            "TERMINATES",
+            "NOT_APPLICABLE",
+            "OPEN",
+            "UNTESTED"
+          ],
+          "missing_data_is_termination": false,
+          "failed_closure_auto_graveyard": false,
+          "catalog_status": "IMPORTED_VALIDATED",
+          "catalog_ref": "data/cycles/cycle_01/field_generators/objects.json",
+          "zone_form": {
+            "Deck": "CARD",
+            "Hand": "CARD",
+            "Graveyard": "CARD"
+          },
+          "commitment_form": "deployed Chirality/QMO orientation object",
+          "lifecycle": "CARD -> deployed FG -> configuration -> resolved field",
+          "camera": "FIXED_TOP_DOWN",
+          "position_dimensions": [
+            "x",
+            "y"
+          ],
+          "orientation_dimensions": 3,
+          "orientation_symbol": "R",
+          "player_controlled_position_z": false,
+          "orbit_camera": false,
+          "cad_navigation": false,
+          "controls": [
+            "select",
+            "move in XY",
+            "orient/rotate"
+          ],
+          "gesture_tuning": "OPEN",
+          "continuous_looking_motion_may_snap_to_admitted_states": true,
+          "partial_feedback": {
+            "one_fg_forms_field": false,
+            "two_fg_may_show_compatible_relationships": true,
+            "cues": [
+              "faint lines",
+              "particles",
+              "growing topology",
+              "stronger coherence",
+              "magnetic snapping/hysteresis"
+            ],
+            "presentation_only": true,
+            "creates_legality": false
+          },
+          "source_fields": [
+            "occupancy",
+            "void",
+            "rotation_class",
+            "chirality_parity",
+            "faces",
+            "face_color_view",
+            "compatible_generators",
+            "manifold_memberships"
+          ],
+          "learning_goal": [
+            "orientation",
+            "chirality",
+            "relationships",
+            "topology",
+            "closure",
+            "manifolds"
+          ],
+          "unrestricted_orientation_grants_legality": false
+        }
+      }
+    },
+    "relationships": {
+      "path": "data/topology/relationships.json",
+      "accepted": {
+        "schema_version": 1,
+        "design": "design/topology/fusion/SYSTEM.md",
+        "authority": "GAME_CANON",
+        "values": {
+          "fusion": {
+            "equation": "M_i ⊕ M_j -> M*",
+            "requires_mathematical_admission": true,
+            "result": "DerivedLocalManifoldQMO",
+            "resolved_spaces_before": 2,
+            "derived_spaces_after": 1,
+            "supports_independently_operational": false,
+            "permanent_base_identity_accounting": "OPEN",
+            "lookup_driven": true,
+            "catalog_objects": 343,
+            "new_minigame": false,
+            "presentation": "animate admitted snap/merge"
+          },
+          "emergence": {
+            "equation": "M_A + M_B -> M_A + M_B + E",
+            "requires_mathematical_admission": true,
+            "supports_remain_distinct": true,
+            "directly_attackable": false,
+            "independently_destroyable": false,
+            "required_support_loss": "removed/inaccessible",
+            "amplification_changes_support_rule": false,
+            "automatic_on_admitted_relationship": true,
+            "catalog_objects": 1691,
+            "separate_fg_construction": false,
+            "presentation": "supported relational field animation"
+          },
+          "relation_check_timing": "OPEN",
+          "merge": {
+            "interaction": "bring two Configuration Spaces together; snap/merge if admitted",
+            "composition": "C_A(m FG) + C_B(n FG) -> C_AB((m+n) FG)",
+            "independent_spaces_before": 2,
+            "independent_spaces_after": 1,
+            "tradeoff": "tempo / board width for combined topology",
+            "committed_contents_preserved": true,
+            "reconfiguration_allowed": true,
+            "snap_to_admitted_topology_allowed": true,
+            "count_guarantees_closure": false,
+            "merged_capacity_ceiling": "OPEN",
+            "runtime_admission": "OPEN",
+            "sandbox_utilities_add_configuration_space_economy": true,
+            "example": {
+              "input_counts": [
+                3,
+                4
+              ],
+              "output_count": 7,
+              "possible_field": "Blue",
+              "requires_admitted_closure": true
+            }
+          },
+          "mechanically_demanding_interaction": "Field Generator configuration"
+        }
+      }
+    },
+    "board": {
+      "path": "data/board/genesis-horizon.json",
+      "accepted": {
+        "schema_version": 1,
+        "design": "design/game/board/SYSTEM.md",
+        "authority": "GAME_CANON",
+        "values": {
+          "center_divider": "Genesis Horizon",
+          "infrastructure": [
+            "Deck",
+            "Hand",
+            "Graveyard"
+          ],
+          "discard_pile": false,
+          "exile_zone": false,
+          "prime_positions": 3,
+          "prime_positions_fixed": true,
+          "opponent_hand_hidden": true,
+          "configuration_field": "between Prime band and Genesis Horizon",
+          "starting_spaces": [
+            "A",
+            "B",
+            "C"
+          ],
+          "space_layout": "elastic; center and redistribute on space population changes",
+          "identity_persists_on_reposition": true,
+          "screen_coordinates_are_presentation": true,
+          "views": [
+            "strategic",
+            "configuration"
+          ],
+          "shared_underlying_state": true,
+          "configuring_space_visible": true,
+          "animation_direction_authority": "WORKING DESIGN",
+          "exact_layout_and_gesture_tuning": "OPEN",
+          "configuration_camera": "FIXED_TOP_DOWN",
+          "configuration_interaction_ref": "data/cycles/cycle_01/field_generators/interaction.json",
+          "inactive_prime_remains_in_fixed_position": true,
+          "space_presentation": {
+            "EMPTY": "dormant",
+            "CONFIGURING": "unresolved animated",
+            "RESOLVED": "stable active field"
+          }
+        }
+      }
+    },
+    "runtime": {
+      "path": "data/platform/runtime-direction.json",
+      "accepted": {
+        "schema_version": 1,
+        "design": "design/game/GAME_DESIGN_DOCUMENT.md",
+        "values": {
+          "runtime_direction": {
+            "authority": "CANON",
+            "status": "ACCEPTED ARCHITECTURE DIRECTION / OPEN IMPLEMENTATION",
+            "semantics_home": "Genesis Horizon",
+            "language": "Genesis",
+            "chain": [
+              "Genesis game semantics",
+              "Genesis VM",
+              "Python hypervisor/translation boundary",
+              "platform shell"
+            ],
+            "bidirectional_boundary": true,
+            "game_truth": [
+              "Genesis state",
+              "QMO state"
+            ],
+            "platform_services": [
+              "graphics",
+              "input",
+              "audio",
+              "storage",
+              "network"
+            ],
+            "platform_returns": "input events",
+            "blender_role": "offline asset generation",
+            "asset_pipeline": [
+              "QMO",
+              "RenderSpec/geometry",
+              "Blender",
+              "runtime assets"
+            ],
+            "initial_target": "Windows",
+            "later_shells": [
+              "Apple/Metal",
+              "Android"
+            ],
+            "rewrite_authoritative_semantics_per_platform": false,
+            "implemented": false,
+            "vm_integration": "OPEN",
+            "graphics_api_and_toolchain": "OPEN"
+          }
+        }
+      }
+    }
+  }
+}

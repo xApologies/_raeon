@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {projectBeforeFullMigration} from './full-migration-contract.mjs';
 import {projectBeforeCycle1Import,remainingCycle1Sources} from './cycle1-status.mjs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -17,14 +18,14 @@ export function validateNormalization(root) {
   const index=json('data/manifests/accepted-state.json'),map=json('data/manifests/authority-map.json');
   check(index.schema_version===4&&index.current_design_checkpoint==='0004','Schema/checkpoint must be 4/0004');
   check(!('utility_structure'in index)&&!('black'in index)&&!('cycle_01'in index),'High-level state must point to detailed datasets');
-  check(isDeepStrictEqual(Object.keys(index).sort(),['schema_version','current_design_checkpoint','authority','source','sources','production','source_import_required','open_items','authority_map','datasets','utility_families','migration','continuity_import','cycle1_source_import'].sort()),'High-level index has only declared metadata/pointers');
+  check(isDeepStrictEqual(Object.keys(index).sort(),['schema_version','current_design_checkpoint','authority','source','sources','production','source_import_required','open_items','authority_map','datasets','utility_families','migration','continuity_import','cycle1_source_import','full_migration'].sort()),'High-level index has only declared metadata/pointers');
   const snapshot=json('provenance/audits/0004-before-state.json');
-  const state=loadDesignState(root);const compared=projectBeforeCycle1Import(state);
+  const state=loadDesignState(root);const compared=projectBeforeCycle1Import(projectBeforeFullMigration(root,state));
   compared.schema_version=snapshot.schema_version;compared.current_design_checkpoint=snapshot.current_design_checkpoint;
   check(isDeepStrictEqual(compared,snapshot),'Lossless migration: accepted semantic state differs from checkpoint 0003');
   check(state.production.phase==='PREPRODUCTION','Production phase remains PREPRODUCTION');
   check(isDeepStrictEqual(map.flow,['DESIGN','DATA','GAME','TESTS']),'Authority chain');
-  const expectedSpecs=['game','match','board','progression','card-system','cycle-01','field-generators','prime-fields','utilities','utility-transduction','utility-activation','utility-sandbox_activation','utility-draw_deck','utility-recovery','utility-stability','black','black-primes','black-utilities','black-mode','sandbox','generator-geometry','manifolds','fusion','emergent-fields','transduction','collection','economy','ai','multiplayer','rendering','ui-ux'];
+  const expectedSpecs=['game','match','board','progression','card-system','cycle-01','field-generators','prime-fields','utilities','utility-transduction','utility-activation','utility-sandbox_activation','utility-draw_deck','utility-recovery','utility-stability','utility-restore-prime','black','black-primes','black-utilities','black-mode','sandbox','generator-geometry','manifolds','fusion','emergent-fields','transduction','collection','economy','ai','multiplayer','rendering','ui-ux'];
   check(isDeepStrictEqual(Object.keys(map.current_specs).sort(),expectedSpecs.sort()),'All expected current-specification homes');
   const manifest=json('data/manifests/current-files.json');
   const markers=new Map();
@@ -68,7 +69,7 @@ export function validateNormalization(root) {
   check(state.rendering_direction.qmo_renderspec_api_packages==='CYCLE1_BASE_IMPORTED_DERIVED_OPEN','Scoped RenderSpec import transition');
   check(state.cycle_production_direction.existing_source_package==='IMPORTED_VALIDATED','Constitution import transition');
   const prime=json('data/cycles/cycle_01/primes/status.json');
-  check(prime.status==='OPEN'&&isDeepStrictEqual(prime.objects,[])&&prime.expected_identities===30,'Unfabricated Prime catalog boundary');
+  check(prime.status==='STRUCTURE_ACCEPTED_DETAILS_OPEN'&&prime.objects.length===14&&new Set(prime.objects.map(x=>x.identity_key)).size===14&&prime.expected_identities===14,'Unfabricated Prime catalog boundary');
   for(const [p,count,key]of [['data/qmo/manifolds/status.json',60,'id'],['data/qmo/fusion/status.json',343,'id'],['data/qmo/emergent/status.json',1691,'id'],['data/qmo/generators/status.json',120,'card_id'],['data/cycles/cycle_01/field_generators/status.json',120,'card_id']]){
    const d=json(p),objects=json(d.objects_ref);
    check(d.status==='IMPORTED_VALIDATED'&&objects.length===count&&isDeepStrictEqual(d.objects,objects.map(x=>x[key])),'Unfabricated source/catalog boundary: '+p);

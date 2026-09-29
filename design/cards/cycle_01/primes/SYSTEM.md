@@ -1,13 +1,21 @@
-# Prime Field cards
+# Ordinary Prime Field constitution
 
 <!-- raeon:current-spec prime-fields -->
 
-Authority: GAME_CANON. Cycle 1 contains 30 Prime Field identities. Prime identity is unique; there are three active Prime positions. Activation/transduction timing and full 30-card catalog remain OPEN.
+Authority: GAME_CANON, accepted 2026-09-29. There are **14 unique ordinary Prime identities**, copy limit one per identity and three fixed active Prime positions. This supersedes the former 30-card OPEN catalog. [Structural catalog](../../../../data/cycles/cycle_01/primes/status.json) and [health/charge rules](../../../../data/cycles/cycle_01/primes/working-model.json) encode this constitution; the latter retains its historical filename.
 
-[Black Prime support](../../black/primes/SYSTEM.md) is distinct from ordinary card catalog completion. No ordinary Utility Prime recovery/resurrection is accepted. See [catalog boundary](catalog/README.md) and [transduction](../../../transduction/SYSTEM.md).
+| Family | Identities and maximum magnitudes | Count |
+| --- | --- | ---: |
+| Restore | Yellow +3, Green +4, Blue +5, Violet +6, White +7 | 5 |
+| Degrade | Yellow -3, Green -4, Blue -5, Violet -6, White -7 | 5 |
+| Universal | Red ±1, Orange ±2, Yellow ±3, Green ±4 | 4 |
 
-## Recovered working model
+For rank r, intrinsic maximum health H_max = r and active color-charge/shield maximum C_max = r. Full H and C give effective durability 2r; identity and printed rank never change with current charge. Catalog lookup keys describe family/rank, not finalized printed IDs.
 
-PROVISIONAL / WORKING DESIGN: Primes are health-bearing offensive/transduction interfaces with intrinsic/base health-color and possibly active shield/overhealth color. Active color may be spent offensively; incoming degradation may encounter protection first where final rules specify. Intrinsic damage may require restoration before excess incoming color becomes shield; higher ranks should generally support greater transduction/shield capability. These are design questions, not finalized operators or a 30-card catalog.
+Friendly Restore repairs intrinsic health first. Only after H reaches H_max does excess fill C, up to C_max. Green at (H,C)=(1,0) receiving +4 becomes (4,1). Restore beyond available H/C capacity remains an OPEN overflow-policy question. Ordinary Restore does not silently grant the explicit INACTIVE reactivation effect below.
 
-OPEN: identity/rank/health distribution, differentiation, passive/active/triggered behavior, timing, targets, shield constraints and machine operators. The three fixed screen positions are defined by [board design](../../../game/board/SYSTEM.md). [Working data](../../../../data/cycles/cycle_01/primes/working-model.json).
+Charge C is partially spendable. Green C=4 spending 2 leaves C=2, Orange active charge, while its Green identity remains. Restore Primes spend only positively; Degrade only negatively; Universal may spend either way and has a Green ceiling. Spending C reduces shield without changing H. Exact turn/timing and targeting windows remain OPEN.
+
+Hostile degradation removes C first, then H. At (4,2), incoming -3 yields (3,0). H=0 makes the ordinary Prime **INACTIVE** at (0,0); it stays in its fixed Prime position and never moves to Graveyard under this rule. [White Restore Prime](../utilities/restore_prime/SYSTEM.md) reactivates one INACTIVE Prime from (0,0) to (1,0), without full healing or charge.
+
+OPEN: starting H/C, overflow policy, timing/targets, final names/IDs/flavor/wording, balance and implementation. This is accepted design, not a running game system. [Black Prime mechanics](../../black/primes/SYSTEM.md) remain separate and unchanged; no new Black reactivation/cap rule is inferred. [Board](../../../game/board/SYSTEM.md) preserves fixed positions; [transduction](../../../transduction/SYSTEM.md) retains broader mathematical-source boundaries.

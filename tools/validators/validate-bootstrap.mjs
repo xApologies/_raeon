@@ -71,8 +71,10 @@ try {
   same(s.production.phase,'PREPRODUCTION','Current whole-game phase must be PREPRODUCTION');
   same(s.production.vertical_slice_complete,false,'Vertical Slice cannot be complete');
   const c=s.cycle_01;
-  same(c.ordinary_cards,{field_generators:120,prime_fields:30,utilities:50,total:200},'Cycle-1 card counts');
-  same(c.ordinary_cards.field_generators+c.ordinary_cards.prime_fields+c.ordinary_cards.utilities,c.ordinary_cards.total,'Cycle arithmetic: 120 + 30 + 50 = 200');
+  same(c.ordinary_cards,{field_generators:120,prime_fields:14,utilities:51,total:185},'Cycle-1 card counts');
+  same(c.ordinary_cards.field_generators+c.ordinary_cards.prime_fields+c.ordinary_cards.utilities,c.ordinary_cards.total,'Cycle arithmetic: 120 + 14 + 51 = 185');
+  same(c.additional_utilities,{restore_prime:1},'Additive Restore Prime Utility');
+  same(Object.values(c.utility_domains).reduce((a,b)=>a+b,0)+Object.values(c.additional_utilities).reduce((a,b)=>a+b,0),51,'Fifty preserved Utilities plus one');
   same(c.constructed_deck_size,60,'Constructed deck size');
   same(c.normal_copy_limits,{field_generator:2,utility:3},'Normal copy limits');
   same(c.prime_identity,'unique','Prime identity uniqueness');

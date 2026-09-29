@@ -17,7 +17,7 @@
   ],
   "utility_structure_status": "DESIGN STRUCTURE ACCEPTED",
   "utility_structure_ref": "utilities/overview.json",
-  "card_definitions_note": "120 Field Generator QMO identities imported from original locked source; complete playable Prime/Utility catalogs and runtime remain OPEN.",
+  "card_definitions_note": "120 FG source records preserved; 14 ordinary Prime identities and H/C rules accepted; 51 Utility slots structurally defined. Final printed metadata, balance and runtime remain OPEN.",
   "current_design_checkpoint": "0004",
   "utility_catalog_formalization": "PARTIALLY FORMALIZED",
   "cycle_source_package": "IMPORTED_VALIDATED",
@@ -36,5 +36,17 @@
     "stability_protection": "utilities/stability.json"
   },
   "field_generator_qmos_imported": true,
-  "source_import": "../../manifests/cycle1-source-import.json"
+  "source_import": "../../manifests/cycle1-source-import.json",
+  "ordinary_counts": {
+    "field_generators": 120,
+    "prime_fields": 14,
+    "utilities": 51,
+    "total": 185
+  },
+  "prime_structure_status": "14 IDENTITIES / DESIGN_ACCEPTED",
+  "prime_model_ref": "primes/working-model.json",
+  "additional_utilities": {
+    "restore_prime": "utilities/restore_prime.json"
+  },
+  "full_migration": "../../manifests/full-migration-2026-09-29.json"
 }

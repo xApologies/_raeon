@@ -15,3 +15,6 @@ Windows desktop remains the primary target; iPad/iPadOS is secondary. Keep share
 ## Dynamic board projection
 
 [Genesis Horizon](../game/board/SYSTEM.md) supplies stable infrastructure/Prime positions and dynamic Configuration Spaces, unresolved topology, manifolds, QMO relations, fusion and emergence. Connections follow persistent object identity as spaces reposition. A visual relationship must correspond to actual mathematical/game state. Strategic and configuration views share one state. Visual cohering/animation remains WORKING DESIGN; no renderer is implemented.
+
+
+The newest [Genesis runtime direction](../game/GAME_DESIGN_DOCUMENT.md) places authoritative semantics in Genesis/QMO state, behind the Genesis VM and Python translation boundary. Blender stays offline. Windows is first; later Apple/Metal and Android shells reuse semantics. Neither the historical Metal reference nor this direction is completed renderer/VM integration.

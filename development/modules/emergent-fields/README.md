@@ -57,3 +57,6 @@ See [current specification](../../../design/topology/emergent_fields/SYSTEM.md) 
 
 
 Cycle-1 source evidence is now [imported and queryable](../../../data/manifests/cycle1-source-import.json). This receipt does not close development gates or claim gameplay/render integration. Broader missing-source and implementation work remains OPEN.
+
+
+Accepted 2026-09-29 design is recorded in the [full migration manifest](../../../data/manifests/full-migration-2026-09-29.json). This resolves only its named design items; implementation and every development gate remain OPEN.

@@ -1,13 +1,13 @@
-# Fusion
+# Configuration Space merge and fusion
 
 <!-- raeon:current-spec fusion -->
 
-Authority: GAME_CANON. M_i ⊕ M_j → M*, when mathematically admitted, produces one DerivedLocalManifoldQMO. Whole Sandbox Domains may participate in merge/fusion; committed Generators cannot be independently extracted.
+Authority: GAME_CANON. Merge is simple board interaction: bring two Configuration Spaces together; if admitted they snap/merge into one. **C_A(m FG) + C_B(n FG) → C_AB((m+n) FG)** preserves committed contents while reducing two independently active spaces to one. The strategic cost is tempo/board width in exchange for combined topology. Sandbox Utilities buy back/add Configuration Space economy.
 
-The [343 original fusion-derived QMOs](../../../data/qmo/fusion/objects.json) and [catalog pair relations](../../../data/qmo/cycle1/manifold_pair_relations.json) are IMPORTED_VALIDATED. Missing data is not mathematical termination. Admission outside this finite catalog and runtime copy-instance accounting remain OPEN. This is distinct from [emergent coupling](../emergent_fields/SYSTEM.md), whose support manifolds remain.
+Example: a three-FG space and a four-FG space compose into a seven-FG domain. Those seven may preserve/snap to an admitted topology or be reoriented into an admitted Blue field. Count alone never grants closure. Reconfiguration is allowed within the merged domain; independent extraction/transfer of committed FGs is not.
 
-## Recovered board relationship
+The [343 preserved fusion-derived QMOs](../../../data/qmo/fusion/objects.json) and [pair table](../../../data/qmo/cycle1/manifold_pair_relations.json) supply deterministic catalog results. M_i ⊕ M_j → M* produces one DerivedLocalManifoldQMO where admitted. The player manipulates spaces; QMO determines the result; presentation animates the snap/merge. Fusion is not another construction minigame. Catalog lookup does not resolve unsupplied runtime copy/pose admission.
 
-When mathematically admitted, two resolved Configuration Spaces converge into one derived space representing M*. The two supports no longer operate as independent Local Manifolds while fused. Arithmetic/color compatibility is not permission. Admission and timing remain unresolved until authoritative operators/design are available.
+The fused supports no longer operate independently. [Emergence](../emergent_fields/SYSTEM.md) keeps its supports distinct. Only FG configuration is mechanically demanding; downstream fusion/emergence uses deterministic QMO composition/relationships.
 
-The number of independently active spaces for this relationship reduces from two to one; how that representation preserves the existing three-space permanent-base invariant is OPEN. Neither the permanent minimum nor the derived-space presentation is silently discarded. No un-fusion/reopening rule is invented. [Relationship data](../../../data/topology/relationships.json).
+OPEN: merged-domain capacity ceiling, exact runtime admission, timing, permanent-base identity accounting and any split/un-fusion rule. The accepted two-to-one board-width cost is retained; no ceiling, permanent-space destruction/recreation or split behavior is invented to reconcile older minimum wording. [Relationship data](../../../data/topology/relationships.json), [Configuration Space](../sandbox/SYSTEM.md).

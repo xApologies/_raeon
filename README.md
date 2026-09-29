@@ -38,6 +38,7 @@ node tools/validators/validate-design-state.mjs
 node tools/validators/validate-normalization.mjs
 node tools/validators/validate-continuity.mjs
 node tools/validators/validate-cycle1-import.mjs
+node tools/validators/validate-full-migration.mjs
 node --test tests/regression/*.test.mjs
 ```
 
@@ -53,3 +54,8 @@ Continuity verification: `node tools/validators/validate-continuity.mjs` checks 
 ## Recovered original Cycle-1 data
 
 The four original source archives, 120 FG records, complete 2,094-object atlas, all 1,770 base-pair relations, compatibility, Cycle Generation Constitution and 60 base RenderSpecs are now in Git. Start with [queries and data paths](data/qmo/README.md), [import audit](provenance/audits/cycle1-source-import.md) and [Live Model reconciliation](provenance/decisions/cycle1-source-import.md). Newer game design remains authoritative. No Cycle-1 mathematics was regenerated or fabricated; gameplay remains unimplemented.
+
+
+## Latest accepted design — 2026-09-29
+
+Cycle 1 has **185 ordinary identities: 120 FG + 14 Prime + 51 Utility**. The [Prime constitution](design/cards/cycle_01/primes/SYSTEM.md), [White Restore Prime](design/cards/cycle_01/utilities/restore_prime/SYSTEM.md), [mutable Configuration Spaces](design/topology/sandbox/SYSTEM.md), [fixed top-down FG interaction](design/topology/field_generators/SYSTEM.md), [merge semantics](design/topology/fusion/SYSTEM.md), and [Genesis runtime direction](design/game/GAME_DESIGN_DOCUMENT.md) are reconciled into current design/data. Original QMO data is unchanged. [Full migration audit](provenance/audits/full-migration-2026-09-29.md), [remaining backlog](development/FOUNDATIONAL_BACKLOG.md).

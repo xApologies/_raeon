@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — full migration and accepted design reconciliation (2026-09-29)
+
+- Accept 185 ordinary identities: 120 FG, 14 Prime and 51 Utility; preserve the prior 50 Utilities and add White Restore Prime.
+- Record Prime health/charge and INACTIVE/reactivation rules, mutable Configuration Spaces, fixed top-down XY + 3D orientation, merge/fusion/emergence, and Genesis runtime direction.
+- Preserve all original QMO/source data and history; add strict amendment/preservation validation and negative regression coverage. Whole-game PREPRODUCTION and implementation gates remain unchanged.
+- Full source package, provenance and conflicts: [migration audit](provenance/audits/full-migration-2026-09-29.md).
+
 ## Unreleased — recovered original Cycle-1 import (2026-09-28)
 
 - Preserve four recovered source archives and normalize the original 120 FG records, 2,094-object atlas, pair/compatibility data, Constitution and 60 base RenderSpecs.

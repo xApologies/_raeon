@@ -25,13 +25,12 @@
     "game_catalogs_imported": false
   },
   "open_items": [
-    "Resolved manifold reopening/reconfiguration",
     "Inter-space relation-check timing",
     "Permanent-base identity/minimum versus fused-space accounting",
     "Unspecified discard timing/other routing; Exchange still sends cards to Graveyard",
     "Physical-instance/orientation transitions and Generator/derived rendering beyond recovered Cycle-1 catalog operators",
     "R88 environmental generator map",
-    "All prior accepted-state OPEN items remain OPEN"
+    "Current accepted-state OPEN items remain OPEN; 2026-09-29 resolutions are recorded in full_migration"
   ],
   "source_import_required": [
     "Genesis mathematics",
@@ -52,5 +51,6 @@
   ],
   "gameplay_implemented": false,
   "phase": "PREPRODUCTION",
-  "cycle1_source_import": "data/manifests/cycle1-source-import.json"
+  "cycle1_source_import": "data/manifests/cycle1-source-import.json",
+  "full_migration": "data/manifests/full-migration-2026-09-29.json"
 }

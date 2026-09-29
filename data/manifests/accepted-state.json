@@ -27,11 +27,11 @@
   ],
   "open_items": [
     "Utility final names, flavor, IDs, wording, unresolved ranks, targeting, timing, duration, balance and runtime definitions",
-    "Other missing individual card definitions",
+    "Final printed Prime/Utility IDs, names, wording and unresolved targeting details",
     "Detailed Fourth Prime behavior",
     "Exact effect costs, timing, and balance",
     "Match setup, turn sequence, and victory/loss details",
-    "Engine, language, graphics API, toolchain, and target OS versions",
+    "Genesis VM / Python boundary integration, graphics API, toolchain, and target OS versions",
     "AI and multiplayer design",
     "Persistence and compatibility policy",
     "Economy, collection, shop, and crafting detail",
@@ -43,9 +43,12 @@
     "Final Black Utility catalog and working Black-concept details",
     "Adaptive/player-modeling AI and ML architecture",
     "Local peer-to-peer transport, synchronization, matchmaking and competitive balance",
-    "Exact board UI, camera and controls",
-    "Utility ID ordering/assignment (UT-001 through UT-050)",
-    "Turn/match rules explicitly listed in turn_match_open"
+    "Exact board UI/layout and mouse/touch gesture tuning; fixed top-down XY + 3D orientation accepted",
+    "Final ID ordering/assignment for 51 ordinary Utilities",
+    "Turn/match rules explicitly listed in turn_match_open",
+    "Prime starting H/C and Restore overflow behavior",
+    "Merged Configuration Space capacity ceiling and runtime admission",
+    "Permanent-base identity accounting after merge; no split/un-fusion rule inferred"
   ],
   "authority_map": "data/manifests/authority-map.json",
   "datasets": {
@@ -162,6 +165,12 @@
         "utility_structure",
         "utility_clarifications"
       ]
+    },
+    "runtime": {
+      "path": "data/platform/runtime-direction.json",
+      "keys": [
+        "runtime_direction"
+      ]
     }
   },
   "utility_families": {
@@ -179,5 +188,6 @@
     "baseline": "provenance/audits/0004-before-state.json"
   },
   "continuity_import": "data/manifests/final-continuity-import.json",
-  "cycle1_source_import": "data/manifests/cycle1-source-import.json"
+  "cycle1_source_import": "data/manifests/cycle1-source-import.json",
+  "full_migration": "data/manifests/full-migration-2026-09-29.json"
 }

@@ -1,0 +1,59 @@
+{
+  "package": "RAEON_THREAD_DELTA_2026-09-29",
+  "target": "xApologies/_raeon",
+  "branch": "main",
+  "file_count": 10,
+  "total_bytes": 11590,
+  "files": [
+    {
+      "path": "00_READ_ME_FIRST.md",
+      "bytes": 571,
+      "sha256": "35559da44aaf6739b7d44ef1f238ebf994142520159aafde1e54e152f675b90e"
+    },
+    {
+      "path": "01_GIT_VS_THREAD_AUDIT.md",
+      "bytes": 831,
+      "sha256": "b229a82c7a0e1620f915b6392fe0c120745aa630cf271d6b06438d7e83b7cf0c"
+    },
+    {
+      "path": "02_PRIME_FIELD_CONSTITUTION.md",
+      "bytes": 1303,
+      "sha256": "84a734466b856152825ffad93541d01c52eb3cf31f1c1ad132a2ea40e92dc2bf"
+    },
+    {
+      "path": "03_UTILITY_DELTA.md",
+      "bytes": 474,
+      "sha256": "545ddbabf0b864934f109cb54217f33fbb31f338274b0b0288f453148ee3ee55"
+    },
+    {
+      "path": "04_CONFIGURATION_SPACE_CONSTITUTION.md",
+      "bytes": 1179,
+      "sha256": "d4f4d715f86fe944ac3eb2a749fb77d8758360482e511f70ece90840f41aec7a"
+    },
+    {
+      "path": "05_FIELD_GENERATOR_INTERACTION.md",
+      "bytes": 1622,
+      "sha256": "76a73f65d138147a236bb2a6c02773d459185ee959e26be94908fc956ca53513"
+    },
+    {
+      "path": "06_MERGE_FUSION_EMERGENCE.md",
+      "bytes": 1352,
+      "sha256": "fad3b155ed7df08498a8a5674ce4bbb168e7c76e6bedd825de0961fa5bc5b071"
+    },
+    {
+      "path": "07_RUNTIME_AND_RENDER_DIRECTION.md",
+      "bytes": 693,
+      "sha256": "cae298ab756136b1df9d915df8c9e30c5257b06f83c165a719ccfbb8dcce36c7"
+    },
+    {
+      "path": "08_CANON_SUMMARY.md",
+      "bytes": 1036,
+      "sha256": "6a1e11bac5c88a8166a437aac6dd3f047ceb2212b81a3558d65e5c60bf900e39"
+    },
+    {
+      "path": "CODEX_UPDATE_DIRECTIVE.md",
+      "bytes": 2529,
+      "sha256": "90c1316645032d4f16de9923cb81a7c47f478411df548657416d8eafcd4b1266"
+    }
+  ]
+}

@@ -16,4 +16,15 @@ GAME_CANON minimum states: EMPTY = no committed Generator configuration; CONFIGU
 
 PROVISIONAL vocabulary: FUSED / represented-by-derived-space, and INACTIVE/REMOVED for temporary expiry if later defined. Generator lifecycle labels IN_HAND, COMMITTED, CONFIGURED, CONTRIBUTING_TO_RESOLVED_MANIFOLD are descriptive candidates, not a finalized runtime state machine. Graveyard requires a separately accepted routing rule.
 
-OPEN: resolved reopening/reconfiguration, temporary expiry, relation-check timing, and reconciliation of permanent base identity/minimum with fusion's reduced independently active spaces. Preserve the existing permanent minimum of three; do not infer destruction/recreation of A/B/C or a split rule from the fusion visual model. See [fusion](../fusion/SYSTEM.md), [board](../../game/board/SYSTEM.md), [structured states](../../../data/topology/configuration-spaces.json).
+Resolved reopening/reconfiguration is now accepted. OPEN: temporary expiry, relation-check timing, merged-domain capacity ceiling/runtime admission, and reconciliation of permanent base identity/minimum with merge/fusion's reduced independently active spaces. Preserve the existing permanent minimum of three; do not infer destruction/recreation of A/B/C or a split rule from the fusion visual model. See [fusion](../fusion/SYSTEM.md), [board](../../game/board/SYSTEM.md), [structured states](../../../data/topology/configuration-spaces.json).
+
+
+## Persistent mutable container
+
+The Configuration Space owns identity, capacity, committed FG contents, XY positions, 3D orientations, relationship/closure state and its current resolved field QMO, if any. A field/manifold is the space's current resolved state, not an immutable replacement for the container.
+
+Temporary capacity is a maximum, never a required construction count. A Violet space may contain three FGs and resolve a Red field when admitted. Capacity color and current field color are independent.
+
+Adding another FG within capacity to a RESOLVED space destabilizes its prior field and returns it to CONFIGURING. The player may reposition/reorient contents within the same domain until a new admitted closure becomes RESOLVED. Example: Violet capacity, three-FG Red field → add a fourth → CONFIGURING → four-FG Orange if admitted. Individual committed FGs still cannot be independently extracted or transferred.
+
+Strategic presentation is EMPTY/dormant, CONFIGURING/unresolved animated, RESOLVED/stable active field. Selecting/tapping enters detailed configuration; exiting returns to the same shared state. Merge composition and its board-width cost follow [merge/fusion](../fusion/SYSTEM.md); splitting or un-fusing is not supplied.

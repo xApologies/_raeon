@@ -1,0 +1,16 @@
+[
+  {
+    "file": "ORIGINATING_THREAD_FULL_CONTINUITY_IMPORT.zip",
+    "sha256": "e0942b2492612b5692ab2be12309b359ba6c58b73feb62a9716e4ffc98782da2",
+    "bytes": 233852323,
+    "identical_to_prior_upload": true,
+    "prior_upload": "raeon_codex_final_continuity_import.zip"
+  },
+  {
+    "file": "AUTHORITATIVE_CYCLE1_SOURCE_IMPORT.zip",
+    "sha256": "ebee1782caa972bca0db3ee11d07206bd81ed46866f01ee7613731eef9d1dc3f",
+    "bytes": 8187872,
+    "identical_to_prior_upload": true,
+    "prior_upload": "raeon_authoritative_cycle1_codex_import.zip"
+  }
+]

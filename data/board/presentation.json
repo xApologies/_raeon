@@ -3,7 +3,7 @@
   "design": "design/ui_ux/SYSTEM.md",
   "values": {
     "board_presentation": {
-      "authority": "PROVISIONAL",
+      "authority": "GAME_CANON",
       "board_scale": "Sandboxes/manifolds occupy configuration positions",
       "selection": "enter detailed Sandbox configuration view",
       "detail_exposes": [
@@ -14,10 +14,15 @@
       "return_to_board": "compact field representation",
       "completed_manifold_intent": "coherent active field rather than unrelated card rectangles",
       "exact_ui": "OPEN",
-      "camera": "OPEN",
-      "controls": "OPEN",
+      "camera": "FIXED_TOP_DOWN",
+      "controls": [
+        "select",
+        "move in XY",
+        "orient/rotate"
+      ],
       "platform_interaction_may_differ": true,
-      "platform_rules_identical": true
+      "platform_rules_identical": true,
+      "gesture_tuning": "OPEN"
     }
   }
 }

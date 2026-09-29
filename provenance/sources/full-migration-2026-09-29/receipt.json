@@ -1,0 +1,120 @@
+{
+  "date": "2026-09-29",
+  "starting_main": "dff71b9504b36b2c49496932688ba5f00c10ab10",
+  "origin": "User supplied full exhaustive continuity package; current_delta is newest accepted design authority",
+  "archive": {
+    "path": "provenance/sources/full-migration-2026-09-29/raeon_FULL_exhaustive_migration_2026-09-29.zip",
+    "sha256": "48d6ca53999cc06a27e309f3f51d4ba6cb5ed3ed65592781c6a21b5dfbb1d958",
+    "bytes": 242064399
+  },
+  "normalized_sources": [
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/00_START_HERE.md",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/00_START_HERE.md",
+      "sha256": "dc301f9d61b0537cc960f99a4667dc2241a98163ca5ab2f867843d9435922e1b",
+      "bytes": 1881
+    },
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/CODEX_MASTER_PROMPT.md",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/CODEX_MASTER_PROMPT.md",
+      "sha256": "05a52f8fabfa894c64b28ea667cc697bf87257296297cee7cbf32a83678c15b7",
+      "bytes": 1756
+    },
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/MANIFEST.json",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/MANIFEST.json",
+      "sha256": "c7229451a34baff0ea4da62c3a8bc85ae6f956bb4f71a7b8c5d058e097171c9c",
+      "bytes": 3075
+    },
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/current_delta/RAEON_THREAD_DELTA_2026-09-29/00_READ_ME_FIRST.md",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/current_delta/RAEON_THREAD_DELTA_2026-09-29/00_READ_ME_FIRST.md",
+      "sha256": "35559da44aaf6739b7d44ef1f238ebf994142520159aafde1e54e152f675b90e",
+      "bytes": 571
+    },
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/current_delta/RAEON_THREAD_DELTA_2026-09-29/01_GIT_VS_THREAD_AUDIT.md",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/current_delta/RAEON_THREAD_DELTA_2026-09-29/01_GIT_VS_THREAD_AUDIT.md",
+      "sha256": "b229a82c7a0e1620f915b6392fe0c120745aa630cf271d6b06438d7e83b7cf0c",
+      "bytes": 831
+    },
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/current_delta/RAEON_THREAD_DELTA_2026-09-29/02_PRIME_FIELD_CONSTITUTION.md",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/current_delta/RAEON_THREAD_DELTA_2026-09-29/02_PRIME_FIELD_CONSTITUTION.md",
+      "sha256": "84a734466b856152825ffad93541d01c52eb3cf31f1c1ad132a2ea40e92dc2bf",
+      "bytes": 1303
+    },
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/current_delta/RAEON_THREAD_DELTA_2026-09-29/03_UTILITY_DELTA.md",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/current_delta/RAEON_THREAD_DELTA_2026-09-29/03_UTILITY_DELTA.md",
+      "sha256": "545ddbabf0b864934f109cb54217f33fbb31f338274b0b0288f453148ee3ee55",
+      "bytes": 474
+    },
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/current_delta/RAEON_THREAD_DELTA_2026-09-29/04_CONFIGURATION_SPACE_CONSTITUTION.md",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/current_delta/RAEON_THREAD_DELTA_2026-09-29/04_CONFIGURATION_SPACE_CONSTITUTION.md",
+      "sha256": "d4f4d715f86fe944ac3eb2a749fb77d8758360482e511f70ece90840f41aec7a",
+      "bytes": 1179
+    },
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/current_delta/RAEON_THREAD_DELTA_2026-09-29/05_FIELD_GENERATOR_INTERACTION.md",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/current_delta/RAEON_THREAD_DELTA_2026-09-29/05_FIELD_GENERATOR_INTERACTION.md",
+      "sha256": "76a73f65d138147a236bb2a6c02773d459185ee959e26be94908fc956ca53513",
+      "bytes": 1622
+    },
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/current_delta/RAEON_THREAD_DELTA_2026-09-29/06_MERGE_FUSION_EMERGENCE.md",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/current_delta/RAEON_THREAD_DELTA_2026-09-29/06_MERGE_FUSION_EMERGENCE.md",
+      "sha256": "fad3b155ed7df08498a8a5674ce4bbb168e7c76e6bedd825de0961fa5bc5b071",
+      "bytes": 1352
+    },
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/current_delta/RAEON_THREAD_DELTA_2026-09-29/07_RUNTIME_AND_RENDER_DIRECTION.md",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/current_delta/RAEON_THREAD_DELTA_2026-09-29/07_RUNTIME_AND_RENDER_DIRECTION.md",
+      "sha256": "cae298ab756136b1df9d915df8c9e30c5257b06f83c165a719ccfbb8dcce36c7",
+      "bytes": 693
+    },
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/current_delta/RAEON_THREAD_DELTA_2026-09-29/08_CANON_SUMMARY.md",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/current_delta/RAEON_THREAD_DELTA_2026-09-29/08_CANON_SUMMARY.md",
+      "sha256": "6a1e11bac5c88a8166a437aac6dd3f047ceb2212b81a3558d65e5c60bf900e39",
+      "bytes": 1036
+    },
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/current_delta/RAEON_THREAD_DELTA_2026-09-29/CODEX_UPDATE_DIRECTIVE.md",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/current_delta/RAEON_THREAD_DELTA_2026-09-29/CODEX_UPDATE_DIRECTIVE.md",
+      "sha256": "90c1316645032d4f16de9923cb81a7c47f478411df548657416d8eafcd4b1266",
+      "bytes": 2529
+    },
+    {
+      "path": "provenance/sources/full-migration-2026-09-29/handoff/current_delta/RAEON_THREAD_DELTA_2026-09-29/MANIFEST.json",
+      "member": "RAEON_FULL_MIGRATION_2026-09-29/current_delta/RAEON_THREAD_DELTA_2026-09-29/MANIFEST.json",
+      "sha256": "dab3adf34df10df67bc0e2dd08c0453777ca09262e71534308cfa013e737f0f4",
+      "bytes": 1778
+    }
+  ],
+  "prior_packages": [
+    {
+      "file": "ORIGINATING_THREAD_FULL_CONTINUITY_IMPORT.zip",
+      "sha256": "e0942b2492612b5692ab2be12309b359ba6c58b73feb62a9716e4ffc98782da2",
+      "bytes": 233852323,
+      "identical_to_prior_upload": true,
+      "prior_upload": "raeon_codex_final_continuity_import.zip"
+    },
+    {
+      "file": "AUTHORITATIVE_CYCLE1_SOURCE_IMPORT.zip",
+      "sha256": "ebee1782caa972bca0db3ee11d07206bd81ed46866f01ee7613731eef9d1dc3f",
+      "bytes": 8187872,
+      "identical_to_prior_upload": true,
+      "prior_upload": "raeon_authoritative_cycle1_codex_import.zip"
+    }
+  ],
+  "inspection": {
+    "nested_member_records": 6838,
+    "distinct_zip_named_payloads": 244,
+    "duplicate_archives_deduplicated_by_sha256": true,
+    "appledouble_resource_forks_are_not_zip_archives": true,
+    "prior_packages_identical_to_previously_imported_uploads": true
+  },
+  "regenerated_mathematics": false
+}

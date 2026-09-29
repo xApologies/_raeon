@@ -18,3 +18,6 @@ The family-wide prohibition on Prime recovery/resurrection also applies to the s
 Returning up to three cards to deck has no immediate direct card advantage. It can combine with Draw 3 when the player has the required effects; no new timing windows follow.
 
 [Shared Utility rules and status](../SYSTEM.md) · [Machine encoding](../../../../../data/cycles/cycle_01/utilities/recovery.json)
+
+
+The family prohibition above concerns Graveyard recovery. The separate [White Restore Prime Utility](../restore_prime/SYSTEM.md) now reactivates an INACTIVE Prime in its fixed position; none of these six recovery slots changes.

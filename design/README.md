@@ -20,3 +20,6 @@ Implemented: repository/data validation tooling only. No game/AI/network/rendere
 ## Originating-thread continuity
 
 Current [Generator interaction](topology/field_generators/SYSTEM.md) and [Genesis Horizon board](game/board/SYSTEM.md) preserve recovered state. [Propagation evidence](../mathematics/propagation/README.md) is imported with R88 OPEN. Next foundational workshop: [turn/match design](game/match/SYSTEM.md), then victory/loss and Prime catalog; Utility finalization follows.
+
+
+The [2026-09-29 accepted delta](../data/manifests/full-migration-2026-09-29.json) now fixes 185 ordinary identities, 14 Prime H/C identities, 51 Utilities, mutable Configuration Spaces, fixed top-down XY + 3D orientation and Genesis runtime direction. Exact timing, victory, gestures, balance and implementation remain OPEN.

@@ -1,7 +1,171 @@
 {
   "schema_version": 1,
   "design": "design/cards/cycle_01/primes/SYSTEM.md",
-  "status": "OPEN",
-  "expected_identities": 30,
-  "objects": []
+  "status": "STRUCTURE_ACCEPTED_DETAILS_OPEN",
+  "expected_identities": 14,
+  "objects": [
+    {
+      "identity_key": "restore_yellow",
+      "family": "Restore",
+      "rank": "Yellow",
+      "rank_value": 3,
+      "maximum_magnitude": 3,
+      "directions": [
+        "RESTORE"
+      ],
+      "copy_limit": 1
+    },
+    {
+      "identity_key": "restore_green",
+      "family": "Restore",
+      "rank": "Green",
+      "rank_value": 4,
+      "maximum_magnitude": 4,
+      "directions": [
+        "RESTORE"
+      ],
+      "copy_limit": 1
+    },
+    {
+      "identity_key": "restore_blue",
+      "family": "Restore",
+      "rank": "Blue",
+      "rank_value": 5,
+      "maximum_magnitude": 5,
+      "directions": [
+        "RESTORE"
+      ],
+      "copy_limit": 1
+    },
+    {
+      "identity_key": "restore_violet",
+      "family": "Restore",
+      "rank": "Violet",
+      "rank_value": 6,
+      "maximum_magnitude": 6,
+      "directions": [
+        "RESTORE"
+      ],
+      "copy_limit": 1
+    },
+    {
+      "identity_key": "restore_white",
+      "family": "Restore",
+      "rank": "White",
+      "rank_value": 7,
+      "maximum_magnitude": 7,
+      "directions": [
+        "RESTORE"
+      ],
+      "copy_limit": 1
+    },
+    {
+      "identity_key": "degrade_yellow",
+      "family": "Degrade",
+      "rank": "Yellow",
+      "rank_value": 3,
+      "maximum_magnitude": 3,
+      "directions": [
+        "DEGRADE"
+      ],
+      "copy_limit": 1
+    },
+    {
+      "identity_key": "degrade_green",
+      "family": "Degrade",
+      "rank": "Green",
+      "rank_value": 4,
+      "maximum_magnitude": 4,
+      "directions": [
+        "DEGRADE"
+      ],
+      "copy_limit": 1
+    },
+    {
+      "identity_key": "degrade_blue",
+      "family": "Degrade",
+      "rank": "Blue",
+      "rank_value": 5,
+      "maximum_magnitude": 5,
+      "directions": [
+        "DEGRADE"
+      ],
+      "copy_limit": 1
+    },
+    {
+      "identity_key": "degrade_violet",
+      "family": "Degrade",
+      "rank": "Violet",
+      "rank_value": 6,
+      "maximum_magnitude": 6,
+      "directions": [
+        "DEGRADE"
+      ],
+      "copy_limit": 1
+    },
+    {
+      "identity_key": "degrade_white",
+      "family": "Degrade",
+      "rank": "White",
+      "rank_value": 7,
+      "maximum_magnitude": 7,
+      "directions": [
+        "DEGRADE"
+      ],
+      "copy_limit": 1
+    },
+    {
+      "identity_key": "universal_red",
+      "family": "Universal",
+      "rank": "Red",
+      "rank_value": 1,
+      "maximum_magnitude": 1,
+      "directions": [
+        "RESTORE",
+        "DEGRADE"
+      ],
+      "copy_limit": 1
+    },
+    {
+      "identity_key": "universal_orange",
+      "family": "Universal",
+      "rank": "Orange",
+      "rank_value": 2,
+      "maximum_magnitude": 2,
+      "directions": [
+        "RESTORE",
+        "DEGRADE"
+      ],
+      "copy_limit": 1
+    },
+    {
+      "identity_key": "universal_yellow",
+      "family": "Universal",
+      "rank": "Yellow",
+      "rank_value": 3,
+      "maximum_magnitude": 3,
+      "directions": [
+        "RESTORE",
+        "DEGRADE"
+      ],
+      "copy_limit": 1
+    },
+    {
+      "identity_key": "universal_green",
+      "family": "Universal",
+      "rank": "Green",
+      "rank_value": 4,
+      "maximum_magnitude": 4,
+      "directions": [
+        "RESTORE",
+        "DEGRADE"
+      ],
+      "copy_limit": 1
+    }
+  ],
+  "authority": "GAME_CANON",
+  "copy_limit": 1,
+  "active_positions": 3,
+  "final_printed_ids": "OPEN",
+  "identity_key_note": "Structural family/rank lookup key, not an assigned printed card ID"
 }

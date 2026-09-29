@@ -8,6 +8,7 @@ node tools/validators/validate-design-state.mjs
 node tools/validators/validate-normalization.mjs
 node tools/validators/validate-continuity.mjs
 node tools/validators/validate-cycle1-import.mjs
+node tools/validators/validate-full-migration.mjs
 node --test tests/regression/*.test.mjs
 ```
 

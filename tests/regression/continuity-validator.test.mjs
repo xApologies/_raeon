@@ -7,7 +7,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const baseline=loadContinuity(root);
 test('accepts reconciled continuity and source integrity',()=>assert.deepEqual(validateContinuityRepository(root).errors,[]));
 for(const [name,change,label] of [
- ['arbitrary rotation',s=>s.generator_interaction.values.arbitrary_free_xyz_rotation=true,'No arbitrary free XYZ'],
+ ['orientation grants legality',s=>s.generator_interaction.values.unrestricted_orientation_grants_legality=true,'Orientation cannot bypass QMO'],
  ['count as closure',s=>s.generator_interaction.values.count_alone_authorizes_closure=true,'Count is not'],
  ['closure graveyard penalty',s=>s.configuration_spaces.values.failed_closure_auto_graveyard=true,'No failed-closure'],
  ['unresolved slot hidden',s=>s.board.values.configuring_space_visible=false,'Unresolved field visible'],
@@ -22,7 +22,7 @@ for(const [name,change,label] of [
  ['selected R88 branch',s=>s.manifest.propagation.selected_branch='A','R88 branches'],
  ['research as validated math',s=>s.manifest.propagation.integration_status='VALID','Source claims'],
  ['competing Generator catalog',s=>s.generator_interaction.values.objects=[{id:'FG-001'}],'No competing'],
- ['Prime model promoted',s=>s.prime_working_model.authority='GAME_CANON','Prime model remains'],
+ ['Prime model downgraded',s=>s.prime_working_model.authority='PROVISIONAL','Prime model accepted'],
  ['invented expiry',s=>s.configuration_spaces.values.temporary_expiry='turn end','Unresolved Configuration Space'],
  ['missing data termination',s=>s.generator_interaction.values.missing_data_is_termination=true,'Missing data is not'],
  ['phase promotion',s=>s.manifest.phase='PROTOTYPE','Continuity cannot advance'],

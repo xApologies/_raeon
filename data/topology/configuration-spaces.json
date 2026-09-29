@@ -21,12 +21,14 @@
     ],
     "transitions": {
       "first_commitment": "EMPTY -> CONFIGURING",
-      "valid_closure": "CONFIGURING -> RESOLVED"
+      "valid_closure": "CONFIGURING -> RESOLVED",
+      "add_generator_to_resolved": "RESOLVED -> CONFIGURING; previous field destabilizes",
+      "reconfigure": "reposition/reorient committed contents within the domain; new VALID closure -> RESOLVED"
     },
     "configuring_is_active": true,
     "failed_closure_auto_graveyard": false,
     "screen_position_is_identity": false,
-    "resolved_reopening": "OPEN",
+    "resolved_reopening": "ACCEPTED",
     "temporary_expiry": "OPEN",
     "fusion_permanent_base_accounting": "OPEN",
     "provisional_states": [
@@ -39,6 +41,35 @@
       "CONFIGURED",
       "CONTRIBUTING_TO_RESOLVED_MANIFOLD"
     ],
-    "graveyard_requires_separate_accepted_rule": true
+    "graveyard_requires_separate_accepted_rule": true,
+    "persistent_container": true,
+    "field_is_current_resolved_state": true,
+    "owns": [
+      "identity",
+      "capacity",
+      "committed FG contents",
+      "XY positions",
+      "3D orientations",
+      "relationship/closure state",
+      "resolved field QMO if any"
+    ],
+    "within_domain_reconfiguration": true,
+    "individual_extraction_or_transfer": false,
+    "capacity_is_maximum_not_required_count": true,
+    "capacity_color_independent_of_field_color": true,
+    "strategic_presentation": {
+      "EMPTY": "dormant",
+      "CONFIGURING": "unresolved animated",
+      "RESOLVED": "stable active field"
+    },
+    "reconfiguration_example": {
+      "capacity_rank": "Violet",
+      "initial_generators": 3,
+      "initial_field": "Red",
+      "added_generators": 1,
+      "intermediate": "CONFIGURING",
+      "possible_result": "Orange",
+      "requires_admitted_closure": true
+    }
   }
 }

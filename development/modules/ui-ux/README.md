@@ -58,3 +58,6 @@ See [current specification](../../../design/ui_ux/SYSTEM.md) and [OPEN/source-im
 ## Continuity evidence
 
 [Final continuity reconciliation](../../../provenance/audits/final-continuity-import.md) adds design/source context. Current maturity and all gate statuses remain unchanged; external source PASS/CLOSED claims are not module completion evidence.
+
+
+Accepted 2026-09-29 design is recorded in the [full migration manifest](../../../data/manifests/full-migration-2026-09-29.json). This resolves only its named design items; implementation and every development gate remain OPEN.

@@ -2,7 +2,7 @@
 
 <!-- raeon:current-spec utilities -->
 
-Authority: GAME_CANON / STRUCTURALLY DEFINED. All 50 ordinary Utility slots are accounted for. Module status DESIGN; exact catalog PARTIALLY FORMALIZED, not implementation-ready. Balance/gameplay UNTESTED; runtime OPEN / UNIMPLEMENTED.
+Authority: GAME_CANON / STRUCTURALLY DEFINED. All 51 ordinary Utility slots are accounted for: the prior 50 remain unchanged and White Restore Prime is additive. Module status DESIGN; exact catalog PARTIALLY FORMALIZED, not implementation-ready. Balance/gameplay UNTESTED; runtime OPEN / UNIMPLEMENTED.
 
 | Family | Slots |
 | --- | --- |
@@ -12,9 +12,10 @@ Authority: GAME_CANON / STRUCTURALLY DEFINED. All 50 ordinary Utility slots are 
 | Draw / Deck | 7 |
 | Graveyard / Recovery | 6 |
 | Stability / Protection | 6 |
-| Total | 50 |
+| Additional White Restore Prime | 1 |
+| Total | 51 |
 
-Utility identity copy limit: 3. There is no additional color uniqueness rule. Utilities cannot override mathematical legality. Final UT-001 through UT-050 assignment/ordering remain OPEN. Working labels are not final names or assigned IDs. Black Utilities are outside this ordinary set.
+Utility identity copy limit: 3. There is no additional color uniqueness rule. Utilities cannot override mathematical legality. Final identifier scheme and ordering for all 51 slots remain OPEN; the old UT-001 through UT-050 range does not constrain the accepted count. Working labels are not final names or assigned IDs. Black Utilities are outside this ordinary set.
 
 - [Transduction — 18](transduction/SYSTEM.md)
 - [Activation — 7](activation/SYSTEM.md)
@@ -22,6 +23,7 @@ Utility identity copy limit: 3. There is no additional color uniqueness rule. Ut
 - [Draw / Deck — 7](draw_deck/SYSTEM.md)
 - [Graveyard / Recovery — 6](recovery/SYSTEM.md)
 - [Stability / Protection — 6](stability/SYSTEM.md)
+- [White Restore Prime — 1](restore_prime/SYSTEM.md)
 
 ## Global OPEN work
 

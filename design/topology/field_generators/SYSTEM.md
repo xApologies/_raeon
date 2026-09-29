@@ -1,19 +1,19 @@
-# Field Generator geometry
+# Field Generator configuration interaction
 
 <!-- raeon:current-spec generator-geometry -->
 
-Authority: GAME_CANON for the established geometric role. Participating Generator geometry, not Sandbox provenance, determines topology. Mathematical closure must admit a configuration before count-based manifold color applies.
+Authority: GAME_CANON, accepted 2026-09-29. The [120 imported FG QMOs](../../../data/cycles/cycle_01/field_generators/objects.json) are read-only input. No replacement mathematics is invented. [Machine interaction](../../../data/cycles/cycle_01/field_generators/interaction.json) records this constitution.
 
-The original [120 Generator records](../../../data/cycles/cycle_01/field_generators/objects.json) and [compatibility data](../../../data/qmo/generators/compatibility.json) are IMPORTED_VALIDATED. Broader propagation/closure mathematics and runtime admissible-state coverage remain SOURCE_IMPORT_REQUIRED/OPEN. No geometry is reconstructed here. Card identity/rank/copy rules belong to [Field Generator cards](../../cards/cycle_01/field_generators/SYSTEM.md).
+An FG is a CARD in Deck/Hand/Graveyard. Committing it to a Configuration Space deploys its Chirality/QMO orientation object: **CARD → deployed FG → configuration → resolved field**.
 
-## Recovered configuration interaction
+The detailed interaction is **fixed top-down, 2D XY placement + 3D orientation R**. There is no player-controlled positional Z, orbit camera or CAD navigation. Three-dimensional orientation is accepted; mathematical permission remains limited to Generator/domain/QMO-admitted states. Earlier wording against arbitrary XYZ manipulation must not prohibit this accepted orientation control or authorize invalid states.
 
-Authority: GAME_CANON for the recovered interaction principles; notation is WORKING DESIGN. A Field Generator is a first-class QMO / mathematical configuration object. The intended derivation is Chirality Fabric → Propagation Engine → QMO landscape → Field Generator catalog; no FG-001…FG-120 objects are authored here.
+Controls stay select, move in XY, orient/rotate as configurations grow from one to eight FGs. Exact mouse/touch gesture tuning is OPEN. Continuous-looking movement may snap/magnetize to deterministic admitted states. Imported occupancy/void, rotation_class, chirality_parity, six X-/X+/Y-/Y+/Z-/Z+ face states/color views, compatibility and manifold memberships supply the source mapping. Exact runtime admission/pose mapping remains OPEN.
 
-The player chooses a Configuration Space and commits Generators. Working notation: `C = (C_i; FG_1^(o_1), …, FG_n^(o_n))`, where `o_i` is an admissible orientation/configuration state. Manipulation changes mathematical configuration, not merely appearance. Only states admitted by the Generator/domain/QMO model are available; arbitrary free XYZ rotation is not canon.
+One FG forms no field. Two may expose compatible partial relationships. Useful partial relationships may show faint lines/particles, growing topology, stronger coherence and magnetic snapping/hysteresis. These are presentation feedback and cannot invent legality. Complexity comes from arrangement, not additional controls.
 
-QMO closure evaluates that configuration. VALID closure precedes count-based color: 3/4/5/6/7/8 participating Generators → Red/Orange/Yellow/Green/Blue/Violet. Eight Generators alone do not create Violet. Missing data is not TERMINATES; retain VALID, TERMINATES, NOT_APPLICABLE, OPEN and UNTESTED, including explicit negative mathematical knowledge.
+Closure must be VALID before count determines field color: 3/4/5/6/7/8 → Red/Orange/Yellow/Green/Blue/Violet. Count alone never guarantees closure. Admitted state changes CONFIGURING to RESOLVED and the manifold visually stabilizes. Missing data remains OPEN/UNTESTED, not TERMINATES; explicit VALID, TERMINATES and NOT_APPLICABLE outcomes remain intact.
 
-A non-closing configuration remains unresolved; it does not automatically route cards to Graveyard. Exact resolved-manifold reopening and relation-check timing remain OPEN. Individual committed Generators cannot be independently extracted; whole domains may merge/fuse.
+Resolved spaces may reopen and reconfigure within their domain. A non-closing configuration stays unresolved without an automatic Graveyard penalty. Individual committed FGs cannot be independently extracted/transferred; whole spaces can merge. [Configuration constitution](../sandbox/SYSTEM.md) and [merge/fusion](../fusion/SYSTEM.md) define these relationships.
 
-[Configuration Space states](../sandbox/SYSTEM.md), [machine interaction](../../../data/cycles/cycle_01/field_generators/interaction.json), [Propagation source boundary](../../../mathematics/propagation/README.md). The recovered Cycle-1 import supplies the Generator catalog and locked catalog closure API independently of the research source. It does not resolve broader R88 mapping or all runtime admissible-state tables.
+The learning goal is to discover orientation, chirality, relationships, topology, closure and manifolds through interaction rather than prerequisite formal instruction. Broader [Propagation mapping](../../../mathematics/propagation/README.md), exact runtime states and relation timing remain OPEN.

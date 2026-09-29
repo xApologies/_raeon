@@ -117,3 +117,6 @@
 /tools/rendering/CYCLE_RENDER_HANDOFF.md -text whitespace=cr-at-eol
 /tools/cycle_generation/CYCLE_AMENDMENT_TEMPLATE.md -text whitespace=cr-at-eol
 /tools/rendering/BLENDER_HANDOFF_PROMPT.txt -text whitespace=cr-at-eol
+
+/provenance/sources/full-migration-2026-09-29/** -text whitespace=cr-at-eol
+/provenance/sources/full-migration-2026-09-29/raeon_FULL_exhaustive_migration_2026-09-29.zip filter=lfs diff=lfs merge=lfs -text

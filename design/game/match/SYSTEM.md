@@ -10,4 +10,7 @@ A roughly 15-minute session is a design target, not a hard timer or victory rule
 
 ## Recovered foundational backlog
 
-Turn/match state-machine design is the recommended next workshop, followed by victory/loss and the Prime catalog. Deck exhaustion, surrender/timeout, opponent interaction windows, manifold activation and fusion timing remain OPEN. Destruction of all three opposing Primes is only a PROVISIONAL victory/loss proposal, not an accepted win condition. No automatic refresh, discard routing, starting hand or temporary lifetime is supplied by this import.
+Turn/match state-machine design is the recommended next workshop, followed by victory/loss and remaining Prime timing/targeting details; the 14-identity structural catalog and H/C rules are now accepted. Deck exhaustion, surrender/timeout, opponent interaction windows, manifold activation and fusion timing remain OPEN. Destruction of all three opposing Primes is only a PROVISIONAL victory/loss proposal, not an accepted win condition. No automatic refresh, discard routing, starting hand or temporary lifetime is supplied by this import.
+
+
+Ordinary Prime H=0 now means INACTIVE in place. Victory/loss must be decided explicitly rather than inferred from this state. The White Restore Prime reactivation and resolved-space reconfiguration are accepted effects; their exact match timing remains OPEN.

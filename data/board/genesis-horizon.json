@@ -29,7 +29,15 @@
     ],
     "shared_underlying_state": true,
     "configuring_space_visible": true,
-    "exact_layout_camera_controls": "OPEN",
-    "animation_direction_authority": "WORKING DESIGN"
+    "animation_direction_authority": "WORKING DESIGN",
+    "exact_layout_and_gesture_tuning": "OPEN",
+    "configuration_camera": "FIXED_TOP_DOWN",
+    "configuration_interaction_ref": "data/cycles/cycle_01/field_generators/interaction.json",
+    "inactive_prime_remains_in_fixed_position": true,
+    "space_presentation": {
+      "EMPTY": "dormant",
+      "CONFIGURING": "unresolved animated",
+      "RESOLVED": "stable active field"
+    }
   }
 }

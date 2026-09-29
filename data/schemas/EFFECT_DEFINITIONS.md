@@ -11,4 +11,4 @@ Illustrative accepted examples:
 | TRANSDUCTION | RESTORE | YELLOW | 3 |
 | DRAW_DECK | DRAW | VIOLET | 3 |
 
-Utility identifiers are planned as UT-001 through UT-050. Assignment and deterministic ordering are OPEN; no IDs are assigned in this checkpoint. Future assignment must document order, preserve family counts, distinguish working names from final names and retain unresolved fields. Unknown targeting, timing, duration, cost and rank remain OPEN, not implicit defaults.
+The prior UT-001 through UT-050 direction covered the original 50 Utility slots. There are now 51; the final identifier scheme/assignment and deterministic ordering remain OPEN, including White Restore Prime. No final IDs are assigned by this migration. Future assignment must document order, preserve family counts, distinguish working names from final names and retain unresolved fields. Unknown targeting, timing, duration, cost and rank remain OPEN, not implicit defaults.

@@ -1,5 +1,3 @@
-# utilities catalog boundary
+# Ordinary Utility catalog
 
-Status: OPEN — final names, UT-001..UT-050 IDs, wording and unresolved timing/targets not assigned.
-
-[Current system](../SYSTEM.md) defines accepted structure; no final cards are fabricated here.
+51 structural slots are accepted: the six original families still contain 50 unchanged slots, plus [White Restore Prime](../restore_prime/SYSTEM.md). Final names, printed IDs/order, wording and unresolved timing/targets remain OPEN. See [overview](../SYSTEM.md) and [machine data](../../../../../data/cycles/cycle_01/utilities/overview.json).

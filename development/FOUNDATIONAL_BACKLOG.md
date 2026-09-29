@@ -1,17 +1,17 @@
 # Foundational design backlog
 
-Status: OPEN. This plan accepts no gate, implementation or new mechanic. Current specifications remain in design/.
+Whole-game PREPRODUCTION; module gates remain OPEN. The [2026-09-29 migration](../data/manifests/full-migration-2026-09-29.json) accepts design and architecture direction, not implementation.
 
-1. Turn/match state machine: setup, starting/max hand, mulligan, draw, first-player, phases, ordinary READY refresh, Utility/opponent windows, fusion/manifold/Prime timing, turn end, empty deck, expiry, surrender/timeout.
-2. Victory/loss workshop; destruction of all opposing Primes is only a working proposal.
-3. Thirty ordinary Prime identities: rank/health, differentiation, effects, timing and operators.
-4. Utility finalization: ordering/IDs, final names, remaining rank/target/timing/duration and balance.
-5. Hand/deck/Graveyard routing, overflow and exhaustion.
-6. Black identities, Fourth Prime behavior, Utility catalog/crafting.
-7. Collection/economy values, rewards and pacing.
+Resolved: 185 ordinary identities (120 FG + 14 Prime + 51 Utility), the 14 family/rank Prime catalog and H/C mechanics, White Restore Prime, persistent mutable/reconfigurable spaces, fixed top-down XY + 3D orientation interaction, content merge/board-width cost, deterministic fusion/emergence, and Genesis language/VM/Python/platform direction.
 
-Parallel source work: import/reconcile missing game mathematics/catalogs. Propagation v8 is received as source evidence; R88 and its raeon mapping remain OPEN.
+1. Turn/match state machine: setup, starting/max hand, mulligan, draw, first-player, phases, READY refresh, Utility/opponent windows, merge/fusion/Prime/reconfiguration timing, turn end, exhaustion and expiry.
+2. Victory/loss: decide explicitly; do not infer loss from the new ordinary Prime INACTIVE state.
+3. Prime completion: starting H/C, Restore overflow, targeting, final printed IDs/names/wording and balance. The 14 structural identities and health/charge orders are already accepted.
+4. Utility finalization: retain the original 50 plus White Restore Prime; finalize 51-slot IDs/order, names, unresolved rank/target/timing/duration and balance. Reactivation is not Graveyard recovery or tempo Activation.
+5. Configuration integration: map XY/orientation to admitted source states; define merge ceiling/runtime copy admission, permanent-base accounting and any future split/un-fusion. Tune simple input gestures and partial relationship feedback without adding legality.
+6. Runtime integration: Genesis semantics/VM, Python boundary and Windows shell; later Apple/Metal/Android shells. Exact APIs/toolchain and implementation remain OPEN.
+7. Hand/deck/Graveyard routing and overflow; Black identities/Fourth Prime/catalog/crafting; collection/economy values, rewards and pacing.
 
-PROVISIONAL slice planning: after foundational rules and representative QMO import, use representative Red/Orange/Yellow closures, 3–6 Primes and 10–15 Utilities rather than all 200 cards, with a full match, representative fusion/emergence, AI, rendering, UI and persistence. Existing [slice criteria](../production/03_vertical_slice/EXIT_CRITERIA.md) remain unchecked. No prototype or gameplay test is claimed.
+The imported 120 FG and 2,094-object atlas are immutable source inputs. Broader mathematics, R88 mapping, Generator/derived RenderSpecs and projection remain missing/open as recorded by [source requirements](../data/manifests/cycle1-source-import.json).
 
-[Match specification](../design/game/match/SYSTEM.md), [source boundary](../mathematics/propagation/README.md), [continuity audit](../provenance/audits/final-continuity-import.md).
+PROVISIONAL slice planning: after foundational match rules, use representative Red/Orange/Yellow closures, 3–6 Primes and 10–15 Utilities rather than all 185 identities. Include a complete match and representative fusion/emergence, AI, rendering, UI and persistence. Existing [slice criteria](../production/03_vertical_slice/EXIT_CRITERIA.md) remain unchecked; no prototype/gameplay test is claimed.

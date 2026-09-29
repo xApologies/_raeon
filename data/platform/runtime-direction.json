@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "design": "design/game/GAME_DESIGN_DOCUMENT.md",
+  "values": {
+    "runtime_direction": {
+      "authority": "CANON",
+      "status": "ACCEPTED ARCHITECTURE DIRECTION / OPEN IMPLEMENTATION",
+      "semantics_home": "Genesis Horizon",
+      "language": "Genesis",
+      "chain": [
+        "Genesis game semantics",
+        "Genesis VM",
+        "Python hypervisor/translation boundary",
+        "platform shell"
+      ],
+      "bidirectional_boundary": true,
+      "game_truth": [
+        "Genesis state",
+        "QMO state"
+      ],
+      "platform_services": [
+        "graphics",
+        "input",
+        "audio",
+        "storage",
+        "network"
+      ],
+      "platform_returns": "input events",
+      "blender_role": "offline asset generation",
+      "asset_pipeline": [
+        "QMO",
+        "RenderSpec/geometry",
+        "Blender",
+        "runtime assets"
+      ],
+      "initial_target": "Windows",
+      "later_shells": [
+        "Apple/Metal",
+        "Android"
+      ],
+      "rewrite_authoritative_semantics_per_platform": false,
+      "implemented": false,
+      "vm_integration": "OPEN",
+      "graphics_api_and_toolchain": "OPEN"
+    }
+  }
+}

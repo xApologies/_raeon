@@ -15,3 +15,10 @@ THE MATHEMATICS IS THE PERMISSION SYSTEM. The QMO is the canonical mathematical 
 - [Rendering](../rendering/SYSTEM.md)
 
 Whole-game phase: PREPRODUCTION. No playable build, implementation or accepted production exit is claimed.
+
+
+## Genesis Horizon runtime direction
+
+Accepted architecture direction: raeon semantics live in the Genesis Horizon and are authored in the Genesis programming language. Genesis game semantics ↔ Genesis VM ↔ Python hypervisor/translation boundary ↔ platform shell. Game truth remains Genesis/QMO state; platform services provide graphics/input/audio/storage/network and return input events.
+
+Blender is offline asset generation: QMO → RenderSpec/geometry → Blender → runtime assets. Windows is first; later Apple/Metal and Android shells reuse authoritative semantics. This does not claim a Genesis VM integration, select an implementation-complete renderer or advance production. Exact toolchain/API/integration remains OPEN. [Runtime direction data](../../data/platform/runtime-direction.json), [rendering](../rendering/SYSTEM.md).
