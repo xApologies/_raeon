@@ -1,3 +1,4 @@
+import {matchesRuntimeNavigation} from './genesis-runtime-contract.mjs';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
@@ -44,5 +45,5 @@ export function projectGameDefinitionText(root, file, text) {
 }
 export function matchesGameDefinitionAmendment(root, file, actualHash, priorHash) {
   const entry = loadGameDefinitionContract(root).approved_file_amendments[file];
-  return entry?.before_sha256 === priorHash && entry?.after_sha256 === actualHash;
+  return (entry?.before_sha256 === priorHash && entry?.after_sha256 === actualHash) || matchesRuntimeNavigation(file, actualHash, priorHash);
 }

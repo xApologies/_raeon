@@ -6,7 +6,7 @@ Platform adaptation/delivery.
 
 ## Current status
 
-OPEN — intentionally unimplemented; validation UNTESTED. No status advancement in normalization.
+OPEN — intentionally unimplemented for native SDK ports and device delivery. The generic host-reference runtime has separate software evidence below; no whole module gate is advanced.
 
 ## Authority
 
@@ -18,7 +18,7 @@ This dashboard tracks maturity, not game rules. [Current design](../../../design
 
 ## Outputs
 
-[Implementation boundary](../../../game/core/README.md) remains unimplemented.
+[Implementation boundary](../../../game/core/README.md) now links the generic Horizon reference implementation. [Runtime execution evidence](../core-game/GENESIS_RUNTIME_EXECUTION.md) also covers the Python Hypervisor. Match rules and native device ports remain outside that result.
 
 ## Dependencies
 

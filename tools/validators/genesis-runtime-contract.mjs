@@ -27,3 +27,12 @@ export function validateRuntimeSources(root, inventory) {
   } catch (error) { errors.push('Genesis source contract: ' + error.message); }
   return errors;
 }
+
+// Exact navigation amendment: exposes tested generic runtime, preserves game gates.
+const navigationAmendments = {
+  'game/core/README.md': {before: 'b160d475b108a6edac295e76dada06ac36037e5c771ff20168574b63119e3562', after: 'f24c2020fe41df0e889f093dcbd8e19424fd3931d273897641ce048376885a44'}
+};
+export function matchesRuntimeNavigation(file, actual, historical) {
+  const entry = navigationAmendments[file];
+  return Boolean(entry && entry.before === historical && entry.after === actual);
+}

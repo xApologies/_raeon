@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 import {fileURLToPath} from 'node:url';
-import {runtimeDecision, validateRuntimeSources} from '../../tools/validators/genesis-runtime-contract.mjs';
+import {runtimeDecision, validateRuntimeSources, matchesRuntimeNavigation} from '../../tools/validators/genesis-runtime-contract.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const decision = JSON.parse(fs.readFileSync(path.join(root, runtimeDecision), 'utf8'));
@@ -34,3 +34,14 @@ for (const mutation of ['changed source', 'extra source', 'changed decision']) {
     }
   });
 }
+
+test('runtime navigation accepts only its exact before/after hashes', () => {
+  assert.equal(matchesRuntimeNavigation('game/core/README.md', 'f24c2020fe41df0e889f093dcbd8e19424fd3931d273897641ce048376885a44', 'b160d475b108a6edac295e76dada06ac36037e5c771ff20168574b63119e3562'), true);
+});
+test('runtime navigation rejects unrelated or altered content', () => {
+  assert.equal(matchesRuntimeNavigation('game/core/README.md', '0'.repeat(64), 'b160d475b108a6edac295e76dada06ac36037e5c771ff20168574b63119e3562'), false);
+  assert.equal(matchesRuntimeNavigation('game/other.md', 'f24c2020fe41df0e889f093dcbd8e19424fd3931d273897641ce048376885a44', 'b160d475b108a6edac295e76dada06ac36037e5c771ff20168574b63119e3562'), false);
+});
+test('runtime navigation does not rewrite a different historical baseline', () => {
+  assert.equal(matchesRuntimeNavigation('game/core/README.md', 'f24c2020fe41df0e889f093dcbd8e19424fd3931d273897641ce048376885a44', '0'.repeat(64)), false);
+});
