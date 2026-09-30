@@ -12,7 +12,9 @@ import zipfile
 VERSION = '0.2.0'
 PREFIXES = {
     'hypervisor': ['platform/shared/python_hypervisor/', 'tests/unit/hypervisor/'],
-    'horizon': ['tools/genesis_runtime_pass02.py', 'tools/genesis_runtime_catalog.py', 'tools/genesis_runtime_isolation.py',
+    'horizon': ['tools/genesis_runtime_projection_correction.py',
+                'provenance/decisions/raeon-pass-02-projection-correction.json',
+                'development/modules/core-game/PASS_02_PROJECTION_CORRECTION.md', 'tools/genesis_runtime_pass02.py', 'tools/genesis_runtime_catalog.py', 'tools/genesis_runtime_isolation.py',
                 'data/cycles/cycle_01/', 'data/game/', 'provenance/decisions/raeon-pass-02.json',
                 'provenance/decisions/raeon-pass-02.md', 'development/modules/core-game/PASS_02_POLICY_GATES.json',
                 'development/modules/core-game/PASS_02_EXECUTION.md', 'development/modules/core-game/PASS_02_RECEIPT.md',

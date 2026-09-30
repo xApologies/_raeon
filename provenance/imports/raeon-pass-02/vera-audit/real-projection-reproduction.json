@@ -1,0 +1,12 @@
+{
+  "baseline_sha": "8a20961b97b0bbb6e2e257d3c3ff62992ea6d839",
+  "run": 3,
+  "failures": 6,
+  "errors": 0,
+  "cases": [
+    "test_audited_public_view_cannot_inherit_private_hand",
+    "test_audited_same_actor_public_cannot_inherit_inspection",
+    "test_audited_live_merge_cannot_restore_private_relations"
+  ],
+  "exit_code": 1
+}

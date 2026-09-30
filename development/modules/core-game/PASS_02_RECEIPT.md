@@ -1,5 +1,10 @@
 # RAEON Pass 2 receipt
 
+Historical pre-correction receipt. Vera V-P2-01 subsequently reproduced three
+projection defects outside the original mapped coverage. The original results
+below are retained; see [targeted correction receipt](PASS_02_PROJECTION_CORRECTION.md)
+for corrected source, additional regressions and renewed verification.
+
 Status: SOFTWARE_SCOPE_COMPLETE. Date: 2026-09-30.
 Repository: `xApologies/_raeon`. Working branch: `codex/raeon-pass-02`.
 Starting commit: `23ebfc3be3a4e6ae4883793bfc99b1dbfae67bf8`.

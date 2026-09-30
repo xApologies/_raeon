@@ -135,13 +135,25 @@ def verify_realized(backend, prior_bindings, prior_relations, definitions, relat
         reject()
 
 
-def project(backend, manifest, authority):
+def effective_view_owner(manifest, authority):
+    """Actor capability authorizes a view; the selected view bounds disclosure."""
     view = manifest['views'].get(authority.get('view_id'))
     if not isinstance(view, dict):
         raise ValueError('AUTHORITY_DENIED')
     owner = view['private_owner']
     if owner is not None and (authority.get('player_role') != owner or not authority.get('private_view')):
         raise ValueError('AUTHORITY_DENIED')
+    return owner
+
+
+def relation_visible(relation, visible, owner_identity):
+    return (relation['source'] in visible and relation['target'] in visible
+            and (relation['relation'] != 'private_to' or relation['target'] == owner_identity))
+
+
+def project(backend, manifest, authority):
+    owner = effective_view_owner(manifest, authority)
+    view = manifest['views'][authority['view_id']]
     objects = {}
     for name in view['objects']:
         payload = backend.resources[backend.bindings[name]]['payload']
@@ -156,8 +168,7 @@ def project(backend, manifest, authority):
     relations = []
     for ref in backend.relations:
         relation = backend.resources[ref]['payload']
-        if relation['source'] in visible and relation['target'] in visible:
-            if relation['relation'] != 'private_to' or relation['target'] == owner_id:
-                relations.append(dict(relation))
+        if relation_visible(relation, visible, owner_id):
+            relations.append(dict(relation))
     # Caller detaches the entire value. Never expose native resource dictionaries.
     return {'objects': objects, 'relations': relations}

@@ -12,7 +12,7 @@ import hashlib
 from collections import Counter
 
 from .toolchain import canonical, digest, file_hash
-from .application import read_json
+from .application import read_json, effective_view_owner, relation_visible
 from .values import IntegerInterpreter
 
 
@@ -96,10 +96,17 @@ class Collections:
                 collection['members'] = [n for n, c in collections.items()
                                          if c['owner'] == collection['owner'] and c['kind'] == child_kind]
 
+    def inspection_scope(self, authority):
+        owner = effective_view_owner(self.manifest, authority)
+        if owner is None or authority.get('application_id') != self.manifest['id']:
+            return None
+        return {'application_id': self.manifest['id'], 'view_id': authority['view_id'], 'owner': owner}
+
     def begin(self, intent, authority):
         validate_arguments(intent['arguments'], self.manifest['operations'][intent['operation']]['arguments'])
         self.context = {'intent': copy.deepcopy(intent), 'owner': authority.get('player_role'),
-                        'actor': authority['actor'], 'arguments': copy.deepcopy(intent['arguments'])}
+                        'actor': authority['actor'], 'arguments': copy.deepcopy(intent['arguments']),
+                        'inspection_scope': self.inspection_scope(authority)}
         grant = self.state['grants'].get(intent['arguments'].get('grant'))
         expected = {'application': self.manifest['id'], 'match': self.h.identity,
                     'actor': authority['actor'], 'owner': authority.get('player_role'),
@@ -172,6 +179,8 @@ class Collections:
                 deny()
             plan.update(source=source, seed=seed)
         elif spec['kind'] in ['transfer', 'inspect', 'reorder']:
+            if spec['kind'] == 'inspect' and self.context['inspection_scope'] is None:
+                deny()
             selection = spec['selection']
             source = self.resolve(selection.get('source'))
             if selection['mode'] == 'top':
@@ -316,6 +325,7 @@ class Collections:
                 members.extend(plan['selected'])
         elif plan['kind'] == 'inspect':
             self.state['inspections'][self.context['actor']] = {'revision': self.h._state['revision'] + 1,
+                                                              'scope': dict(self.context['inspection_scope']),
                                                               'items': plan['selected']}
         elif plan['kind'] == 'reorder':
             self.state['collections'][plan['source']]['members'][:len(plan['selected'])] = plan['selected']
@@ -370,7 +380,7 @@ class Collections:
             deny()
 
     def project(self, view, authority):
-        owner = authority.get('player_role') if authority.get('private_view') else None
+        owner = effective_view_owner(self.manifest, authority)
         for name, collection in self.state['collections'].items():
             if name not in view['objects']:
                 payload = self.b.resources[self.b.bindings[name]]['payload']
@@ -396,12 +406,14 @@ class Collections:
             if 'occupant' in fields:
                 fields['occupant'] = collection['members'][0] if collection['members'] else None
         inspection = self.state['inspections'].get(authority['actor'])
-        if inspection and inspection['revision'] == self.h._state['revision']:
+        scope = self.inspection_scope(authority)
+        if scope is not None and inspection and inspection.get('scope') == scope and inspection['revision'] == self.h._state['revision']:
             view['inspection'] = [{'identity': i, 'catalog': self.state['cards'][i]['catalog']} for i in inspection['items']]
         visible = {obj['identity'] for obj in view['objects'].values()}
+        owner_id = view['objects'][owner]['identity'] if owner in view['objects'] else None
         existing = {digest(edge) for edge in view['relations']}
         for ref in self.b.relations:
             edge = self.b.resources[ref]['payload']
-            if edge['source'] in visible and edge['target'] in visible and digest(edge) not in existing:
+            if relation_visible(edge, visible, owner_id) and digest(edge) not in existing:
                 view['relations'].append(copy.deepcopy(edge))
         return view

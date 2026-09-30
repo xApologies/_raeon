@@ -18,5 +18,21 @@ export function pass02Sources(root, inventory) {
   for (const [file, expected] of Object.entries(decision.source_inputs)) {
     if (hash(fs.readFileSync(path.join(root, file))) !== expected) throw new Error('Pass-2 source input integrity: ' + file);
   }
+  validateProjectionCorrection(root, inventory);
   return decision.compiled_sources;
+}
+
+// Additive host-binding amendment: earlier Genesis decisions are unchanged.
+export const projectionCorrectionDecision = 'provenance/decisions/raeon-pass-02-projection-correction.json';
+const correctionDecisionHash = '411d64fa5f7c23469d13dbddc1c651e8e3b02339ce5ff092ab129969d290c070';
+export function validateProjectionCorrection(root, inventory) {
+  if (!inventory.includes(projectionCorrectionDecision)) return;
+  const bytes = fs.readFileSync(path.join(root, projectionCorrectionDecision));
+  if (hash(bytes) !== correctionDecisionHash) throw new Error('Projection correction decision hash mismatch');
+  const decision = JSON.parse(bytes);
+  const expectedFiles = {...decision.evidence_files, [decision.additive_regression_source]: decision.additive_regression_sha256};
+  for (const [file, record] of Object.entries(decision.corrected_sources)) expectedFiles[file] = record.after_sha256;
+  for (const [file, expected] of Object.entries(expectedFiles)) {
+    if (hash(fs.readFileSync(path.join(root, file))) !== expected) throw new Error('Projection correction integrity: ' + file);
+  }
 }

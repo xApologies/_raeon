@@ -147,7 +147,9 @@ def main():
         elif args.command == 'audit':
             result = acceptance.audit(ROOT, BUILD)
             result['pass_02'] = pass02.audit(ROOT, BUILD)
-            if result['status'] != 'PASS' or result['pass_02']['status'] != 'PASS':
+            import genesis_runtime_projection_correction as correction
+            result['projection_correction'] = correction.audit(ROOT, BUILD)
+            if any(result[key]['status'] != 'PASS' for key in ['pass_02', 'projection_correction']) or result['status'] != 'PASS':
                 print(json.dumps(result, indent=2))
                 raise RuntimeError('Audit incomplete; inspect named failing acceptance evidence')
         elif args.command == 'package':

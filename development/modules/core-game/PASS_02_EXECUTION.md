@@ -1,6 +1,10 @@
 # Current runtime execution record — Pass 2
 
-Status: SOFTWARE_SCOPE_COMPLETE. Whole-game phase: PREPRODUCTION.
+Status: PROJECTION_CORRECTION_VALIDATION_IN_PROGRESS.
+The completed implementation is preserved; the Vera audit found three privacy
+cases absent from the original mapped suite. See [correction receipt](PASS_02_PROJECTION_CORRECTION.md).
+
+Historical pre-correction record follows. Status at original receipt: SOFTWARE_SCOPE_COMPLETE. Whole-game phase: PREPRODUCTION.
 Working branch: `codex/raeon-pass-02`.
 Starting Pass-1 commit: `23ebfc3be3a4e6ae4883793bfc99b1dbfae67bf8`.
 Implementation/distribution local and remote commit: `f5c380deccb1297f455a599004b159706b39735c`.

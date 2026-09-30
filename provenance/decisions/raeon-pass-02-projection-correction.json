@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "finding": "V-P2-01",
+  "authority": "User-authorized CODEX_CORRECTION.md from preserved Vera audit package",
+  "baseline_commit": "8a20961b97b0bbb6e2e257d3c3ff62992ea6d839",
+  "branch": "codex/raeon-pass-02",
+  "main_unchanged": "69a0030805b8c3858c877a514e2f50644421115a",
+  "scope": "Selected-view disclosure, inspection context and private relationship filtering in generic host bindings",
+  "corrected_sources": {
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/application.py": {
+      "before_sha256": "450d9416d8a221fb2311a2c43ac5361019d4ea1750370c204df0982b67855051",
+      "after_sha256": "bbf500503bfcc01368aa7dfe3dc814999011a2c91afdfca672a16a10d61c0ca7"
+    },
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/collections.py": {
+      "before_sha256": "6464302edcc9f005378e50dfe3777781e6e685049f86af90ec02431c82cf7077",
+      "after_sha256": "d00aed56f01c7f012e7a7bc0b5802a87c7e1173eba3d4e775897cff8e673c1a0"
+    }
+  },
+  "evidence_files": {
+    "provenance/imports/raeon-pass-02/vera-audit/binding-hashes.json": "b302f3fc05f0c141c4187d29e74a3cc089e5d02a3b05d406741558d8549627f1",
+    "provenance/imports/raeon-pass-02/vera-audit/RAEON_PASS_02_VERA_AUDIT_2026-09-30.zip": "f905881398b527f76221e2a7c3fa0fc423b3a55969432f23dbda4d8d6dd4ead4",
+    "provenance/imports/raeon-pass-02/vera-audit/real-projection-reproduction.json": "ed6c40d42e0dae87ae9cba13ede3350418d110ce432d54e842c8f588983ecd19",
+    "provenance/imports/raeon-pass-02/vera-audit/real-projection-reproduction.txt": "17aa65649918b6a417cc4f700ef05fa6449eafcc5e57cb612c384a5235d5438a"
+  },
+  "additive_regression_source": "tests/integration/genesis_horizon/test_pass_02_projection_privacy.py",
+  "additive_regression_sha256": "fbbeee984227fe95e783c99cfaee2737007af77b7261974f508dd1553bc68cdb",
+  "original_acceptance_denominators": {
+    "runtime": 74,
+    "pass_02": 83
+  },
+  "additive_integration_tests": 8,
+  "unchanged": [
+    "Genesis source",
+    "production RAEON package",
+    "Hypervisor",
+    "canonical design and Cycle-1 datasets",
+    "whole-game PREPRODUCTION",
+    "main"
+  ],
+  "checkpoint_compatibility": "Existing exact binding-contract guard rejects older nonempty checkpoints; no automatic migration or fabricated scope. Corrected checkpoints retain scoped inspections.",
+  "reproduction_transcript_format": "LF line endings; trailing whitespace removed. Original raw runtime log retained in ignored build/genesis_runtime/vera-pre-correction/; submitted audit ZIP preserved byte-for-byte."
+}
