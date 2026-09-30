@@ -93,6 +93,8 @@ class Hypervisor:
     def _view(self, session, commit_id='observation'):
         authority = session.authority
         key = (authority['application_id'], authority['actor'], authority['view_id'], self.epoch)
+        if key not in self.views and len(self.views) >= self.config.get('view_histories', 256):
+            raise BoundaryError('BACKPRESSURE')
         history = self.views.setdefault(key, ViewHistory(self.config['delta_history']))
         projection = self.adapter.observe(copy.deepcopy(authority), None)
         delta = history.update(projection, commit_id)

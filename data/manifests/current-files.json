@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "scope": "Maintained current file inventory; checkpoint inventories are historical",
-  "file_count": 659,
+  "file_count": 662,
   "files": [
     ".gitattributes",
     ".gitignore",
@@ -602,6 +602,7 @@
     "tests/integration/genesis_horizon/application/transform.gen",
     "tests/integration/genesis_horizon/cases/acceptance.json",
     "tests/integration/genesis_horizon/support.py",
+    "tests/integration/genesis_horizon/test_distribution.py",
     "tests/integration/genesis_horizon/test_runtime.py",
     "tests/multiplayer/README.md",
     "tests/performance/README.md",
@@ -630,6 +631,8 @@
     "tools/data/README.md",
     "tools/generators/README.md",
     "tools/genesis_runtime.py",
+    "tools/genesis_runtime_acceptance.py",
+    "tools/genesis_runtime_distribution.py",
     "tools/genesis_runtime_tasks.py",
     "tools/provenance/README.md",
     "tools/qmo/README.md",

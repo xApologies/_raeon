@@ -162,7 +162,10 @@ class NativeBackend(ReferenceBackend):
         operation = attrs.get('operation')
         if not self.authority or operation not in self.authority.get('operations', []):
             raise BindingError('AUTHORITY_DENIED')
-        if geo['payload'].get('binding') in self.profile['domains'] and operation != 'INHERIT_STATE':
+        if operation == 'INHERIT_STATE':
+            if geo['payload'].get('binding') != 'state' or self.phase != 'state_commit':
+                raise BindingError('AUTHORITY_DENIED')
+        elif geo['payload'].get('binding') in self.profile['domains']:
             raise BindingError('AUTHORITY_DENIED')
         return self._put('ADMISSION', {'source': geo['resource_id'], 'operation': operation, 'actor': self.authority['actor'], 'admitted': True}, [geo['resource_id']])
 

@@ -25,10 +25,13 @@ class HorizonError(RuntimeError):
 
 
 class Horizon:
-    def __init__(self, storage, root=None, fault_hook=None):
+    def __init__(self, storage, root=None, fault_hook=None, application_roots=None):
         self.root, self.upstream, self.lock = initialize(root)
         from .native import NativeBackend
         self.backend_type = NativeBackend
+        self.application_roots = [(self.root / p).resolve() for p in (application_roots or ['tests/integration/genesis_horizon/application'])]
+        if not all(p.is_relative_to(self.root) for p in self.application_roots):
+            raise HorizonError('AUTHORITY_DENIED')
         self.storage = Path(storage).resolve()
         self.storage.mkdir(parents=True, exist_ok=True)
         self.lifecycle = 'CREATED'
@@ -53,6 +56,10 @@ class Horizon:
             if hasattr(self, '_remaining'):
                 self._remaining -= result.receipt['payload']['steps']
         except Exception as error:
+            if type(error).__name__ == 'AllocationError':
+                raise HorizonError('BUDGET_EXCEEDED') from error
+            if str(error) in {'AUTHORITY_DENIED', 'INVALID_ROUTE', 'ADMISSION_REJECTED', 'CLOSURE_FAILED', 'UNKNOWN_OPERATION', 'BACKPRESSURE'}:
+                raise HorizonError(str(error)) from error
             if 'step limit' in str(error):
                 raise HorizonError('BUDGET_EXCEEDED') from error
             raise
@@ -83,6 +90,7 @@ class Horizon:
         b.pending = {}
 
     def _save(self, state):
+        published_state = copy.deepcopy(state)
         payload = {'schema': 1, 'profile_hash': digest(self.profile), 'upstream': self.lock['upstream_commit'],
                    'state': state, 'native': self._record(), 'store': str(self.storage),
                    'builds': {k: v.receipt['gvm_sha256'] for k, v in self._builds.items()}}
@@ -94,7 +102,7 @@ class Horizon:
             os.fsync(stream.fileno())
         self._fault('before_publish')
         os.replace(temp, self.storage / 'root.json')
-        self._state = copy.deepcopy(state)
+        self._state = published_state
 
     def boot(self, profile=None, trusted_context=None, budget=100000):
         with self._mutex:
@@ -159,11 +167,14 @@ class Horizon:
             if not authority.get('realize'):
                 raise HorizonError('AUTHORITY_DENIED')
             package = (self.root / package_ref['path']).resolve()
-            if not package.is_relative_to(self.root / 'tests/integration/genesis_horizon/application'):
+            if not any(package.is_relative_to(allowed) for allowed in self.application_roots):
                 raise HorizonError('AUTHORITY_DENIED')
             if file_hash(package) != package_ref['sha256']:
                 raise HorizonError('ADMISSION_REJECTED')
             manifest = json.loads(package.read_text(encoding='utf8'))
+            exported_sources = {manifest['realize'], *(op['source'] for op in manifest['operations'].values())}
+            if not exported_sources <= set(manifest['files']):
+                raise HorizonError('ADMISSION_REJECTED')
             for relative, expected in manifest['files'].items():
                 path = (package.parent / relative).resolve()
                 if not path.is_relative_to(package.parent) or file_hash(path) != expected:
@@ -175,8 +186,10 @@ class Horizon:
             saved = copy.deepcopy(self._record())
             try:
                 self._backend.phase = 'realize'
-                self._authority(authority, ['INHERIT_STATE'])
+                self._authority(authority, [])
                 self._run((package.parent / manifest['realize']).relative_to(self.root).as_posix(), budget)
+                self._backend.phase = 'state_commit'
+                self._authority(authority, ['INHERIT_STATE'])
                 self._core('state', budget)
                 self._backend.bindings.update(self._backend.pending)
                 state = copy.deepcopy(self._state)
@@ -259,11 +272,13 @@ class Horizon:
             try:
                 incoming = self._route('in', intent, authority, budget)
                 self._backend.phase = 'application'
-                self._authority(authority, definition['effects'] + ['INHERIT_STATE'])
+                self._authority(authority, definition['effects'])
                 self._backend.authority['relationships'] = definition.get('relationships', [])
                 receipt = self._run(app['directory'] + '/' + definition['source'], budget)
                 self._fault('after_candidate')
                 if definition['mutates']:
+                    self._backend.phase = 'state_commit'
+                    self._authority(authority, ['INHERIT_STATE'])
                     self._core('state', budget)
                     self._backend.bindings.update(self._backend.pending)
                 self._fault('before_closure')

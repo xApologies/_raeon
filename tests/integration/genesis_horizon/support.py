@@ -1,6 +1,7 @@
 """Real runtime fixture and independent Port decoder; no fake Horizon adapter."""
 import hashlib
 import json
+import os
 from pathlib import Path
 import struct
 import sys
@@ -9,7 +10,8 @@ import zlib
 
 ROOT = Path(__file__).resolve().parents[3]
 for relative in ['game/core/genesis_horizon/bindings/python/src', 'platform/shared/python_hypervisor/src']:
-    sys.path.insert(0, str(ROOT / relative))
+    if 'python_hypervisor' not in relative or not os.environ.get('RAEON_HYPERVISOR_USE_INSTALLED'):
+        sys.path.insert(0, str(ROOT / relative))
 
 from raeon_genesis_horizon.adapter import Horizon
 from raeon_genesis_horizon.toolchain import file_hash

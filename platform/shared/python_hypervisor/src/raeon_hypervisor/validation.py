@@ -90,11 +90,18 @@ def validate(envelope, direction):
         raise BoundaryError()
     if kind == 'RECEIPT' and body['status'] not in ('REJECTED', 'COMMITTED', 'OBSERVED', 'FAULTED_OR_UNKNOWN'):
         raise BoundaryError()
-    if 'code' in body and body['code'] not in CODES:
+    if 'code' in body and (type(body['code']) is not str or body['code'] not in CODES):
         raise BoundaryError()
     if kind == 'SNAPSHOT' and type(body['view']) is not dict:
         raise BoundaryError()
+    if 'epoch' in body and body['epoch'] != envelope['epoch']:
+        raise BoundaryError()
+    if 'commit_id' in envelope and 'commit_id' in body and envelope['commit_id'] != body['commit_id']:
+        raise BoundaryError()
     if kind == 'DELTA':
+        exact(body['changes'], ['replace_view'])
+        if type(body['changes']['replace_view']) is not dict:
+            raise BoundaryError()
         if type(body['changes']) is not dict or body['revision'] != body['base_revision'] + 1:
             raise BoundaryError()
     return envelope

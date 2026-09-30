@@ -116,6 +116,15 @@ class RuntimeTests(unittest.TestCase):
             self.h.execute(self.f.intent(), self.f.writer)
         self.assertEqual(before, self.h._state)
         self.assertEqual(cells, self.h._view(self.f.writer))
+        journal = (self.h.storage / 'root.json').read_bytes()
+        def publication_failure(point):
+            if point == 'before_publish':
+                raise HorizonError('CLOSURE_FAILED')
+        self.h.fault_hook = publication_failure
+        with self.assertRaisesRegex(HorizonError, 'CLOSURE_FAILED'):
+            self.h.execute(self.f.intent(), self.f.writer)
+        self.assertEqual((self.h.storage / 'root.json').read_bytes(), journal)
+        self.assertEqual(self.h._state, before)
         self.h.fault_hook = lambda point: None
         with self.assertRaisesRegex(HorizonError, 'BUDGET_EXCEEDED'):
             self.h.execute(self.f.intent(), self.f.writer, budget=1)
@@ -142,6 +151,18 @@ class RuntimeTests(unittest.TestCase):
         b.authority = {'actor': 'writer', 'operations': ['ROUTE']}
         with self.assertRaisesRegex(Exception, 'AUTHORITY_DENIED'):
             b.admit(geo, {'operation': 'ROUTE', 'admitted': True})
+
+    def test_application_cannot_inherit_machine_domains(self):
+        b = self.h._backend
+        b.phase = 'application'
+        b.authority = {'actor': 'writer', 'operations': ['INHERIT_STATE']}
+        for name in ['sea', 'shell', 'nexus', 'state']:
+            with self.subTest(domain=name), self.assertRaisesRegex(Exception, 'AUTHORITY_DENIED'):
+                b.admit(b.resources[b.bindings[name]], {'operation': 'INHERIT_STATE'})
+        b.phase = 'state_commit'
+        for name in ['sea', 'shell', 'nexus']:
+            with self.subTest(domain=name), self.assertRaisesRegex(Exception, 'AUTHORITY_DENIED'):
+                b.admit(b.resources[b.bindings[name]], {'operation': 'INHERIT_STATE'})
 
     def test_retry_conflict_concurrent_scope_and_stale(self):
         # S-04..08.
@@ -212,6 +233,22 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(port_decode(frames[0])['payload'], committed)
         self.assertEqual(self.h._state['revision'], 1)
 
+    def test_output_delivery_failure_retains_committed_outcome(self):
+        bridge = self.f.bridge
+        original_emit = bridge._emit
+        def failed_delivery(*args, **kwargs):
+            raise OSError('injected Port output failure')
+        bridge._emit = failed_delivery
+        result, frames = self.f.send('INTENT', self.f.intent())
+        self.assertEqual(result['status'], 'COMMITTED_DELIVERY_PENDING')
+        self.assertEqual(frames, ())
+        self.assertEqual(self.h._state['revision'], 1)
+        bridge._emit = original_emit
+        result, frames = self.f.send('INTENT', self.f.intent())
+        self.assertEqual(result['status'], 'PROCESSED')
+        self.assertEqual(port_decode(frames[0])['payload']['status'], 'COMMITTED')
+        self.assertEqual(self.h._state['revision'], 1)
+
     def test_projection_gap_receipt_clock_and_reconnect(self):
         # S-03,S-09,S-12.
         port = Port()
@@ -279,7 +316,10 @@ class RuntimeTests(unittest.TestCase):
                 h.execute(self.f.intent(str(index), operation, index), self.f.writer)
         self.assertEqual(self.h._state['root'], other.horizon._state['root'])
         self.assertEqual([x['root'] for x in self.h._state['inputs']], [x['root'] for x in other.horizon._state['inputs']])
+        queued = encode(self.f.envelope('INTENT', self.f.intent('queued', revision=2)), 'in')
+        self.assertEqual(self.f.bridge.receive(self.f.handle, queued)['status'], 'QUEUED')
         self.h.quiesce()
+        self.assertEqual(self.f.bridge.step()['code'], 'ADMISSION_REJECTED')
         with self.assertRaises(HorizonError):
             self.h.execute(self.f.intent('new', revision=2), self.f.writer)
         self.assertEqual(self.h.close(), self.h.close())

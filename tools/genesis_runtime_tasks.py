@@ -12,7 +12,8 @@ import time
 
 def setup(root):
     for relative in ['game/core/genesis_horizon/bindings/python/src', 'platform/shared/python_hypervisor/src']:
-        sys.path.insert(0, str(root / relative))
+        if 'python_hypervisor' not in relative or not os.environ.get('RAEON_HYPERVISOR_USE_INSTALLED'):
+            sys.path.insert(0, str(root / relative))
     from raeon_genesis_horizon.toolchain import initialize
     return initialize(root)
 

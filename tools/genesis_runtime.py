@@ -101,7 +101,9 @@ def upstream_test(domains):
     upstream = dependency_root()
     for number in domains:
         isolated_command(f'upstream-domain-{number}', ['language/tools/run_tests.py', '--domain', str(number)], upstream)
-    return {'baseline': baseline_result, 'domains_passed': domains}
+    result = {'status': 'PASS', 'upstream_commit': read_json(LOCK_PATH)['upstream_commit'], 'baseline': baseline_result, 'domains_passed': domains}
+    write_json(BUILD / 'evidence/upstream-tests.json', result)
+    return result
 
 
 def main():
@@ -111,7 +113,7 @@ def main():
     dependencies = commands.add_parser('dependencies').add_subparsers(dest='dependency_command', required=True)
     dependencies.add_parser('verify')
     commands.add_parser('baseline')
-    for action in ['build', 'verify', 'test', 'dialect-test']:
+    for action in ['build', 'verify', 'test', 'dialect-test', 'package', 'verify-distributions', 'repository-test', 'audit']:
         commands.add_parser(action)
     commands.add_parser('demo').add_argument('--headless', action='store_true', required=True)
     tests = commands.add_parser('upstream-test')
@@ -120,7 +122,10 @@ def main():
     if sys.version_info[:2] != (3, 12):
         raise RuntimeError('Pinned reference runtime requires Python 3.12')
     if args.command == 'doctor':
-        result = {'python': sys.version, 'root': str(ROOT), 'upstream': str(dependency_root()),
+        import numpy
+        if numpy.__version__ != read_json(LOCK_PATH)['python']['numpy']:
+            raise RuntimeError('NumPy version differs from lock')
+        result = {'numpy': numpy.__version__, 'backend': 'raeon-native-bindings 1.0.0', 'python': sys.version, 'root': str(ROOT), 'upstream': str(dependency_root()),
                   'dependency_verification': verify_dependencies(), 'implementation_status': read_json(LOCK_PATH)['status']}
     elif args.command == 'dependencies':
         result = verify_dependencies()
@@ -130,7 +135,22 @@ def main():
         result = upstream_test(args.domains)
     else:
         import genesis_runtime_tasks as tasks
-        if args.command == 'dialect-test':
+        import genesis_runtime_distribution as distribution
+        import genesis_runtime_acceptance as acceptance
+        if args.command == 'repository-test':
+            result = acceptance.repository_test(ROOT, BUILD)
+        elif args.command == 'audit':
+            result = acceptance.audit(ROOT, BUILD)
+        elif args.command == 'package':
+            result = distribution.package(ROOT, BUILD)
+        elif args.command == 'verify-distributions':
+            result = distribution.verify_distributions(ROOT, BUILD)
+        elif args.command == 'test':
+            (BUILD / 'evidence/tests-source.json').unlink(missing_ok=True)
+            result = tasks.test(ROOT, BUILD)
+            result['upstream'] = upstream_test([1,2,3,4,5,8,9,10,13,14,15,16,17])
+            write_json(BUILD / 'evidence/tests-source.json', {'status': 'PASS', 'implementation_sha256': distribution.implementation_digest(ROOT)})
+        elif args.command == 'dialect-test':
             result = tasks.dialect_test(ROOT, dependency_root(), BUILD)
         else:
             result = getattr(tasks, args.command)(ROOT, BUILD)

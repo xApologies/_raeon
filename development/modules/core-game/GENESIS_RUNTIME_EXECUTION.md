@@ -2,7 +2,7 @@
 
 Current unit: W10 acceptance/regression and W11 distribution. Next exact action: run the expanded local tests and existing repository validators, correct failures, then package and verify both clean extractions. W00–W09 implementations are saved; no native-device or whole-game completion is claimed.
 
-Task start: clean `codex/game-definition-2026-09-30` at `711ad7485c8cd58a87ec03ff59d6daf8b6498487`. Main stays `69a0030805b8c3858c877a514e2f50644421115a`. Task branch `codex/genesis-horizon-hypervisor`. No reset/clean/discard. Last successfully pushed task commit: none yet. Task commits are read from Git, not embedded self-referentially here.
+Task start: clean `codex/game-definition-2026-09-30` at `711ad7485c8cd58a87ec03ff59d6daf8b6498487`. Main stays `69a0030805b8c3858c877a514e2f50644421115a`. Task branch `codex/genesis-horizon-hypervisor`. No reset/clean/discard. First successfully pushed task commit: `f7406cfa1c9d7d76191b71eb9092d4f87212ad73`. Task commits are read from Git, not embedded self-referentially here.
 
 ## Source and path map
 
@@ -18,7 +18,7 @@ Boot combines sea/Shell/Nexus instantiation/containment in `boot.gen`; fixed int
 - Upstream domains 1,2,3,4,5,8,9,10,13,14,15,16,17: all pass, 675 checks/tests across thirteen isolated suites. Full logs in build evidence.
 - Separate System-I/O 0.6 positive executes CLOSED; relabelled graph syntax is rejected. Callable package positive resolves its actual standard-library imports, expands two calls, executes verified.
 - Nine authored Genesis sources compile, verify and rebuild to identical artifacts.
-- Initial Python run: 6 protocol unit tests and 13 real integration tests pass. Real native bytes, six-direction Road paths, rollback, duplicate/conflicting/expired retries, projection privacy/gap recovery, checkpoint restore and replay are exercised. Bounded-resource refinements also pass the complete rerun. Seven existing validators, 193 repository regressions (including five narrow amendment tests), 17 gameplay specification tests and diff checking pass. The full real headless demonstration passes, including mirror transformation, exact Port projection, duplicate recovery and restore. Original upstream remains clean at its starting SHA.
+- Python acceptance now includes 6 protocol unit tests and 16 integration/archive tests; the expanded run passes. Real native bytes, six-direction Road paths, rollback, duplicate/conflicting/expired retries, projection privacy/gap recovery, checkpoint restore and replay are exercised. Bounded-resource refinements also pass the complete rerun. Seven existing validators, 193 repository regressions (including five narrow amendment tests), 17 gameplay specification tests and diff checking pass. The application cannot acquire machine-domain inheritance; only the internal State commit phase can inherit State, and it cannot inherit sea, Shell or Nexus. A failed test run invalidates package eligibility. The full real headless demonstration passes, including mirror transformation, exact Port projection, duplicate recovery and restore. Original upstream remains clean at its starting SHA.
 
 ## Corrections and limitations
 
@@ -30,4 +30,4 @@ The historical no-Genesis-source guard is amended only for nine exact compiled s
 
 ## Delivery
 
-Distribution creation, clean-extraction validation and push evidence pending. Do not claim completion until those actual results are recorded.
+Packaging tools are implemented. Exact upstream subset: 1,075 files, each checked against the immutable Git blob as well as SHA-256. Offline Windows x64 CPython 3.12 wheels are pinned: NumPy 2.3.5 and setuptools 84.0.0. The archives require Python itself; they do not claim to bundle an interpreter. Distribution creation and clean-extraction validation are the remaining work. Do not claim completion until those actual results are recorded.
