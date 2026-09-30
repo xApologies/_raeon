@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "design": "design/cards/cycle_01/primes/SYSTEM.md",
   "authority": "GAME_CANON",
   "status": "DESIGN_ACCEPTED",
-  "legacy_filename_note": "The prior working model is superseded by the accepted 2026-09-29 ordinary Prime constitution",
+  "legacy_filename_note": "Historical path retained for the accepted ordinary Prime constitution, amended 2026-09-30",
   "values": {
     "scope": "ordinary Prime Fields; Black mechanics unchanged",
     "catalog": "data/cycles/cycle_01/primes/status.json",
@@ -39,7 +39,12 @@
         "DEGRADE"
       ],
       "universal_maximum_rank": "Green",
-      "changes_H": false
+      "changes_H": false,
+      "requires_state": "OPERATIONAL_CHARGED",
+      "once_per_turn_tap_limited": false,
+      "repeat_while_charge_remains": true,
+      "retained_charge_is_defensive_shield": true,
+      "authority_ref": "data/game/match.json"
     },
     "hostile_degradation": {
       "order": [
@@ -112,9 +117,26 @@
         }
       }
     ],
-    "starting_state": "OPEN",
+    "starting_state": {
+      "H": "H_max",
+      "C": 0,
+      "state": "HEALTHY_UNCHARGED"
+    },
     "timing_windows": "OPEN",
     "targeting_details": "OPEN",
-    "implementation": "OPEN"
+    "implementation": "OPEN",
+    "operational_states": {
+      "HEALTHY_UNCHARGED": "H = H_max and C = 0",
+      "OPERATIONAL_CHARGED": "H = H_max and C > 0",
+      "DAMAGED_NON_OPERATIONAL": "0 < H < H_max",
+      "INACTIVE": "H = 0 and C = 0"
+    },
+    "operation_requires": [
+      "H = H_max",
+      "C > 0",
+      "family direction admitted",
+      "current authority window admitted",
+      "target and timing admitted"
+    ]
   }
 }

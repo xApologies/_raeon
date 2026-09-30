@@ -11,3 +11,6 @@ Start current work at the [design index](../design/README.md) and [data index](.
 
 
 [Full exhaustive migration audit](audits/full-migration-2026-09-29.md) and [decision](decisions/full-migration-2026-09-29.md) reconcile the newest accepted 185-identity design with unchanged historical/QMO sources. The original full package is preserved with Git LFS.
+
+
+[Game-definition reconciliation](decisions/game-definition-2026-09-30.md) integrates the next accepted rule delta in canonical homes. The associated JSON decision records transfer hashes and exact amendments; the new transfer archives and live-model trees are intentionally not retained in Git.

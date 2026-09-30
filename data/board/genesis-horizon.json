@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "design": "design/game/board/SYSTEM.md",
   "authority": "GAME_CANON",
   "values": {
@@ -38,6 +38,80 @@
       "EMPTY": "dormant",
       "CONFIGURING": "unresolved animated",
       "RESOLVED": "stable active field"
+    },
+    "runtime_object": {
+      "profile": "BOARD",
+      "primitive": "GEOMETRIC",
+      "domain": "STATE",
+      "role": "dynamic relational framework",
+      "stable_identity": true,
+      "ports_distinct_from_children": true,
+      "attachments": {
+        "DECK_PORT": "Deck",
+        "HAND_PORT": "Hand",
+        "GRAVEYARD_PORT": "Graveyard",
+        "PRIME_PORT": "Prime Region",
+        "CONFIG_PORT": "Configuration Region"
+      }
+    },
+    "card_instances": {
+      "primitive": "GEOMETRIC",
+      "persistent_identity": true,
+      "profiles": [
+        "FIELD_GENERATOR",
+        "PRIME",
+        "UTILITY"
+      ],
+      "movement_preserves_identity": true,
+      "card_only_containers": [
+        "Deck",
+        "Hand",
+        "Graveyard"
+      ],
+      "atomic_moves": true,
+      "failed_admission_preserves_source_membership": true,
+      "transport": "Rainbow Road"
+    },
+    "containers": {
+      "Deck": {
+        "card_only": true,
+        "ordered": true,
+        "shuffleable": true,
+        "size_authority": "data/cycles/cycle_01/card-system.json",
+        "normal_draw": "next/top card"
+      },
+      "Hand": {
+        "card_only": true,
+        "normal_capacity": 7,
+        "check_capacity_before_commit": true,
+        "normal_admission_beyond_capacity": false,
+        "overflow": "OPEN"
+      },
+      "Graveyard": {
+        "card_only": true,
+        "ordered": true,
+        "arbitrary_access": false,
+        "accepted_effect_may_grant_access": true
+      }
+    },
+    "configuration_region": {
+      "permanent": [
+        "A",
+        "B",
+        "C"
+      ],
+      "additional_at_boot": 0,
+      "maximum_additional": 6,
+      "maximum_active": 9,
+      "additional_requires_admitted_effect": true,
+      "permanent_base_accounting_after_merge": "OPEN"
+    },
+    "state_changes": {
+      "staged_successor_state": true,
+      "failed_admission_partial_mutation": false,
+      "identity_history_preserved": true,
+      "nexus_mediated": true,
+      "host_direct_mutation": false
     }
   }
 }

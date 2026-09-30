@@ -18,4 +18,19 @@ Charge C is partially spendable. Green C=4 spending 2 leaves C=2, Orange active 
 
 Hostile degradation removes C first, then H. At (4,2), incoming -3 yields (3,0). H=0 makes the ordinary Prime **INACTIVE** at (0,0); it stays in its fixed Prime position and never moves to Graveyard under this rule. [White Restore Prime](../utilities/restore_prime/SYSTEM.md) reactivates one INACTIVE Prime from (0,0) to (1,0), without full healing or charge.
 
-OPEN: starting H/C, overflow policy, timing/targets, final names/IDs/flavor/wording, balance and implementation. This is accepted design, not a running game system. [Black Prime mechanics](../../black/primes/SYSTEM.md) remain separate and unchanged; no new Black reactivation/cap rule is inferred. [Board](../../../game/board/SYSTEM.md) preserves fixed positions; [transduction](../../../transduction/SYSTEM.md) retains broader mathematical-source boundaries.
+OPEN: overflow policy, detailed timing/targets, final names/IDs/flavor/wording, balance and implementation. This is accepted design, not a running game system. [Black Prime mechanics](../../black/primes/SYSTEM.md) remain separate and unchanged; no new Black reactivation/cap rule is inferred. [Board](../../../game/board/SYSTEM.md) preserves fixed positions; [transduction](../../../transduction/SYSTEM.md) retains broader mathematical-source boundaries.
+
+## Runtime states and authority — accepted 2026-09-30
+
+Normal start is H=H_max, C=0. A Prime card is a persistent identity-bearing Geometric, distinct from its fixed slot.
+
+| State | Condition | Prime operation |
+| --- | --- | --- |
+| HEALTHY_UNCHARGED | H=H_max, C=0 | No charge available |
+| OPERATIONAL_CHARGED | H=H_max, C>0 | May spend C under family/window/target admission |
+| DAMAGED_NON_OPERATIONAL | 0<H<H_max | Cannot operate until H is fully restored |
+| INACTIVE | H=C=0 | Explicit accepted reactivation required |
+
+C is both spendable color and the first defensive shield. Primes are charge-limited, not once-per-turn tap-limited: multiple admitted operations may spend partial C while charge remains. Retained C shields H. [ACTIVE authority](../../../game/match/SYSTEM.md) admits friendly Restore and hostile Degrade; DEFENSE admits friendly Restore only. Universal obeys the same window; no defensive Degrade counterattack is permitted.
+
+White Restore Prime still gives only (1,0). Higher-ranked Primes remain damaged until healed; a Red Universal at H_max=1 is healthy but uncharged. Neither may operate without charge. Exact action/reaction ordering, targets and overflow remain OPEN.

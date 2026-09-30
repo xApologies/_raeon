@@ -14,3 +14,5 @@ Supporting Configuration Spaces remain distinct under `M_A + M_B → M_A + M_B +
 
 
 Emergent Fields arise automatically from admitted coupling/relationships, with no separate FG construction puzzle. The 1,691 preserved results are deterministic QMO lookups/relationships and appear through field animation. M_A + M_B → M_A + M_B + E leaves both supports distinct; exact relation-check timing remains OPEN.
+
+An Emergent Field consumes **zero Configuration Space slots**. Multiple admitted pairwise emergents may coexist: for active A/B/C, independently admitted AB, AC and BC may expose three catalog-backed fields. This is a graph of existing relations, not a new QMO or transport subsystem. Loss of a required active support removes/inactivates its incident emergent field; unaffected support pairs may persist. Exact check timing and emergent color-generation cadence remain OPEN.

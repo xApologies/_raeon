@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {projectGameDefinitionFile,matchesGameDefinitionAmendment} from './game-definition-contract.mjs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
@@ -62,7 +63,7 @@ export function validateFullMigrationRepository(root){
  try{
   const state=loadFullMigration(root),semantic=validateFullMigrationData(state);checks+=semantic.checks;errors.push(...semantic.errors);
   const contract=loadFullMigrationContract(root);
-  for(const [key,entry]of Object.entries(contract.datasets)){same(state.manifest.datasets[key],entry.path,'Canonical dataset pointer: '+key);same(state[key],entry.accepted,'Accepted full-migration dataset: '+key);check(fs.existsSync(file(state[key].design)),'Current design home: '+key);}
+  for(const [key,entry]of Object.entries(contract.datasets)){same(state.manifest.datasets[key],entry.path,'Canonical dataset pointer: '+key);same(projectGameDefinitionFile(root,entry.path,state[key]),entry.accepted,'Accepted full-migration dataset plus reviewed amendments: '+key);check(fs.existsSync(file(state[key].design)),'Current design home: '+key);}
   same(projectBeforeFullMigration(root,loadDesignState(root)),json('provenance/audits/full-migration-2026-09-29-before-state.json'),'Only accepted semantic amendments');
   const cards=json('data/cycles/cycle_01/card-system.json').values.cycle_01,overview=json('data/cycles/cycle_01/utilities/overview.json').values.utility_structure;
   same(cards.ordinary_cards,{field_generators:120,prime_fields:14,utilities:51,total:185},'Current 185-card structure');same(Object.values(cards.utility_domains).reduce((a,b)=>a+b,0),50,'Original fifty Utility allocation');same(cards.additional_utilities,{restore_prime:1},'Additive Utility count');same(overview.total_slots,51,'Current 51 Utilities');same(overview.additional_slots,[{count:1,definition_ref:state.manifest.datasets.restore_prime}],'Utility overview reaches actual addition');
@@ -88,7 +89,7 @@ export function validateFullMigrationRepository(root){
   const families=new Set(Object.values(index.utility_families));
   for(const [p,sha]of Object.entries(baseline.sha256))if(originalCopies.has(p)||families.has(p)||p==='data/black/design.json'||p==='data/game/match.json'||p.startsWith('game/')||p.startsWith('development/checkpoints/')||(p.startsWith('provenance/')&&p!=='provenance/README.md')){
    const b=bytes(p),lfs=b.subarray(0,80).toString().startsWith('version https://git-lfs.github.com/spec/v1');
-   check(lfs?b.toString().includes('\noid sha256:'+sha+'\n'):digest(b)===sha,'Preserved source/history/original Utility/Black/runtime: '+p);
+   check(lfs?b.toString().includes('\noid sha256:'+sha+'\n'):(digest(b)===sha||matchesGameDefinitionAmendment(root,p,digest(b),sha)),'Preserved source/history/original Utility/Black/runtime: '+p);
   }
  }catch(e){errors.push('Full migration validation failed: '+e.message);}
  return {checks,errors};

@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — game-definition reconciliation (2026-09-30)
+
+- Accept Hand 7, nine-space cap, persistent card identity, two-gate resolution, mutable field color and slot-free simultaneous emergence.
+- Define ordinary Prime operational states/start, shared READY/USED availability, ACTIVE/DEFENSE direction limits and Rainbow Road reuse.
+- Preserve imported QMO bytes, historical provenance, PREPRODUCTION and unresolved timing/overflow/implementation; add specification examples and exact amendment guards.
+- [Decision, receipt and validation](provenance/decisions/game-definition-2026-09-30.md).
+
 ## Unreleased — full migration and accepted design reconciliation (2026-09-29)
 
 - Accept 185 ordinary identities: 120 FG, 14 Prime and 51 Utility; preserve the prior 50 Utilities and add White Restore Prime.

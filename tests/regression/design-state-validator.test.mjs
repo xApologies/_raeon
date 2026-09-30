@@ -23,7 +23,7 @@ const cases=[
  ['rejects capacity used as closure proof',s=>s.sandbox.capacity_guarantees_closure=true,'Capacity cannot guarantee closure'],
  ['rejects wrong temporary capacity',s=>s.sandbox.temporary_capacity.Red=4,'Temporary Sandbox capacities'],
  ['rejects raw Draw 4',s=>family(s).draw_deck.slots[2].effect.count=4,'draw_deck slot 3'],
- ['rejects invented hand-size limit',s=>family(s).draw_deck.hand_size_maximum=7,'Hand size remains OPEN'],
+ ['rejects changed accepted hand-size limit',s=>family(s).draw_deck.hand_size_maximum=8,'Normal Hand capacity is seven'],
  ['rejects working ranks silently promoted to final canon',s=>family(s).draw_deck.slots[0].working_rank.authority='GAME_CANON','draw_deck slot 1'],
  ['rejects unrestricted Deep Survey tutor',s=>family(s).draw_deck.slots[6].effect.unrestricted_exact_card_tutor=true,'draw_deck slot 7'],
  ['rejects Exchange granting extra cards',s=>family(s).draw_deck.slots[5].effect.net_hand_count_change=1,'draw_deck slot 6'],

@@ -1,10 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "design": "design/game/match/SYSTEM.md",
   "values": {
     "turn_match_open": {
       "starting_hand_size": "OPEN",
-      "maximum_hand_size": "OPEN",
       "mulligan_rules": "OPEN",
       "normal_draw_per_turn": "OPEN",
       "turn_phases": "OPEN",
@@ -15,6 +14,30 @@
       "temporary_sandbox_expiry": "OPEN",
       "prime_timing": "OPEN",
       "utility_timing_windows": "OPEN"
+    },
+    "match_rules": {
+      "authority": "GAME_CANON",
+      "hand_normal_capacity": 7,
+      "normal_admission_beyond_hand_capacity": false,
+      "hand_overflow": "OPEN",
+      "authority_windows": {
+        "ACTIVE": {
+          "RESTORE": "friendly",
+          "DEGRADE": "hostile"
+        },
+        "DEFENSE": {
+          "RESTORE": "friendly"
+        }
+      },
+      "defensive_degrade_counterattack": false,
+      "universal_obeys_window": true,
+      "field_availability_persists_active_into_defense": true,
+      "active_end_refreshes_fields": false,
+      "action_reaction_ordering": "OPEN",
+      "exact_targeting_windows": "OPEN",
+      "refresh_boundary": "OPEN",
+      "ordinary_field_hostile_action_requires_prime": true
     }
-  }
+  },
+  "authority": "GAME_CANON"
 }

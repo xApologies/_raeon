@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "design": "design/topology/sandbox/SYSTEM.md",
   "authority": "GAME_CANON",
   "values": {
@@ -70,6 +70,45 @@
       "intermediate": "CONFIGURING",
       "possible_result": "Orange",
       "requires_admitted_closure": true
+    },
+    "runtime_domain": "STATE",
+    "primitive": "GEOMETRIC",
+    "part_of_qmo_corpus": false,
+    "maximum_active_per_player": 9,
+    "maximum_additional_per_player": 6,
+    "additional_at_boot": 0,
+    "runtime_regenerates_qmo_corpus": false,
+    "resolution_gates": {
+      "membership": "required FG QMO identities for an existing topology",
+      "configuration": "admitted XY positioning and 3D orientation",
+      "both_required": true,
+      "failed_nonempty_result": "CONFIGURING",
+      "failed_gate_active_field": false,
+      "empty_result": "EMPTY",
+      "runtime_pose_admission": "OPEN"
+    },
+    "field_runtime": {
+      "topology_identity_changes_with_current_color": false,
+      "native_max_color_source": "canonical QMO",
+      "current_color_mutable": true,
+      "restore_ceiling": "native/max color",
+      "zero_color_destroys_field": true,
+      "destroyed_supporting_fg_destination": "Graveyard",
+      "destroyed_field_exposed": false,
+      "destruction_transaction_order": "OPEN",
+      "availability_states": [
+        "READY",
+        "USED"
+      ],
+      "ready_generates": "current color",
+      "uses_per_refresh_cycle": 1,
+      "generation_transition": "READY -> USED",
+      "generation_unresolves_topology": false,
+      "active_end_refreshes": false,
+      "refresh_boundary": "OPEN",
+      "partial_output_allocation": "OPEN",
+      "emergent_generation_cadence": "OPEN",
+      "ordinary_hostile_action_requires_prime": true
     }
   }
 }

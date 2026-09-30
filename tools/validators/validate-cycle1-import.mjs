@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {matchesGameDefinitionAmendment} from './game-definition-contract.mjs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
@@ -147,7 +148,7 @@ export function validateCycle1Import(root) {
   }
   const before=json('provenance/audits/cycle1-source-import-baseline.json');
   same(before.starting_main,'2e81478055483f1b86abff278b3cbc9109e61c9d','Starting main provenance');
-  for(const [p,sha]of Object.entries(before.sha256))if((p.startsWith('provenance/')&&p!=='provenance/README.md')||p.startsWith('development/checkpoints/')||p.startsWith('game/'))check(hash(bytes(p))===sha,'Preserved previous history/runtime: '+p);
+  for(const [p,sha]of Object.entries(before.sha256))if((p.startsWith('provenance/')&&p!=='provenance/README.md')||p.startsWith('development/checkpoints/')||p.startsWith('game/'))check(hash(bytes(p))===sha||matchesGameDefinitionAmendment(root,p,hash(bytes(p)),sha),'Preserved previous history/runtime: '+p);
   check(fs.existsSync(file(m.constitution)),'Readable Constitution exists');
   for(const p of json('data/manifests/current-files.json').files.filter(p=>p.endsWith('.json')))JSON.parse(bytes(p).toString());
  }catch(e){errors.push('Cycle-1 import validation failed: '+e.message);}

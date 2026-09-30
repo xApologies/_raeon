@@ -16,7 +16,7 @@ This is a mixed set, not a Red–White ladder. These are accepted working ranks.
 | Exchange | Blue | Discard any number from hand; draw that many; net hand-count change 0 for the exchange |
 | Deep Survey | White | Look at top 7; take 1 into hand; shuffle remainder back into deck |
 
-Exchange improves hand quality and intentionally interacts with Recovery. Deep Survey preserves uncertainty and is not an unrestricted exact-card tutor. Draw/Deck manipulates deck/hand flow, never Graveyard retrieval. Hand-size maximum, overflow behavior, short-deck resolution, and unspecified ordering/timing remain OPEN; no hand-size value is canonized.
+Exchange improves hand quality and intentionally interacts with Recovery. Deep Survey preserves uncertainty and is not an unrestricted exact-card tutor. Draw/Deck manipulates deck/hand flow, never Graveyard retrieval. Hand normal capacity is 7; normal admission cannot exceed it. Overflow behavior, short-deck resolution, and unspecified ordering/timing remain OPEN.
 
 Three raw draw, three information/selection, one hand-cycling identity. Survey effect hand change is 0; Selection is limited to the top three. Exchange sends n hand cards to Graveyard and draws n.
 

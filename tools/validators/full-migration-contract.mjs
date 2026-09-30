@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {projectBeforeGameDefinition} from './game-definition-contract.mjs';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import {resolveRepositoryPath} from './load-design-state.mjs';
@@ -11,7 +12,7 @@ export function loadFullMigrationContract(root) {
  return JSON.parse(bytes.toString('utf8'));
 }
 export function projectBeforeFullMigration(root,state) {
- const projected=structuredClone(state);
+ const projected=projectBeforeGameDefinition(root,state);
  for(const change of loadFullMigrationContract(root).semantic_changes){
   let parent=projected;
   for(const part of change.path.slice(0,-1))parent=parent[part];

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "design": "design/topology/field_generators/SYSTEM.md",
   "authority": "GAME_CANON",
   "values": {
@@ -85,6 +85,11 @@
       "closure",
       "manifolds"
     ],
-    "unrestricted_orientation_grants_legality": false
+    "unrestricted_orientation_grants_legality": false,
+    "definition_immutable": true,
+    "instance_references_definition": true,
+    "card_identity_preserved_on_deployment": true,
+    "runtime_regenerates_qmo_corpus": false,
+    "resolution_gates_ref": "data/topology/configuration-spaces.json"
   }
 }

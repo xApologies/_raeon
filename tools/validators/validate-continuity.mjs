@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {projectGameDefinitionFile,matchesGameDefinitionAmendment} from './game-definition-contract.mjs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
@@ -46,7 +47,7 @@ export function validateContinuityRepository(root) {
  try {
   const state=loadContinuity(root),semantic=validateContinuityData(state);result.errors.push(...semantic.errors);result.checks+=semantic.checks;
   for(const [name,p]of Object.entries(state.manifest.datasets)){
-   const d=json(p);check(d.schema_version===1,'Dataset schema: '+p);check(fs.existsSync(file(d.design)),'Dataset design home: '+name);
+   const d=json(p);check(projectGameDefinitionFile(root,p,d).schema_version===1,'Dataset schema and reviewed version amendment: '+p);check(fs.existsSync(file(d.design)),'Dataset design home: '+name);
   }
   const index=json('data/manifests/accepted-state.json');check(isDeepStrictEqual(state.manifest.source_import_required,index.source_import_required),'Source requirements retained with partial-receipt distinction');
   const authority=json('data/manifests/authority-map.json');check(authority.continuity_import===index.continuity_import,'Current authority map reaches continuity');
@@ -60,7 +61,7 @@ export function validateContinuityRepository(root) {
   for(const entry of outer.files){const p=source+'/handoff/'+entry.path;if(p===archive.path)continue;check(fs.statSync(file(p)).size===entry.bytes&&hash(p)===entry.sha256,'Received source bytes unchanged: '+entry.path);}
   for(const entry of json(source+'/extracted-files.json'))check(hash(entry.path)===entry.sha256,'Extracted source integrity: '+entry.path);
   const before=json('provenance/audits/final-continuity-baseline.json').sha256;
-  for(const [p,expected]of Object.entries(before))if((p.startsWith('provenance/')&&p!=='provenance/README.md')||p.startsWith('development/checkpoints/')||p.startsWith('game/'))check(hash(p)===expected,'Historical evidence/runtime boundary preserved: '+p);
+  for(const [p,expected]of Object.entries(before))if((p.startsWith('provenance/')&&p!=='provenance/README.md')||p.startsWith('development/checkpoints/')||p.startsWith('game/'))check(hash(p)===expected||matchesGameDefinitionAmendment(root,p,hash(p),expected),'Historical evidence/runtime boundary preserved: '+p);
   const inventory=json('data/manifests/current-files.json');check(inventory.files.length===inventory.file_count,'Current inventory count');
   const visited=new Set();for(const p of inventory.files){check(!visited.has(p),'Unique current file: '+p);visited.add(p);check(fs.existsSync(file(p)),'Current file exists: '+p);}
  }catch(error){result.errors.push('Continuity repository validation failed: '+error.message);}

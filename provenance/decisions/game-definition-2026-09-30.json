@@ -1,0 +1,1075 @@
+{
+  "schema_version": 1,
+  "authority": "GAME_CANON",
+  "baseline_main": "69a0030805b8c3858c877a514e2f50644421115a",
+  "decision": "provenance/decisions/game-definition-2026-09-30.md",
+  "package": {
+    "name": "RAEON_GIT_UPDATE_PACKAGE_2026-09-30.zip",
+    "bytes": 40204,
+    "sha256": "25804fe4d58c8bce15c455e0f16aab7936954f092e8788fb3eddab0aae74aed4",
+    "transfer_only_not_committed": true,
+    "manifest_entries_verified": 5,
+    "members": {
+      "ACCEPTANCE.json": {
+        "bytes": 535,
+        "sha256": "23358dda02a6776d3065d788e4e0bcb4950d090d7a0160d8e8d117efb3a60a8a"
+      },
+      "CODEX_PROMPT.md": {
+        "bytes": 2421,
+        "sha256": "37324e2f513aef51ce3784dc42b3ba0683e1f7e421e32765b0ec932dbac39a9f"
+      },
+      "GIT_RECONCILIATION_AUTHORITY.md": {
+        "bytes": 3963,
+        "sha256": "540f2215eff1dcca9c682add8754ca1d1ef6619710c9133154eeff5c7c8f0088"
+      },
+      "RAEON_LIVE_DEVELOPMENT_MODEL_v0_7_2026-09-30.zip": {
+        "bytes": 31735,
+        "sha256": "5fcc5e4f0afcfdc20bb5064c8f9def69c16c88bf6248e57cfb707d221e01706e"
+      },
+      "RAEON_LIVE_RULES_MODEL_v0_2_2026-09-30.zip": {
+        "bytes": 6750,
+        "sha256": "f326694464f9d70a14ab1b720138b42b0ef87694c796c740044c9d99afd6371a"
+      }
+    }
+  },
+  "nested_manifest_entries_verified": {
+    "RAEON_LIVE_DEVELOPMENT_MODEL": {
+      "count": 22,
+      "manifest_sha256": "ca6bdae81420623a3b5b5fa691fbf51ce586a84b0bca11a1a2d06dab926aee38"
+    },
+    "RAEON_LIVE_RULES_MODEL": {
+      "count": 3,
+      "manifest_sha256": "7592809eef8a2774c0e20111e82a3c522678fac46d153f561800f0d6d2a578c5"
+    }
+  },
+  "semantic_changes": [
+    {
+      "path": [
+        "match_rules"
+      ],
+      "before_absent": true,
+      "after": {
+        "authority": "GAME_CANON",
+        "hand_normal_capacity": 7,
+        "normal_admission_beyond_hand_capacity": false,
+        "hand_overflow": "OPEN",
+        "authority_windows": {
+          "ACTIVE": {
+            "RESTORE": "friendly",
+            "DEGRADE": "hostile"
+          },
+          "DEFENSE": {
+            "RESTORE": "friendly"
+          }
+        },
+        "defensive_degrade_counterattack": false,
+        "universal_obeys_window": true,
+        "field_availability_persists_active_into_defense": true,
+        "active_end_refreshes_fields": false,
+        "action_reaction_ordering": "OPEN",
+        "exact_targeting_windows": "OPEN",
+        "refresh_boundary": "OPEN",
+        "ordinary_field_hostile_action_requires_prime": true
+      }
+    },
+    {
+      "path": [
+        "open_items"
+      ],
+      "before": [
+        "Utility final names, flavor, IDs, wording, unresolved ranks, targeting, timing, duration, balance and runtime definitions",
+        "Final printed Prime/Utility IDs, names, wording and unresolved targeting details",
+        "Detailed Fourth Prime behavior",
+        "Exact effect costs, timing, and balance",
+        "Match setup, turn sequence, and victory/loss details",
+        "Genesis VM / Python boundary integration, graphics API, toolchain, and target OS versions",
+        "AI and multiplayer design",
+        "Persistence and compatibility policy",
+        "Economy, collection, shop, and crafting detail",
+        "Release/certification requirements and performance budgets",
+        "Activation detailed per-rank behavior",
+        "Temporary Sandbox destruction/expiry",
+        "Hand-size maximum and overflow behavior",
+        "Protection magnitudes, ranks, timing and duration where unspecified",
+        "Final Black Utility catalog and working Black-concept details",
+        "Adaptive/player-modeling AI and ML architecture",
+        "Local peer-to-peer transport, synchronization, matchmaking and competitive balance",
+        "Exact board UI/layout and mouse/touch gesture tuning; fixed top-down XY + 3D orientation accepted",
+        "Final ID ordering/assignment for 51 ordinary Utilities",
+        "Turn/match rules explicitly listed in turn_match_open",
+        "Prime starting H/C and Restore overflow behavior",
+        "Merged Configuration Space capacity ceiling and runtime admission",
+        "Permanent-base identity accounting after merge; no split/un-fusion rule inferred"
+      ],
+      "after": [
+        "Utility final names, flavor, IDs, wording, unresolved ranks, targeting, timing, duration, balance and runtime definitions",
+        "Final printed Prime/Utility IDs, names, wording and unresolved targeting details",
+        "Detailed Fourth Prime behavior",
+        "Exact effect costs, timing, and balance",
+        "Match setup, turn sequence, and victory/loss details",
+        "Genesis VM / Python boundary integration, graphics API, toolchain, and target OS versions",
+        "AI and multiplayer design",
+        "Persistence and compatibility policy",
+        "Economy, collection, shop, and crafting detail",
+        "Release/certification requirements and performance budgets",
+        "Activation detailed per-rank behavior",
+        "Temporary Sandbox destruction/expiry",
+        "Hand overflow and multi-card effect resolution",
+        "Protection magnitudes, ranks, timing and duration where unspecified",
+        "Final Black Utility catalog and working Black-concept details",
+        "Adaptive/player-modeling AI and ML architecture",
+        "Local peer-to-peer transport, synchronization, matchmaking and competitive balance",
+        "Exact board UI/layout and mouse/touch gesture tuning; fixed top-down XY + 3D orientation accepted",
+        "Final ID ordering/assignment for 51 ordinary Utilities",
+        "Turn/match rules explicitly listed in turn_match_open",
+        "Prime Restore overflow behavior",
+        "Merged Configuration Space capacity ceiling and runtime admission",
+        "Permanent-base identity accounting after merge; no split/un-fusion rule inferred",
+        "Exact READY/USED refresh boundary; no automatic refresh at ACTIVE end",
+        "Detailed action/reaction ordering and targeting windows beyond ACTIVE/DEFENSE direction",
+        "Detailed field-destruction transaction ordering",
+        "Field output partial/all-at-once allocation and Emergent generation cadence"
+      ]
+    },
+    {
+      "path": [
+        "runtime_direction",
+        "genesis_source_gate"
+      ],
+      "before_absent": true,
+      "after": {
+        "actual_grammar_required": true,
+        "grammar_authority": "_bricked",
+        "verified_by_this_reconciliation": false,
+        "missing_capability_status": "PROPOSED_EXTENSION",
+        "executable_source": "OPEN"
+      }
+    },
+    {
+      "path": [
+        "runtime_direction",
+        "horizon"
+      ],
+      "before_absent": true,
+      "after": {
+        "substrate": "Chirality Fabric",
+        "containment_inner_to_outer": [
+          "STATE",
+          "NEXUS",
+          "SHELL",
+          "SEA"
+        ],
+        "STATE": {
+          "dimensions": [
+            5
+          ],
+          "organization": "3+1+1",
+          "role": "authoritative game domain"
+        },
+        "NEXUS": {
+          "dimensions": [
+            6
+          ],
+          "role": "mandatory read/write mediation"
+        },
+        "SHELL": {
+          "dimensions": [
+            7,
+            8
+          ],
+          "coupled": true,
+          "role": "Genesis-native interaction/command environment"
+        },
+        "SEA": {
+          "dimensions": [
+            9,
+            10,
+            11
+          ],
+          "coupled": true,
+          "role": "outer container"
+        },
+        "hypervisor_outside": true,
+        "host_direct_state_mutation": false
+      }
+    },
+    {
+      "path": [
+        "runtime_direction",
+        "transport"
+      ],
+      "before_absent": true,
+      "after": {
+        "name": "Rainbow Road",
+        "role": "existing internal information/color transport",
+        "additional_dimensional_object": false,
+        "separate_board_color_bus": false,
+        "operation_authority": "Prime family and current game authority window",
+        "state_mutation": "Nexus-mediated State transformation"
+      }
+    },
+    {
+      "path": [
+        "turn_match_open",
+        "maximum_hand_size"
+      ],
+      "before": "OPEN",
+      "after_absent": true
+    },
+    {
+      "path": [
+        "utility_structure",
+        "families",
+        "draw_deck",
+        "hand_size_maximum"
+      ],
+      "before": "OPEN",
+      "after": 7
+    }
+  ],
+  "json_changes": {
+    "data/board/genesis-horizon.json": [
+      {
+        "path": [
+          "schema_version"
+        ],
+        "before": 1,
+        "after": 2
+      },
+      {
+        "path": [
+          "values",
+          "card_instances"
+        ],
+        "before_absent": true,
+        "after": {
+          "primitive": "GEOMETRIC",
+          "persistent_identity": true,
+          "profiles": [
+            "FIELD_GENERATOR",
+            "PRIME",
+            "UTILITY"
+          ],
+          "movement_preserves_identity": true,
+          "card_only_containers": [
+            "Deck",
+            "Hand",
+            "Graveyard"
+          ],
+          "atomic_moves": true,
+          "failed_admission_preserves_source_membership": true,
+          "transport": "Rainbow Road"
+        }
+      },
+      {
+        "path": [
+          "values",
+          "configuration_region"
+        ],
+        "before_absent": true,
+        "after": {
+          "permanent": [
+            "A",
+            "B",
+            "C"
+          ],
+          "additional_at_boot": 0,
+          "maximum_additional": 6,
+          "maximum_active": 9,
+          "additional_requires_admitted_effect": true,
+          "permanent_base_accounting_after_merge": "OPEN"
+        }
+      },
+      {
+        "path": [
+          "values",
+          "containers"
+        ],
+        "before_absent": true,
+        "after": {
+          "Deck": {
+            "card_only": true,
+            "ordered": true,
+            "shuffleable": true,
+            "size_authority": "data/cycles/cycle_01/card-system.json",
+            "normal_draw": "next/top card"
+          },
+          "Hand": {
+            "card_only": true,
+            "normal_capacity": 7,
+            "check_capacity_before_commit": true,
+            "normal_admission_beyond_capacity": false,
+            "overflow": "OPEN"
+          },
+          "Graveyard": {
+            "card_only": true,
+            "ordered": true,
+            "arbitrary_access": false,
+            "accepted_effect_may_grant_access": true
+          }
+        }
+      },
+      {
+        "path": [
+          "values",
+          "runtime_object"
+        ],
+        "before_absent": true,
+        "after": {
+          "profile": "BOARD",
+          "primitive": "GEOMETRIC",
+          "domain": "STATE",
+          "role": "dynamic relational framework",
+          "stable_identity": true,
+          "ports_distinct_from_children": true,
+          "attachments": {
+            "DECK_PORT": "Deck",
+            "HAND_PORT": "Hand",
+            "GRAVEYARD_PORT": "Graveyard",
+            "PRIME_PORT": "Prime Region",
+            "CONFIG_PORT": "Configuration Region"
+          }
+        }
+      },
+      {
+        "path": [
+          "values",
+          "state_changes"
+        ],
+        "before_absent": true,
+        "after": {
+          "staged_successor_state": true,
+          "failed_admission_partial_mutation": false,
+          "identity_history_preserved": true,
+          "nexus_mediated": true,
+          "host_direct_mutation": false
+        }
+      }
+    ],
+    "data/cycles/cycle_01/field_generators/interaction.json": [
+      {
+        "path": [
+          "schema_version"
+        ],
+        "before": 1,
+        "after": 2
+      },
+      {
+        "path": [
+          "values",
+          "card_identity_preserved_on_deployment"
+        ],
+        "before_absent": true,
+        "after": true
+      },
+      {
+        "path": [
+          "values",
+          "definition_immutable"
+        ],
+        "before_absent": true,
+        "after": true
+      },
+      {
+        "path": [
+          "values",
+          "instance_references_definition"
+        ],
+        "before_absent": true,
+        "after": true
+      },
+      {
+        "path": [
+          "values",
+          "resolution_gates_ref"
+        ],
+        "before_absent": true,
+        "after": "data/topology/configuration-spaces.json"
+      },
+      {
+        "path": [
+          "values",
+          "runtime_regenerates_qmo_corpus"
+        ],
+        "before_absent": true,
+        "after": false
+      }
+    ],
+    "data/cycles/cycle_01/primes/working-model.json": [
+      {
+        "path": [
+          "legacy_filename_note"
+        ],
+        "before": "The prior working model is superseded by the accepted 2026-09-29 ordinary Prime constitution",
+        "after": "Historical path retained for the accepted ordinary Prime constitution, amended 2026-09-30"
+      },
+      {
+        "path": [
+          "schema_version"
+        ],
+        "before": 1,
+        "after": 2
+      },
+      {
+        "path": [
+          "values",
+          "operation_requires"
+        ],
+        "before_absent": true,
+        "after": [
+          "H = H_max",
+          "C > 0",
+          "family direction admitted",
+          "current authority window admitted",
+          "target and timing admitted"
+        ]
+      },
+      {
+        "path": [
+          "values",
+          "operational_states"
+        ],
+        "before_absent": true,
+        "after": {
+          "HEALTHY_UNCHARGED": "H = H_max and C = 0",
+          "OPERATIONAL_CHARGED": "H = H_max and C > 0",
+          "DAMAGED_NON_OPERATIONAL": "0 < H < H_max",
+          "INACTIVE": "H = 0 and C = 0"
+        }
+      },
+      {
+        "path": [
+          "values",
+          "spend",
+          "authority_ref"
+        ],
+        "before_absent": true,
+        "after": "data/game/match.json"
+      },
+      {
+        "path": [
+          "values",
+          "spend",
+          "once_per_turn_tap_limited"
+        ],
+        "before_absent": true,
+        "after": false
+      },
+      {
+        "path": [
+          "values",
+          "spend",
+          "repeat_while_charge_remains"
+        ],
+        "before_absent": true,
+        "after": true
+      },
+      {
+        "path": [
+          "values",
+          "spend",
+          "requires_state"
+        ],
+        "before_absent": true,
+        "after": "OPERATIONAL_CHARGED"
+      },
+      {
+        "path": [
+          "values",
+          "spend",
+          "retained_charge_is_defensive_shield"
+        ],
+        "before_absent": true,
+        "after": true
+      },
+      {
+        "path": [
+          "values",
+          "starting_state"
+        ],
+        "before": "OPEN",
+        "after": {
+          "H": "H_max",
+          "C": 0,
+          "state": "HEALTHY_UNCHARGED"
+        }
+      }
+    ],
+    "data/cycles/cycle_01/utilities/draw_deck.json": [
+      {
+        "path": [
+          "values",
+          "hand_size_maximum"
+        ],
+        "before": "OPEN",
+        "after": 7
+      }
+    ],
+    "data/game/match.json": [
+      {
+        "path": [
+          "authority"
+        ],
+        "before_absent": true,
+        "after": "GAME_CANON"
+      },
+      {
+        "path": [
+          "schema_version"
+        ],
+        "before": 1,
+        "after": 2
+      },
+      {
+        "path": [
+          "values",
+          "match_rules"
+        ],
+        "before_absent": true,
+        "after": {
+          "authority": "GAME_CANON",
+          "hand_normal_capacity": 7,
+          "normal_admission_beyond_hand_capacity": false,
+          "hand_overflow": "OPEN",
+          "authority_windows": {
+            "ACTIVE": {
+              "RESTORE": "friendly",
+              "DEGRADE": "hostile"
+            },
+            "DEFENSE": {
+              "RESTORE": "friendly"
+            }
+          },
+          "defensive_degrade_counterattack": false,
+          "universal_obeys_window": true,
+          "field_availability_persists_active_into_defense": true,
+          "active_end_refreshes_fields": false,
+          "action_reaction_ordering": "OPEN",
+          "exact_targeting_windows": "OPEN",
+          "refresh_boundary": "OPEN",
+          "ordinary_field_hostile_action_requires_prime": true
+        }
+      },
+      {
+        "path": [
+          "values",
+          "turn_match_open",
+          "maximum_hand_size"
+        ],
+        "before": "OPEN",
+        "after_absent": true
+      }
+    ],
+    "data/manifests/accepted-state.json": [
+      {
+        "path": [
+          "datasets",
+          "match",
+          "keys"
+        ],
+        "before": [
+          "turn_match_open"
+        ],
+        "after": [
+          "turn_match_open",
+          "match_rules"
+        ]
+      },
+      {
+        "path": [
+          "game_definition_reconciliation"
+        ],
+        "before_absent": true,
+        "after": "provenance/decisions/game-definition-2026-09-30.json"
+      },
+      {
+        "path": [
+          "open_items"
+        ],
+        "before": [
+          "Utility final names, flavor, IDs, wording, unresolved ranks, targeting, timing, duration, balance and runtime definitions",
+          "Final printed Prime/Utility IDs, names, wording and unresolved targeting details",
+          "Detailed Fourth Prime behavior",
+          "Exact effect costs, timing, and balance",
+          "Match setup, turn sequence, and victory/loss details",
+          "Genesis VM / Python boundary integration, graphics API, toolchain, and target OS versions",
+          "AI and multiplayer design",
+          "Persistence and compatibility policy",
+          "Economy, collection, shop, and crafting detail",
+          "Release/certification requirements and performance budgets",
+          "Activation detailed per-rank behavior",
+          "Temporary Sandbox destruction/expiry",
+          "Hand-size maximum and overflow behavior",
+          "Protection magnitudes, ranks, timing and duration where unspecified",
+          "Final Black Utility catalog and working Black-concept details",
+          "Adaptive/player-modeling AI and ML architecture",
+          "Local peer-to-peer transport, synchronization, matchmaking and competitive balance",
+          "Exact board UI/layout and mouse/touch gesture tuning; fixed top-down XY + 3D orientation accepted",
+          "Final ID ordering/assignment for 51 ordinary Utilities",
+          "Turn/match rules explicitly listed in turn_match_open",
+          "Prime starting H/C and Restore overflow behavior",
+          "Merged Configuration Space capacity ceiling and runtime admission",
+          "Permanent-base identity accounting after merge; no split/un-fusion rule inferred"
+        ],
+        "after": [
+          "Utility final names, flavor, IDs, wording, unresolved ranks, targeting, timing, duration, balance and runtime definitions",
+          "Final printed Prime/Utility IDs, names, wording and unresolved targeting details",
+          "Detailed Fourth Prime behavior",
+          "Exact effect costs, timing, and balance",
+          "Match setup, turn sequence, and victory/loss details",
+          "Genesis VM / Python boundary integration, graphics API, toolchain, and target OS versions",
+          "AI and multiplayer design",
+          "Persistence and compatibility policy",
+          "Economy, collection, shop, and crafting detail",
+          "Release/certification requirements and performance budgets",
+          "Activation detailed per-rank behavior",
+          "Temporary Sandbox destruction/expiry",
+          "Hand overflow and multi-card effect resolution",
+          "Protection magnitudes, ranks, timing and duration where unspecified",
+          "Final Black Utility catalog and working Black-concept details",
+          "Adaptive/player-modeling AI and ML architecture",
+          "Local peer-to-peer transport, synchronization, matchmaking and competitive balance",
+          "Exact board UI/layout and mouse/touch gesture tuning; fixed top-down XY + 3D orientation accepted",
+          "Final ID ordering/assignment for 51 ordinary Utilities",
+          "Turn/match rules explicitly listed in turn_match_open",
+          "Prime Restore overflow behavior",
+          "Merged Configuration Space capacity ceiling and runtime admission",
+          "Permanent-base identity accounting after merge; no split/un-fusion rule inferred",
+          "Exact READY/USED refresh boundary; no automatic refresh at ACTIVE end",
+          "Detailed action/reaction ordering and targeting windows beyond ACTIVE/DEFENSE direction",
+          "Detailed field-destruction transaction ordering",
+          "Field output partial/all-at-once allocation and Emergent generation cadence"
+        ]
+      }
+    ],
+    "data/manifests/authority-map.json": [
+      {
+        "path": [
+          "game_definition_reconciliation"
+        ],
+        "before_absent": true,
+        "after": "provenance/decisions/game-definition-2026-09-30.json"
+      }
+    ],
+    "data/platform/runtime-direction.json": [
+      {
+        "path": [
+          "schema_version"
+        ],
+        "before": 1,
+        "after": 2
+      },
+      {
+        "path": [
+          "values",
+          "runtime_direction",
+          "genesis_source_gate"
+        ],
+        "before_absent": true,
+        "after": {
+          "actual_grammar_required": true,
+          "grammar_authority": "_bricked",
+          "verified_by_this_reconciliation": false,
+          "missing_capability_status": "PROPOSED_EXTENSION",
+          "executable_source": "OPEN"
+        }
+      },
+      {
+        "path": [
+          "values",
+          "runtime_direction",
+          "horizon"
+        ],
+        "before_absent": true,
+        "after": {
+          "substrate": "Chirality Fabric",
+          "containment_inner_to_outer": [
+            "STATE",
+            "NEXUS",
+            "SHELL",
+            "SEA"
+          ],
+          "STATE": {
+            "dimensions": [
+              5
+            ],
+            "organization": "3+1+1",
+            "role": "authoritative game domain"
+          },
+          "NEXUS": {
+            "dimensions": [
+              6
+            ],
+            "role": "mandatory read/write mediation"
+          },
+          "SHELL": {
+            "dimensions": [
+              7,
+              8
+            ],
+            "coupled": true,
+            "role": "Genesis-native interaction/command environment"
+          },
+          "SEA": {
+            "dimensions": [
+              9,
+              10,
+              11
+            ],
+            "coupled": true,
+            "role": "outer container"
+          },
+          "hypervisor_outside": true,
+          "host_direct_state_mutation": false
+        }
+      },
+      {
+        "path": [
+          "values",
+          "runtime_direction",
+          "transport"
+        ],
+        "before_absent": true,
+        "after": {
+          "name": "Rainbow Road",
+          "role": "existing internal information/color transport",
+          "additional_dimensional_object": false,
+          "separate_board_color_bus": false,
+          "operation_authority": "Prime family and current game authority window",
+          "state_mutation": "Nexus-mediated State transformation"
+        }
+      }
+    ],
+    "data/topology/configuration-spaces.json": [
+      {
+        "path": [
+          "schema_version"
+        ],
+        "before": 1,
+        "after": 2
+      },
+      {
+        "path": [
+          "values",
+          "additional_at_boot"
+        ],
+        "before_absent": true,
+        "after": 0
+      },
+      {
+        "path": [
+          "values",
+          "field_runtime"
+        ],
+        "before_absent": true,
+        "after": {
+          "topology_identity_changes_with_current_color": false,
+          "native_max_color_source": "canonical QMO",
+          "current_color_mutable": true,
+          "restore_ceiling": "native/max color",
+          "zero_color_destroys_field": true,
+          "destroyed_supporting_fg_destination": "Graveyard",
+          "destroyed_field_exposed": false,
+          "destruction_transaction_order": "OPEN",
+          "availability_states": [
+            "READY",
+            "USED"
+          ],
+          "ready_generates": "current color",
+          "uses_per_refresh_cycle": 1,
+          "generation_transition": "READY -> USED",
+          "generation_unresolves_topology": false,
+          "active_end_refreshes": false,
+          "refresh_boundary": "OPEN",
+          "partial_output_allocation": "OPEN",
+          "emergent_generation_cadence": "OPEN",
+          "ordinary_hostile_action_requires_prime": true
+        }
+      },
+      {
+        "path": [
+          "values",
+          "maximum_active_per_player"
+        ],
+        "before_absent": true,
+        "after": 9
+      },
+      {
+        "path": [
+          "values",
+          "maximum_additional_per_player"
+        ],
+        "before_absent": true,
+        "after": 6
+      },
+      {
+        "path": [
+          "values",
+          "part_of_qmo_corpus"
+        ],
+        "before_absent": true,
+        "after": false
+      },
+      {
+        "path": [
+          "values",
+          "primitive"
+        ],
+        "before_absent": true,
+        "after": "GEOMETRIC"
+      },
+      {
+        "path": [
+          "values",
+          "resolution_gates"
+        ],
+        "before_absent": true,
+        "after": {
+          "membership": "required FG QMO identities for an existing topology",
+          "configuration": "admitted XY positioning and 3D orientation",
+          "both_required": true,
+          "failed_nonempty_result": "CONFIGURING",
+          "failed_gate_active_field": false,
+          "empty_result": "EMPTY",
+          "runtime_pose_admission": "OPEN"
+        }
+      },
+      {
+        "path": [
+          "values",
+          "runtime_domain"
+        ],
+        "before_absent": true,
+        "after": "STATE"
+      },
+      {
+        "path": [
+          "values",
+          "runtime_regenerates_qmo_corpus"
+        ],
+        "before_absent": true,
+        "after": false
+      }
+    ],
+    "data/topology/relationships.json": [
+      {
+        "path": [
+          "schema_version"
+        ],
+        "before": 1,
+        "after": 2
+      },
+      {
+        "path": [
+          "values",
+          "emergence",
+          "active_supports_required"
+        ],
+        "before_absent": true,
+        "after": true
+      },
+      {
+        "path": [
+          "values",
+          "emergence",
+          "configuration_slots_consumed"
+        ],
+        "before_absent": true,
+        "after": 0
+      },
+      {
+        "path": [
+          "values",
+          "emergence",
+          "multiple_pairwise_coexist"
+        ],
+        "before_absent": true,
+        "after": true
+      },
+      {
+        "path": [
+          "values",
+          "emergence",
+          "pair_queries_reference_existing_corpus"
+        ],
+        "before_absent": true,
+        "after": true
+      },
+      {
+        "path": [
+          "values",
+          "merge",
+          "fg_instance_identities_preserved"
+        ],
+        "before_absent": true,
+        "after": true
+      }
+    ]
+  },
+  "approved_file_amendments": {
+    "data/board/genesis-horizon.json": {
+      "before_sha256": "58cbc2be490f862f29e3cc1267d42536dfba080e1cd3a93efb557da19bac8205",
+      "after_sha256": "dab6b3c541f7e664882395174e6f5d05f70ba403fef1d4f1ff7f1aaff96c439d"
+    },
+    "data/cycles/cycle_01/field_generators/interaction.json": {
+      "before_sha256": "b726f1f3151596b6ca735c29baf53db7d0611c8ed87e2f1eff732e0fdb47e236",
+      "after_sha256": "f5104332acf71e08e64662a34f9e63c47f0535afb1ddda92a2f7ce2220561402"
+    },
+    "data/cycles/cycle_01/primes/working-model.json": {
+      "before_sha256": "24336d45f2ac5b2ac98a5c86c5fccb4155e9292210ad51e2620f754164c3274b",
+      "after_sha256": "5f2d6ab23fe76d0193bc1185dc401412a8db3cd2781d0d6048c1b69792baf82b"
+    },
+    "data/cycles/cycle_01/utilities/draw_deck.json": {
+      "before_sha256": "bc5983673c8378be2bf7ac78a9f6f24d8e57854762264b7856b104c7c95425ea",
+      "after_sha256": "7eb07dd1d1612a3db63c2ba254c8689501f3334a5394d32b619c6cd4c066acb8"
+    },
+    "data/game/match.json": {
+      "before_sha256": "4a2557629f1e87b05391ac412301e397ce30ed25000eef36d9eb0662dd997174",
+      "after_sha256": "17440fa774ec3a7048b450966cd32401e5212ce5054f94f1cf041702947149e7"
+    },
+    "data/manifests/accepted-state.json": {
+      "before_sha256": "a1f70240ecb933d273d4bfb3ec3460ba9448d79f16f236bd7cf8190930a84d4a",
+      "after_sha256": "b570cf573187315be290385626be90b8ea113c4342eea2cba50cc75af030b90e"
+    },
+    "data/manifests/authority-map.json": {
+      "before_sha256": "f53ad364282afb0993e14c0115870eb211344abb9fe072d1683924507f58e183",
+      "after_sha256": "31527cc9720be39ad76bcbd123dffba73861452b0456ec98a236254083ed088c"
+    },
+    "data/platform/runtime-direction.json": {
+      "before_sha256": "c314e1ff9a168b092683b7abddfc3714cdfa0df323e4defe5d1428c470a6eb72",
+      "after_sha256": "bdd6a82a81887975941b5667fc016116994a075ed443ac6e413193687054a412"
+    },
+    "data/topology/configuration-spaces.json": {
+      "before_sha256": "aeec7d6b7d1d4329b6a019b39af69879ce6b014869312216a3ce274fa63f57c3",
+      "after_sha256": "6a7d59774fad10c9f92d6eb6ccd07299a368639427e890b52a45ad502f133b90"
+    },
+    "data/topology/relationships.json": {
+      "before_sha256": "dc9da1eab1c9425bcdfa41841bc7bd0f50cf68e311a99bdb5fe0a145ee4d566c",
+      "after_sha256": "0e5eb25943a5eaf67c1b7c5ba9ac4b9ef7d34809d963569438aa3eb75d924e2b"
+    },
+    "design/cards/CARD_SYSTEM.md": {
+      "before_sha256": "523b473906c34baff7f3dcfa22823ab368231971079832b564d15f4f9a145b80",
+      "after_sha256": "f27ec8443162fbe201a5f76853d8cfca2473308fb9e0749ad4280d4545b0cf96"
+    },
+    "design/cards/black/SYSTEM.md": {
+      "before_sha256": "cd5546a27f4d19ff995345b6dd42b302f9acdf9fa64c9ef4287ff7ee053a07f9",
+      "after_sha256": "78aecf148022fd3a61bb33a2a4366861faef1d3a53bda76a1cb4b7b31a2b19cb"
+    },
+    "design/cards/cycle_01/primes/SYSTEM.md": {
+      "before_sha256": "178662a1cfcfcd30495dd229d736a14fb18392c8906e70d3f160fce32da2a52f",
+      "after_sha256": "93680071b4d9ee0ace7a9b583c4cc219e61ff23cfe52668c8152030e1294e650"
+    },
+    "design/cards/cycle_01/utilities/draw_deck/SYSTEM.md": {
+      "before_sha256": "e9dbf4f0e4d904ae43b8bb01c85e3a7227c0ab0c53bdc79f2c2e6cd0edfc89b4",
+      "after_sha256": "1da0ca56507afc6596a4705778af99d648e07b0d1120b05f2aab46c990725b20"
+    },
+    "design/game/GAME_DESIGN_DOCUMENT.md": {
+      "before_sha256": "bae396717e691010f837ed33f661f5ea8a5b43f2dc296c9f923c504e8752b2f6",
+      "after_sha256": "8b8b63a03a93e9bb8c2faab400fe215f82896f4f9cefe4e7e8c9444f27381571"
+    },
+    "design/game/board/SYSTEM.md": {
+      "before_sha256": "5b5e7a0ee404071b7bd8d220beef617f7ef8fbf4e21896e962ca05cd2660a1fe",
+      "after_sha256": "7131cb473e21ade6fce55b772ae6274cf86103d91828aa283229aab95f87fe1f"
+    },
+    "design/game/match/SYSTEM.md": {
+      "before_sha256": "a9108bca6b14956732a9d515dd6050cd85f172ad467512911f08d0570c630230",
+      "after_sha256": "80d282e5a204df03b412a360266eb9a7e99114cc79cc15b3d383b4b91a068419"
+    },
+    "design/topology/emergent_fields/SYSTEM.md": {
+      "before_sha256": "5e20ecb443160ec842256e4388fe3071f29cdcd32be5fbefcdda93dac05bc60a",
+      "after_sha256": "95b106021ef740e962d62c2307166ca7aa662cf3ccb8eb14e32f098ee753a085"
+    },
+    "design/topology/field_generators/SYSTEM.md": {
+      "before_sha256": "2a54b234bf683e76ebfcab3289810a7477d2c2583f9a72491f8755ae5466694d",
+      "after_sha256": "16f25807bfc752fdc5ebcb045d85d16b8b677763e56be2a2c12ff4189c2a9f3c"
+    },
+    "design/topology/fusion/SYSTEM.md": {
+      "before_sha256": "847d17705edfab41861a15505d67e0a9e01abb3c2cc72fb7fae40bea611dee75",
+      "after_sha256": "7386d82575084c0ea82b769630297b2376be739e7e334c96666108b0ce180bc7"
+    },
+    "design/topology/sandbox/SYSTEM.md": {
+      "before_sha256": "ec01ac125ca03af8ed59a39b020eb3d2fd25ba46ebc2510000ea6ed92d46eb0b",
+      "after_sha256": "985634006623c54af7d956704f89b9c6dbcd922334dcea0d3dadb280ec8c58be"
+    },
+    "design/transduction/SYSTEM.md": {
+      "before_sha256": "6d2d9c83b10db49ce2f5ad3603252c9dfa8189bfd8c637afbcb1c018a080c75a",
+      "after_sha256": "fc1b5fcc7770c8cb46f011ab92359465dd66b2216d04fa87a2b5eaa444bb2b91"
+    },
+    "development/FOUNDATIONAL_BACKLOG.md": {
+      "before_sha256": "e3ec49f52b769c5f49fb5b2abfac15a9da875e2c7bc80c702e4cf4a9eef0852c",
+      "after_sha256": "ea4d2ce5b5bc822e1e3f2b0dd23849f27c93b9287fcc172a915172580197a520"
+    },
+    "game/board/README.md": {
+      "before_sha256": "e53fa2e2c5eef7b0aa86c61655d160b66de365c4cc3eebaf8874d06c7b234aa2",
+      "after_sha256": "22a882668fb0be15568980ee86c656c288274389380e0230b18629e88c9bb6be"
+    },
+    "game/cards/README.md": {
+      "before_sha256": "1d748272d2c0d386c4a8e2fdc3b24fa314df5bf9a520b26a26bb0ddd8db88c1f",
+      "after_sha256": "322cf979514bd808eb44bf0fa51728fde839413654452e00a4ac5f4b2216a615"
+    },
+    "game/cards/generators/README.md": {
+      "before_sha256": "f9c5498a4e966b13b63f6dff90502642acca6c15a1cd7b3781c228498fee09b9",
+      "after_sha256": "c4bec3c177029aa13a7d731cdf88a078432f1305231e5d48bd644deb02f25414"
+    },
+    "game/cards/primes/README.md": {
+      "before_sha256": "695d1b0cd92eb0a502f2c8c924db6328676e8f6dd219c153ca3ca76507fe6a30",
+      "after_sha256": "27c9b84941194bdf50f427e772cae1c3b49ae9cad384d01362b85641a2760baf"
+    },
+    "game/manifolds/README.md": {
+      "before_sha256": "c4e6107966998143dff659f8c9a3af40e56aa1037eb9cd422c01670f3ff3f5f4",
+      "after_sha256": "630821b322fd12a12ca609ecf8a196043864fd221cac66a56f698b60c352806b"
+    },
+    "game/match/README.md": {
+      "before_sha256": "c424e2ae836af4ee7676b64264131591938e327d4e75da35e6a7cd7534f73c19",
+      "after_sha256": "d1b475bc3d66d10ca5159bb62746f8fc713f4771d00d25266a7d881845a0e09c"
+    },
+    "game/sandbox/README.md": {
+      "before_sha256": "eeb779a56f39482f8879ef8a855189fb7300404912a9b5f25edd5b1a3e0f78fd",
+      "after_sha256": "ea120d4910d4a9bf6e6034a1c7d064a9ac54027655d735f3a3b0d7a348cfc796"
+    },
+    "game/state/README.md": {
+      "before_sha256": "c62bc19d153785bb2afd5256ce34b57c643cc1d603460ec5841d074183d63e22",
+      "after_sha256": "7596879ec2089200c2014cd10d7360dc3883e6915ca5f57c63576c5727653a22"
+    },
+    "game/transduction/README.md": {
+      "before_sha256": "28474051a01ee80bab4cc8d881a93064a5e4f4da79f0889f608a650f46183786",
+      "after_sha256": "24912d084d519af3f56a39fdc6ab410db8d33a93804ca5ac56874f2e48607407"
+    }
+  },
+  "text_changes": {
+    "design/cards/cycle_01/utilities/draw_deck/SYSTEM.md": [
+      {
+        "before": "Hand-size maximum, overflow behavior, short-deck resolution, and unspecified ordering/timing remain OPEN; no hand-size value is canonized.",
+        "after": "Hand normal capacity is 7; normal admission cannot exceed it. Overflow behavior, short-deck resolution, and unspecified ordering/timing remain OPEN."
+      }
+    ]
+  },
+  "preserved_catalog_sha256": {
+    "data/cycles/cycle_01/field_generators/objects.csv": "0cd327a27d8a7f380b29231b36e2bc62790c0db2564a3731a329c784f034b65a",
+    "data/cycles/cycle_01/field_generators/objects.json": "c8bd56021e95d80ffb677e31f69a864f4ff02bf6db97304edba9dfe8fa879e62",
+    "data/qmo/README.md": "36d0922741be7d69ba7d9933e5f7708403a2ebee3950665d172142cd5e0382b4",
+    "data/qmo/cycle1/atlas.json": "2febd32e9e2ee218ae3e71c63f975525cdbeed05f11e40d97a794997bf067b12",
+    "data/qmo/cycle1/derived_qmos.json": "4cd701f1335eb41c944c12ce92fb0e93ec5bc5b7d358631ffeff389864c19325",
+    "data/qmo/cycle1/manifold_pair_relations.json": "558ddaae14cb21a54e2cc42333971fbb11c94f10b7c91ea9b1f29e28418fd6a7",
+    "data/qmo/cycle1/playfield_summary.json": "66217cd20aca5f8509d775cb822f641cf9311117d92743da3b8baf2ee5ed3eaf",
+    "data/qmo/cycle1/qmo.sqlite": "2945e86691165f9105aad6d29ec31f5a6cdde72fab0f5a929e3a254efdd588eb",
+    "data/qmo/emergent/README.md": "bca9a2a315343cd8017a49d0c39b93f51b809f79811e5bac79355375d39b690b",
+    "data/qmo/emergent/objects.json": "fd2a2a31f90848bde0ff4c533c6d62580d37efdbc97d6d070f719b07e50e725c",
+    "data/qmo/emergent/status.json": "56b7cb5572cd2fba25f0072507e72dc591f065715a2b1d5b1b4a25c38a93767b",
+    "data/qmo/fusion/README.md": "e0972ca585bd913f10ab725e10589b7ddba97608eb5f07d3c735f059cee639ef",
+    "data/qmo/fusion/objects.json": "0e48912b56d112f9f14f21fe6c5252500d43d57d68343dfd96369c5366c86c23",
+    "data/qmo/fusion/status.json": "5f03e00d360c9ec7bfaa1d0ee5a9a8cd54817fa5de429d9b78012201848eb994",
+    "data/qmo/generators/README.md": "acbb8b9e7819acaf5d8357a246b4a79e1cee28917aa44993360e6d35f9538ed6",
+    "data/qmo/generators/compatibility.json": "0f7aa8b8097757a9e38724ea0f016926a6344ef71451c9f4686f63770df9d0bc",
+    "data/qmo/generators/status.json": "88dfb764bca22e6f6272b7650fb159aafc99b9204632b482ca9aaf28a599c93e",
+    "data/qmo/inventory.json": "55e1c0d29f19be03a245887e769dae41da71e90564db130986c210cdd0c5451d",
+    "data/qmo/manifolds/README.md": "829c2cb5e26888718bb071f7047492f26f9a41b5845e0dd249565b6d65715eef",
+    "data/qmo/manifolds/objects.json": "d8c66b09e7f98e32e0d937afa231a99e15b3fb3924fcfd0546eebdec1eb2cde2",
+    "data/qmo/manifolds/status.json": "ae51a943358b54e06b6449b39d8e91095003f96422c240e4e7efabdcb3a95cff"
+  },
+  "source_import_required_unchanged": true,
+  "mathematics_regenerated": false,
+  "genesis_source_implemented": false,
+  "phase": "PREPRODUCTION",
+  "scope": "Explicitly accepted package deltas; implementation OPEN"
+}

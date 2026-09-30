@@ -15,7 +15,7 @@ test('approved amendments do not erase unrelated historical values',()=>{
  const s=loadDesignState(root);s.utility_structure.families.transduction.restore[0].charge_delta=999;
  const projected=projectBeforeFullMigration(root,s);
  assert.equal(projected.utility_structure.families.transduction.restore[0].charge_delta,999);
- assert.throws(()=>projectBeforeFullMigration(root,{...loadDesignState(root),runtime_direction:{language:'invented'}}),/Unapproved full-migration semantic value/);
+ assert.throws(()=>projectBeforeFullMigration(root,{...loadDesignState(root),runtime_direction:{language:'invented'}}),/Unapproved (?:full-migration|game-definition) semantic value/);
 });
 for(const [name,mutate,label]of [
  ['old 200-card count',s=>s.manifest.counts.ordinary_total=200,'185 ordinary identities'],

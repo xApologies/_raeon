@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "design": "design/game/GAME_DESIGN_DOCUMENT.md",
   "values": {
     "runtime_direction": {
@@ -41,7 +41,63 @@
       "rewrite_authoritative_semantics_per_platform": false,
       "implemented": false,
       "vm_integration": "OPEN",
-      "graphics_api_and_toolchain": "OPEN"
+      "graphics_api_and_toolchain": "OPEN",
+      "horizon": {
+        "substrate": "Chirality Fabric",
+        "containment_inner_to_outer": [
+          "STATE",
+          "NEXUS",
+          "SHELL",
+          "SEA"
+        ],
+        "STATE": {
+          "dimensions": [
+            5
+          ],
+          "organization": "3+1+1",
+          "role": "authoritative game domain"
+        },
+        "NEXUS": {
+          "dimensions": [
+            6
+          ],
+          "role": "mandatory read/write mediation"
+        },
+        "SHELL": {
+          "dimensions": [
+            7,
+            8
+          ],
+          "coupled": true,
+          "role": "Genesis-native interaction/command environment"
+        },
+        "SEA": {
+          "dimensions": [
+            9,
+            10,
+            11
+          ],
+          "coupled": true,
+          "role": "outer container"
+        },
+        "hypervisor_outside": true,
+        "host_direct_state_mutation": false
+      },
+      "transport": {
+        "name": "Rainbow Road",
+        "role": "existing internal information/color transport",
+        "additional_dimensional_object": false,
+        "separate_board_color_bus": false,
+        "operation_authority": "Prime family and current game authority window",
+        "state_mutation": "Nexus-mediated State transformation"
+      },
+      "genesis_source_gate": {
+        "actual_grammar_required": true,
+        "grammar_authority": "_bricked",
+        "verified_by_this_reconciliation": false,
+        "missing_capability_status": "PROPOSED_EXTENSION",
+        "executable_source": "OPEN"
+      }
     }
   }
 }

@@ -7,7 +7,7 @@
     "simple_rank_ladder": false,
     "raw_draw_maximum": 3,
     "graveyard_retrieval": false,
-    "hand_size_maximum": "OPEN",
+    "hand_size_maximum": 7,
     "overflow_behavior": "OPEN",
     "slots": [
       {

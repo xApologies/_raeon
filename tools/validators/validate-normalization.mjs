@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {projectGameDefinitionFile,projectGameDefinitionText} from './game-definition-contract.mjs';
 import {projectBeforeFullMigration} from './full-migration-contract.mjs';
 import {projectBeforeCycle1Import,remainingCycle1Sources} from './cycle1-status.mjs';
 import path from 'node:path';
@@ -18,7 +19,7 @@ export function validateNormalization(root) {
   const index=json('data/manifests/accepted-state.json'),map=json('data/manifests/authority-map.json');
   check(index.schema_version===4&&index.current_design_checkpoint==='0004','Schema/checkpoint must be 4/0004');
   check(!('utility_structure'in index)&&!('black'in index)&&!('cycle_01'in index),'High-level state must point to detailed datasets');
-  check(isDeepStrictEqual(Object.keys(index).sort(),['schema_version','current_design_checkpoint','authority','source','sources','production','source_import_required','open_items','authority_map','datasets','utility_families','migration','continuity_import','cycle1_source_import','full_migration'].sort()),'High-level index has only declared metadata/pointers');
+  check(isDeepStrictEqual(Object.keys(index).sort(),['schema_version','current_design_checkpoint','authority','source','sources','production','source_import_required','open_items','authority_map','datasets','utility_families','migration','continuity_import','cycle1_source_import','full_migration','game_definition_reconciliation'].sort()),'High-level index has only declared metadata/pointers');
   const snapshot=json('provenance/audits/0004-before-state.json');
   const state=loadDesignState(root);const compared=projectBeforeCycle1Import(projectBeforeFullMigration(root,state));
   compared.schema_version=snapshot.schema_version;compared.current_design_checkpoint=snapshot.current_design_checkpoint;
@@ -61,7 +62,7 @@ export function validateNormalization(root) {
    const data=json(p),mirror=map.utility_families[name];
    check(data.design===mirror.design&&p===mirror.data,`Family DESIGN/DATA mirror: ${name}`);
    check(exists(data.design)&&read(data.design).includes(path.posix.relative(path.posix.dirname(data.design),p)),`Family specification links to data: ${name}`);
-   check(data.family===name&&isDeepStrictEqual(data.values,snapshot.utility_structure.families[name]),`Unchanged family payload: ${name}`);
+   check(data.family===name&&isDeepStrictEqual(projectGameDefinitionFile(root,p,data).values,snapshot.utility_structure.families[name]),`Unchanged family payload: ${name}`);
   }
   for(const pointer of Object.values(index.datasets)){const data=json(pointer.path);check(exists(data.design),`Dataset upstream specification: ${pointer.path}`);}
   check(isDeepStrictEqual(state.source_import_required,remainingCycle1Sources),'Scoped remaining source requirements');
@@ -83,7 +84,7 @@ export function validateNormalization(root) {
   check(createHash('sha256').update(fs.readFileSync(path.join(root,'provenance/sources/0004-CODEX_PROMPT.md'))).digest('hex')===source.directive_sha256,'Handoff directive integrity');
   const previousDesign=json('provenance/audits/0004-before-design.json').files['design/cards/cycle_01/UTILITIES.md'];
   const sections=Object.fromEntries(previousDesign.split(/^## /m).slice(1).map(x=>{const i=x.indexOf('\n');return[x.slice(0,i).trim(),x.slice(i+1).trim()];}));
-  for(const [dir,heading]of [['transduction','Transduction — 18'],['activation','Activation — 7'],['sandbox_activation','Sandbox Activation — 6'],['draw_deck','Draw / Deck — 7'],['recovery','Graveyard / Recovery — 6'],['stability','Stability / Protection — 6']])check(read(`design/cards/cycle_01/utilities/${dir}/SYSTEM.md`).includes(sections[heading]),`Original Utility prose retained: ${dir}`);
+  for(const [dir,heading]of [['transduction','Transduction — 18'],['activation','Activation — 7'],['sandbox_activation','Sandbox Activation — 6'],['draw_deck','Draw / Deck — 7'],['recovery','Graveyard / Recovery — 6'],['stability','Stability / Protection — 6']])check(projectGameDefinitionText(root,`design/cards/cycle_01/utilities/${dir}/SYSTEM.md`,read(`design/cards/cycle_01/utilities/${dir}/SYSTEM.md`)).includes(sections[heading]),`Original Utility prose retained: ${dir}`);
   for(const p of manifest.files){
    check(exists(p),`Inventory file exists: ${p}`);
    if(exists(p)&&p.endsWith('.md'))for(const m of read(p).matchAll(/\[[^\]]*\]\(([^)]+)\)/g)){

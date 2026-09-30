@@ -38,7 +38,7 @@
     "Release/certification requirements and performance budgets",
     "Activation detailed per-rank behavior",
     "Temporary Sandbox destruction/expiry",
-    "Hand-size maximum and overflow behavior",
+    "Hand overflow and multi-card effect resolution",
     "Protection magnitudes, ranks, timing and duration where unspecified",
     "Final Black Utility catalog and working Black-concept details",
     "Adaptive/player-modeling AI and ML architecture",
@@ -46,9 +46,13 @@
     "Exact board UI/layout and mouse/touch gesture tuning; fixed top-down XY + 3D orientation accepted",
     "Final ID ordering/assignment for 51 ordinary Utilities",
     "Turn/match rules explicitly listed in turn_match_open",
-    "Prime starting H/C and Restore overflow behavior",
+    "Prime Restore overflow behavior",
     "Merged Configuration Space capacity ceiling and runtime admission",
-    "Permanent-base identity accounting after merge; no split/un-fusion rule inferred"
+    "Permanent-base identity accounting after merge; no split/un-fusion rule inferred",
+    "Exact READY/USED refresh boundary; no automatic refresh at ACTIVE end",
+    "Detailed action/reaction ordering and targeting windows beyond ACTIVE/DEFENSE direction",
+    "Detailed field-destruction transaction ordering",
+    "Field output partial/all-at-once allocation and Emergent generation cadence"
   ],
   "authority_map": "data/manifests/authority-map.json",
   "datasets": {
@@ -114,7 +118,8 @@
     "match": {
       "path": "data/game/match.json",
       "keys": [
-        "turn_match_open"
+        "turn_match_open",
+        "match_rules"
       ]
     },
     "ai": {
@@ -189,5 +194,6 @@
   },
   "continuity_import": "data/manifests/final-continuity-import.json",
   "cycle1_source_import": "data/manifests/cycle1-source-import.json",
-  "full_migration": "data/manifests/full-migration-2026-09-29.json"
+  "full_migration": "data/manifests/full-migration-2026-09-29.json",
+  "game_definition_reconciliation": "provenance/decisions/game-definition-2026-09-30.json"
 }

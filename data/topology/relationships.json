@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "design": "design/topology/fusion/SYSTEM.md",
   "authority": "GAME_CANON",
   "values": {
@@ -27,7 +27,11 @@
       "automatic_on_admitted_relationship": true,
       "catalog_objects": 1691,
       "separate_fg_construction": false,
-      "presentation": "supported relational field animation"
+      "presentation": "supported relational field animation",
+      "configuration_slots_consumed": 0,
+      "multiple_pairwise_coexist": true,
+      "pair_queries_reference_existing_corpus": true,
+      "active_supports_required": true
     },
     "relation_check_timing": "OPEN",
     "merge": {
@@ -51,7 +55,8 @@
         "output_count": 7,
         "possible_field": "Blue",
         "requires_admitted_closure": true
-      }
+      },
+      "fg_instance_identities_preserved": true
     },
     "mechanically_demanding_interaction": "Field Generator configuration"
   }
