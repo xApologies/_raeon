@@ -14,8 +14,21 @@ const pass = JSON.parse(fs.readFileSync(path.join(root, passDecision)));
 const sources = [...Object.keys(base.compiled_sources), ...Object.keys(pass.compiled_sources)];
 const files = [...new Set([...sources, ...Object.keys(pass.package_files), runtimeDecision, passDecision])];
 
+function copyHistorical(tmp) {
+  for (const file of files) {
+    fs.mkdirSync(path.dirname(path.join(tmp, file)), {recursive: true});
+    const original = file.startsWith('game/core/raeon/application/')
+      ? file.replace('game/core/raeon/application/', 'tests/integration/genesis_horizon/pass_01_application/') : file;
+    fs.copyFileSync(path.join(root, original), path.join(tmp, file));
+  }
+}
 test('Pass-1 exact package and compiled sources are authorized together', () => {
-  assert.deepEqual(validateRuntimeSources(root, files), []);
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'raeon-pass01-historical-'));
+  try { copyHistorical(tmp); assert.deepEqual(validateRuntimeSources(tmp, files), []); }
+  finally {
+    if (!path.resolve(tmp).startsWith(path.resolve(os.tmpdir()) + path.sep)) throw new Error('Unsafe temporary cleanup');
+    fs.rmSync(tmp, {recursive:true, force:true});
+  }
 });
 test('original diplomatic pouch is preserved byte for byte', () => {
   const bytes = fs.readFileSync(path.join(root, 'provenance/sources/raeon-pass-01/diplomatic-pouch.zip'));
@@ -25,10 +38,7 @@ for (const mutation of ['source', 'manifest', 'definitions', 'decision', 'missin
   test('Pass-1 integrity rejects ' + mutation, () => {
     const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'raeon-pass01-contract-'));
     try {
-      for (const file of files) {
-        fs.mkdirSync(path.dirname(path.join(tmp, file)), {recursive: true});
-        fs.copyFileSync(path.join(root, file), path.join(tmp, file));
-      }
+      copyHistorical(tmp);
       const inventory = [...files];
       const target = {source:'game/core/raeon/application/raeon_realize.gen', manifest:'game/core/raeon/application/manifest.json',
         definitions:'game/core/raeon/application/definitions.json', decision:passDecision}[mutation];

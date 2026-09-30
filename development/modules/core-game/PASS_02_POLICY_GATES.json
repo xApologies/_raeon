@@ -6,55 +6,56 @@
       "id": "POL-01",
       "topic": "Opening hand, draw cadence, mulligan, first player",
       "pass_2_treatment": "Operation-level trusted grants; no auto-start scheduler",
-      "status": "RECHECK_CANON_THEN_GATE_IF_STILL_OPEN"
+      "status": "OPEN_POLICY"
     },
     {
       "id": "POL-02",
       "topic": "Prime selection/start placement and deck counting",
       "pass_2_treatment": "Neutral FG/Utility deck plus structural slot test; no invented final Prime setup",
-      "status": "RECHECK_CANON_THEN_GATE_IF_STILL_OPEN"
+      "status": "OPEN_SETUP_POLICY"
     },
     {
       "id": "POL-03",
       "topic": "Multi-card overflow and short-deck outcomes",
       "pass_2_treatment": "Atomic batch primitive refusal; complete Utility resolution gated",
-      "status": "RECHECK_CANON_THEN_GATE_IF_STILL_OPEN"
+      "status": "OPEN_RESOLUTION_POLICY"
     },
     {
       "id": "POL-04",
       "topic": "Utility play cost/window/consumption",
       "pass_2_treatment": "Source-linked primitive under trusted effect grant; no free public effect",
-      "status": "RECHECK_CANON_THEN_GATE_IF_STILL_OPEN"
+      "status": "OPEN_PLAY_POLICY"
     },
     {
       "id": "POL-05",
       "topic": "Selection remainder ordering and short surveys",
       "pass_2_treatment": "Preserve source OPEN labels; no inferred order",
-      "status": "RECHECK_CANON_THEN_GATE_IF_STILL_OPEN"
+      "status": "OPEN_REMAINDER_POLICY"
     },
     {
       "id": "POL-06",
       "topic": "Temporary-space expiry/removal, merge/base accounting",
       "pass_2_treatment": "Dynamic additions/cap tests only; no new expiry/merge rule",
-      "status": "RECHECK_CANON_THEN_GATE_IF_STILL_OPEN"
+      "status": "OPEN_EXPIRY; ACCEPTED_MERGE_IMPLEMENTATION_DEFERRED"
     },
     {
       "id": "POL-07",
       "topic": "Field destruction timing and support batching",
       "pass_2_treatment": "Cause-authorized retirement primitive tested; actual damage scheduler deferred",
-      "status": "RECHECK_CANON_THEN_GATE_IF_STILL_OPEN"
+      "status": "OPEN_DAMAGE_TIMING"
     },
     {
       "id": "POL-08",
       "topic": "FG pose/manifold legality",
       "pass_2_treatment": "Commit as CONFIGURING with no active field; Pass 3",
-      "status": "RECHECK_CANON_THEN_GATE_IF_STILL_OPEN"
+      "status": "ACCEPTED_DESIGN_IMPLEMENTATION_DEFERRED_TO_PASS_3"
     },
     {
       "id": "POL-09",
       "topic": "Refresh, reaction, victory and complete match loop",
       "pass_2_treatment": "Pass 4/latest accepted canon; not inferred from empty Deck",
-      "status": "RECHECK_CANON_THEN_GATE_IF_STILL_OPEN"
+      "status": "OPEN_VICTORY; PRIME_RUNTIME_DEFERRED_TO_PASS_4"
     }
-  ]
+  ],
+  "review": "Reconciled against current main-derived accepted sources on the Pass-1 lineage; helper execution does not resolve these policies."
 }

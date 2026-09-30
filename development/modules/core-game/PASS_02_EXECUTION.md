@@ -30,3 +30,12 @@ Last command: Pass-2 adversarial unittest discovery (10 passed, exit 0).
 Next action: add the canonical Pass-2 demo/audit selector, enforce independent
 offline network/Git/file interception, run full regressions, package the exact
 committed revision, then complete all 83 evidence mappings. Completion unclaimed.
+
+## Distribution verification unit
+
+Complete local and pinned-upstream tests passed. All seven repository validators,
+regression tests, gameplay-design tests and whitespace validation passed after
+fixing the historical Pass-1 package fixture. Original canonical data is unchanged.
+Current unit: exact archive packaging and independently intercepted offline
+installation/rebuild/demos/tests. Next action: run `verify-distributions`, fix any
+failure, then join all 83 acceptance cases to current evidence and push closure.

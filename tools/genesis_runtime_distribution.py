@@ -9,10 +9,14 @@ import sys
 import tempfile
 import zipfile
 
-VERSION = '0.1.0'
+VERSION = '0.2.0'
 PREFIXES = {
     'hypervisor': ['platform/shared/python_hypervisor/', 'tests/unit/hypervisor/'],
-    'horizon': ['game/core/genesis_horizon/', 'game/core/raeon/', 'tools/genesis_runtime_pass01.py',
+    'horizon': ['tools/genesis_runtime_pass02.py', 'tools/genesis_runtime_catalog.py', 'tools/genesis_runtime_isolation.py',
+                'data/cycles/cycle_01/', 'data/game/', 'provenance/decisions/raeon-pass-02.json',
+                'provenance/decisions/raeon-pass-02.md', 'development/modules/core-game/PASS_02_POLICY_GATES.json',
+                'development/modules/core-game/PASS_02_EXECUTION.md', 'development/modules/core-game/PASS_02_RECEIPT.md',
+                'game/core/genesis_horizon/', 'game/core/raeon/', 'tools/genesis_runtime_pass01.py',
                 'provenance/decisions/raeon-pass-01.json', 'data/manifests/current-files.json', 'tests/integration/genesis_horizon/',
                 'data/platform/genesis-runtime-lock.json', 'data/platform/genesis-horizon-profile.json',
                 'tools/genesis_runtime.py', 'tools/genesis_runtime_tasks.py', 'tools/genesis_runtime_distribution.py', 'tools/genesis_runtime_acceptance.py',
@@ -170,16 +174,31 @@ def verify_distributions(root, output):
     for name in ['PYTHONPATH', 'RAEON_GENESIS_UPSTREAM', 'PYTHONHOME']:
         env.pop(name, None)
 
-    def run(label, command):
+    def run(label, command, expected_exit=0):
         result = subprocess.run(command, cwd=extraction, env=env, capture_output=True, text=True, encoding='utf8', errors='replace')
         logs = output / 'evidence'
         (logs / ('distribution-' + label + '.log')).write_text(result.stdout + result.stderr, encoding='utf8', newline='\n')
-        commands.append({'label': label, 'exit_code': result.returncode, 'arguments': command})
+        commands.append({'label': label, 'exit_code': 0 if result.returncode == expected_exit else result.returncode or -1,
+                         'process_exit_code': result.returncode, 'expected_exit_code': expected_exit, 'arguments': command})
         print('clean extraction ' + label + ': exit ' + str(result.returncode), flush=True)
-        if result.returncode:
+        if result.returncode != expected_exit:
             raise RuntimeError(label + ': ' + result.stdout + result.stderr)
+        return result
     run('venv', [sys.executable, '-B', '-m', 'venv', str(extraction / 'isolated python')])
     python = extraction / 'isolated python/Scripts/python.exe'
+    # Every venv child loads this hook, even children that clear PYTHONPATH or
+    # use isolated mode. The original checkout is never renamed or modified.
+    site = extraction / 'isolated python/Lib/site-packages'
+    (site / 'sitecustomize.py').write_text(
+        'import sys,os\nfrom pathlib import Path\n'
+        'sys.path.insert(0,str(Path(os.environ["RAEON_ISOLATION_ROOT"])/"tools"))\n'
+        'import genesis_runtime_isolation;genesis_runtime_isolation.install()\n', encoding='utf8')
+    env['RAEON_ISOLATION_ROOT'] = str(extraction)
+    env['RAEON_FORBIDDEN_CHECKOUT'] = str(root.parent / '_bricked')
+    temp = extraction / 'temporary files'
+    temp.mkdir()
+    env.update(TEMP=str(temp), TMP=str(temp), PIP_CONFIG_FILE=os.devnull, PIP_NO_CACHE_DIR='1', PYTHONNOUSERSITE='1')
+    run('isolation-probes', [str(python), '-B', '-c', 'import genesis_runtime_isolation;genesis_runtime_isolation.probes()'])
     wheels = extraction / 'distribution/wheels'
     run('dependencies', [str(python), '-B', '-m', 'pip', 'install', '--no-index', '--find-links', str(wheels), 'numpy==2.3.5', 'setuptools==84.0.0'])
     run('install', [str(python), '-B', '-m', 'pip', 'install', '--no-index', '--no-build-isolation', str(extraction / 'platform/shared/python_hypervisor')])
@@ -188,11 +207,37 @@ def verify_distributions(root, output):
     run('build', [str(python), '-B', 'tools/genesis_runtime.py', 'verify'])
     run('demo', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless'])
     run('pass-01-demo', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless', '--application', 'raeon'])
+    run('pass-02-demo', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless', '--application', 'raeon', '--scenario', 'cards'])
     # Exercise local software tests in isolation; the selected upstream regression
     # sources are also shipped and remain runnable with the test command.
     run('unit-tests', [str(python), '-B', '-m', 'unittest', 'discover', '-s', 'tests/unit/hypervisor', '-v'])
     run('integration-tests', [str(python), '-B', '-m', 'unittest', 'discover', '-s', 'tests/integration/genesis_horizon', '-v'])
-    result = {'status': 'PASS', 'extraction': str(extraction), 'offline_install': True, 'python_prerequisite': sys.version.split()[0],
+    lock = json.loads((extraction / 'data/platform/genesis-runtime-lock.json').read_text())
+    relative = next(iter(lock['selected_source_paths_and_hashes']))
+    missing = extraction / lock['default_dependency_root'] / relative
+    held = missing.with_name(missing.name + '.held-for-negative-test')
+    missing.rename(held)
+    try:
+        negative = run('missing-dependency', [str(python), '-B', 'tools/genesis_runtime.py', 'doctor'], expected_exit=1)
+        if 'missing source' not in negative.stderr and 'DEPENDENCY_INTEGRITY' not in negative.stderr:
+            raise RuntimeError('Missing source failed for an unrelated reason')
+    finally:
+        held.rename(missing)
+    original_build = json.loads((output / 'evidence/build.json').read_text())
+    relocated_build = json.loads((extraction / 'build/genesis_runtime/evidence/build.json').read_text())
+    if original_build != relocated_build:
+        raise RuntimeError('Bytecode changed after offline relocation')
+    traces = [json.loads(line) for path in (extraction / 'isolation traces').glob('*.jsonl') for line in path.read_text().splitlines()]
+    violations = [event for event in traces if event['denied'] and not event['probe']]
+    if violations:
+        raise RuntimeError('Offline isolation violations: ' + str(violations[:10]))
+    isolation = {'method': 'independent Python audit interception in every fresh-venv child; denial probes executed',
+                 'scope': 'trusted pinned Python reference engines; not an OS sandbox for arbitrary native code',
+                 'probes_passed': True, 'violations': violations, 'events_recorded': len(traces),
+                 'trace_directory': str(extraction / 'isolation traces'),
+                 'file_closure': ['bundle and writable extraction', 'declared Python installation', 'Windows OS prerequisite']}
+    result = {'status': 'PASS', 'isolation': isolation, 'missing_dependency_negative': 'PASS',
+              'physical_path_bytecode_equal': True, 'extraction': str(extraction), 'offline_install': True, 'python_prerequisite': sys.version.split()[0],
               'source_commit': next(iter(manifests.values()))['source_commit'], 'commands': commands,
               'archives': distributions, 'archive_manifest_files_verified': sum(len(m['files']) for m in manifests.values())}
     (output / 'evidence/distribution-verification.json').write_bytes(json_bytes(result))

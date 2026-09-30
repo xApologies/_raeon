@@ -117,6 +117,7 @@ def main():
         commands.add_parser(action)
     demo_parser = commands.add_parser('demo')
     demo_parser.add_argument('--headless', action='store_true', required=True)
+    demo_parser.add_argument('--scenario', choices=['empty', 'cards'], default='empty')
     demo_parser.add_argument('--application', choices=['horizon-conformance', 'raeon'], default='horizon-conformance')
     tests = commands.add_parser('upstream-test')
     tests.add_argument('--domains', type=int, nargs='+', default=[1, 2, 3, 4, 5, 8, 9, 10, 13, 14, 15, 16, 17])
@@ -140,12 +141,13 @@ def main():
         import genesis_runtime_distribution as distribution
         import genesis_runtime_acceptance as acceptance
         import genesis_runtime_pass01 as pass01
+        import genesis_runtime_pass02 as pass02
         if args.command == 'repository-test':
             result = acceptance.repository_test(ROOT, BUILD)
         elif args.command == 'audit':
             result = acceptance.audit(ROOT, BUILD)
-            result['pass_01'] = pass01.audit(ROOT, BUILD)
-            if result['status'] != 'PASS' or result['pass_01']['status'] != 'PASS':
+            result['pass_02'] = pass02.audit(ROOT, BUILD)
+            if result['status'] != 'PASS' or result['pass_02']['status'] != 'PASS':
                 print(json.dumps(result, indent=2))
                 raise RuntimeError('Audit incomplete; inspect named failing acceptance evidence')
         elif args.command == 'package':
@@ -158,7 +160,9 @@ def main():
             result['upstream'] = upstream_test([1,2,3,4,5,8,9,10,13,14,15,16,17])
             write_json(BUILD / 'evidence/tests-source.json', {'status': 'PASS', 'implementation_sha256': distribution.implementation_digest(ROOT)})
         elif args.command == 'demo' and args.application == 'raeon':
-            result = pass01.demo(ROOT, BUILD)
+            result = pass02.demo(ROOT, BUILD, args.scenario)
+            if args.scenario == 'empty':
+                result['historical_pass_01'] = pass01.demo(ROOT, BUILD)
         elif args.command == 'dialect-test':
             result = tasks.dialect_test(ROOT, dependency_root(), BUILD)
         else:
