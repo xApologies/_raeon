@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "pass": 1,
+  "completion_rule": "All cases PASS.",
+  "cases": [
+    {
+      "id": "P1-01",
+      "title": "Production RAEON manifest outside tests with stable non-conformance identity",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-02",
+      "title": "Production RAEON Genesis realization compiles/verifies/executes",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-03",
+      "title": "Pass-1 Genesis source rebuilds byte-identically",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-04",
+      "title": "Exactly one Match realized",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-05",
+      "title": "Exactly two Players realized",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-06",
+      "title": "Exactly one stable Board/player",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-07",
+      "title": "Distinct Deck/Hand/Graveyard attachments per Board",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-08",
+      "title": "Exactly three fixed Prime positions/player",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-09",
+      "title": "Exactly Configuration Spaces A/B/C/player; no expansion",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-10",
+      "title": "All Pass-1 containers/spaces empty; no fabricated cards",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-11",
+      "title": "Configuration Spaces are State Geometrics, not QMO",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-12",
+      "title": "Semantic identities unique and coordinate-independent",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-13",
+      "title": "Ownership/containment/attachments explicit/queryable",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-14",
+      "title": "Owner/private projection authorized",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-15",
+      "title": "Opponent/public projection hides private internals",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-16",
+      "title": "No native backend paths/resources/receipts leak",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-17",
+      "title": "Observation does not mutate revision/duplicate topology",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-18",
+      "title": "Identical realization idempotent",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-19",
+      "title": "Conflicting second application rejected",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-20",
+      "title": "Unauthorized realization leaves semantic root unchanged",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-21",
+      "title": "Package SHA tamper rejected atomically",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-22",
+      "title": "Source SHA tamper rejected atomically",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-23",
+      "title": "Package/source path escape rejected",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-24",
+      "title": "Malformed/undeclared source rejected",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-25",
+      "title": "Duplicate/conflicting runtime identity rejected atomically",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-26",
+      "title": "Injected pre-publication failure rolls back",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-27",
+      "title": "Application cannot mutate/inherit machine domains",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-28",
+      "title": "Checkpoint/restore preserves all Pass-1 identities",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-29",
+      "title": "Restart/restore preserves topology and changes boundary epoch",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-30",
+      "title": "Two player Hypervisor HELLO/SNAPSHOT sessions use real Horizon",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-31",
+      "title": "Fresh headless Pass-1 realization/restart demo passes",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-32",
+      "title": "Existing Genesis runtime unit/integration acceptance green",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-33",
+      "title": "Existing _raeon validators/regressions/gameplay specs green",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-34",
+      "title": "120-FG and 2,094-object atlas protections green",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-35",
+      "title": "_bricked pinned/read-only; isolated ignored runtime copy used",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-36",
+      "title": "No Pass-2+ mechanics or OPEN timing/victory invented",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-37",
+      "title": "Receipt records exact Git/test evidence",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P1-38",
+      "title": "Task branch pushed; main unmerged/unmodified by task",
+      "status": "NOT_RUN"
+    }
+  ]
+}

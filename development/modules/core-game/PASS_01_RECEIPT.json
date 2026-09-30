@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "status": "IN_PROGRESS",
+  "branch": "codex/raeon-pass-01",
+  "starting_sha": "71b3a3fbdbce7eece25076a0fd303887cc70d4f1",
+  "main_starting_sha": "69a0030805b8c3858c877a514e2f50644421115a",
+  "final_git_evidence": "build/genesis_runtime/evidence/pass-01-acceptance.json"
+}

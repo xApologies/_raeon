@@ -28,7 +28,8 @@ def build(root, output):
     from raeon_genesis_horizon.toolchain import compile_paths
     from genesis_frontend.vendor.genesis_semantics.vendor.genesis_vm import disassemble
     sources = [*sorted((root / 'game/core/genesis_horizon/src').glob('*.gen')),
-               *sorted((root / 'tests/integration/genesis_horizon/application').glob('*.gen'))]
+               *sorted((root / 'tests/integration/genesis_horizon/application').glob('*.gen')),
+               *sorted((root / 'game/core/raeon/application').glob('*.gen'))]
     artifacts = {}
     for source in sources:
         relative = source.relative_to(root).as_posix()

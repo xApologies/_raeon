@@ -56,6 +56,8 @@ class NativeBackend(ReferenceBackend):
         self.allocator = RegionAllocator(self.fabric.cell_count, alignment=8)
         self.instantiator = InstantiationEngine(self.fabric, self.allocator, self.working / 'instances')
         self.transformer = TransformationEngine(self.fabric, self.working / 'transforms')
+        self.application_definitions = {}
+        self.realization_relations = []
         self.bindings = {}
         self.relations = []
         self.authority = None
@@ -97,11 +99,19 @@ class NativeBackend(ReferenceBackend):
             if name not in self.bindings:
                 raise BindingError('UNRESOLVED_PERSISTENT_RESOURCE')
             return self.resources[self.bindings[name]]
-        if name not in self.profile['definitions']:
+        if name not in self.profile['definitions'] and name not in self.application_definitions:
             raise BindingError('UNKNOWN_MMO')
+        if name in self.application_definitions and self.phase != 'realize':
+            raise BindingError('AUTHORITY_DENIED')
+        if name in self.profile['domains'] and self.phase != 'boot':
+            raise BindingError('AUTHORITY_DENIED')
+        if name in ('A', 'B') and (self.phase != 'realize' or self.application_definitions):
+            raise BindingError('AUTHORITY_DENIED')
+        if name == 'request' and self.phase != 'route':
+            raise BindingError('AUTHORITY_DENIED')
         if name in self.bindings and name != 'request':
             raise BindingError('DUPLICATE_INSTANCE')
-        definition = self.profile['definitions'][name]
+        definition = (self.application_definitions if name in self.application_definitions else self.profile['definitions'])[name]
         if digest(definition['data']) != definition['data_sha256']:
             raise BindingError('DEFINITION_INTEGRITY')
         data = definition['data']
@@ -126,6 +136,8 @@ class NativeBackend(ReferenceBackend):
         stable = self.identity + ':' + native['instance_id']
         resource = self._put('GEOMETRIC', {'binding': name, 'identity': stable, 'native': native, 'closed': True,
                                           'definition_sha256': digest(definition), 'domain': name if name in self.profile['domains'] else 'state'})
+        if 'semantic' in definition:
+            resource['payload']['semantic'] = copy.deepcopy(definition['semantic'])
         self.bindings[name] = resource['resource_id']
         self.native_receipts.append({'operation': 'instantiate', 'name': name, 'receipts': receipts})
         if name == 'request':
@@ -148,7 +160,8 @@ class NativeBackend(ReferenceBackend):
         source_name = geo['payload']['binding']
         relation = attrs.get('relation')
         allowed = self.phase == 'boot' and [source_name, target] in self.profile['containment'] and relation == 'contains'
-        allowed |= self.phase == 'realize' and source_name == 'state' and target in ('A', 'B') and relation == 'contains'
+        allowed |= self.phase == 'realize' and not self.application_definitions and source_name == 'state' and target in ('A', 'B') and relation == 'contains'
+        allowed |= self.phase == 'realize' and [source_name, target, relation] in self.realization_relations
         allowed |= self.phase == 'application' and [source_name, target, relation] in (self.authority or {}).get('relationships', [])
         if not allowed:
             raise BindingError('AUTHORITY_DENIED')

@@ -22,10 +22,10 @@ types 9/10/11, 7/8, 6 and 5. This demonstrates software containment, admission,
 real native cell transforms and transport. It does **not** prove higher-dimensional
 mathematical embeddings or close upstream OPEN geometry/coupling mathematics.
 
-The trusted owner may configure application manifest roots within the installed source tree; the default is the conformance package. The test-only conformance package realizes two distinct MMO-backed objects in
+The trusted owner may configure application manifest roots within the installed source tree; the defaults admit only the conformance and production RAEON package roots. The test-only conformance package realizes two distinct MMO-backed objects in
 State. Its declared RELATE_A_B and TRANSFORM_A handlers resolve a real relationship
 and use upstream MIRROR_CHIRALITY. Stable identities remain while immutable native
-versions and History advance. Production gameplay policies are not implemented.
+versions and History advance. The [production RAEON package](../raeon/application/README.md) realizes the Pass-1 empty two-player topology in State. Cards and gameplay operations are not implemented.
 
 Each compiled invocation binds the same persistent native resource graph.
 Candidate transforms create immutable overlay files; publication atomically

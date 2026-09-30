@@ -1,3 +1,4 @@
+import {pass01Sources} from './pass-01-contract.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
@@ -15,10 +16,11 @@ export function validateRuntimeSources(root, inventory) {
     const bytes = fs.readFileSync(path.join(root, runtimeDecision));
     if (hash(bytes) !== acceptedDecisionHash) throw new Error('runtime decision hash mismatch');
     const decision = JSON.parse(bytes);
-    if (JSON.stringify(sources) !== JSON.stringify(Object.keys(decision.compiled_sources).sort()))
+    const compiled = {...decision.compiled_sources, ...pass01Sources(root, inventory)};
+    if (JSON.stringify(sources) !== JSON.stringify(Object.keys(compiled).sort()))
       errors.push('Executable Genesis inventory differs from the exact authorized source set');
-    for (const [source, evidence] of Object.entries(decision.compiled_sources)) {
-      if (!source.startsWith('game/core/genesis_horizon/src/') && !source.startsWith('tests/integration/genesis_horizon/application/'))
+    for (const [source, evidence] of Object.entries(compiled)) {
+      if (!source.startsWith('game/core/genesis_horizon/src/') && !source.startsWith('tests/integration/genesis_horizon/application/') && !source.startsWith('game/core/raeon/application/'))
         throw new Error('Executable source outside authorized implementation/test homes');
       if (hash(fs.readFileSync(path.join(root, source))) !== evidence.source_sha256)
         errors.push('Executable Genesis source changed without compilation amendment: ' + source);

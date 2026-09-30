@@ -16,6 +16,7 @@ import threading
 import uuid
 
 from .toolchain import initialize, compile_paths, execute, canonical, digest, file_hash
+from .application import load_package, verify_realized, project
 
 
 class HorizonError(RuntimeError):
@@ -29,7 +30,7 @@ class Horizon:
         self.root, self.upstream, self.lock = initialize(root)
         from .native import NativeBackend
         self.backend_type = NativeBackend
-        self.application_roots = [(self.root / p).resolve() for p in (application_roots or ['tests/integration/genesis_horizon/application'])]
+        self.application_roots = [(self.root / p).resolve() for p in (application_roots or ['tests/integration/genesis_horizon/application', 'game/core/raeon/application'])]
         if not all(p.is_relative_to(self.root) for p in self.application_roots):
             raise HorizonError('AUTHORITY_DENIED')
         self.storage = Path(storage).resolve()
@@ -80,12 +81,16 @@ class Horizon:
         b = self._backend
         return {'bindings': b.bindings, 'relations': b.relations, 'resources': b.resources,
                 'ledger': b.ledger, 'allocator': b.allocator.snapshot(), 'road_history': b.road_history,
-                'native_receipts': b.native_receipts}
+                'native_receipts': b.native_receipts, 'application_definitions': b.application_definitions,
+                'realization_relations': b.realization_relations}
 
     def _restore_record(self, record):
         b = self._backend
         for field in ['bindings', 'relations', 'resources', 'ledger', 'road_history', 'native_receipts']:
             setattr(b, field, copy.deepcopy(record[field]))
+        # Old conformance checkpoints predate the additive package contract.
+        b.application_definitions = copy.deepcopy(record.get('application_definitions', {}))
+        b.realization_relations = copy.deepcopy(record.get('realization_relations', []))
         b.allocator.entries = copy.deepcopy(record['allocator']['entries'])
         b.pending = {}
 
@@ -152,6 +157,8 @@ class Horizon:
             objects[name] = {'identity': obj['payload']['identity'],
                              'version': obj['payload']['native']['instance_id'],
                              'cells': [cell.pack().hex() for cell in b.read_cells(obj)]}
+            if 'semantic' in obj['payload']:
+                objects[name]['semantic'] = obj['payload']['semantic']
         return digest({'identity': self.identity, 'revision': state['revision'], 'objects': objects,
                        'relations': [b.resources[ref]['payload'] for ref in b.relations]})
 
@@ -169,25 +176,32 @@ class Horizon:
             package = (self.root / package_ref['path']).resolve()
             if not any(package.is_relative_to(allowed) for allowed in self.application_roots):
                 raise HorizonError('AUTHORITY_DENIED')
-            if file_hash(package) != package_ref['sha256']:
-                raise HorizonError('ADMISSION_REJECTED')
-            manifest = json.loads(package.read_text(encoding='utf8'))
-            exported_sources = {manifest['realize'], *(op['source'] for op in manifest['operations'].values())}
-            if not exported_sources <= set(manifest['files']):
-                raise HorizonError('ADMISSION_REJECTED')
-            for relative, expected in manifest['files'].items():
-                path = (package.parent / relative).resolve()
-                if not path.is_relative_to(package.parent) or file_hash(path) != expected:
-                    raise HorizonError('ADMISSION_REJECTED')
+            try:
+                manifest, definitions, sources = load_package(package, package_ref['sha256'])
+                compiled = { (package.parent / name).relative_to(self.root).as_posix():
+                             compile_paths([package.parent / name], self.root, Path(name).stem)
+                             for name in sorted(sources) }
+            except (ValueError, KeyError, TypeError, OSError) as error:
+                raise HorizonError('ADMISSION_REJECTED') from error
             if self._state['application']:
                 if self._state['application']['package_sha256'] == package_ref['sha256']:
                     return copy.deepcopy(self._state['application'])
                 raise HorizonError('ADMISSION_REJECTED')
             saved = copy.deepcopy(self._record())
+            old_builds = dict(self._builds)
+            self._remaining = budget
             try:
+                self._builds.update(compiled)
+                if definitions:
+                    self._route('in', {'realize': package_ref['sha256']}, authority, budget)
+                self._backend.application_definitions = definitions
+                self._backend.realization_relations = manifest.get('realization_relations', [])
                 self._backend.phase = 'realize'
                 self._authority(authority, [])
                 self._run((package.parent / manifest['realize']).relative_to(self.root).as_posix(), budget)
+                if definitions:
+                    verify_realized(self._backend, saved['bindings'], saved['relations'], definitions, manifest['realization_relations'])
+                self._fault('after_candidate')
                 self._backend.phase = 'state_commit'
                 self._authority(authority, ['INHERIT_STATE'])
                 self._core('state', budget)
@@ -196,23 +210,35 @@ class Horizon:
                 state['application'] = {'id': manifest['id'], 'package_sha256': package_ref['sha256'], 'manifest': manifest,
                                         'directory': package.parent.relative_to(self.root).as_posix()}
                 state['root'] = self._semantic_root(state)
+                if definitions:
+                    self._route('out', {'realized': manifest['id'], 'root': state['root']}, authority, budget)
                 self._save(state)
                 return copy.deepcopy(state['application'])
             except Exception:
                 self._restore_record(saved)
+                self._builds = old_builds
                 raise
+            finally:
+                if hasattr(self, '_remaining'):
+                    del self._remaining
 
     def _route(self, direction, semantic, authority, budget):
         if len(self._backend.road_history) + 3 > self.profile['limits']['native_road_receipts']:
             raise HorizonError('BACKPRESSURE')
+        self._backend.phase = 'route'
         self._authority(authority, ['ROUTE'])
         self._backend.active_request = {'source': 'sea' if direction == 'in' else 'state', 'semantic': semantic}
         return self._core('road_' + direction, budget)
 
     def _view(self, authority):
         app = self._state['application']
-        if not app or authority.get('application_id') != app['id'] or authority.get('view_id') not in ('public', 'writer'):
+        if not app or authority.get('application_id') != app['id'] or authority.get('view_id') not in app['manifest']['views']:
             raise HorizonError('AUTHORITY_DENIED')
+        if app['manifest'].get('schema_version') == 2:
+            try:
+                return copy.deepcopy(project(self._backend, app['manifest'], authority))
+            except ValueError as error:
+                raise HorizonError('AUTHORITY_DENIED') from error
         if authority['view_id'] == 'writer' and not authority.get('private_view'):
             raise HorizonError('AUTHORITY_DENIED')
         names = app['manifest']['views'][authority['view_id']]
@@ -233,6 +259,8 @@ class Horizon:
             view = self._view(view_context)
             self._route('in', {'observe': view_context['view_id']}, view_context, 100000)
             app = self._state['application']
+            self._backend.phase = 'observe'
+            self._authority(view_context, [])
             self._run(app['directory'] + '/' + app['manifest']['operations']['OBSERVE']['source'], 100000)
             self._route('out', {'view_digest': digest(view)}, view_context, 100000)
             return {'view_id': view_context['view_id'], 'epoch': self.epoch, 'state_revision': self._state['revision'],
@@ -291,6 +319,10 @@ class Horizon:
                            'revision': state['revision'], 'previous_root': old_root, 'root': state['root'],
                            'commit_id': digest([key, state['root']]), 'native_execution': receipt['resource_id'],
                            'inward': incoming['resource_id'], 'outward': outgoing['resource_id']}
+                if app['manifest'].get('schema_version') == 2:
+                    # Native diagnostics stay with the trusted owner, not player receipts.
+                    for field in ['native_execution', 'inward', 'outward']:
+                        outcome.pop(field)
                 state['outcomes'][key] = outcome
                 state['inputs'].append({'intent': copy.deepcopy(intent), 'authority': copy.deepcopy(authority), 'root': state['root']})
                 self._save(state)

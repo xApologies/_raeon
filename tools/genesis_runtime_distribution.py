@@ -12,10 +12,13 @@ import zipfile
 VERSION = '0.1.0'
 PREFIXES = {
     'hypervisor': ['platform/shared/python_hypervisor/', 'tests/unit/hypervisor/'],
-    'horizon': ['game/core/genesis_horizon/', 'tests/integration/genesis_horizon/',
+    'horizon': ['game/core/genesis_horizon/', 'game/core/raeon/', 'tools/genesis_runtime_pass01.py',
+                'provenance/decisions/raeon-pass-01.json', 'data/manifests/current-files.json', 'tests/integration/genesis_horizon/',
                 'data/platform/genesis-runtime-lock.json', 'data/platform/genesis-horizon-profile.json',
                 'tools/genesis_runtime.py', 'tools/genesis_runtime_tasks.py', 'tools/genesis_runtime_distribution.py', 'tools/genesis_runtime_acceptance.py',
                 'development/modules/core-game/GENESIS_RUNTIME_EXECUTION.md',
+                'development/modules/core-game/PASS_01_BUILD_ORDER.md',
+                'development/modules/core-game/PASS_01_RECEIPT.md', 'provenance/decisions/raeon-pass-01.md',
                 'development/modules/core-game/GENESIS_RUNTIME_BUILD_ORDER.md',
                 'provenance/decisions/genesis-runtime-build.json', 'provenance/decisions/genesis-runtime-build.md'],
 }
@@ -117,7 +120,7 @@ def package(root, output):
                 archive.writestr(item, payload)
         digest = sha(target.read_bytes())
         target.with_suffix('.zip.sha256').write_text(digest + '  ' + name + '\n', encoding='utf8', newline='\n')
-        result[family] = {'path': str(target), 'sha256': digest, 'bytes': target.stat().st_size, 'source_commit': revision,
+        result[family] = {'implementation_sha256': implementation_digest(root), 'path': str(target), 'sha256': digest, 'bytes': target.stat().st_size, 'source_commit': revision,
                           'manifest': manifest_path, 'files': len(entries)}
     (output / 'evidence/distributions.json').write_bytes(json_bytes(result))
     return result
@@ -184,6 +187,7 @@ def verify_distributions(root, output):
     run('doctor', [str(python), '-B', 'tools/genesis_runtime.py', 'doctor'])
     run('build', [str(python), '-B', 'tools/genesis_runtime.py', 'verify'])
     run('demo', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless'])
+    run('pass-01-demo', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless', '--application', 'raeon'])
     # Exercise local software tests in isolation; the selected upstream regression
     # sources are also shipped and remain runnable with the test command.
     run('unit-tests', [str(python), '-B', '-m', 'unittest', 'discover', '-s', 'tests/unit/hypervisor', '-v'])

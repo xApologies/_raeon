@@ -94,9 +94,9 @@ def audit(root, output):
     distributions = read('distributions.json')
     verified = read('distribution-verification.json')
     if distributions:
-        mark(['D-03'], len(distributions) == 2, ['distributions.json'])
+        mark(['D-03'], len(distributions) == 2 and all(d.get('implementation_sha256') == implementation_digest(root) for d in distributions.values()), ['distributions.json'])
     if verified:
-        okay = verified['status'] == 'PASS' and all(c['exit_code'] == 0 for c in verified['commands'])
+        okay = verified['status'] == 'PASS' and all(c['exit_code'] == 0 for c in verified['commands']) and all(d.get('implementation_sha256') == implementation_digest(root) for d in verified['archives'].values())
         mark(['D-04', 'D-05', 'D-06', 'V-16'], okay, ['distribution-verification.json'])
     head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip()
     branch = subprocess.check_output(['git', 'branch', '--show-current'], cwd=root, text=True).strip()

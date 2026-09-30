@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "authorization": "RAEON_DIPLOMATIC_POUCH_PASS_01_2026-09-30",
+  "starting_commit": "71b3a3fbdbce7eece25076a0fd303887cc70d4f1",
+  "scope": "Production empty-match Genesis realization only; all historical runtime sources and Cycle-1 data preserved.",
+  "upstream_commit": "c89676fc26000ae6f5fdad66a56e118b285d9b1d",
+  "pouch_sha256": "756242acaa900eb6d6e1b155c03cd11b4a907b7c4aeb75feaf4caaaa449c6481",
+  "compiled_sources": {
+    "game/core/raeon/application/raeon_observe.gen": {
+      "source_sha256": "06a54be1db2dfe491e0ea431ad2ba79a97db4cf4f009163c372058a149406e73",
+      "bytecode_sha256": "7b3e72909a3b095c8174142f5a53a121ea755dad230439b8a1c66835bc6d4b71"
+    },
+    "game/core/raeon/application/raeon_realize.gen": {
+      "source_sha256": "448cbfe495cd7133eb9576f8e9e462c32d7d3dc0e623714f9a0b9ebf46f3ff0a",
+      "bytecode_sha256": "3a4bbd14e4f4923ad1108ea2979bbd9b807bc745049627eb09bc236131d1973c"
+    }
+  },
+  "package_files": {
+    "game/core/raeon/application/definitions.json": "32963db30b12111662940652e7da412f5d58139322e4dd52f0225257183bc9e3",
+    "game/core/raeon/application/manifest.json": "45b4bfa719f6523ef0bda399c40887ec772e752be862e4e274fb5cdf93f65eec",
+    "game/core/raeon/application/raeon_observe.gen": "06a54be1db2dfe491e0ea431ad2ba79a97db4cf4f009163c372058a149406e73",
+    "game/core/raeon/application/raeon_realize.gen": "448cbfe495cd7133eb9576f8e9e462c32d7d3dc0e623714f9a0b9ebf46f3ff0a"
+  },
+  "native_objects": 37,
+  "realization_relations": 163,
+  "whole_game_phase": "PREPRODUCTION"
+}
