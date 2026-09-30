@@ -24,7 +24,7 @@ export function pass02Sources(root, inventory) {
 
 // Additive host-binding amendment: earlier Genesis decisions are unchanged.
 export const projectionCorrectionDecision = 'provenance/decisions/raeon-pass-02-projection-correction.json';
-const correctionDecisionHash = '411d64fa5f7c23469d13dbddc1c651e8e3b02339ce5ff092ab129969d290c070';
+const correctionDecisionHash = '011b4df943efc509e817194af657aa91836244dc5949ca3ac142ea99525dbc39';
 export function validateProjectionCorrection(root, inventory) {
   if (!inventory.includes(projectionCorrectionDecision)) return;
   const bytes = fs.readFileSync(path.join(root, projectionCorrectionDecision));

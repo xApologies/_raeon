@@ -23,7 +23,7 @@
     "provenance/imports/raeon-pass-02/vera-audit/real-projection-reproduction.txt": "17aa65649918b6a417cc4f700ef05fa6449eafcc5e57cb612c384a5235d5438a"
   },
   "additive_regression_source": "tests/integration/genesis_horizon/test_pass_02_projection_privacy.py",
-  "additive_regression_sha256": "fbbeee984227fe95e783c99cfaee2737007af77b7261974f508dd1553bc68cdb",
+  "additive_regression_sha256": "1180a6c2d3168b73bc91b5b24f7e633240a2d2ac6e42ef9f5fb3d742e304e6d1",
   "original_acceptance_denominators": {
     "runtime": 74,
     "pass_02": 83

@@ -138,6 +138,10 @@ class ProjectionPrivacy(unittest.TestCase):
 
     def test_private_inspection_delta_reconnect_restore_and_expiry(self):
         for owner in ('player_1', 'player_2'):
+            if owner == 'player_2':
+                # Independent role fixtures avoid nested restored storage paths on Windows.
+                self.tearDown()
+                self.setUp()
             own, _ = self.read(owner)
             public_session = self.bind(owner)
             public, _ = self.read(public_session)
