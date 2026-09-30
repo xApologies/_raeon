@@ -1,8 +1,399 @@
 {
   "schema_version": 1,
-  "status": "IN_PROGRESS",
+  "status": "COMPLETE",
+  "date": "2026-09-30",
+  "repository": "https://github.com/xApologies/_raeon",
   "branch": "codex/raeon-pass-01",
   "starting_sha": "71b3a3fbdbce7eece25076a0fd303887cc70d4f1",
+  "implementation_end_sha": "f7b312099a518b42d42775fb84db32a1b5d825c9",
+  "implementation_remote_sha": "f7b312099a518b42d42775fb84db32a1b5d825c9",
+  "completion_revision": {
+    "scope": "Receipt/count-correction closing commit; cannot embed its own Git hash",
+    "resolve_command": "git log -1 --format=%H -- development/modules/core-game/PASS_01_RECEIPT.json",
+    "final_exact_ending_and_remote_sha": "build/genesis_runtime/evidence/pass-01-acceptance.json"
+  },
   "main_starting_sha": "69a0030805b8c3858c877a514e2f50644421115a",
-  "final_git_evidence": "build/genesis_runtime/evidence/pass-01-acceptance.json"
+  "main_ending_sha": "69a0030805b8c3858c877a514e2f50644421115a",
+  "main_merged": false,
+  "production_package": {
+    "path": "game/core/raeon/application/manifest.json",
+    "sha256": "45b4bfa719f6523ef0bda399c40887ec772e752be862e4e274fb5cdf93f65eec"
+  },
+  "topology": {
+    "ATTACHMENT_ROLE": 10,
+    "BOARD": 2,
+    "CONFIGURATION_REGION": 2,
+    "CONFIGURATION_SPACE": 6,
+    "DECK": 2,
+    "GRAVEYARD": 2,
+    "HAND": 2,
+    "MATCH": 1,
+    "PLAYER": 2,
+    "PRIME_POSITION": 6,
+    "PRIME_REGION": 2
+  },
+  "native_objects": 37,
+  "realization_relations": 163,
+  "whole_game_phase": "PREPRODUCTION",
+  "implementation_sha256": "f8162415e5b71f7130ac470f6a2514a9d10453ee0744f7d59ea22154caeda0ce",
+  "commands": [
+    [
+      "python",
+      "-B",
+      "tools/genesis_runtime.py",
+      "doctor"
+    ],
+    [
+      "python",
+      "-B",
+      "tools/genesis_runtime.py",
+      "dependencies",
+      "verify"
+    ],
+    [
+      "python",
+      "-B",
+      "tools/genesis_runtime.py",
+      "build"
+    ],
+    [
+      "python",
+      "-B",
+      "tools/genesis_runtime.py",
+      "verify"
+    ],
+    [
+      "python",
+      "-B",
+      "tools/genesis_runtime.py",
+      "dialect-test"
+    ],
+    [
+      "python",
+      "-B",
+      "tools/genesis_runtime.py",
+      "demo",
+      "--headless"
+    ],
+    [
+      "python",
+      "-B",
+      "tools/genesis_runtime.py",
+      "demo",
+      "--headless",
+      "--application",
+      "raeon"
+    ],
+    [
+      "python",
+      "-B",
+      "tools/genesis_runtime.py",
+      "test"
+    ],
+    [
+      "python",
+      "-B",
+      "tools/genesis_runtime.py",
+      "repository-test"
+    ],
+    [
+      "python",
+      "-B",
+      "tools/genesis_runtime.py",
+      "package"
+    ],
+    [
+      "python",
+      "-B",
+      "tools/genesis_runtime.py",
+      "verify-distributions"
+    ],
+    [
+      "python",
+      "-B",
+      "tools/genesis_runtime.py",
+      "audit"
+    ],
+    [
+      "git",
+      "diff",
+      "--check"
+    ]
+  ],
+  "python_executed": "C:\\Users\\rando\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "tests": {
+    "protocol": {
+      "passed": [
+        "test_codec.CodecTests.test_fragment_assembly_and_unbound_scope",
+        "test_codec.CodecTests.test_independent_vector",
+        "test_codec.CodecTests.test_json_unicode_duplicates_constants",
+        "test_codec.CodecTests.test_numeric_and_shape_validation_on_both_paths",
+        "test_codec.CodecTests.test_outgoing_schema_and_bounded_drain",
+        "test_codec.CodecTests.test_versions_direction_and_lengths"
+      ],
+      "run": 6,
+      "failures": 0,
+      "errors": 0
+    },
+    "integration": {
+      "passed": [
+        "test_distribution.ArchiveIntegrityTests.test_exact_manifest_and_negative_cases",
+        "test_pass_01.Pass01Tests.test_application_cannot_inherit_or_mutate_machine_domains",
+        "test_pass_01.Pass01Tests.test_checkpoint_restart_and_two_player_sessions",
+        "test_pass_01.Pass01Tests.test_conflicting_application_rejected",
+        "test_pass_01.Pass01Tests.test_duplicate_and_conflicting_identity_rejected",
+        "test_pass_01.Pass01Tests.test_exact_topology_and_empty_containers",
+        "test_pass_01.Pass01Tests.test_explicit_relations_and_stable_unique_identity",
+        "test_pass_01.Pass01Tests.test_missing_or_undeclared_relation_rejected",
+        "test_pass_01.Pass01Tests.test_no_pass_two_rules_exposed",
+        "test_pass_01.Pass01Tests.test_observation_and_idempotence_do_not_duplicate",
+        "test_pass_01.Pass01Tests.test_observation_operation_receipt_has_no_native_diagnostics",
+        "test_pass_01.Pass01Tests.test_owner_opponent_privacy_and_no_native_leak",
+        "test_pass_01.Pass01Tests.test_package_and_source_hash_tamper_rejected",
+        "test_pass_01.Pass01Tests.test_path_escape_rejected",
+        "test_pass_01.Pass01Tests.test_prepublication_failure_and_budget_roll_back",
+        "test_pass_01.Pass01Tests.test_production_bytecode_is_deterministic",
+        "test_pass_01.Pass01Tests.test_production_manifest_and_real_genesis",
+        "test_pass_01.Pass01Tests.test_unauthorized_realization_rejected",
+        "test_pass_01.Pass01Tests.test_undeclared_and_malformed_source_rejected",
+        "test_runtime.RuntimeTests.test_application_cannot_inherit_machine_domains",
+        "test_runtime.RuntimeTests.test_backpressure_before_mutation",
+        "test_runtime.RuntimeTests.test_candidate_rollback_and_budget",
+        "test_runtime.RuntimeTests.test_checkpoint_restart_corruption_and_confinement",
+        "test_runtime.RuntimeTests.test_delivery_failure_recovery",
+        "test_runtime.RuntimeTests.test_expired_retry_is_never_reexecuted",
+        "test_runtime.RuntimeTests.test_missing_and_tampered_sources",
+        "test_runtime.RuntimeTests.test_native_boot_identities_and_containment",
+        "test_runtime.RuntimeTests.test_output_delivery_failure_retains_committed_outcome",
+        "test_runtime.RuntimeTests.test_privacy_and_scope",
+        "test_runtime.RuntimeTests.test_projection_gap_receipt_clock_and_reconnect",
+        "test_runtime.RuntimeTests.test_quiesce_close_and_replay",
+        "test_runtime.RuntimeTests.test_real_joint_trace_and_identity_history",
+        "test_runtime.RuntimeTests.test_retry_conflict_concurrent_scope_and_stale",
+        "test_runtime.RuntimeTests.test_route_admission_and_open_resource_rejections"
+      ],
+      "run": 34,
+      "failures": 0,
+      "errors": 0
+    },
+    "pass_01_integration": 18,
+    "upstream_by_domain": {
+      "1": 14,
+      "2": 18,
+      "3": 23,
+      "4": 27,
+      "5": 49,
+      "8": 40,
+      "9": 44,
+      "10": 46,
+      "13": 48,
+      "14": 62,
+      "15": 60,
+      "16": 64,
+      "17": 80
+    },
+    "upstream_total": 575,
+    "repository_regressions": 204,
+    "gameplay_specifications": 17
+  },
+  "validator_checks": {
+    "bootstrap": 2326,
+    "design_state": 2864,
+    "normalization": 2535,
+    "continuity": 1594,
+    "cycle1_import": 100085,
+    "full_migration": 457,
+    "game_definition": 55
+  },
+  "runtime_acceptance": {
+    "passed": 74,
+    "total": 74
+  },
+  "pass_01_acceptance": {
+    "required": 38,
+    "result_authority": "build/genesis_runtime/evidence/pass-01-acceptance.json",
+    "command": "python -B tools/genesis_runtime.py audit"
+  },
+  "negative_coverage": [
+    "unauthorized realization",
+    "package/source hash tamper",
+    "root/source path escape",
+    "undeclared/malformed Genesis",
+    "duplicate semantic/native-definition IDs and duplicate instantiated binding",
+    "missing/undeclared relationships",
+    "injected after-candidate/before-publication failure",
+    "execution budget rejection",
+    "application machine-domain inheritance/mutation",
+    "wrong owner/private view",
+    "source/manifest/definition/decision guard tamper"
+  ],
+  "upstream_readonly": {
+    "status": "PASS",
+    "head": "c89676fc26000ae6f5fdad66a56e118b285d9b1d",
+    "git_status": "",
+    "comparison": "Initial clean tracked source at pinned HEAD versus final clean tracked source at identical HEAD; runtime executed only in ignored copy"
+  },
+  "distributions": {
+    "horizon": {
+      "bytes": 17552311,
+      "files": 1186,
+      "implementation_sha256": "f8162415e5b71f7130ac470f6a2514a9d10453ee0744f7d59ea22154caeda0ce",
+      "manifest": "distribution/horizon-manifest.json",
+      "path": "C:\\Users\\rando\\_raeon\\build\\genesis_runtime\\distributions\\genesis-horizon-0.1.0.zip",
+      "sha256": "f14f148914f6e3108963955b74359f8582c3a31c0cd9f38507c147da74ed5c6d",
+      "source_commit": "f7b312099a518b42d42775fb84db32a1b5d825c9"
+    },
+    "hypervisor": {
+      "bytes": 17297,
+      "files": 18,
+      "implementation_sha256": "f8162415e5b71f7130ac470f6a2514a9d10453ee0744f7d59ea22154caeda0ce",
+      "manifest": "distribution/hypervisor-manifest.json",
+      "path": "C:\\Users\\rando\\_raeon\\build\\genesis_runtime\\distributions\\raeon-python-hypervisor-0.1.0.zip",
+      "sha256": "b6996e2c5f477cbb5bca35299298fd51607dbcac0c7aca4d956376b336edadc1",
+      "source_commit": "f7b312099a518b42d42775fb84db32a1b5d825c9"
+    }
+  },
+  "fresh_distribution_verification": {
+    "status": "PASS",
+    "files_verified": 1202,
+    "command_count": 10,
+    "offline": true
+  },
+  "files": [
+    {
+      "status": "M",
+      "path": "data/manifests/current-files.json"
+    },
+    {
+      "status": "A",
+      "path": "development/modules/core-game/PASS_01_BUILD_ORDER.md"
+    },
+    {
+      "status": "A",
+      "path": "development/modules/core-game/PASS_01_RECEIPT.json"
+    },
+    {
+      "status": "A",
+      "path": "development/modules/core-game/PASS_01_RECEIPT.md"
+    },
+    {
+      "status": "M",
+      "path": "game/core/genesis_horizon/README.md"
+    },
+    {
+      "status": "M",
+      "path": "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/adapter.py"
+    },
+    {
+      "status": "A",
+      "path": "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/application.py"
+    },
+    {
+      "status": "M",
+      "path": "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/native.py"
+    },
+    {
+      "status": "A",
+      "path": "game/core/raeon/application/README.md"
+    },
+    {
+      "status": "A",
+      "path": "game/core/raeon/application/definitions.json"
+    },
+    {
+      "status": "A",
+      "path": "game/core/raeon/application/manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "game/core/raeon/application/raeon_observe.gen"
+    },
+    {
+      "status": "A",
+      "path": "game/core/raeon/application/raeon_realize.gen"
+    },
+    {
+      "status": "A",
+      "path": "provenance/decisions/raeon-pass-01.json"
+    },
+    {
+      "status": "A",
+      "path": "provenance/decisions/raeon-pass-01.md"
+    },
+    {
+      "status": "A",
+      "path": "provenance/sources/raeon-pass-01/diplomatic-pouch.zip"
+    },
+    {
+      "status": "A",
+      "path": "tests/integration/genesis_horizon/cases/pass_01_acceptance.json"
+    },
+    {
+      "status": "A",
+      "path": "tests/integration/genesis_horizon/pass_01_support.py"
+    },
+    {
+      "status": "A",
+      "path": "tests/integration/genesis_horizon/test_pass_01.py"
+    },
+    {
+      "status": "A",
+      "path": "tests/regression/pass-01-contract.test.mjs"
+    },
+    {
+      "status": "M",
+      "path": "tools/genesis_runtime.py"
+    },
+    {
+      "status": "M",
+      "path": "tools/genesis_runtime_acceptance.py"
+    },
+    {
+      "status": "M",
+      "path": "tools/genesis_runtime_distribution.py"
+    },
+    {
+      "status": "A",
+      "path": "tools/genesis_runtime_pass01.py"
+    },
+    {
+      "status": "M",
+      "path": "tools/genesis_runtime_tasks.py"
+    },
+    {
+      "status": "M",
+      "path": "tools/validators/genesis-runtime-contract.mjs"
+    },
+    {
+      "status": "A",
+      "path": "tools/validators/pass-01-contract.mjs"
+    },
+    {
+      "status": "M",
+      "path": "development/modules/core-game/GENESIS_RUNTIME_EXECUTION.md",
+      "scope": "Correct historical upstream total from 675 to the verified sum 575"
+    }
+  ],
+  "count_correction": "The thirteen current logs sum to 575; the historical execution note overcounted them as 675. No test failure was suppressed.",
+  "open_items": [
+    "starting hand, normal draw cadence, mulligan, first-player rule",
+    "turn phases, action/reaction order, refresh boundary, targeting/effect timing",
+    "victory/loss, timeout, overflow/destruction ordering, temporary-space expiry",
+    "upstream higher-dimensional embeddings/coupling; native/device ports and certification"
+  ],
+  "non_goals": [
+    "cards/population/movement/shuffle/draw",
+    "QMO/field resolution or regenerated Cycle-1 mathematics",
+    "Prime arithmetic/color/turns/combat/victory",
+    "UI/animation/Blender/native ports"
+  ],
+  "pass_02_entry_state": {
+    "application": "raeon",
+    "version": "0.1.0",
+    "state_revision": 0,
+    "topology": "one empty match; two semantic player roles; stable native identities; private/public projections and checkpoint/restart proven",
+    "only_exported_operation": "OBSERVE",
+    "no_cards": true,
+    "later_pass_requires_its_own_authorized_scope": true
+  }
 }

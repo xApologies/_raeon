@@ -39,7 +39,7 @@ git diff --check
 ```
 
 - Original upstream Rainbow Road parse/lower/build/run passed with verified receipt `receipt-e0bbca751087ac913a9d`; bytecode SHA-256 `b5f96deddc738338a028802faf80a072b99070ad5b674303bd041bfab65cc041`.
-- Thirteen reused upstream suites (domains 1,2,3,4,5,8,9,10,13,14,15,16,17) passed: 675 checks/test cases. Separate 0.6 System-I/O example executes CLOSED; mixed graph syntax relabelled 0.6 is rejected. The actual callable package resolver expands two calls and executes verified.
+- Thirteen reused upstream suites (domains 1,2,3,4,5,8,9,10,13,14,15,16,17) passed: 575 checks/test cases (total corrected during Pass 1 by summing all thirteen suite logs). Separate 0.6 System-I/O example executes CLOSED; mixed graph syntax relabelled 0.6 is rejected. The actual callable package resolver expands two calls and executes verified.
 - Nine local Genesis sources compile, verify and rebuild identically. All bytecode and auxiliary artifact hashes also match the fresh extraction at a different physical path.
 - Six protocol unit tests plus sixteen real integration/archive tests pass. Independent Port decoding, malformed input variants, native cell effects, capability/route/closure failures, rollback, duplicate/conflicting/expired retries, Port output failure, queued quiesce, checkpoint corruption, restart retry, replay and exact archive manifests are covered.
 - Seven repository validators pass: bootstrap, design-state, normalization, continuity, Cycle-1 import, full migration and game definition. All 196 repository regressions and 17 gameplay specification tests pass. Diff checks pass. Original 120-FG and 2,094-object atlas source protections remain enforced.
