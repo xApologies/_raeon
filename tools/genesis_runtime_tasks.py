@@ -23,6 +23,10 @@ def write(path, value):
     path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + '\n', encoding='utf8')
 
 
+def artifact_name(relative):
+    return Path(relative).stem + '-' + hashlib.sha256(relative.encode()).hexdigest()[:12]
+
+
 def build(root, output):
     _, upstream, _ = setup(root)
     from raeon_genesis_horizon.values import IntegerInterpreter
@@ -41,7 +45,7 @@ def build(root, output):
             from genesis_control import disassemble as control_disassemble
             program = integers.programs[source.stem][0]
             bytecode = integers.encode(program)
-            target = output / 'compiled' / source.stem
+            target = output / 'compiled' / artifact_name(relative)
             target.mkdir(parents=True, exist_ok=True)
             (target / 'program.gvm').write_bytes(bytecode)
             (target / 'program.asm').write_text(control_disassemble(program), encoding='utf8')
@@ -49,10 +53,10 @@ def build(root, output):
                                           'verification': integers.verify(program), 'input_registers': integers.programs[source.stem][1]})
             artifacts[relative] = {'source_sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
                 'bytecode_sha256': hashlib.sha256(bytecode).hexdigest(),
-                'artifact_hashes': {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(target.iterdir())}}
+                'artifact_directory': artifact_name(relative), 'artifact_hashes': {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(target.iterdir())}}
             continue
         result = compile_paths([source], root, source.stem)
-        target = output / 'compiled' / source.stem
+        target = output / 'compiled' / artifact_name(relative)
         target.mkdir(parents=True, exist_ok=True)
         (target / 'program.gvm').write_bytes(result.link.bytecode)
         (target / 'program.asm').write_text(disassemble(result.link.program), encoding='utf8')
@@ -60,7 +64,7 @@ def build(root, output):
         write(target / 'linked.json', result.link.gir)
         write(target / 'receipt.json', {'compiler': result.receipt, 'linker': result.link.receipt, 'proofs': result.link.proofs})
         artifacts[relative] = {'source_sha256': hashlib.sha256(source.read_bytes()).hexdigest(), 'bytecode_sha256': result.receipt['gvm_sha256'],
-                               'artifact_hashes': {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(target.iterdir())}}
+                               'artifact_directory': artifact_name(relative), 'artifact_hashes': {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(target.iterdir())}}
     write(output / 'evidence/build.json', {'status': 'PASS', 'artifacts': artifacts})
     return {'status': 'PASS', 'compiled_sources': len(sources), 'artifacts': artifacts}
 
@@ -71,9 +75,9 @@ def verify(root, output):
     for source in first['artifacts']:
         if '/src/values/' in source:
             from genesis_control import decode as control_decode, verify as control_verify
-            control_verify(control_decode((output / 'compiled' / Path(source).stem / 'program.gvm').read_bytes()))
+            control_verify(control_decode((output / 'compiled' / artifact_name(source) / 'program.gvm').read_bytes()))
             continue
-        result = verify_bytecode(decode((output / 'compiled' / Path(source).stem / 'program.gvm').read_bytes()))
+        result = verify_bytecode(decode((output / 'compiled' / artifact_name(source) / 'program.gvm').read_bytes()))
         if not result['ok']:
             raise RuntimeError('Bytecode verification failed: ' + source)
     with tempfile.TemporaryDirectory(prefix='rebuild space ', dir=root / 'build') as temp:

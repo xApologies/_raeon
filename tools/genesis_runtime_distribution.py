@@ -95,8 +95,12 @@ def package(root, output):
                 if sha(payload) != expected_wheels[wheel.name]:
                     raise RuntimeError('Offline wheel integrity: ' + wheel.name)
                 entries['distribution/wheels/' + wheel.name] = payload
-            for artifact in sorted((output / 'compiled').rglob('*')):
-                if artifact.is_file():
+            compiled = json.loads((output / 'evidence/build.json').read_text())['artifacts']
+            for record in compiled.values():
+                for name, expected in record['artifact_hashes'].items():
+                    artifact = output / 'compiled' / record['artifact_directory'] / name
+                    if sha(artifact.read_bytes()) != expected:
+                        raise RuntimeError('Compiled artifact integrity: ' + str(artifact))
                     entries['build/genesis_runtime/compiled/' + artifact.relative_to(output / 'compiled').as_posix()] = artifact.read_bytes()
             for name in ['build.json', 'verify.json', 'tests-unit.json', 'tests-integration.json', 'tests-source.json', 'upstream-tests.json', 'dialects.json']:
                 entries['distribution/evidence/' + name] = (output / 'evidence' / name).read_bytes()

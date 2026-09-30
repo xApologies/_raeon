@@ -36,11 +36,20 @@ def install():
     def audit(event, args):
         target, denied = None, False
         if event.startswith('socket.'):
-            target, denied = event, True
+            target = event
+            denied = event in {'socket.connect', 'socket.connect_ex', 'socket.getaddrinfo',
+                               'socket.gethostbyname', 'socket.gethostbyaddr', 'socket.sendto', 'socket.sendmsg'}
         elif event in {'os.system', 'os.exec', 'os.posix_spawn'}:
             target, denied = args[0], True
         elif event == 'subprocess.Popen':
-            target = args[0] or args[1][0]
+            target = args[0]
+            if target is None:
+                command = args[1]
+                if isinstance(command, str):
+                    command = command.lstrip()
+                    target = command.split('"', 2)[1] if command.startswith('"') else command.split(None, 1)[0]
+                else:
+                    target = command[0]
             executable = Path(target)
             denied = executable.name.lower() not in {'python.exe', 'pythonw.exe', 'python', 'python3'} or not executable.is_absolute() or not confined(executable)
         elif event in {'open', 'os.listdir', 'os.scandir'}:
@@ -60,8 +69,11 @@ def probes():
     import subprocess
     _probe = True
     checks = {}
+    def connection_probe():
+        with socket.socket() as client:
+            client.connect(('198.51.100.1', 443))
     for name, action in {
-        'network_socket': lambda: socket.socket(),
+        'network_connect': connection_probe,
         'network_dns': lambda: socket.getaddrinfo('example.com', 443),
         'git': lambda: subprocess.run(['git', '--version'], check=True),
         'external_checkout': lambda: Path(os.environ['RAEON_FORBIDDEN_CHECKOUT']).joinpath('README.md').read_bytes(),

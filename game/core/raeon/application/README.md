@@ -1,44 +1,38 @@
-# RAEON Genesis application — Pass 1
+# raeon application — Pass 2
 
-Stable package identity `raeon`, version `0.1.0`. This production application
-realizes an empty two-player match inside the existing Genesis Horizon. It uses
-the same pinned compiler, GVM and native geometric engines as the conformance
-application, which remains under tests.
+Application ID `raeon`, version 0.2.0, package schema 3. Empty realization still
+creates the same 37 application Geometrics and 163 explicit relationships at
+revision zero. No initial cards or temporary spaces are automatically created.
 
-`raeon_realize.gen` instantiates 37 distinct native Geometrics and executes 163
-explicit relationships: one State-to-Match containment and 162 application
-relationships. There is one Match and, per player, one Player organization, one
-Board, five separate attachment roles, Deck/Hand/Graveyard, Prime and Configuration
-regions, three fixed empty Prime positions and permanent universal spaces A/B/C.
-All contents are empty. No cards or expansion spaces are created.
+The Genesis handlers declare admitted inventory creation, deterministic shuffle,
+draw, FG commitment, structural Prime binding, retirement, six source-linked
+recovery profiles, bounded inspection/reordering/batch transfer, and dynamic
+Configuration Space creation. `manifest.json` lists their exact argument shapes.
+`catalog.json` indexes the unchanged 120 FG, 14 Prime and 51 Utility sources with
+hashes and source pointers. Unassigned printed IDs remain OPEN; provisional
+source labels are retained. `collections.json` declares container policies.
 
-The immutable manifest hashes both Genesis programs and `definitions.json`.
-Definitions supply bounded representations and semantic/projection metadata;
-they never construct objects or relationships. The real Genesis program creates
-the native graph. The representation uses the existing finite Generic3p1p1
-engineering encoder; it is not a QMO definition, a Cycle-1 generator, or a proof
-of the upstream OPEN dimensional mathematics.
+`native_instantiate.gen`, `native_relate.gen` and `native_transport.gen` are
+bounded verified units composed inside one atomic candidate publication.
+Actual native cards travel by the existing Portal/Rainbow Road engine. Logical
+copy IDs persist while native versions and membership history advance.
 
-The trusted owner admits the package, routes admission through sea → Shell →
-Nexus → State, executes its compiled realization, validates the resulting graph
-and publishes a single State successor. Rejection leaves the previous root and
-bindings intact. Identical package admission is idempotent. Runtime identities
-and semantic roles survive checkpoint/restart; screen coordinates are absent.
+All mutating operations require a trusted grant tied to actor, owner, match,
+operation, exact arguments, effect source and revision. Only the conformance
+harness receives a grant-issuer capability. Normal startup and the Platform
+Port expose no issuer or free gameplay action. Public receipts omit seeds and
+native diagnostics. Live views hide future Deck order even from its owner.
 
-`raeon_observe.gen` checks the realized Match through the pinned VM. Public views
-expose structural objects and relationships. The owner view additionally exposes
-that player's empty container memberships/order and private visibility relations.
-Opponent container internals and native backend resources never enter those
-projections. View authority comes from the trusted session binding; `player_1`
-and `player_2` are semantic roles, not screen positions or external account IDs.
-These are projections of one State. Observation does not advance game revision.
+Use the canonical runner with Python 3.12:
 
-Run `python -B tools/genesis_runtime.py demo --headless --application raeon` from
-the repository root. This boots, realizes, binds both real Hypervisor sessions,
-decodes HELLO/SNAPSHOT, checkpoints, restarts/restores, reconnects and compares
-both views and their persistent identities across a new boundary epoch.
+- `python tools/genesis_runtime.py verify`
+- `python tools/genesis_runtime.py demo --headless --application raeon`
+- `python tools/genesis_runtime.py demo --headless --application raeon --scenario cards`
+- `python tools/genesis_runtime.py test`
+- `python tools/genesis_runtime.py repository-test`
+- `python tools/genesis_runtime.py audit`
 
-The only exported operation is OBSERVE. Cards, movement, draw/shuffle, QMO/field
-resolution, Prime arithmetic, color, turns, combat, victory, presentation and
-platform ports remain outside Pass 1. Whole-game phase remains PREPRODUCTION.
-See the [receipt](../../../../development/modules/core-game/PASS_01_RECEIPT.md).
+See the current execution record and receipt under `development/modules/core-game/`.
+The exact Pass-1 application remains in the historical integration fixture.
+Complete Utility play, field/QMO resolution, Prime combat and native Port apps
+remain outside Pass 2. Whole-game phase remains PREPRODUCTION.

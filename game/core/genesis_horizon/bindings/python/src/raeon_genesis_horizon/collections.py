@@ -63,7 +63,7 @@ class Collections:
             if not path.is_relative_to(self.h.root) or file_hash(path) != expected:
                 deny()
         for handle, record in self.catalog['records'].items():
-            if record['handle'] != handle:
+            if record['handle'] != handle or record['source'] not in self.catalog['sources']:
                 deny()
             value = read_json(self.h.root / record['source'])
             for part in record['pointer'].split('/')[1:]:
