@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "profile_id": "horizon-reference-v1",
+  "scope": "Finite native reference execution; domain embeddings remain OPEN",
+  "fabric": {
+    "recipe": "upstream deterministic_cells",
+    "seed": 430043,
+    "cells": 32768,
+    "sha256": "71e53777fb00ee9d381159c7aaa105bff52cdc911e014d020b37eaa8a1e78c62"
+  },
+  "domains": {
+    "sea": [
+      9,
+      10,
+      11
+    ],
+    "shell": [
+      7,
+      8
+    ],
+    "nexus": [
+      6
+    ],
+    "state": [
+      5
+    ]
+  },
+  "containment": [
+    [
+      "sea",
+      "shell"
+    ],
+    [
+      "shell",
+      "nexus"
+    ],
+    [
+      "nexus",
+      "state"
+    ]
+  ],
+  "definitions": {
+    "sea": {
+      "mmo_id": "HORIZON:REFERENCE:sea",
+      "representation_id": "HORIZON:REFERENCE:sea:3p1p1",
+      "data": {
+        "grid_shape": [
+          1,
+          1,
+          1
+        ],
+        "arrays": {
+          "chirality_field_3p1p1": [
+            0.2,
+            0,
+            0,
+            0.7
+          ],
+          "chirality_scalar": [
+            0.5
+          ],
+          "persistence": [
+            0.8
+          ],
+          "resolution": [
+            0.9
+          ],
+          "admissibility": [
+            1.0
+          ]
+        }
+      },
+      "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+      "authority": "Engineering execution fixture over supplied Generic3p1p1Profile; no new domain mathematics"
+    },
+    "shell": {
+      "mmo_id": "HORIZON:REFERENCE:shell",
+      "representation_id": "HORIZON:REFERENCE:shell:3p1p1",
+      "data": {
+        "grid_shape": [
+          1,
+          1,
+          1
+        ],
+        "arrays": {
+          "chirality_field_3p1p1": [
+            0.2,
+            0,
+            0,
+            0.7
+          ],
+          "chirality_scalar": [
+            -0.5
+          ],
+          "persistence": [
+            0.8
+          ],
+          "resolution": [
+            0.9
+          ],
+          "admissibility": [
+            1.0
+          ]
+        }
+      },
+      "data_sha256": "d99eb9487d571535d3744c4bf699ee7f67a219ea7d38e62989bf1c4be1185f28",
+      "authority": "Engineering execution fixture over supplied Generic3p1p1Profile; no new domain mathematics"
+    },
+    "nexus": {
+      "mmo_id": "HORIZON:REFERENCE:nexus",
+      "representation_id": "HORIZON:REFERENCE:nexus:3p1p1",
+      "data": {
+        "grid_shape": [
+          1,
+          1,
+          1
+        ],
+        "arrays": {
+          "chirality_field_3p1p1": [
+            0.2,
+            0,
+            0,
+            0.7
+          ],
+          "chirality_scalar": [
+            0.5
+          ],
+          "persistence": [
+            0.8
+          ],
+          "resolution": [
+            0.9
+          ],
+          "admissibility": [
+            1.0
+          ]
+        }
+      },
+      "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+      "authority": "Engineering execution fixture over supplied Generic3p1p1Profile; no new domain mathematics"
+    },
+    "state": {
+      "mmo_id": "HORIZON:REFERENCE:state",
+      "representation_id": "HORIZON:REFERENCE:state:3p1p1",
+      "data": {
+        "grid_shape": [
+          1,
+          1,
+          1
+        ],
+        "arrays": {
+          "chirality_field_3p1p1": [
+            0.2,
+            0,
+            0,
+            0.7
+          ],
+          "chirality_scalar": [
+            -0.5
+          ],
+          "persistence": [
+            0.8
+          ],
+          "resolution": [
+            0.9
+          ],
+          "admissibility": [
+            1.0
+          ]
+        }
+      },
+      "data_sha256": "d99eb9487d571535d3744c4bf699ee7f67a219ea7d38e62989bf1c4be1185f28",
+      "authority": "Engineering execution fixture over supplied Generic3p1p1Profile; no new domain mathematics"
+    },
+    "A": {
+      "mmo_id": "HORIZON:REFERENCE:A",
+      "representation_id": "HORIZON:REFERENCE:A:3p1p1",
+      "data": {
+        "grid_shape": [
+          1,
+          1,
+          1
+        ],
+        "arrays": {
+          "chirality_field_3p1p1": [
+            0.2,
+            0,
+            0,
+            0.7
+          ],
+          "chirality_scalar": [
+            0.5
+          ],
+          "persistence": [
+            0.8
+          ],
+          "resolution": [
+            0.9
+          ],
+          "admissibility": [
+            1.0
+          ]
+        }
+      },
+      "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+      "authority": "Engineering execution fixture over supplied Generic3p1p1Profile; no new domain mathematics"
+    },
+    "B": {
+      "mmo_id": "HORIZON:REFERENCE:B",
+      "representation_id": "HORIZON:REFERENCE:B:3p1p1",
+      "data": {
+        "grid_shape": [
+          1,
+          1,
+          1
+        ],
+        "arrays": {
+          "chirality_field_3p1p1": [
+            0.2,
+            0,
+            0,
+            0.7
+          ],
+          "chirality_scalar": [
+            -0.5
+          ],
+          "persistence": [
+            0.8
+          ],
+          "resolution": [
+            0.9
+          ],
+          "admissibility": [
+            1.0
+          ]
+        }
+      },
+      "data_sha256": "d99eb9487d571535d3744c4bf699ee7f67a219ea7d38e62989bf1c4be1185f28",
+      "authority": "Engineering execution fixture over supplied Generic3p1p1Profile; no new domain mathematics"
+    },
+    "request": {
+      "mmo_id": "HORIZON:REFERENCE:request",
+      "representation_id": "HORIZON:REFERENCE:request:3p1p1",
+      "data": {
+        "grid_shape": [
+          1,
+          1,
+          1
+        ],
+        "arrays": {
+          "chirality_field_3p1p1": [
+            0.2,
+            0,
+            0,
+            0.7
+          ],
+          "chirality_scalar": [
+            0.5
+          ],
+          "persistence": [
+            0.8
+          ],
+          "resolution": [
+            0.9
+          ],
+          "admissibility": [
+            1.0
+          ]
+        }
+      },
+      "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+      "authority": "Engineering execution fixture over supplied Generic3p1p1Profile; no new domain mathematics"
+    }
+  },
+  "limits": {
+    "max_payload_bytes": 1048576,
+    "inbound_per_session": 256,
+    "outbound_bytes_per_session": 8388608,
+    "outcome_records": 4096,
+    "instructions": 100000,
+    "delta_history": 128,
+    "diagnostics": 128,
+    "sessions": 64,
+    "native_resources": 100000,
+    "native_road_receipts": 32768,
+    "native_storage_bytes": 268435456
+  }
+}

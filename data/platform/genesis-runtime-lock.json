@@ -1,0 +1,637 @@
+{
+  "schema_version": 1,
+  "status": "NATIVE_REFERENCE_IMPLEMENTED_ACCEPTANCE_IN_PROGRESS",
+  "upstream_repository": "https://github.com/xApologies/_bricked.git",
+  "upstream_commit": "c89676fc26000ae6f5fdad66a56e118b285d9b1d",
+  "default_dependency_root": "build/dependencies/bricked-runtime",
+  "selected_source_paths_and_hashes": {
+    "language/README.md": {
+      "sha256": "e649654c52d336f81f66d531ce1b86172a67189115cb0e662c41ac27211d62dd",
+      "bytes": 5075,
+      "git_blob": "753147bed98e6234b171edf7e2688d9feccaa056"
+    },
+    "genesis/registries/DOMAIN_REGISTRY.json": {
+      "sha256": "9c4b21c32152985907e19e497613682830f34c711d11714999eb7026bb42d4bb",
+      "bytes": 1462,
+      "git_blob": "5aa5abbecd41ebaca6f20fa80398877305b5ddad"
+    },
+    "language/13 Callable Abstractions, Functions & Generics/00_START_HERE/README.md": {
+      "sha256": "721df3039a1e17d3c4e44831fb4884cdbf03a0f31fe53527a3a40b4dc199da4d",
+      "bytes": 2495,
+      "git_blob": "16e09087606b9d19adfa1663b2e39d1813b698a0"
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/__main__.py": {
+      "sha256": "0064ebf1345fac89bc61cdd9f4059927234a8a997717968656f8d5e48c41ae63",
+      "bytes": 1622
+    },
+    "language/17 System I-O & BLACKGLASS-BRANE Interface/12_REFERENCE_IMPLEMENTATION/genesis_system_io/parser.py": {
+      "sha256": "98a2ff4c6908a35c725e1635dabc7141620027e52a832e6fd41960b52eab6fe4",
+      "bytes": 4313,
+      "git_blob": "fa744b51a945eb347cb11e2cb1d93740875b878a"
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/parser.py": {
+      "sha256": "d116062723dde2854218c07dd7fc4424487594b13ef18049d612d912061be4ef",
+      "bytes": 7550
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/compiler.py": {
+      "sha256": "a92ecf17e1202e64267f0ddb2734d1a6749d3179bae0e5d067c44d96cac2533e",
+      "bytes": 1827
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/lower.py": {
+      "sha256": "2db6b66afea39c8993761ca75005dc39b69d3b1a29da1df262ae98b5d2a2eb1b",
+      "bytes": 2910
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/checker.py": {
+      "sha256": "e52fd356d2b2cccad8858547cf4511d361d4f9196cf2e63012c1e53b5889b613",
+      "bytes": 10583
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/linker.py": {
+      "sha256": "da96e14c7919e7ee72de25cb498bc16a53afcea2125523db91493812fe325d0f",
+      "bytes": 6505
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/runtime.py": {
+      "sha256": "7818b1cb7a56f99c4418c2e6f1abeb7930840250174f3fcfd0bb391a1dec8a37",
+      "bytes": 6723
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/backend.py": {
+      "sha256": "e55b03908137bd18f5734d167cff332f7aafde315f89a0297b61cb77db62118d",
+      "bytes": 6716
+    },
+    "language/1 Packages/09_EMULATOR/genesis_chirality_machine/image.py": {
+      "sha256": "0589b0737a8144e57489697a00697cd10f0ec9128aab4746a45b8a1dee608c3e",
+      "bytes": 2895,
+      "git_blob": "f08de7b8d0bda35286b4806b2df5fe9fdcf2329e"
+    },
+    "language/1 Packages/09_EMULATOR/genesis_chirality_machine/cell.py": {
+      "sha256": "dddccbd215dd2c955d223532347da110c9a0a8a72bc89bb12bef5196f532d07b",
+      "bytes": 2338,
+      "git_blob": "1950f7ad90f33b2a039f32d52e4c317ccbb866c0"
+    },
+    "language/3 Transformation Engine & Geometry Forking/11_REFERENCE_IMPLEMENTATION/genesis_transform_engine/operators.py": {
+      "sha256": "594307b9808d47850fca0e9933451867fdf13f79282b8d3a7fcd2fcfc2ca8553",
+      "bytes": 3764,
+      "git_blob": "f9c1a4598ebf1ebfabf84d2336ae3d65f5127afe"
+    },
+    "language/20 GENESIS/01_RELEASE_FREEZE/GENESIS_V1_0_RELEASE_DESCRIPTOR.json": {
+      "sha256": "c37aa6addb89b646a8dc20033862508843612db0ab64ffc3a5c47588d0b4cf20",
+      "bytes": 1035,
+      "git_blob": "bbb43b49a724415ff26d27a9c4e38886d0583d6a"
+    },
+    "genesis/registries/CROSSCUTTING_REGISTRY.json": {
+      "sha256": "3c87b22512df0453587f8c01ccc5df42bc574c7fac251a0c5f911279649dfe80",
+      "bytes": 866
+    },
+    "genesis/domains/sea/MANIFEST.json": {
+      "sha256": "37e03b9c9d27e81110947e72fc776d4ba08b95358b4280499f9ff877e1d51cb5",
+      "bytes": 1230
+    },
+    "genesis/domains/shell/MANIFEST.json": {
+      "sha256": "e3a50b919ec2c62a2f41c9a452c8f1279dbf9ab2a1cd5e869b83b63b3c24bd91",
+      "bytes": 1273
+    },
+    "genesis/domains/nexus/MANIFEST.json": {
+      "sha256": "2013a0c8a6ecf314aad3b6f0009eb1acd4f40c21850eed711778d0e3015f8c56",
+      "bytes": 1263
+    },
+    "genesis/domains/state/MANIFEST.json": {
+      "sha256": "3c48a39abd2704c768b6a5dae1ad5c59e0b16788dcd3b6dd21cd51bcbeedb16e",
+      "bytes": 1288
+    },
+    "genesis/systems/rainbow_road/README.md": {
+      "sha256": "86128869f26f0480811bb0408ff1baa2685016c7662cb0b5330fa44e7262188f",
+      "bytes": 332
+    },
+    "language/2 Instantiation & Memory/00_START_HERE/README.md": {
+      "sha256": "ba23cff734111c065fa9ca4d536b9e5d1cd35ada0a3226319324e129f16c53e7",
+      "bytes": 2159
+    },
+    "language/4 Portal Engine/00_START_HERE/README.md": {
+      "sha256": "c2bf7f223994880acc7f76616dbc3e08153a2d103bf7f7221e54c68a92c59210",
+      "bytes": 1495
+    },
+    "language/5 Rainbow Road/00_START_HERE/README.md": {
+      "sha256": "96ebcf77a8961057173be86ec72c5379a5478768949e30802bca0f0e42e6059d",
+      "bytes": 1850
+    },
+    "language/12 Genesis Library/00_START_HERE/README.md": {
+      "sha256": "de4cc6068dcb99d6f0272765dfb088b427e8085df3ecbb573e40a6a921fd9bcf",
+      "bytes": 1348
+    },
+    "language/14 Control Flow & Data Algebra/00_START_HERE/README.md": {
+      "sha256": "71320b88514feb41593f5a47580598360b3b748795810fe8f30f8b4b081a44db",
+      "bytes": 718
+    },
+    "language/15 Recursion & Recursive Topology Execution/00_START_HERE/README.md": {
+      "sha256": "986e6232d563a4ab64a8671c31bb1cf80b640e4b2a34212b60f7bcffbfa31b3c",
+      "bytes": 1262
+    },
+    "language/16 Concurrency & Scheduling & Resource Coordination/00_START_HERE/README.md": {
+      "sha256": "fc534f0fbcf2c16acd384f9786eccde726e7d0697cf78e497b5edcfdab37487e",
+      "bytes": 930
+    },
+    "language/18 Compiler Toolchain & Diagnostics & Debugging/00_START_HERE/README.md": {
+      "sha256": "c0f2a3ee3fc5014e2e26ac7bef5d7f6ce5c2332b23df8250fae136e293e51cc5",
+      "bytes": 767
+    },
+    "language/19 Genesis Bootstrap & Self-Hosting Path/00_START_HERE/README.md": {
+      "sha256": "9c790877265001e67cc8c4d79e2c05d89050aa34306c4370d40ba6e39131d199",
+      "bytes": 819
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/__init__.py": {
+      "sha256": "fae7e6b263917e9114b7228e925bf994e560f8278ce59ee74396135e34e3c848",
+      "bytes": 220
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/formatter.py": {
+      "sha256": "ec605c87e72101962a08202a47a64a61415ea1a7e2e9f7605618350cf1b2eabc",
+      "bytes": 343
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/model.py": {
+      "sha256": "192bf19ed4fc9c9257f04a688e731a3701c6fed4babc6e2852805d0b0bdb39f4",
+      "bytes": 1658
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/util.py": {
+      "sha256": "834a89effc43c038d510e83f648810b4c9cbb6bc26722124d4e1191f994a51d3",
+      "bytes": 1287
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/__init__.py": {
+      "sha256": "c0dc76a97c928296ac4db7ebeb514088368730cfc0756c89c66196beff9b6685",
+      "bytes": 301
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/__main__.py": {
+      "sha256": "a647f017ed1d7e92031290ad2da66069643be169c2946db6442ca8399749e8e2",
+      "bytes": 850
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/capabilities.py": {
+      "sha256": "507465cdeb13da35f6f11ef5a537668dd41158555acc9780d129b2f2e13c3b17",
+      "bytes": 2556
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/effects.py": {
+      "sha256": "62c3f6196db7440c791cb986742c4295482f46dd09d3931c5d809bfd146850b7",
+      "bytes": 1099
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/errors.py": {
+      "sha256": "94cc2751be9b7144006eaec4507d9eb5c1ce5db7f3940f1dfcc98e40195f5e1b",
+      "bytes": 187
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/model.py": {
+      "sha256": "64698c099b3366db29647545616a013ecdb7fb48a8715c8c2cab4f2152d984e9",
+      "bytes": 1191
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/proofs.py": {
+      "sha256": "db9abd007c16c4174e4986e528167cdf44635b66a46034c8f989fd0f2f798b0f",
+      "bytes": 1678
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/typesys.py": {
+      "sha256": "d05fd7bdfaf24048c68228e5d99b6364ff536abd0338c10cd3c1e389400b0f19",
+      "bytes": 1532
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/util.py": {
+      "sha256": "3a7ddd90bf939e8026a62d9643a97191f90326473de40c5c11dd110de7b3cbf1",
+      "bytes": 283
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/__init__.py": {
+      "sha256": "33fba7a3fae7ae58be7fc63a7c9282885e362ac5a30c3243a00bfb4c133d8fa9",
+      "bytes": 247
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/__main__.py": {
+      "sha256": "ed9f8cc3851d18ffdd08cb3ec5764c479226040a07221c8428498750f4563a25",
+      "bytes": 1015
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/assembler.py": {
+      "sha256": "734fa2db039453a44f27ac762b2c5766f7280c2052a4015180e7ceda256dcfcd",
+      "bytes": 442
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/bytecode.py": {
+      "sha256": "a401dfd6d15e41a8347018c3da28a2da1205c14a38c164bf0a1de60fbc90ec22",
+      "bytes": 2308
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/compiler.py": {
+      "sha256": "19a36545de85e5debc5181730c143ec6a20909404c5dfb77b1690de73da2d527",
+      "bytes": 1876
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/disasm.py": {
+      "sha256": "a307bb72b9ee8df9e44723b23202f199978ee512fef027d8bfddf615be20d68d",
+      "bytes": 454
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/errors.py": {
+      "sha256": "450a87adca6dd4b910b8ab02853bcc4531dc489c7a6e4c3e8a2f7be74f2768fc",
+      "bytes": 328
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/graph.py": {
+      "sha256": "a0335810eb72d2112b0061d2728e76d1bd186c3f08c184bcc9adc811ac9be16e",
+      "bytes": 1622
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/isa.py": {
+      "sha256": "0e646975428d09282eed3a4815fb41dc1068b9ae3c9510b7244bed3e968a3302",
+      "bytes": 2673
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/model.py": {
+      "sha256": "90f8c4a8484e37f21eb40b5244fb9c5040da08cc4ac2ddb64dc61960c9e9075c",
+      "bytes": 2344
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/util.py": {
+      "sha256": "3a5076a106c7259cedd1f80085a7670ffe2874c786fc6a4bbfc06686620aa39d",
+      "bytes": 306
+    },
+    "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION/genesis_frontend/vendor/genesis_semantics/vendor/genesis_vm/verifier.py": {
+      "sha256": "3804c6d3598458f5e98e22cb5c463a04acdd83ad5eee6a2f63394fcdc6cce977",
+      "bytes": 3562
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/genesis_rainbow_road/__init__.py": {
+      "sha256": "9bd9b4ea4e48b20ffd325d1e6a3144748f3572812dfdd074c558f59177fa0adb",
+      "bytes": 235
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/genesis_rainbow_road/audit.py": {
+      "sha256": "38e692d781778f4377dd3a1af2b12c2e560141ebaef99c9073a4890f13c59689",
+      "bytes": 1420
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/genesis_rainbow_road/bus.py": {
+      "sha256": "ad6063a15f6ea8ff1bed48229fc46385d96742df82fbe1849f0304a96fba987d",
+      "bytes": 3229
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/genesis_rainbow_road/compose.py": {
+      "sha256": "cbb63e1579161793a820118cb5109a4114f453a18fbd2b1eebe1208a2441eea0",
+      "bytes": 662
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/genesis_rainbow_road/engine.py": {
+      "sha256": "32c295b8653b0440584ed79b25a19a88a4e212e194ae9c7278e19ef3522b5d61",
+      "bytes": 9881
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/genesis_rainbow_road/errors.py": {
+      "sha256": "b83833511277b2c5cc0932f96fb22fbe82aed21dea02f618a0707ddb2632bfd7",
+      "bytes": 470
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/genesis_rainbow_road/ledger.py": {
+      "sha256": "63a4e5894f42f5e5c2d879c0fa5c54da53f5a2744eaf722aba4ae34ebb80ef47",
+      "bytes": 550
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/genesis_rainbow_road/model.py": {
+      "sha256": "57143559f2bc9efdc25b8cc51f09366ebbe447a4bf9ff4a079fac2ee86d20efe",
+      "bytes": 1916
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/genesis_rainbow_road/registry.py": {
+      "sha256": "3300aca4177e3da8bdb10ded5258a9c89f2678921a2520745cd49791393c6cc4",
+      "bytes": 1140
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/genesis_rainbow_road/util.py": {
+      "sha256": "3ce02d10ddc5d1792823d225062d178f3dea3cca2a653fe5b254e721f3ed620a",
+      "bytes": 229
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/genesis_portal_engine/__init__.py": {
+      "sha256": "a18bf73d82b40943019bca8d775bd2ff409c3f7fe097083c6c282b3ba5cb930f",
+      "bytes": 174
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/genesis_portal_engine/brane.py": {
+      "sha256": "8764ffe1fe32d3d27543eec6b43e959c00aec52609688b43841eb80569dbe967",
+      "bytes": 1099
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/genesis_portal_engine/capacity.py": {
+      "sha256": "c77da21d2a0e1ecf336fb53f1a8a45029f621ce50e919723d9e7d533e3e31766",
+      "bytes": 1837
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/genesis_portal_engine/corridor.py": {
+      "sha256": "c97f75cb885df0b357f62ee9b52b35e2e3cb4f865543c334225daf75e3d18aef",
+      "bytes": 2635
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/genesis_portal_engine/engine.py": {
+      "sha256": "d6a79bc2192f82f1dd43e7f12009a5600320e64d2aa425ea6627486ca0272f9a",
+      "bytes": 8841
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/genesis_portal_engine/errors.py": {
+      "sha256": "747a647740916c14135040263c43e47221e759aeb4384a13efc3e375bc2106ff",
+      "bytes": 646
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/genesis_portal_engine/ledger.py": {
+      "sha256": "bcb86a6d1b1b0026f9023967c6dbe379206c28341977a2388f91ecb190c040e4",
+      "bytes": 557
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/genesis_portal_engine/model.py": {
+      "sha256": "6cb92f8fed2989c8fd1f6544b67b1ea4b14c4532b4f4b625684c6a32a720322e",
+      "bytes": 2691
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/genesis_portal_engine/residue.py": {
+      "sha256": "aaee262a8a35a1a7dc3cf5361ca7ac9772557bcc9131c78f207342a80a0e87e2",
+      "bytes": 1466
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/genesis_portal_engine/util.py": {
+      "sha256": "73e7d1697aad99fb6f51478ce2b2db9c8deef99583d43f31ced0de7c4ea9ae9c",
+      "bytes": 413
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/genesis_transform_engine/__init__.py": {
+      "sha256": "d1641065610693d30950ad557affb9c1b5010f4495de4660271ddf49b77146dc",
+      "bytes": 283
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/genesis_transform_engine/brane.py": {
+      "sha256": "514770ce4574a360e29335b2c516c86cbe1ebefdda6e131d0f4ed64f6ad132ce",
+      "bytes": 916
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/genesis_transform_engine/delta.py": {
+      "sha256": "7c2ffc13388225bfaa6532aa7bd6986239a0531dd7ee00185b037c62d2b0945c",
+      "bytes": 3338
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/genesis_transform_engine/effects.py": {
+      "sha256": "935bcf59eeb3b437ea19a18a53a6f301d087b635487446544a64798806372a65",
+      "bytes": 1271
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/genesis_transform_engine/engine.py": {
+      "sha256": "3b6cccf2d5cdfd0fe5b9a8d88cb69142b50978c37b36246e1d62725824d967ea",
+      "bytes": 7716
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/genesis_transform_engine/errors.py": {
+      "sha256": "6b6a9689842a09211c5679d5fc56420e1cb9133041a5fdfc18207de3fae7aca9",
+      "bytes": 346
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/genesis_transform_engine/invariants.py": {
+      "sha256": "59ad0b1e60357939bc51cd45bbdd25df4c1a48bad98b196dbfa7b037ec513947",
+      "bytes": 1174
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/genesis_transform_engine/ledger.py": {
+      "sha256": "97bddafcbdc59720bc1c9b5a60164244200805f212c75985986e82b0ff1558a8",
+      "bytes": 844
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/genesis_transform_engine/model.py": {
+      "sha256": "fcc416f9db80167587fb37a13a68802f96d0f486c1dab7d7aaa788ed84366710",
+      "bytes": 1453
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/genesis_transform_engine/operators.py": {
+      "sha256": "594307b9808d47850fca0e9933451867fdf13f79282b8d3a7fcd2fcfc2ca8553",
+      "bytes": 3764
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/genesis_transform_engine/selectors.py": {
+      "sha256": "ae92d5055ad02fc320b8bc2f46f9a12577bd63fa45430cd9abb275dcf299470f",
+      "bytes": 1898
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/genesis_transform_engine/util.py": {
+      "sha256": "8eceba5f366c50ae645c688f1938d3768994fc2485d036c4ee2b02e6ec733b4b",
+      "bytes": 468
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/genesis_transform_engine/view.py": {
+      "sha256": "56c986c64d3bc519ab15125968043f28e94a77343fd4ba49b00fcd175c2632b4",
+      "bytes": 1108
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/__init__.py": {
+      "sha256": "e8ebae30fd927cd21f7845a4efbb2d1b07656efea60068556ec17837941a01a5",
+      "bytes": 267
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/address.py": {
+      "sha256": "063a72b001333a90f92d89e3a4af93bb22b199e89f3475e9823970e6717e3150",
+      "bytes": 946
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/backend.py": {
+      "sha256": "dc8674342331412381b98fa05a65b6e599b236a0c578e484a69c076e999ab328",
+      "bytes": 1006
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/boot.py": {
+      "sha256": "54ec64391bbd70cce402d940de4802831e944e911e982ece067d2ae5283ba740",
+      "bytes": 238
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/cell.py": {
+      "sha256": "dddccbd215dd2c955d223532347da110c9a0a8a72bc89bb12bef5196f532d07b",
+      "bytes": 2338
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/cli.py": {
+      "sha256": "e2f6c3211b846cf28f84fefef73e9c48aa14e9d97be9d31805bac46eb9c0561e",
+      "bytes": 762
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/codec.py": {
+      "sha256": "480da30de172841e6e49d7d1bb750453855a33d8950948c52175ef18184b34a8",
+      "bytes": 891
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/constants.py": {
+      "sha256": "ee752e4e2ec52a4da9363c6e9901490afe86d06204ca78020b6749ec4a486125",
+      "bytes": 175
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/errors.py": {
+      "sha256": "8dfa29af4e3f09a82bf0dce970a864b13aa3ed3223c315ae8c0ab414199fed75",
+      "bytes": 264
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/fixture.py": {
+      "sha256": "da1696f318eddafbc4ab40a1a58c09378692bc3c753780f84cefa52907ec7f0b",
+      "bytes": 609
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/image.py": {
+      "sha256": "0589b0737a8144e57489697a00697cd10f0ec9128aab4746a45b8a1dee608c3e",
+      "bytes": 2895
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/isa.py": {
+      "sha256": "e9cd3eef27f6a561c9a3ea7d893e3474e714f31e6a8862750938bbd66f5c5902",
+      "bytes": 340
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/machine.py": {
+      "sha256": "83220e2c84e184d55cb6d8500e088a94ba680ba5472722deaacad4752fa1d665",
+      "bytes": 1535
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_chirality_machine/overlay.py": {
+      "sha256": "4ef09b8a8cf264c41644d9f0c086327d48a07cd336de4c6578106040d5196c81",
+      "bytes": 1279
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_geometric_engine/__init__.py": {
+      "sha256": "c7e115de23c8594d0b7805819c1161b0c47a6eb9b886754a2963a553281356a7",
+      "bytes": 377
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_geometric_engine/allocator.py": {
+      "sha256": "b44450d64942c90723cf202f2c38055ea997109d0d348ee65afa07f454b1f5b1",
+      "bytes": 2403
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_geometric_engine/brane.py": {
+      "sha256": "a21744f1f87ae8c8baaecfae0d44bdad851940a18397051d324c08739ea37992",
+      "bytes": 1062
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_geometric_engine/engine.py": {
+      "sha256": "7d5c22c61c344b5315a3541df0654afc3ebb5980b57c7ba1e8ab82b9bd3b0338",
+      "bytes": 4002
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_geometric_engine/errors.py": {
+      "sha256": "318adf24958932160ae2a0ff3920ab895755787d1c80013682d87d7758c6aad7",
+      "bytes": 274
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_geometric_engine/loaders.py": {
+      "sha256": "0181b9ace331d4ca2762ac1df6b5f33477a9d8ed763fb8322b3f5f21b799ff70",
+      "bytes": 3689
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_geometric_engine/model.py": {
+      "sha256": "57bde3fbcf84e07a44ad6b98421cae345022523de8d2aa73620811e9d1d301a9",
+      "bytes": 1611
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_geometric_engine/profiles.py": {
+      "sha256": "9efd09e1ee12ea5717dcb7e79d64823b1f649261f5b95cfa0bb378ce5e391cea",
+      "bytes": 4004
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_geometric_engine/segment.py": {
+      "sha256": "364b003578c66a9c07cfc9c41eca12a951cda4479c562cba3b5de2947092e869",
+      "bytes": 3474
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_geometric_engine/util.py": {
+      "sha256": "f9245e6d8fc57d7591b57f8378dc7cc3df70b5c5726d3ef9fd1bb31b75011b08",
+      "bytes": 361
+    },
+    "language/5 Rainbow Road/12_REFERENCE_IMPLEMENTATION/vendor_section04/vendor_section03/vendor/genesis_geometric_engine/view.py": {
+      "sha256": "c6252493a504075197608552dcb1509b7b7dfc74508c52e95f46293252d2e4ac",
+      "bytes": 370
+    }
+  },
+  "upstream_release_descriptor_hash": "c37aa6addb89b646a8dc20033862508843612db0ab64ffc3a5c47588d0b4cf20",
+  "python": {
+    "required": "3.12",
+    "observed": "3.12.14",
+    "numpy": "2.3.5",
+    "setuptools_build": "84.0.0"
+  },
+  "dialects": {
+    "0.1.0": {
+      "entry_point": "genesis_frontend",
+      "implementation": "language/10 Genesis Surface Language/12_REFERENCE_IMPLEMENTATION",
+      "pipeline": [
+        "parser",
+        "lower_module",
+        "semantic checker/linker",
+        "GIR",
+        "GVM verifier",
+        "VM"
+      ],
+      "backend": "raeon-native-bindings 1.0.0, coherent Section-5 vendored native engines; no symbolic fallback"
+    },
+    "0.2.0": {
+      "entry_point": "genesis_callable_packages.CallablePackageRuntime",
+      "scope": "upstream positive baseline; static expansion, not used as a dynamic ABI"
+    },
+    "0.6.0": {
+      "entry_point": "genesis_system_io.compile_source / SystemRuntime",
+      "scope": "separate positive baseline; mixed 0.1 primitives rejected, not composed by changing headers"
+    }
+  },
+  "required_runtime_data": {
+    "profile": {
+      "path": "data/platform/genesis-horizon-profile.json",
+      "sha256": "2d39f5f62fc780cf94f0406560238e3c587cef2dceb6a43d19e3e978b4122169"
+    },
+    "fabric": {
+      "recipe": "Section-1 deterministic_cells(seed=430043,count=32768) + FabricImageBuilder",
+      "sha256": "71e53777fb00ee9d381159c7aaa105bff52cdc911e014d020b37eaa8a1e78c62",
+      "cache": "instance storage/fabric.gcf"
+    }
+  },
+  "local_compatibility_patches": [],
+  "upstream_notices_licenses": "No LICENSE/COPYING/NOTICE file in pinned upstream Git tree. Private owner handoff only; no public redistribution license inferred.",
+  "capability_bindings": {
+    "Fabric": "vendor.genesis_chirality_machine.image.FabricImage (verified readonly mmap)",
+    "domain_realization": "vendor.genesis_geometric_engine.engine.InstantiationEngine + supplied bounded reference profile",
+    "relations": "NativeBackend.relate: resolved immutable resource graph and declared containment/relationship scopes",
+    "admission": "NativeBackend.admit: trusted actor/operation bound to source identity",
+    "transforms": "genesis_transform_engine.engine.TransformationEngine with MIRROR_CHIRALITY / INHERIT",
+    "Portal": "genesis_portal_engine.engine.PortalEngine through actual RainbowRoadEngine",
+    "Road": "genesis_rainbow_road.engine.RainbowRoadEngine; each compiled adjacent Portal executes audited native Road leg",
+    "application_realization": "application/realize.gen + manifest/hash/capability check; state.gen successor",
+    "dispatch": "road_in.gen -> declared compiled application -> state.gen -> road_out.gen",
+    "persistence": "Immutable native overlay/History graph + atomic root-and-outcome publication; hash-verified unpublished restore candidate"
+  },
+  "build_artifact_hashes": {
+    "game/core/genesis_horizon/src/boot.gen": {
+      "source_sha256": "dc533af3e0fc6a4dd6c7d07aa1cacfa3c069f31fa5462c961d1ad38dc1f3f431",
+      "bytecode_sha256": "ab651f3e3871b2a30c4e2533e8fbe50f352ebaad5ce48b567cd038db87352fca",
+      "artifact_hashes": {
+        "linked.json": "0b33cde622a1a0c241fb281c8eeab430e88fb315bd05ac7997109e9d622bcdb1",
+        "lowered.json": "7ee82403a906e23704302ba5ae256767f1699fb722f25fd3f0b1757472a0599d",
+        "program.asm": "050df2a54f4181222365bf40950fd99e43f71ccf4c11c8ec262fc7a044018f5a",
+        "program.gvm": "ab651f3e3871b2a30c4e2533e8fbe50f352ebaad5ce48b567cd038db87352fca",
+        "receipt.json": "82f4470466754b58c192a3bb98c1fcaeda8ac85de4d6b09a848de2baaa571318"
+      }
+    },
+    "game/core/genesis_horizon/src/lifecycle.gen": {
+      "source_sha256": "eab1984e21d9e94cbbcac6fdb751f000b258d07ff6bccff9ffb6de922b661d7c",
+      "bytecode_sha256": "586b9b9fc01efc4525ab8a6f58eb8abaa875deabd8440eb87008a6d661f201ab",
+      "artifact_hashes": {
+        "linked.json": "e1c30169428d3c2df81d57b1c51f2982f280c71cde2c78d28e90f6fd86bb64b6",
+        "lowered.json": "3e3212e8ad553bf183390feb80e694fd08c7921200c07a95cc6bbb1dd0174f8a",
+        "program.asm": "8cbba6ef06004f71cc4e5c8fcde41d7e0c206cfd54b7ae85642b19b23a377fd5",
+        "program.gvm": "586b9b9fc01efc4525ab8a6f58eb8abaa875deabd8440eb87008a6d661f201ab",
+        "receipt.json": "288c78354a6953590ab8c04d6d6a26123dbef1cd434174781e42cf6d5b9f77c4"
+      }
+    },
+    "game/core/genesis_horizon/src/road_in.gen": {
+      "source_sha256": "78635ee0b6f8a1623e6295b4332be7d449ebef4f98e05af4306aae24ba6834da",
+      "bytecode_sha256": "1434d3fca68782a3ff228736515a46b17864f822192b88d0c0ba9bafb5e6b9f6",
+      "artifact_hashes": {
+        "linked.json": "a63a9d55cd829633b8a408849155f6b638b7f4afb9b54990b64c0f2ba37e71da",
+        "lowered.json": "cd87b6c17bb536e868ae907b7a0f3de4f8ec492b2865be3951c8476a21f8a66f",
+        "program.asm": "565a407cde8a36339e689d8acf2926139498bc6758b40cde9c2a65b021bafcdb",
+        "program.gvm": "1434d3fca68782a3ff228736515a46b17864f822192b88d0c0ba9bafb5e6b9f6",
+        "receipt.json": "89469a846824d5c408e20eccaca267cc4b822570d51c52643a4574d6076dc775"
+      }
+    },
+    "game/core/genesis_horizon/src/road_out.gen": {
+      "source_sha256": "52af72060c96a7294147782a696b233da06df05aaad2353041640b93ca261ecc",
+      "bytecode_sha256": "94d841934e7dd7b18ca56ca0930bc906b446e8c18e036ad04adceb09c91ea7f4",
+      "artifact_hashes": {
+        "linked.json": "cc3524c2233177356cd150c8ffd6e39a721a3488dcba7688f8a40cb21b4d0b28",
+        "lowered.json": "eb58eb8054870ee4c6c1114b49345856325400e6c6d9b263880b28c7c5b811d6",
+        "program.asm": "9c1d04fbab59cd4c75da3c822fb2924400c2caeed3b77a3e5908471b59846a45",
+        "program.gvm": "94d841934e7dd7b18ca56ca0930bc906b446e8c18e036ad04adceb09c91ea7f4",
+        "receipt.json": "81ac3d607b1566cda57bcfd46bd0b0a44855ae7a8d4630fa8130f906e2a49dd7"
+      }
+    },
+    "game/core/genesis_horizon/src/state.gen": {
+      "source_sha256": "144e202958462a0ccd099801476c05bc276fd0a9fdeb77fa26bcfbb5aedfe844",
+      "bytecode_sha256": "e80e89b139026830c58e8c3ca216aa0493b338caa071c8e41aec678eb3b08c86",
+      "artifact_hashes": {
+        "linked.json": "f909cbf77de511bf0e51c937c868b76c40dafea9c6c44db3c586cd5caa3a0ea0",
+        "lowered.json": "839425e341c0902df465b7e9f8a7a3b7325d562271b4e6d5874dc6d790e2b246",
+        "program.asm": "3c5d00af5553f7f61e86480c0992535a4ce034bbd9ef6db194eee44833e8a147",
+        "program.gvm": "e80e89b139026830c58e8c3ca216aa0493b338caa071c8e41aec678eb3b08c86",
+        "receipt.json": "e4182f3c7931929a71f1aca698e66414aa454c47b5020b6de729727a1ea33727"
+      }
+    },
+    "tests/integration/genesis_horizon/application/observe.gen": {
+      "source_sha256": "3b1e143fe249a0265d3e528b44da6afb19df68a71a7da709faa01303d1e165d5",
+      "bytecode_sha256": "fb39a0aefa00ff62c29882c3a71a1f0b540a749157d5b321ca73a84bb0166ffb",
+      "artifact_hashes": {
+        "linked.json": "4eaf205398489e9e94c63cc2492afc6fa610d1d3a5ac915b049fd3c0297b21e9",
+        "lowered.json": "176567bfc56d97a9812ceb5c856963af11363c71599f488a3ba1b9a9096fbb5e",
+        "program.asm": "81bc0b00f1699493c20cadf6cfcdf1ff2022168bda9e248f90f754aa8c92fecb",
+        "program.gvm": "fb39a0aefa00ff62c29882c3a71a1f0b540a749157d5b321ca73a84bb0166ffb",
+        "receipt.json": "cbcaf66b6f73d1c9b495a684da10b8b7ad74a79c06307ce1615e6b23306584ca"
+      }
+    },
+    "tests/integration/genesis_horizon/application/realize.gen": {
+      "source_sha256": "e51beb13f64233bac570f9de54372cbb33882c554fd32e79c5625f525eefb3df",
+      "bytecode_sha256": "194d731e0a8ba3f4765a6d16e644494df2ea05623a675162eb4f4a2a40ea242d",
+      "artifact_hashes": {
+        "linked.json": "6a8e593154867c1482537d9c4eeae9afe97c4d945b359cb09789938b2d2cf0ed",
+        "lowered.json": "59cf2716bb1185f65c8c03e3d56f539d679f5f456cfa631a28cea32aaabde3f9",
+        "program.asm": "89597edaa2b83ea3e7a370fcc6cf64aa0f3a8a2db728ea11ef515588ba9766aa",
+        "program.gvm": "194d731e0a8ba3f4765a6d16e644494df2ea05623a675162eb4f4a2a40ea242d",
+        "receipt.json": "387b2483a34f49e2cface0461cb26dfeed5f80e24034fc4cedd8d8d7b43cecad"
+      }
+    },
+    "tests/integration/genesis_horizon/application/relate.gen": {
+      "source_sha256": "d0bf5fa5c34ce950450ccbbd773f21c277675f72bb8766e1e7364d48250b6798",
+      "bytecode_sha256": "bf5e32a366eadc9b308bbc8d1f7b640387bef43372a000f9836cbc9f426e5b73",
+      "artifact_hashes": {
+        "linked.json": "5d98d089cc013c2350895aa4082db386a1cafa324b00320f7c2b169869c2bf32",
+        "lowered.json": "274bd2543aa84b0f9540925883870190d69841b95ce15f69ea12a1e07891265c",
+        "program.asm": "e31af314357d17ecb50e0971c1fc391755224fb649f1eba35c86de284d9cf88c",
+        "program.gvm": "bf5e32a366eadc9b308bbc8d1f7b640387bef43372a000f9836cbc9f426e5b73",
+        "receipt.json": "7c3a22e7a3cf74dc5bcfb17fbedc3d2fff35533a67c282a29ca003afc876753f"
+      }
+    },
+    "tests/integration/genesis_horizon/application/transform.gen": {
+      "source_sha256": "474c068858ee91075abf0563694b26a9a50c3dfbe0ad0d1cae9659d69d3f5829",
+      "bytecode_sha256": "3fff5dcb0576dccaaf515d4fab3f507f3ea247bc4d12c8d174511fabd1b7f3b3",
+      "artifact_hashes": {
+        "linked.json": "f29f8ad0c0e9d57e0b0eedf51d08f24118ed8cf618df6b35a0afbb4d497239fd",
+        "lowered.json": "ba1d2a4934b53978f7c75559f5407796b00c00744e9ca26b699c7aca802d506f",
+        "program.asm": "6635dba415b436a3d7246a4a6ad0d32a61bc35a831c51ed4a4642ea3fa3bf0ff",
+        "program.gvm": "3fff5dcb0576dccaaf515d4fab3f507f3ea247bc4d12c8d174511fabd1b7f3b3",
+        "receipt.json": "62a977bbcfd57286a54fa83e6a3f7c1a6fd3aad1ee4069f6c8ddd8bb204969cf"
+      }
+    }
+  }
+}

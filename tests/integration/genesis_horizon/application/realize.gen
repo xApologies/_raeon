@@ -1,0 +1,14 @@
+genesis 0.1.0
+module realize {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 32
+  en state : GEOMETRIC = instantiate fabric region mmo @bound_state
+  en A : GEOMETRIC = instantiate fabric region mmo @A
+  en B : GEOMETRIC = instantiate fabric region mmo @B
+  rel state -> A as state_A @{"relation":"contains"}
+  rel state -> B as state_B @{"relation":"contains"}
+  assert closure A as a_closed
+  assert closure B as b_closed
+  export A : GEOMETRIC
+  export B : GEOMETRIC
+}

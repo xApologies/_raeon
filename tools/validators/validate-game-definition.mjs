@@ -1,3 +1,4 @@
+import {validateRuntimeSources} from './genesis-runtime-contract.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -41,7 +42,8 @@ export function validateGameDefinition(root) {
     same(config.field_runtime.destruction_transaction_order, 'OPEN', 'Destruction ordering OPEN');
     const inventory = json('data/manifests/current-files.json').files;
     check(!inventory.some(p => /RAEON_(?:GIT_UPDATE_PACKAGE|LIVE_DEVELOPMENT_MODEL|LIVE_RULES_MODEL)/.test(p)), 'Transfer archives/trees excluded');
-    check(!inventory.some(p => p.endsWith('.gen')), 'No fabricated executable Genesis source');
+    const runtimeErrors = validateRuntimeSources(root, inventory);
+    check(runtimeErrors.length === 0, 'Only exact compiled Genesis sources authorized by runtime build order: ' + runtimeErrors.join('; '));
   } catch (error) { errors.push('Game-definition validation failed: ' + error.message); }
   return {checks, errors};
 }

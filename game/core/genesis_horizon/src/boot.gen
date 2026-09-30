@@ -1,0 +1,22 @@
+genesis 0.1.0
+module boot {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 4096
+  en sea : GEOMETRIC = instantiate fabric region mmo @sea
+  en shell : GEOMETRIC = instantiate fabric region mmo @shell
+  en nexus : GEOMETRIC = instantiate fabric region mmo @nexus
+  en state : GEOMETRIC = instantiate fabric region mmo @state
+  rel sea -> shell as sea_shell @{"relation":"contains"}
+  rel shell -> nexus as shell_nexus @{"relation":"contains"}
+  rel nexus -> state as nexus_state @{"relation":"contains"}
+  assert closure sea as sea_closed
+  assert closure shell as shell_closed
+  assert closure nexus as nexus_closed
+  assert closure state as state_closed
+  emit receipt as boot_receipt
+  export sea : GEOMETRIC
+  export shell : GEOMETRIC
+  export nexus : GEOMETRIC
+  export state : GEOMETRIC
+  export boot_receipt : RECEIPT<EXECUTION>
+}

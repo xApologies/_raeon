@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "authorization": "RAEON_CODEX_BUILD_ORDER_v2_2026-09-30",
+  "scope": "Replace the prior no-executable-source guard only for these actual compiled source bytes. Historical design/catalog protections remain unchanged. Runtime test evidence is separate from this source-integrity guard.",
+  "starting_commit": "711ad7485c8cd58a87ec03ff59d6daf8b6498487",
+  "upstream_commit": "c89676fc26000ae6f5fdad66a56e118b285d9b1d",
+  "compiled_sources": {
+    "game/core/genesis_horizon/src/boot.gen": {
+      "source_sha256": "dc533af3e0fc6a4dd6c7d07aa1cacfa3c069f31fa5462c961d1ad38dc1f3f431",
+      "bytecode_sha256": "ab651f3e3871b2a30c4e2533e8fbe50f352ebaad5ce48b567cd038db87352fca"
+    },
+    "game/core/genesis_horizon/src/lifecycle.gen": {
+      "source_sha256": "eab1984e21d9e94cbbcac6fdb751f000b258d07ff6bccff9ffb6de922b661d7c",
+      "bytecode_sha256": "586b9b9fc01efc4525ab8a6f58eb8abaa875deabd8440eb87008a6d661f201ab"
+    },
+    "game/core/genesis_horizon/src/road_in.gen": {
+      "source_sha256": "78635ee0b6f8a1623e6295b4332be7d449ebef4f98e05af4306aae24ba6834da",
+      "bytecode_sha256": "1434d3fca68782a3ff228736515a46b17864f822192b88d0c0ba9bafb5e6b9f6"
+    },
+    "game/core/genesis_horizon/src/road_out.gen": {
+      "source_sha256": "52af72060c96a7294147782a696b233da06df05aaad2353041640b93ca261ecc",
+      "bytecode_sha256": "94d841934e7dd7b18ca56ca0930bc906b446e8c18e036ad04adceb09c91ea7f4"
+    },
+    "game/core/genesis_horizon/src/state.gen": {
+      "source_sha256": "144e202958462a0ccd099801476c05bc276fd0a9fdeb77fa26bcfbb5aedfe844",
+      "bytecode_sha256": "e80e89b139026830c58e8c3ca216aa0493b338caa071c8e41aec678eb3b08c86"
+    },
+    "tests/integration/genesis_horizon/application/observe.gen": {
+      "source_sha256": "3b1e143fe249a0265d3e528b44da6afb19df68a71a7da709faa01303d1e165d5",
+      "bytecode_sha256": "fb39a0aefa00ff62c29882c3a71a1f0b540a749157d5b321ca73a84bb0166ffb"
+    },
+    "tests/integration/genesis_horizon/application/realize.gen": {
+      "source_sha256": "e51beb13f64233bac570f9de54372cbb33882c554fd32e79c5625f525eefb3df",
+      "bytecode_sha256": "194d731e0a8ba3f4765a6d16e644494df2ea05623a675162eb4f4a2a40ea242d"
+    },
+    "tests/integration/genesis_horizon/application/relate.gen": {
+      "source_sha256": "d0bf5fa5c34ce950450ccbbd773f21c277675f72bb8766e1e7364d48250b6798",
+      "bytecode_sha256": "bf5e32a366eadc9b308bbc8d1f7b640387bef43372a000f9836cbc9f426e5b73"
+    },
+    "tests/integration/genesis_horizon/application/transform.gen": {
+      "source_sha256": "474c068858ee91075abf0563694b26a9a50c3dfbe0ad0d1cae9659d69d3f5829",
+      "bytecode_sha256": "3fff5dcb0576dccaaf515d4fab3f507f3ea247bc4d12c8d174511fabd1b7f3b3"
+    }
+  }
+}

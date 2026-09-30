@@ -1,0 +1,12 @@
+genesis 0.1.0
+module state_successor {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 32
+  en state : GEOMETRIC = instantiate fabric region mmo @bound_state
+  admit state as permission @{"operation":"INHERIT_STATE"}
+  transform state with permission as successor @{"operator":"INHERIT_STATE"}
+  assert closure successor as closed
+  ar successor as history @{"contract":"candidate-publication-v1"}
+  export successor : GEOMETRIC
+  export history : RECEIPT
+}

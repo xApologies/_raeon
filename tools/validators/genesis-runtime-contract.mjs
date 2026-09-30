@@ -1,0 +1,29 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+
+export const runtimeDecision = 'provenance/decisions/genesis-runtime-build.json';
+// Updated only with a reviewed exact-source amendment, never inferred from file extensions.
+const acceptedDecisionHash = '18bb9f0ccb3ba792c7234dbe8b8ceea5f29f31a8bd7e3733075adf2962b600ca';
+const hash = bytes => createHash('sha256').update(bytes).digest('hex');
+
+export function validateRuntimeSources(root, inventory) {
+  const sources = inventory.filter(p => p.endsWith('.gen')).sort();
+  if (sources.length === 0) return [];
+  const errors = [];
+  try {
+    const bytes = fs.readFileSync(path.join(root, runtimeDecision));
+    if (hash(bytes) !== acceptedDecisionHash) throw new Error('runtime decision hash mismatch');
+    const decision = JSON.parse(bytes);
+    if (JSON.stringify(sources) !== JSON.stringify(Object.keys(decision.compiled_sources).sort()))
+      errors.push('Executable Genesis inventory differs from the exact authorized source set');
+    for (const [source, evidence] of Object.entries(decision.compiled_sources)) {
+      if (!source.startsWith('game/core/genesis_horizon/src/') && !source.startsWith('tests/integration/genesis_horizon/application/'))
+        throw new Error('Executable source outside authorized implementation/test homes');
+      if (hash(fs.readFileSync(path.join(root, source))) !== evidence.source_sha256)
+        errors.push('Executable Genesis source changed without compilation amendment: ' + source);
+      if (!/^[a-f0-9]{64}$/.test(evidence.bytecode_sha256)) errors.push('Missing compiled bytecode identity: ' + source);
+    }
+  } catch (error) { errors.push('Genesis source contract: ' + error.message); }
+  return errors;
+}

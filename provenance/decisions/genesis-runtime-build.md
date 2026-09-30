@@ -1,0 +1,7 @@
+# Genesis Horizon and Hypervisor implementation decision
+
+The user-supplied v2 work order authorizes reusable Horizon, Python translation fence and a headless conformance Port in `_raeon`, with `_bricked` strictly read-only. It overrides the general repository-isolation instruction only for this named dependency. It does not authorize main merge or QMO/gameplay redesign.
+
+Starting task revision: `711ad7485c8cd58a87ec03ff59d6daf8b6498487`. Upstream pin: `c89676fc26000ae6f5fdad66a56e118b285d9b1d`. Build-order ZIP SHA-256: `d20e5a1b97521efeb5d00f3a2db1e249c12ac3a81689f2da250fb759690ff91f`. Governing Markdown SHA-256: `d7b095cdf1269a37c8a8f7717ceac4d0985da7d3f9f9a16dd162258f81ae65ea`. Standalone and archived Markdown match exactly; all seven manifest entries verified.
+
+The [work order](../../development/modules/core-game/GENESIS_RUNTIME_BUILD_ORDER.md), [single execution record](../../development/modules/core-game/GENESIS_RUNTIME_EXECUTION.md), and [dependency lock](../../data/platform/genesis-runtime-lock.json) hold scope and evidence. Preserve actual failure reproductions; do not confuse upstream reference graph metadata with real Fabric/domain bindings or package specifications with passing tests. Required runtime/dialect bindings, patches and distribution notice policy will be recorded here when verified. Whole-game PREPRODUCTION remains unchanged.

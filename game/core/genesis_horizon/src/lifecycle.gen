@@ -1,0 +1,9 @@
+genesis 0.1.0
+module lifecycle {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 32
+  en state : GEOMETRIC = instantiate fabric region mmo @bound_state
+  assert closure state as closed
+  seal state as sealed @{"contract":"quiescent-checkpoint-v1"}
+  export sealed : RECEIPT
+}

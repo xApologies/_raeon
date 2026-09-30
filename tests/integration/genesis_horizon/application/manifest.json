@@ -1,0 +1,48 @@
+{
+  "id": "horizon-conformance",
+  "version": "1.0.0",
+  "test_only": true,
+  "realize": "realize.gen",
+  "files": {
+    "observe.gen": "3b1e143fe249a0265d3e528b44da6afb19df68a71a7da709faa01303d1e165d5",
+    "realize.gen": "e51beb13f64233bac570f9de54372cbb33882c554fd32e79c5625f525eefb3df",
+    "relate.gen": "d0bf5fa5c34ce950450ccbbd773f21c277675f72bb8766e1e7364d48250b6798",
+    "transform.gen": "474c068858ee91075abf0563694b26a9a50c3dfbe0ad0d1cae9659d69d3f5829"
+  },
+  "operations": {
+    "OBSERVE": {
+      "source": "observe.gen",
+      "effects": [],
+      "mutates": false
+    },
+    "RELATE_A_B": {
+      "source": "relate.gen",
+      "effects": [],
+      "relationships": [
+        [
+          "A",
+          "B",
+          "related"
+        ]
+      ],
+      "mutates": true,
+      "revision_policy": "accepted repeated relationship advances once per distinct request"
+    },
+    "TRANSFORM_A": {
+      "source": "transform.gen",
+      "effects": [
+        "MIRROR_CHIRALITY"
+      ],
+      "mutates": true
+    }
+  },
+  "views": {
+    "public": [
+      "A"
+    ],
+    "writer": [
+      "A",
+      "B"
+    ]
+  }
+}

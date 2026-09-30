@@ -1,0 +1,12 @@
+genesis 0.1.0
+module transform {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 32
+  en A : GEOMETRIC = instantiate fabric region mmo @bound_A
+  admit A as permission @{"operation":"MIRROR_CHIRALITY"}
+  transform A with permission as successor @{"operator":"MIRROR_CHIRALITY"}
+  assert closure successor as closed
+  ar successor as history
+  export successor : GEOMETRIC
+  export history : RECEIPT
+}

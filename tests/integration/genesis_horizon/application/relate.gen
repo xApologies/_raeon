@@ -1,0 +1,9 @@
+genesis 0.1.0
+module relate {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 32
+  en A : GEOMETRIC = instantiate fabric region mmo @bound_A
+  en B : GEOMETRIC = instantiate fabric region mmo @bound_B
+  rel A -> B as relationship @{"relation":"related"}
+  export relationship : RELATION
+}

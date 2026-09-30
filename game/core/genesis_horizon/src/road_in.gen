@@ -1,0 +1,24 @@
+genesis 0.1.0
+module road_in {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 32
+  en g0 : GEOMETRIC = instantiate fabric region mmo @request
+  road begin g0 as road0
+  admit g0 as a1 @{"operation":"ROUTE"}
+  portal GENERIC g0 with a1 as p1 corridor "sea->shell"
+  ve g0 through p1 -> "shell" as g1
+  tor p1 with g1 as c1
+  road append road0 c1 as road1
+  admit g1 as a2 @{"operation":"ROUTE"}
+  portal GENERIC g1 with a2 as p2 corridor "shell->nexus"
+  ve g1 through p2 -> "nexus" as g2
+  tor p2 with g2 as c2
+  road append road1 c2 as road2
+  admit g2 as a3 @{"operation":"ROUTE"}
+  portal GENERIC g2 with a3 as p3 corridor "nexus->state"
+  ve g2 through p3 -> "state" as g3
+  tor p3 with g3 as c3
+  road append road2 c3 as road3
+  road close road3 g3 as closed
+  export closed : RECEIPT<ROAD_CLOSE>
+}
