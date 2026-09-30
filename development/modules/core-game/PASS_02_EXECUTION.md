@@ -1,41 +1,36 @@
-# Pass 2 execution record
+# Current runtime execution record — Pass 2
 
-Status: IMPLEMENTING. Whole-game phase: PREPRODUCTION.
+Status: SOFTWARE_SCOPE_COMPLETE. Whole-game phase: PREPRODUCTION.
+Working branch: `codex/raeon-pass-02`.
+Starting Pass-1 commit: `23ebfc3be3a4e6ae4883793bfc99b1dbfae67bf8`.
+Implementation/distribution local and remote commit: `f5c380deccb1297f455a599004b159706b39735c`.
+Closing receipt commit: resolve from current Git HEAD and
+`build/genesis_runtime/evidence/pass-02-acceptance.json` after the final push.
+Main before/after: `69a0030805b8c3858c877a514e2f50644421115a`; no merge authorized or performed.
 
-Branch: `codex/raeon-pass-02`; starting Pass-1 commit: `23ebfc3be3a4e6ae4883793bfc99b1dbfae67bf8`.
-Main remains `69a0030805b8c3858c877a514e2f50644421115a`; no merge authorized.
-Pinned upstream: `c89676fc26000ae6f5fdad66a56e118b285d9b1d`, isolated under `build/dependencies/bricked-runtime`.
-Pouch SHA-256: `16d48c222beff5d8569ae021f7434c25b45a369855540e8c52ad3135416000ba`.
+Pinned read-only upstream: `c89676fc26000ae6f5fdad66a56e118b285d9b1d`.
+All 1,075 dependency hashes verify; `_bricked` stays clean. Runtime tests use
+`build/dependencies/bricked-runtime`. Original pouch SHA-256:
+`16d48c222beff5d8569ae021f7434c25b45a369855540e8c52ad3135416000ba`.
 
-Completed baseline: dependency integrity (1,075 files), both existing demos,
-40 local tests, 575 upstream tests/checks, runtime audit 74/74, Pass-1 audit 38/38.
-Raw baseline evidence is retained under ignored `build/genesis_runtime/pass-02-baseline`.
+Completed unit: actual Genesis Pass-2 card identities, admitted collection
+operations, native Road transport, privacy, durability, bounded dynamic spaces,
+source protection, exact paired archives and independently intercepted offline
+verification. The [receipt](PASS_02_RECEIPT.md) records delivered behavior,
+source/bytecode manifests, commands, artifacts, constraints and policy gates.
 
-Current unit: source-backed catalog and typed, bounded generic application services.
-Next: execute compiled handlers through the native runtime and byte fence; exercise
-negative/rollback cases before acceptance. All 83 Pass-2 cases remain unclaimed until
-mapped to actual test evidence. Policy gates are a separate ledger, not waivers.
+Last substantive command: `python tools/genesis_runtime.py audit` — exit 0,
+runtime 74/74 and Pass 2 83/83. Full tests: 6 unit, 56 integration, 575 upstream;
+repository regressions: 211 plus 17 gameplay-design tests. Offline extraction
+rebuild/demos/tests/restart passed, with 254,406 audited events and zero
+unexpected denials. Missing-dependency failure was exercised intentionally.
 
-Compatibility: retain the exact Pass-1 package in the historical integration fixture;
-evolve the existing production `raeon` package. Do not regenerate mathematical sources,
-change machine cardinality, or expose the conformance grant issuer at a Platform Port.
+Blockers for completed Pass-2 software scope: none. Nine policy-gated topics
+remain in `PASS_02_POLICY_GATES.json`; they do not waive mandatory cases.
+No Cycle-1 mathematics was regenerated; canonical design/data and all module
+gates are unchanged. No complete playable match or native device support claimed.
 
-## Implementation milestone
-
-Actual graph handlers and generic collection/value bindings are implemented.
-Executed: 12 transaction/baseline tests and 10 adversarial integration tests,
-all passing; deterministic compiler verification passes; game-definition guard
-passes 55 checks. Separate-process restore and replay roots were exercised.
-Last command: Pass-2 adversarial unittest discovery (10 passed, exit 0).
-Next action: add the canonical Pass-2 demo/audit selector, enforce independent
-offline network/Git/file interception, run full regressions, package the exact
-committed revision, then complete all 83 evidence mappings. Completion unclaimed.
-
-## Distribution verification unit
-
-Complete local and pinned-upstream tests passed. All seven repository validators,
-regression tests, gameplay-design tests and whitespace validation passed after
-fixing the historical Pass-1 package fixture. Original canonical data is unchanged.
-Current unit: exact archive packaging and independently intercepted offline
-installation/rebuild/demos/tests. Next action: run `verify-distributions`, fix any
-failure, then join all 83 acceptance cases to current evidence and push closure.
+Next action: after an authorized Pass-3 request, recover this branch/accepted
+successor, run `python tools/genesis_runtime.py demo --headless --application raeon --scenario cards`,
+then implement accepted FG pose/relationship/QMO legality on the existing live
+copy/container state. Do not create a parallel application or merge main.
