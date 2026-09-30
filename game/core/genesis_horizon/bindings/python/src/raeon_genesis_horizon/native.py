@@ -56,6 +56,9 @@ class NativeBackend(ReferenceBackend):
         self.allocator = RegionAllocator(self.fabric.cell_count, alignment=8)
         self.instantiator = InstantiationEngine(self.fabric, self.allocator, self.working / 'instances')
         self.transformer = TransformationEngine(self.fabric, self.working / 'transforms')
+        self.application_values = {}
+        self.collections = None
+        self.executing_source = None
         self.application_definitions = {}
         self.realization_relations = []
         self.bindings = {}
@@ -71,7 +74,9 @@ class NativeBackend(ReferenceBackend):
             for a, z in [(left, right), (right, left)]:
                 edges.append(CorridorEdge(a + '-' + z, a, z, ('GENERIC',), ('ANY',), ('ANY',), 1.0, 1.0, 1, 1, 'White', True))
         graph = CorridorGraph(edges)
+        self.local_graph = graph
         capacity = CapacityLedger({edge.edge_id: 1 for edge in edges}, self.working / 'capacity.jsonl')
+        self.local_capacity = capacity
         manager = RoadCapacityManager(capacity, RoadLedger(self.working / 'road-bus.jsonl'))
         portal = PortalEngine(self.fabric, self.allocator, graph, manager, self.working / 'portals')
         self.road_engine = RainbowRoadEngine(portal, manager, self.working / 'roads')
@@ -94,6 +99,21 @@ class NativeBackend(ReferenceBackend):
 
     def instantiate(self, fabric, region, mmo):
         name = mmo.get('handle', '').removeprefix('@')
+        service = self.collections
+        unit = service.unit if service else None
+        if name in {'app_new', 'app_item', 'app_source', 'app_target'}:
+            if not unit or self.phase != 'application' or not self.executing_source:
+                raise BindingError('AUTHORITY_DENIED')
+            required = {'app_new': 'instantiate', 'app_item': 'transport', 'app_source': 'relation', 'app_target': 'relation'}[name]
+            if unit['mode'] != required or self.executing_source != service.directory + '/' + service.manifest['collections']['units'][{'relation': 'relate'}.get(required, required)]:
+                raise BindingError('AUTHORITY_DENIED')
+            if name == 'app_new':
+                name = unit['name']
+                self.application_definitions[name] = copy.deepcopy(unit['definition'])
+            else:
+                key = {'app_item': 'name', 'app_source': 'source', 'app_target': 'target'}[name]
+                return self.resources[self.bindings[unit[key]]]
+
         if name.startswith('bound_'):
             name = name[6:]
             if name not in self.bindings:
@@ -101,7 +121,7 @@ class NativeBackend(ReferenceBackend):
             return self.resources[self.bindings[name]]
         if name not in self.profile['definitions'] and name not in self.application_definitions:
             raise BindingError('UNKNOWN_MMO')
-        if name in self.application_definitions and self.phase != 'realize':
+        if name in self.application_definitions and self.phase != 'realize' and not (unit and unit.get('mode') == 'instantiate' and name == unit['name']):
             raise BindingError('AUTHORITY_DENIED')
         if name in self.profile['domains'] and self.phase != 'boot':
             raise BindingError('AUTHORITY_DENIED')
@@ -119,6 +139,8 @@ class NativeBackend(ReferenceBackend):
         arrays = {key: np.array(value, dtype=np.float32).reshape(shape + ((2, 2) if key == 'chirality_field_3p1p1' else ()))
                   for key, value in data['arrays'].items()}
         sources = {'definition': definition['data_sha256'], 'instance_namespace': digest(self.identity)}
+        if 'provenance_commitment' in definition:
+            sources['application_provenance'] = definition['provenance_commitment']
         if name == 'request':
             if self.active_request is None:
                 raise BindingError('UNBOUND_REQUEST')
@@ -154,6 +176,9 @@ class NativeBackend(ReferenceBackend):
             view.close()
 
     def relate(self, geo, target, attrs):
+        unit = self.collections.unit if self.collections else None
+        if target == 'app_target' and unit and unit['mode'] == 'relation':
+            target = unit['target']
         if target not in self.bindings:
             raise BindingError('UNRESOLVED_RELATION_TARGET')
         other = self.resources[self.bindings[target]]
@@ -163,6 +188,7 @@ class NativeBackend(ReferenceBackend):
         allowed |= self.phase == 'realize' and not self.application_definitions and source_name == 'state' and target in ('A', 'B') and relation == 'contains'
         allowed |= self.phase == 'realize' and [source_name, target, relation] in self.realization_relations
         allowed |= self.phase == 'application' and [source_name, target, relation] in (self.authority or {}).get('relationships', [])
+        allowed |= bool(unit and unit['mode'] == 'relation' and self.phase == 'application' and source_name == unit['source'] and target == unit['target'] and relation == 'contains')
         if not allowed:
             raise BindingError('AUTHORITY_DENIED')
         result = self._put('RELATION', {'source': geo['payload']['identity'], 'target': other['payload']['identity'], 'relation': relation},
@@ -173,6 +199,13 @@ class NativeBackend(ReferenceBackend):
 
     def admit(self, geo, attrs):
         operation = attrs.get('operation')
+        if operation == 'COLLECTION_TRANSACTION' and self.collections:
+            return self.collections.admit(geo, attrs)
+        if operation == 'COLLECTION_ROUTE':
+            unit = self.collections.unit if self.collections else None
+            if not unit or unit['mode'] != 'transport' or geo['payload']['binding'] != unit['name']:
+                raise BindingError('AUTHORITY_DENIED')
+            return self._put('ADMISSION', {'source': geo['resource_id'], 'operation': operation, 'admitted': True}, [geo['resource_id']])
         if not self.authority or operation not in self.authority.get('operations', []):
             raise BindingError('AUTHORITY_DENIED')
         if operation == 'INHERIT_STATE':
@@ -186,6 +219,8 @@ class NativeBackend(ReferenceBackend):
         operator = attrs.get('operator')
         if admission['payload']['source'] != geo['resource_id'] or operator != admission['payload']['operation']:
             raise BindingError('ADMISSION_REJECTED')
+        if operator == 'COLLECTION_TRANSACTION' and self.collections:
+            return self.collections.transform(geo, admission, attrs)
         if operator not in ('MIRROR_CHIRALITY', 'INHERIT_STATE'):
             raise BindingError('UNKNOWN_OPERATION')
         native = geo['payload']['native']
@@ -216,6 +251,18 @@ class NativeBackend(ReferenceBackend):
         self.fabric.close()
 
     def portal_open(self, geo, admission, sector, attrs):
+        unit = self.collections.unit if self.collections else None
+        if unit and unit['mode'] == 'transport':
+            if admission['payload']['operation'] != 'COLLECTION_ROUTE' or admission['payload']['source'] != geo['resource_id'] or sector != 'GENERIC' or attrs.get('corridor') != 'application-local':
+                raise BindingError('INVALID_ROUTE')
+            source, target = unit['source'], unit['target']
+            self.collections.owned(source)
+            self.collections.owned(target)
+            edge_id = source + '-' + target
+            if edge_id not in self.local_graph.edges:
+                self.local_graph.add_edge(CorridorEdge(edge_id, source, target, ('GENERIC',), ('ANY',), ('ANY',), 1.0, 1.0, 1, 1, 'White', True))
+                self.local_capacity.capacity[edge_id] = 1
+            return super().portal_open(geo, admission, sector, dict(attrs, corridor=source + '->' + target))
         if geo['payload']['binding'] != 'request' or admission['payload']['operation'] != 'ROUTE':
             raise BindingError('INVALID_ROUTE')
         if admission['payload']['source'] != geo['resource_id'] or sector != 'GENERIC':
@@ -229,7 +276,9 @@ class NativeBackend(ReferenceBackend):
 
     def portal_transport(self, portal, geo, attrs):
         source, target = portal['payload']['attrs']['corridor'].split('->')
-        if attrs.get('destination') != target or portal['payload']['source'] != geo['resource_id']:
+        unit = self.collections.unit if self.collections else None
+        destination = target if unit and unit['mode'] == 'transport' and attrs.get('destination') == 'application-target' else attrs.get('destination')
+        if destination != target or portal['payload']['source'] != geo['resource_id']:
             raise BindingError('INVALID_ROUTE')
         native = geo['payload']['native']
         request = RainbowRoadRequest(native, native['segment_chain'], PortalAddress(source), [PortalAddress(target)],
@@ -256,4 +305,8 @@ class NativeBackend(ReferenceBackend):
         for left, right in zip(receipts, receipts[1:]):
             if left['final_instance_id'] != right['source_instance_id']:
                 raise BindingError('CLOSURE_FAILED')
-        return super().road_close(road, geo)
+        result = super().road_close(road, geo)
+        unit = self.collections.unit if self.collections else None
+        if unit and unit['mode'] == 'transport':
+            unit.update(closed=True, successor=geo['resource_id'])
+        return result

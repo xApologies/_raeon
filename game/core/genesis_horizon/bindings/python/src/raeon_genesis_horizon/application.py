@@ -56,7 +56,7 @@ def load_package(package, expected_hash):
         reject()
     if manifest.get('schema_version', 1) == 1:
         return manifest, {}, sources
-    if manifest['schema_version'] != 2:
+    if manifest['schema_version'] not in [2, 3]:
         reject()
     if manifest['definitions'] not in manifest['files']:
         reject()
@@ -101,6 +101,14 @@ def load_package(package, expected_hash):
             reject()
         if view['private_owner'] is not None and view['private_owner'] not in definitions:
             reject()
+    if manifest['schema_version'] == 3:
+        contract = manifest['collections']
+        if contract['abi'] != 'state-collections-v1':
+            reject()
+        required = {contract['config'], contract['catalog'], *contract['units'].values()}
+        if not required <= set(manifest['files']):
+            reject()
+        sources.update(contract['units'].values())
     return manifest, definitions, sources
 
 

@@ -13,7 +13,9 @@ export function pass01Sources(root, inventory) {
   const decision = JSON.parse(bytes);
   for (const [file, expected] of Object.entries(decision.package_files)) {
     if (!file.startsWith('game/core/raeon/application/')) throw new Error('Pass-1 package path outside authorized home');
-    if (hash(fs.readFileSync(path.join(root, file))) !== expected) throw new Error('Pass-1 package integrity: ' + file);
+    const location = inventory.includes('provenance/decisions/raeon-pass-02.json')
+      ? file.replace('game/core/raeon/application/', 'tests/integration/genesis_horizon/pass_01_application/') : file;
+    if (hash(fs.readFileSync(path.join(root, location))) !== expected) throw new Error('Pass-1 package integrity: ' + file);
   }
   return decision.compiled_sources;
 }

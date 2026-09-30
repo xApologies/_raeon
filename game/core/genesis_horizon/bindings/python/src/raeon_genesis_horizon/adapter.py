@@ -49,6 +49,8 @@ class Horizon:
     def _run(self, relative, budget):
         if relative not in self._builds:
             self._builds[relative] = compile_paths([self.root / relative], self.root, Path(relative).stem)
+        previous_source = self._backend.executing_source
+        self._backend.executing_source = relative
         try:
             remaining = min(budget, getattr(self, '_remaining', budget))
             if remaining <= 0:
@@ -64,6 +66,8 @@ class Horizon:
             if 'step limit' in str(error):
                 raise HorizonError('BUDGET_EXCEEDED') from error
             raise
+        finally:
+            self._backend.executing_source = previous_source
         return result.receipt
 
     def _core(self, name, budget):
@@ -82,7 +86,7 @@ class Horizon:
         return {'bindings': b.bindings, 'relations': b.relations, 'resources': b.resources,
                 'ledger': b.ledger, 'allocator': b.allocator.snapshot(), 'road_history': b.road_history,
                 'native_receipts': b.native_receipts, 'application_definitions': b.application_definitions,
-                'realization_relations': b.realization_relations}
+                'realization_relations': b.realization_relations, 'application_values': b.application_values}
 
     def _restore_record(self, record):
         b = self._backend
@@ -92,13 +96,24 @@ class Horizon:
         b.application_definitions = copy.deepcopy(record.get('application_definitions', {}))
         b.realization_relations = copy.deepcopy(record.get('realization_relations', []))
         b.allocator.entries = copy.deepcopy(record['allocator']['entries'])
+        b.application_values = copy.deepcopy(record.get('application_values', {}))
+        if not b.application_values:
+            b.collections = None
         b.pending = {}
+
+    def _binding_contract(self):
+        base = 'game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/'
+        paths = [base + name + '.py' for name in ['adapter', 'application', 'native', 'collections', 'values', 'toolchain']]
+        paths += [(p.relative_to(self.root).as_posix()) for p in sorted((self.root / 'game/core/genesis_horizon/src/values').glob('*.gen'))]
+        return digest({path: file_hash(self.root / path) for path in paths})
 
     def _save(self, state):
         published_state = copy.deepcopy(state)
         payload = {'schema': 1, 'profile_hash': digest(self.profile), 'upstream': self.lock['upstream_commit'],
                    'state': state, 'native': self._record(), 'store': str(self.storage),
                    'builds': {k: v.receipt['gvm_sha256'] for k, v in self._builds.items()}}
+        if self._backend.application_values:
+            payload['binding_contract'] = self._binding_contract()
         envelope = {'payload': payload, 'sha256': digest(payload)}
         temp = self.storage / 'root.pending'
         with temp.open('wb') as stream:
@@ -120,6 +135,7 @@ class Horizon:
                 self.lifecycle = 'FAULTED'
                 raise HorizonError('ADMISSION_REJECTED')
             context = trusted_context or {}
+            self._grant_issuer = context.get('conformance_grant_issuer')
             self.identity = context.get('instance_identity', uuid.uuid4().hex)
             from .native import create_fabric
             fabric = Path(context.get('fabric_path', self.storage / 'fabric.gcf')).resolve()
@@ -159,8 +175,11 @@ class Horizon:
                              'cells': [cell.pack().hex() for cell in b.read_cells(obj)]}
             if 'semantic' in obj['payload']:
                 objects[name]['semantic'] = obj['payload']['semantic']
-        return digest({'identity': self.identity, 'revision': state['revision'], 'objects': objects,
-                       'relations': [b.resources[ref]['payload'] for ref in b.relations]})
+        value = {'identity': self.identity, 'revision': state['revision'], 'objects': objects,
+                 'relations': [b.resources[ref]['payload'] for ref in b.relations]}
+        if b.application_values:
+            value['application_values'] = b.application_values
+        return digest(value)
 
     def _authority(self, authority, operations=()):
         if not isinstance(authority, dict) or not authority.get('actor'):
@@ -201,6 +220,10 @@ class Horizon:
                 self._run((package.parent / manifest['realize']).relative_to(self.root).as_posix(), budget)
                 if definitions:
                     verify_realized(self._backend, saved['bindings'], saved['relations'], definitions, manifest['realization_relations'])
+                if manifest.get('schema_version') == 3:
+                    from .collections import Collections
+                    self._backend.collections = Collections(self, manifest, package.parent.relative_to(self.root).as_posix())
+                    self._backend.collections.initialize()
                 self._fault('after_candidate')
                 self._backend.phase = 'state_commit'
                 self._authority(authority, ['INHERIT_STATE'])
@@ -234,9 +257,12 @@ class Horizon:
         app = self._state['application']
         if not app or authority.get('application_id') != app['id'] or authority.get('view_id') not in app['manifest']['views']:
             raise HorizonError('AUTHORITY_DENIED')
-        if app['manifest'].get('schema_version') == 2:
+        if app['manifest'].get('schema_version') in [2, 3]:
             try:
-                return copy.deepcopy(project(self._backend, app['manifest'], authority))
+                view = project(self._backend, app['manifest'], authority)
+                if self._backend.collections:
+                    view = self._backend.collections.project(view, authority)
+                return copy.deepcopy(view)
             except ValueError as error:
                 raise HorizonError('AUTHORITY_DENIED') from error
         if authority['view_id'] == 'writer' and not authority.get('private_view'):
@@ -290,9 +316,11 @@ class Horizon:
             definition = app['manifest']['operations'].get(operation)
             if not definition:
                 raise HorizonError('UNKNOWN_OPERATION')
-            if operation not in authority.get('operations', []) or intent['arguments'] != {}:
+            if operation not in authority.get('operations', []) or (app['manifest'].get('schema_version', 1) < 3 and intent['arguments'] != {}):
                 raise HorizonError('AUTHORITY_DENIED')
-            if intent['expected_revision'] != self._state['revision']:
+            if 'arguments' not in definition and intent['arguments'] != {}:
+                raise HorizonError('AUTHORITY_DENIED')
+            if type(intent['expected_revision']) is not int or intent['expected_revision'] != self._state['revision']:
                 raise HorizonError('STALE_PRECONDITION')
             self._remaining = budget
             saved = copy.deepcopy(self._record())
@@ -302,7 +330,12 @@ class Horizon:
                 self._backend.phase = 'application'
                 self._authority(authority, definition['effects'])
                 self._backend.authority['relationships'] = definition.get('relationships', [])
+                service = self._backend.collections if 'arguments' in definition else None
+                if service:
+                    service.begin(intent, authority)
                 receipt = self._run(app['directory'] + '/' + definition['source'], budget)
+                if service and not service.closed:
+                    raise HorizonError('CLOSURE_FAILED')
                 self._fault('after_candidate')
                 if definition['mutates']:
                     self._backend.phase = 'state_commit'
@@ -319,7 +352,7 @@ class Horizon:
                            'revision': state['revision'], 'previous_root': old_root, 'root': state['root'],
                            'commit_id': digest([key, state['root']]), 'native_execution': receipt['resource_id'],
                            'inward': incoming['resource_id'], 'outward': outgoing['resource_id']}
-                if app['manifest'].get('schema_version') == 2:
+                if app['manifest'].get('schema_version') in [2, 3]:
                     # Native diagnostics stay with the trusted owner, not player receipts.
                     for field in ['native_execution', 'inward', 'outward']:
                         outcome.pop(field)
@@ -330,11 +363,46 @@ class Horizon:
                 self._restore_record(saved)
                 raise
             finally:
+                if self._backend.collections:
+                    self._backend.collections.end()
                 if hasattr(self, '_remaining'):
                     del self._remaining
             # Delivery is outside the commit transaction. Callers recover by key.
             self._fault('after_commit')
             return copy.deepcopy(outcome)
+
+    def install_conformance_grant(self, capability, scope, effect, replay_id):
+        """Trusted harness capability; never exported by the Hypervisor or Port."""
+        with self._mutex:
+            self._ready()
+            if capability is None or capability is not getattr(self, '_grant_issuer', None) or not self._backend.collections:
+                raise HorizonError('AUTHORITY_DENIED')
+            from .collections import validate_arguments
+            app = self._state['application']
+            if scope.get('application') != app['id'] or scope.get('match') != self.identity or scope.get('expected_revision') != self._state['revision']:
+                raise HorizonError('AUTHORITY_DENIED')
+            definition = app['manifest']['operations'].get(scope.get('operation'), {})
+            handle = digest(['test-only-grant', self.identity, replay_id])
+            validate_arguments(dict(scope['arguments'], grant=handle), definition.get('arguments', {}))
+            grant = {'scope': copy.deepcopy(scope), 'effect': copy.deepcopy(effect), 'replay_id': replay_id,
+                     'issuer': 'CONFORMANCE_ONLY', 'used': False}
+            previous = self._backend.application_values['grants'].get(handle)
+            if previous:
+                if previous['scope'] != grant['scope'] or previous['effect'] != grant['effect']:
+                    raise HorizonError('REQUEST_ID_CONFLICT')
+                return handle
+            if len(self._backend.application_values['grants']) >= self.profile['limits']['outcome_records']:
+                raise HorizonError('BACKPRESSURE')
+            saved = copy.deepcopy(self._record())
+            try:
+                self._backend.application_values['grants'][handle] = grant
+                state = copy.deepcopy(self._state)
+                state['root'] = self._semantic_root(state)
+                self._save(state)
+            except Exception:
+                self._restore_record(saved)
+                raise
+            return handle
 
     def expire_outcome(self, operation_key, authority):
         """Trusted retention control retains a bounded tombstone; IDs are never reused."""
@@ -410,6 +478,8 @@ class Horizon:
             payload = envelope['payload']
             if digest(payload) != envelope['sha256'] or payload['upstream'] != self.lock['upstream_commit']:
                 raise HorizonError('RUNTIME_FAULT')
+            if payload['native'].get('application_values') and payload.get('binding_contract') != self._binding_contract():
+                raise HorizonError('RUNTIME_FAULT')
             profile = json.loads((self.root / 'data/platform/genesis-horizon-profile.json').read_text(encoding='utf8'))
             if digest(profile) != payload['profile_hash']:
                 raise HorizonError('RUNTIME_FAULT')
@@ -438,6 +508,13 @@ class Horizon:
                 candidate = self.backend_type(profile, candidate_root / 'fabric.gcf', candidate_root / 'native', self.identity)
                 self._backend = candidate
                 self._restore_record(payload['native'])
+                app = payload['state']['application']
+                if app and app['manifest'].get('schema_version') == 3:
+                    from .collections import Collections
+                    path = self.root / app['directory'] / 'manifest.json'
+                    load_package(path, app['package_sha256'])
+                    candidate.collections = Collections(self, app['manifest'], app['directory'])
+                    candidate.collections.validate()
                 for relative, expected in payload['builds'].items():
                     build = compile_paths([self.root / relative], self.root, Path(relative).stem)
                     if build.receipt['gvm_sha256'] != expected:

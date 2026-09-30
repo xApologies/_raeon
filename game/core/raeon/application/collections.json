@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "root": "match",
+  "representation_template": "A",
+  "item_kind": "CARD",
+  "containers": {
+    "DECK": {
+      "capacity": null,
+      "visibility": "count"
+    },
+    "HAND": {
+      "capacity": 7,
+      "visibility": "owner"
+    },
+    "GRAVEYARD": {
+      "capacity": null,
+      "visibility": "count"
+    },
+    "PRIME_POSITION": {
+      "capacity": 1,
+      "visibility": "public"
+    },
+    "CONFIGURATION_SPACE": {
+      "capacity": null,
+      "visibility": "public"
+    },
+    "CONFIGURATION_REGION": {
+      "capacity": 9,
+      "visibility": "public"
+    },
+    "PRIME_REGION": {
+      "capacity": 3,
+      "visibility": "public"
+    }
+  },
+  "region_children": {
+    "CONFIGURATION_REGION": "CONFIGURATION_SPACE",
+    "PRIME_REGION": "PRIME_POSITION"
+  },
+  "populated_states": {
+    "CONFIGURATION_SPACE": "CONFIGURING"
+  },
+  "authority": [
+    "data/cycles/cycle_01/card-system.json",
+    "data/game/sandbox.json",
+    "data/game/match.json"
+  ]
+}

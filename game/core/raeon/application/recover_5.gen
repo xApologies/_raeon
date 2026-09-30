@@ -1,0 +1,10 @@
+genesis 0.1.0
+module recover_5 {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 32
+  en match : GEOMETRIC = instantiate fabric region mmo @bound_match
+  admit match as permission @{"operation":"COLLECTION_TRANSACTION","abi":"state-collections-v1","action":{"kind":"transfer","selection":{"mode":"selected","items":"$arg.cards","source_kinds":["GRAVEYARD"]},"destination":"{owner}_hand","destination_kinds":["HAND"],"categories":["Field Generator","Utility"],"minimum":1,"maximum":1,"placement":"bottom","effect_source":"data/cycles/cycle_01/utilities/recovery.json#/values/slots/4","exact":1}}
+  transform match with permission as candidate @{"operator":"COLLECTION_TRANSACTION"}
+  assert closure candidate as closed
+  export candidate : GEOMETRIC
+}

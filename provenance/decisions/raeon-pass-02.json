@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "scope": "PASS_02_ADMITTED_CARD_OPERATIONS",
+  "starting_sha": "23ebfc3be3a4e6ae4883793bfc99b1dbfae67bf8",
+  "upstream_commit": "c89676fc26000ae6f5fdad66a56e118b285d9b1d",
+  "compiled_sources": {
+    "game/core/raeon/application/add_configuration_space.gen": {
+      "source_sha256": "80f837ad7a6ed83fa080dda69e4eaa70a0cf71c46e607225435352556b003385",
+      "bytecode_sha256": "e4715df18fad110383a14d887cac28040179d65984093e7e59646e3f622da70e"
+    },
+    "game/core/raeon/application/batch_to_hand.gen": {
+      "source_sha256": "709803db2779a4700ae1ef33eebb40c4c46faa537808e28260a3b7593ca15a00",
+      "bytecode_sha256": "a5959b24507ca296e76762ec07304d0dd0c6012d8690b56dce5d61cd4cfcc1b7"
+    },
+    "game/core/raeon/application/bind_prime.gen": {
+      "source_sha256": "11bc3bd75b7d89d6481b7d50720d7649426127ae8fea40227dd42b8eb4facbca",
+      "bytecode_sha256": "262f8c3091e50503685bbc9ebbb96776e6f2f7e9ce6163d5012f18d46614dbe3"
+    },
+    "game/core/raeon/application/commit_fg.gen": {
+      "source_sha256": "399638a3e81b85bd09ac100b606cbda58b05500ddf3edcf3f653089357d68578",
+      "bytecode_sha256": "6dcbb3f39fb5affa156c3ef3c22ad7c6365a339b04e082089b1474722cfc3323"
+    },
+    "game/core/raeon/application/draw_one.gen": {
+      "source_sha256": "004238c04332b86437ed7bb2f4a0f4360882b9f65080e8ad9a537a49152c2d61",
+      "bytecode_sha256": "c874e6b00b73e7b5c91d7eb06fc3aac7952d1ba739234ec7decd39cd96185b16"
+    },
+    "game/core/raeon/application/initialize_inventory.gen": {
+      "source_sha256": "9c86afd417566ef59dc52a2d51d2d4d0f92a96d886e46b74c08aa2b4e2e30412",
+      "bytecode_sha256": "dccf8961163520684e0719a5dee90db1d3d15992aa857f35a913da4ee954c6af"
+    },
+    "game/core/raeon/application/inspect_top.gen": {
+      "source_sha256": "6cf79eec29a8fcb2652a2bc78def8bf5fc1dbdf3567466ef19efa41c65acd87b",
+      "bytecode_sha256": "7cc1380a5a5d13c0d2181b60de080a686ff6206aa1ab1105f502bb312831dd85"
+    },
+    "game/core/raeon/application/native_instantiate.gen": {
+      "source_sha256": "132030bfc7f60b4454168beb013df4a7b24833ae0356bb2c8dd6bc0d1d7f1515",
+      "bytecode_sha256": "1b5f5cdb218ee53bbeed801f7b88342632a442dcd4664dd039b8dcd41cc73cc1"
+    },
+    "game/core/raeon/application/native_relate.gen": {
+      "source_sha256": "0c1661f93c909f8661f9394028dc0aeb728a44ca4ceb72d74f44ae5b88033e5d",
+      "bytecode_sha256": "3b7cabf263d21a0ab77d74cc978c596aa713e3f7f5db63ebcfcfc78edabbf23f"
+    },
+    "game/core/raeon/application/native_transport.gen": {
+      "source_sha256": "bcf64698ac20301c1ea4dcfd5dfbc0fe313d047990101c5d3182af7854d0ac1f",
+      "bytecode_sha256": "95914ad90027314c851d37dc4b2ed954d1485b01f448baa35a0f18ee2fcd72c0"
+    },
+    "game/core/raeon/application/recover_1.gen": {
+      "source_sha256": "4cb0ea5a0e32fed826e4b2760312b93aec86f6ea29597973dfb669cefad46440",
+      "bytecode_sha256": "dce3e45cf2af0ddb850e86f3ec2bcd1071885d39355c660320ad9bb9c35f0648"
+    },
+    "game/core/raeon/application/recover_2.gen": {
+      "source_sha256": "e4fc7f119c985372397a923b983f36acf588a885c0b022c38d9f34fb52498f6d",
+      "bytecode_sha256": "1a42617236aad5ea8f762572c3724de1b455fe3a46e37eed20d1bec023756cc1"
+    },
+    "game/core/raeon/application/recover_3.gen": {
+      "source_sha256": "27ae030297e9637b0dbb7c2ca290a09b1deb2f36a6ec47dc9d74cb084e33c57f",
+      "bytecode_sha256": "dee85014c842d44163c4d49381cf74acad30fd3b812fc32f536003fd894abafd"
+    },
+    "game/core/raeon/application/recover_4.gen": {
+      "source_sha256": "c50f33bf211808bc31ed574f1da577057f2ad6e8714d7bfc1f141b43b5d038f3",
+      "bytecode_sha256": "e69af35acbb4dec445ec1f9c1dacde003deabaf810d2b4da53c13aade5d0346f"
+    },
+    "game/core/raeon/application/recover_5.gen": {
+      "source_sha256": "87ce6dd002bd927b61a24833703103b342320c7ffb9c41c513299686ded03c65",
+      "bytecode_sha256": "eddeaf09744971914b6d2ee1258744ba9392c40b0c72adfa04352d741a170469"
+    },
+    "game/core/raeon/application/recover_6.gen": {
+      "source_sha256": "d2ed0e7c67486c3f584e17d2b188277d5ca15a5a20743846c98c0b26c78201e5",
+      "bytecode_sha256": "6cb7c4a408c0e07e4b424343f3f6c6fcdfb30130446e570256bd504a327a7779"
+    },
+    "game/core/raeon/application/reorder_top.gen": {
+      "source_sha256": "9a87ecb4d92d4a0a6f4c38d0988f2150a37ff78a12500c91d5c2c744d834a2e9",
+      "bytecode_sha256": "243c67b2ee59783d6d7fa1ff776bfc5f6e02e90371c982ad00de74ffe1a77efb"
+    },
+    "game/core/raeon/application/retire_cards.gen": {
+      "source_sha256": "dc7b00c52a7e902bcc15d9a623dfd1a32fcfc71957c90564e56791a1411e49e3",
+      "bytecode_sha256": "36c3ad861bf2342cc065dfca64a8703dadec9181f4b5a347b9c40e6d4785c1a0"
+    },
+    "game/core/raeon/application/retire_support.gen": {
+      "source_sha256": "5daf6da5bc6513e0720ba2803a42640d040aef87469ce68bef2720ca5eb45e13",
+      "bytecode_sha256": "461fc666fb4cef7b9c3782010ad6c61887920ddbc3a91fc0e057ec86915d17ae"
+    },
+    "game/core/raeon/application/shuffle_deck.gen": {
+      "source_sha256": "807e4bae5a28655abe413d518cef1fa92ecee00eceeafc2910a0caa80129bfc1",
+      "bytecode_sha256": "d19129f2715e3fb2c89af3dba7917d7842e1ca3ec1f5b607ec2dc1c94c122b29"
+    },
+    "tests/integration/genesis_horizon/pass_01_application/raeon_observe.gen": {
+      "source_sha256": "06a54be1db2dfe491e0ea431ad2ba79a97db4cf4f009163c372058a149406e73",
+      "bytecode_sha256": "d986cb9da035d8a95c8d15d0744cc4894244c8ee0063427a9dc42eabc6f3ddd0"
+    },
+    "tests/integration/genesis_horizon/pass_01_application/raeon_realize.gen": {
+      "source_sha256": "448cbfe495cd7133eb9576f8e9e462c32d7d3dc0e623714f9a0b9ebf46f3ff0a",
+      "bytecode_sha256": "a0962cbb7a15b1303204d758f4e607ba3f8daaea48e075969468e0aec3aebdfc"
+    },
+    "game/core/genesis_horizon/src/values/add.gen": {
+      "source_sha256": "be3099f6f0e2e9450140542c43de4ac9c537dd4f32924643459ab0a5e20d3de2",
+      "bytecode_sha256": "06cb18de745f25aafedf813b9848a7bebb4b14dd993a4cda59d8db83fc2036fb"
+    },
+    "game/core/genesis_horizon/src/values/at_most.gen": {
+      "source_sha256": "602879c10cc110bccc3c8636d077e63d92b8ea1060d9e0a83db3755b3b82667d",
+      "bytecode_sha256": "66ae93b65c9b88d7bb63bf35a85e39c5f7496e38f939c84d92550bfec72f0de9"
+    },
+    "game/core/genesis_horizon/src/values/equal.gen": {
+      "source_sha256": "878e14fecf38e94bd5f9b495e21d5b3e1516b4a4a0a314d4cc6a60dd57c533ef",
+      "bytecode_sha256": "635568dda16732931866e0c12e213b6523d88db98581ae367da11fc25ba4f7e5"
+    }
+  },
+  "package_files": {
+    "game/core/raeon/application/add_configuration_space.gen": "80f837ad7a6ed83fa080dda69e4eaa70a0cf71c46e607225435352556b003385",
+    "game/core/raeon/application/batch_to_hand.gen": "709803db2779a4700ae1ef33eebb40c4c46faa537808e28260a3b7593ca15a00",
+    "game/core/raeon/application/bind_prime.gen": "11bc3bd75b7d89d6481b7d50720d7649426127ae8fea40227dd42b8eb4facbca",
+    "game/core/raeon/application/catalog.json": "81d3cecc107d46e1c5d99dd8b1fe719fcd4569c461e9fbb115c428ddf0fba26a",
+    "game/core/raeon/application/collections.json": "5823db2227b5677fd6edaf2120dc2fec7cf71b9aa28800ba273fd47367c1407e",
+    "game/core/raeon/application/commit_fg.gen": "399638a3e81b85bd09ac100b606cbda58b05500ddf3edcf3f653089357d68578",
+    "game/core/raeon/application/definitions.json": "32963db30b12111662940652e7da412f5d58139322e4dd52f0225257183bc9e3",
+    "game/core/raeon/application/draw_one.gen": "004238c04332b86437ed7bb2f4a0f4360882b9f65080e8ad9a537a49152c2d61",
+    "game/core/raeon/application/initialize_inventory.gen": "9c86afd417566ef59dc52a2d51d2d4d0f92a96d886e46b74c08aa2b4e2e30412",
+    "game/core/raeon/application/inspect_top.gen": "6cf79eec29a8fcb2652a2bc78def8bf5fc1dbdf3567466ef19efa41c65acd87b",
+    "game/core/raeon/application/manifest.json": "a2969916db986e8824d573c05d9524e022042b2ab6933d73c688d2dcf2047b7d",
+    "game/core/raeon/application/native_instantiate.gen": "132030bfc7f60b4454168beb013df4a7b24833ae0356bb2c8dd6bc0d1d7f1515",
+    "game/core/raeon/application/native_relate.gen": "0c1661f93c909f8661f9394028dc0aeb728a44ca4ceb72d74f44ae5b88033e5d",
+    "game/core/raeon/application/native_transport.gen": "bcf64698ac20301c1ea4dcfd5dfbc0fe313d047990101c5d3182af7854d0ac1f",
+    "game/core/raeon/application/raeon_observe.gen": "06a54be1db2dfe491e0ea431ad2ba79a97db4cf4f009163c372058a149406e73",
+    "game/core/raeon/application/raeon_realize.gen": "448cbfe495cd7133eb9576f8e9e462c32d7d3dc0e623714f9a0b9ebf46f3ff0a",
+    "game/core/raeon/application/recover_1.gen": "4cb0ea5a0e32fed826e4b2760312b93aec86f6ea29597973dfb669cefad46440",
+    "game/core/raeon/application/recover_2.gen": "e4fc7f119c985372397a923b983f36acf588a885c0b022c38d9f34fb52498f6d",
+    "game/core/raeon/application/recover_3.gen": "27ae030297e9637b0dbb7c2ca290a09b1deb2f36a6ec47dc9d74cb084e33c57f",
+    "game/core/raeon/application/recover_4.gen": "c50f33bf211808bc31ed574f1da577057f2ad6e8714d7bfc1f141b43b5d038f3",
+    "game/core/raeon/application/recover_5.gen": "87ce6dd002bd927b61a24833703103b342320c7ffb9c41c513299686ded03c65",
+    "game/core/raeon/application/recover_6.gen": "d2ed0e7c67486c3f584e17d2b188277d5ca15a5a20743846c98c0b26c78201e5",
+    "game/core/raeon/application/reorder_top.gen": "9a87ecb4d92d4a0a6f4c38d0988f2150a37ff78a12500c91d5c2c744d834a2e9",
+    "game/core/raeon/application/retire_cards.gen": "dc7b00c52a7e902bcc15d9a623dfd1a32fcfc71957c90564e56791a1411e49e3",
+    "game/core/raeon/application/retire_support.gen": "5daf6da5bc6513e0720ba2803a42640d040aef87469ce68bef2720ca5eb45e13",
+    "game/core/raeon/application/shuffle_deck.gen": "807e4bae5a28655abe413d518cef1fa92ecee00eceeafc2910a0caa80129bfc1"
+  },
+  "source_inputs": {
+    "data/cycles/cycle_01/card-system.json": "2e486d0480c301e4ec0197c283fa24663e23e85bb16a66eaefc941fe4992b4e2",
+    "data/cycles/cycle_01/field_generators/objects.json": "c8bd56021e95d80ffb677e31f69a864f4ff02bf6db97304edba9dfe8fa879e62",
+    "data/cycles/cycle_01/primes/status.json": "6dc178b8c5d544d8e497ee71eba63031e30291fec7399e09e2caf441be6685be",
+    "data/cycles/cycle_01/utilities/transduction.json": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+    "data/cycles/cycle_01/utilities/activation.json": "e5f81218ce7a96598675a9d41c7b614d0c465a09efb322a1c58ea97f681a807f",
+    "data/cycles/cycle_01/utilities/sandbox_activation.json": "0a1049420e6d5d1f7bf98be13b76df60833db1e13c6e44a2244f6f44e4bb8c45",
+    "data/cycles/cycle_01/utilities/draw_deck.json": "7eb07dd1d1612a3db63c2ba254c8689501f3334a5394d32b619c6cd4c066acb8",
+    "data/cycles/cycle_01/utilities/recovery.json": "278c81d300eb62b9db1d89eaa8a8accd5f4eefa5c67e25b7c48fe1134e4714e8",
+    "data/cycles/cycle_01/utilities/stability.json": "ecd3d9a9fef1d121e3c67a64e4eb6493b4146558acb22102389ac97c6c83b163",
+    "data/cycles/cycle_01/utilities/restore_prime.json": "033ce2b76f65625530359475fb0cecde3bc1ae92f5ba157f61274a31597071f2"
+  },
+  "whole_game_phase": "PREPRODUCTION",
+  "mathematics_regenerated": false,
+  "acceptance": "Separate executable receipt required; this amendment is not completion evidence"
+}

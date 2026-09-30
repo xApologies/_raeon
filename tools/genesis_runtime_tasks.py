@@ -24,15 +24,33 @@ def write(path, value):
 
 
 def build(root, output):
-    setup(root)
+    _, upstream, _ = setup(root)
+    from raeon_genesis_horizon.values import IntegerInterpreter
+    integers = IntegerInterpreter(upstream, root / 'game/core/genesis_horizon/src/values')
     from raeon_genesis_horizon.toolchain import compile_paths
     from genesis_frontend.vendor.genesis_semantics.vendor.genesis_vm import disassemble
     sources = [*sorted((root / 'game/core/genesis_horizon/src').glob('*.gen')),
                *sorted((root / 'tests/integration/genesis_horizon/application').glob('*.gen')),
-               *sorted((root / 'game/core/raeon/application').glob('*.gen'))]
+               *sorted((root / 'game/core/raeon/application').glob('*.gen')),
+               *sorted((root / 'tests/integration/genesis_horizon/pass_01_application').glob('*.gen')),
+               *sorted((root / 'game/core/genesis_horizon/src/values').glob('*.gen'))]
     artifacts = {}
     for source in sources:
         relative = source.relative_to(root).as_posix()
+        if source.parent.name == 'values':
+            from genesis_control import disassemble as control_disassemble
+            program = integers.programs[source.stem][0]
+            bytecode = integers.encode(program)
+            target = output / 'compiled' / source.stem
+            target.mkdir(parents=True, exist_ok=True)
+            (target / 'program.gvm').write_bytes(bytecode)
+            (target / 'program.asm').write_text(control_disassemble(program), encoding='utf8')
+            write(target / 'receipt.json', {'profile': 'genesis-0.3.0', 'abi': 'typed-int-const-v1',
+                                          'verification': integers.verify(program), 'input_registers': integers.programs[source.stem][1]})
+            artifacts[relative] = {'source_sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
+                'bytecode_sha256': hashlib.sha256(bytecode).hexdigest(),
+                'artifact_hashes': {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(target.iterdir())}}
+            continue
         result = compile_paths([source], root, source.stem)
         target = output / 'compiled' / source.stem
         target.mkdir(parents=True, exist_ok=True)
@@ -51,6 +69,10 @@ def verify(root, output):
     first = build(root, output)
     from genesis_frontend.vendor.genesis_semantics.vendor.genesis_vm import decode, verify as verify_bytecode
     for source in first['artifacts']:
+        if '/src/values/' in source:
+            from genesis_control import decode as control_decode, verify as control_verify
+            control_verify(control_decode((output / 'compiled' / Path(source).stem / 'program.gvm').read_bytes()))
+            continue
         result = verify_bytecode(decode((output / 'compiled' / Path(source).stem / 'program.gvm').read_bytes()))
         if not result['ok']:
             raise RuntimeError('Bytecode verification failed: ' + source)

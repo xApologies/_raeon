@@ -10,14 +10,14 @@ from raeon_genesis_horizon.adapter import Horizon
 from raeon_genesis_horizon.toolchain import file_hash
 from raeon_hypervisor import open, encode
 
-PACKAGE = 'game/core/raeon/application/manifest.json'
+PACKAGE = 'tests/integration/genesis_horizon/pass_01_application/manifest.json'
 
 
 class ProductionFixture:
     def __init__(self, realize=True):
         self.temp = tempfile.TemporaryDirectory(prefix='pass01 actual ', dir=ROOT / 'build')
         self.path = Path(self.temp.name)
-        self.horizon = Horizon(self.path / 'machine')
+        self.horizon = Horizon(self.path / 'machine', application_roots=['tests/integration/genesis_horizon', 'game/core/raeon/application'])
         self.owner = {'actor': 'runtime-owner', 'realize': True, 'checkpoint': True, 'restore': True}
         self.players = {
             p: {'actor': 'trusted-' + p, 'application_id': 'raeon', 'view_id': p,

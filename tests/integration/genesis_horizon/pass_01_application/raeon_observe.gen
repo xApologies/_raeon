@@ -1,0 +1,9 @@
+genesis 0.1.0
+module raeon_observe {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 256
+  en match : GEOMETRIC = instantiate fabric region mmo @bound_match
+  assert closure match as match_closed
+  emit receipt as observed
+  export observed : RECEIPT<EXECUTION>
+}

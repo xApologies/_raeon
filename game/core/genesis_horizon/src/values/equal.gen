@@ -1,0 +1,7 @@
+genesis 0.3.0
+module bound_equal {
+  let left : INT = 0
+  let right : INT = 0
+  let result : BOOL = eq left right
+  export result : BOOL
+}

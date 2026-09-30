@@ -1,0 +1,280 @@
+genesis 0.1.0
+module raeon_realize {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 256
+  en state : GEOMETRIC = instantiate fabric region mmo @bound_state
+  en match : GEOMETRIC = instantiate fabric region mmo @match
+  en player_1 : GEOMETRIC = instantiate fabric region mmo @player_1
+  en player_1_board : GEOMETRIC = instantiate fabric region mmo @player_1_board
+  en player_1_deck_port : GEOMETRIC = instantiate fabric region mmo @player_1_deck_port
+  en player_1_deck : GEOMETRIC = instantiate fabric region mmo @player_1_deck
+  en player_1_hand_port : GEOMETRIC = instantiate fabric region mmo @player_1_hand_port
+  en player_1_hand : GEOMETRIC = instantiate fabric region mmo @player_1_hand
+  en player_1_graveyard_port : GEOMETRIC = instantiate fabric region mmo @player_1_graveyard_port
+  en player_1_graveyard : GEOMETRIC = instantiate fabric region mmo @player_1_graveyard
+  en player_1_prime_port : GEOMETRIC = instantiate fabric region mmo @player_1_prime_port
+  en player_1_primes : GEOMETRIC = instantiate fabric region mmo @player_1_primes
+  en player_1_config_port : GEOMETRIC = instantiate fabric region mmo @player_1_config_port
+  en player_1_configuration : GEOMETRIC = instantiate fabric region mmo @player_1_configuration
+  en player_1_prime_1 : GEOMETRIC = instantiate fabric region mmo @player_1_prime_1
+  en player_1_prime_2 : GEOMETRIC = instantiate fabric region mmo @player_1_prime_2
+  en player_1_prime_3 : GEOMETRIC = instantiate fabric region mmo @player_1_prime_3
+  en player_1_config_A : GEOMETRIC = instantiate fabric region mmo @player_1_config_A
+  en player_1_config_B : GEOMETRIC = instantiate fabric region mmo @player_1_config_B
+  en player_1_config_C : GEOMETRIC = instantiate fabric region mmo @player_1_config_C
+  en player_2 : GEOMETRIC = instantiate fabric region mmo @player_2
+  en player_2_board : GEOMETRIC = instantiate fabric region mmo @player_2_board
+  en player_2_deck_port : GEOMETRIC = instantiate fabric region mmo @player_2_deck_port
+  en player_2_deck : GEOMETRIC = instantiate fabric region mmo @player_2_deck
+  en player_2_hand_port : GEOMETRIC = instantiate fabric region mmo @player_2_hand_port
+  en player_2_hand : GEOMETRIC = instantiate fabric region mmo @player_2_hand
+  en player_2_graveyard_port : GEOMETRIC = instantiate fabric region mmo @player_2_graveyard_port
+  en player_2_graveyard : GEOMETRIC = instantiate fabric region mmo @player_2_graveyard
+  en player_2_prime_port : GEOMETRIC = instantiate fabric region mmo @player_2_prime_port
+  en player_2_primes : GEOMETRIC = instantiate fabric region mmo @player_2_primes
+  en player_2_config_port : GEOMETRIC = instantiate fabric region mmo @player_2_config_port
+  en player_2_configuration : GEOMETRIC = instantiate fabric region mmo @player_2_configuration
+  en player_2_prime_1 : GEOMETRIC = instantiate fabric region mmo @player_2_prime_1
+  en player_2_prime_2 : GEOMETRIC = instantiate fabric region mmo @player_2_prime_2
+  en player_2_prime_3 : GEOMETRIC = instantiate fabric region mmo @player_2_prime_3
+  en player_2_config_A : GEOMETRIC = instantiate fabric region mmo @player_2_config_A
+  en player_2_config_B : GEOMETRIC = instantiate fabric region mmo @player_2_config_B
+  en player_2_config_C : GEOMETRIC = instantiate fabric region mmo @player_2_config_C
+  rel state -> match as relation_0 @{"relation":"contains"}
+  rel match -> player_1 as relation_1 @{"relation":"contains"}
+  rel match -> player_1 as relation_2 @{"relation":"owns"}
+  rel player_1 -> player_1_board as relation_3 @{"relation":"contains"}
+  rel player_1_board -> player_1_deck_port as relation_4 @{"relation":"contains"}
+  rel player_1_deck_port -> player_1_deck as relation_5 @{"relation":"attaches"}
+  rel player_1_board -> player_1_deck as relation_6 @{"relation":"contains"}
+  rel player_1_board -> player_1_hand_port as relation_7 @{"relation":"contains"}
+  rel player_1_hand_port -> player_1_hand as relation_8 @{"relation":"attaches"}
+  rel player_1_board -> player_1_hand as relation_9 @{"relation":"contains"}
+  rel player_1_board -> player_1_graveyard_port as relation_10 @{"relation":"contains"}
+  rel player_1_graveyard_port -> player_1_graveyard as relation_11 @{"relation":"attaches"}
+  rel player_1_board -> player_1_graveyard as relation_12 @{"relation":"contains"}
+  rel player_1_board -> player_1_prime_port as relation_13 @{"relation":"contains"}
+  rel player_1_prime_port -> player_1_primes as relation_14 @{"relation":"attaches"}
+  rel player_1_board -> player_1_primes as relation_15 @{"relation":"contains"}
+  rel player_1_board -> player_1_config_port as relation_16 @{"relation":"contains"}
+  rel player_1_config_port -> player_1_configuration as relation_17 @{"relation":"attaches"}
+  rel player_1_board -> player_1_configuration as relation_18 @{"relation":"contains"}
+  rel player_1_primes -> player_1_prime_1 as relation_19 @{"relation":"contains"}
+  rel player_1_primes -> player_1_prime_2 as relation_20 @{"relation":"contains"}
+  rel player_1_primes -> player_1_prime_3 as relation_21 @{"relation":"contains"}
+  rel player_1_configuration -> player_1_config_A as relation_22 @{"relation":"contains"}
+  rel player_1_configuration -> player_1_config_B as relation_23 @{"relation":"contains"}
+  rel player_1_configuration -> player_1_config_C as relation_24 @{"relation":"contains"}
+  rel match -> player_2 as relation_25 @{"relation":"contains"}
+  rel match -> player_2 as relation_26 @{"relation":"owns"}
+  rel player_2 -> player_2_board as relation_27 @{"relation":"contains"}
+  rel player_2_board -> player_2_deck_port as relation_28 @{"relation":"contains"}
+  rel player_2_deck_port -> player_2_deck as relation_29 @{"relation":"attaches"}
+  rel player_2_board -> player_2_deck as relation_30 @{"relation":"contains"}
+  rel player_2_board -> player_2_hand_port as relation_31 @{"relation":"contains"}
+  rel player_2_hand_port -> player_2_hand as relation_32 @{"relation":"attaches"}
+  rel player_2_board -> player_2_hand as relation_33 @{"relation":"contains"}
+  rel player_2_board -> player_2_graveyard_port as relation_34 @{"relation":"contains"}
+  rel player_2_graveyard_port -> player_2_graveyard as relation_35 @{"relation":"attaches"}
+  rel player_2_board -> player_2_graveyard as relation_36 @{"relation":"contains"}
+  rel player_2_board -> player_2_prime_port as relation_37 @{"relation":"contains"}
+  rel player_2_prime_port -> player_2_primes as relation_38 @{"relation":"attaches"}
+  rel player_2_board -> player_2_primes as relation_39 @{"relation":"contains"}
+  rel player_2_board -> player_2_config_port as relation_40 @{"relation":"contains"}
+  rel player_2_config_port -> player_2_configuration as relation_41 @{"relation":"attaches"}
+  rel player_2_board -> player_2_configuration as relation_42 @{"relation":"contains"}
+  rel player_2_primes -> player_2_prime_1 as relation_43 @{"relation":"contains"}
+  rel player_2_primes -> player_2_prime_2 as relation_44 @{"relation":"contains"}
+  rel player_2_primes -> player_2_prime_3 as relation_45 @{"relation":"contains"}
+  rel player_2_configuration -> player_2_config_A as relation_46 @{"relation":"contains"}
+  rel player_2_configuration -> player_2_config_B as relation_47 @{"relation":"contains"}
+  rel player_2_configuration -> player_2_config_C as relation_48 @{"relation":"contains"}
+  rel match -> player_1 as relation_49 @{"relation":"visible_to"}
+  rel match -> player_2 as relation_50 @{"relation":"visible_to"}
+  rel player_1 -> player_1 as relation_51 @{"relation":"visible_to"}
+  rel player_1 -> player_2 as relation_52 @{"relation":"visible_to"}
+  rel player_1 -> player_1_board as relation_53 @{"relation":"owns"}
+  rel player_1_board -> player_1 as relation_54 @{"relation":"visible_to"}
+  rel player_1_board -> player_2 as relation_55 @{"relation":"visible_to"}
+  rel player_1 -> player_1_deck_port as relation_56 @{"relation":"owns"}
+  rel player_1_deck_port -> player_1 as relation_57 @{"relation":"visible_to"}
+  rel player_1_deck_port -> player_2 as relation_58 @{"relation":"visible_to"}
+  rel player_1 -> player_1_deck as relation_59 @{"relation":"owns"}
+  rel player_1_deck -> player_1 as relation_60 @{"relation":"visible_to"}
+  rel player_1_deck -> player_2 as relation_61 @{"relation":"visible_to"}
+  rel player_1_deck -> player_1 as relation_62 @{"relation":"private_to"}
+  rel player_1 -> player_1_hand_port as relation_63 @{"relation":"owns"}
+  rel player_1_hand_port -> player_1 as relation_64 @{"relation":"visible_to"}
+  rel player_1_hand_port -> player_2 as relation_65 @{"relation":"visible_to"}
+  rel player_1 -> player_1_hand as relation_66 @{"relation":"owns"}
+  rel player_1_hand -> player_1 as relation_67 @{"relation":"visible_to"}
+  rel player_1_hand -> player_2 as relation_68 @{"relation":"visible_to"}
+  rel player_1_hand -> player_1 as relation_69 @{"relation":"private_to"}
+  rel player_1 -> player_1_graveyard_port as relation_70 @{"relation":"owns"}
+  rel player_1_graveyard_port -> player_1 as relation_71 @{"relation":"visible_to"}
+  rel player_1_graveyard_port -> player_2 as relation_72 @{"relation":"visible_to"}
+  rel player_1 -> player_1_graveyard as relation_73 @{"relation":"owns"}
+  rel player_1_graveyard -> player_1 as relation_74 @{"relation":"visible_to"}
+  rel player_1_graveyard -> player_2 as relation_75 @{"relation":"visible_to"}
+  rel player_1_graveyard -> player_1 as relation_76 @{"relation":"private_to"}
+  rel player_1 -> player_1_prime_port as relation_77 @{"relation":"owns"}
+  rel player_1_prime_port -> player_1 as relation_78 @{"relation":"visible_to"}
+  rel player_1_prime_port -> player_2 as relation_79 @{"relation":"visible_to"}
+  rel player_1 -> player_1_primes as relation_80 @{"relation":"owns"}
+  rel player_1_primes -> player_1 as relation_81 @{"relation":"visible_to"}
+  rel player_1_primes -> player_2 as relation_82 @{"relation":"visible_to"}
+  rel player_1 -> player_1_config_port as relation_83 @{"relation":"owns"}
+  rel player_1_config_port -> player_1 as relation_84 @{"relation":"visible_to"}
+  rel player_1_config_port -> player_2 as relation_85 @{"relation":"visible_to"}
+  rel player_1 -> player_1_configuration as relation_86 @{"relation":"owns"}
+  rel player_1_configuration -> player_1 as relation_87 @{"relation":"visible_to"}
+  rel player_1_configuration -> player_2 as relation_88 @{"relation":"visible_to"}
+  rel player_1 -> player_1_prime_1 as relation_89 @{"relation":"owns"}
+  rel player_1_prime_1 -> player_1 as relation_90 @{"relation":"visible_to"}
+  rel player_1_prime_1 -> player_2 as relation_91 @{"relation":"visible_to"}
+  rel player_1 -> player_1_prime_2 as relation_92 @{"relation":"owns"}
+  rel player_1_prime_2 -> player_1 as relation_93 @{"relation":"visible_to"}
+  rel player_1_prime_2 -> player_2 as relation_94 @{"relation":"visible_to"}
+  rel player_1 -> player_1_prime_3 as relation_95 @{"relation":"owns"}
+  rel player_1_prime_3 -> player_1 as relation_96 @{"relation":"visible_to"}
+  rel player_1_prime_3 -> player_2 as relation_97 @{"relation":"visible_to"}
+  rel player_1 -> player_1_config_A as relation_98 @{"relation":"owns"}
+  rel player_1_config_A -> player_1 as relation_99 @{"relation":"visible_to"}
+  rel player_1_config_A -> player_2 as relation_100 @{"relation":"visible_to"}
+  rel player_1 -> player_1_config_B as relation_101 @{"relation":"owns"}
+  rel player_1_config_B -> player_1 as relation_102 @{"relation":"visible_to"}
+  rel player_1_config_B -> player_2 as relation_103 @{"relation":"visible_to"}
+  rel player_1 -> player_1_config_C as relation_104 @{"relation":"owns"}
+  rel player_1_config_C -> player_1 as relation_105 @{"relation":"visible_to"}
+  rel player_1_config_C -> player_2 as relation_106 @{"relation":"visible_to"}
+  rel player_2 -> player_1 as relation_107 @{"relation":"visible_to"}
+  rel player_2 -> player_2 as relation_108 @{"relation":"visible_to"}
+  rel player_2 -> player_2_board as relation_109 @{"relation":"owns"}
+  rel player_2_board -> player_1 as relation_110 @{"relation":"visible_to"}
+  rel player_2_board -> player_2 as relation_111 @{"relation":"visible_to"}
+  rel player_2 -> player_2_deck_port as relation_112 @{"relation":"owns"}
+  rel player_2_deck_port -> player_1 as relation_113 @{"relation":"visible_to"}
+  rel player_2_deck_port -> player_2 as relation_114 @{"relation":"visible_to"}
+  rel player_2 -> player_2_deck as relation_115 @{"relation":"owns"}
+  rel player_2_deck -> player_1 as relation_116 @{"relation":"visible_to"}
+  rel player_2_deck -> player_2 as relation_117 @{"relation":"visible_to"}
+  rel player_2_deck -> player_2 as relation_118 @{"relation":"private_to"}
+  rel player_2 -> player_2_hand_port as relation_119 @{"relation":"owns"}
+  rel player_2_hand_port -> player_1 as relation_120 @{"relation":"visible_to"}
+  rel player_2_hand_port -> player_2 as relation_121 @{"relation":"visible_to"}
+  rel player_2 -> player_2_hand as relation_122 @{"relation":"owns"}
+  rel player_2_hand -> player_1 as relation_123 @{"relation":"visible_to"}
+  rel player_2_hand -> player_2 as relation_124 @{"relation":"visible_to"}
+  rel player_2_hand -> player_2 as relation_125 @{"relation":"private_to"}
+  rel player_2 -> player_2_graveyard_port as relation_126 @{"relation":"owns"}
+  rel player_2_graveyard_port -> player_1 as relation_127 @{"relation":"visible_to"}
+  rel player_2_graveyard_port -> player_2 as relation_128 @{"relation":"visible_to"}
+  rel player_2 -> player_2_graveyard as relation_129 @{"relation":"owns"}
+  rel player_2_graveyard -> player_1 as relation_130 @{"relation":"visible_to"}
+  rel player_2_graveyard -> player_2 as relation_131 @{"relation":"visible_to"}
+  rel player_2_graveyard -> player_2 as relation_132 @{"relation":"private_to"}
+  rel player_2 -> player_2_prime_port as relation_133 @{"relation":"owns"}
+  rel player_2_prime_port -> player_1 as relation_134 @{"relation":"visible_to"}
+  rel player_2_prime_port -> player_2 as relation_135 @{"relation":"visible_to"}
+  rel player_2 -> player_2_primes as relation_136 @{"relation":"owns"}
+  rel player_2_primes -> player_1 as relation_137 @{"relation":"visible_to"}
+  rel player_2_primes -> player_2 as relation_138 @{"relation":"visible_to"}
+  rel player_2 -> player_2_config_port as relation_139 @{"relation":"owns"}
+  rel player_2_config_port -> player_1 as relation_140 @{"relation":"visible_to"}
+  rel player_2_config_port -> player_2 as relation_141 @{"relation":"visible_to"}
+  rel player_2 -> player_2_configuration as relation_142 @{"relation":"owns"}
+  rel player_2_configuration -> player_1 as relation_143 @{"relation":"visible_to"}
+  rel player_2_configuration -> player_2 as relation_144 @{"relation":"visible_to"}
+  rel player_2 -> player_2_prime_1 as relation_145 @{"relation":"owns"}
+  rel player_2_prime_1 -> player_1 as relation_146 @{"relation":"visible_to"}
+  rel player_2_prime_1 -> player_2 as relation_147 @{"relation":"visible_to"}
+  rel player_2 -> player_2_prime_2 as relation_148 @{"relation":"owns"}
+  rel player_2_prime_2 -> player_1 as relation_149 @{"relation":"visible_to"}
+  rel player_2_prime_2 -> player_2 as relation_150 @{"relation":"visible_to"}
+  rel player_2 -> player_2_prime_3 as relation_151 @{"relation":"owns"}
+  rel player_2_prime_3 -> player_1 as relation_152 @{"relation":"visible_to"}
+  rel player_2_prime_3 -> player_2 as relation_153 @{"relation":"visible_to"}
+  rel player_2 -> player_2_config_A as relation_154 @{"relation":"owns"}
+  rel player_2_config_A -> player_1 as relation_155 @{"relation":"visible_to"}
+  rel player_2_config_A -> player_2 as relation_156 @{"relation":"visible_to"}
+  rel player_2 -> player_2_config_B as relation_157 @{"relation":"owns"}
+  rel player_2_config_B -> player_1 as relation_158 @{"relation":"visible_to"}
+  rel player_2_config_B -> player_2 as relation_159 @{"relation":"visible_to"}
+  rel player_2 -> player_2_config_C as relation_160 @{"relation":"owns"}
+  rel player_2_config_C -> player_1 as relation_161 @{"relation":"visible_to"}
+  rel player_2_config_C -> player_2 as relation_162 @{"relation":"visible_to"}
+  assert closure match as match_closed
+  export match : GEOMETRIC
+  assert closure player_1 as player_1_closed
+  export player_1 : GEOMETRIC
+  assert closure player_1_board as player_1_board_closed
+  export player_1_board : GEOMETRIC
+  assert closure player_1_deck_port as player_1_deck_port_closed
+  export player_1_deck_port : GEOMETRIC
+  assert closure player_1_deck as player_1_deck_closed
+  export player_1_deck : GEOMETRIC
+  assert closure player_1_hand_port as player_1_hand_port_closed
+  export player_1_hand_port : GEOMETRIC
+  assert closure player_1_hand as player_1_hand_closed
+  export player_1_hand : GEOMETRIC
+  assert closure player_1_graveyard_port as player_1_graveyard_port_closed
+  export player_1_graveyard_port : GEOMETRIC
+  assert closure player_1_graveyard as player_1_graveyard_closed
+  export player_1_graveyard : GEOMETRIC
+  assert closure player_1_prime_port as player_1_prime_port_closed
+  export player_1_prime_port : GEOMETRIC
+  assert closure player_1_primes as player_1_primes_closed
+  export player_1_primes : GEOMETRIC
+  assert closure player_1_config_port as player_1_config_port_closed
+  export player_1_config_port : GEOMETRIC
+  assert closure player_1_configuration as player_1_configuration_closed
+  export player_1_configuration : GEOMETRIC
+  assert closure player_1_prime_1 as player_1_prime_1_closed
+  export player_1_prime_1 : GEOMETRIC
+  assert closure player_1_prime_2 as player_1_prime_2_closed
+  export player_1_prime_2 : GEOMETRIC
+  assert closure player_1_prime_3 as player_1_prime_3_closed
+  export player_1_prime_3 : GEOMETRIC
+  assert closure player_1_config_A as player_1_config_A_closed
+  export player_1_config_A : GEOMETRIC
+  assert closure player_1_config_B as player_1_config_B_closed
+  export player_1_config_B : GEOMETRIC
+  assert closure player_1_config_C as player_1_config_C_closed
+  export player_1_config_C : GEOMETRIC
+  assert closure player_2 as player_2_closed
+  export player_2 : GEOMETRIC
+  assert closure player_2_board as player_2_board_closed
+  export player_2_board : GEOMETRIC
+  assert closure player_2_deck_port as player_2_deck_port_closed
+  export player_2_deck_port : GEOMETRIC
+  assert closure player_2_deck as player_2_deck_closed
+  export player_2_deck : GEOMETRIC
+  assert closure player_2_hand_port as player_2_hand_port_closed
+  export player_2_hand_port : GEOMETRIC
+  assert closure player_2_hand as player_2_hand_closed
+  export player_2_hand : GEOMETRIC
+  assert closure player_2_graveyard_port as player_2_graveyard_port_closed
+  export player_2_graveyard_port : GEOMETRIC
+  assert closure player_2_graveyard as player_2_graveyard_closed
+  export player_2_graveyard : GEOMETRIC
+  assert closure player_2_prime_port as player_2_prime_port_closed
+  export player_2_prime_port : GEOMETRIC
+  assert closure player_2_primes as player_2_primes_closed
+  export player_2_primes : GEOMETRIC
+  assert closure player_2_config_port as player_2_config_port_closed
+  export player_2_config_port : GEOMETRIC
+  assert closure player_2_configuration as player_2_configuration_closed
+  export player_2_configuration : GEOMETRIC
+  assert closure player_2_prime_1 as player_2_prime_1_closed
+  export player_2_prime_1 : GEOMETRIC
+  assert closure player_2_prime_2 as player_2_prime_2_closed
+  export player_2_prime_2 : GEOMETRIC
+  assert closure player_2_prime_3 as player_2_prime_3_closed
+  export player_2_prime_3 : GEOMETRIC
+  assert closure player_2_config_A as player_2_config_A_closed
+  export player_2_config_A : GEOMETRIC
+  assert closure player_2_config_B as player_2_config_B_closed
+  export player_2_config_B : GEOMETRIC
+  assert closure player_2_config_C as player_2_config_C_closed
+  export player_2_config_C : GEOMETRIC
+}

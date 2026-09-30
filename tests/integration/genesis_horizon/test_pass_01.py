@@ -32,7 +32,8 @@ class Pass01Tests(unittest.TestCase):
         manifest = json.loads((ROOT / PACKAGE).read_text(encoding='utf8'))
         self.assertEqual(manifest['id'], 'raeon')
         self.assertFalse(manifest['test_only'])
-        self.assertTrue(PACKAGE.startswith('game/'))
+        historical = json.loads((ROOT / 'provenance/decisions/raeon-pass-01.json').read_text(encoding='utf8'))
+        self.assertEqual(file_hash(ROOT / PACKAGE), historical['package_files']['game/core/raeon/application/manifest.json'])
         before = self.h.domains()['state']
         view = self.realize()
         after = self.h.domains()['state']

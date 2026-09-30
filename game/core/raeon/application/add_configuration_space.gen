@@ -1,0 +1,10 @@
+genesis 0.1.0
+module add_configuration_space {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 32
+  en match : GEOMETRIC = instantiate fabric region mmo @bound_match
+  admit match as permission @{"operation":"COLLECTION_TRANSACTION","abi":"state-collections-v1","action":{"kind":"extend_collection","parent":"{owner}_configuration","parent_kinds":["CONFIGURATION_REGION"],"child_kind":"CONFIGURATION_SPACE","maximum":9,"variant":"$arg.rank","variants":{"Red":3,"Orange":4,"Yellow":5,"Green":6,"Blue":7,"Violet":8},"public":{"primitive":"GEOMETRIC","domain":"STATE","qmo":false,"permanent":false,"universal":false,"state":"EMPTY","contents":[]},"effect_source":"data/cycles/cycle_01/utilities/sandbox_activation.json#/values/ranks"}}
+  transform match with permission as candidate @{"operator":"COLLECTION_TRANSACTION"}
+  assert closure candidate as closed
+  export candidate : GEOMETRIC
+}

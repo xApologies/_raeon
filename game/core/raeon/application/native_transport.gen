@@ -1,0 +1,15 @@
+genesis 0.1.0
+module native_transport {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 32
+  en item : GEOMETRIC = instantiate fabric region mmo @app_item
+  road begin item as road0
+  admit item as permission @{"operation":"COLLECTION_ROUTE"}
+  portal GENERIC item with permission as portal0 corridor "application-local"
+  ve item through portal0 -> "application-target" as successor
+  tor portal0 with successor as leg
+  road append road0 leg as road1
+  road close road1 successor as closed
+  export successor : GEOMETRIC
+  export closed : RECEIPT<ROAD_CLOSE>
+}

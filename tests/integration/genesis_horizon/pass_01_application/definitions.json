@@ -1,0 +1,1646 @@
+{
+  "match": {
+    "mmo_id": "RAEON:PASS01:match",
+    "representation_id": "RAEON:PASS01:match:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.match",
+      "kind": "MATCH",
+      "owner": null,
+      "public": {
+        "primitive": "GEOMETRIC"
+      },
+      "private": {}
+    }
+  },
+  "player_1": {
+    "mmo_id": "RAEON:PASS01:player_1",
+    "representation_id": "RAEON:PASS01:player_1:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1",
+      "kind": "PLAYER",
+      "owner": "player_1",
+      "public": {
+        "role": "player_1"
+      },
+      "private": {}
+    }
+  },
+  "player_1_board": {
+    "mmo_id": "RAEON:PASS01:player_1_board",
+    "representation_id": "RAEON:PASS01:player_1_board:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_board",
+      "kind": "BOARD",
+      "owner": "player_1",
+      "public": {
+        "primitive": "GEOMETRIC",
+        "stable": true
+      },
+      "private": {}
+    }
+  },
+  "player_1_deck_port": {
+    "mmo_id": "RAEON:PASS01:player_1_deck_port",
+    "representation_id": "RAEON:PASS01:player_1_deck_port:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_deck_port",
+      "kind": "ATTACHMENT_ROLE",
+      "owner": "player_1",
+      "public": {
+        "role": "DECK_PORT"
+      },
+      "private": {}
+    }
+  },
+  "player_1_deck": {
+    "mmo_id": "RAEON:PASS01:player_1_deck",
+    "representation_id": "RAEON:PASS01:player_1_deck:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_deck",
+      "kind": "DECK",
+      "owner": "player_1",
+      "public": {
+        "state": "EMPTY",
+        "card_only": true,
+        "ordered": true
+      },
+      "private": {
+        "contents": [],
+        "order": []
+      }
+    }
+  },
+  "player_1_hand_port": {
+    "mmo_id": "RAEON:PASS01:player_1_hand_port",
+    "representation_id": "RAEON:PASS01:player_1_hand_port:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_hand_port",
+      "kind": "ATTACHMENT_ROLE",
+      "owner": "player_1",
+      "public": {
+        "role": "HAND_PORT"
+      },
+      "private": {}
+    }
+  },
+  "player_1_hand": {
+    "mmo_id": "RAEON:PASS01:player_1_hand",
+    "representation_id": "RAEON:PASS01:player_1_hand:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_hand",
+      "kind": "HAND",
+      "owner": "player_1",
+      "public": {
+        "state": "EMPTY",
+        "card_only": true,
+        "normal_capacity": 7
+      },
+      "private": {
+        "contents": []
+      }
+    }
+  },
+  "player_1_graveyard_port": {
+    "mmo_id": "RAEON:PASS01:player_1_graveyard_port",
+    "representation_id": "RAEON:PASS01:player_1_graveyard_port:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_graveyard_port",
+      "kind": "ATTACHMENT_ROLE",
+      "owner": "player_1",
+      "public": {
+        "role": "GRAVEYARD_PORT"
+      },
+      "private": {}
+    }
+  },
+  "player_1_graveyard": {
+    "mmo_id": "RAEON:PASS01:player_1_graveyard",
+    "representation_id": "RAEON:PASS01:player_1_graveyard:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_graveyard",
+      "kind": "GRAVEYARD",
+      "owner": "player_1",
+      "public": {
+        "state": "EMPTY",
+        "card_only": true,
+        "ordered": true
+      },
+      "private": {
+        "contents": [],
+        "order": []
+      }
+    }
+  },
+  "player_1_prime_port": {
+    "mmo_id": "RAEON:PASS01:player_1_prime_port",
+    "representation_id": "RAEON:PASS01:player_1_prime_port:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_prime_port",
+      "kind": "ATTACHMENT_ROLE",
+      "owner": "player_1",
+      "public": {
+        "role": "PRIME_PORT"
+      },
+      "private": {}
+    }
+  },
+  "player_1_primes": {
+    "mmo_id": "RAEON:PASS01:player_1_primes",
+    "representation_id": "RAEON:PASS01:player_1_primes:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_primes",
+      "kind": "PRIME_REGION",
+      "owner": "player_1",
+      "public": {
+        "state": "EMPTY"
+      },
+      "private": {}
+    }
+  },
+  "player_1_config_port": {
+    "mmo_id": "RAEON:PASS01:player_1_config_port",
+    "representation_id": "RAEON:PASS01:player_1_config_port:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_config_port",
+      "kind": "ATTACHMENT_ROLE",
+      "owner": "player_1",
+      "public": {
+        "role": "CONFIG_PORT"
+      },
+      "private": {}
+    }
+  },
+  "player_1_configuration": {
+    "mmo_id": "RAEON:PASS01:player_1_configuration",
+    "representation_id": "RAEON:PASS01:player_1_configuration:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_configuration",
+      "kind": "CONFIGURATION_REGION",
+      "owner": "player_1",
+      "public": {
+        "state": "EMPTY"
+      },
+      "private": {}
+    }
+  },
+  "player_1_prime_1": {
+    "mmo_id": "RAEON:PASS01:player_1_prime_1",
+    "representation_id": "RAEON:PASS01:player_1_prime_1:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_prime_1",
+      "kind": "PRIME_POSITION",
+      "owner": "player_1",
+      "public": {
+        "position": 1,
+        "fixed": true,
+        "state": "EMPTY",
+        "occupant": null
+      },
+      "private": {}
+    }
+  },
+  "player_1_prime_2": {
+    "mmo_id": "RAEON:PASS01:player_1_prime_2",
+    "representation_id": "RAEON:PASS01:player_1_prime_2:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_prime_2",
+      "kind": "PRIME_POSITION",
+      "owner": "player_1",
+      "public": {
+        "position": 2,
+        "fixed": true,
+        "state": "EMPTY",
+        "occupant": null
+      },
+      "private": {}
+    }
+  },
+  "player_1_prime_3": {
+    "mmo_id": "RAEON:PASS01:player_1_prime_3",
+    "representation_id": "RAEON:PASS01:player_1_prime_3:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_prime_3",
+      "kind": "PRIME_POSITION",
+      "owner": "player_1",
+      "public": {
+        "position": 3,
+        "fixed": true,
+        "state": "EMPTY",
+        "occupant": null
+      },
+      "private": {}
+    }
+  },
+  "player_1_config_A": {
+    "mmo_id": "RAEON:PASS01:player_1_config_A",
+    "representation_id": "RAEON:PASS01:player_1_config_A:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_config_A",
+      "kind": "CONFIGURATION_SPACE",
+      "owner": "player_1",
+      "public": {
+        "label": "A",
+        "primitive": "GEOMETRIC",
+        "domain": "STATE",
+        "qmo": false,
+        "permanent": true,
+        "universal": true,
+        "state": "EMPTY",
+        "contents": []
+      },
+      "private": {}
+    }
+  },
+  "player_1_config_B": {
+    "mmo_id": "RAEON:PASS01:player_1_config_B",
+    "representation_id": "RAEON:PASS01:player_1_config_B:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_config_B",
+      "kind": "CONFIGURATION_SPACE",
+      "owner": "player_1",
+      "public": {
+        "label": "B",
+        "primitive": "GEOMETRIC",
+        "domain": "STATE",
+        "qmo": false,
+        "permanent": true,
+        "universal": true,
+        "state": "EMPTY",
+        "contents": []
+      },
+      "private": {}
+    }
+  },
+  "player_1_config_C": {
+    "mmo_id": "RAEON:PASS01:player_1_config_C",
+    "representation_id": "RAEON:PASS01:player_1_config_C:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_1_config_C",
+      "kind": "CONFIGURATION_SPACE",
+      "owner": "player_1",
+      "public": {
+        "label": "C",
+        "primitive": "GEOMETRIC",
+        "domain": "STATE",
+        "qmo": false,
+        "permanent": true,
+        "universal": true,
+        "state": "EMPTY",
+        "contents": []
+      },
+      "private": {}
+    }
+  },
+  "player_2": {
+    "mmo_id": "RAEON:PASS01:player_2",
+    "representation_id": "RAEON:PASS01:player_2:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2",
+      "kind": "PLAYER",
+      "owner": "player_2",
+      "public": {
+        "role": "player_2"
+      },
+      "private": {}
+    }
+  },
+  "player_2_board": {
+    "mmo_id": "RAEON:PASS01:player_2_board",
+    "representation_id": "RAEON:PASS01:player_2_board:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_board",
+      "kind": "BOARD",
+      "owner": "player_2",
+      "public": {
+        "primitive": "GEOMETRIC",
+        "stable": true
+      },
+      "private": {}
+    }
+  },
+  "player_2_deck_port": {
+    "mmo_id": "RAEON:PASS01:player_2_deck_port",
+    "representation_id": "RAEON:PASS01:player_2_deck_port:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_deck_port",
+      "kind": "ATTACHMENT_ROLE",
+      "owner": "player_2",
+      "public": {
+        "role": "DECK_PORT"
+      },
+      "private": {}
+    }
+  },
+  "player_2_deck": {
+    "mmo_id": "RAEON:PASS01:player_2_deck",
+    "representation_id": "RAEON:PASS01:player_2_deck:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_deck",
+      "kind": "DECK",
+      "owner": "player_2",
+      "public": {
+        "state": "EMPTY",
+        "card_only": true,
+        "ordered": true
+      },
+      "private": {
+        "contents": [],
+        "order": []
+      }
+    }
+  },
+  "player_2_hand_port": {
+    "mmo_id": "RAEON:PASS01:player_2_hand_port",
+    "representation_id": "RAEON:PASS01:player_2_hand_port:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_hand_port",
+      "kind": "ATTACHMENT_ROLE",
+      "owner": "player_2",
+      "public": {
+        "role": "HAND_PORT"
+      },
+      "private": {}
+    }
+  },
+  "player_2_hand": {
+    "mmo_id": "RAEON:PASS01:player_2_hand",
+    "representation_id": "RAEON:PASS01:player_2_hand:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_hand",
+      "kind": "HAND",
+      "owner": "player_2",
+      "public": {
+        "state": "EMPTY",
+        "card_only": true,
+        "normal_capacity": 7
+      },
+      "private": {
+        "contents": []
+      }
+    }
+  },
+  "player_2_graveyard_port": {
+    "mmo_id": "RAEON:PASS01:player_2_graveyard_port",
+    "representation_id": "RAEON:PASS01:player_2_graveyard_port:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_graveyard_port",
+      "kind": "ATTACHMENT_ROLE",
+      "owner": "player_2",
+      "public": {
+        "role": "GRAVEYARD_PORT"
+      },
+      "private": {}
+    }
+  },
+  "player_2_graveyard": {
+    "mmo_id": "RAEON:PASS01:player_2_graveyard",
+    "representation_id": "RAEON:PASS01:player_2_graveyard:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_graveyard",
+      "kind": "GRAVEYARD",
+      "owner": "player_2",
+      "public": {
+        "state": "EMPTY",
+        "card_only": true,
+        "ordered": true
+      },
+      "private": {
+        "contents": [],
+        "order": []
+      }
+    }
+  },
+  "player_2_prime_port": {
+    "mmo_id": "RAEON:PASS01:player_2_prime_port",
+    "representation_id": "RAEON:PASS01:player_2_prime_port:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_prime_port",
+      "kind": "ATTACHMENT_ROLE",
+      "owner": "player_2",
+      "public": {
+        "role": "PRIME_PORT"
+      },
+      "private": {}
+    }
+  },
+  "player_2_primes": {
+    "mmo_id": "RAEON:PASS01:player_2_primes",
+    "representation_id": "RAEON:PASS01:player_2_primes:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_primes",
+      "kind": "PRIME_REGION",
+      "owner": "player_2",
+      "public": {
+        "state": "EMPTY"
+      },
+      "private": {}
+    }
+  },
+  "player_2_config_port": {
+    "mmo_id": "RAEON:PASS01:player_2_config_port",
+    "representation_id": "RAEON:PASS01:player_2_config_port:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_config_port",
+      "kind": "ATTACHMENT_ROLE",
+      "owner": "player_2",
+      "public": {
+        "role": "CONFIG_PORT"
+      },
+      "private": {}
+    }
+  },
+  "player_2_configuration": {
+    "mmo_id": "RAEON:PASS01:player_2_configuration",
+    "representation_id": "RAEON:PASS01:player_2_configuration:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_configuration",
+      "kind": "CONFIGURATION_REGION",
+      "owner": "player_2",
+      "public": {
+        "state": "EMPTY"
+      },
+      "private": {}
+    }
+  },
+  "player_2_prime_1": {
+    "mmo_id": "RAEON:PASS01:player_2_prime_1",
+    "representation_id": "RAEON:PASS01:player_2_prime_1:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_prime_1",
+      "kind": "PRIME_POSITION",
+      "owner": "player_2",
+      "public": {
+        "position": 1,
+        "fixed": true,
+        "state": "EMPTY",
+        "occupant": null
+      },
+      "private": {}
+    }
+  },
+  "player_2_prime_2": {
+    "mmo_id": "RAEON:PASS01:player_2_prime_2",
+    "representation_id": "RAEON:PASS01:player_2_prime_2:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_prime_2",
+      "kind": "PRIME_POSITION",
+      "owner": "player_2",
+      "public": {
+        "position": 2,
+        "fixed": true,
+        "state": "EMPTY",
+        "occupant": null
+      },
+      "private": {}
+    }
+  },
+  "player_2_prime_3": {
+    "mmo_id": "RAEON:PASS01:player_2_prime_3",
+    "representation_id": "RAEON:PASS01:player_2_prime_3:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_prime_3",
+      "kind": "PRIME_POSITION",
+      "owner": "player_2",
+      "public": {
+        "position": 3,
+        "fixed": true,
+        "state": "EMPTY",
+        "occupant": null
+      },
+      "private": {}
+    }
+  },
+  "player_2_config_A": {
+    "mmo_id": "RAEON:PASS01:player_2_config_A",
+    "representation_id": "RAEON:PASS01:player_2_config_A:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_config_A",
+      "kind": "CONFIGURATION_SPACE",
+      "owner": "player_2",
+      "public": {
+        "label": "A",
+        "primitive": "GEOMETRIC",
+        "domain": "STATE",
+        "qmo": false,
+        "permanent": true,
+        "universal": true,
+        "state": "EMPTY",
+        "contents": []
+      },
+      "private": {}
+    }
+  },
+  "player_2_config_B": {
+    "mmo_id": "RAEON:PASS01:player_2_config_B",
+    "representation_id": "RAEON:PASS01:player_2_config_B:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_config_B",
+      "kind": "CONFIGURATION_SPACE",
+      "owner": "player_2",
+      "public": {
+        "label": "B",
+        "primitive": "GEOMETRIC",
+        "domain": "STATE",
+        "qmo": false,
+        "permanent": true,
+        "universal": true,
+        "state": "EMPTY",
+        "contents": []
+      },
+      "private": {}
+    }
+  },
+  "player_2_config_C": {
+    "mmo_id": "RAEON:PASS01:player_2_config_C",
+    "representation_id": "RAEON:PASS01:player_2_config_C:3p1p1",
+    "data": {
+      "grid_shape": [
+        1,
+        1,
+        1
+      ],
+      "arrays": {
+        "chirality_field_3p1p1": [
+          0.2,
+          0,
+          0,
+          0.7
+        ],
+        "chirality_scalar": [
+          0.5
+        ],
+        "persistence": [
+          0.8
+        ],
+        "resolution": [
+          0.9
+        ],
+        "admissibility": [
+          1.0
+        ]
+      }
+    },
+    "data_sha256": "e378b2caa10229b298522c1c21a3c274ee8f774e07d802d3797b7bd0d5ef28d0",
+    "authority": "Bounded engineering representation using the existing Horizon reference encoder; not a QMO or new Cycle-1 mathematics.",
+    "semantic": {
+      "id": "raeon.match.player_2_config_C",
+      "kind": "CONFIGURATION_SPACE",
+      "owner": "player_2",
+      "public": {
+        "label": "C",
+        "primitive": "GEOMETRIC",
+        "domain": "STATE",
+        "qmo": false,
+        "permanent": true,
+        "universal": true,
+        "state": "EMPTY",
+        "contents": []
+      },
+      "private": {}
+    }
+  }
+}

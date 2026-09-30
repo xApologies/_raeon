@@ -1,0 +1,8 @@
+genesis 0.1.0
+module native_relate {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 32
+  en source : GEOMETRIC = instantiate fabric region mmo @app_source
+  rel source -> app_target as membership @{"relation":"contains"}
+  export membership : RELATION
+}
