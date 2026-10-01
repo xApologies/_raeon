@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "IMPLEMENTATION_VALIDATION_IN_PROGRESS",
+  "branch": "codex/raeon-pass-04",
+  "starting_sha": "d644a361aa2ce788a1da991b15e3b8e3be5c7cba",
+  "main_sha": "69a0030805b8c3858c877a514e2f50644421115a",
+  "required_cases": 108,
+  "whole_game_phase": "PREPRODUCTION"
+}

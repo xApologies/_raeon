@@ -1,0 +1,10 @@
+genesis 0.1.0
+module set_active_player {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 32
+  en match : GEOMETRIC = instantiate fabric region mmo @bound_match
+  admit match as permission @{"operation":"COLLECTION_TRANSACTION","abi":"state-collections-v1","action":{"kind":"extension","abi":"raeon-color-prime-values-v1","operation":"SET_ACTIVE_PLAYER","effect_source":"conformance:pass04:set_active_player","requires":["trusted_match_control","explicit_player","no_refresh"]}}
+  transform match with permission as candidate @{"operator":"COLLECTION_TRANSACTION"}
+  assert closure candidate as closed
+  export candidate : GEOMETRIC
+}

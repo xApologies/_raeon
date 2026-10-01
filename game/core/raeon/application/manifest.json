@@ -1,9 +1,9 @@
 {
   "schema_version": 3,
   "id": "raeon",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "test_only": false,
-  "scope": "PASS_03B_LIVE_CONFIGURATION_REALIZATION",
+  "scope": "PASS_04_COLOR_PRIMES_AND_AUTHORITY",
   "realize": "raeon_realize.gen",
   "definitions": "definitions.json",
   "files": {
@@ -37,7 +37,12 @@
     "retire_cards.gen": "dc7b00c52a7e902bcc15d9a623dfd1a32fcfc71957c90564e56791a1411e49e3",
     "retire_support.gen": "5daf6da5bc6513e0720ba2803a42640d040aef87469ce68bef2720ca5eb45e13",
     "set_fg_poses.gen": "33f5777e0d9ef83991f06a835c4364e8b3fdd1610b98ae81eba02619ea21b9f2",
-    "shuffle_deck.gen": "807e4bae5a28655abe413d518cef1fa92ecee00eceeafc2910a0caa80129bfc1"
+    "shuffle_deck.gen": "807e4bae5a28655abe413d518cef1fa92ecee00eceeafc2910a0caa80129bfc1",
+    "generate_field.gen": "94e14c6725c396795ad463e605682fdbb8eaa593263b389523911972cb014f70",
+    "spend_prime.gen": "1c71586d4125dd62f4a764f0d6e384ddde28536d71a5115aeea79730fa273209",
+    "white_restore_prime.gen": "7379c05dab254f4acf9fc93c35559d85b6fb85fd1d531c1f926ce34c4d2511ce",
+    "set_active_player.gen": "8f7c27e9575afaf103ed58e234ee14129c3b9fd82e3a3cf4269fd9bde7997c8e",
+    "refresh_fields.gen": "ebc2ca991a1cbd5410340fae356f90dad1ea882ccae51dc0a9b7b7f961fac704"
   },
   "realization_relations": [
     [
@@ -1329,6 +1334,133 @@
           "maximum": 2147483647
         }
       }
+    },
+    "GENERATE_FIELD": {
+      "source": "generate_field.gen",
+      "mutates": true,
+      "effects": [
+        "COLLECTION_TRANSACTION"
+      ],
+      "arguments": {
+        "grant": {
+          "type": "text",
+          "maximum": 256
+        },
+        "field": {
+          "type": "text",
+          "maximum": 256
+        },
+        "field_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "prime": {
+          "type": "text",
+          "maximum": 256
+        },
+        "prime_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        }
+      }
+    },
+    "SPEND_PRIME": {
+      "source": "spend_prime.gen",
+      "mutates": true,
+      "effects": [
+        "COLLECTION_TRANSACTION"
+      ],
+      "arguments": {
+        "grant": {
+          "type": "text",
+          "maximum": 256
+        },
+        "prime": {
+          "type": "text",
+          "maximum": 256
+        },
+        "prime_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "target": {
+          "type": "text",
+          "maximum": 256
+        },
+        "target_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "direction": {
+          "type": "text",
+          "maximum": 256
+        },
+        "amount": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 7
+        }
+      }
+    },
+    "WHITE_RESTORE_PRIME": {
+      "source": "white_restore_prime.gen",
+      "mutates": true,
+      "effects": [
+        "COLLECTION_TRANSACTION"
+      ],
+      "arguments": {
+        "grant": {
+          "type": "text",
+          "maximum": 256
+        },
+        "prime": {
+          "type": "text",
+          "maximum": 256
+        },
+        "prime_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        }
+      }
+    },
+    "SET_ACTIVE_PLAYER": {
+      "source": "set_active_player.gen",
+      "mutates": true,
+      "effects": [
+        "COLLECTION_TRANSACTION"
+      ],
+      "arguments": {
+        "grant": {
+          "type": "text",
+          "maximum": 256
+        },
+        "active_player": {
+          "type": "text",
+          "maximum": 256
+        }
+      }
+    },
+    "REFRESH_FIELDS": {
+      "source": "refresh_fields.gen",
+      "mutates": true,
+      "effects": [
+        "COLLECTION_TRANSACTION"
+      ],
+      "arguments": {
+        "grant": {
+          "type": "text",
+          "maximum": 256
+        },
+        "fields": {
+          "type": "texts",
+          "maximum": 9
+        }
+      }
     }
   },
   "views": {
@@ -1479,11 +1611,15 @@
       },
       "state": {
         "path": "game/sandbox/topology.py",
-        "sha256": "71489aaefb2ff6f3752f44218224a55e103ef3ca5bc67daa67285beb47637831"
+        "sha256": "02dbab15e7a78878f96c9faedeae0e96283f7c80d8f36fdd461f4ced69e7a694"
       },
       "realization": {
         "path": "game/qmo/realization.py",
         "sha256": "693ee2c2befad4f29e9ebf6d7ede4339b2b08dd9a1045926586bdba40a262b33"
+      },
+      "color": {
+        "path": "game/primes/state.py",
+        "sha256": "0dcbb1e03c56c29c65ec71961d88605163530ab5627e68171b390287a7b119fd"
       }
     },
     "inputs": {
@@ -1494,7 +1630,13 @@
       "data/game/configuration_realization/v1/WITNESS_SCHEMA.json": "be2cf78a38c876ee6a5766ee14d63bf7f1c3a86300587379bea0eb58d17ef544",
       "data/game/configuration_realization/v1/ROTATION_CLASS_TABLE.json": "df2fc56010f01d3389a130d651deb1fe1883795d3acafcfca49ec3fcda251d33",
       "data/game/configuration_realization/v1/SOFT_SNAP_V1.json": "4e7a2b18ae3f78d066d1fd6c04d8b1d6d1ecab9669fea6c516c961247301c8a2",
-      "data/game/configuration_realization/v1/ORIENTATION_REALIZATION_V1.json": "cb70cda9c3e152e9b387bbd99f2d31aedaa006309461678537a04bd628f1dc97"
+      "data/game/configuration_realization/v1/ORIENTATION_REALIZATION_V1.json": "cb70cda9c3e152e9b387bbd99f2d31aedaa006309461678537a04bd628f1dc97",
+      "data/game/pass-04-runtime.json": "02788120c5aa0caaf9c656b97c8cfe0b68600ba46196fab7d38a3328be6e2e38",
+      "data/cycles/cycle_01/primes/status.json": "6dc178b8c5d544d8e497ee71eba63031e30291fec7399e09e2caf441be6685be",
+      "data/cycles/cycle_01/primes/working-model.json": "5f2d6ab23fe76d0193bc1185dc401412a8db3cd2781d0d6048c1b69792baf82b",
+      "data/cycles/cycle_01/utilities/restore_prime.json": "033ce2b76f65625530359475fb0cecde3bc1ae92f5ba157f61274a31597071f2",
+      "data/game/match.json": "17440fa774ec3a7048b450966cd32401e5212ce5054f94f1cf041702947149e7",
+      "data/topology/configuration-spaces.json": "6a7d59774fad10c9f92d6eb6ccd07299a368639427e890b52a45ad502f133b90"
     }
   }
 }

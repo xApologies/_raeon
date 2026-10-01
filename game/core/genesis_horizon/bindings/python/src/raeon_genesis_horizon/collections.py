@@ -169,6 +169,18 @@ class Collections:
             deny()
         return value
 
+    def authorize_route(self, name, source, target):
+        # Source-pinned application extensions may authorize one exact route
+        # inside their admitted candidate. Existing owner routes stay unchanged.
+        if (self.admitted and self.admitted['kind'] == 'extension' and self.context and
+                self.extension and hasattr(self.extension, 'route_allowed') and
+                self.extension.route_allowed(name, source, target)):
+            if source not in self.state['collections'] or target not in self.state['collections']:
+                deny()
+            return
+        self.owned(source)
+        self.owned(target)
+
     def compare(self, operation, left, right):
         if not self.ints.run(operation, left, right):
             deny()

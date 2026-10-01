@@ -1,0 +1,870 @@
+{
+  "schema_version": 1,
+  "required_cases": 108,
+  "cases": [
+    {
+      "id": "P4-001",
+      "group": "ENTRY",
+      "title": "inherit latest Pass3B",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-002",
+      "group": "ENTRY",
+      "title": "main untouched",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-003",
+      "group": "ENTRY",
+      "title": "_bricked read-only",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-004",
+      "group": "ENTRY",
+      "title": "privacy retained",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-005",
+      "group": "ENTRY",
+      "title": "host-risk ledger retained",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-006",
+      "group": "FIELD",
+      "title": "native identity immutable",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-007",
+      "group": "FIELD",
+      "title": "resolved field starts native magnitude",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-008",
+      "group": "FIELD",
+      "title": "resolved field starts READY",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-009",
+      "group": "FIELD",
+      "title": "generate current magnitude",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-010",
+      "group": "FIELD",
+      "title": "Rainbow Road generation",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-011",
+      "group": "FIELD",
+      "title": "READY->USED",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-012",
+      "group": "FIELD",
+      "title": "USED repeat rejected",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-013",
+      "group": "FIELD",
+      "title": "active switch no refresh",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-014",
+      "group": "FIELD",
+      "title": "trusted refresh primitive",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-015",
+      "group": "FIELD",
+      "title": "no guessed refresh",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-016",
+      "group": "FIELD",
+      "title": "field degrade",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-017",
+      "group": "FIELD",
+      "title": "field restore to native max",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-018",
+      "group": "FIELD",
+      "title": "current color derived",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-019",
+      "group": "FIELD",
+      "title": "zero destroys",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-020",
+      "group": "FIELD",
+      "title": "FGs to Graveyard",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-021",
+      "group": "FIELD",
+      "title": "space updates",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-022",
+      "group": "FIELD",
+      "title": "incident emergents collapse",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-023",
+      "group": "FIELD",
+      "title": "destroyed cannot generate",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-024",
+      "group": "PRIME",
+      "title": "14 identities",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-025",
+      "group": "PRIME",
+      "title": "Prime != slot",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-026",
+      "group": "PRIME",
+      "title": "initial H/C",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-027",
+      "group": "PRIME",
+      "title": "healthy state",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-028",
+      "group": "PRIME",
+      "title": "charged state",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-029",
+      "group": "PRIME",
+      "title": "damaged non-operational",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-030",
+      "group": "PRIME",
+      "title": "inactive fixed slot",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-031",
+      "group": "PRIME",
+      "title": "health-first restore",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-032",
+      "group": "PRIME",
+      "title": "Green (1,0)+4=(4,1)",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-033",
+      "group": "PRIME",
+      "title": "shield-first degrade",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-034",
+      "group": "PRIME",
+      "title": "(4,3)-5=(2,0)",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-035",
+      "group": "PRIME",
+      "title": "partial spend",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-036",
+      "group": "PRIME",
+      "title": "repeated spend",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-037",
+      "group": "PRIME",
+      "title": "spend H unchanged",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-038",
+      "group": "PRIME",
+      "title": "Restore direction",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-039",
+      "group": "PRIME",
+      "title": "Degrade direction",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-040",
+      "group": "PRIME",
+      "title": "Universal direction",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-041",
+      "group": "PRIME",
+      "title": "damaged spend rejected",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-042",
+      "group": "PRIME",
+      "title": "C=0 state",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-043",
+      "group": "PRIME",
+      "title": "H=0 clears C",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-044",
+      "group": "PRIME",
+      "title": "inactive no Graveyard",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-045",
+      "group": "PRIME",
+      "title": "ordinary no reactivation",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-046",
+      "group": "PRIME",
+      "title": "White Restore (0,0)->(1,0)",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-047",
+      "group": "PRIME",
+      "title": "White not full heal",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-048",
+      "group": "PRIME",
+      "title": "overflow not invented",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-049",
+      "group": "AUTHORITY",
+      "title": "ACTIVE friendly Restore",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-050",
+      "group": "AUTHORITY",
+      "title": "ACTIVE hostile Degrade",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-051",
+      "group": "AUTHORITY",
+      "title": "ACTIVE hostile Restore rejected",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-052",
+      "group": "AUTHORITY",
+      "title": "ACTIVE friendly Degrade rejected",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-053",
+      "group": "AUTHORITY",
+      "title": "DEFENSE friendly Restore",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-054",
+      "group": "AUTHORITY",
+      "title": "DEFENSE hostile Degrade rejected",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-055",
+      "group": "AUTHORITY",
+      "title": "DEFENSE Universal Restore",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-056",
+      "group": "AUTHORITY",
+      "title": "DEFENSE Universal Degrade rejected",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-057",
+      "group": "AUTHORITY",
+      "title": "active-player switch",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-058",
+      "group": "AUTHORITY",
+      "title": "switch preserves availability",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-059",
+      "group": "AUTHORITY",
+      "title": "field no direct hostile",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-060",
+      "group": "AUTHORITY",
+      "title": "Prime not tap-limited",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-061",
+      "group": "TRANSACTION",
+      "title": "atomic generation",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-062",
+      "group": "TRANSACTION",
+      "title": "atomic spend",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-063",
+      "group": "TRANSACTION",
+      "title": "stale revision reject",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-064",
+      "group": "TRANSACTION",
+      "title": "retry idempotent",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-065",
+      "group": "TRANSACTION",
+      "title": "delivery recovery",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-066",
+      "group": "TRANSACTION",
+      "title": "concurrent spend safe",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-067",
+      "group": "TRANSACTION",
+      "title": "concurrent field use safe",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-068",
+      "group": "TRANSACTION",
+      "title": "checkpoint Prime",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-069",
+      "group": "TRANSACTION",
+      "title": "checkpoint field",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-070",
+      "group": "TRANSACTION",
+      "title": "checkpoint authority",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-071",
+      "group": "TRANSACTION",
+      "title": "deterministic replay",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-072",
+      "group": "TRANSACTION",
+      "title": "Road history persists",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-073",
+      "group": "PRIVACY",
+      "title": "owner view",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-074",
+      "group": "PRIVACY",
+      "title": "opponent bounded",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-075",
+      "group": "PRIVACY",
+      "title": "public bounded",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-076",
+      "group": "PRIVACY",
+      "title": "no native leak",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-077",
+      "group": "PRIVACY",
+      "title": "Prime visibility bounded",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-078",
+      "group": "PRIVACY",
+      "title": "color deltas filtered",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-079",
+      "group": "SCENARIO",
+      "title": "A Field->Prime",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-080",
+      "group": "SCENARIO",
+      "title": "B partial repeated spend",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-081",
+      "group": "SCENARIO",
+      "title": "C shield damage",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-082",
+      "group": "SCENARIO",
+      "title": "D health restore",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-083",
+      "group": "SCENARIO",
+      "title": "E field degrade/restore",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-084",
+      "group": "SCENARIO",
+      "title": "F field destruction",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-085",
+      "group": "SCENARIO",
+      "title": "G ACTIVE/DEFENSE tempo",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-086",
+      "group": "SCENARIO",
+      "title": "H defense counterattack rejected",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-087",
+      "group": "SCENARIO",
+      "title": "I reactivation",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-088",
+      "group": "SCENARIO",
+      "title": "J recovery/privacy",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-089",
+      "group": "INTEGRATION",
+      "title": "Genesis handlers required",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-090",
+      "group": "INTEGRATION",
+      "title": "Rainbow Road required",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-091",
+      "group": "INTEGRATION",
+      "title": "Hypervisor agnostic",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-092",
+      "group": "INTEGRATION",
+      "title": "Pass3B retained",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-093",
+      "group": "INTEGRATION",
+      "title": "original Pass3 re-audit/P3-047",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-094",
+      "group": "INTEGRATION",
+      "title": "60 fields retained",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-095",
+      "group": "INTEGRATION",
+      "title": "fusion retained",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-096",
+      "group": "INTEGRATION",
+      "title": "emergence retained",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-097",
+      "group": "INTEGRATION",
+      "title": "dynamic 3..9 retained",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-098",
+      "group": "INTEGRATION",
+      "title": "QMO hashes retained",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-099",
+      "group": "INTEGRATION",
+      "title": "validators green",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-100",
+      "group": "INTEGRATION",
+      "title": "regressions green",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-101",
+      "group": "INTEGRATION",
+      "title": "gameplay specs green",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-102",
+      "group": "INTEGRATION",
+      "title": "Genesis deterministic",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-103",
+      "group": "INTEGRATION",
+      "title": "offline package complete",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-104",
+      "group": "INTEGRATION",
+      "title": "no runtime Git/network/checkouts",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-105",
+      "group": "INTEGRATION",
+      "title": "receipt exact",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-106",
+      "group": "INTEGRATION",
+      "title": "OPEN gates remain OPEN",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-107",
+      "group": "INTEGRATION",
+      "title": "whole game PREPRODUCTION",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    },
+    {
+      "id": "P4-108",
+      "group": "INTEGRATION",
+      "title": "scope honest",
+      "status": "NOT_RUN",
+      "mandatory": true,
+      "evidence": []
+    }
+  ]
+}

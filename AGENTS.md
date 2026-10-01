@@ -11,3 +11,5 @@ Verified predecessor: [Pass-2 execution record](development/modules/core-game/PA
 Current Pass-3 work: [execution record](development/modules/core-game/PASS_03_EXECUTION.md). Continue `codex/raeon-pass-03` from corrected Pass 2 (`d991278`). Preserve its privacy regressions; main stays unmerged.
 
 Current Pass-3B continuation: [execution record](development/modules/core-game/PASS_03B_EXECUTION.md). Inherit completed Pass 3 at `33f4139` on `codex/raeon-pass-03b`. Preserve prior tests and privacy correction; do not merge main. The new realization authority closes the named historical pose/fusion/emergence gaps, without regenerating QMO sources.
+
+Current Pass-4 continuation: [execution record](development/modules/core-game/PASS_04_EXECUTION.md). Inherit completed Pass 3B at `d644a36` on `codex/raeon-pass-04`. Preserve all prior tests, privacy, QMO authority and HOST-RUNTIME-001 qualification. No main merge or invented refresh/scheduler rules.

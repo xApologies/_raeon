@@ -9,10 +9,13 @@ import sys
 import tempfile
 import zipfile
 
-VERSION = '0.3.1'
+VERSION = '0.4.0'
 PREFIXES = {
     'hypervisor': ['platform/shared/python_hypervisor/', 'tests/unit/hypervisor/'],
-    'horizon': ['tools/genesis_runtime_test_worker.py', 'tools/genesis_runtime_pass03b.py', 'provenance/decisions/raeon-pass-03b.json',
+    'horizon': ['game/primes/', 'data/topology/configuration-spaces.json', 'tools/genesis_runtime_pass04.py',
+                'provenance/decisions/raeon-pass-04.json', 'provenance/imports/raeon-pass-04/',
+                'development/modules/core-game/PASS_04_EXECUTION.md', 'development/modules/core-game/PASS_04_RECEIPT.md',
+                'development/modules/core-game/HOST_RUNTIME_RISKS.json', 'tools/genesis_runtime_test_worker.py', 'tools/genesis_runtime_pass03b.py', 'provenance/decisions/raeon-pass-03b.json',
                 'provenance/imports/raeon-pass-03b/entry.json',
                 'provenance/imports/raeon-pass-03b/handoff/acceptance/PASS_03B_ACCEPTANCE.json',
                 'provenance/imports/raeon-pass-03b/handoff/acceptance/BLOCKED_PASS3_TARGETS.json',
@@ -211,6 +214,7 @@ def verify_distributions(root, output):
         'import genesis_runtime_isolation;genesis_runtime_isolation.install()\n', encoding='utf8')
     env['RAEON_ISOLATION_ROOT'] = str(extraction)
     env['RAEON_FORBIDDEN_CHECKOUT'] = str(root.parent / '_bricked')
+    env['RAEON_ORIGINAL_CHECKOUT'] = str(root)
     temp = extraction / 'temporary files'
     temp.mkdir()
     env.update(TEMP=str(temp), TMP=str(temp), PIP_CONFIG_FILE=os.devnull, PIP_NO_CACHE_DIR='1', PYTHONNOUSERSITE='1')
@@ -228,6 +232,7 @@ def verify_distributions(root, output):
     # sources are also shipped and remain runnable with the test command.
     run('pass-03-demo', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless', '--application', 'raeon', '--scenario', 'topology'])
     run('pass-03b-demo', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless', '--application', 'raeon', '--scenario', 'realization'])
+    run('pass-04-demo', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless', '--application', 'raeon', '--scenario', 'color'])
     run('unit-tests', [str(python), '-B', 'tools/genesis_runtime_test_worker.py', 'suite', 'tests/unit/hypervisor', 'build/genesis_runtime/evidence/tests-unit.json'])
     run('integration-tests', [str(python), '-B', 'tools/genesis_runtime_test_worker.py', 'suite', 'tests/integration/genesis_horizon', 'build/genesis_runtime/evidence/tests-integration.json'])
     lock = json.loads((extraction / 'data/platform/genesis-runtime-lock.json').read_text())
@@ -250,6 +255,15 @@ def verify_distributions(root, output):
             raise RuntimeError('Missing QMO failed for an unrelated reason')
     finally:
         held.rename(missing)
+    missing = extraction / 'data/game/pass-04-runtime.json'
+    held = missing.with_name(missing.name + '.held-for-negative-test')
+    missing.rename(held)
+    try:
+        negative = run('missing-pass04-input', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless', '--application', 'raeon', '--scenario', 'color'], expected_exit=1)
+        if 'pass-04-runtime.json' not in negative.stderr:
+            raise RuntimeError('Missing Pass-4 input failed for an unrelated reason')
+    finally:
+        held.rename(missing)
     original_build = json.loads((output / 'evidence/build.json').read_text())
     relocated_build = json.loads((extraction / 'build/genesis_runtime/evidence/build.json').read_text())
     if original_build != relocated_build:
@@ -263,7 +277,7 @@ def verify_distributions(root, output):
                  'probes_passed': True, 'violations': violations, 'events_recorded': len(traces),
                  'trace_directory': str(extraction / 'isolation traces'),
                  'file_closure': ['bundle and writable extraction', 'declared Python installation', 'Windows OS prerequisite']}
-    result = {'status': 'PASS', 'pass03b_scene': 'PASS', 'isolation': isolation, 'missing_dependency_negative': 'PASS', 'missing_qmo_negative': 'PASS',
+    result = {'status': 'PASS', 'pass03b_scene': 'PASS', 'pass04_scene': 'PASS', 'missing_pass04_input_negative': 'PASS', 'isolation': isolation, 'missing_dependency_negative': 'PASS', 'missing_qmo_negative': 'PASS',
               'physical_path_bytecode_equal': True, 'extraction': str(extraction), 'offline_install': True, 'python_prerequisite': sys.version.split()[0],
               'source_commit': next(iter(manifests.values()))['source_commit'], 'commands': commands,
               'archives': distributions, 'archive_manifest_files_verified': sum(len(m['files']) for m in manifests.values())}

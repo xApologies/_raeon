@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "repository": "xApologies/_raeon",
+  "pass_03b_branch": "codex/raeon-pass-03b",
+  "pass_03b_head_at_pouch_creation": "d644a361aa2ce788a1da991b15e3b8e3be5c7cba",
+  "main_sha": "69a0030805b8c3858c877a514e2f50644421115a",
+  "pass_03b": "85/85",
+  "original_pass_03": "97 PASS / 1 BLOCKED / 0 FAIL",
+  "remaining_case": "P3-047 current color/output availability",
+  "target_branch": "codex/raeon-pass-04",
+  "whole_game_phase": "PREPRODUCTION"
+}

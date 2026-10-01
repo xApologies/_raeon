@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "files": {
+    "00_EXECUTE_THIS_FIRST.md": {
+      "bytes": 6043,
+      "sha256": "a554f24559528219121e02e52f1131510b3881813d585d442e6c502c3b7d28c9"
+    },
+    "CURRENT_STATE.json": {
+      "bytes": 468,
+      "sha256": "c0242f990c38faed0186fbfd59a0b9814c4f91da538ac301eb1e8058fbe88671"
+    },
+    "PASS_04_ACCEPTANCE.json": {
+      "bytes": 18807,
+      "sha256": "bf195e6cb1f54e1625c9da0f3be1e68cf0934e9d0c2d9cbec09c342a95656594"
+    }
+  }
+}

@@ -112,7 +112,7 @@ def audit(root, output):
     remote = git('ls-remote','origin','refs/heads/'+branch).split()
     main = git('ls-remote','origin','refs/heads/main').split()[0]
     clean = not git('status','--porcelain')
-    mark([97],ancestry and branch in ('codex/raeon-pass-03','codex/raeon-pass-03b') and remote and remote[0]==head and clean and main==MAIN,
+    mark([97],ancestry and branch in ('codex/raeon-pass-03','codex/raeon-pass-03b','codex/raeon-pass-04') and remote and remote[0]==head and clean and main==MAIN,
          ['Git ancestry, remote SHA, main SHA, clean working-tree checks'])
     mark([96,98],len(cases)==98 and (root/'development/modules/core-game/PASS_03_RECEIPT.md').is_file(),
          ['unchanged 98 requirement IDs','PASS_03_RECEIPT.md','PASS_03_EXECUTION.md'])
@@ -127,6 +127,9 @@ def audit(root, output):
     if (root/'provenance/decisions/raeon-pass-03b.json').is_file():
         from genesis_runtime_pass03b import reaudit
         result = reaudit(root, output, result, passed, current)
+    if (root/'provenance/decisions/raeon-pass-04.json').is_file():
+        from genesis_runtime_pass04 import reaudit as color_reaudit
+        result = color_reaudit(root, output, result, passed, current)
     write(evidence/'pass-03-acceptance.json',result)
     if result['failed']:
         raise RuntimeError('Pass-3 implemented-scope evidence failed; inspect pass-03-acceptance.json')

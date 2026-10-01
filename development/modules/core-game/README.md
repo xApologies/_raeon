@@ -59,3 +59,5 @@ See [current specification](../../../design/game/GAME_DESIGN_DOCUMENT.md) and [O
 Accepted 2026-09-29 design is recorded in the [full migration manifest](../../../data/manifests/full-migration-2026-09-29.json). This resolves only its named design items; implementation and every development gate remain OPEN.
 
 Pass 3B live topology implementation and its bounded verification are tracked in [execution](PASS_03B_EXECUTION.md) and [receipt](PASS_03B_RECEIPT.md). Whole-module gate acceptance is unchanged.
+
+Current bounded implementation: [Pass 4 execution](PASS_04_EXECUTION.md), [receipt](PASS_04_RECEIPT.md), and [host-risk ledger](HOST_RUNTIME_RISKS.json). Whole-game PREPRODUCTION; full scheduler and native-device acceptance remain OPEN.

@@ -39,6 +39,7 @@ class Extension:
         self.s = service
         self.corpus = modules['corpus'].Corpus(service.h.root)
         self.realization = modules['realization'].Realization(service.h.root, self.corpus)
+        self.color = modules['color'].Mechanics(self)
 
     @property
     def state(self):
@@ -47,6 +48,7 @@ class Extension:
     def initialize(self):
         self.s.state['topology'] = {'abi': ABI, 'source_lock': self.corpus.lock_hash,
             'realization_lock': self.realization.hash, 'spaces': {}, 'poses': {}, 'fields': {}, 'links': {}, 'emergents': {}}
+        self.color.initialize()
         self.synchronize()
 
     def definition(self, definition, record):
@@ -102,6 +104,7 @@ class Extension:
                 evaluations = self.query_verified(name).get('realizations', [])
                 space['capture'] = evaluations[0] if len(evaluations) == 1 else None
         self.update_emergents()
+        self.color.synchronize()
 
     def owned_space(self, name, expected):
         collection = self.s.owned(name, ['CONFIGURATION_SPACE'])
@@ -114,6 +117,8 @@ class Extension:
         self.corpus.verify()
         self.realization.verify()
         args = self.s.context['arguments']
+        if spec.get('abi') == self.color.state['abi']:
+            return self.color.admission(spec)
         if spec.get('abi') != ABI:
             reject()
         collection, space = self.owned_space(args['space'], args['membership_revision'])
@@ -206,6 +211,7 @@ class Extension:
                'active':True,'ordinary':qmo['type']=='LocalManifoldQMO',
                'manifold_id':qmo.get('manifold_id'),'proof':copy.deepcopy(proof),'supports':supports or [],
                'source_sha256':digest(qmo),'realization_lock':self.realization.hash}
+        self.color.field_created(field)
         self.state['fields'][identity]=field
         space.update(active_field=identity,lifecycle='RESOLVED',capture=None)
         self.s.h._fault('after_field')
@@ -244,7 +250,12 @@ class Extension:
             self.state['emergents']=expected
             self.s.h._fault('after_emergents')
 
+    def route_allowed(self, name, source, target):
+        return self.color.route_allowed(name,source,target)
+
     def transform(self, plan):
+        if plan['spec'].get('abi') == self.color.state['abi']:
+            return self.color.transform(plan)
         op=plan['spec']['operation'];name=plan['space'];space=self.state['spaces'][name]
         if op=='set_poses':
             for identity,value in plan['poses'].items():
@@ -324,6 +335,7 @@ class Extension:
         else:reject()
 
     def validate(self):
+        self.color.validate()
         if self.state['abi']!=ABI or self.state['source_lock']!=self.corpus.lock_hash or self.state['realization_lock']!=self.realization.hash:
             reject()
         if self.state['links'] or self.state['emergents']!=self.expected_emergents():reject()
@@ -431,4 +443,4 @@ class Extension:
                 view['objects'][identity]={'identity':self.s.b.resources[self.s.b.bindings[identity]]['payload']['identity'],
                                           'semantic_id':identity,'kind':'EMERGENT_FIELD',
                                           'owner':None,'fields':copy.deepcopy(emergent)}
-        return view
+        return self.color.project(view)

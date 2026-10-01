@@ -1,3 +1,4 @@
+import {matchesPass04} from './pass-04-contract.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
@@ -13,17 +14,19 @@ export function pass03b(root) {
   if (hash(bytes) !== acceptedDecisionHash) throw new Error('Pass-3B amendment integrity');
   const decision = JSON.parse(bytes);
   for (const [relative, expected] of Object.entries({...decision.sources, ...decision.preserved_tests})) {
-    if (hash(fs.readFileSync(path.join(root, relative))) !== expected) throw new Error('Pass-3B source integrity: ' + relative);
+    const actual = hash(fs.readFileSync(path.join(root, relative)));
+    if (actual !== expected && !matchesPass04(root, relative, actual, expected)) throw new Error('Pass-3B source integrity: ' + relative);
   }
   for (const [relative, entry] of Object.entries(decision.changes)) {
-    if (hash(fs.readFileSync(path.join(root, relative))) !== entry.after_sha256) throw new Error('Pass-3B changed source integrity: ' + relative);
+    const actual = hash(fs.readFileSync(path.join(root, relative)));
+    if (actual !== entry.after_sha256 && !matchesPass04(root, relative, actual, entry.after_sha256)) throw new Error('Pass-3B changed source integrity: ' + relative);
   }
   return decision;
 }
 
 export function matchesPass03b(root, file, actual, historical) {
   const entry = pass03b(root)?.changes[file];
-  return Boolean(entry && entry.before_sha256 === historical && entry.after_sha256 === actual);
+  return Boolean(entry && entry.before_sha256 === historical && (entry.after_sha256 === actual || matchesPass04(root, file, actual, entry.after_sha256))) || matchesPass04(root, file, actual, historical);
 }
 
 export function pass03bSources(root, inventory, prior) {

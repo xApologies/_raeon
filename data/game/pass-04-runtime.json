@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "authority": "USER_AUTHORIZED_PASS_04",
+  "source": "provenance/imports/raeon-pass-04/handoff/00_EXECUTE_THIS_FIRST.md",
+  "colors": [
+    null,
+    "RED",
+    "ORANGE",
+    "YELLOW",
+    "GREEN",
+    "BLUE",
+    "VIOLET",
+    "WHITE"
+  ],
+  "actions": {
+    "GENERATE_FIELD": {
+      "kind": "extension",
+      "abi": "raeon-color-prime-values-v1",
+      "operation": "GENERATE_FIELD",
+      "effect_source": "conformance:pass04:generate_field",
+      "requires": [
+        "ordinary_live_source",
+        "current_magnitude",
+        "READY_once",
+        "owned_prime",
+        "authority_window",
+        "health_before_charge",
+        "no_overflow",
+        "fresh_revisions",
+        "road_close"
+      ]
+    },
+    "SPEND_PRIME": {
+      "kind": "extension",
+      "abi": "raeon-color-prime-values-v1",
+      "operation": "SPEND_PRIME",
+      "effect_source": "conformance:pass04:spend_prime",
+      "requires": [
+        "healthy_charged_source",
+        "partial_charge_only",
+        "family_direction",
+        "authority_window",
+        "target_side",
+        "charge_before_health",
+        "native_maximum",
+        "zero_support_retirement",
+        "fresh_revisions",
+        "road_close"
+      ]
+    },
+    "WHITE_RESTORE_PRIME": {
+      "kind": "extension",
+      "abi": "raeon-color-prime-values-v1",
+      "operation": "WHITE_RESTORE_PRIME",
+      "effect_source": "conformance:pass04:white_restore_prime",
+      "requires": [
+        "admitted_white_restore",
+        "friendly_INACTIVE",
+        "same_identity_slot",
+        "H_1_C_0",
+        "fresh_revisions",
+        "road_close"
+      ]
+    },
+    "SET_ACTIVE_PLAYER": {
+      "kind": "extension",
+      "abi": "raeon-color-prime-values-v1",
+      "operation": "SET_ACTIVE_PLAYER",
+      "effect_source": "conformance:pass04:set_active_player",
+      "requires": [
+        "trusted_match_control",
+        "explicit_player",
+        "no_refresh"
+      ]
+    },
+    "REFRESH_FIELDS": {
+      "kind": "extension",
+      "abi": "raeon-color-prime-values-v1",
+      "operation": "REFRESH_FIELDS",
+      "effect_source": "conformance:pass04:refresh_fields",
+      "requires": [
+        "trusted_match_control",
+        "ordinary_live_sources",
+        "explicit_fields",
+        "no_scheduler"
+      ]
+    }
+  },
+  "accepted_sources": [
+    "data/cycles/cycle_01/primes/status.json",
+    "data/cycles/cycle_01/primes/working-model.json",
+    "data/cycles/cycle_01/utilities/restore_prime.json",
+    "data/game/match.json",
+    "data/topology/configuration-spaces.json"
+  ],
+  "bounded_delivery": "Whole current field magnitude to one friendly bound ordinary Prime; reject if not wholly admissible. Source output allocation remains OPEN beyond this admitted path.",
+  "initial_active_player": null,
+  "automatic_refresh": false,
+  "derived_and_emergent_generation": "OPEN",
+  "self_spend_targeting": "OPEN_REJECTED",
+  "open_items": [
+    "Exact refresh boundary and full turn/phase/priority/reaction scheduler",
+    "Starting hand, draw cadence, mulligan, first-player choice",
+    "Overflow beyond H/C or field capacity: reject; no discard or redirection",
+    "Generic Utility timing and cost; White reactivation requires admitted policy",
+    "Exhaustive targeting and output allocation; self-spend target rejected",
+    "Victory/loss/deck exhaustion, timer, temporary-space expiry",
+    "Derived additions/splitting/recursive fusion-emergence and derived/emergent production cadence",
+    "Native UI/graphics and unrestricted host-runtime stability"
+  ],
+  "whole_game_phase": "PREPRODUCTION"
+}

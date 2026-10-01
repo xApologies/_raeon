@@ -256,8 +256,7 @@ class NativeBackend(ReferenceBackend):
             if admission['payload']['operation'] != 'COLLECTION_ROUTE' or admission['payload']['source'] != geo['resource_id'] or sector != 'GENERIC' or attrs.get('corridor') != 'application-local':
                 raise BindingError('INVALID_ROUTE')
             source, target = unit['source'], unit['target']
-            self.collections.owned(source)
-            self.collections.owned(target)
+            self.collections.authorize_route(unit['name'], source, target)
             edge_id = source + '-' + target
             if edge_id not in self.local_graph.edges:
                 self.local_graph.add_edge(CorridorEdge(edge_id, source, target, ('GENERIC',), ('ANY',), ('ANY',), 1.0, 1.0, 1, 1, 'White', True))

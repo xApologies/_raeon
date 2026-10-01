@@ -1,0 +1,10 @@
+genesis 0.1.0
+module refresh_fields {
+  en fabric : FABRIC = mount "fabric://horizon/locked-v1"
+  en region : REGION = alloc fabric cells 32
+  en match : GEOMETRIC = instantiate fabric region mmo @bound_match
+  admit match as permission @{"operation":"COLLECTION_TRANSACTION","abi":"state-collections-v1","action":{"kind":"extension","abi":"raeon-color-prime-values-v1","operation":"REFRESH_FIELDS","effect_source":"conformance:pass04:refresh_fields","requires":["trusted_match_control","ordinary_live_sources","explicit_fields","no_scheduler"]}}
+  transform match with permission as candidate @{"operator":"COLLECTION_TRANSACTION"}
+  assert closure candidate as closed
+  export candidate : GEOMETRIC
+}

@@ -76,6 +76,7 @@ def probes():
         'network_connect': connection_probe,
         'network_dns': lambda: socket.getaddrinfo('example.com', 443),
         'git': lambda: subprocess.run(['git', '--version'], check=True),
+        'original_raeon_checkout': lambda: Path(os.environ['RAEON_ORIGINAL_CHECKOUT']).joinpath('AGENTS.md').read_bytes(),
         'external_checkout': lambda: Path(os.environ['RAEON_FORBIDDEN_CHECKOUT']).joinpath('README.md').read_bytes(),
     }.items():
         try:

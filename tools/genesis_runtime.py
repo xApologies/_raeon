@@ -117,7 +117,7 @@ def main():
         commands.add_parser(action)
     demo_parser = commands.add_parser('demo')
     demo_parser.add_argument('--headless', action='store_true', required=True)
-    demo_parser.add_argument('--scenario', choices=['empty', 'cards', 'topology', 'realization'], default='empty')
+    demo_parser.add_argument('--scenario', choices=['empty', 'cards', 'topology', 'realization', 'color'], default='empty')
     demo_parser.add_argument('--application', choices=['horizon-conformance', 'raeon'], default='horizon-conformance')
     tests = commands.add_parser('upstream-test')
     tests.add_argument('--domains', type=int, nargs='+', default=[1, 2, 3, 4, 5, 8, 9, 10, 13, 14, 15, 16, 17])
@@ -157,6 +157,11 @@ def main():
                 result['pass_03b'] = pass03b.audit(ROOT, BUILD)
                 if result['pass_03b']['status'] != 'PASS':
                     raise RuntimeError('Pass-3B acceptance incomplete; inspect pass-03b-acceptance.json')
+            if (ROOT / 'provenance/decisions/raeon-pass-04.json').is_file():
+                import genesis_runtime_pass04 as pass04
+                result['pass_04'] = pass04.audit(ROOT, BUILD)
+                if result['pass_04']['status'] != 'PASS':
+                    raise RuntimeError('Pass-4 acceptance incomplete; inspect pass-04-acceptance.json')
             if any(result[key]['status'] != 'PASS' for key in ['pass_02', 'projection_correction']) or result['status'] != 'PASS':
                 print(json.dumps(result, indent=2))
                 raise RuntimeError('Audit incomplete; inspect named failing acceptance evidence')
@@ -170,7 +175,10 @@ def main():
             result['upstream'] = upstream_test([1,2,3,4,5,8,9,10,13,14,15,16,17])
             write_json(BUILD / 'evidence/tests-source.json', {'status': 'PASS', 'implementation_sha256': distribution.implementation_digest(ROOT)})
         elif args.command == 'demo' and args.application == 'raeon':
-            if args.scenario == 'realization':
+            if args.scenario == 'color':
+                import genesis_runtime_pass04 as pass04
+                result = pass04.demo(ROOT, BUILD)
+            elif args.scenario == 'realization':
                 import genesis_runtime_pass03b as pass03b
                 result = pass03b.demo(ROOT, BUILD)
             elif args.scenario == 'topology':
