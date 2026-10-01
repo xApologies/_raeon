@@ -1,6 +1,6 @@
 # Pass 4 receipt
 
-Status: **107/108 execution cases passed; final receipt/push audit pending**.
+Status: **PASS - 108/108 Pass-4 cases**.
 Original Pass 3 now passes **98/98**, including P3-047 current-color/availability carryover. Pass 3B remains **85/85**. Whole-game **PREPRODUCTION**.
 
 ## Git and inheritance
@@ -8,7 +8,7 @@ Original Pass 3 now passes **98/98**, including P3-047 current-color/availabilit
 - Branch: `codex/raeon-pass-04`
 - Starting Pass-3B SHA: `d644a361aa2ce788a1da991b15e3b8e3be5c7cba`
 - Validated implementation ending SHA and verified remote SHA: `0c0bfe128cfd45655075ddea28d14e3e00c5388e`
-- Receipt audit HEAD/remote: `0c0bfe128cfd45655075ddea28d14e3e00c5388e`
+- Receipt audit HEAD/remote: `f1b5aede39be01d4835e433fdb98429c249b2538`
 - Main: `69a0030805b8c3858c877a514e2f50644421115a`, unchanged and unmerged.
 - A later documentation-only commit seals this record. The exact final clean HEAD/remote are checked and recorded by `tools/genesis_runtime.py audit` in `build/genesis_runtime/evidence/pass-04-acceptance.json`.
 - `_bricked` remains read-only and clean at `c89676fc26000ae6f5fdad66a56e118b285d9b1d`. Runtime uses the locked dependency copy under this repository.

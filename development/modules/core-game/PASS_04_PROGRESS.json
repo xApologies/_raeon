@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "IMPLEMENTATION_VALIDATED",
+  "status": "PASS",
   "branch": "codex/raeon-pass-04",
   "starting_sha": "d644a361aa2ce788a1da991b15e3b8e3be5c7cba",
   "ending_sha": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
@@ -9,7 +9,7 @@
   "clean": true,
   "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
   "total": 108,
-  "passed": 107,
+  "passed": 108,
   "cases": [
     {
       "id": "P4-001",
@@ -1236,7 +1236,7 @@
       "id": "P4-105",
       "group": "INTEGRATION",
       "title": "receipt exact",
-      "status": "FAIL",
+      "status": "PASS",
       "mandatory": true,
       "evidence": [
         "exact implementation start/end/remote/main SHA; live final HEAD/remote in this audit",
@@ -2371,8 +2371,8 @@
   "whole_game_phase": "PREPRODUCTION",
   "native_devices": "NOT_RUN",
   "receipt_scope": "VALIDATED_IMPLEMENTATION_AND_ARCHIVES",
-  "audited_closure_sha": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
-  "audited_closure_remote_sha": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+  "audited_closure_sha": "f1b5aede39be01d4835e433fdb98429c249b2538",
+  "audited_closure_remote_sha": "f1b5aede39be01d4835e433fdb98429c249b2538",
   "closure_note": "Ending/remote SHA identify the validated implementation/archive commit. A subsequent documentation-only commit seals this receipt. The final exact clean HEAD/remote receipt is emitted by tools/genesis_runtime.py audit.",
   "distribution_verification": {
     "archive_manifest_files_verified": 1584,
@@ -4979,7 +4979,7 @@
       "status": "PASS",
       "passed": 74,
       "total": 74,
-      "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+      "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
       "cases": [
         {
           "id": "SRC-01",
@@ -5647,8 +5647,8 @@
       "total": 83,
       "branch": "codex/raeon-pass-04",
       "starting_sha": "23ebfc3be3a4e6ae4883793bfc99b1dbfae67bf8",
-      "ending_sha": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
-      "remote_sha": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+      "ending_sha": "f1b5aede39be01d4835e433fdb98429c249b2538",
+      "remote_sha": "f1b5aede39be01d4835e433fdb98429c249b2538",
       "main_sha": "69a0030805b8c3858c877a514e2f50644421115a",
       "clean": true,
       "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
@@ -5671,7 +5671,7 @@
           "evidence": [
             "git merge-base --is-ancestor 23ebfc3be3a4e6ae4883793bfc99b1dbfae67bf8 HEAD"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -5694,7 +5694,7 @@
             "pass-02-baseline/pass-01-acceptance.json",
             "test_empty_baseline_and_native_inventory"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -5716,7 +5716,7 @@
           "evidence": [
             "upstream-readonly.json"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -5740,7 +5740,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -5764,7 +5764,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -5788,7 +5788,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -5812,7 +5812,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -5836,7 +5836,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -5860,7 +5860,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -5883,7 +5883,7 @@
             "Git changed-path check",
             "repository-validation.json"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -5907,7 +5907,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -5951,7 +5951,7 @@
             "test_pass_02_adversarial.Adversarial.test_checkpoint_corruption_and_new_process_restore",
             "test_pass_02_adversarial.Adversarial.test_semantic_replay_across_storage_and_epoch"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -5975,7 +5975,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -5999,7 +5999,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6023,7 +6023,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6046,7 +6046,7 @@
             "18 preserved Pass-1 tests",
             "74-case runtime acceptance.json"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6070,7 +6070,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6094,7 +6094,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6118,7 +6118,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6142,7 +6142,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6166,7 +6166,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6190,7 +6190,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6214,7 +6214,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6238,7 +6238,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6262,7 +6262,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6286,7 +6286,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6310,7 +6310,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6334,7 +6334,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6358,7 +6358,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6382,7 +6382,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6406,7 +6406,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6430,7 +6430,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6454,7 +6454,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6478,7 +6478,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6502,7 +6502,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6526,7 +6526,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6550,7 +6550,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6574,7 +6574,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6598,7 +6598,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6622,7 +6622,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6646,7 +6646,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6670,7 +6670,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6694,7 +6694,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6718,7 +6718,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6742,7 +6742,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6766,7 +6766,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6790,7 +6790,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6814,7 +6814,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6838,7 +6838,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6862,7 +6862,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6885,7 +6885,7 @@
             "PASS_02_POLICY_GATES.json",
             "conformance-only fixture and no full Utility export"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6909,7 +6909,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6933,7 +6933,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6957,7 +6957,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -6981,7 +6981,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7005,7 +7005,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7029,7 +7029,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7053,7 +7053,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7077,7 +7077,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7101,7 +7101,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7125,7 +7125,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7149,7 +7149,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7173,7 +7173,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7197,7 +7197,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7221,7 +7221,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7245,7 +7245,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7269,7 +7269,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7292,7 +7292,7 @@
             "existing epoch/reconnect integration tests",
             "tests-integration.json"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7315,7 +7315,7 @@
             "test_backpressure_before_mutation",
             "test_input_bounds_code_and_card_only_containment"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7339,7 +7339,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7363,7 +7363,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7387,7 +7387,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7411,7 +7411,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7435,7 +7435,7 @@
             "tests-integration.json",
             "tests-integration.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7458,7 +7458,7 @@
             "18 preserved Pass-1 tests",
             "74-case runtime acceptance.json"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7481,7 +7481,7 @@
             "Git changed-path check",
             "repository-validation.json"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7504,7 +7504,7 @@
             "distributions.json",
             "distribution-verification.json"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7528,7 +7528,7 @@
             "distribution-isolation-probes.log",
             "enforced Python audit hooks in every child interpreter"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7552,7 +7552,7 @@
             "distribution-isolation-probes.log",
             "enforced Python audit hooks in every child interpreter"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7575,7 +7575,7 @@
             "distributions.json",
             "distribution-verification.json"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7597,7 +7597,7 @@
           "evidence": [
             "distribution-missing-dependency.log"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7621,7 +7621,7 @@
             "PASS_02_RECEIPT.md",
             "PASS_02_POLICY_GATES.json"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         },
@@ -7645,7 +7645,7 @@
             "PASS_02_EXECUTION.md",
             "PASS_02_RECEIPT.md"
           ],
-          "source_revision": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+          "source_revision": "f1b5aede39be01d4835e433fdb98429c249b2538",
           "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
           "exit_result": 0
         }
@@ -7787,8 +7787,8 @@
       "ready_for_pass_04": true,
       "whole_game_phase": "PREPRODUCTION",
       "PASS2_CORRECTED_SHA": "d991278bc72518e9abe2df7741298a2631c787d0",
-      "head": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
-      "remote": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+      "head": "f1b5aede39be01d4835e433fdb98429c249b2538",
+      "remote": "f1b5aede39be01d4835e433fdb98429c249b2538",
       "main": "69a0030805b8c3858c877a514e2f50644421115a",
       "clean": true,
       "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
@@ -10392,8 +10392,8 @@
       "repository": "xApologies/_raeon",
       "branch": "codex/raeon-pass-04",
       "starting_sha": "33f4139719c5b4af83610dcb9600be594a50e78c",
-      "ending_sha": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
-      "remote_sha": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+      "ending_sha": "f1b5aede39be01d4835e433fdb98429c249b2538",
+      "remote_sha": "f1b5aede39be01d4835e433fdb98429c249b2538",
       "main_sha": "69a0030805b8c3858c877a514e2f50644421115a",
       "clean": true,
       "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
