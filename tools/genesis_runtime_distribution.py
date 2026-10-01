@@ -9,10 +9,15 @@ import sys
 import tempfile
 import zipfile
 
-VERSION = '0.2.0'
+VERSION = '0.3.0'
 PREFIXES = {
     'hypervisor': ['platform/shared/python_hypervisor/', 'tests/unit/hypervisor/'],
-    'horizon': ['tools/genesis_runtime_projection_correction.py',
+    'horizon': ['game/qmo/', 'game/sandbox/', 'data/qmo/', 'data/render_specs/cycle_01/',
+                'tools/genesis_runtime_pass03.py', 'provenance/decisions/raeon-pass-03.json',
+                'provenance/imports/raeon-pass-03/handoff/acceptance/PASS_03_ACCEPTANCE.json',
+                'provenance/imports/raeon-pass-03/entry.json',
+                'development/modules/core-game/PASS_03_POLICY_GATES.json',
+                'development/modules/core-game/PASS_03_EXECUTION.md', 'development/modules/core-game/PASS_03_RECEIPT.md', 'tools/genesis_runtime_projection_correction.py',
                 'provenance/decisions/raeon-pass-02-projection-correction.json',
                 'development/modules/core-game/PASS_02_PROJECTION_CORRECTION.md', 'tools/genesis_runtime_pass02.py', 'tools/genesis_runtime_catalog.py', 'tools/genesis_runtime_isolation.py',
                 'data/cycles/cycle_01/', 'data/game/', 'provenance/decisions/raeon-pass-02.json',
@@ -216,6 +221,7 @@ def verify_distributions(root, output):
     run('pass-02-demo', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless', '--application', 'raeon', '--scenario', 'cards'])
     # Exercise local software tests in isolation; the selected upstream regression
     # sources are also shipped and remain runnable with the test command.
+    run('pass-03-demo', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless', '--application', 'raeon', '--scenario', 'topology'])
     run('unit-tests', [str(python), '-B', '-m', 'unittest', 'discover', '-s', 'tests/unit/hypervisor', '-v'])
     run('integration-tests', [str(python), '-B', '-m', 'unittest', 'discover', '-s', 'tests/integration/genesis_horizon', '-v'])
     lock = json.loads((extraction / 'data/platform/genesis-runtime-lock.json').read_text())
@@ -227,6 +233,15 @@ def verify_distributions(root, output):
         negative = run('missing-dependency', [str(python), '-B', 'tools/genesis_runtime.py', 'doctor'], expected_exit=1)
         if 'missing source' not in negative.stderr and 'DEPENDENCY_INTEGRITY' not in negative.stderr:
             raise RuntimeError('Missing source failed for an unrelated reason')
+    finally:
+        held.rename(missing)
+    missing = extraction / 'data/qmo/cycle1/manifold_pair_relations.json'
+    held = missing.with_name(missing.name + '.held-for-negative-test')
+    missing.rename(held)
+    try:
+        negative = run('missing-qmo', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless', '--application', 'raeon', '--scenario', 'topology'], expected_exit=1)
+        if 'manifold_pair_relations.json' not in negative.stderr and 'QMO_CORPUS_INTEGRITY' not in negative.stderr:
+            raise RuntimeError('Missing QMO failed for an unrelated reason')
     finally:
         held.rename(missing)
     original_build = json.loads((output / 'evidence/build.json').read_text())
@@ -242,7 +257,7 @@ def verify_distributions(root, output):
                  'probes_passed': True, 'violations': violations, 'events_recorded': len(traces),
                  'trace_directory': str(extraction / 'isolation traces'),
                  'file_closure': ['bundle and writable extraction', 'declared Python installation', 'Windows OS prerequisite']}
-    result = {'status': 'PASS', 'isolation': isolation, 'missing_dependency_negative': 'PASS',
+    result = {'status': 'PASS', 'isolation': isolation, 'missing_dependency_negative': 'PASS', 'missing_qmo_negative': 'PASS',
               'physical_path_bytecode_equal': True, 'extraction': str(extraction), 'offline_install': True, 'python_prerequisite': sys.version.split()[0],
               'source_commit': next(iter(manifests.values()))['source_commit'], 'commands': commands,
               'archives': distributions, 'archive_manifest_files_verified': sum(len(m['files']) for m in manifests.values())}

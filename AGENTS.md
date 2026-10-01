@@ -7,3 +7,5 @@ Only this repository is writable. The work order explicitly permits read-only `_
 Use `tools/genesis_runtime.py` as implemented; record actual compiler/runtime evidence. Do not substitute fake runtime tests for integration, invent Genesis syntax, regenerate QMO catalogs, or merge main without authorization. Whole-game PREPRODUCTION and unaccepted module gates remain unchanged.
 
 Current Pass-2 work: [execution record](development/modules/core-game/PASS_02_EXECUTION.md). Continue the authorized `codex/raeon-pass-02` branch from completed Pass 1.
+
+Current Pass-3 work: [execution record](development/modules/core-game/PASS_03_EXECUTION.md). Continue `codex/raeon-pass-03` from corrected Pass 2 (`d991278`). Preserve its privacy regressions; main stays unmerged.

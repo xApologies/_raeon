@@ -107,6 +107,13 @@ class Horizon:
         paths += [(p.relative_to(self.root).as_posix()) for p in sorted((self.root / 'game/core/genesis_horizon/src/values').glob('*.gen'))]
         return digest({path: file_hash(self.root / path) for path in paths})
 
+    def _application_binding_contract(self, manifest):
+        from .application import confined
+        extension = manifest.get('state_extension', {})
+        paths = [record['path'] for record in extension.get('modules', {}).values()]
+        paths += list(extension.get('inputs', {}))
+        return digest({path: file_hash(confined(self.root, path)) for path in paths})
+
     def _save(self, state):
         published_state = copy.deepcopy(state)
         payload = {'schema': 1, 'profile_hash': digest(self.profile), 'upstream': self.lock['upstream_commit'],
@@ -114,6 +121,7 @@ class Horizon:
                    'builds': {k: v.receipt['gvm_sha256'] for k, v in self._builds.items()}}
         if self._backend.application_values:
             payload['binding_contract'] = self._binding_contract()
+            payload['application_binding_contract'] = self._application_binding_contract(state['application']['manifest'])
         envelope = {'payload': payload, 'sha256': digest(payload)}
         temp = self.storage / 'root.pending'
         with temp.open('wb') as stream:
@@ -478,8 +486,11 @@ class Horizon:
             payload = envelope['payload']
             if digest(payload) != envelope['sha256'] or payload['upstream'] != self.lock['upstream_commit']:
                 raise HorizonError('RUNTIME_FAULT')
-            if payload['native'].get('application_values') and payload.get('binding_contract') != self._binding_contract():
-                raise HorizonError('RUNTIME_FAULT')
+            if payload['native'].get('application_values'):
+                if payload.get('binding_contract') != self._binding_contract():
+                    raise HorizonError('RUNTIME_FAULT')
+                if payload.get('application_binding_contract') != self._application_binding_contract(payload['state']['application']['manifest']):
+                    raise HorizonError('RUNTIME_FAULT')
             profile = json.loads((self.root / 'data/platform/genesis-horizon-profile.json').read_text(encoding='utf8'))
             if digest(profile) != payload['profile_hash']:
                 raise HorizonError('RUNTIME_FAULT')

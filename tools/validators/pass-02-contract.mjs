@@ -1,3 +1,4 @@
+import {matchesPass03} from './pass-03-contract.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
@@ -13,7 +14,8 @@ export function pass02Sources(root, inventory) {
   const decision = JSON.parse(bytes);
   for (const [file, expected] of Object.entries(decision.package_files)) {
     if (!file.startsWith('game/core/raeon/application/')) throw new Error('Pass-2 package path outside application');
-    if (hash(fs.readFileSync(path.join(root, file))) !== expected) throw new Error('Pass-2 package integrity: ' + file);
+    const actual = hash(fs.readFileSync(path.join(root, file)));
+    if (actual !== expected && !matchesPass03(root, file, actual, expected)) throw new Error('Pass-2 package integrity: ' + file);
   }
   for (const [file, expected] of Object.entries(decision.source_inputs)) {
     if (hash(fs.readFileSync(path.join(root, file))) !== expected) throw new Error('Pass-2 source input integrity: ' + file);
@@ -33,6 +35,7 @@ export function validateProjectionCorrection(root, inventory) {
   const expectedFiles = {...decision.evidence_files, [decision.additive_regression_source]: decision.additive_regression_sha256};
   for (const [file, record] of Object.entries(decision.corrected_sources)) expectedFiles[file] = record.after_sha256;
   for (const [file, expected] of Object.entries(expectedFiles)) {
-    if (hash(fs.readFileSync(path.join(root, file))) !== expected) throw new Error('Projection correction integrity: ' + file);
+    const actual = hash(fs.readFileSync(path.join(root, file)));
+    if (actual !== expected && !matchesPass03(root, file, actual, expected)) throw new Error('Projection correction integrity: ' + file);
   }
 }

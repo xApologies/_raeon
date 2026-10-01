@@ -1,0 +1,25 @@
+{
+  "status": "PARTIAL",
+  "PASS2_CORRECTED_SHA": "d991278bc72518e9abe2df7741298a2631c787d0",
+  "branch": "codex/raeon-pass-03",
+  "requirements": 98,
+  "compiled_sources": 41,
+  "ready_for_pass_04": false,
+  "last_command": "python -B -m unittest discover -s tests/integration/genesis_horizon -p test_pass_03.py -v",
+  "last_result": "17/17 new integration tests; existing checkpoint-tamper regression passed",
+  "next_command": "complete full test, repository-test, package, verify-distributions, audit",
+  "remote_push": "PUSH_PENDING",
+  "gates": "PASS_03_POLICY_GATES.json",
+  "work_units": {
+    "W00": "VERIFIED",
+    "W01": "SOURCE_INVENTORY_AND_GAPS_VERIFIED",
+    "W02": "POSE_CODEC_HYDRATION_TESTED; LIVE_MAPPING_BLOCKED",
+    "W03": "READ_ONLY_CANDIDATES_TESTED; LIVE_EDGES_BLOCKED",
+    "W04": "REOPEN_AND_MEMBERSHIP_INVALIDATION; LIVE_FIELDS_BLOCKED",
+    "W05": "PREVIEW_AND_REFUSAL; MERGE_POLICY_BLOCKED",
+    "W06": "FULL_PAIR_LOOKUP; LIVE_SUPPORTS_BLOCKED",
+    "W07": "IMPLEMENTED_OBJECT_PRIVACY_TESTED",
+    "W08": "POSE_ROLLBACK_RECOVERY_TESTED; LIVE_GRAPH_POSITIVES_BLOCKED",
+    "W09": "VALIDATING_AND_PACKAGING"
+  }
+}

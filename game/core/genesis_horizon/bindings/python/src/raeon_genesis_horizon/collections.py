@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import importlib.util
 from collections import Counter
 
 from .toolchain import canonical, digest, file_hash
@@ -36,6 +37,11 @@ def validate_arguments(arguments, schema):
         elif rule['type'] == 'integer':
             if type(value) is not int or not rule['minimum'] <= value <= rule['maximum']:
                 deny()
+        elif rule['type'] == 'records':
+            if type(value) is not list or not rule.get('minimum', 0) <= len(value) <= rule['maximum']:
+                deny()
+            for row in value:
+                validate_arguments(row, rule['fields'])
         else:
             deny()
 
@@ -56,6 +62,21 @@ class Collections:
         self.admitted = None
         self.closed = False
         self.unit = None
+        self.extension = None
+        contract = manifest.get('state_extension')
+        if contract:
+            self.verify_extension()
+            from .application import confined
+            modules = {}
+            for name, record in contract['modules'].items():
+                path = confined(horizon.root, record['path'])
+                if file_hash(path) != record['sha256']:
+                    deny()
+                spec = importlib.util.spec_from_file_location('state_extension_' + name, path)
+                module = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(module)
+                modules[name] = module
+            self.extension = modules[contract['entry']].Extension(self, modules)
 
     def verify_catalog(self):
         for relative, expected in self.catalog['sources'].items():
@@ -95,6 +116,8 @@ class Collections:
                 child_kind = self.config['region_children'][collection['kind']]
                 collection['members'] = [n for n, c in collections.items()
                                          if c['owner'] == collection['owner'] and c['kind'] == child_kind]
+        if self.extension:
+            self.extension.initialize()
 
     def inspection_scope(self, authority):
         owner = effective_view_owner(self.manifest, authority)
@@ -103,6 +126,7 @@ class Collections:
         return {'application_id': self.manifest['id'], 'view_id': authority['view_id'], 'owner': owner}
 
     def begin(self, intent, authority):
+        self.verify_extension()
         validate_arguments(intent['arguments'], self.manifest['operations'][intent['operation']]['arguments'])
         self.context = {'intent': copy.deepcopy(intent), 'owner': authority.get('player_role'),
                         'actor': authority['actor'], 'arguments': copy.deepcopy(intent['arguments']),
@@ -116,6 +140,16 @@ class Collections:
             deny()
         self.context['grant'] = grant
         self.admitted, self.closed, self.unit = None, False, None
+
+    def verify_extension(self):
+        from .application import confined
+        extension = self.manifest.get('state_extension', {})
+        for relative, expected in extension.get('inputs', {}).items():
+            if file_hash(confined(self.h.root, relative)) != expected:
+                deny()
+        for record in extension.get('modules', {}).values():
+            if file_hash(confined(self.h.root, record['path'])) != record['sha256']:
+                deny()
 
     def end(self):
         self.context = self.admitted = self.unit = None
@@ -230,6 +264,8 @@ class Collections:
             if variant not in spec['variants'] or effect.get('variant') != variant:
                 deny()
             plan.update(parent=parent, variant=variant, capacity=spec['variants'][variant])
+        elif spec['kind'] == 'extension' and self.extension:
+            plan = self.extension.admit(spec)
         else:
             deny()
         self.admitted = plan
@@ -254,6 +290,8 @@ class Collections:
         value = copy.deepcopy(self.b.profile['definitions'][self.config['representation_template']])
         value.update(mmo_id='STATE:' + digest([self.h.identity, name]), semantic=semantic,
                      provenance_commitment=digest(record))
+        if self.extension:
+            value = self.extension.definition(value, record)
         return value
 
     def transform(self, geo, admission, attrs):
@@ -340,8 +378,12 @@ class Collections:
                                                'members': [], 'capacity': plan['capacity']}
             self.state['collections'][plan['parent']]['members'].append(name)
             self.add_edge(plan['parent'], name)
+        elif plan['kind'] == 'extension' and self.extension:
+            self.extension.transform(plan)
         else:
             deny()
+        if self.extension:
+            self.extension.synchronize()
         self.context['grant']['used'] = True
         self.context['grant']['outcome_request'] = self.context['intent']['request_id']
         self.validate()
@@ -378,6 +420,9 @@ class Collections:
         inventories = [i for inventory in self.state['inventories'].values() for i in inventory]
         if len(set(inventories)) != len(inventories) or set(inventories) != set(found):
             deny()
+        if self.extension:
+            self.verify_extension()
+            self.extension.validate()
 
     def project(self, view, authority):
         owner = effective_view_owner(self.manifest, authority)
@@ -416,4 +461,7 @@ class Collections:
             edge = self.b.resources[ref]['payload']
             if relation_visible(edge, visible, owner_id) and digest(edge) not in existing:
                 view['relations'].append(copy.deepcopy(edge))
+        if self.extension:
+            self.verify_extension()
+            view = self.extension.project(view, authority)
         return view

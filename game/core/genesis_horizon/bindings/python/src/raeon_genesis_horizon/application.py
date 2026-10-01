@@ -52,6 +52,10 @@ def load_package(package, expected_hash):
     for relative, expected in manifest['files'].items():
         if file_hash(confined(package.parent, relative)) != expected:
             reject()
+    if 'state_extension' in manifest:
+        extension = manifest['state_extension']
+        if extension.get('abi') != 'state-extension-v1' or extension['entry'] not in extension['modules']:
+            reject()
     if any(not name.endswith('.gen') for name in sources):
         reject()
     if manifest.get('schema_version', 1) == 1:

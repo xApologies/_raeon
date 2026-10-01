@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "authority": "READ_ONLY_IMPORTED_CYCLE_1",
+  "counts": {
+    "field_generators": 120,
+    "base": 60,
+    "fusion": 343,
+    "emergent": 1691,
+    "atlas": 2094,
+    "pairs": 1770,
+    "compatibility": 2482
+  },
+  "datasets": {
+    "field_generators": {
+      "path": "data/cycles/cycle_01/field_generators/objects.json",
+      "sha256": "c8bd56021e95d80ffb677e31f69a864f4ff02bf6db97304edba9dfe8fa879e62"
+    },
+    "base": {
+      "path": "data/qmo/manifolds/objects.json",
+      "sha256": "d8c66b09e7f98e32e0d937afa231a99e15b3fb3924fcfd0546eebdec1eb2cde2"
+    },
+    "fusion": {
+      "path": "data/qmo/fusion/objects.json",
+      "sha256": "0e48912b56d112f9f14f21fe6c5252500d43d57d68343dfd96369c5366c86c23"
+    },
+    "emergent": {
+      "path": "data/qmo/emergent/objects.json",
+      "sha256": "fd2a2a31f90848bde0ff4c533c6d62580d37efdbc97d6d070f719b07e50e725c"
+    },
+    "derived": {
+      "path": "data/qmo/cycle1/derived_qmos.json",
+      "sha256": "4cd701f1335eb41c944c12ce92fb0e93ec5bc5b7d358631ffeff389864c19325"
+    },
+    "atlas": {
+      "path": "data/qmo/cycle1/atlas.json",
+      "sha256": "2febd32e9e2ee218ae3e71c63f975525cdbeed05f11e40d97a794997bf067b12"
+    },
+    "pairs": {
+      "path": "data/qmo/cycle1/manifold_pair_relations.json",
+      "sha256": "558ddaae14cb21a54e2cc42333971fbb11c94f10b7c91ea9b1f29e28418fd6a7"
+    },
+    "compatibility": {
+      "path": "data/qmo/generators/compatibility.json",
+      "sha256": "0f7aa8b8097757a9e38724ea0f016926a6344ef71451c9f4686f63770df9d0bc"
+    },
+    "summary": {
+      "path": "data/qmo/cycle1/playfield_summary.json",
+      "sha256": "66217cd20aca5f8509d775cb822f641cf9311117d92743da3b8baf2ee5ed3eaf"
+    },
+    "database": {
+      "path": "data/qmo/cycle1/qmo.sqlite",
+      "sha256": "2945e86691165f9105aad6d29ec31f5a6cdde72fab0f5a929e3a254efdd588eb"
+    },
+    "render_catalog": {
+      "path": "data/render_specs/cycle_01/catalog.json",
+      "sha256": "383bed873f5a4c5f519d2848e1e1b3cd30498cb21d94f758910de4b08cd27530"
+    }
+  }
+}

@@ -1,9 +1,9 @@
 {
   "schema_version": 3,
   "id": "raeon",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "test_only": false,
-  "scope": "PASS_02_ADMITTED_CARD_OPERATIONS",
+  "scope": "PASS_03_PARTIAL_SOURCE_BACKED_TOPOLOGY",
   "realize": "raeon_realize.gen",
   "definitions": "definitions.json",
   "files": {
@@ -17,20 +17,26 @@
     "draw_one.gen": "004238c04332b86437ed7bb2f4a0f4360882b9f65080e8ad9a537a49152c2d61",
     "initialize_inventory.gen": "9c86afd417566ef59dc52a2d51d2d4d0f92a96d886e46b74c08aa2b4e2e30412",
     "inspect_top.gen": "6cf79eec29a8fcb2652a2bc78def8bf5fc1dbdf3567466ef19efa41c65acd87b",
-    "native_instantiate.gen": "132030bfc7f60b4454168beb013df4a7b24833ae0356bb2c8dd6bc0d1d7f1515",
+    "link_configuration.gen": "a5dd7950e7dac275ccc4e296d613b1cf6fcba2bbd695676321e123e87452b207",
+    "merge_configuration.gen": "f04289e4b66350960ea473e8cba12084aecfbbc9eb9f4c4c959349f1980641d9",
+    "native_instantiate.gen": "e76e8e11f0bf28bd65a858805cc221a4a63f1da2c50f9e7fd0c7a4318aa3b30a",
     "native_relate.gen": "0c1661f93c909f8661f9394028dc0aeb728a44ca4ceb72d74f44ae5b88033e5d",
     "native_transport.gen": "bcf64698ac20301c1ea4dcfd5dfbc0fe313d047990101c5d3182af7854d0ac1f",
     "raeon_observe.gen": "06a54be1db2dfe491e0ea431ad2ba79a97db4cf4f009163c372058a149406e73",
     "raeon_realize.gen": "448cbfe495cd7133eb9576f8e9e462c32d7d3dc0e623714f9a0b9ebf46f3ff0a",
+    "README.md": "3efb7b777f30767cf3e71338d630809ef18540575b504d6589d4f9cef4698ebe",
     "recover_1.gen": "4cb0ea5a0e32fed826e4b2760312b93aec86f6ea29597973dfb669cefad46440",
     "recover_2.gen": "e4fc7f119c985372397a923b983f36acf588a885c0b022c38d9f34fb52498f6d",
     "recover_3.gen": "27ae030297e9637b0dbb7c2ca290a09b1deb2f36a6ec47dc9d74cb084e33c57f",
     "recover_4.gen": "c50f33bf211808bc31ed574f1da577057f2ad6e8714d7bfc1f141b43b5d038f3",
     "recover_5.gen": "87ce6dd002bd927b61a24833703103b342320c7ffb9c41c513299686ded03c65",
     "recover_6.gen": "d2ed0e7c67486c3f584e17d2b188277d5ca15a5a20743846c98c0b26c78201e5",
+    "reopen_configuration.gen": "54eb0ddc5596c924f3b6d0273ea7ca602a688959ed518f746499d97a80b510a8",
     "reorder_top.gen": "9a87ecb4d92d4a0a6f4c38d0988f2150a37ff78a12500c91d5c2c744d834a2e9",
+    "resolve_configuration.gen": "41562913526a1c9483ed905129836fa2c63d43a0e8d5927244b02655f796931e",
     "retire_cards.gen": "dc7b00c52a7e902bcc15d9a623dfd1a32fcfc71957c90564e56791a1411e49e3",
     "retire_support.gen": "5daf6da5bc6513e0720ba2803a42640d040aef87469ce68bef2720ca5eb45e13",
+    "set_fg_poses.gen": "33f5777e0d9ef83991f06a835c4364e8b3fdd1610b98ae81eba02619ea21b9f2",
     "shuffle_deck.gen": "807e4bae5a28655abe413d518cef1fa92ecee00eceeafc2910a0caa80129bfc1"
   },
   "realization_relations": [
@@ -1149,6 +1155,180 @@
           "maximum": 256
         }
       }
+    },
+    "SET_FG_POSES": {
+      "source": "set_fg_poses.gen",
+      "mutates": true,
+      "effects": [
+        "COLLECTION_TRANSACTION"
+      ],
+      "arguments": {
+        "grant": {
+          "type": "text",
+          "maximum": 256
+        },
+        "space": {
+          "type": "text",
+          "maximum": 256
+        },
+        "membership_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "poses": {
+          "type": "records",
+          "minimum": 1,
+          "maximum": 16,
+          "fields": {
+            "card": {
+              "type": "text",
+              "maximum": 256
+            },
+            "x": {
+              "type": "integer",
+              "minimum": -1000000000,
+              "maximum": 1000000000
+            },
+            "y": {
+              "type": "integer",
+              "minimum": -1000000000,
+              "maximum": 1000000000
+            },
+            "qw": {
+              "type": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000
+            },
+            "qx": {
+              "type": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000
+            },
+            "qy": {
+              "type": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000
+            },
+            "qz": {
+              "type": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000
+            },
+            "pose_revision": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2147483647
+            }
+          }
+        }
+      }
+    },
+    "REOPEN_CONFIGURATION": {
+      "source": "reopen_configuration.gen",
+      "mutates": true,
+      "effects": [
+        "COLLECTION_TRANSACTION"
+      ],
+      "arguments": {
+        "grant": {
+          "type": "text",
+          "maximum": 256
+        },
+        "space": {
+          "type": "text",
+          "maximum": 256
+        },
+        "membership_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        }
+      }
+    },
+    "RESOLVE_CONFIGURATION": {
+      "source": "resolve_configuration.gen",
+      "mutates": true,
+      "effects": [
+        "COLLECTION_TRANSACTION"
+      ],
+      "arguments": {
+        "grant": {
+          "type": "text",
+          "maximum": 256
+        },
+        "space": {
+          "type": "text",
+          "maximum": 256
+        },
+        "membership_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        }
+      }
+    },
+    "MERGE_CONFIGURATION": {
+      "source": "merge_configuration.gen",
+      "mutates": true,
+      "effects": [
+        "COLLECTION_TRANSACTION"
+      ],
+      "arguments": {
+        "grant": {
+          "type": "text",
+          "maximum": 256
+        },
+        "space": {
+          "type": "text",
+          "maximum": 256
+        },
+        "membership_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "other": {
+          "type": "text",
+          "maximum": 256
+        },
+        "other_membership_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        }
+      }
+    },
+    "LINK_CONFIGURATION": {
+      "source": "link_configuration.gen",
+      "mutates": true,
+      "effects": [
+        "COLLECTION_TRANSACTION"
+      ],
+      "arguments": {
+        "grant": {
+          "type": "text",
+          "maximum": 256
+        },
+        "space": {
+          "type": "text",
+          "maximum": 256
+        },
+        "membership_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "other": {
+          "type": "text",
+          "maximum": 256
+        },
+        "other_membership_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        }
+      }
     }
   },
   "views": {
@@ -1287,6 +1467,23 @@
       "instantiate": "native_instantiate.gen",
       "relate": "native_relate.gen",
       "transport": "native_transport.gen"
+    }
+  },
+  "state_extension": {
+    "abi": "state-extension-v1",
+    "entry": "state",
+    "modules": {
+      "corpus": {
+        "path": "game/qmo/corpus.py",
+        "sha256": "cca65d44dca6231b2eff0c61f85a70ccac1f6f01d84d35432b7a533991b7d656"
+      },
+      "state": {
+        "path": "game/sandbox/topology.py",
+        "sha256": "58f0c22821e7c49fc9abac643aecff22d47c9dafadcc5ec987d3ffe974850864"
+      }
+    },
+    "inputs": {
+      "game/qmo/cycle1.lock.json": "55b8a975c67e0ed89305470b6427bc69c1e81b034d1737c85569dce62d808699"
     }
   }
 }

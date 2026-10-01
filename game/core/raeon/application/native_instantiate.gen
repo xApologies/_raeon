@@ -1,7 +1,7 @@
 genesis 0.1.0
 module native_instantiate {
   en fabric : FABRIC = mount "fabric://horizon/locked-v1"
-  en region : REGION = alloc fabric cells 32
+  en region : REGION = alloc fabric cells 64
   en item : GEOMETRIC = instantiate fabric region mmo @app_new
   assert closure item as closed
   export item : GEOMETRIC

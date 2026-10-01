@@ -1,0 +1,44 @@
+{
+  "status": "PARTIAL",
+  "source_recovery": {
+    "original_archives": "provenance/sources/cycle1-originals/authoritative_sources/",
+    "nested_authority": "RAEON_CYCLE_GENERATION_CONSTITUTION_v1_0.zip!/09_CURRENT_REFERENCE/Cycle1_qmo_derivation_reference.zip!/docs/MATHEMATICAL_DESIGN.md",
+    "operator_skeleton": "tools/cycle_generation/reference_cycle_builder.py",
+    "render_is_presentation": "tools/qmo/cycle1_reference/render/render_spec.py",
+    "current_design": "design/topology/field_generators/SYSTEM.md"
+  },
+  "gates": [
+    {
+      "id": "G-POSE",
+      "status": "OPEN",
+      "missing": "Accepted mapping from current XY and 3D orientation to simultaneous live face contact/closure: coordinate basis, face winding, locality, tolerances and transforms.",
+      "implemented": "Pose codec and source catalog/face evidence only; no live field creation.",
+      "next_action": "Supply an accepted complete mapping plus at least one known-valid and known-wrong pose witness for the same source membership."
+    },
+    {
+      "id": "G-MEMBERS",
+      "status": "OPEN",
+      "missing": "Subset selection, leftover/duplicate-copy and overlapping assignment policy.",
+      "implemented": "Full multiset whole-membership search; never collapse duplicate copies or select a subset."
+    },
+    {
+      "id": "G-MERGE",
+      "status": "OPEN",
+      "missing": "Merged-space capacity, resulting frame and permanent base-space accounting.",
+      "implemented": "Read-only preview and source pair lookup; mutation rejects."
+    },
+    {
+      "id": "G-LINK",
+      "status": "OPEN",
+      "missing": "Live pair admission/timing and recursive domain after genuine field resolution.",
+      "implemented": "Complete 1770 source pair index; no fabricated support fields."
+    },
+    {
+      "id": "G-COLOR",
+      "status": "PASS_04",
+      "missing": "Current output carryover and generation eligibility following topology change.",
+      "implemented": "No color spending, refresh, combat or healing."
+    }
+  ],
+  "claim": "Refusal tests do not satisfy blocked positive requirements."
+}

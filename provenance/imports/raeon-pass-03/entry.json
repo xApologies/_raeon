@@ -1,0 +1,3027 @@
+{
+  "PASS2_CORRECTED_SHA": "d991278bc72518e9abe2df7741298a2631c787d0",
+  "pouch_sha256": "9eb693a9adae2469544fa57010d98df6ccc5604172c916dea5b42c780270a35f",
+  "branch": "codex/raeon-pass-03",
+  "before_implementation": true,
+  "results": {
+    "tests-unit.json": {
+      "passed": [
+        "test_codec.CodecTests.test_fragment_assembly_and_unbound_scope",
+        "test_codec.CodecTests.test_independent_vector",
+        "test_codec.CodecTests.test_json_unicode_duplicates_constants",
+        "test_codec.CodecTests.test_numeric_and_shape_validation_on_both_paths",
+        "test_codec.CodecTests.test_outgoing_schema_and_bounded_drain",
+        "test_codec.CodecTests.test_versions_direction_and_lengths"
+      ],
+      "run": 6,
+      "failures": 0,
+      "errors": 0
+    },
+    "tests-integration.json": {
+      "passed": [
+        "test_distribution.ArchiveIntegrityTests.test_exact_manifest_and_negative_cases",
+        "test_pass_01.Pass01Tests.test_application_cannot_inherit_or_mutate_machine_domains",
+        "test_pass_01.Pass01Tests.test_checkpoint_restart_and_two_player_sessions",
+        "test_pass_01.Pass01Tests.test_conflicting_application_rejected",
+        "test_pass_01.Pass01Tests.test_duplicate_and_conflicting_identity_rejected",
+        "test_pass_01.Pass01Tests.test_exact_topology_and_empty_containers",
+        "test_pass_01.Pass01Tests.test_explicit_relations_and_stable_unique_identity",
+        "test_pass_01.Pass01Tests.test_missing_or_undeclared_relation_rejected",
+        "test_pass_01.Pass01Tests.test_no_pass_two_rules_exposed",
+        "test_pass_01.Pass01Tests.test_observation_and_idempotence_do_not_duplicate",
+        "test_pass_01.Pass01Tests.test_observation_operation_receipt_has_no_native_diagnostics",
+        "test_pass_01.Pass01Tests.test_owner_opponent_privacy_and_no_native_leak",
+        "test_pass_01.Pass01Tests.test_package_and_source_hash_tamper_rejected",
+        "test_pass_01.Pass01Tests.test_path_escape_rejected",
+        "test_pass_01.Pass01Tests.test_prepublication_failure_and_budget_roll_back",
+        "test_pass_01.Pass01Tests.test_production_bytecode_is_deterministic",
+        "test_pass_01.Pass01Tests.test_production_manifest_and_real_genesis",
+        "test_pass_01.Pass01Tests.test_unauthorized_realization_rejected",
+        "test_pass_01.Pass01Tests.test_undeclared_and_malformed_source_rejected",
+        "test_pass_02.Pass02.test_actual_draw_and_commit_preserve_identity",
+        "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+        "test_pass_02_adversarial.Adversarial.test_catalog_tamper_and_physical_path_determinism",
+        "test_pass_02_adversarial.Adversarial.test_checkpoint_corruption_and_new_process_restore",
+        "test_pass_02_adversarial.Adversarial.test_concurrent_requests_and_semantic_order",
+        "test_pass_02_adversarial.Adversarial.test_input_bounds_code_and_card_only_containment",
+        "test_pass_02_adversarial.Adversarial.test_inspection_reorder_batch_helpers_grant_limits",
+        "test_pass_02_adversarial.Adversarial.test_native_route_and_handler_closure_cannot_be_bypassed",
+        "test_pass_02_adversarial.Adversarial.test_recovery_profiles_and_batch_capacity",
+        "test_pass_02_adversarial.Adversarial.test_seeded_conservation_two_owners",
+        "test_pass_02_adversarial.Adversarial.test_semantic_replay_across_storage_and_epoch",
+        "test_pass_02_adversarial.Adversarial.test_setup_rollback_and_exact_idempotent_multiset",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_live_merge_cannot_restore_private_relations",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_public_view_cannot_inherit_private_hand",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_same_actor_public_cannot_inherit_inspection",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_inspection_scope_includes_application_view_owner_and_actor",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_owner_opponent_and_public_controls",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_private_inspection_delta_reconnect_restore_and_expiry",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_inspect_admission_rejected_atomically",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_live_geometry_delta_and_reconnect",
+        "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+        "test_pass_02_transactions.Transactions.test_checkpoint_nonempty_preserves_native_state_and_retry",
+        "test_pass_02_transactions.Transactions.test_delivery_loss_retry_conflict_and_stale_revision",
+        "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+        "test_pass_02_transactions.Transactions.test_failed_candidate_rolls_back_grant_rng_membership",
+        "test_pass_02_transactions.Transactions.test_hand_capacity_empty_deck_and_forged_arguments",
+        "test_pass_02_transactions.Transactions.test_live_private_views_and_detached_values",
+        "test_pass_02_transactions.Transactions.test_retirement_recovery_order_and_whole_support",
+        "test_pass_02_transactions.Transactions.test_shuffle_independent_full_vector_and_idempotency",
+        "test_pass_02_transactions.Transactions.test_structural_prime_slots_without_combat",
+        "test_runtime.RuntimeTests.test_application_cannot_inherit_machine_domains",
+        "test_runtime.RuntimeTests.test_backpressure_before_mutation",
+        "test_runtime.RuntimeTests.test_candidate_rollback_and_budget",
+        "test_runtime.RuntimeTests.test_checkpoint_restart_corruption_and_confinement",
+        "test_runtime.RuntimeTests.test_delivery_failure_recovery",
+        "test_runtime.RuntimeTests.test_expired_retry_is_never_reexecuted",
+        "test_runtime.RuntimeTests.test_missing_and_tampered_sources",
+        "test_runtime.RuntimeTests.test_native_boot_identities_and_containment",
+        "test_runtime.RuntimeTests.test_output_delivery_failure_retains_committed_outcome",
+        "test_runtime.RuntimeTests.test_privacy_and_scope",
+        "test_runtime.RuntimeTests.test_projection_gap_receipt_clock_and_reconnect",
+        "test_runtime.RuntimeTests.test_quiesce_close_and_replay",
+        "test_runtime.RuntimeTests.test_real_joint_trace_and_identity_history",
+        "test_runtime.RuntimeTests.test_retry_conflict_concurrent_scope_and_stale",
+        "test_runtime.RuntimeTests.test_route_admission_and_open_resource_rejections"
+      ],
+      "run": 64,
+      "failures": 0,
+      "errors": 0
+    },
+    "upstream-tests.json": {
+      "status": "PASS",
+      "upstream_commit": "c89676fc26000ae6f5fdad66a56e118b285d9b1d",
+      "baseline": {
+        "status": "PASS",
+        "execution_receipt": "receipt-e0bbca751087ac913a9d",
+        "artifacts": {
+          "upstream-build.json": "1a535b4a36251e47324dc16b1c9cf1ee9719115e2482b6160e62d54ec915c9cb",
+          "upstream-lower.json": "16c5170e3bdcb6d0ce123424cfc93e212dd3489294b1f88693661aa36bb0f47e",
+          "upstream-parse.json": "e8880d96cecbb965e68fda7569e781c435f68a5be2ce2a3b8fdcb502c44e2ebd",
+          "upstream-rainbow-road.gvm": "b5f96deddc738338a028802faf80a072b99070ad5b674303bd041bfab65cc041",
+          "upstream-run.json": "2770e37b8ac85df0d5fe0ea8622f39882ac9c430ee71154a2aeeb9b76cd17192"
+        }
+      },
+      "domains_passed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "repository-validation.json": {
+      "status": "PASS",
+      "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+      "results": [
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-bootstrap.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-design-state.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-normalization.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-continuity.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-cycle1-import.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-full-migration.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-game-definition.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "--test",
+            "tests/regression\\bootstrap-validator.test.mjs",
+            "tests/regression\\continuity-validator.test.mjs",
+            "tests/regression\\cycle1-import.test.mjs",
+            "tests/regression\\design-state-validator.test.mjs",
+            "tests/regression\\full-migration.test.mjs",
+            "tests/regression\\game-definition.test.mjs",
+            "tests/regression\\genesis-runtime-contract.test.mjs",
+            "tests/regression\\normalization-validator.test.mjs",
+            "tests/regression\\pass-01-contract.test.mjs",
+            "tests/regression\\pass-02-contract.test.mjs",
+            "tests/regression\\pass-02-projection-contract.test.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "--test",
+            "tests/gameplay/cards\\containers.test.mjs",
+            "tests/gameplay/manifolds\\relationships.test.mjs",
+            "tests/gameplay/primes\\constitution.test.mjs",
+            "tests/gameplay/sandbox\\configuration.test.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    "acceptance.json": {
+      "status": "PASS",
+      "passed": 74,
+      "total": 74,
+      "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+      "cases": [
+        {
+          "id": "SRC-01",
+          "title": "Existing implementation recovery",
+          "status": "PASS",
+          "evidence": [
+            "Git starting commit remains ancestor",
+            "GENESIS_RUNTIME_EXECUTION.md"
+          ]
+        },
+        {
+          "id": "SRC-02",
+          "title": "Pinned source bytes",
+          "status": "PASS",
+          "evidence": [
+            "dependencies.json"
+          ]
+        },
+        {
+          "id": "SRC-03",
+          "title": "Real upstream compiler baseline",
+          "status": "PASS",
+          "evidence": [
+            "baseline-parse.json",
+            "baseline-lower.json",
+            "baseline-build.json",
+            "baseline-run.json"
+          ]
+        },
+        {
+          "id": "SRC-04",
+          "title": "Dialect separation",
+          "status": "PASS",
+          "evidence": [
+            "dialects.json"
+          ]
+        },
+        {
+          "id": "SRC-05",
+          "title": "Reused-domain regression baseline",
+          "status": "PASS",
+          "evidence": [
+            "upstream-tests.json"
+          ]
+        },
+        {
+          "id": "SRC-06",
+          "title": "Read-only upstream invariant",
+          "status": "PASS",
+          "evidence": [
+            "upstream-readonly.json"
+          ]
+        },
+        {
+          "id": "H-01",
+          "title": "Genuine Fabric binding",
+          "status": "PASS",
+          "evidence": [
+            "test_native_boot_identities_and_containment",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-02",
+          "title": "Missing definition rejection",
+          "status": "PASS",
+          "evidence": [
+            "test_missing_and_tampered_sources",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-03",
+          "title": "Tampered Fabric rejection",
+          "status": "PASS",
+          "evidence": [
+            "test_missing_and_tampered_sources",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-04",
+          "title": "Four singleton domains",
+          "status": "PASS",
+          "evidence": [
+            "test_native_boot_identities_and_containment",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-05",
+          "title": "Real containment references",
+          "status": "PASS",
+          "evidence": [
+            "test_native_boot_identities_and_containment",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-06",
+          "title": "Coupled dimensions remain single objects",
+          "status": "PASS",
+          "evidence": [
+            "test_native_boot_identities_and_containment",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-07",
+          "title": "Distinct machine instances",
+          "status": "PASS",
+          "evidence": [
+            "test_native_boot_identities_and_containment",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-08",
+          "title": "Duplicate boot publication",
+          "status": "PASS",
+          "evidence": [
+            "test_native_boot_identities_and_containment",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-09",
+          "title": "Real application realization",
+          "status": "PASS",
+          "evidence": [
+            "test_native_boot_identities_and_containment",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-10",
+          "title": "Application scope enforcement",
+          "status": "PASS",
+          "evidence": [
+            "test_missing_and_tampered_sources",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-11",
+          "title": "Persistent State across operations",
+          "status": "PASS",
+          "evidence": [
+            "test_real_joint_trace_and_identity_history",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-12",
+          "title": "Meaningful Genesis relationship",
+          "status": "PASS",
+          "evidence": [
+            "test_real_joint_trace_and_identity_history",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-13",
+          "title": "Meaningful native transformation",
+          "status": "PASS",
+          "evidence": [
+            "test_real_joint_trace_and_identity_history",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-14",
+          "title": "Candidate rollback",
+          "status": "PASS",
+          "evidence": [
+            "test_candidate_rollback_and_budget",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-15",
+          "title": "Read-only observation",
+          "status": "PASS",
+          "evidence": [
+            "test_real_joint_trace_and_identity_history",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "H-16",
+          "title": "Versioned identity semantics",
+          "status": "PASS",
+          "evidence": [
+            "test_real_joint_trace_and_identity_history",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "R-01",
+          "title": "Inward adjacent traversal",
+          "status": "PASS",
+          "evidence": [
+            "test_real_joint_trace_and_identity_history",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "R-02",
+          "title": "Outward adjacent traversal",
+          "status": "PASS",
+          "evidence": [
+            "test_real_joint_trace_and_identity_history",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "R-03",
+          "title": "No direct jump",
+          "status": "PASS",
+          "evidence": [
+            "test_route_admission_and_open_resource_rejections",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "R-04",
+          "title": "Transport does not relocate machine State",
+          "status": "PASS",
+          "evidence": [
+            "test_real_joint_trace_and_identity_history",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "R-05",
+          "title": "Closed Portal obligations",
+          "status": "PASS",
+          "evidence": [
+            "test_route_admission_and_open_resource_rejections",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "R-06",
+          "title": "Closed Road obligations",
+          "status": "PASS",
+          "evidence": [
+            "test_route_admission_and_open_resource_rejections",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "R-07",
+          "title": "Wrong object admission",
+          "status": "PASS",
+          "evidence": [
+            "test_route_admission_and_open_resource_rejections",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "R-08",
+          "title": "Source data preservation during transport",
+          "status": "PASS",
+          "evidence": [
+            "test_real_joint_trace_and_identity_history",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-01",
+          "title": "Independent byte roundtrip",
+          "status": "PASS",
+          "evidence": [
+            "test_independent_vector",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-02",
+          "title": "Unsupported protocol",
+          "status": "PASS",
+          "evidence": [
+            "test_versions_direction_and_lengths",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-03",
+          "title": "Header/body consistency",
+          "status": "PASS",
+          "evidence": [
+            "test_versions_direction_and_lengths",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-04",
+          "title": "Checksum corruption",
+          "status": "PASS",
+          "evidence": [
+            "test_versions_direction_and_lengths",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-05",
+          "title": "Malformed JSON and Unicode",
+          "status": "PASS",
+          "evidence": [
+            "test_json_unicode_duplicates_constants",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-06",
+          "title": "Strict numeric types",
+          "status": "PASS",
+          "evidence": [
+            "test_numeric_and_shape_validation_on_both_paths",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-07",
+          "title": "Payload shape and identity limits",
+          "status": "PASS",
+          "evidence": [
+            "test_numeric_and_shape_validation_on_both_paths",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-08",
+          "title": "Wrong direction",
+          "status": "PASS",
+          "evidence": [
+            "test_versions_direction_and_lengths",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-09",
+          "title": "Bounded frame assembly",
+          "status": "PASS",
+          "evidence": [
+            "test_fragment_assembly_and_unbound_scope",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-10",
+          "title": "Trusted actor binding",
+          "status": "PASS",
+          "evidence": [
+            "test_privacy_and_scope",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-11",
+          "title": "Application/epoch mismatch",
+          "status": "PASS",
+          "evidence": [
+            "test_privacy_and_scope",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-12",
+          "title": "No projection aliasing",
+          "status": "PASS",
+          "evidence": [
+            "test_real_joint_trace_and_identity_history",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-13",
+          "title": "Projection privacy",
+          "status": "PASS",
+          "evidence": [
+            "test_privacy_and_scope",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-14",
+          "title": "Inbound queue backpressure",
+          "status": "PASS",
+          "evidence": [
+            "test_backpressure_before_mutation",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-15",
+          "title": "Outbound capacity before execution",
+          "status": "PASS",
+          "evidence": [
+            "test_backpressure_before_mutation",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "V-16",
+          "title": "Package imports and public API",
+          "status": "PASS",
+          "evidence": [
+            "distribution-verification.json"
+          ]
+        },
+        {
+          "id": "S-01",
+          "title": "Real end-to-end State update",
+          "status": "PASS",
+          "evidence": [
+            "test_real_joint_trace_and_identity_history",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "S-02",
+          "title": "Contiguous delta application",
+          "status": "PASS",
+          "evidence": [
+            "test_real_joint_trace_and_identity_history",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "S-03",
+          "title": "Delta gap recovery",
+          "status": "PASS",
+          "evidence": [
+            "test_projection_gap_receipt_clock_and_reconnect",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "S-04",
+          "title": "Duplicate intent",
+          "status": "PASS",
+          "evidence": [
+            "test_retry_conflict_concurrent_scope_and_stale",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "S-05",
+          "title": "ID reuse with altered request",
+          "status": "PASS",
+          "evidence": [
+            "test_retry_conflict_concurrent_scope_and_stale",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "S-06",
+          "title": "Concurrent identical retries",
+          "status": "PASS",
+          "evidence": [
+            "test_retry_conflict_concurrent_scope_and_stale",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "S-07",
+          "title": "Cross-session isolation",
+          "status": "PASS",
+          "evidence": [
+            "test_retry_conflict_concurrent_scope_and_stale",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "S-08",
+          "title": "Stale intent precondition",
+          "status": "PASS",
+          "evidence": [
+            "test_retry_conflict_concurrent_scope_and_stale",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "S-09",
+          "title": "Receipt is not a projection update",
+          "status": "PASS",
+          "evidence": [
+            "test_projection_gap_receipt_clock_and_reconnect",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "S-10",
+          "title": "Delivery failure after commit",
+          "status": "PASS",
+          "evidence": [
+            "test_output_delivery_failure_retains_committed_outcome",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "S-11",
+          "title": "Retry outside retention",
+          "status": "PASS",
+          "evidence": [
+            "test_expired_retry_is_never_reexecuted",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "S-12",
+          "title": "Reconnect after retained-history loss",
+          "status": "PASS",
+          "evidence": [
+            "test_projection_gap_receipt_clock_and_reconnect",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "L-01",
+          "title": "Instruction budget",
+          "status": "PASS",
+          "evidence": [
+            "test_candidate_rollback_and_budget",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "L-02",
+          "title": "Quiesce rejects new mutation",
+          "status": "PASS",
+          "evidence": [
+            "test_quiesce_close_and_replay",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "L-03",
+          "title": "Clean close",
+          "status": "PASS",
+          "evidence": [
+            "test_quiesce_close_and_replay",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "L-04",
+          "title": "Checkpoint roundtrip",
+          "status": "PASS",
+          "evidence": [
+            "test_checkpoint_restart_corruption_and_confinement",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "L-05",
+          "title": "Corrupt checkpoint rejection",
+          "status": "PASS",
+          "evidence": [
+            "test_checkpoint_restart_corruption_and_confinement",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "L-06",
+          "title": "Semantic replay",
+          "status": "PASS",
+          "evidence": [
+            "test_quiesce_close_and_replay",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "L-07",
+          "title": "Restart retry safety",
+          "status": "PASS",
+          "evidence": [
+            "test_checkpoint_restart_corruption_and_confinement",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "L-08",
+          "title": "Storage capability confinement",
+          "status": "PASS",
+          "evidence": [
+            "test_checkpoint_restart_corruption_and_confinement",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "D-01",
+          "title": "Deterministic rebuild",
+          "status": "PASS",
+          "evidence": [
+            "test_quiesce_close_and_replay",
+            "tests-source.json"
+          ]
+        },
+        {
+          "id": "D-02",
+          "title": "Repository hygiene regression",
+          "status": "PASS",
+          "evidence": [
+            "repository-validation.json"
+          ]
+        },
+        {
+          "id": "D-03",
+          "title": "Two distributions",
+          "status": "PASS",
+          "evidence": [
+            "distributions.json"
+          ]
+        },
+        {
+          "id": "D-04",
+          "title": "Exact archive manifests",
+          "status": "PASS",
+          "evidence": [
+            "distribution-verification.json"
+          ]
+        },
+        {
+          "id": "D-05",
+          "title": "Fresh extraction integration",
+          "status": "PASS",
+          "evidence": [
+            "distribution-verification.json"
+          ]
+        },
+        {
+          "id": "D-06",
+          "title": "Self-contained claim validation",
+          "status": "PASS",
+          "evidence": [
+            "distribution-verification.json"
+          ]
+        },
+        {
+          "id": "D-07",
+          "title": "Remote persistence status",
+          "status": "PASS",
+          "evidence": [
+            "remote.json"
+          ]
+        },
+        {
+          "id": "D-08",
+          "title": "Honest scope and native status",
+          "status": "PASS",
+          "evidence": [
+            "accepted-state.json",
+            "distribution labels: host reference / native-device NOT_RUN",
+            "GENESIS_RUNTIME_EXECUTION.md"
+          ]
+        }
+      ]
+    },
+    "pass-02-acceptance.json": {
+      "status": "PASS",
+      "passed": 83,
+      "total": 83,
+      "branch": "codex/raeon-pass-02",
+      "starting_sha": "23ebfc3be3a4e6ae4883793bfc99b1dbfae67bf8",
+      "ending_sha": "d991278bc72518e9abe2df7741298a2631c787d0",
+      "remote_sha": "d991278bc72518e9abe2df7741298a2631c787d0",
+      "main_sha": "69a0030805b8c3858c877a514e2f50644421115a",
+      "clean": true,
+      "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+      "cases": [
+        {
+          "id": "P2-001",
+          "group": "baseline",
+          "work_unit": "P2-W00",
+          "required": true,
+          "status": "PASS",
+          "title": "Recover Pass-1 lineage",
+          "exercise": "Inspect local/remote refs and working tree.",
+          "required_observation": "Pass-1 commit or accepted successor preserved; no destructive reset.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "git merge-base --is-ancestor 23ebfc3be3a4e6ae4883793bfc99b1dbfae67bf8 HEAD"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-002",
+          "group": "baseline",
+          "work_unit": "P2-W00",
+          "required": true,
+          "status": "PASS",
+          "title": "Run real baseline",
+          "exercise": "Run existing conformance and empty RAEON demos/tests.",
+          "required_observation": "Actual Genesis/Hypervisor execution; old empty topology reproduced.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "pass-02-baseline/pass-01-acceptance.json",
+            "test_empty_baseline_and_native_inventory"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-003",
+          "group": "baseline",
+          "work_unit": "P2-W00",
+          "required": true,
+          "status": "PASS",
+          "title": "Keep writes scoped",
+          "exercise": "Inspect diff and upstream state before/after.",
+          "required_observation": "Only _raeon changed; _bricked remains pinned/read-only.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "upstream-readonly.json"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-004",
+          "group": "catalog",
+          "work_unit": "P2-W01",
+          "required": true,
+          "status": "PASS",
+          "title": "Source-backed catalog",
+          "exercise": "Load accepted ordinary source records and resolve runtime handles.",
+          "required_observation": "Every runnable identity resolves to hashed source; no invented canonical names/effects.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-005",
+          "group": "catalog",
+          "work_unit": "P2-W01",
+          "required": true,
+          "status": "PASS",
+          "title": "Validate normal roster",
+          "exercise": "Validate 60-card legal fixture and malformed counts.",
+          "required_observation": "Legal roster passes; wrong total/boolean/negative quantities fail without state change.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-006",
+          "group": "catalog",
+          "work_unit": "P2-W01",
+          "required": true,
+          "status": "PASS",
+          "title": "FG copy limit",
+          "exercise": "Attempt 3 of an FG identity.",
+          "required_observation": "Rejected; 2 distinct copies allowed and not aliased.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-007",
+          "group": "catalog",
+          "work_unit": "P2-W01",
+          "required": true,
+          "status": "PASS",
+          "title": "Utility copy limit",
+          "exercise": "Attempt 4 of an ordinary Utility identity.",
+          "required_observation": "Rejected; <=3 follows source data, not a per-color rule.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-008",
+          "group": "catalog",
+          "work_unit": "P2-W01",
+          "required": true,
+          "status": "PASS",
+          "title": "Prime uniqueness",
+          "exercise": "Repeat a Prime identity in a roster.",
+          "required_observation": "Duplicate rejected; exact setup distribution not fabricated.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-009",
+          "group": "catalog",
+          "work_unit": "P2-W01",
+          "required": true,
+          "status": "PASS",
+          "title": "Unknown catalog input",
+          "exercise": "Supply unknown, ambiguous or malformed IDs and hashes.",
+          "required_observation": "No fabricated record, silent default or runtime instance.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-010",
+          "group": "catalog",
+          "work_unit": "P2-W01",
+          "required": true,
+          "status": "PASS",
+          "title": "Source preservation",
+          "exercise": "Hash FG catalog/atlas/protected source before and after.",
+          "required_observation": "Original corpus bytes unchanged; runtime aliases/indices are distinct derived data.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "Git changed-path check",
+            "repository-validation.json"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-011",
+          "group": "catalog",
+          "work_unit": "P2-W01",
+          "required": true,
+          "status": "PASS",
+          "title": "Provisional metadata",
+          "exercise": "Load working Utility rank and printed-ID gaps.",
+          "required_observation": "Authority labels preserved; rank not inferred as cost or recovery count.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_catalog_tamper_and_physical_path_determinism",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-012",
+          "group": "language",
+          "work_unit": "P2-W02",
+          "required": true,
+          "status": "PASS",
+          "title": "Actual Genesis handlers",
+          "exercise": "Compile/verify/run every maintained Pass-2 .gen handler.",
+          "required_observation": "No decorative source or Python-only simulation claimed as integration.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "build.json",
+            "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+            "test_pass_02.Pass02.test_actual_draw_and_commit_preserve_identity",
+            "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+            "test_pass_02_transactions.Transactions.test_shuffle_independent_full_vector_and_idempotency",
+            "test_pass_02_transactions.Transactions.test_hand_capacity_empty_deck_and_forged_arguments",
+            "test_pass_02_transactions.Transactions.test_failed_candidate_rolls_back_grant_rng_membership",
+            "test_pass_02_transactions.Transactions.test_delivery_loss_retry_conflict_and_stale_revision",
+            "test_pass_02_transactions.Transactions.test_live_private_views_and_detached_values",
+            "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+            "test_pass_02_transactions.Transactions.test_retirement_recovery_order_and_whole_support",
+            "test_pass_02_transactions.Transactions.test_structural_prime_slots_without_combat",
+            "test_pass_02_transactions.Transactions.test_checkpoint_nonempty_preserves_native_state_and_retry",
+            "test_pass_02_adversarial.Adversarial.test_input_bounds_code_and_card_only_containment",
+            "test_pass_02_adversarial.Adversarial.test_setup_rollback_and_exact_idempotent_multiset",
+            "test_pass_02_adversarial.Adversarial.test_concurrent_requests_and_semantic_order",
+            "test_pass_02_adversarial.Adversarial.test_native_route_and_handler_closure_cannot_be_bypassed",
+            "test_pass_02_adversarial.Adversarial.test_recovery_profiles_and_batch_capacity",
+            "test_pass_02_adversarial.Adversarial.test_inspection_reorder_batch_helpers_grant_limits",
+            "test_pass_02_adversarial.Adversarial.test_seeded_conservation_two_owners",
+            "test_pass_02_adversarial.Adversarial.test_catalog_tamper_and_physical_path_determinism",
+            "test_pass_02_adversarial.Adversarial.test_checkpoint_corruption_and_new_process_restore",
+            "test_pass_02_adversarial.Adversarial.test_semantic_replay_across_storage_and_epoch"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-013",
+          "group": "language",
+          "work_unit": "P2-W02",
+          "required": true,
+          "status": "PASS",
+          "title": "Deterministic compilation",
+          "exercise": "Rebuild at a second physical path with same logical inputs.",
+          "required_observation": "Same declared bytecode/content hashes; paths not semantic identity.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_catalog_tamper_and_physical_path_determinism",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-014",
+          "group": "language",
+          "work_unit": "P2-W02",
+          "required": true,
+          "status": "PASS",
+          "title": "Typed nonempty input",
+          "exercise": "Send card/zone/list arguments through the real adapter.",
+          "required_observation": "Validated bindings reach Genesis; client text never executed as source.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_input_bounds_code_and_card_only_containment",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-015",
+          "group": "language",
+          "work_unit": "P2-W02",
+          "required": true,
+          "status": "PASS",
+          "title": "Argument rejection",
+          "exercise": "Send extra fields, wrong numeric types, huge arrays and code-like strings.",
+          "required_observation": "Rejected before mutation; execution/memory limits preserved.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_input_bounds_code_and_card_only_containment",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-016",
+          "group": "language",
+          "work_unit": "P2-W02",
+          "required": true,
+          "status": "PASS",
+          "title": "Backward package compatibility",
+          "exercise": "Execute old conformance and Pass-1 package path.",
+          "required_observation": "Zero-argument observation and initial topology remain valid or explicit tested migration exists.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "18 preserved Pass-1 tests",
+            "74-case runtime acceptance.json"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-017",
+          "group": "language",
+          "work_unit": "P2-W02",
+          "required": true,
+          "status": "PASS",
+          "title": "Runtime instance growth",
+          "exercise": "Initialize both 60-card inventories plus original objects.",
+          "required_observation": "Bounded real native instances; not a two-card special case or unbounded verifier bypass.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-018",
+          "group": "language",
+          "work_unit": "P2-W02",
+          "required": true,
+          "status": "PASS",
+          "title": "No rule logic in fence",
+          "exercise": "Inspect ownership and test bypass routes.",
+          "required_observation": "Hypervisor stays transport; gameplay checks executed through admitted Genesis/data semantics.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_native_route_and_handler_closure_cannot_be_bypassed",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-019",
+          "group": "identity-and-setup",
+          "work_unit": "P2-W03",
+          "required": true,
+          "status": "PASS",
+          "title": "Distinct copies",
+          "exercise": "Instantiate two of the same FG for each of two owners.",
+          "required_observation": "Same source record, four distinct live identities scoped to owner/match.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-020",
+          "group": "identity-and-setup",
+          "work_unit": "P2-W03",
+          "required": true,
+          "status": "PASS",
+          "title": "Atomic inventory setup",
+          "exercise": "Initialize one validated roster under trusted grant.",
+          "required_observation": "Exactly 60 copies with exact multiset/order; existing Board identities preserved.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-021",
+          "group": "identity-and-setup",
+          "work_unit": "P2-W03",
+          "required": true,
+          "status": "PASS",
+          "title": "No free spawn",
+          "exercise": "Try initialization through unauthorized player input after setup.",
+          "required_observation": "Rejected; no deck replacement or duplicated inventory.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-022",
+          "group": "identity-and-setup",
+          "work_unit": "P2-W03",
+          "required": true,
+          "status": "PASS",
+          "title": "Idempotent initialization",
+          "exercise": "Resend identical setup and then conflicting setup.",
+          "required_observation": "Original result reused; conflicting reset rejected.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_setup_rollback_and_exact_idempotent_multiset",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-023",
+          "group": "identity-and-setup",
+          "work_unit": "P2-W03",
+          "required": true,
+          "status": "PASS",
+          "title": "Setup rollback",
+          "exercise": "Fail during staged card creation and before publication.",
+          "required_observation": "No partial inventory, counter advance or live leaked copy.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_setup_rollback_and_exact_idempotent_multiset",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-024",
+          "group": "identity-and-setup",
+          "work_unit": "P2-W03",
+          "required": true,
+          "status": "PASS",
+          "title": "Empty boot preserved",
+          "exercise": "Run empty application without initialization.",
+          "required_observation": "Pass-1 counts/identities/empty contents unchanged; capacity seven not an opening deal.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-025",
+          "group": "identity-and-setup",
+          "work_unit": "P2-W03",
+          "required": true,
+          "status": "PASS",
+          "title": "Card-only containment",
+          "exercise": "Attempt non-CARD insertion into Deck/Hand/Graveyard.",
+          "required_observation": "Wrong profile rejected; container identity remains distinct.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_input_bounds_code_and_card_only_containment",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-026",
+          "group": "shuffle-and-draw",
+          "work_unit": "P2-W04",
+          "required": true,
+          "status": "PASS",
+          "title": "Ordered container identity",
+          "exercise": "Reorder collection and inspect copies.",
+          "required_observation": "Position changes never remint cards; order is explicit committed State.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02.Pass02.test_actual_draw_and_commit_preserve_identity",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-027",
+          "group": "shuffle-and-draw",
+          "work_unit": "P2-W04",
+          "required": true,
+          "status": "PASS",
+          "title": "Shuffle golden vector",
+          "exercise": "Use fixed fixture seed/algorithm and independent permutation oracle.",
+          "required_observation": "Exact repeatable order and preserved multiset; no modulo-biased implementation shortcut.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_shuffle_independent_full_vector_and_idempotency",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-028",
+          "group": "shuffle-and-draw",
+          "work_unit": "P2-W04",
+          "required": true,
+          "status": "PASS",
+          "title": "RNG durability",
+          "exercise": "Fail/retry and checkpoint mid-sequence.",
+          "required_observation": "RNG counter/order commit together; no extra random consumption on duplicate/refusal.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_shuffle_independent_full_vector_and_idempotency",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-029",
+          "group": "shuffle-and-draw",
+          "work_unit": "P2-W04",
+          "required": true,
+          "status": "PASS",
+          "title": "Seed privacy",
+          "exercise": "Inspect player/opponent messages and normal intents.",
+          "required_observation": "No seed/future-order leakage or untrusted seed control.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_shuffle_independent_full_vector_and_idempotency",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-030",
+          "group": "shuffle-and-draw",
+          "work_unit": "P2-W04",
+          "required": true,
+          "status": "PASS",
+          "title": "Top-card draw",
+          "exercise": "Issue admitted DRAW_ONE for an owned Deck/Hand.",
+          "required_observation": "Actual top copy moves; source count -1, Hand +1, same ID/history.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02.Pass02.test_actual_draw_and_commit_preserve_identity",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-031",
+          "group": "shuffle-and-draw",
+          "work_unit": "P2-W04",
+          "required": true,
+          "status": "PASS",
+          "title": "Seven-card capacity",
+          "exercise": "Draw to seven, then attempt another.",
+          "required_observation": "Refusal leaves top/order/card multiset/root/revision/grant unchanged.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_hand_capacity_empty_deck_and_forged_arguments",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-032",
+          "group": "shuffle-and-draw",
+          "work_unit": "P2-W04",
+          "required": true,
+          "status": "PASS",
+          "title": "Empty Deck",
+          "exercise": "Use declared exhausted-deck fixture and request draw.",
+          "required_observation": "Defined no-card/refusal; no invented match loss or auto-reshuffle.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_hand_capacity_empty_deck_and_forged_arguments",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-033",
+          "group": "shuffle-and-draw",
+          "work_unit": "P2-W04",
+          "required": true,
+          "status": "PASS",
+          "title": "Unauthorized draw",
+          "exercise": "Forge owner, top card, destination or grant.",
+          "required_observation": "Rejected; no arbitrary tutor or foreign-card transfer.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_hand_capacity_empty_deck_and_forged_arguments",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-034",
+          "group": "shuffle-and-draw",
+          "work_unit": "P2-W04",
+          "required": true,
+          "status": "PASS",
+          "title": "Concurrent stale transfer",
+          "exercise": "Submit two different requests for one source revision/card.",
+          "required_observation": "At most admitted successor commits; no duplicate/lost card.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_concurrent_requests_and_semantic_order",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-035",
+          "group": "shuffle-and-draw",
+          "work_unit": "P2-W04",
+          "required": true,
+          "status": "PASS",
+          "title": "Order in semantic root",
+          "exercise": "Change Deck order via admitted shuffle.",
+          "required_observation": "Committed root reflects order/RNG; not only a mutable host list.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_concurrent_requests_and_semantic_order",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-036",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "FG Hand-to-space",
+          "exercise": "Commit an owned Hand FG into owned A.",
+          "required_observation": "Same logical copy/catalog; Hand removed, space added, EMPTY->CONFIGURING.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02.Pass02.test_actual_draw_and_commit_preserve_identity",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-037",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "No implicit field",
+          "exercise": "Commit several FGs with correct count only.",
+          "required_observation": "No active field/color/topology; pose and QMO gate deferred.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02.Pass02.test_actual_draw_and_commit_preserve_identity",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-038",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W06",
+          "required": true,
+          "status": "PASS",
+          "title": "Temporary capacity",
+          "exercise": "Attempt excess FG commitment into a capacity-3 temporary space.",
+          "required_observation": "Over-capacity denied without source loss.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-039",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "Committed extraction denied",
+          "exercise": "Attempt individual space-to-Hand or space-to-space movement.",
+          "required_observation": "Rejected; no backdoor via generic transfer.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_retirement_recovery_order_and_whole_support",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-040",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "Wrong deployment profile/owner",
+          "exercise": "Commit Utility/Prime as FG or target opponent space.",
+          "required_observation": "Denied by admitted application contract.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_recovery_profiles_and_batch_capacity",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-041",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "Prime structural slot",
+          "exercise": "Under setup fixture bind existing Prime to owned empty slot.",
+          "required_observation": "Distinct card/slot identity; no arithmetic or turn/setup rule invented.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_structural_prime_slots_without_combat",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-042",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "Prime slot denial",
+          "exercise": "Use occupied/foreign/fourth slot or wrong card profile.",
+          "required_observation": "Rejected atomically; existing slot/card untouched.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_structural_prime_slots_without_combat",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-043",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "Prime retirement denied",
+          "exercise": "Attempt normal Prime-to-Graveyard movement.",
+          "required_observation": "Denied; no invented destruction/deactivation in this pass.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_structural_prime_slots_without_combat",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-044",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "Cause-authorized retirement",
+          "exercise": "Retire eligible non-Primes under trusted resolved cause.",
+          "required_observation": "Copy/history conserved; explicit Graveyard order; no new discard/exile zone.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_retirement_recovery_order_and_whole_support",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-045",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "No free retirement",
+          "exercise": "Request disposal/extraction with no valid cause.",
+          "required_observation": "Denied; test grant issuer is not a player export.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_inspection_reorder_batch_helpers_grant_limits",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-046",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "Recover FG to Hand",
+          "exercise": "Use source-linked single-FG recovery with capacity available.",
+          "required_observation": "Exact same selected copy; no auto-topology reconstruction.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_retirement_recovery_order_and_whole_support",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-047",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "Recover chosen order to Deck",
+          "exercise": "Use up-to-three non-Prime source effect with chosen order.",
+          "required_observation": "Selected order is next-draw order; Graveyard survivors preserve order.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_retirement_recovery_order_and_whole_support",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-048",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "Recovery type restrictions",
+          "exercise": "Select wrong family/Prime/foreign/not-in-source copy.",
+          "required_observation": "Entire requested transfer rejected unchanged.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_recovery_profiles_and_batch_capacity",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-049",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "Batch duplicate and overflow",
+          "exercise": "Repeat a selected copy or exceed batch/capacity.",
+          "required_observation": "All-or-none primitive refusal; no invented Utility overflow outcome or card consumption.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_recovery_profiles_and_batch_capacity",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-050",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "Limited inspection",
+          "exercise": "Exercise granted Survey/Graveyard window; exceed count or reuse grant.",
+          "required_observation": "Only source-authorized selection visible; bounded scope/consumption.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_inspection_reorder_batch_helpers_grant_limits",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-051",
+          "group": "deployment-recovery",
+          "work_unit": "P2-W05",
+          "required": true,
+          "status": "PASS",
+          "title": "Source-vs-test distinction",
+          "exercise": "Exercise uncertain Utility timing/remainder behavior.",
+          "required_observation": "Explicit policy gate; helper success not claimed as full Utility implementation.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "PASS_02_POLICY_GATES.json",
+            "conformance-only fixture and no full Utility export"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-052",
+          "group": "dynamic-region",
+          "work_unit": "P2-W06",
+          "required": true,
+          "status": "PASS",
+          "title": "Initial dynamic region",
+          "exercise": "Inspect empty initialization and live region representation.",
+          "required_observation": "Only A/B/C exist initially; extras absent, membership is not fixed to three.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-053",
+          "group": "dynamic-region",
+          "work_unit": "P2-W06",
+          "required": true,
+          "status": "PASS",
+          "title": "Three through nine",
+          "exercise": "Admit six additional spaces with canonical Sandbox Activation effects.",
+          "required_observation": "Live native space count grows 3..9; no Board reconstruction or unrelated machine domains.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-054",
+          "group": "dynamic-region",
+          "work_unit": "P2-W06",
+          "required": true,
+          "status": "PASS",
+          "title": "Reject tenth space",
+          "exercise": "Attempt one more admitted addition at cap.",
+          "required_observation": "No new space/grant consumption/partial relationships; semantic state unchanged.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-055",
+          "group": "dynamic-region",
+          "work_unit": "P2-W06",
+          "required": true,
+          "status": "PASS",
+          "title": "Permanent identity retention",
+          "exercise": "Compare Board, region and A/B/C through all additions.",
+          "required_observation": "All persistent identities unchanged; display positions not IDs.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-056",
+          "group": "dynamic-region",
+          "work_unit": "P2-W06",
+          "required": true,
+          "status": "PASS",
+          "title": "Capacity data-driven",
+          "exercise": "Exercise R/O/Y/G/B/V source definitions.",
+          "required_observation": "FG capacities 3/4/5/6/7/8 from source, not field-color creation.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-057",
+          "group": "dynamic-region",
+          "work_unit": "P2-W06",
+          "required": true,
+          "status": "PASS",
+          "title": "No color uniqueness",
+          "exercise": "Use two allowed copies of same-color Activation effect.",
+          "required_observation": "No invented one-per-color rule; global cap still enforced.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-058",
+          "group": "dynamic-region",
+          "work_unit": "P2-W06",
+          "required": true,
+          "status": "PASS",
+          "title": "No free expansion",
+          "exercise": "Forge rank/capacity, effect source, grant or other owner.",
+          "required_observation": "Denied; only bounded trusted admitted-effect path creates a space.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-059",
+          "group": "dynamic-region",
+          "work_unit": "P2-W06",
+          "required": true,
+          "status": "PASS",
+          "title": "Dynamic observation",
+          "exercise": "Read every added space through both authorized byte views.",
+          "required_observation": "New members included; stale manifest arrays do not cap visibility.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-060",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Owner Hand visibility",
+          "exercise": "Inspect own Hand after real draws.",
+          "required_observation": "Authorized actual card identities/data visible.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_live_private_views_and_detached_values",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-061",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Opponent hidden information",
+          "exercise": "Inspect all snapshots/deltas/receipts/errors and cardbacks.",
+          "required_observation": "No hidden Hand or future Deck identities/order/seed revealed.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_live_private_views_and_detached_values",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-062",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Restricted Graveyard read",
+          "exercise": "Request arbitrary browse without accepted inspection effect.",
+          "required_observation": "Forbidden internals absent; grants permit only declared subset.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_live_private_views_and_detached_values",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-063",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Detached projection",
+          "exercise": "Modify decoded client dictionaries.",
+          "required_observation": "Native committed state unchanged.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_live_private_views_and_detached_values",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-064",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Conservation property sequence",
+          "exercise": "Run varied seeded admitted/refused operations for both owners.",
+          "required_observation": "After every step all card copies conserved; one live location each.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_seeded_conservation_two_owners",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-065",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Pre-publication failures",
+          "exercise": "Inject failure after source candidate update and before atomic publish.",
+          "required_observation": "Old root, order, memberships, grants, RNG and revision restored.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_failed_candidate_rolls_back_grant_rng_membership",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-066",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Post-commit delivery failure",
+          "exercise": "Commit, drop output, retry same request.",
+          "required_observation": "Original outcome returned without a second transfer or revision.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_delivery_loss_retry_conflict_and_stale_revision",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-067",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Request-ID conflict",
+          "exercise": "Reuse ID with changed arguments.",
+          "required_observation": "Conflict, not a replay of success and not another mutation.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_delivery_loss_retry_conflict_and_stale_revision",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-068",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Stale/old epoch input",
+          "exercise": "Send out-of-date revision and pre-restart epoch.",
+          "required_observation": "No mutation; supported resynchronization path remains usable.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "existing epoch/reconnect integration tests",
+            "tests-integration.json"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-069",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Bounded queues/batches/resources",
+          "exercise": "Fill admission/output/resource limits.",
+          "required_observation": "Backpressure before publication; no lost accepted card action.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_backpressure_before_mutation",
+            "test_input_bounds_code_and_card_only_containment"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-070",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Nonempty checkpoint",
+          "exercise": "Save varied zones, Deck order and nine-space membership.",
+          "required_observation": "Restore exact identities/order/catalog/grants/RNG/root, not a fresh empty match.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_transactions.Transactions.test_checkpoint_nonempty_preserves_native_state_and_retry",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-071",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Process restart/retry",
+          "exercise": "Restore in new process then retry committed request.",
+          "required_observation": "New boundary epoch, preserved outcome and zero duplicate mutation.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_checkpoint_corruption_and_new_process_restore",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-072",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Corrupt recovery data",
+          "exercise": "Tamper checkpoint/catalog/binding data.",
+          "required_observation": "Rejected unpublished candidate; no replace of valid live state.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_checkpoint_corruption_and_new_process_restore",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-073",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Replay semantic roots",
+          "exercise": "Repeat recorded operations with same declared input/namespace.",
+          "required_observation": "Equal semantic roots; host UUID/time/path differences excluded.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_semantic_replay_across_storage_and_epoch",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-074",
+          "group": "privacy-and-recovery",
+          "work_unit": "P2-W07",
+          "required": true,
+          "status": "PASS",
+          "title": "Native route/closure negatives",
+          "exercise": "Remove valid path/grant or leave Portal/Road open.",
+          "required_observation": "Actual compiled integration fails; no direct host commit shortcut.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "test_pass_02_adversarial.Adversarial.test_native_route_and_handler_closure_cannot_be_bypassed",
+            "tests-integration.json",
+            "tests-integration.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-075",
+          "group": "distribution-and-exit",
+          "work_unit": "P2-W08",
+          "required": true,
+          "status": "PASS",
+          "title": "Regression preservation",
+          "exercise": "Run runtime and Pass-1 behavioral suites with new bindings.",
+          "required_observation": "Prior behavior preserved; new runtime case count not a source-string test.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "18 preserved Pass-1 tests",
+            "74-case runtime acceptance.json"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-076",
+          "group": "distribution-and-exit",
+          "work_unit": "P2-W08",
+          "required": true,
+          "status": "PASS",
+          "title": "Repository/QMO guards",
+          "exercise": "Run all applicable validators and regressions.",
+          "required_observation": "Original 120-FG/2,094-atlas source protection and canonical data preserved.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "Git changed-path check",
+            "repository-validation.json"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-077",
+          "group": "distribution-and-exit",
+          "work_unit": "P2-W08",
+          "required": true,
+          "status": "PASS",
+          "title": "Exact package inventory",
+          "exercise": "Package matching source revision and verify exact members/hashes.",
+          "required_observation": "Required .gen/catalog/runtime assets included; no caches/secrets/traversal/collisions.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "distributions.json",
+            "distribution-verification.json"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-078",
+          "group": "distribution-and-exit",
+          "work_unit": "P2-W08",
+          "required": true,
+          "status": "PASS",
+          "title": "Offline no external checkout",
+          "exercise": "Build/run from isolated extraction without original repositories.",
+          "required_observation": "No external _bricked file/URL/Git dependency; provenance text allowed.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "distribution-verification.json",
+            "distribution-isolation-probes.log",
+            "enforced Python audit hooks in every child interpreter"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-079",
+          "group": "distribution-and-exit",
+          "work_unit": "P2-W08",
+          "required": true,
+          "status": "PASS",
+          "title": "Network/Git exclusion",
+          "exercise": "Deny/monitor network and Git for installed build/run paths.",
+          "required_observation": "No auto-fetch; record enforcement method, not just PIP_NO_INDEX.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "distribution-verification.json",
+            "distribution-isolation-probes.log",
+            "enforced Python audit hooks in every child interpreter"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-080",
+          "group": "distribution-and-exit",
+          "work_unit": "P2-W08",
+          "required": true,
+          "status": "PASS",
+          "title": "Fresh installed demos",
+          "exercise": "Run old and Pass-2 demos/tests/checkpoint using packaged dependencies.",
+          "required_observation": "Real Genesis+Hypervisor; explicit supported-host/Python prerequisite.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "distributions.json",
+            "distribution-verification.json"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-081",
+          "group": "distribution-and-exit",
+          "work_unit": "P2-W08",
+          "required": true,
+          "status": "PASS",
+          "title": "Missing dependency fails closed",
+          "exercise": "Remove required asset in temporary test copy.",
+          "required_observation": "Clear dependency error; no online fallback.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "distribution-missing-dependency.log"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-082",
+          "group": "distribution-and-exit",
+          "work_unit": "P2-W08",
+          "required": true,
+          "status": "PASS",
+          "title": "Receipt and denominator",
+          "exercise": "Produce mapped acceptance result and policy ledger.",
+          "required_observation": "Exact real counts; no NOT_RUN/FAIL silently marked PASS or removed.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "83-case unchanged specification",
+            "PASS_02_RECEIPT.md",
+            "PASS_02_POLICY_GATES.json"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        },
+        {
+          "id": "P2-083",
+          "group": "distribution-and-exit",
+          "work_unit": "P2-W08",
+          "required": true,
+          "status": "PASS",
+          "title": "Commit/push/continuity",
+          "exercise": "Inspect final working tree, main and remote task ref.",
+          "required_observation": "Coherent _raeon commits pushed; main not merged; Pass-3 next command recorded.",
+          "evidence_required": [
+            "named_test_or_command",
+            "source_revision_and_hash",
+            "actual_assertion_or_output",
+            "exit_result"
+          ],
+          "evidence": [
+            "Git remote and clean-status checks",
+            "PASS_02_EXECUTION.md",
+            "PASS_02_RECEIPT.md"
+          ],
+          "source_revision": "d991278bc72518e9abe2df7741298a2631c787d0",
+          "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+          "exit_result": 0
+        }
+      ],
+      "policy_gated": {
+        "schema_version": 1,
+        "not_mandatory_test_waivers": true,
+        "items": [
+          {
+            "id": "POL-01",
+            "topic": "Opening hand, draw cadence, mulligan, first player",
+            "pass_2_treatment": "Operation-level trusted grants; no auto-start scheduler",
+            "status": "OPEN_POLICY"
+          },
+          {
+            "id": "POL-02",
+            "topic": "Prime selection/start placement and deck counting",
+            "pass_2_treatment": "Neutral FG/Utility deck plus structural slot test; no invented final Prime setup",
+            "status": "OPEN_SETUP_POLICY"
+          },
+          {
+            "id": "POL-03",
+            "topic": "Multi-card overflow and short-deck outcomes",
+            "pass_2_treatment": "Atomic batch primitive refusal; complete Utility resolution gated",
+            "status": "OPEN_RESOLUTION_POLICY"
+          },
+          {
+            "id": "POL-04",
+            "topic": "Utility play cost/window/consumption",
+            "pass_2_treatment": "Source-linked primitive under trusted effect grant; no free public effect",
+            "status": "OPEN_PLAY_POLICY"
+          },
+          {
+            "id": "POL-05",
+            "topic": "Selection remainder ordering and short surveys",
+            "pass_2_treatment": "Preserve source OPEN labels; no inferred order",
+            "status": "OPEN_REMAINDER_POLICY"
+          },
+          {
+            "id": "POL-06",
+            "topic": "Temporary-space expiry/removal, merge/base accounting",
+            "pass_2_treatment": "Dynamic additions/cap tests only; no new expiry/merge rule",
+            "status": "OPEN_EXPIRY; ACCEPTED_MERGE_IMPLEMENTATION_DEFERRED"
+          },
+          {
+            "id": "POL-07",
+            "topic": "Field destruction timing and support batching",
+            "pass_2_treatment": "Cause-authorized retirement primitive tested; actual damage scheduler deferred",
+            "status": "OPEN_DAMAGE_TIMING"
+          },
+          {
+            "id": "POL-08",
+            "topic": "FG pose/manifold legality",
+            "pass_2_treatment": "Commit as CONFIGURING with no active field; Pass 3",
+            "status": "ACCEPTED_DESIGN_IMPLEMENTATION_DEFERRED_TO_PASS_3"
+          },
+          {
+            "id": "POL-09",
+            "topic": "Refresh, reaction, victory and complete match loop",
+            "pass_2_treatment": "Pass 4/latest accepted canon; not inferred from empty Deck",
+            "status": "OPEN_VICTORY; PRIME_RUNTIME_DEFERRED_TO_PASS_4"
+          }
+        ],
+        "review": "Reconciled against current main-derived accepted sources on the Pass-1 lineage; helper execution does not resolve these policies."
+      },
+      "whole_game_phase": "PREPRODUCTION"
+    },
+    "projection-correction-acceptance.json": {
+      "finding": "V-P2-01",
+      "status": "PASS",
+      "passed": 8,
+      "total": 8,
+      "cases": [
+        {
+          "id": "V-P2-01-1",
+          "test": "test_audited_public_view_cannot_inherit_private_hand",
+          "kind": "audited_failure",
+          "status": "PASS"
+        },
+        {
+          "id": "V-P2-01-2",
+          "test": "test_audited_same_actor_public_cannot_inherit_inspection",
+          "kind": "audited_failure",
+          "status": "PASS"
+        },
+        {
+          "id": "V-P2-01-3",
+          "test": "test_audited_live_merge_cannot_restore_private_relations",
+          "kind": "audited_failure",
+          "status": "PASS"
+        },
+        {
+          "id": "V-P2-01-4",
+          "test": "test_owner_opponent_and_public_controls",
+          "kind": "additional_control",
+          "status": "PASS"
+        },
+        {
+          "id": "V-P2-01-5",
+          "test": "test_public_live_geometry_delta_and_reconnect",
+          "kind": "additional_control",
+          "status": "PASS"
+        },
+        {
+          "id": "V-P2-01-6",
+          "test": "test_private_inspection_delta_reconnect_restore_and_expiry",
+          "kind": "additional_control",
+          "status": "PASS"
+        },
+        {
+          "id": "V-P2-01-7",
+          "test": "test_inspection_scope_includes_application_view_owner_and_actor",
+          "kind": "additional_control",
+          "status": "PASS"
+        },
+        {
+          "id": "V-P2-01-8",
+          "test": "test_public_inspect_admission_rejected_atomically",
+          "kind": "additional_control",
+          "status": "PASS"
+        }
+      ],
+      "fresh_distribution_verified": true,
+      "implementation_sha256": "3d2ce089938d06fee9ba607fe9e4bbd66e7c687f2890cf266da7fb703f84fc57",
+      "evidence": [
+        "tests-integration.json",
+        "tests-integration.log",
+        "tests-source.json",
+        "distribution-verification.json",
+        "distribution-integration-tests.log"
+      ],
+      "original_denominators": {
+        "runtime": 74,
+        "pass_02": 83
+      }
+    }
+  },
+  "logs": {
+    "audit-entry.log": "05d8e48430c4b6703ca1ce714355ddd85e1396cc80af0d8abc8b7f055b8ba3e2",
+    "full-test-entry.log": "c9e04e809b844cf560ea542450746aae3232498c3cb67aa22ae4f0b87d0359fa",
+    "privacy-entry.log": "5303669524a19100d6284438fcc11eaebb0890c3be987ea3e5c877518c9840e0",
+    "repository-entry.log": "55ec0fd415633578f7b72d173de8b7ee94bc26e5652bc9ae553c1813048c18fc"
+  }
+}
