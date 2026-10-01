@@ -255,15 +255,26 @@ def verify_distributions(root, output):
             raise RuntimeError('Missing QMO failed for an unrelated reason')
     finally:
         held.rename(missing)
-    missing = extraction / 'data/game/pass-04-runtime.json'
+    relative = 'data/game/pass-04-runtime.json'
+    missing = extraction / relative
+    expected = json.loads((extraction / 'game/core/raeon/application/manifest.json').read_text())['state_extension']['inputs'][relative]
+    if sha(missing.read_bytes()) != expected:
+        raise RuntimeError('Pass-4 negative precondition: pinned input mismatch')
     held = missing.with_name(missing.name + '.held-for-negative-test')
     missing.rename(held)
     try:
+        if missing.exists() or sha(held.read_bytes()) != expected:
+            raise RuntimeError('Pass-4 negative precondition: input not removed intact')
         negative = run('missing-pass04-input', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless', '--application', 'raeon', '--scenario', 'color'], expected_exit=1)
-        if 'pass-04-runtime.json' not in negative.stderr:
+        # Application confinement intentionally conceals missing input paths.
+        # The preceding positive scene and exact single-file removal establish
+        # the cause; a different exception or successful execution still fails.
+        if not negative.stderr.splitlines() or negative.stderr.splitlines()[0] != 'ADMISSION_REJECTED':
             raise RuntimeError('Missing Pass-4 input failed for an unrelated reason')
     finally:
         held.rename(missing)
+    if sha(missing.read_bytes()) != expected:
+        raise RuntimeError('Pass-4 negative cleanup: original input not restored')
     original_build = json.loads((output / 'evidence/build.json').read_text())
     relocated_build = json.loads((extraction / 'build/genesis_runtime/evidence/build.json').read_text())
     if original_build != relocated_build:

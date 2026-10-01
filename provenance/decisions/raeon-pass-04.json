@@ -20,7 +20,7 @@
     "data/game/pass-04-runtime.json": "02788120c5aa0caaf9c656b97c8cfe0b68600ba46196fab7d38a3328be6e2e38",
     "data/topology/configuration-spaces.json": "6a7d59774fad10c9f92d6eb6ccd07299a368639427e890b52a45ad502f133b90",
     "development/modules/core-game/HOST_RUNTIME_RISKS.json": "558b5705cd943b6516f8bfd69efefc338769e99269f424218bacdb9b4ec4a82b",
-    "development/modules/core-game/PASS_04_EXECUTION.md": "a41eb2a80fccfc61dcb08a4088e4a63b02b04d36e2246ca91893a5b63ca94310",
+    "development/modules/core-game/PASS_04_EXECUTION.md": "9498b851b544fdf66d5ccf79152e9012bf12fc51c2c74190f6ba4cbf2b734648",
     "game/core/raeon/application/generate_field.gen": "94e14c6725c396795ad463e605682fdbb8eaa593263b389523911972cb014f70",
     "game/core/raeon/application/refresh_fields.gen": "ebc2ca991a1cbd5410340fae356f90dad1ea882ccae51dc0a9b7b7f961fac704",
     "game/core/raeon/application/set_active_player.gen": "8f7c27e9575afaf103ed58e234ee14129c3b9fd82e3a3cf4269fd9bde7997c8e",
@@ -83,7 +83,7 @@
     },
     "tools/genesis_runtime_distribution.py": {
       "before_sha256": "8507c16ee29912fc1a1a50dde284ab16a4050f460b6f605ec38e9cbcd888a3aa",
-      "after_sha256": "9b2fcd13391f18e8f7c4e09a1d89c1e039dbacf1282da31d07add8113861ea2f"
+      "after_sha256": "44575d3adfe4204627f7aac787ac06f6832eb445baa48e2cd5b0dce2991007c7"
     },
     "tools/genesis_runtime_isolation.py": {
       "before_sha256": "16fbf8feb16278e789108c74a8b24cba82121783117446621a2b99f5831d0982",

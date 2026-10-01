@@ -3,7 +3,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 
 export const pass04Decision = 'provenance/decisions/raeon-pass-04.json';
-const acceptedDecisionHash = 'f69564e38d8c1f941823446cb817df1803198fe8c7405ea8ca4330c751dc7c84';
+const acceptedDecisionHash = '59a63059ab3c36baf0f30ae1dae48762bdc126fc5b469366fb14a384d0b0e290';
 const hash = value => createHash('sha256').update(value).digest('hex');
 
 export function pass04(root) {
