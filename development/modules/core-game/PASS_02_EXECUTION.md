@@ -1,40 +1,32 @@
 # Current runtime execution record — Pass 2
 
-Status: PROJECTION_CORRECTION_VALIDATION_IN_PROGRESS.
-The completed implementation is preserved; the Vera audit found three privacy
-cases absent from the original mapped suite. See [correction receipt](PASS_02_PROJECTION_CORRECTION.md).
+Status: SOFTWARE_SCOPE_COMPLETE; Vera V-P2-01 PROJECTION_CORRECTION_VERIFIED.
+Whole-game phase: PREPRODUCTION. Branch: `codex/raeon-pass-02`.
+Correction start: `8a20961b97b0bbb6e2e257d3c3ff62992ea6d839`.
+Corrected implementation/archive local and remote commit: `7a9f073959af7bb41dd60bf5ddbb1e7176c7803b`.
+Final closing documentation commit: current Git HEAD and generated
+`build/genesis_runtime/evidence/remote.json` after final push.
+Main before/after: `69a0030805b8c3858c877a514e2f50644421115a`; unmerged.
+Pinned read-only `_bricked`: `c89676fc26000ae6f5fdad66a56e118b285d9b1d`, clean.
 
-Historical pre-correction record follows. Status at original receipt: SOFTWARE_SCOPE_COMPLETE. Whole-game phase: PREPRODUCTION.
-Working branch: `codex/raeon-pass-02`.
-Starting Pass-1 commit: `23ebfc3be3a4e6ae4883793bfc99b1dbfae67bf8`.
-Implementation/distribution local and remote commit: `f5c380deccb1297f455a599004b159706b39735c`.
-Closing receipt commit: resolve from current Git HEAD and
-`build/genesis_runtime/evidence/pass-02-acceptance.json` after the final push.
-Main before/after: `69a0030805b8c3858c877a514e2f50644421115a`; no merge authorized or performed.
+The [correction receipt](PASS_02_PROJECTION_CORRECTION.md) records the three real
+reproductions, selected-view privacy fix, additional coverage, exact source
+amendment, fresh verification, archive hashes and compatibility limits.
+The [original receipt](PASS_02_RECEIPT.md) preserves the historical Pass-2 result;
+its old mapped green suite did not cover the three audited projection cases.
 
-Pinned read-only upstream: `c89676fc26000ae6f5fdad66a56e118b285d9b1d`.
-All 1,075 dependency hashes verify; `_bricked` stays clean. Runtime tests use
-`build/dependencies/bricked-runtime`. Original pouch SHA-256:
-`16d48c222beff5d8569ae021f7434c25b45a369855540e8c52ad3135416000ba`.
+Verified: runtime 74/74, original Pass 2 83/83 and separate correction 8/8;
+6 unit + 64 integration tests; 575 upstream checks in 13 suites; seven repository
+validators, 215 repository regressions and 17 gameplay-design tests. All 55 prior
+test files remain unchanged. All 36 compiled sources/artifacts match the original
+build. Fresh offline installation/rebuild/demos/tests/restart, enforced isolation
+and missing-dependency negative pass. Native SDK/device tests remain NOT_RUN.
 
-Completed unit: actual Genesis Pass-2 card identities, admitted collection
-operations, native Road transport, privacy, durability, bounded dynamic spaces,
-source protection, exact paired archives and independently intercepted offline
-verification. The [receipt](PASS_02_RECEIPT.md) records delivered behavior,
-source/bytecode manifests, commands, artifacts, constraints and policy gates.
+No software-scope blocker remains. The nine existing policy gates in
+`PASS_02_POLICY_GATES.json` remain unchanged. Existing exact binding-contract
+checks reject pre-correction nonempty checkpoints; corrected checkpoints retain
+inspection scope. No Cycle-1 mathematics, canonical design/data, application
+Genesis source, Hypervisor logic or whole-game/module gates changed.
 
-Last substantive command: `python tools/genesis_runtime.py audit` — exit 0,
-runtime 74/74 and Pass 2 83/83. Full tests: 6 unit, 56 integration, 575 upstream;
-repository regressions: 211 plus 17 gameplay-design tests. Offline extraction
-rebuild/demos/tests/restart passed, with 254,406 audited events and zero
-unexpected denials. Missing-dependency failure was exercised intentionally.
-
-Blockers for completed Pass-2 software scope: none. Nine policy-gated topics
-remain in `PASS_02_POLICY_GATES.json`; they do not waive mandatory cases.
-No Cycle-1 mathematics was regenerated; canonical design/data and all module
-gates are unchanged. No complete playable match or native device support claimed.
-
-Next action: after an authorized Pass-3 request, recover this branch/accepted
-successor, run `python tools/genesis_runtime.py demo --headless --application raeon --scenario cards`,
-then implement accepted FG pose/relationship/QMO legality on the existing live
-copy/container state. Do not create a parallel application or merge main.
+Next action: await authorized Pass-3 work on the completed implementation. Do not
+restart Pass 2, introduce a parallel application, or merge main without authorization.
