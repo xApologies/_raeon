@@ -94,7 +94,7 @@
     },
     "tools/genesis_runtime_distribution.py": {
       "before_sha256": "102e94a4826f11d22dcbe74528f02825c28b54e7073422d7895af826cc7c067c",
-      "after_sha256": "e6d997bd8deededffef18d16f94d2062d5c0a4e4c3383dc5ec31f4e793999352"
+      "after_sha256": "8507c16ee29912fc1a1a50dde284ab16a4050f460b6f605ec38e9cbcd888a3aa"
     },
     "tools/genesis_runtime_pass02.py": {
       "before_sha256": "18fee9048e9c74e5115300e1fd7d0ea886f9fa79f0b2025653fd941a5b59d46e",

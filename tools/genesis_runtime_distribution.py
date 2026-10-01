@@ -167,7 +167,7 @@ def check_archive(path, manifest_name):
 
 def verify_distributions(root, output):
     distributions = json.loads((output / 'evidence/distributions.json').read_text(encoding='utf8'))
-    extraction = Path(tempfile.mkdtemp(prefix='RAEON clean extraction ')).resolve()
+    extraction = Path(tempfile.mkdtemp(prefix='c ')).resolve()
     extracted = set()
     manifests = {}
     for family, record in distributions.items():
