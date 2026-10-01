@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "authority": "RAEON runtime realization v1; source QMO corpus unchanged",
+  "source_pouch_sha256": "acd410d548ea5503640e789f3acf8c4a77f33b4552b9f5980f8eee06055be23f",
+  "inputs": {
+    "data/game/configuration_realization/v1/BASE_MANIFOLD_WITNESSES.json": "22a264e5ebaa7cc35015e1433b415b5bfaf0fd18339441c2a04713afbb92b2b8",
+    "data/game/configuration_realization/v1/REALIZATION_CONTRACT.json": "3ba86cfa99db2bbca1083bf6b66ceec1b160512f3a6f83f3340d9fb774dd4876",
+    "data/game/configuration_realization/v1/WITNESS_SCHEMA.json": "be2cf78a38c876ee6a5766ee14d63bf7f1c3a86300587379bea0eb58d17ef544",
+    "data/game/configuration_realization/v1/ROTATION_CLASS_TABLE.json": "df2fc56010f01d3389a130d651deb1fe1883795d3acafcfca49ec3fcda251d33",
+    "data/game/configuration_realization/v1/SOFT_SNAP_V1.json": "4e7a2b18ae3f78d066d1fd6c04d8b1d6d1ecab9669fea6c516c961247301c8a2",
+    "data/game/configuration_realization/v1/ORIENTATION_REALIZATION_V1.json": "cb70cda9c3e152e9b387bbd99f2d31aedaa006309461678537a04bd628f1dc97"
+  }
+}

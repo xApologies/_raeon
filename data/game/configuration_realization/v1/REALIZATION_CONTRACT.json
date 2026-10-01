@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "RAEON_CONFIGURATION_REALIZATION_V1",
+  "coordinate_model": {
+    "space": "dimensionless 2D Configuration Space",
+    "canonical_lattice": "axial triangular/hex snap coordinates",
+    "axial_to_xy": "x=q+r/2; y=(sqrt(3)/2)r",
+    "free_motion": "continuous R^2 before capture",
+    "player_position_z": false
+  },
+  "occupancy_domain": {
+    "primitive": "FG footprint/capture domain centered on current XY",
+    "snap_unit": "one nominal FG-center neighbor spacing",
+    "overlap": "runtime presentation may overlap capture halos; canonical centers remain distinct"
+  },
+  "shape_equivalence": {
+    "allowed": [
+      "translation",
+      "global planar rotation"
+    ],
+    "forbidden": [
+      "reflection",
+      "nonuniform scale"
+    ],
+    "scale": "fixed by board FG footprint; not a game-state degree of freedom"
+  },
+  "soft_snap": {
+    "candidate_rms_error_max": 0.22,
+    "candidate_per_slot_error_max": 0.35,
+    "capture_rms_error_max": 0.14,
+    "capture_per_slot_error_max": 0.22,
+    "release_per_slot_error_min": 0.48,
+    "hysteresis": true,
+    "animation": "spring/magnetic interpolation from current pose to exact canonical witness",
+    "stages": [
+      "FREE",
+      "CANDIDATE",
+      "MAGNETIZED",
+      "LOCKED"
+    ],
+    "lock_requires": [
+      "exact QMO membership",
+      "shape capture",
+      "3D orientation/face compatibility on every required cycle edge"
+    ],
+    "shape_only_lock": false
+  },
+  "closure": {
+    "required_graph": "the witness required_cycle_edges",
+    "source_compatibility": "every required edge must exist in the immutable Cycle-1 compatibility corpus",
+    "extra_compatible_pairs": "secondary/presentation potential; not required for witness closure",
+    "linear_shapes": "cycle-closing long-span edge is rendered as a coherence tether rather than literal footprint contact",
+    "count_alone_resolves": false,
+    "wrong_orientation_result": "CONFIGURING",
+    "wrong_shape_result": "CONFIGURING",
+    "failed_closure_graveyard": false
+  },
+  "orientation": {
+    "representation": "existing Pass-3 canonical 3D orientation/quaternion state",
+    "rule": "For each required witness edge, runtime selects/validates a source-supplied compatible face pair. All required edges must be simultaneously satisfiable by the current orientations.",
+    "reflection_allowed": false,
+    "note": "This contract freezes 2D witnesses. Exact face-pair orientation witnesses are solved from the existing compatibility corpus in Pass 3B; source QMO data is not rewritten."
+  },
+  "provenance": {
+    "source_membership": "data/qmo/manifolds/objects.json",
+    "source_compatibility": "data/qmo/generators/compatibility.json",
+    "authority": "RAEON runtime realization design; does not modify source QMO identities or mathematics"
+  }
+}

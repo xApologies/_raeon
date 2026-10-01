@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "name": "RAEON_DIPLOMATIC_POUCH_PASS_03B",
+  "date": "2026-09-30",
+  "purpose": "Close Pass-3 Configuration Realization gap and positively demonstrate live topology.",
+  "source_realization_contract": {
+    "filename": "RAEON_CONFIGURATION_REALIZATION_CONTRACT_v1_0_2026-09-30.zip",
+    "sha256": "5e2ed2b3583391ce81e6060b0edfd454bf6b0a3a6b03ca1390e33f2fbc7c486f"
+  },
+  "starting_remote": {
+    "branch": "codex/raeon-pass-03",
+    "sha": "33f4139719c5b4af83610dcb9600be594a50e78c"
+  },
+  "target_branch": "codex/raeon-pass-03b",
+  "acceptance_cases": 85,
+  "original_pass3_blocked_targets": 49,
+  "work_units": 9
+}

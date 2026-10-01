@@ -1,0 +1,772 @@
+{
+  "schema_version": 1,
+  "required_cases": 85,
+  "initial_status": "NOT_RUN",
+  "cases": [
+    {
+      "id": "P3B-001",
+      "work_unit": "W00",
+      "title": "Recover latest Pass-3 head",
+      "expected": "Inspect remote first; inherit newest valid Pass-3 state.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-002",
+      "work_unit": "W00",
+      "title": "Retain Pass-3 baseline",
+      "expected": "Re-run and record prior 49 PASS/49 BLOCKED/0 FAIL.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-003",
+      "work_unit": "W00",
+      "title": "Retain privacy correction",
+      "expected": "Privacy regressions remain green.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-004",
+      "work_unit": "W00",
+      "title": "Keep _bricked read-only",
+      "expected": "Pinned upstream unchanged.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-005",
+      "work_unit": "W00",
+      "title": "Keep main unmerged",
+      "expected": "No main merge without separate user authorization.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-006",
+      "work_unit": "W01",
+      "title": "Import audited 2D authority",
+      "expected": "Commit exact witness authority hashes.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-007",
+      "work_unit": "W01",
+      "title": "Load 60 witnesses",
+      "expected": "Every base witness matches source membership.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-008",
+      "work_unit": "W01",
+      "title": "Verify 295 required edges",
+      "expected": "Every required edge exists in source compatibility.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-009",
+      "work_unit": "W01",
+      "title": "Preserve QMO source bytes",
+      "expected": "No source dataset regeneration or rewrite.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-010",
+      "work_unit": "W01",
+      "title": "Freeze 24 proper rotations",
+      "expected": "Unique det+1 classes 0..23; no reflection.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-011",
+      "work_unit": "W01",
+      "title": "Cover source rotation classes",
+      "expected": "All source classes resolve through frozen table.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-012",
+      "work_unit": "W02",
+      "title": "Canonical shape exact",
+      "expected": "Zero residual on canonical witness.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-013",
+      "work_unit": "W02",
+      "title": "Translation invariance",
+      "expected": "Translation fits exactly.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-014",
+      "work_unit": "W02",
+      "title": "Rotation invariance",
+      "expected": "Proper planar rotation fits exactly.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-015",
+      "work_unit": "W02",
+      "title": "Reject reflection",
+      "expected": "Mirror cannot pass SE(2) capture.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-016",
+      "work_unit": "W02",
+      "title": "Reject scale",
+      "expected": "Scale is not equivalent.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-017",
+      "work_unit": "W02",
+      "title": "Wrong shape configuring",
+      "expected": "Correct membership but wrong shape does not resolve.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-018",
+      "work_unit": "W02",
+      "title": "Candidate stage",
+      "expected": "Candidate thresholds do not lock.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-019",
+      "work_unit": "W02",
+      "title": "Magnetic stage",
+      "expected": "Capture thresholds expose magnetic targets.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-020",
+      "work_unit": "W02",
+      "title": "Release hysteresis",
+      "expected": "Release uses specified threshold.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-021",
+      "work_unit": "W02",
+      "title": "No label permutation",
+      "expected": "Different source identities cannot swap witness slots.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-022",
+      "work_unit": "W03",
+      "title": "Quaternion sign equivalence",
+      "expected": "q and -q compare equal.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-023",
+      "work_unit": "W03",
+      "title": "Shared phi targets",
+      "expected": "Global XY rotation yaw-adjusts all targets.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-024",
+      "work_unit": "W03",
+      "title": "Source class target",
+      "expected": "rotation_class selects deterministic target.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-025",
+      "work_unit": "W03",
+      "title": "Orientation candidate",
+      "expected": "<=30 degrees candidate.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-026",
+      "work_unit": "W03",
+      "title": "Orientation capture",
+      "expected": "<=12 degrees capturable.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-027",
+      "work_unit": "W03",
+      "title": "Orientation release",
+      "expected": ">35 degrees releases pre-lock capture.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-028",
+      "work_unit": "W03",
+      "title": "Wrong orientation blocks",
+      "expected": "Correct shape with wrong orientation stays CONFIGURING.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-029",
+      "work_unit": "W03",
+      "title": "No fake board-face isometry",
+      "expected": "No literal 60\u00b0 board-to-90\u00b0 cube normal constraint.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-030",
+      "work_unit": "W03",
+      "title": "Source face provenance",
+      "expected": "Live edges preserve supplied face/signature records.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-031",
+      "work_unit": "W03",
+      "title": "No invented face exclusivity",
+      "expected": "One-neighbor-per-face is not imposed.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-032",
+      "work_unit": "W04",
+      "title": "Positive Red",
+      "expected": "M-R-01 reaches RESOLVED.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-033",
+      "work_unit": "W04",
+      "title": "Positive Orange",
+      "expected": "At least one Orange resolves.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-034",
+      "work_unit": "W04",
+      "title": "Positive Yellow",
+      "expected": "At least one Yellow resolves.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-035",
+      "work_unit": "W04",
+      "title": "Positive Green",
+      "expected": "At least one Green resolves.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-036",
+      "work_unit": "W04",
+      "title": "Positive Blue",
+      "expected": "At least one Blue resolves.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-037",
+      "work_unit": "W04",
+      "title": "Positive Violet",
+      "expected": "At least one Violet resolves.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-038",
+      "work_unit": "W04",
+      "title": "All 60 positives",
+      "expected": "Every base witness positively resolves.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-039",
+      "work_unit": "W04",
+      "title": "Count alone insufficient",
+      "expected": "Population alone never closes.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-040",
+      "work_unit": "W04",
+      "title": "Query read-only",
+      "expected": "Candidate lookup never mutates.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-041",
+      "work_unit": "W04",
+      "title": "Atomic lock",
+      "expected": "State publishes all-or-none.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-042",
+      "work_unit": "W04",
+      "title": "Identity preserved",
+      "expected": "Card identity/owner/history/QMO refs persist.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-043",
+      "work_unit": "W04",
+      "title": "Fresh revisions",
+      "expected": "Stale inputs reject atomically.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-044",
+      "work_unit": "W04",
+      "title": "Idempotent retry",
+      "expected": "Identical retry does not double mutate.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-045",
+      "work_unit": "W04",
+      "title": "Delivery recovery",
+      "expected": "Post-commit lost delivery recovers.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-046",
+      "work_unit": "W04",
+      "title": "Explicit reopen",
+      "expected": "Resolved field reopens preserving cards.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-047",
+      "work_unit": "W04",
+      "title": "Invalidate old closure",
+      "expected": "Reopen clears prior witness commitment.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-048",
+      "work_unit": "W04",
+      "title": "No Graveyard penalty",
+      "expected": "Failed closure never auto-retires.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-049",
+      "work_unit": "W05",
+      "title": "Resolved supports required",
+      "expected": "Fusion only uses live resolved fields.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-050",
+      "work_unit": "W05",
+      "title": "Fusion pair authority",
+      "expected": "Status only from imported pair table.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-051",
+      "work_unit": "W05",
+      "title": "Disjoint physical copies",
+      "expected": "Shared instance rejects.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-052",
+      "work_unit": "W05",
+      "title": "Preserve copies",
+      "expected": "No clone/replacement in valid fusion.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-053",
+      "work_unit": "W05",
+      "title": "Two to one active space",
+      "expected": "Fusion reduces active width by one.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-054",
+      "work_unit": "W05",
+      "title": "Support provenance retained",
+      "expected": "Source spaces become SUBSUMED, not erased.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-055",
+      "work_unit": "W05",
+      "title": "No split invented",
+      "expected": "No unfusion added.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-056",
+      "work_unit": "W05",
+      "title": "No second puzzle",
+      "expected": "Derived fusion is deterministic composition.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-057",
+      "work_unit": "W05",
+      "title": "Invalid fusion atomic",
+      "expected": "Invalid pair leaves supports unchanged.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-058",
+      "work_unit": "W06",
+      "title": "Eligible emergence supports",
+      "expected": "Only resolved distinct ordinary base supports checked.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-059",
+      "work_unit": "W06",
+      "title": "Emergent pair authority",
+      "expected": "Result only from imported pair table.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-060",
+      "work_unit": "W06",
+      "title": "Zero slot cost",
+      "expected": "Emergent consumes no Configuration Space.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-061",
+      "work_unit": "W06",
+      "title": "Supports distinct",
+      "expected": "Emergence does not merge supports.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-062",
+      "work_unit": "W06",
+      "title": "Not targetable",
+      "expected": "Emergent is not a normal target.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-063",
+      "work_unit": "W06",
+      "title": "Support loss cleanup",
+      "expected": "Dependent emergent removed/deactivated.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-064",
+      "work_unit": "W06",
+      "title": "Unaffected persist",
+      "expected": "Other support-pair emergents survive.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-065",
+      "work_unit": "W06",
+      "title": "Multiple pairwise emergents",
+      "expected": "AB/AC/BC may coexist if admitted.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-066",
+      "work_unit": "W06",
+      "title": "No recursion",
+      "expected": "No emergent-on-emergent evaluation.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-067",
+      "work_unit": "W07",
+      "title": "Public remains public",
+      "expected": "No private leak through topology/snap deltas.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-068",
+      "work_unit": "W07",
+      "title": "Owner interaction state",
+      "expected": "Authorized owner sees required interaction state.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-069",
+      "work_unit": "W07",
+      "title": "Opponent privacy",
+      "expected": "Opponent sees no hidden manipulation/inventory info.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-070",
+      "work_unit": "W07",
+      "title": "Checkpoint configuring",
+      "expected": "Pre-lock nonempty state restores exactly.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-071",
+      "work_unit": "W07",
+      "title": "Checkpoint resolved",
+      "expected": "Locked field restores exactly.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-072",
+      "work_unit": "W07",
+      "title": "Deterministic replay",
+      "expected": "Same semantic history gives same root.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-073",
+      "work_unit": "W07",
+      "title": "Concurrent lock safety",
+      "expected": "One commits; stale competitors reject cleanly.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-074",
+      "work_unit": "W07",
+      "title": "Witness tamper rejection",
+      "expected": "Changed/missing witness authority fails closed.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-075",
+      "work_unit": "W07",
+      "title": "Rotation tamper rejection",
+      "expected": "Changed/missing rotation authority fails closed.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-076",
+      "work_unit": "W08",
+      "title": "Genesis handlers required",
+      "expected": "Positive paths depend on declared .gen transformation/closure.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-077",
+      "work_unit": "W08",
+      "title": "Rainbow Road required",
+      "expected": "Bypass/omission fails affected transaction.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-078",
+      "work_unit": "W08",
+      "title": "Hypervisor game-agnostic",
+      "expected": "No RAEON rules move into Hypervisor.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-079",
+      "work_unit": "W08",
+      "title": "Offline package complete",
+      "expected": "All realization inputs bundled.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-080",
+      "work_unit": "W08",
+      "title": "No runtime Git/network checkout",
+      "expected": "Fresh extraction succeeds with those denied.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-081",
+      "work_unit": "W08",
+      "title": "Prior regressions green",
+      "expected": "Runtime/Pass2/privacy/Pass3 regressions remain green.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-082",
+      "work_unit": "W08",
+      "title": "Original Pass3 re-audit",
+      "expected": "All 98 original cases get current evidence.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-083",
+      "work_unit": "W08",
+      "title": "Receipt exact",
+      "expected": "Start/end/remote/main SHAs, hashes/tests/open items recorded.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-084",
+      "work_unit": "W08",
+      "title": "PREPRODUCTION retained",
+      "expected": "Whole game not relabeled complete.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    {
+      "id": "P3B-085",
+      "work_unit": "W08",
+      "title": "Pass4 gate",
+      "expected": "No Pass4 until live base resolution and honest Pass3 closure receipt.",
+      "mandatory": true,
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  ]
+}

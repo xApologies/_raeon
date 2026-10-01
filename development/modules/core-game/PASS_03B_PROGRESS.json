@@ -1,0 +1,8 @@
+{
+  "status": "LOCAL_VALIDATION_PASSED_OFFLINE_PENDING",
+  "whole_game_phase": "PREPRODUCTION",
+  "starting_sha": "33f4139719c5b4af83610dcb9600be594a50e78c",
+  "unit_tests": 6,
+  "integration_tests": 102,
+  "positive_base_fields": 60
+}

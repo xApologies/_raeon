@@ -132,29 +132,9 @@ def demo(root, output):
 
 
 def test(root, output):
-    result = {}
-    for name, folder in [('unit', 'tests/unit/hypervisor'), ('integration', 'tests/integration/genesis_horizon')]:
-        script = '''import json,sys,unittest
-from pathlib import Path
-class Recorded(unittest.TextTestResult):
- def __init__(self,*a,**kw): super().__init__(*a,**kw); self.passed=[]
- def addSuccess(self,test): super().addSuccess(test); self.passed.append(test.id())
-suite=unittest.defaultTestLoader.discover(sys.argv[1])
-r=unittest.TextTestRunner(verbosity=2,resultclass=Recorded).run(suite)
-Path(sys.argv[2]).write_text(json.dumps({'passed':r.passed,'run':r.testsRun,'failures':len(r.failures),'errors':len(r.errors)},indent=2),encoding='utf8')
-raise SystemExit(0 if r.wasSuccessful() else 1)
-'''
-        target = output / 'evidence' / ('tests-' + name + '.json')
-        target.parent.mkdir(parents=True, exist_ok=True)
-        env = dict(os.environ, PYTHONUTF8='1', PYTHONDONTWRITEBYTECODE='1')
-        env.pop('PYTHONPATH', None)
-        completed = subprocess.run([sys.executable, '-B', '-c', script, folder, str(target)], cwd=root, env=env, capture_output=True, text=True, encoding='utf8')
-        (target.with_suffix('.log')).write_text(completed.stdout + completed.stderr, encoding='utf8')
-        print(completed.stderr, end='')
-        if completed.returncode:
-            raise RuntimeError(name + ' tests failed')
-        result[name] = json.loads(target.read_text(encoding='utf8'))
-    return result
+    from genesis_runtime_test_worker import run_suite
+    return {name: run_suite(root, folder, output/'evidence'/('tests-'+name+'.json'))
+            for name,folder in [('unit','tests/unit/hypervisor'),('integration','tests/integration/genesis_horizon')]}
 
 
 def dialect_test(root, upstream, output):

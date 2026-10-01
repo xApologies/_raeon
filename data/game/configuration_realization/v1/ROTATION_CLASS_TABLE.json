@@ -1,0 +1,640 @@
+{
+  "schema_version": 1,
+  "id": "RAEON_ROTATION_CLASS_TABLE_V1",
+  "authority": "RAEON game-layer realization convention. Source supplies rotation_class 0..23; this freezes runtime mapping and does not claim to recover an earlier enumeration.",
+  "convention": {
+    "matrix_action": "column local vector -> canonical field-frame vector",
+    "quaternion_order": "w,x,y,z",
+    "handedness": "right-handed",
+    "determinant": 1,
+    "reflection_allowed": false,
+    "class_0": "identity",
+    "remaining_order": "lexicographic row-major signed-permutation matrices after identity"
+  },
+  "classes": [
+    {
+      "rotation_class": 0,
+      "matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "rotation_class": 1,
+      "matrix": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "rotation_class": 2,
+      "matrix": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        0.0,
+        0.707106781187,
+        -0.707106781187
+      ]
+    },
+    {
+      "rotation_class": 3,
+      "matrix": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        0.0,
+        0.707106781187,
+        0.707106781187
+      ]
+    },
+    {
+      "rotation_class": 4,
+      "matrix": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "rotation_class": 5,
+      "matrix": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        0.707106781187,
+        -0.707106781187,
+        0.0
+      ]
+    },
+    {
+      "rotation_class": 6,
+      "matrix": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.5,
+        0.5,
+        -0.5,
+        0.5
+      ]
+    },
+    {
+      "rotation_class": 7,
+      "matrix": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          0,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "rotation_class": 8,
+      "matrix": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.707106781187,
+        0.0,
+        0.0,
+        0.707106781187
+      ]
+    },
+    {
+      "rotation_class": 9,
+      "matrix": [
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.5,
+        0.5,
+        -0.5,
+        -0.5
+      ]
+    },
+    {
+      "rotation_class": 10,
+      "matrix": [
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        0.707106781187,
+        0.0,
+        -0.707106781187
+      ]
+    },
+    {
+      "rotation_class": 11,
+      "matrix": [
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.707106781187,
+        0.0,
+        -0.707106781187,
+        0.0
+      ]
+    },
+    {
+      "rotation_class": 12,
+      "matrix": [
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ]
+    },
+    {
+      "rotation_class": 13,
+      "matrix": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ]
+    },
+    {
+      "rotation_class": 14,
+      "matrix": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        0.707106781187,
+        0.0,
+        0.707106781187
+      ]
+    },
+    {
+      "rotation_class": 15,
+      "matrix": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.707106781187,
+        0.0,
+        0.707106781187,
+        0.0
+      ]
+    },
+    {
+      "rotation_class": 16,
+      "matrix": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "rotation_class": 17,
+      "matrix": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.707106781187,
+        0.0,
+        0.0,
+        -0.707106781187
+      ]
+    },
+    {
+      "rotation_class": 18,
+      "matrix": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          -1,
+          0,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.5,
+        0.5,
+        0.5,
+        -0.5
+      ]
+    },
+    {
+      "rotation_class": 19,
+      "matrix": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.5,
+        -0.5,
+        -0.5,
+        -0.5
+      ]
+    },
+    {
+      "rotation_class": 20,
+      "matrix": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        0.707106781187,
+        0.707106781187,
+        0.0
+      ]
+    },
+    {
+      "rotation_class": 21,
+      "matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "rotation_class": 22,
+      "matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.707106781187,
+        0.707106781187,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "rotation_class": 23,
+      "matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "quaternion_wxyz": [
+        0.707106781187,
+        -0.707106781187,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

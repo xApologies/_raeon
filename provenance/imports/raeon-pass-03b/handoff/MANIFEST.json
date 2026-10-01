@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "files": {
+    "00_EXECUTE_THIS_FIRST.md": {
+      "bytes": 1129,
+      "sha256": "07772e8083b5d09419b59fd4cc10bc227605a57d47d4e143251241c6c4bebcdc"
+    },
+    "01_BUILD_ORDER.md": {
+      "bytes": 475,
+      "sha256": "cb3332b3078af651176440bac11bd6481cc2f812bbaa1d83c2bc29ebf7f2baaf"
+    },
+    "02_CONFIGURATION_AND_SNAP_MATH.md": {
+      "bytes": 438,
+      "sha256": "ffa80bea88096698125a2a2d16b462875e83490db7ef7e5890b5a6e5158fb66e"
+    },
+    "03_ORIENTATION_MATH.md": {
+      "bytes": 665,
+      "sha256": "ddd21982f976c14ee1b6e02cc8a522eb68d0ca4044defae0a9675d02a3a05bc0"
+    },
+    "04_LIVE_FIELD_STATE.md": {
+      "bytes": 537,
+      "sha256": "027706f5868b2ddca8494de2a94fcb33dcb8c03b6ca043e83c87ba05979ad4f9"
+    },
+    "05_FUSION_AND_EMERGENCE.md": {
+      "bytes": 769,
+      "sha256": "e4d5c5b5812ea0a920c317d15ebf357fc310ac554b32cfb305b139f095b3569c"
+    },
+    "06_TESTING_AND_EVIDENCE.md": {
+      "bytes": 404,
+      "sha256": "1452faad376115a5332870456d9f9e28007dff570f5817813eaaf15b3f55c405"
+    },
+    "07_OFFLINE_AND_DELIVERY.md": {
+      "bytes": 454,
+      "sha256": "b58269bb9618f2ecfb3bc1ce36b002c3149531e6a1222f17a4e6d39c811b8944"
+    },
+    "POUCH.json": {
+      "bytes": 643,
+      "sha256": "4de9ca4909812e43028e8a556ef63fb35a2daba9e9aeeffa70748ff23f8328a0"
+    },
+    "README.md": {
+      "bytes": 328,
+      "sha256": "3d3d026df3211ef416a94b240e63c236c95bfbb2697a8b583a98b3e1e3233c61"
+    },
+    "VERIFY_POUCH.py": {
+      "bytes": 1366,
+      "sha256": "1bfd7d09b3b7fa3b6dee5efb6d6ef9b95a2cc6bc3b1651a40374b434188adda5"
+    },
+    "acceptance/BLOCKED_PASS3_TARGETS.json": {
+      "bytes": 996,
+      "sha256": "c7e57494f17d522c1681e50526bde8b11a374a0ef4b52a541cc4360b4f334f7f"
+    },
+    "acceptance/PASS_03B_ACCEPTANCE.json": {
+      "bytes": 20102,
+      "sha256": "0110b98cc98780add22ae2d4532badaf16c3e791daf562c427acf1f53a07c863"
+    },
+    "acceptance/WORK_QUEUE.json": {
+      "bytes": 537,
+      "sha256": "6da217d713ca077396e064cf41176a800e485e2887c72828f58ddb1b6b3874f0"
+    },
+    "authority/ORIENTATION_REALIZATION_V1.json": {
+      "bytes": 1227,
+      "sha256": "cb70cda9c3e152e9b387bbd99f2d31aedaa006309461678537a04bd628f1dc97"
+    },
+    "authority/RAEON_CONFIGURATION_REALIZATION_CONTRACT_v1_0_2026-09-30.zip": {
+      "bytes": 12172,
+      "sha256": "5e2ed2b3583391ce81e6060b0edfd454bf6b0a3a6b03ca1390e33f2fbc7c486f"
+    },
+    "authority/ROTATION_CLASS_TABLE.json": {
+      "bytes": 8835,
+      "sha256": "df2fc56010f01d3389a130d651deb1fe1883795d3acafcfca49ec3fcda251d33"
+    },
+    "authority/SOFT_SNAP_V1.json": {
+      "bytes": 1414,
+      "sha256": "4e7a2b18ae3f78d066d1fd6c04d8b1d6d1ecab9669fea6c516c961247301c8a2"
+    },
+    "authority/configuration_realization_v1/PASS_03B_HANDOFF_NOTES.md": {
+      "bytes": 723,
+      "sha256": "d55f46a70beca54377a9c791fa04db446af359fcbbd7fb26f78cbec5e725f1e8"
+    },
+    "authority/configuration_realization_v1/data/BASE_MANIFOLD_WITNESSES.json": {
+      "bytes": 158319,
+      "sha256": "22a264e5ebaa7cc35015e1433b415b5bfaf0fd18339441c2a04713afbb92b2b8"
+    },
+    "authority/configuration_realization_v1/data/WITNESS_INDEX.csv": {
+      "bytes": 3775,
+      "sha256": "ea3d3979d92a5db873c7fc8df1c9b8df8960576180a8fb8b7a695a0c18a6c911"
+    },
+    "authority/configuration_realization_v1/spec/REALIZATION_CONTRACT.json": {
+      "bytes": 2822,
+      "sha256": "3ba86cfa99db2bbca1083bf6b66ceec1b160512f3a6f83f3340d9fb774dd4876"
+    },
+    "authority/configuration_realization_v1/spec/REALIZATION_CONTRACT.md": {
+      "bytes": 3498,
+      "sha256": "63c7b2851305067454b3ef50f4df15415f1ad77062199d8d7f7572c5ce41c0e1"
+    },
+    "authority/configuration_realization_v1/spec/WITNESS_SCHEMA.json": {
+      "bytes": 347,
+      "sha256": "be2cf78a38c876ee6a5766ee14d63bf7f1c3a86300587379bea0eb58d17ef544"
+    },
+    "authority/configuration_realization_v1/validation/VALIDATION.json": {
+      "bytes": 472,
+      "sha256": "21df418cbdaa293ce6aefc24198e4941df9ac2a636b06afa1f7f3c989639eb6d"
+    },
+    "authority/configuration_realization_v1/validation/VALIDATION.md": {
+      "bytes": 580,
+      "sha256": "64ae69439d620163f495f59094f80f380513a60705d1f3a2e6488bf08cd52677"
+    },
+    "continuity/CURRENT_STATE.json": {
+      "bytes": 547,
+      "sha256": "eaf92f0d9ccc388c5317ef6f0900e43ec4b224df4231c3ba328da96b17672d93"
+    },
+    "templates/PASS_03B_RECEIPT_TEMPLATE.json": {
+      "bytes": 516,
+      "sha256": "7dfa0c98c764bbba2b554ed37c495aeb3090721ee36046343b7c688425154ab6"
+    }
+  }
+}

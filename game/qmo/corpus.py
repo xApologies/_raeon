@@ -67,6 +67,10 @@ class Corpus:
         The remaining records are never interpreted as a negative on budget expiry.
         """
         self.verify()
+        return self.candidates_verified(handles, budget)
+
+    def candidates_verified(self, handles, budget=60):
+        """Internal query after this instance's caller verifies the source boundary."""
         if type(budget) is not int or not 0 <= budget <= 60 or len(handles) > 120:
             raise ValueError('QUERY_BUDGET')
         members = Counter(handles)

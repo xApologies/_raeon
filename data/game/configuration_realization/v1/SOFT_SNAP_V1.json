@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "RAEON_SOFT_SNAP_V1",
+  "shape_fit": {
+    "labels": "source identity must match witness slot",
+    "transform_group": "SE(2): translation + proper planar rotation; fixed scale; no reflection",
+    "formula": {
+      "A": "sum((w_i-w_bar) dot (p_i-p_bar))",
+      "B": "sum(cross2(w_i-w_bar,p_i-p_bar))",
+      "phi": "atan2(B,A)",
+      "t": "p_bar-R(phi)w_bar"
+    },
+    "thresholds": {
+      "candidate_rms_max": 0.22,
+      "candidate_slot_max": 0.35,
+      "capture_rms_max": 0.14,
+      "capture_slot_max": 0.22,
+      "release_slot_min": 0.48
+    }
+  },
+  "orientation_fit": {
+    "target": "YAW_Z(phi)*source rotation-class quaternion",
+    "candidate_degrees_max": 30.0,
+    "capture_degrees_max": 12.0,
+    "release_degrees_min": 35.0
+  },
+  "state_machine": [
+    "FREE",
+    "CANDIDATE",
+    "MAGNETIZED",
+    "LOCKED"
+  ],
+  "lock": {
+    "atomic": true,
+    "requires": [
+      "exact membership multiset",
+      "complete witness query",
+      "source compatibility on every required edge",
+      "2D capture",
+      "all orientation captures",
+      "fresh revisions",
+      "Rainbow Road closure"
+    ],
+    "effect": "canonicalize to exact transformed witness/targets and create live resolved field while preserving card identity/history"
+  },
+  "hysteresis": "pre-lock magnetic state releases at release thresholds; LOCKED remains exact until explicit reopen"
+}

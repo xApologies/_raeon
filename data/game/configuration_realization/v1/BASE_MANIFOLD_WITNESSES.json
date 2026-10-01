@@ -1,0 +1,7347 @@
+{
+  "schema_version": 1,
+  "contract": "RAEON_CONFIGURATION_REALIZATION_V1",
+  "count": 60,
+  "witnesses": {
+    "M-R-01": {
+      "manifold_id": "M-R-01",
+      "generator_count": 3,
+      "shape_family": "LINEAR_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-001",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-044",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-117",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-001",
+          "b": "FG-044",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-117",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-001",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 2.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-02": {
+      "manifold_id": "M-R-02",
+      "generator_count": 3,
+      "shape_family": "TRIAD_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-011",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-044",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-117",
+          "axial": [
+            0,
+            1
+          ],
+          "xy": [
+            0.5,
+            0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-011",
+          "b": "FG-044",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-117",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-011",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-03": {
+      "manifold_id": "M-R-03",
+      "generator_count": 3,
+      "shape_family": "CHEVRON_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-014",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-022",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-053",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-014",
+          "b": "FG-022",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-022",
+          "b": "FG-053",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-014",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-04": {
+      "manifold_id": "M-R-04",
+      "generator_count": 3,
+      "shape_family": "LINEAR_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-034",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-044",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-117",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-034",
+          "b": "FG-044",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-117",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-034",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 2.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-05": {
+      "manifold_id": "M-R-05",
+      "generator_count": 3,
+      "shape_family": "TRIAD_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-030",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-047",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-106",
+          "axial": [
+            0,
+            1
+          ],
+          "xy": [
+            0.5,
+            0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-030",
+          "b": "FG-047",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-047",
+          "b": "FG-106",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-106",
+          "b": "FG-030",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-06": {
+      "manifold_id": "M-R-06",
+      "generator_count": 3,
+      "shape_family": "CHEVRON_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-044",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-061",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-117",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-044",
+          "b": "FG-061",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-061",
+          "b": "FG-117",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-044",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-07": {
+      "manifold_id": "M-R-07",
+      "generator_count": 3,
+      "shape_family": "LINEAR_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-039",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-076",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-100",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-039",
+          "b": "FG-076",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-076",
+          "b": "FG-100",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-039",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 2.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-08": {
+      "manifold_id": "M-R-08",
+      "generator_count": 3,
+      "shape_family": "TRIAD_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-039",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-092",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-100",
+          "axial": [
+            0,
+            1
+          ],
+          "xy": [
+            0.5,
+            0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-039",
+          "b": "FG-092",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-092",
+          "b": "FG-100",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-039",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-09": {
+      "manifold_id": "M-R-09",
+      "generator_count": 3,
+      "shape_family": "CHEVRON_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-030",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-047",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-109",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-030",
+          "b": "FG-047",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-047",
+          "b": "FG-109",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-109",
+          "b": "FG-030",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-10": {
+      "manifold_id": "M-R-10",
+      "generator_count": 3,
+      "shape_family": "LINEAR_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-007",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-044",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-117",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-007",
+          "b": "FG-044",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-117",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-007",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 2.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-11": {
+      "manifold_id": "M-R-11",
+      "generator_count": 3,
+      "shape_family": "TRIAD_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-026",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-044",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-117",
+          "axial": [
+            0,
+            1
+          ],
+          "xy": [
+            0.5,
+            0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-026",
+          "b": "FG-044",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-117",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-026",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-12": {
+      "manifold_id": "M-R-12",
+      "generator_count": 3,
+      "shape_family": "CHEVRON_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-009",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-026",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-046",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-009",
+          "b": "FG-026",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-026",
+          "b": "FG-046",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-046",
+          "b": "FG-009",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-13": {
+      "manifold_id": "M-R-13",
+      "generator_count": 3,
+      "shape_family": "LINEAR_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-030",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-047",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-067",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-030",
+          "b": "FG-047",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-047",
+          "b": "FG-067",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-067",
+          "b": "FG-030",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 2.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-14": {
+      "manifold_id": "M-R-14",
+      "generator_count": 3,
+      "shape_family": "TRIAD_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-039",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-089",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-100",
+          "axial": [
+            0,
+            1
+          ],
+          "xy": [
+            0.5,
+            0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-039",
+          "b": "FG-089",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-089",
+          "b": "FG-100",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-039",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-R-15": {
+      "manifold_id": "M-R-15",
+      "generator_count": 3,
+      "shape_family": "CHEVRON_3",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-044",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-112",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-117",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-044",
+          "b": "FG-112",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-112",
+          "b": "FG-117",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-044",
+          "a_slot": "S2",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-O-01": {
+      "manifold_id": "M-O-01",
+      "generator_count": 4,
+      "shape_family": "LINEAR_4",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-016",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-032",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-042",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-053",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-016",
+          "b": "FG-032",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-032",
+          "b": "FG-042",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-042",
+          "b": "FG-053",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-016",
+          "a_slot": "S3",
+          "b_slot": "S0",
+          "span": 3.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-O-02": {
+      "manifold_id": "M-O-02",
+      "generator_count": 4,
+      "shape_family": "RHOMBUS_4",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-027",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-044",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-060",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-117",
+          "axial": [
+            0,
+            -1
+          ],
+          "xy": [
+            -0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-027",
+          "b": "FG-044",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-060",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-060",
+          "b": "FG-117",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-027",
+          "a_slot": "S3",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-O-03": {
+      "manifold_id": "M-O-03",
+      "generator_count": 4,
+      "shape_family": "ZIGZAG_4",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-039",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-053",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-100",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-114",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-039",
+          "b": "FG-053",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-100",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-114",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-114",
+          "b": "FG-039",
+          "a_slot": "S3",
+          "b_slot": "S0",
+          "span": 1.732051,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-O-04": {
+      "manifold_id": "M-O-04",
+      "generator_count": 4,
+      "shape_family": "KITE_4",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-022",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-052",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-060",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-099",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-022",
+          "b": "FG-052",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-052",
+          "b": "FG-060",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-060",
+          "b": "FG-099",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-099",
+          "b": "FG-022",
+          "a_slot": "S3",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-O-05": {
+      "manifold_id": "M-O-05",
+      "generator_count": 4,
+      "shape_family": "LINEAR_4",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-039",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-066",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-100",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-114",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-039",
+          "b": "FG-066",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-066",
+          "b": "FG-100",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-114",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-114",
+          "b": "FG-039",
+          "a_slot": "S3",
+          "b_slot": "S0",
+          "span": 3.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-O-06": {
+      "manifold_id": "M-O-06",
+      "generator_count": 4,
+      "shape_family": "RHOMBUS_4",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-036",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-044",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-081",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-117",
+          "axial": [
+            0,
+            -1
+          ],
+          "xy": [
+            -0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-036",
+          "b": "FG-044",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-081",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-081",
+          "b": "FG-117",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-036",
+          "a_slot": "S3",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-O-07": {
+      "manifold_id": "M-O-07",
+      "generator_count": 4,
+      "shape_family": "ZIGZAG_4",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-014",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-053",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-097",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-105",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-014",
+          "b": "FG-053",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-097",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-097",
+          "b": "FG-105",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-105",
+          "b": "FG-014",
+          "a_slot": "S3",
+          "b_slot": "S0",
+          "span": 1.732051,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-O-08": {
+      "manifold_id": "M-O-08",
+      "generator_count": 4,
+      "shape_family": "KITE_4",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-030",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-047",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-106",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-115",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-030",
+          "b": "FG-047",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-047",
+          "b": "FG-106",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-106",
+          "b": "FG-115",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-115",
+          "b": "FG-030",
+          "a_slot": "S3",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-O-09": {
+      "manifold_id": "M-O-09",
+      "generator_count": 4,
+      "shape_family": "LINEAR_4",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-012",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-036",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-044",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-117",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-012",
+          "b": "FG-036",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-036",
+          "b": "FG-044",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-117",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-012",
+          "a_slot": "S3",
+          "b_slot": "S0",
+          "span": 3.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-O-10": {
+      "manifold_id": "M-O-10",
+      "generator_count": 4,
+      "shape_family": "RHOMBUS_4",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-009",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-026",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-031",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-050",
+          "axial": [
+            0,
+            -1
+          ],
+          "xy": [
+            -0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-009",
+          "b": "FG-026",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-026",
+          "b": "FG-031",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-031",
+          "b": "FG-050",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-050",
+          "b": "FG-009",
+          "a_slot": "S3",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-O-11": {
+      "manifold_id": "M-O-11",
+      "generator_count": 4,
+      "shape_family": "ZIGZAG_4",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-036",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-044",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-051",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-117",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-036",
+          "b": "FG-044",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-051",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-051",
+          "b": "FG-117",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-036",
+          "a_slot": "S3",
+          "b_slot": "S0",
+          "span": 1.732051,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-O-12": {
+      "manifold_id": "M-O-12",
+      "generator_count": 4,
+      "shape_family": "KITE_4",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-036",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-044",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-072",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-117",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-036",
+          "b": "FG-044",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-072",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-072",
+          "b": "FG-117",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-036",
+          "a_slot": "S3",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-O-13": {
+      "manifold_id": "M-O-13",
+      "generator_count": 4,
+      "shape_family": "LINEAR_4",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-009",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-026",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-032",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-094",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-009",
+          "b": "FG-026",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-026",
+          "b": "FG-032",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-032",
+          "b": "FG-094",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-094",
+          "b": "FG-009",
+          "a_slot": "S3",
+          "b_slot": "S0",
+          "span": 3.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-Y-01": {
+      "manifold_id": "M-Y-01",
+      "generator_count": 5,
+      "shape_family": "LINEAR_5",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-009",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-026",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-036",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-044",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-117",
+          "axial": [
+            4,
+            0
+          ],
+          "xy": [
+            4.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-009",
+          "b": "FG-026",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-026",
+          "b": "FG-036",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-036",
+          "b": "FG-044",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-117",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-009",
+          "a_slot": "S4",
+          "b_slot": "S0",
+          "span": 4.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-Y-02": {
+      "manifold_id": "M-Y-02",
+      "generator_count": 5,
+      "shape_family": "HOUSE_5",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-009",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-010",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-039",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-100",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-114",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-009",
+          "b": "FG-010",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-010",
+          "b": "FG-039",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-039",
+          "b": "FG-100",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-114",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-114",
+          "b": "FG-009",
+          "a_slot": "S4",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-Y-03": {
+      "manifold_id": "M-Y-03",
+      "generator_count": 5,
+      "shape_family": "STAIR_5",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-014",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-022",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-053",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-105",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-115",
+          "axial": [
+            2,
+            -2
+          ],
+          "xy": [
+            1.0,
+            -1.732051
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-014",
+          "b": "FG-022",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-022",
+          "b": "FG-053",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-105",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-105",
+          "b": "FG-115",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.000001,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-115",
+          "b": "FG-014",
+          "a_slot": "S4",
+          "b_slot": "S0",
+          "span": 2.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-Y-04": {
+      "manifold_id": "M-Y-04",
+      "generator_count": 5,
+      "shape_family": "ARC_5",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-009",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-026",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-032",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-037",
+          "axial": [
+            2,
+            -2
+          ],
+          "xy": [
+            1.0,
+            -1.732051
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-103",
+          "axial": [
+            1,
+            -2
+          ],
+          "xy": [
+            0.0,
+            -1.732051
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-009",
+          "b": "FG-026",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-026",
+          "b": "FG-032",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-032",
+          "b": "FG-037",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.000001,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-037",
+          "b": "FG-103",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-103",
+          "b": "FG-009",
+          "a_slot": "S4",
+          "b_slot": "S0",
+          "span": 1.732051,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-Y-05": {
+      "manifold_id": "M-Y-05",
+      "generator_count": 5,
+      "shape_family": "LINEAR_5",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-036",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-044",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-051",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-060",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-117",
+          "axial": [
+            4,
+            0
+          ],
+          "xy": [
+            4.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-036",
+          "b": "FG-044",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-051",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-051",
+          "b": "FG-060",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-060",
+          "b": "FG-117",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-036",
+          "a_slot": "S4",
+          "b_slot": "S0",
+          "span": 4.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-Y-06": {
+      "manifold_id": "M-Y-06",
+      "generator_count": 5,
+      "shape_family": "HOUSE_5",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-030",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-047",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-067",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-106",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-109",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-030",
+          "b": "FG-047",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-047",
+          "b": "FG-067",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-067",
+          "b": "FG-106",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-106",
+          "b": "FG-109",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-109",
+          "b": "FG-030",
+          "a_slot": "S4",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-Y-07": {
+      "manifold_id": "M-Y-07",
+      "generator_count": 5,
+      "shape_family": "STAIR_5",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-036",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-044",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-060",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-084",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-117",
+          "axial": [
+            2,
+            -2
+          ],
+          "xy": [
+            1.0,
+            -1.732051
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-036",
+          "b": "FG-044",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-060",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-060",
+          "b": "FG-084",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-084",
+          "b": "FG-117",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.000001,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-036",
+          "a_slot": "S4",
+          "b_slot": "S0",
+          "span": 2.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-Y-08": {
+      "manifold_id": "M-Y-08",
+      "generator_count": 5,
+      "shape_family": "ARC_5",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-039",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-053",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-100",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-102",
+          "axial": [
+            2,
+            -2
+          ],
+          "xy": [
+            1.0,
+            -1.732051
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-114",
+          "axial": [
+            1,
+            -2
+          ],
+          "xy": [
+            0.0,
+            -1.732051
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-039",
+          "b": "FG-053",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-100",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-102",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.000001,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-102",
+          "b": "FG-114",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-114",
+          "b": "FG-039",
+          "a_slot": "S4",
+          "b_slot": "S0",
+          "span": 1.732051,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-Y-09": {
+      "manifold_id": "M-Y-09",
+      "generator_count": 5,
+      "shape_family": "LINEAR_5",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-001",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-036",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-044",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-050",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-117",
+          "axial": [
+            4,
+            0
+          ],
+          "xy": [
+            4.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-001",
+          "b": "FG-036",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-036",
+          "b": "FG-044",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-050",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-050",
+          "b": "FG-117",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-001",
+          "a_slot": "S4",
+          "b_slot": "S0",
+          "span": 4.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-Y-10": {
+      "manifold_id": "M-Y-10",
+      "generator_count": 5,
+      "shape_family": "HOUSE_5",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-021",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-022",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-060",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-063",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-099",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-021",
+          "b": "FG-022",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-022",
+          "b": "FG-060",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-060",
+          "b": "FG-063",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-063",
+          "b": "FG-099",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-099",
+          "b": "FG-021",
+          "a_slot": "S4",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-Y-11": {
+      "manifold_id": "M-Y-11",
+      "generator_count": 5,
+      "shape_family": "STAIR_5",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-032",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-038",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-040",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-042",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-053",
+          "axial": [
+            2,
+            -2
+          ],
+          "xy": [
+            1.0,
+            -1.732051
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-032",
+          "b": "FG-038",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-038",
+          "b": "FG-040",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-040",
+          "b": "FG-042",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-042",
+          "b": "FG-053",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.000001,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-032",
+          "a_slot": "S4",
+          "b_slot": "S0",
+          "span": 2.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-G-01": {
+      "manifold_id": "M-G-01",
+      "generator_count": 6,
+      "shape_family": "LINEAR_6",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-012",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-036",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-064",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-067",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-077",
+          "axial": [
+            4,
+            0
+          ],
+          "xy": [
+            4.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-086",
+          "axial": [
+            5,
+            0
+          ],
+          "xy": [
+            5.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-012",
+          "b": "FG-036",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-036",
+          "b": "FG-064",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-064",
+          "b": "FG-067",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-067",
+          "b": "FG-077",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-077",
+          "b": "FG-086",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-086",
+          "b": "FG-012",
+          "a_slot": "S5",
+          "b_slot": "S0",
+          "span": 5.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-G-02": {
+      "manifold_id": "M-G-02",
+      "generator_count": 6,
+      "shape_family": "HEX_RING_6",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-009",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-026",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-036",
+          "axial": [
+            0,
+            -1
+          ],
+          "xy": [
+            -0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-044",
+          "axial": [
+            -1,
+            0
+          ],
+          "xy": [
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-077",
+          "axial": [
+            -1,
+            1
+          ],
+          "xy": [
+            -0.5,
+            0.866025
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-117",
+          "axial": [
+            0,
+            1
+          ],
+          "xy": [
+            0.5,
+            0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-009",
+          "b": "FG-026",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-026",
+          "b": "FG-036",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-036",
+          "b": "FG-044",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-077",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-077",
+          "b": "FG-117",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-009",
+          "a_slot": "S5",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-G-03": {
+      "manifold_id": "M-G-03",
+      "generator_count": 6,
+      "shape_family": "BAND_6",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-030",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-032",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-050",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-085",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-091",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-096",
+          "axial": [
+            0,
+            -1
+          ],
+          "xy": [
+            -0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-030",
+          "b": "FG-032",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-032",
+          "b": "FG-050",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-050",
+          "b": "FG-085",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-085",
+          "b": "FG-091",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-091",
+          "b": "FG-096",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-096",
+          "b": "FG-030",
+          "a_slot": "S5",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-G-04": {
+      "manifold_id": "M-G-04",
+      "generator_count": 6,
+      "shape_family": "CHEVRON_6",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-030",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-032",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-047",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-050",
+          "axial": [
+            3,
+            -1
+          ],
+          "xy": [
+            2.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-106",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-109",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-030",
+          "b": "FG-032",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-032",
+          "b": "FG-047",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-047",
+          "b": "FG-050",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-050",
+          "b": "FG-106",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-106",
+          "b": "FG-109",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-109",
+          "b": "FG-030",
+          "a_slot": "S5",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-G-05": {
+      "manifold_id": "M-G-05",
+      "generator_count": 6,
+      "shape_family": "LINEAR_6",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-002",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-009",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-026",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-036",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-044",
+          "axial": [
+            4,
+            0
+          ],
+          "xy": [
+            4.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-117",
+          "axial": [
+            5,
+            0
+          ],
+          "xy": [
+            5.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-002",
+          "b": "FG-009",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-009",
+          "b": "FG-026",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-026",
+          "b": "FG-036",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-036",
+          "b": "FG-044",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-117",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-002",
+          "a_slot": "S5",
+          "b_slot": "S0",
+          "span": 5.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-G-06": {
+      "manifold_id": "M-G-06",
+      "generator_count": 6,
+      "shape_family": "HEX_RING_6",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-009",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-019",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-026",
+          "axial": [
+            0,
+            -1
+          ],
+          "xy": [
+            -0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-044",
+          "axial": [
+            -1,
+            0
+          ],
+          "xy": [
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-103",
+          "axial": [
+            -1,
+            1
+          ],
+          "xy": [
+            -0.5,
+            0.866025
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-117",
+          "axial": [
+            0,
+            1
+          ],
+          "xy": [
+            0.5,
+            0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-009",
+          "b": "FG-019",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-019",
+          "b": "FG-026",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-026",
+          "b": "FG-044",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-103",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-103",
+          "b": "FG-117",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-009",
+          "a_slot": "S5",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-G-07": {
+      "manifold_id": "M-G-07",
+      "generator_count": 6,
+      "shape_family": "BAND_6",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-009",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-026",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-032",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-037",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-103",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-039",
+          "axial": [
+            0,
+            -1
+          ],
+          "xy": [
+            -0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-009",
+          "b": "FG-026",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-026",
+          "b": "FG-032",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-032",
+          "b": "FG-037",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-037",
+          "b": "FG-103",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-103",
+          "b": "FG-039",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-039",
+          "b": "FG-009",
+          "a_slot": "S5",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-G-08": {
+      "manifold_id": "M-G-08",
+      "generator_count": 6,
+      "shape_family": "CHEVRON_6",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-009",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-026",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-039",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-056",
+          "axial": [
+            3,
+            -1
+          ],
+          "xy": [
+            2.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-100",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-114",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-009",
+          "b": "FG-026",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-026",
+          "b": "FG-039",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-039",
+          "b": "FG-056",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-056",
+          "b": "FG-100",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-114",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-114",
+          "b": "FG-009",
+          "a_slot": "S5",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-G-09": {
+      "manifold_id": "M-G-09",
+      "generator_count": 6,
+      "shape_family": "LINEAR_6",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-032",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-039",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-053",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-076",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-100",
+          "axial": [
+            4,
+            0
+          ],
+          "xy": [
+            4.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-114",
+          "axial": [
+            5,
+            0
+          ],
+          "xy": [
+            5.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-032",
+          "b": "FG-039",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-039",
+          "b": "FG-053",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-076",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-076",
+          "b": "FG-100",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-114",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-114",
+          "b": "FG-032",
+          "a_slot": "S5",
+          "b_slot": "S0",
+          "span": 5.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-B-01": {
+      "manifold_id": "M-B-01",
+      "generator_count": 7,
+      "shape_family": "LINEAR_7",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-014",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-034",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-053",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-093",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-097",
+          "axial": [
+            4,
+            0
+          ],
+          "xy": [
+            4.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-105",
+          "axial": [
+            5,
+            0
+          ],
+          "xy": [
+            5.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S6",
+          "field_generator": "FG-115",
+          "axial": [
+            6,
+            0
+          ],
+          "xy": [
+            6.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-014",
+          "b": "FG-034",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-034",
+          "b": "FG-053",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-093",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-093",
+          "b": "FG-097",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-097",
+          "b": "FG-105",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-105",
+          "b": "FG-115",
+          "a_slot": "S5",
+          "b_slot": "S6",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-115",
+          "b": "FG-014",
+          "a_slot": "S6",
+          "b_slot": "S0",
+          "span": 6.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-B-02": {
+      "manifold_id": "M-B-02",
+      "generator_count": 7,
+      "shape_family": "HEX_CENTER_7",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-017",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-039",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-045",
+          "axial": [
+            0,
+            -1
+          ],
+          "xy": [
+            -0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-100",
+          "axial": [
+            -1,
+            0
+          ],
+          "xy": [
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-111",
+          "axial": [
+            -1,
+            1
+          ],
+          "xy": [
+            -0.5,
+            0.866025
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-113",
+          "axial": [
+            0,
+            1
+          ],
+          "xy": [
+            0.5,
+            0.866025
+          ]
+        },
+        {
+          "slot": "S6",
+          "field_generator": "FG-114",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-017",
+          "b": "FG-039",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-039",
+          "b": "FG-045",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-045",
+          "b": "FG-100",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-111",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-111",
+          "b": "FG-113",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-113",
+          "b": "FG-114",
+          "a_slot": "S5",
+          "b_slot": "S6",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-114",
+          "b": "FG-017",
+          "a_slot": "S6",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-B-03": {
+      "manifold_id": "M-B-03",
+      "generator_count": 7,
+      "shape_family": "BAND_7",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-006",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-009",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-026",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-036",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-044",
+          "axial": [
+            3,
+            -1
+          ],
+          "xy": [
+            2.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-050",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S6",
+          "field_generator": "FG-117",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-006",
+          "b": "FG-009",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-009",
+          "b": "FG-026",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-026",
+          "b": "FG-036",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-036",
+          "b": "FG-044",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-050",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-050",
+          "b": "FG-117",
+          "a_slot": "S5",
+          "b_slot": "S6",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-006",
+          "a_slot": "S6",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-B-04": {
+      "manifold_id": "M-B-04",
+      "generator_count": 7,
+      "shape_family": "ARROW_7",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-014",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-022",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-034",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-053",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-093",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-105",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S6",
+          "field_generator": "FG-115",
+          "axial": [
+            1,
+            1
+          ],
+          "xy": [
+            1.5,
+            0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-014",
+          "b": "FG-022",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-022",
+          "b": "FG-034",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-034",
+          "b": "FG-053",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-093",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.732051,
+          "interaction": "COHERENCE_TETHER"
+        },
+        {
+          "a": "FG-093",
+          "b": "FG-105",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-105",
+          "b": "FG-115",
+          "a_slot": "S5",
+          "b_slot": "S6",
+          "span": 1.999999,
+          "interaction": "COHERENCE_TETHER"
+        },
+        {
+          "a": "FG-115",
+          "b": "FG-014",
+          "a_slot": "S6",
+          "b_slot": "S0",
+          "span": 1.732051,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-B-05": {
+      "manifold_id": "M-B-05",
+      "generator_count": 7,
+      "shape_family": "LINEAR_7",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-009",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-026",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-032",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-039",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-053",
+          "axial": [
+            4,
+            0
+          ],
+          "xy": [
+            4.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-100",
+          "axial": [
+            5,
+            0
+          ],
+          "xy": [
+            5.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S6",
+          "field_generator": "FG-114",
+          "axial": [
+            6,
+            0
+          ],
+          "xy": [
+            6.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-009",
+          "b": "FG-026",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-026",
+          "b": "FG-032",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-032",
+          "b": "FG-039",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-039",
+          "b": "FG-053",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-100",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-114",
+          "a_slot": "S5",
+          "b_slot": "S6",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-114",
+          "b": "FG-009",
+          "a_slot": "S6",
+          "b_slot": "S0",
+          "span": 6.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-B-06": {
+      "manifold_id": "M-B-06",
+      "generator_count": 7,
+      "shape_family": "HEX_CENTER_7",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-032",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-039",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-053",
+          "axial": [
+            0,
+            -1
+          ],
+          "xy": [
+            -0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-057",
+          "axial": [
+            -1,
+            0
+          ],
+          "xy": [
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-100",
+          "axial": [
+            -1,
+            1
+          ],
+          "xy": [
+            -0.5,
+            0.866025
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-113",
+          "axial": [
+            0,
+            1
+          ],
+          "xy": [
+            0.5,
+            0.866025
+          ]
+        },
+        {
+          "slot": "S6",
+          "field_generator": "FG-114",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-032",
+          "b": "FG-039",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-039",
+          "b": "FG-053",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-057",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-057",
+          "b": "FG-100",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-113",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-113",
+          "b": "FG-114",
+          "a_slot": "S5",
+          "b_slot": "S6",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-114",
+          "b": "FG-032",
+          "a_slot": "S6",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-B-07": {
+      "manifold_id": "M-B-07",
+      "generator_count": 7,
+      "shape_family": "BAND_7",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-032",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-039",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-053",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-076",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-100",
+          "axial": [
+            3,
+            -1
+          ],
+          "xy": [
+            2.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-113",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S6",
+          "field_generator": "FG-114",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-032",
+          "b": "FG-039",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-039",
+          "b": "FG-053",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-076",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-076",
+          "b": "FG-100",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-113",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-113",
+          "b": "FG-114",
+          "a_slot": "S5",
+          "b_slot": "S6",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-114",
+          "b": "FG-032",
+          "a_slot": "S6",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-V-01": {
+      "manifold_id": "M-V-01",
+      "generator_count": 8,
+      "shape_family": "LINEAR_8",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-009",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-026",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-036",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-044",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-050",
+          "axial": [
+            4,
+            0
+          ],
+          "xy": [
+            4.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-085",
+          "axial": [
+            5,
+            0
+          ],
+          "xy": [
+            5.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S6",
+          "field_generator": "FG-096",
+          "axial": [
+            6,
+            0
+          ],
+          "xy": [
+            6.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S7",
+          "field_generator": "FG-117",
+          "axial": [
+            7,
+            0
+          ],
+          "xy": [
+            7.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-009",
+          "b": "FG-026",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-026",
+          "b": "FG-036",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-036",
+          "b": "FG-044",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-050",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-050",
+          "b": "FG-085",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-085",
+          "b": "FG-096",
+          "a_slot": "S5",
+          "b_slot": "S6",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-096",
+          "b": "FG-117",
+          "a_slot": "S6",
+          "b_slot": "S7",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-009",
+          "a_slot": "S7",
+          "b_slot": "S0",
+          "span": 7.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-V-02": {
+      "manifold_id": "M-V-02",
+      "generator_count": 8,
+      "shape_family": "BAND_8",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-017",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-039",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-045",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-057",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-100",
+          "axial": [
+            3,
+            -1
+          ],
+          "xy": [
+            2.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-111",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S6",
+          "field_generator": "FG-113",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S7",
+          "field_generator": "FG-114",
+          "axial": [
+            0,
+            -1
+          ],
+          "xy": [
+            -0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-017",
+          "b": "FG-039",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-039",
+          "b": "FG-045",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-045",
+          "b": "FG-057",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-057",
+          "b": "FG-100",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-100",
+          "b": "FG-111",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-111",
+          "b": "FG-113",
+          "a_slot": "S5",
+          "b_slot": "S6",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-113",
+          "b": "FG-114",
+          "a_slot": "S6",
+          "b_slot": "S7",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-114",
+          "b": "FG-017",
+          "a_slot": "S7",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-V-03": {
+      "manifold_id": "M-V-03",
+      "generator_count": 8,
+      "shape_family": "RING_8",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-001",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-007",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-036",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-044",
+          "axial": [
+            3,
+            -1
+          ],
+          "xy": [
+            2.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-050",
+          "axial": [
+            3,
+            -2
+          ],
+          "xy": [
+            2.0,
+            -1.732051
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-085",
+          "axial": [
+            2,
+            -2
+          ],
+          "xy": [
+            1.0,
+            -1.732051
+          ]
+        },
+        {
+          "slot": "S6",
+          "field_generator": "FG-096",
+          "axial": [
+            1,
+            -2
+          ],
+          "xy": [
+            0.0,
+            -1.732051
+          ]
+        },
+        {
+          "slot": "S7",
+          "field_generator": "FG-117",
+          "axial": [
+            0,
+            -1
+          ],
+          "xy": [
+            -0.5,
+            -0.866025
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-001",
+          "b": "FG-007",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-007",
+          "b": "FG-036",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-036",
+          "b": "FG-044",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-044",
+          "b": "FG-050",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.000001,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-050",
+          "b": "FG-085",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-085",
+          "b": "FG-096",
+          "a_slot": "S5",
+          "b_slot": "S6",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-096",
+          "b": "FG-117",
+          "a_slot": "S6",
+          "b_slot": "S7",
+          "span": 1.000001,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-117",
+          "b": "FG-001",
+          "a_slot": "S7",
+          "b_slot": "S0",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-V-04": {
+      "manifold_id": "M-V-04",
+      "generator_count": 8,
+      "shape_family": "CLUSTER_8",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-007",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-022",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-024",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-060",
+          "axial": [
+            2,
+            -1
+          ],
+          "xy": [
+            1.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-056",
+          "axial": [
+            1,
+            -1
+          ],
+          "xy": [
+            0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-063",
+          "axial": [
+            0,
+            -1
+          ],
+          "xy": [
+            -0.5,
+            -0.866025
+          ]
+        },
+        {
+          "slot": "S6",
+          "field_generator": "FG-068",
+          "axial": [
+            0,
+            1
+          ],
+          "xy": [
+            0.5,
+            0.866025
+          ]
+        },
+        {
+          "slot": "S7",
+          "field_generator": "FG-099",
+          "axial": [
+            2,
+            -2
+          ],
+          "xy": [
+            1.0,
+            -1.732051
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-007",
+          "b": "FG-022",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-022",
+          "b": "FG-024",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-024",
+          "b": "FG-060",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-060",
+          "b": "FG-056",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-056",
+          "b": "FG-063",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-063",
+          "b": "FG-068",
+          "a_slot": "S5",
+          "b_slot": "S6",
+          "span": 1.999999,
+          "interaction": "COHERENCE_TETHER"
+        },
+        {
+          "a": "FG-068",
+          "b": "FG-099",
+          "a_slot": "S6",
+          "b_slot": "S7",
+          "span": 2.645751,
+          "interaction": "COHERENCE_TETHER"
+        },
+        {
+          "a": "FG-099",
+          "b": "FG-007",
+          "a_slot": "S7",
+          "b_slot": "S0",
+          "span": 2.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    },
+    "M-V-05": {
+      "manifold_id": "M-V-05",
+      "generator_count": 8,
+      "shape_family": "LINEAR_8",
+      "generator_slots": [
+        {
+          "slot": "S0",
+          "field_generator": "FG-013",
+          "axial": [
+            0,
+            0
+          ],
+          "xy": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S1",
+          "field_generator": "FG-027",
+          "axial": [
+            1,
+            0
+          ],
+          "xy": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S2",
+          "field_generator": "FG-032",
+          "axial": [
+            2,
+            0
+          ],
+          "xy": [
+            2.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S3",
+          "field_generator": "FG-038",
+          "axial": [
+            3,
+            0
+          ],
+          "xy": [
+            3.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S4",
+          "field_generator": "FG-040",
+          "axial": [
+            4,
+            0
+          ],
+          "xy": [
+            4.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S5",
+          "field_generator": "FG-042",
+          "axial": [
+            5,
+            0
+          ],
+          "xy": [
+            5.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S6",
+          "field_generator": "FG-053",
+          "axial": [
+            6,
+            0
+          ],
+          "xy": [
+            6.0,
+            0.0
+          ]
+        },
+        {
+          "slot": "S7",
+          "field_generator": "FG-110",
+          "axial": [
+            7,
+            0
+          ],
+          "xy": [
+            7.0,
+            0.0
+          ]
+        }
+      ],
+      "required_cycle_edges": [
+        {
+          "a": "FG-013",
+          "b": "FG-027",
+          "a_slot": "S0",
+          "b_slot": "S1",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-027",
+          "b": "FG-032",
+          "a_slot": "S1",
+          "b_slot": "S2",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-032",
+          "b": "FG-038",
+          "a_slot": "S2",
+          "b_slot": "S3",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-038",
+          "b": "FG-040",
+          "a_slot": "S3",
+          "b_slot": "S4",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-040",
+          "b": "FG-042",
+          "a_slot": "S4",
+          "b_slot": "S5",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-042",
+          "b": "FG-053",
+          "a_slot": "S5",
+          "b_slot": "S6",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-053",
+          "b": "FG-110",
+          "a_slot": "S6",
+          "b_slot": "S7",
+          "span": 1.0,
+          "interaction": "DIRECT_CONTACT"
+        },
+        {
+          "a": "FG-110",
+          "b": "FG-013",
+          "a_slot": "S7",
+          "b_slot": "S0",
+          "span": 7.0,
+          "interaction": "COHERENCE_TETHER"
+        }
+      ],
+      "equivalence": {
+        "translation": true,
+        "global_rotation": "continuous_SO2",
+        "reflection": false,
+        "scale": false
+      },
+      "shape_gate": {
+        "membership_exact_multiset": true,
+        "cycle_required": true
+      },
+      "orientation_gate": {
+        "source": "data/qmo/generators/compatibility.json",
+        "all_required_edges_must_have_face_compatible_orientation": true
+      },
+      "soft_snap_profile": "SOFT_SNAP_V1"
+    }
+  }
+}

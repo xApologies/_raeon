@@ -1,9 +1,9 @@
 {
   "schema_version": 3,
   "id": "raeon",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "test_only": false,
-  "scope": "PASS_03_PARTIAL_SOURCE_BACKED_TOPOLOGY",
+  "scope": "PASS_03B_LIVE_CONFIGURATION_REALIZATION",
   "realize": "raeon_realize.gen",
   "definitions": "definitions.json",
   "files": {
@@ -18,7 +18,7 @@
     "initialize_inventory.gen": "9c86afd417566ef59dc52a2d51d2d4d0f92a96d886e46b74c08aa2b4e2e30412",
     "inspect_top.gen": "6cf79eec29a8fcb2652a2bc78def8bf5fc1dbdf3567466ef19efa41c65acd87b",
     "link_configuration.gen": "a5dd7950e7dac275ccc4e296d613b1cf6fcba2bbd695676321e123e87452b207",
-    "merge_configuration.gen": "f04289e4b66350960ea473e8cba12084aecfbbc9eb9f4c4c959349f1980641d9",
+    "merge_configuration.gen": "9308d4fc28ae1aa86476fe37ef5b7d6970571cf3dfe5a00958d53cef147a453d",
     "native_instantiate.gen": "e76e8e11f0bf28bd65a858805cc221a4a63f1da2c50f9e7fd0c7a4318aa3b30a",
     "native_relate.gen": "0c1661f93c909f8661f9394028dc0aeb728a44ca4ceb72d74f44ae5b88033e5d",
     "native_transport.gen": "bcf64698ac20301c1ea4dcfd5dfbc0fe313d047990101c5d3182af7854d0ac1f",
@@ -31,9 +31,9 @@
     "recover_4.gen": "c50f33bf211808bc31ed574f1da577057f2ad6e8714d7bfc1f141b43b5d038f3",
     "recover_5.gen": "87ce6dd002bd927b61a24833703103b342320c7ffb9c41c513299686ded03c65",
     "recover_6.gen": "d2ed0e7c67486c3f584e17d2b188277d5ca15a5a20743846c98c0b26c78201e5",
-    "reopen_configuration.gen": "54eb0ddc5596c924f3b6d0273ea7ca602a688959ed518f746499d97a80b510a8",
+    "reopen_configuration.gen": "61fa870d8f25682fddf4283ee0d5f4110259c7a73e5da8676e98713fe5682010",
     "reorder_top.gen": "9a87ecb4d92d4a0a6f4c38d0988f2150a37ff78a12500c91d5c2c744d834a2e9",
-    "resolve_configuration.gen": "41562913526a1c9483ed905129836fa2c63d43a0e8d5927244b02655f796931e",
+    "resolve_configuration.gen": "4dd3a7e9cdb427be3816b91f82ae0ffb1d83c6d2db351670730970263622b689",
     "retire_cards.gen": "dc7b00c52a7e902bcc15d9a623dfd1a32fcfc71957c90564e56791a1411e49e3",
     "retire_support.gen": "5daf6da5bc6513e0720ba2803a42640d040aef87469ce68bef2720ca5eb45e13",
     "set_fg_poses.gen": "33f5777e0d9ef83991f06a835c4364e8b3fdd1610b98ae81eba02619ea21b9f2",
@@ -1475,15 +1475,26 @@
     "modules": {
       "corpus": {
         "path": "game/qmo/corpus.py",
-        "sha256": "cca65d44dca6231b2eff0c61f85a70ccac1f6f01d84d35432b7a533991b7d656"
+        "sha256": "5988a1f9bec177694af6d0c21aff9e228dec0d89f5f4b216f86bd756112a2ef1"
       },
       "state": {
         "path": "game/sandbox/topology.py",
-        "sha256": "58f0c22821e7c49fc9abac643aecff22d47c9dafadcc5ec987d3ffe974850864"
+        "sha256": "71489aaefb2ff6f3752f44218224a55e103ef3ca5bc67daa67285beb47637831"
+      },
+      "realization": {
+        "path": "game/qmo/realization.py",
+        "sha256": "693ee2c2befad4f29e9ebf6d7ede4339b2b08dd9a1045926586bdba40a262b33"
       }
     },
     "inputs": {
-      "game/qmo/cycle1.lock.json": "55b8a975c67e0ed89305470b6427bc69c1e81b034d1737c85569dce62d808699"
+      "game/qmo/cycle1.lock.json": "55b8a975c67e0ed89305470b6427bc69c1e81b034d1737c85569dce62d808699",
+      "game/qmo/realization.lock.json": "aab652c7eb8c0edcb46fda0d2a02d18306070bb169c5e91c12c16c381bca3065",
+      "data/game/configuration_realization/v1/BASE_MANIFOLD_WITNESSES.json": "22a264e5ebaa7cc35015e1433b415b5bfaf0fd18339441c2a04713afbb92b2b8",
+      "data/game/configuration_realization/v1/REALIZATION_CONTRACT.json": "3ba86cfa99db2bbca1083bf6b66ceec1b160512f3a6f83f3340d9fb774dd4876",
+      "data/game/configuration_realization/v1/WITNESS_SCHEMA.json": "be2cf78a38c876ee6a5766ee14d63bf7f1c3a86300587379bea0eb58d17ef544",
+      "data/game/configuration_realization/v1/ROTATION_CLASS_TABLE.json": "df2fc56010f01d3389a130d651deb1fe1883795d3acafcfca49ec3fcda251d33",
+      "data/game/configuration_realization/v1/SOFT_SNAP_V1.json": "4e7a2b18ae3f78d066d1fd6c04d8b1d6d1ecab9669fea6c516c961247301c8a2",
+      "data/game/configuration_realization/v1/ORIENTATION_REALIZATION_V1.json": "cb70cda9c3e152e9b387bbd99f2d31aedaa006309461678537a04bd628f1dc97"
     }
   }
 }

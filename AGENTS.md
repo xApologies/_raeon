@@ -9,3 +9,5 @@ Use `tools/genesis_runtime.py` as implemented; record actual compiler/runtime ev
 Verified predecessor: [Pass-2 execution record](development/modules/core-game/PASS_02_EXECUTION.md) and its completed projection privacy correction at `d991278`. Preserve all preceding tests and source history.
 
 Current Pass-3 work: [execution record](development/modules/core-game/PASS_03_EXECUTION.md). Continue `codex/raeon-pass-03` from corrected Pass 2 (`d991278`). Preserve its privacy regressions; main stays unmerged.
+
+Current Pass-3B continuation: [execution record](development/modules/core-game/PASS_03B_EXECUTION.md). Inherit completed Pass 3 at `33f4139` on `codex/raeon-pass-03b`. Preserve prior tests and privacy correction; do not merge main. The new realization authority closes the named historical pose/fusion/emergence gaps, without regenerating QMO sources.

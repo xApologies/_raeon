@@ -9,10 +9,15 @@ import sys
 import tempfile
 import zipfile
 
-VERSION = '0.3.0'
+VERSION = '0.3.1'
 PREFIXES = {
     'hypervisor': ['platform/shared/python_hypervisor/', 'tests/unit/hypervisor/'],
-    'horizon': ['game/qmo/', 'game/sandbox/', 'data/qmo/', 'data/render_specs/cycle_01/',
+    'horizon': ['tools/genesis_runtime_test_worker.py', 'tools/genesis_runtime_pass03b.py', 'provenance/decisions/raeon-pass-03b.json',
+                'provenance/imports/raeon-pass-03b/entry.json',
+                'provenance/imports/raeon-pass-03b/handoff/acceptance/PASS_03B_ACCEPTANCE.json',
+                'provenance/imports/raeon-pass-03b/handoff/acceptance/BLOCKED_PASS3_TARGETS.json',
+                'development/modules/core-game/PASS_03B_EXECUTION.md', 'development/modules/core-game/PASS_03B_RECEIPT.md',
+                'game/qmo/', 'game/sandbox/', 'data/qmo/', 'data/render_specs/cycle_01/',
                 'tools/genesis_runtime_pass03.py', 'provenance/decisions/raeon-pass-03.json',
                 'provenance/imports/raeon-pass-03/handoff/acceptance/PASS_03_ACCEPTANCE.json',
                 'provenance/imports/raeon-pass-03/entry.json',
@@ -222,8 +227,9 @@ def verify_distributions(root, output):
     # Exercise local software tests in isolation; the selected upstream regression
     # sources are also shipped and remain runnable with the test command.
     run('pass-03-demo', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless', '--application', 'raeon', '--scenario', 'topology'])
-    run('unit-tests', [str(python), '-B', '-m', 'unittest', 'discover', '-s', 'tests/unit/hypervisor', '-v'])
-    run('integration-tests', [str(python), '-B', '-m', 'unittest', 'discover', '-s', 'tests/integration/genesis_horizon', '-v'])
+    run('pass-03b-demo', [str(python), '-B', 'tools/genesis_runtime.py', 'demo', '--headless', '--application', 'raeon', '--scenario', 'realization'])
+    run('unit-tests', [str(python), '-B', 'tools/genesis_runtime_test_worker.py', 'suite', 'tests/unit/hypervisor', 'build/genesis_runtime/evidence/tests-unit.json'])
+    run('integration-tests', [str(python), '-B', 'tools/genesis_runtime_test_worker.py', 'suite', 'tests/integration/genesis_horizon', 'build/genesis_runtime/evidence/tests-integration.json'])
     lock = json.loads((extraction / 'data/platform/genesis-runtime-lock.json').read_text())
     relative = next(iter(lock['selected_source_paths_and_hashes']))
     missing = extraction / lock['default_dependency_root'] / relative
@@ -257,7 +263,7 @@ def verify_distributions(root, output):
                  'probes_passed': True, 'violations': violations, 'events_recorded': len(traces),
                  'trace_directory': str(extraction / 'isolation traces'),
                  'file_closure': ['bundle and writable extraction', 'declared Python installation', 'Windows OS prerequisite']}
-    result = {'status': 'PASS', 'isolation': isolation, 'missing_dependency_negative': 'PASS', 'missing_qmo_negative': 'PASS',
+    result = {'status': 'PASS', 'pass03b_scene': 'PASS', 'isolation': isolation, 'missing_dependency_negative': 'PASS', 'missing_qmo_negative': 'PASS',
               'physical_path_bytecode_equal': True, 'extraction': str(extraction), 'offline_install': True, 'python_prerequisite': sys.version.split()[0],
               'source_commit': next(iter(manifests.values()))['source_commit'], 'commands': commands,
               'archives': distributions, 'archive_manifest_files_verified': sum(len(m['files']) for m in manifests.values())}

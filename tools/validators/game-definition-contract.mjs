@@ -1,3 +1,4 @@
+import {matchesPass03b} from './pass-03b-contract.mjs';
 import {matchesRuntimeNavigation} from './genesis-runtime-contract.mjs';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -45,5 +46,5 @@ export function projectGameDefinitionText(root, file, text) {
 }
 export function matchesGameDefinitionAmendment(root, file, actualHash, priorHash) {
   const entry = loadGameDefinitionContract(root).approved_file_amendments[file];
-  return (entry?.before_sha256 === priorHash && entry?.after_sha256 === actualHash) || matchesRuntimeNavigation(file, actualHash, priorHash);
+  return (entry?.before_sha256 === priorHash && (entry?.after_sha256 === actualHash || matchesPass03b(root, file, actualHash, entry.after_sha256))) || matchesRuntimeNavigation(file, actualHash, priorHash) || matchesPass03b(root, file, actualHash, priorHash);
 }

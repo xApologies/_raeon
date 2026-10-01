@@ -3,7 +3,7 @@ module merge_configuration {
   en fabric : FABRIC = mount "fabric://horizon/locked-v1"
   en region : REGION = alloc fabric cells 32
   en match : GEOMETRIC = instantiate fabric region mmo @bound_match
-  admit match as permission @{"operation":"COLLECTION_TRANSACTION","abi":"state-collections-v1","action":{"kind":"extension","abi":"raeon-topology-values-v1","operation":"merge","effect_source":"conformance:topology:merge","requires_source_policy":"G-MERGE"}}
+  admit match as permission @{"operation":"COLLECTION_TRANSACTION","abi":"state-collections-v1","action":{"kind":"extension","abi":"raeon-topology-values-v1","operation":"merge","effect_source":"conformance:topology:merge","requires":["resolved_supports","disjoint_instances","source_valid","road_close"]}}
   transform match with permission as candidate @{"operator":"COLLECTION_TRANSACTION"}
   assert closure candidate as closed
   export candidate : GEOMETRIC

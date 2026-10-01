@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RAEON Base Manifold 2D Witness",
+  "type": "object",
+  "required": [
+    "manifold_id",
+    "generator_count",
+    "shape_family",
+    "generator_slots",
+    "required_cycle_edges",
+    "equivalence",
+    "shape_gate",
+    "orientation_gate",
+    "soft_snap_profile"
+  ]
+}

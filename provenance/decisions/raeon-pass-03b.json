@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "id": "raeon-pass-03b",
+  "status": "IMPLEMENTED_PENDING_FINAL_ACCEPTANCE",
+  "starting_sha": "33f4139719c5b4af83610dcb9600be594a50e78c",
+  "corrected_ancestor": "d991278bc72518e9abe2df7741298a2631c787d0",
+  "branch": "codex/raeon-pass-03b",
+  "source_pouch_sha256": "acd410d548ea5503640e789f3acf8c4a77f33b4552b9f5980f8eee06055be23f",
+  "authority_hashes": {
+    "data/game/configuration_realization/v1/BASE_MANIFOLD_WITNESSES.json": "22a264e5ebaa7cc35015e1433b415b5bfaf0fd18339441c2a04713afbb92b2b8",
+    "data/game/configuration_realization/v1/REALIZATION_CONTRACT.json": "3ba86cfa99db2bbca1083bf6b66ceec1b160512f3a6f83f3340d9fb774dd4876",
+    "data/game/configuration_realization/v1/WITNESS_SCHEMA.json": "be2cf78a38c876ee6a5766ee14d63bf7f1c3a86300587379bea0eb58d17ef544",
+    "data/game/configuration_realization/v1/ROTATION_CLASS_TABLE.json": "df2fc56010f01d3389a130d651deb1fe1883795d3acafcfca49ec3fcda251d33",
+    "data/game/configuration_realization/v1/SOFT_SNAP_V1.json": "4e7a2b18ae3f78d066d1fd6c04d8b1d6d1ecab9669fea6c516c961247301c8a2",
+    "data/game/configuration_realization/v1/ORIENTATION_REALIZATION_V1.json": "cb70cda9c3e152e9b387bbd99f2d31aedaa006309461678537a04bd628f1dc97"
+  },
+  "qmo_sources": {
+    "data/cycles/cycle_01/field_generators/objects.json": "c8bd56021e95d80ffb677e31f69a864f4ff02bf6db97304edba9dfe8fa879e62",
+    "data/qmo/manifolds/objects.json": "d8c66b09e7f98e32e0d937afa231a99e15b3fb3924fcfd0546eebdec1eb2cde2",
+    "data/qmo/fusion/objects.json": "0e48912b56d112f9f14f21fe6c5252500d43d57d68343dfd96369c5366c86c23",
+    "data/qmo/emergent/objects.json": "fd2a2a31f90848bde0ff4c533c6d62580d37efdbc97d6d070f719b07e50e725c",
+    "data/qmo/cycle1/derived_qmos.json": "4cd701f1335eb41c944c12ce92fb0e93ec5bc5b7d358631ffeff389864c19325",
+    "data/qmo/cycle1/atlas.json": "2febd32e9e2ee218ae3e71c63f975525cdbeed05f11e40d97a794997bf067b12",
+    "data/qmo/cycle1/manifold_pair_relations.json": "558ddaae14cb21a54e2cc42333971fbb11c94f10b7c91ea9b1f29e28418fd6a7",
+    "data/qmo/generators/compatibility.json": "0f7aa8b8097757a9e38724ea0f016926a6344ef71451c9f4686f63770df9d0bc",
+    "data/qmo/cycle1/playfield_summary.json": "66217cd20aca5f8509d775cb822f641cf9311117d92743da3b8baf2ee5ed3eaf",
+    "data/qmo/cycle1/qmo.sqlite": "2945e86691165f9105aad6d29ec31f5a6cdde72fab0f5a929e3a254efdd588eb",
+    "data/render_specs/cycle_01/catalog.json": "383bed873f5a4c5f519d2848e1e1b3cd30498cb21d94f758910de4b08cd27530"
+  },
+  "sources": {
+    "data/cycles/cycle_01/field_generators/objects.json": "c8bd56021e95d80ffb677e31f69a864f4ff02bf6db97304edba9dfe8fa879e62",
+    "data/game/configuration_realization/v1/BASE_MANIFOLD_WITNESSES.json": "22a264e5ebaa7cc35015e1433b415b5bfaf0fd18339441c2a04713afbb92b2b8",
+    "data/game/configuration_realization/v1/ORIENTATION_REALIZATION_V1.json": "cb70cda9c3e152e9b387bbd99f2d31aedaa006309461678537a04bd628f1dc97",
+    "data/game/configuration_realization/v1/REALIZATION_CONTRACT.json": "3ba86cfa99db2bbca1083bf6b66ceec1b160512f3a6f83f3340d9fb774dd4876",
+    "data/game/configuration_realization/v1/ROTATION_CLASS_TABLE.json": "df2fc56010f01d3389a130d651deb1fe1883795d3acafcfca49ec3fcda251d33",
+    "data/game/configuration_realization/v1/SOFT_SNAP_V1.json": "4e7a2b18ae3f78d066d1fd6c04d8b1d6d1ecab9669fea6c516c961247301c8a2",
+    "data/game/configuration_realization/v1/WITNESS_SCHEMA.json": "be2cf78a38c876ee6a5766ee14d63bf7f1c3a86300587379bea0eb58d17ef544",
+    "data/qmo/cycle1/atlas.json": "2febd32e9e2ee218ae3e71c63f975525cdbeed05f11e40d97a794997bf067b12",
+    "data/qmo/cycle1/derived_qmos.json": "4cd701f1335eb41c944c12ce92fb0e93ec5bc5b7d358631ffeff389864c19325",
+    "data/qmo/cycle1/manifold_pair_relations.json": "558ddaae14cb21a54e2cc42333971fbb11c94f10b7c91ea9b1f29e28418fd6a7",
+    "data/qmo/cycle1/playfield_summary.json": "66217cd20aca5f8509d775cb822f641cf9311117d92743da3b8baf2ee5ed3eaf",
+    "data/qmo/cycle1/qmo.sqlite": "2945e86691165f9105aad6d29ec31f5a6cdde72fab0f5a929e3a254efdd588eb",
+    "data/qmo/emergent/objects.json": "fd2a2a31f90848bde0ff4c533c6d62580d37efdbc97d6d070f719b07e50e725c",
+    "data/qmo/fusion/objects.json": "0e48912b56d112f9f14f21fe6c5252500d43d57d68343dfd96369c5366c86c23",
+    "data/qmo/generators/compatibility.json": "0f7aa8b8097757a9e38724ea0f016926a6344ef71451c9f4686f63770df9d0bc",
+    "data/qmo/manifolds/objects.json": "d8c66b09e7f98e32e0d937afa231a99e15b3fb3924fcfd0546eebdec1eb2cde2",
+    "data/render_specs/cycle_01/catalog.json": "383bed873f5a4c5f519d2848e1e1b3cd30498cb21d94f758910de4b08cd27530",
+    "game/qmo/realization.lock.json": "aab652c7eb8c0edcb46fda0d2a02d18306070bb169c5e91c12c16c381bca3065",
+    "game/qmo/realization.py": "693ee2c2befad4f29e9ebf6d7ede4339b2b08dd9a1045926586bdba40a262b33",
+    "provenance/imports/raeon-pass-03b/RAEON_DIPLOMATIC_POUCH_PASS_03B_2026-09-30.zip": "acd410d548ea5503640e789f3acf8c4a77f33b4552b9f5980f8eee06055be23f",
+    "provenance/imports/raeon-pass-03b/entry.json": "5d12b4d5224e85e73698665362eb208bc1393674aa112a12c0fcc70bafeb958f",
+    "provenance/imports/raeon-pass-03b/handoff/MANIFEST.json": "9977bf98233f4ab9b088a7d4a5733c1ee89db2adf69ec8f54a092a295d66a460",
+    "provenance/imports/raeon-pass-03b/handoff/POUCH.json": "4de9ca4909812e43028e8a556ef63fb35a2daba9e9aeeffa70748ff23f8328a0",
+    "provenance/imports/raeon-pass-03b/handoff/acceptance/BLOCKED_PASS3_TARGETS.json": "c7e57494f17d522c1681e50526bde8b11a374a0ef4b52a541cc4360b4f334f7f",
+    "provenance/imports/raeon-pass-03b/handoff/acceptance/PASS_03B_ACCEPTANCE.json": "0110b98cc98780add22ae2d4532badaf16c3e791daf562c427acf1f53a07c863",
+    "tests/integration/genesis_horizon/pass_03b_support.py": "dd8b9b3d5e3b418e3364d01fd35b50fa5e292ab281648eae4ec78251a9e67dfe",
+    "tests/integration/genesis_horizon/test_pass_03b.py": "5a6aff2ec82a5bcfe07f432b5dde4b4304ea0d227c5649a5bda35823806e09a4",
+    "tests/integration/genesis_horizon/test_pass_03b_math.py": "8ccb8c48e4190ae6d23f27da2afa5a4a0ff6dd0878a90b0d957e7c6267dc77c2",
+    "tools/genesis_runtime_pass03b.py": "3447e282f5659a722cebf565c203257594681a74696173194da3713dc0f8951e",
+    "tools/genesis_runtime_test_worker.py": "6bd72a798ed555f01a3bbd91692068c443a8d0b6e36850e6fff7647a8ffe1f5c"
+  },
+  "changes": {
+    "game/core/raeon/application/manifest.json": {
+      "before_sha256": "c70311a00cbe6a81e690ebd53f078f6d9bd47eded61448607eeb0a15c889835e",
+      "after_sha256": "7fa337de61474e54bb0b4409560a9e9233bbbc380ed68e440ebc548a83aa1457"
+    },
+    "game/core/raeon/application/merge_configuration.gen": {
+      "before_sha256": "f04289e4b66350960ea473e8cba12084aecfbbc9eb9f4c4c959349f1980641d9",
+      "after_sha256": "9308d4fc28ae1aa86476fe37ef5b7d6970571cf3dfe5a00958d53cef147a453d"
+    },
+    "game/core/raeon/application/reopen_configuration.gen": {
+      "before_sha256": "54eb0ddc5596c924f3b6d0273ea7ca602a688959ed518f746499d97a80b510a8",
+      "after_sha256": "61fa870d8f25682fddf4283ee0d5f4110259c7a73e5da8676e98713fe5682010"
+    },
+    "game/core/raeon/application/resolve_configuration.gen": {
+      "before_sha256": "41562913526a1c9483ed905129836fa2c63d43a0e8d5927244b02655f796931e",
+      "after_sha256": "4dd3a7e9cdb427be3816b91f82ae0ffb1d83c6d2db351670730970263622b689"
+    },
+    "game/qmo/README.md": {
+      "before_sha256": "5d1ed7966a24a7bfb8ca1aaea13ee2fbae7b3cbe1dcc668431da326837473c63",
+      "after_sha256": "01d096ec485f5767ba6c8e199553dd806dcbc1dfb94e22fbb267e56581c6cf20"
+    },
+    "game/sandbox/README.md": {
+      "before_sha256": "ea120d4910d4a9bf6e6034a1c7d064a9ac54027655d735f3a3b0d7a348cfc796",
+      "after_sha256": "d41f21077b1607bcb3955dbe4a8bdc4a9ecd5539a54ae662698e9da7dfe436ba"
+    },
+    "game/sandbox/topology.py": {
+      "before_sha256": "58f0c22821e7c49fc9abac643aecff22d47c9dafadcc5ec987d3ffe974850864",
+      "after_sha256": "71489aaefb2ff6f3752f44218224a55e103ef3ca5bc67daa67285beb47637831"
+    },
+    "tools/genesis_runtime.py": {
+      "before_sha256": "7618e551e46df1280f873f35bcd3dcefd2a4c23e532fd32834b1e848996b44de",
+      "after_sha256": "1473b9422f06871fd1a97e9a9210fbdcdb1131473391917ac477bab446a22b4e"
+    },
+    "tools/genesis_runtime_distribution.py": {
+      "before_sha256": "102e94a4826f11d22dcbe74528f02825c28b54e7073422d7895af826cc7c067c",
+      "after_sha256": "e6d997bd8deededffef18d16f94d2062d5c0a4e4c3383dc5ec31f4e793999352"
+    },
+    "tools/genesis_runtime_pass02.py": {
+      "before_sha256": "18fee9048e9c74e5115300e1fd7d0ea886f9fa79f0b2025653fd941a5b59d46e",
+      "after_sha256": "74c0311acaf84d255ee02500d0a0e74b7cea19994af2f6f56a30fd1bd48d4299"
+    },
+    "tools/genesis_runtime_pass03.py": {
+      "before_sha256": "0f5deb1a15abc99a7e2a3f285f4d8b46a76db7af4e9f653a2e43b402ccec40b9",
+      "after_sha256": "68a1ebb1d43f2959511a0f120f16b6462d6ed808aba2ad99afc4f129d3a0a672"
+    },
+    "tools/validators/game-definition-contract.mjs": {
+      "before_sha256": "73b4024e0821c8d70958bc69e4ea363fe39e748bdb3713fafa59e3e8eb407f92",
+      "after_sha256": "8735527b1dc20eeb0505e9d6889f7c7cb65883dd5d1eab25f6bc61a197794735"
+    },
+    "tools/validators/genesis-runtime-contract.mjs": {
+      "before_sha256": "9ebd47ba67632f1a7758952355410f7bccefdb3b8a19f8e37dc5d7e7de47e2d1",
+      "after_sha256": "9b565960bf17f6f958f32714d0eda413a4f1b0c141569454947cd9b8c6ec684b"
+    },
+    "tools/validators/pass-03-contract.mjs": {
+      "before_sha256": "825eab549f6feb8bfb2783b0803889ffd5964b6a1ca9a0db0b3dc84da1164a67",
+      "after_sha256": "fdd0d78860b0105a60f18472e88590a67a49cb5073312fcbbc45108ffad36d2d"
+    },
+    "game/qmo/corpus.py": {
+      "before_sha256": "cca65d44dca6231b2eff0c61f85a70ccac1f6f01d84d35432b7a533991b7d656",
+      "after_sha256": "5988a1f9bec177694af6d0c21aff9e228dec0d89f5f4b216f86bd756112a2ef1"
+    },
+    "tools/genesis_runtime_tasks.py": {
+      "before_sha256": "1d80084e8364c6ef1cec62643a8d1a282434a4191ef48ea1471444b8cdb1ce9c",
+      "after_sha256": "60d40fa58b5f0b7ed527e1793e37a0d7d9ae6605195c57fd013b1dce9a6954ff"
+    }
+  },
+  "preserved_tests": {
+    "tests/README.md": "be54cec5c460795ee97ec3b7a2978acd50da27c0d910177be6b1df8d3bd4eb70",
+    "tests/adversarial/README.md": "e48040bb18f9edcf530517c1c83b608ef10cfb203053a77a070c74bb7b0415ec",
+    "tests/gameplay/README.md": "3f993c4254c5a2c687441bf0d8d6f8db5ca1447fd0b235b813a6ea807a0400e9",
+    "tests/gameplay/cards/README.md": "6db204711098a4046586c129363a252c794d371fc26918cbd6f29a17761a0eae",
+    "tests/gameplay/cards/containers.test.mjs": "31d2f93747b420cb288837adb02988dd4e82be208b86dedf4bb702a4980244c4",
+    "tests/gameplay/manifolds/README.md": "27ab09fdfec91b8367090c85addee0ba377fbb67b6873744578ee3235b8dd063",
+    "tests/gameplay/manifolds/relationships.test.mjs": "79356f89e64109627136275724e3e07634a2a3d8768f76e534b97458ad98214d",
+    "tests/gameplay/primes/README.md": "7d820bd990d83bc54b1dabdf54d7a44f2727c2bc3ffd5e33ed52241a28554f36",
+    "tests/gameplay/primes/constitution.test.mjs": "07acbd12c4751fdf11803d1991adc34fb87440c34747cc5c2a9d3fb03ea68091",
+    "tests/gameplay/rule-model.mjs": "ff0db390050b0e565f007e122c33fa4b6d311dce625fbc58cc261ae347c02b0a",
+    "tests/gameplay/sandbox/README.md": "fd6a098c1f610baef3c02ae448085913a44a8e2c3bef01e22e7a0ef3676c7f93",
+    "tests/gameplay/sandbox/configuration.test.mjs": "0ea61d2a502551d06b147e6d10dfa983d48f69b3f3a9f65c636134da16c45b49",
+    "tests/gameplay/transduction/README.md": "f9bca5541d3668e3636b3deebf6abaa688126b955dac3edd31caeeaf0637dada",
+    "tests/gameplay/utilities/README.md": "6d3e98f4701cc42a3ec4b4b42ae7a2b441ac9c7ada14e6d5467c3d166b568918",
+    "tests/integration/README.md": "0b4ee3dcb54da33bacfae312fb59680aa03f1f8eff78142f169e01ab6bbf8f4a",
+    "tests/integration/genesis_horizon/application/manifest.json": "5b75f8ba699ac232506deb36daf8cbed7ada820296504aa1c9b5b72ca3f6fc0d",
+    "tests/integration/genesis_horizon/application/observe.gen": "3b1e143fe249a0265d3e528b44da6afb19df68a71a7da709faa01303d1e165d5",
+    "tests/integration/genesis_horizon/application/realize.gen": "e51beb13f64233bac570f9de54372cbb33882c554fd32e79c5625f525eefb3df",
+    "tests/integration/genesis_horizon/application/relate.gen": "d0bf5fa5c34ce950450ccbbd773f21c277675f72bb8766e1e7364d48250b6798",
+    "tests/integration/genesis_horizon/application/transform.gen": "474c068858ee91075abf0563694b26a9a50c3dfbe0ad0d1cae9659d69d3f5829",
+    "tests/integration/genesis_horizon/cases/acceptance.json": "43c45859588439a674c5c97461cdd0213f9f54a7ac474ba8d8729b3cd96f04b3",
+    "tests/integration/genesis_horizon/cases/pass_01_acceptance.json": "a9d79f83731fd2508843b8e5852e95822c02f0e6aa159cd76d5319a3c1a41b4c",
+    "tests/integration/genesis_horizon/pass_01_application/README.md": "c791863b5d63eab9da164ac95a843f5960b0d08e8a1e10300b3bd503b00610ec",
+    "tests/integration/genesis_horizon/pass_01_application/definitions.json": "32963db30b12111662940652e7da412f5d58139322e4dd52f0225257183bc9e3",
+    "tests/integration/genesis_horizon/pass_01_application/manifest.json": "45b4bfa719f6523ef0bda399c40887ec772e752be862e4e274fb5cdf93f65eec",
+    "tests/integration/genesis_horizon/pass_01_application/raeon_observe.gen": "06a54be1db2dfe491e0ea431ad2ba79a97db4cf4f009163c372058a149406e73",
+    "tests/integration/genesis_horizon/pass_01_application/raeon_realize.gen": "448cbfe495cd7133eb9576f8e9e462c32d7d3dc0e623714f9a0b9ebf46f3ff0a",
+    "tests/integration/genesis_horizon/pass_01_support.py": "dd8dcccaf6903f02deeedb6bfac8dbfd20b9c620f0c59a3afba3877ba6ef5e90",
+    "tests/integration/genesis_horizon/pass_02_acceptance.json": "4a66fd935799d5d3783d3bc1b060ef377e139538b2e24cf837ec3511f8083079",
+    "tests/integration/genesis_horizon/pass_02_support.py": "0988e3d034092cb332e423da17b2009403a32f66d5255bce51059f783cbee6e7",
+    "tests/integration/genesis_horizon/support.py": "e28c0da3485ef89e1546426e7f9f09044181918b08b78bd469694658243e311c",
+    "tests/integration/genesis_horizon/test_distribution.py": "ece22f4f5249b9ede994f83f94d55fbd08601e102868e8a20396f0eae2848948",
+    "tests/integration/genesis_horizon/test_pass_01.py": "fe6eb0218f2b17c133d898547e168420b56fec529b779944fdd535502e95eba5",
+    "tests/integration/genesis_horizon/test_pass_02.py": "0b51116359aa171a47ec87b3f74728da0ed3ec31e23701031cecce968853ef3e",
+    "tests/integration/genesis_horizon/test_pass_02_adversarial.py": "17620307457133570a06ac9b33f4b21c5a57b0f13dd2b5c842d8e051f3afaf82",
+    "tests/integration/genesis_horizon/test_pass_02_projection_privacy.py": "1180a6c2d3168b73bc91b5b24f7e633240a2d2ac6e42ef9f5fb3d742e304e6d1",
+    "tests/integration/genesis_horizon/test_pass_02_transactions.py": "53d87e1149a904aa597db96ebd095d04eabe5f87e40b4eb9cabd6fad7a9ae8c1",
+    "tests/integration/genesis_horizon/test_pass_03.py": "14ae833120768e80f02c5efadfa5bf782231a3b1e63c5f22799c751187f2fe37",
+    "tests/integration/genesis_horizon/test_runtime.py": "cb3296dc16a6c1f9985330f3c6ea66bc6622eb6eb0c9f4968052789a3b75f750",
+    "tests/multiplayer/README.md": "3bbebdcc1326452a7124f26ddb7c542fa3daf73786809b3558cf2b792425d0a8",
+    "tests/performance/README.md": "8bd0739d827fa0a94aa094a5702e5dc72d5a839eb2566f413bd33764b0698256",
+    "tests/qmo/README.md": "d3fb7c70e1915d6be0a0c81a10e16a5f82c847a34ce14b6c4034282aee9981de",
+    "tests/regression/README.md": "19636c93c185b3e2f4cf763f1106d967998e89759d74f94a29d5126e1f953371",
+    "tests/regression/bootstrap-validator.test.mjs": "27cbb5270ea5285bfccce82ee6ced6c5519f632b6f63bc21c94329a6236e5c04",
+    "tests/regression/continuity-validator.test.mjs": "1f530403a6c856374be2a148c3e9405342901939542e9dbcd40fc4d75ad83c8f",
+    "tests/regression/cycle1-import.test.mjs": "d5df7f90d4e180406ed543f464e6d5ff317513221da23843c533b8a8eff88301",
+    "tests/regression/design-state-validator.test.mjs": "8baae115e0043b7f27e2dfa827122adfd393c2e6739a1cf993fe8c44e0ca3a83",
+    "tests/regression/fixture-files.mjs": "9a341142285e0a50f741ff9126c8233a6ca24f60df9e69570819fc86408ea86a",
+    "tests/regression/full-migration.test.mjs": "895651b9f4dacd0406e9b7e99bc19c669121e6458d061db8b34987c66d117b41",
+    "tests/regression/game-definition.test.mjs": "3a89ea93d52b0344427f4e55bfeddf08e1529a319330b2b2b591c0a84d273e4e",
+    "tests/regression/genesis-runtime-contract.test.mjs": "2da63239e198956430d63ca3d13055eb8373f931a60344b46e528c5ad218ebec",
+    "tests/regression/normalization-validator.test.mjs": "f9adab71b10eb3550e2deefc7ca6ff91e6582656c15561c3e8e463a6a23c8102",
+    "tests/regression/pass-01-contract.test.mjs": "18710bea35305e4b838a5ff0b5e2c6445b210d6c5efcfb36b7ab316dd44cfc1e",
+    "tests/regression/pass-02-contract.test.mjs": "7f5a3005e709bf84f66def4b9099d57bc98d72bc427d0a88ad7ed6b26d532b95",
+    "tests/regression/pass-02-projection-contract.test.mjs": "8cc76c1777e079fd2034584b70832837f1830530b2fdf5d2841b6042f2be5e4e",
+    "tests/regression/pass-03-contract.test.mjs": "760521ccac2c56107440f9c8989f92d9ffba9cfa3e90fad384629445cf16f01e",
+    "tests/rendering/README.md": "30ce1193d07e4a43d6fcc4337e63e58baa8d83f1ac4655bd3761910dc7387bf2",
+    "tests/unit/README.md": "10baecdb96d8a6d92ed05c4c43e6b8c83ee229c53095e39326658de61fcb7fad",
+    "tests/unit/hypervisor/test_codec.py": "53572e2cf19ae2475377c9768efaf7173581ea02d32308725d07ddd4915fbbae"
+  },
+  "compiled_sources": {
+    "game/core/raeon/application/merge_configuration.gen": {
+      "source_sha256": "9308d4fc28ae1aa86476fe37ef5b7d6970571cf3dfe5a00958d53cef147a453d",
+      "bytecode_sha256": "ac383a9473ebee2e05c381d02b289da33f2180382de77aab5c20e324416b8152"
+    },
+    "game/core/raeon/application/reopen_configuration.gen": {
+      "source_sha256": "61fa870d8f25682fddf4283ee0d5f4110259c7a73e5da8676e98713fe5682010",
+      "bytecode_sha256": "e605029d1eb3943201599fdd97542a16b53bb7ffb9b685c096517734402eda11"
+    },
+    "game/core/raeon/application/resolve_configuration.gen": {
+      "source_sha256": "4dd3a7e9cdb427be3816b91f82ae0ffb1d83c6d2db351670730970263622b689",
+      "bytecode_sha256": "5c197c604a2da638147199f3672fe980e13804ec2243feb5ef378c9ff958dd64"
+    }
+  },
+  "scope": [
+    "labeled SE(2) soft snap",
+    "source-linked 3D orientation",
+    "atomic ordinary field lock/reopen",
+    "disjoint source-backed fusion",
+    "passive ordinary-support emergence"
+  ],
+  "supersedes": {
+    "G-POSE": "60 supplied witnesses and frozen rotation realization",
+    "G-MERGE": "exact union, preserved support frames and SUBSUMED sources; no addition/split policy",
+    "G-LINK": "passive distinct ordinary supports, no recursion",
+    "G-MEMBERS": "exact whole multiset only; no subset selection"
+  },
+  "open_items": [
+    "Pass-4 current color/output availability, cadence, combat and healing remain outside this pass.",
+    "Arbitrary subset/leftover membership selection is not authorized; ordinary closure uses exact whole membership.",
+    "Derived additions, splitting and recursive fusion/emergence remain unsupported without further authority.",
+    "Native device ports, graphical spring animation and device performance acceptance are not claimed.",
+    "Bundled CPython produced access violations during garbage collection after repeated native-runtime lifetimes in one process. Every test case and every base witness now uses a checked fresh process; the interpreter fault itself and unlimited multi-instance host stability remain unproven."
+  ],
+  "whole_game_phase": "PREPRODUCTION",
+  "no_qmo_regeneration": true
+}

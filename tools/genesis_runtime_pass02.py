@@ -132,7 +132,7 @@ def audit(root, output):
     remote = git('ls-remote', 'origin', 'refs/heads/' + branch).split()
     main = git('ls-remote', 'origin', 'refs/heads/main').split()[0]
     clean = not git('status', '--porcelain')
-    mark([83], (branch == 'codex/raeon-pass-02' or (branch == 'codex/raeon-pass-03' and
+    mark([83], (branch == 'codex/raeon-pass-02' or (branch in ('codex/raeon-pass-03','codex/raeon-pass-03b') and
         subprocess.run(['git', 'merge-base', '--is-ancestor', 'd991278bc72518e9abe2df7741298a2631c787d0', 'HEAD'], cwd=root).returncode == 0)) and bool(remote and remote[0] == head) and clean and main == MAIN and ancestry and receipt.is_file(),
          ['Git remote and clean-status checks', 'PASS_02_EXECUTION.md', 'PASS_02_RECEIPT.md'])
     result = {'status': 'PASS' if all(c['status'] == 'PASS' for c in cases.values()) else 'INCOMPLETE',

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "RAEON_ORIENTATION_REALIZATION_V1",
+  "principle": "2D shaping and 3D chirality orientation are coupled gates but not the same geometry.",
+  "canonical_target": "target_i(phi)=YAW_Z(phi)*Q_class[source.rotation_class(FG_i)]",
+  "global_phi": "proper planar rotation from labeled no-reflection SE(2) witness fitting",
+  "quaternion_distance_degrees": "2*acos(abs(dot(normalize(q),normalize(target))))*180/pi",
+  "thresholds_degrees": {
+    "candidate": 30.0,
+    "capture": 12.0,
+    "release": 35.0
+  },
+  "compatibility_gate": {
+    "required": true,
+    "rule": "Every required_cycle_edge must have a source compatibility record with at least one supplied match.",
+    "theta_dependence": "A required edge becomes live only when both endpoint orientations are captured in the shared fitted field frame.",
+    "face_matches": "Preserve all source matches; invent none.",
+    "face_exclusivity": false,
+    "reason": "Cycle-1 defines complementary-boundary field relations, not consumable physical sockets."
+  },
+  "forbidden": [
+    "board-bearing=cube-normal isometry",
+    "reflection",
+    "rewriting rotation_class",
+    "invented face signatures",
+    "distance-alone compatibility"
+  ]
+}
