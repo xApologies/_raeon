@@ -24,5 +24,16 @@
       "python_package_sha256": "0eb85c2dfccccf1b17352de4c397f69194035b7d37149eacc16f1147d93de3b8",
       "system_settings_changed": false
     }
-  ]
+  ],
+  "pass_05_entry": {
+    "status": "PASS",
+    "base_sha": "63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+    "evidence": "provenance/imports/raeon-pass-05/entry.json",
+    "qualified_python": "3.12.10",
+    "processor_mask": 65536,
+    "local_integration_tests": 121,
+    "offline_integration_tests": 121,
+    "pass04_acceptance": 108,
+    "conclusion": "Qualified entry evidence only; HOST-RUNTIME-001 remains OPEN_QUALIFIED."
+  }
 }

@@ -83,7 +83,7 @@ def audit(root, output):
     mark(['SRC-01'], ancestry, ['Git starting commit remains ancestor', 'GENESIS_RUNTIME_EXECUTION.md'])
     original = root.parent / '_bricked'
     upstream_head = subprocess.check_output(['git', '-C', str(original), 'rev-parse', 'HEAD'], text=True).strip()
-    upstream_status = subprocess.check_output(['git', '-C', str(original), 'status', '--porcelain'], text=True).strip()
+    upstream_status = subprocess.check_output(['git', '--no-optional-locks', '-C', str(original), 'status', '--porcelain'], text=True).strip()
     lock = json.loads((root / 'data/platform/genesis-runtime-lock.json').read_text(encoding='utf8'))
     untouched = upstream_head == lock['upstream_commit'] and not upstream_status
     write(evidence / 'upstream-readonly.json', {'status': 'PASS' if untouched else 'FAIL', 'head': upstream_head, 'git_status': upstream_status,

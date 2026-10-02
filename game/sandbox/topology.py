@@ -40,6 +40,7 @@ class Extension:
         self.corpus = modules['corpus'].Corpus(service.h.root)
         self.realization = modules['realization'].Realization(service.h.root, self.corpus)
         self.color = modules['color'].Mechanics(self)
+        self.tempo = modules['tempo'].Mechanics(self, modules['nodes'])
 
     @property
     def state(self):
@@ -104,7 +105,15 @@ class Extension:
                 evaluations = self.query_verified(name).get('realizations', [])
                 space['capture'] = evaluations[0] if len(evaluations) == 1 else None
         self.update_emergents()
+        old_primes=set(self.color.state['primes'])
         self.color.synchronize()
+        self.tempo.synchronize(set(self.color.state['primes'])-old_primes)
+
+    def authorize_action(self, spec):
+        self.tempo.authorize_action(spec)
+
+    def admit_plan(self, plan):
+        self.tempo.admit_plan(plan)
 
     def owned_space(self, name, expected):
         collection = self.s.owned(name, ['CONFIGURATION_SPACE'])
@@ -117,6 +126,8 @@ class Extension:
         self.corpus.verify()
         self.realization.verify()
         args = self.s.context['arguments']
+        if spec.get('abi') == self.tempo.contract['abi']:
+            return self.tempo.admission(spec)
         if spec.get('abi') == self.color.state['abi']:
             return self.color.admission(spec)
         if spec.get('abi') != ABI:
@@ -254,6 +265,8 @@ class Extension:
         return self.color.route_allowed(name,source,target)
 
     def transform(self, plan):
+        if plan['spec'].get('abi') == self.tempo.contract['abi']:
+            return self.tempo.transform(plan)
         if plan['spec'].get('abi') == self.color.state['abi']:
             return self.color.transform(plan)
         op=plan['spec']['operation'];name=plan['space'];space=self.state['spaces'][name]
@@ -335,7 +348,10 @@ class Extension:
         else:reject()
 
     def validate(self):
-        self.color.validate()
+        if self.tempo.enabled:
+            self.tempo.validate()
+        else:
+            self.color.validate()
         if self.state['abi']!=ABI or self.state['source_lock']!=self.corpus.lock_hash or self.state['realization_lock']!=self.realization.hash:
             reject()
         if self.state['links'] or self.state['emergents']!=self.expected_emergents():reject()
@@ -443,4 +459,4 @@ class Extension:
                 view['objects'][identity]={'identity':self.s.b.resources[self.s.b.bindings[identity]]['payload']['identity'],
                                           'semantic_id':identity,'kind':'EMERGENT_FIELD',
                                           'owner':None,'fields':copy.deepcopy(emergent)}
-        return self.color.project(view)
+        return self.tempo.project(view, authority) if self.tempo.enabled else self.color.project(view)

@@ -69,5 +69,11 @@
       "emergent_amplification_overflow": "OPEN",
       "coupling_stabilizer_rejection_reason": "Direct Emergent protection conflicts with or redundantly complicates the non-targetable, support-dependent model."
     }
+  },
+  "effective_authority": {
+    "pass": "05",
+    "rules": "data/game/pass-05-runtime.json#/rules",
+    "supersession_ledger": "provenance/imports/raeon-pass-05/handoff/SUPERSESSION_LEDGER.json",
+    "legacy_payload_scope": "SEALED_PASS_04_CONFORMANCE; superseded entries are not live Pass-05 authority"
   }
 }

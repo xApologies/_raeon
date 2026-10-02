@@ -1,0 +1,979 @@
+{
+  "status": "PASS",
+  "before_implementation": true,
+  "started_at": "2026-10-02T12:50:54.007789+00:00",
+  "starting_sha": "63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+  "implementation_sha256": "a6b701577dfb228355249d33cc6f8bf3eec3ee0c550743a9322a07eaf4d63937",
+  "qualification": {
+    "python": "3.12.10",
+    "platform": "win32",
+    "processor_mask": 65536,
+    "host_risk": "HOST-RUNTIME-001",
+    "unrestricted_stability": "OPEN"
+  },
+  "preserved_tests": {
+    "tests/README.md": "be54cec5c460795ee97ec3b7a2978acd50da27c0d910177be6b1df8d3bd4eb70",
+    "tests/adversarial/README.md": "e48040bb18f9edcf530517c1c83b608ef10cfb203053a77a070c74bb7b0415ec",
+    "tests/gameplay/README.md": "3f993c4254c5a2c687441bf0d8d6f8db5ca1447fd0b235b813a6ea807a0400e9",
+    "tests/gameplay/cards/README.md": "6db204711098a4046586c129363a252c794d371fc26918cbd6f29a17761a0eae",
+    "tests/gameplay/cards/containers.test.mjs": "31d2f93747b420cb288837adb02988dd4e82be208b86dedf4bb702a4980244c4",
+    "tests/gameplay/manifolds/README.md": "27ab09fdfec91b8367090c85addee0ba377fbb67b6873744578ee3235b8dd063",
+    "tests/gameplay/manifolds/relationships.test.mjs": "79356f89e64109627136275724e3e07634a2a3d8768f76e534b97458ad98214d",
+    "tests/gameplay/primes/README.md": "7d820bd990d83bc54b1dabdf54d7a44f2727c2bc3ffd5e33ed52241a28554f36",
+    "tests/gameplay/primes/constitution.test.mjs": "07acbd12c4751fdf11803d1991adc34fb87440c34747cc5c2a9d3fb03ea68091",
+    "tests/gameplay/rule-model.mjs": "ff0db390050b0e565f007e122c33fa4b6d311dce625fbc58cc261ae347c02b0a",
+    "tests/gameplay/sandbox/README.md": "fd6a098c1f610baef3c02ae448085913a44a8e2c3bef01e22e7a0ef3676c7f93",
+    "tests/gameplay/sandbox/configuration.test.mjs": "0ea61d2a502551d06b147e6d10dfa983d48f69b3f3a9f65c636134da16c45b49",
+    "tests/gameplay/transduction/README.md": "f9bca5541d3668e3636b3deebf6abaa688126b955dac3edd31caeeaf0637dada",
+    "tests/gameplay/utilities/README.md": "6d3e98f4701cc42a3ec4b4b42ae7a2b441ac9c7ada14e6d5467c3d166b568918",
+    "tests/integration/README.md": "0b4ee3dcb54da33bacfae312fb59680aa03f1f8eff78142f169e01ab6bbf8f4a",
+    "tests/integration/genesis_horizon/application/manifest.json": "5b75f8ba699ac232506deb36daf8cbed7ada820296504aa1c9b5b72ca3f6fc0d",
+    "tests/integration/genesis_horizon/application/observe.gen": "3b1e143fe249a0265d3e528b44da6afb19df68a71a7da709faa01303d1e165d5",
+    "tests/integration/genesis_horizon/application/realize.gen": "e51beb13f64233bac570f9de54372cbb33882c554fd32e79c5625f525eefb3df",
+    "tests/integration/genesis_horizon/application/relate.gen": "d0bf5fa5c34ce950450ccbbd773f21c277675f72bb8766e1e7364d48250b6798",
+    "tests/integration/genesis_horizon/application/transform.gen": "474c068858ee91075abf0563694b26a9a50c3dfbe0ad0d1cae9659d69d3f5829",
+    "tests/integration/genesis_horizon/cases/acceptance.json": "43c45859588439a674c5c97461cdd0213f9f54a7ac474ba8d8729b3cd96f04b3",
+    "tests/integration/genesis_horizon/cases/pass_01_acceptance.json": "a9d79f83731fd2508843b8e5852e95822c02f0e6aa159cd76d5319a3c1a41b4c",
+    "tests/integration/genesis_horizon/pass_01_application/README.md": "c791863b5d63eab9da164ac95a843f5960b0d08e8a1e10300b3bd503b00610ec",
+    "tests/integration/genesis_horizon/pass_01_application/definitions.json": "32963db30b12111662940652e7da412f5d58139322e4dd52f0225257183bc9e3",
+    "tests/integration/genesis_horizon/pass_01_application/manifest.json": "45b4bfa719f6523ef0bda399c40887ec772e752be862e4e274fb5cdf93f65eec",
+    "tests/integration/genesis_horizon/pass_01_application/raeon_observe.gen": "06a54be1db2dfe491e0ea431ad2ba79a97db4cf4f009163c372058a149406e73",
+    "tests/integration/genesis_horizon/pass_01_application/raeon_realize.gen": "448cbfe495cd7133eb9576f8e9e462c32d7d3dc0e623714f9a0b9ebf46f3ff0a",
+    "tests/integration/genesis_horizon/pass_01_support.py": "dd8dcccaf6903f02deeedb6bfac8dbfd20b9c620f0c59a3afba3877ba6ef5e90",
+    "tests/integration/genesis_horizon/pass_02_acceptance.json": "4a66fd935799d5d3783d3bc1b060ef377e139538b2e24cf837ec3511f8083079",
+    "tests/integration/genesis_horizon/pass_02_support.py": "0988e3d034092cb332e423da17b2009403a32f66d5255bce51059f783cbee6e7",
+    "tests/integration/genesis_horizon/pass_03b_support.py": "dd8b9b3d5e3b418e3364d01fd35b50fa5e292ab281648eae4ec78251a9e67dfe",
+    "tests/integration/genesis_horizon/pass_04_support.py": "fef3c4470272238c8aaa9b7fc67a1db3b635746ee9241945c0ef3c098064ecf1",
+    "tests/integration/genesis_horizon/support.py": "e28c0da3485ef89e1546426e7f9f09044181918b08b78bd469694658243e311c",
+    "tests/integration/genesis_horizon/test_distribution.py": "ece22f4f5249b9ede994f83f94d55fbd08601e102868e8a20396f0eae2848948",
+    "tests/integration/genesis_horizon/test_pass_01.py": "fe6eb0218f2b17c133d898547e168420b56fec529b779944fdd535502e95eba5",
+    "tests/integration/genesis_horizon/test_pass_02.py": "0b51116359aa171a47ec87b3f74728da0ed3ec31e23701031cecce968853ef3e",
+    "tests/integration/genesis_horizon/test_pass_02_adversarial.py": "17620307457133570a06ac9b33f4b21c5a57b0f13dd2b5c842d8e051f3afaf82",
+    "tests/integration/genesis_horizon/test_pass_02_projection_privacy.py": "1180a6c2d3168b73bc91b5b24f7e633240a2d2ac6e42ef9f5fb3d742e304e6d1",
+    "tests/integration/genesis_horizon/test_pass_02_transactions.py": "53d87e1149a904aa597db96ebd095d04eabe5f87e40b4eb9cabd6fad7a9ae8c1",
+    "tests/integration/genesis_horizon/test_pass_03.py": "14ae833120768e80f02c5efadfa5bf782231a3b1e63c5f22799c751187f2fe37",
+    "tests/integration/genesis_horizon/test_pass_03b.py": "5a6aff2ec82a5bcfe07f432b5dde4b4304ea0d227c5649a5bda35823806e09a4",
+    "tests/integration/genesis_horizon/test_pass_03b_math.py": "8ccb8c48e4190ae6d23f27da2afa5a4a0ff6dd0878a90b0d957e7c6267dc77c2",
+    "tests/integration/genesis_horizon/test_pass_04.py": "d0e1ee5cb4583a2e49088c6747b236c481fd765e97c3e08d3850ed99751af203",
+    "tests/integration/genesis_horizon/test_pass_04_math.py": "32eb82e3392b3f124ebcd1f3fabbe893d64732307ffc7156f8a21d0adc421fb8",
+    "tests/integration/genesis_horizon/test_runtime.py": "cb3296dc16a6c1f9985330f3c6ea66bc6622eb6eb0c9f4968052789a3b75f750",
+    "tests/multiplayer/README.md": "3bbebdcc1326452a7124f26ddb7c542fa3daf73786809b3558cf2b792425d0a8",
+    "tests/performance/README.md": "8bd0739d827fa0a94aa094a5702e5dc72d5a839eb2566f413bd33764b0698256",
+    "tests/qmo/README.md": "d3fb7c70e1915d6be0a0c81a10e16a5f82c847a34ce14b6c4034282aee9981de",
+    "tests/regression/README.md": "19636c93c185b3e2f4cf763f1106d967998e89759d74f94a29d5126e1f953371",
+    "tests/regression/bootstrap-validator.test.mjs": "27cbb5270ea5285bfccce82ee6ced6c5519f632b6f63bc21c94329a6236e5c04",
+    "tests/regression/continuity-validator.test.mjs": "1f530403a6c856374be2a148c3e9405342901939542e9dbcd40fc4d75ad83c8f",
+    "tests/regression/cycle1-import.test.mjs": "d5df7f90d4e180406ed543f464e6d5ff317513221da23843c533b8a8eff88301",
+    "tests/regression/design-state-validator.test.mjs": "8baae115e0043b7f27e2dfa827122adfd393c2e6739a1cf993fe8c44e0ca3a83",
+    "tests/regression/fixture-files.mjs": "9a341142285e0a50f741ff9126c8233a6ca24f60df9e69570819fc86408ea86a",
+    "tests/regression/full-migration.test.mjs": "895651b9f4dacd0406e9b7e99bc19c669121e6458d061db8b34987c66d117b41",
+    "tests/regression/game-definition.test.mjs": "3a89ea93d52b0344427f4e55bfeddf08e1529a319330b2b2b591c0a84d273e4e",
+    "tests/regression/genesis-runtime-contract.test.mjs": "2da63239e198956430d63ca3d13055eb8373f931a60344b46e528c5ad218ebec",
+    "tests/regression/normalization-validator.test.mjs": "f9adab71b10eb3550e2deefc7ca6ff91e6582656c15561c3e8e463a6a23c8102",
+    "tests/regression/pass-01-contract.test.mjs": "18710bea35305e4b838a5ff0b5e2c6445b210d6c5efcfb36b7ab316dd44cfc1e",
+    "tests/regression/pass-02-contract.test.mjs": "7f5a3005e709bf84f66def4b9099d57bc98d72bc427d0a88ad7ed6b26d532b95",
+    "tests/regression/pass-02-projection-contract.test.mjs": "8cc76c1777e079fd2034584b70832837f1830530b2fdf5d2841b6042f2be5e4e",
+    "tests/regression/pass-03-contract.test.mjs": "760521ccac2c56107440f9c8989f92d9ffba9cfa3e90fad384629445cf16f01e",
+    "tests/regression/pass-03b-contract.test.mjs": "2a4ca0988ec67c2d4c3903563297b2970f484fcbc6da6f04babf96131adc044b",
+    "tests/regression/pass-04-contract.test.mjs": "0798f89fcb3709eae619369bd5bdf36172b5b0478f8368c58c5b7d74fb2cb8e2",
+    "tests/rendering/README.md": "30ce1193d07e4a43d6fcc4337e63e58baa8d83f1ac4655bd3761910dc7387bf2",
+    "tests/unit/README.md": "10baecdb96d8a6d92ed05c4c43e6b8c83ee229c53095e39326658de61fcb7fad",
+    "tests/unit/hypervisor/test_codec.py": "53572e2cf19ae2475377c9768efaf7173581ea02d32308725d07ddd4915fbbae"
+  },
+  "commands": [
+    {
+      "command": "verify",
+      "exit_code": 0,
+      "log": "build\\pass05-entry-rerun-2026-10-02\\00-verify.log",
+      "sha256": "b5b97ca226058c1cb961ea1d6f096534afe208473af4e932efecc3d265c67eb3"
+    },
+    {
+      "command": "test",
+      "exit_code": 0,
+      "log": "build\\pass05-entry-rerun-2026-10-02\\01-test.log",
+      "sha256": "133178ffccc472fc8e38220b6d05c29b4175fab526c92dc6e7df6a0cef77a7d6"
+    },
+    {
+      "command": "dialect-test",
+      "exit_code": 0,
+      "log": "build\\pass05-entry-rerun-2026-10-02\\02-dialect-test.log",
+      "sha256": "16bcf7dcb818869f1750c66917da05f46a268bcfc743820ded83b085a881e913"
+    },
+    {
+      "command": "repository-test",
+      "exit_code": 0,
+      "log": "build\\pass05-entry-rerun-2026-10-02\\03-repository-test.log",
+      "sha256": "084d6ba4331e7763989ffaf55082511fd3f4c5921d649c2e4c5f12f03100b37f"
+    },
+    {
+      "command": "verify-distributions",
+      "exit_code": 0,
+      "log": "build\\pass05-entry-rerun-2026-10-02\\04-verify-distributions.log",
+      "sha256": "d1cad607e406f84336c32fbb8a7c7cddb545d469bb8a9fd3384f50ec8772a294"
+    },
+    {
+      "command": "audit",
+      "exit_code": 0,
+      "log": "build\\pass05-entry-rerun-2026-10-02\\05-audit.log",
+      "sha256": "941b92c60efb177a46ed12868d5021ff2e459bdd7de419a04ec04254a13da119"
+    }
+  ],
+  "completed_at": "2026-10-02T15:27:39.538899+00:00",
+  "pouch_sha256": "d0c8a763eb0a4901a118611742a8abfd0075227f4f0ad1b3bba4784eead8830a",
+  "results": {
+    "acceptance.json": {
+      "status": "PASS",
+      "passed": 74,
+      "total": 74,
+      "failed": null,
+      "blocked": null
+    },
+    "pass-01-acceptance.json": {
+      "status": "PASS",
+      "passed": 38,
+      "total": 38,
+      "failed": null,
+      "blocked": null
+    },
+    "pass-02-acceptance.json": {
+      "status": "PASS",
+      "passed": 83,
+      "total": 83,
+      "failed": null,
+      "blocked": null
+    },
+    "pass-03-acceptance.json": {
+      "status": "PASS",
+      "passed": 98,
+      "total": 98,
+      "failed": 0,
+      "blocked": 0
+    },
+    "pass-03b-acceptance.json": {
+      "status": "PASS",
+      "passed": 85,
+      "total": 85,
+      "failed": null,
+      "blocked": null
+    },
+    "pass-04-acceptance.json": {
+      "status": "PASS",
+      "passed": 108,
+      "total": 108,
+      "failed": null,
+      "blocked": null
+    },
+    "projection-correction-acceptance.json": {
+      "status": "PASS",
+      "passed": 8,
+      "total": 8,
+      "failed": null,
+      "blocked": null
+    }
+  },
+  "evidence_hashes": {
+    "acceptance-audit.log": "266e1abc61f345a2d49569fd5fb3a4708be153812fa00327623470e220d7770b",
+    "acceptance.json": "2182e37f7bcba754ca5407f300754d862783d9d8daaa87390b57f2311d57314f",
+    "baseline-build.json": "528b95135d265ef99411e8814698e9b54b7e1ecf87cad001bb1999a7f59d1f2f",
+    "baseline-build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-build.stdout.txt": "1a535b4a36251e47324dc16b1c9cf1ee9719115e2482b6160e62d54ec915c9cb",
+    "baseline-lower.json": "a3d9df49745d7cd89a7b389a37d0b2752a7e7e72d8a00f1fbc3fac38af232328",
+    "baseline-lower.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-lower.stdout.txt": "16c5170e3bdcb6d0ce123424cfc93e212dd3489294b1f88693661aa36bb0f47e",
+    "baseline-parse.json": "eacbe779b660f7f165ab51f4993a8faf26a7d83b68c7908d907f093ed5d1a95d",
+    "baseline-parse.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-parse.stdout.txt": "e8880d96cecbb965e68fda7569e781c435f68a5be2ce2a3b8fdcb502c44e2ebd",
+    "baseline-run.json": "3329b7946c392098b5f4ecc67c707305c2506dd4a1fc2485680253b4243acd55",
+    "baseline-run.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-run.stdout.txt": "2770e37b8ac85df0d5fe0ea8622f39882ac9c430ee71154a2aeeb9b76cd17192",
+    "build.json": "c7475e5ad49608b6136e597167026fb2dd44c59a94c146bc310cd69d0448040b",
+    "clean-extraction-run.log": "2ff36d19c1f7893d95241f55db54e34bbf6d7cc69fc65b7f3690e91d46943972",
+    "demo.json": "51374f1beecb7f5343cc70709fb5295b61c427976a27834859dd65a7b267f193",
+    "dependencies.json": "a78c30fff6bbb48fb374eae2e8fbe23bf49b52e3514399856486cbcd06dd02cb",
+    "dialect-callables.json": "3d8348907594ad396bfa5ec23751dfbbbe0658e9d808df314597c7abaeca2632",
+    "dialect-system-io.json": "25b07d36537d63fad107239cde170c93d42b6bcbdc034902da518cf0c1c29f28",
+    "dialects.json": "e9c64a4361f6a15f496f219aee769c9a29cceb0873e5f882c41859cb9a27bf26",
+    "distribution-build.log": "f2e000b1427686c6fff925a7c8075138925972dc60a7ee46eff07a7688fa40dd",
+    "distribution-demo.log": "7932fa54b9c275d0decc44ef563e5fec1b706a76e53c3c48a660281c4bea626a",
+    "distribution-dependencies.log": "f0d051d7efc2660a7165129839e01f692b3099ef01fc424d957f5a77e5aa5b64",
+    "distribution-doctor.log": "d6bf08c27f949f01401e509ce0325e1145d69a5eb907fd734b6fd40cfdccd5f7",
+    "distribution-install.log": "5ed2d49ea225c52feff3c8ad8e37716825501336e34e5c7e0c29f2196c60b592",
+    "distribution-installed-import.log": "72c24d5dbedf6f5d40c80b4d2a63c8966575c1f0e75b371005c546fcc513cecb",
+    "distribution-integration-tests.log": "e0b9b4fa9c001c25e1714ce4da9b79116a545c84dafad094fdb34037085337ee",
+    "distribution-isolation-probes.log": "4b47f95a4e1936d7ce7b3b90066c71db54c0720b3f019c3a251881f886031a4a",
+    "distribution-missing-dependency.log": "88d90ec14fd9802cf9e6fee806dca72082101595a64fb5940cdbcf70ca027a79",
+    "distribution-missing-pass04-input.log": "5d4525f546d2be7867b809dfe4785e8b37e527845e8eb327593fd6f143fa75f3",
+    "distribution-missing-qmo.log": "f02a5279103c2c82681dcdd799c50eeeaa866cbfe84d65aab2733634f34b18dc",
+    "distribution-pass-01-demo.log": "b04f6f943fabeb7cbd6d0d7f86648b34106d5e1ffb58d7af2ec1dc94df3fe89f",
+    "distribution-pass-02-demo.log": "883f00b207562a33190ca0638393d694aa96c5cee35b894975df6d5f21d7333f",
+    "distribution-pass-03-demo.log": "a19d90b7f60f3806534a61a2f8fddf1f9a66a2dab9fbaf49ff71265a8977e484",
+    "distribution-pass-03b-demo.log": "3632ab76b24c9493e4abea96572539be78779631fb9ae6e090deb4f56c11c649",
+    "distribution-pass-04-demo.log": "6e01a0a314538db0bb4a7114e17935f5eb2e07a982a814b0ba91b5c24e022a53",
+    "distribution-unit-tests.log": "0395551599a754de907bcd4f29b8a144860395aac78e146b02399c110f6ccf3a",
+    "distribution-venv.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "distribution-verification.json": "0c23d2c7be40eb9bd4e7f4fdfdfc902f83aec7b430a47b4d88cf4ff80a385859",
+    "distributions.json": "dcc97ca9ccbd672f3b72be6158fc71e2fcbc942f629e6922129972badad9c313",
+    "final-build-command.log": "715fc81fa5e4e039bdadf02ae384d8d4c03d0185bc65ed48cde3f000cd5f2364",
+    "fresh-rebuild.json": "a4d2d62b36e7ab3ebc48b684a45659b8293e0a11c2c3c375760b573ad3b83f71",
+    "local-and-upstream.log": "8bb530c45c9ef66248f93a5e8e82591e2c158a9d556d65371d04727dbc048522",
+    "offline-debug-build.log": "dff8779f4bb6c0091347ce16dd155998700419648417f5b8159c94a82fc5a3a2",
+    "offline-debug-doctor.log": "a22f544996018d3d18faab0788b538a0fec85df6890650d8697e21092becdfbe",
+    "offline-debug-empty.log": "218b3062e7b4399cdfe0728584826679abb8ff58c114ab406be977dd0c441912",
+    "offline-debug-probes.log": "dd42370a2e8943248c538badf47f884bd017ab8d89c82872516488110700e447",
+    "pass-01-acceptance.json": "87bab4bd030521a84d06331165708d5a618e5db54fde303fac67d06a1c41b27c",
+    "pass-01-build.log": "d159363fa07d08f2d742360c3742dce94858ab0cc3e7e7102a3ed3e4af02413d",
+    "pass-01-conformance-demo.log": "3ea078a0a7fd20c763e97fec7e57ead907592603bd91eb951c5eb44e971bc86e",
+    "pass-01-demo-command.log": "8264690419a02df947200b2ef6e94681b5c6f68a262b452dedae2565fdae1792",
+    "pass-01-demo.json": "441dc53678a7e8723f991d61185c93e526e08e3c9760616713793e9b1d2e07d2",
+    "pass-01-dialects.log": "16bcf7dcb818869f1750c66917da05f46a268bcfc743820ded83b085a881e913",
+    "pass-01-distributions.log": "14bfa25a409b02b9d5f3300a8c74c5daeeb4c317703e393b29474b5a8f75f37d",
+    "pass-01-doctor.log": "3e5b80dcfb68f38986cccda56ff05e92650f17dd6ac45acdd153b925a436ec1e",
+    "pass-01-final-audit.log": "585d27aa20c9be133b436fc43d30e302f0617722bb6bcac5d3113ea31fd1cf2b",
+    "pass-01-package.log": "ee3bef7d3d0ad21985a7b55985ae568a3753c42b63ff5692d1efd5f673c7943c",
+    "pass-01-repository-test.log": "d88dc3518c3f6ec5903a415de2f368f09141c7ca91426a5ea11e3609c336eb5f",
+    "pass-01-runtime-test.log": "9c086bfad690ab6f62e7856688c4c6fc9128b809ac7784fb5a4c932a4a24e145",
+    "pass-02-acceptance.json": "69cc7541f2207d835bbd9a23b53cbfce4d45b29563001a205009bf07069690dc",
+    "pass-02-adversarial.log": "9a9bbcd2ca36b18e8ddf4a52bda2fa3b28e2f8841e297eb8ad87631205afbd17",
+    "pass-02-audit-run.log": "5e4eab49633de3f9fb78514dbe1a48dfb3702d4f5f01f80bbc58fee6f816a573",
+    "pass-02-baseline-audit.log": "585d27aa20c9be133b436fc43d30e302f0617722bb6bcac5d3113ea31fd1cf2b",
+    "pass-02-baseline-conformance.log": "656db7a2082f4b774099b67b9079ab0cf745d545624b812eea70c885dce78ce3",
+    "pass-02-baseline-dependencies.log": "a78c30fff6bbb48fb374eae2e8fbe23bf49b52e3514399856486cbcd06dd02cb",
+    "pass-02-baseline-empty.log": "bceb80eb6a3a3118239718f4c148fc7aaa7d01718ac37db840f52b7a7615e30d",
+    "pass-02-baseline-tests.log": "fae30cf469ec0b258697c0e8b6aec4b90dc2542842584672dbbbfa5d92155e7c",
+    "pass-02-build.log": "dff8779f4bb6c0091347ce16dd155998700419648417f5b8159c94a82fc5a3a2",
+    "pass-02-demo-cards.json": "e70ed10ccdb49fee6118cfec12275205c04f2d5995e1a702f5340aa1c6c79836",
+    "pass-02-demo-empty.json": "55b61ecd9962bceaecaa379b69b847850e786919e0028c1c9945411d7e0fd302",
+    "pass-02-demo-run.log": "aadd0d8598563f1ca51cf869e811ba716998947a285970345c0c681a1ac67ca1",
+    "pass-02-full-test-run.log": "76422692546f914b91de2e4a870a1b4c47fb444d1cde0108860e2942a67353f7",
+    "pass-02-guard.log": "5a312c2ec121fd14b85096c9dfef09365b7941fe6d3691fc48a7058de6f85e0b",
+    "pass-02-offline-installer-debug.log": "2bb65c7203a3e4327e49d8042cae7a5d08f87c9f9aaadf88e258f0ca48a089d7",
+    "pass-02-offline-run.log": "709ceccbbb39f64b51e26d4c2b779ce92021bd9f9d78306c5d4e3a670bcb96cb",
+    "pass-02-package.log": "fe2368af8265cf3bbc5e16acbb3bd43b76fdd80d1f113e84780ed30bf0dad742",
+    "pass-02-repository-run.log": "ab21db6054008cc5d4861fc62405ae8ce64bbdc7c188aa41aa9e82ca0a657eed",
+    "pass-03-acceptance.json": "65d1381dd36d99c642ae537890b57a3f56969c8ef7051b45cfa7d50e6ddb4281",
+    "pass-03-demo.json": "8a74a244141728dbf255ac7117331620f9600bc0000dbfef91e085e763b26870",
+    "pass-03b-acceptance.json": "70a2d646979bebe5cbd248193f37f919a4615327f84aa96ad405f4a198b00233",
+    "pass-03b-all-base-fields.json": "1c6066a9d5279ef808a302767183ffb4bab388a52ed33cf3fd72dca364ad662a",
+    "pass-03b-demo.json": "8b69641881ec8fb8f0b71d00cbe30d327f95cf0b8b2796633b6b4a4465b72010",
+    "pass-04-acceptance.json": "ecd3330b4f7997021ba488f3b71ce3c5c9a24c5c91925da010a4fa6f5dca67aa",
+    "pass-04-demo.json": "c4a04fd74c9782888cc205813a2dc4b2ab884eb525189cc09f9d22700bc3abb1",
+    "projection-correction-acceptance.json": "61fda6d0c1dd0d511b969cae8708c26faf155f014d72d91e68f7b534d28d43a8",
+    "projection-preservation.json": "000d597f256b4ed629cddf838921738fbe54f1b55ed1d76928470cf01c61fa29",
+    "projection-targeted.log": "1b1729115ef443a08beaec1c513ff6967da3ea1b980f922f11b8334da488c898",
+    "remote.json": "b7ddba2c8f472ab6114830beda50c2f1f531aaa49f00fe27b71f8c77ccccd344",
+    "repository-all.log": "7e7ef7872702f02cbdbb09c2a7834b0ba18c73c151cbb846b963d5e11e7781b2",
+    "repository-bootstrap.log": "2a9dee2132d20f99340356e01e29cd50ab03c9047c54f515243e3d13e2f66a27",
+    "repository-command-0.log": "94e9fd7ab44328bd9d1666bf986270321c56f70808f489d6a1abbf37a3e395a0",
+    "repository-command-1.log": "627b0067eac3654845524232d00ec88bce371875dc086b41d2c15d7c7f07985c",
+    "repository-command-2.log": "1eaea4f61f4da73c65655f97f39ffb57873b7379b110ad60487b631c0e737d73",
+    "repository-command-3.log": "f7a8b7b513a5a25d186f3f420289dae9b9d25fb0a4562d74f02053c8061c2f42",
+    "repository-command-4.log": "00f3dc8fbc663a75330af8fa433452b15867a586f394a202baf5220a84873728",
+    "repository-command-5.log": "78c188e74b169636ec63586178318224509eef57ad934e4bbaf9cfc30bfb8cfb",
+    "repository-command-6.log": "5a312c2ec121fd14b85096c9dfef09365b7941fe6d3691fc48a7058de6f85e0b",
+    "repository-command-7.log": "2ffd222328157b47418877c586b8630e009d3650f25268282c7aad1e8fb8c95e",
+    "repository-command-8.log": "77394f87aea4248af0d4ddefc79d49d7d3ce8f2a4872f3baf70076081ca9219c",
+    "repository-command-9.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "repository-continuity.log": "c5858b860c32a25394b2838d8a9af5b639b7119ca9465287285060304b803057",
+    "repository-cycle1-import.log": "00f3dc8fbc663a75330af8fa433452b15867a586f394a202baf5220a84873728",
+    "repository-design-state.log": "9fc1a3b493dead6a15155f7a0620f45866a2e4129961a759db0e272a9a599dc0",
+    "repository-full-migration.log": "78c188e74b169636ec63586178318224509eef57ad934e4bbaf9cfc30bfb8cfb",
+    "repository-game-definition.log": "5a312c2ec121fd14b85096c9dfef09365b7941fe6d3691fc48a7058de6f85e0b",
+    "repository-gameplay.log": "f99bf7c454dbae41c2da401c4c193944f0e53b0f287342eb8e1a3150e07e5858",
+    "repository-normalization.log": "19f4ee0ea1fa7ef683097282b7f666525b06c8ea1fa740b406a8f71e600589e8",
+    "repository-regression.log": "957052f648038ffe8169e3e514d265d89600c2bdb3e831de6e63453c422cb7e1",
+    "repository-validation.json": "032840f60f105f378778c97ffc959ac58056a21b859201edc731f1e4bc353e6d",
+    "tests-integration.json": "a8c7cbc3ca6341e0196db06f192ea346c43b282fab4f104cabe4f5e19fd54739",
+    "tests-integration.log": "1096e3203a2ffdb836bd025775b1ee7b766f7a9ccf226f448585aecde065a981",
+    "tests-source.json": "be74948473cdc19a8a91c052405a0744c8a56d47eab9bd5be43743d02c272571",
+    "tests-unit.json": "7f4d44e1a37071772fa6557a31bcceb46238fec08c1e71a09f58a1b0610daabb",
+    "tests-unit.log": "d9f92c667a50807790a9d0f82cf605c0f01e791e73250ae7187da1430146a05b",
+    "upstream-domain-1.json": "593add528ebe5e1506ddf54536ad5366054857c03194d73e4dc0a075670f45d2",
+    "upstream-domain-1.stderr.txt": "66cff01780526509d90b35937812e9ec309b51d9cfebaa059bb0bb71d0e071ed",
+    "upstream-domain-1.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-10.json": "04624ff5fc1910c9af1144026e553f6aaa99d2bd5f3b1a3a46dc48f3a0e6dabf",
+    "upstream-domain-10.stderr.txt": "2b40910f4b574a9458990c030bde8c9d17000e880c2aba3dad13e91dc50a9734",
+    "upstream-domain-10.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-13.json": "3d283214725d9b7377d6235a4b0d77ac2f514a0ed35465c5fe64906d93306cc5",
+    "upstream-domain-13.stderr.txt": "66095eca18dde9f13cd9dcedcdda63c93499009743d6b521d8c77b0e6bb6b4d3",
+    "upstream-domain-13.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-14.json": "ec53f77f3e32b43a88778f2679dee26973141db624fb4aedbf339b82cd72c047",
+    "upstream-domain-14.stderr.txt": "a265c4385eb290e38ae1ba2665a108f8129dcd08b1273a76a623f9a1d5e9dada",
+    "upstream-domain-14.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-15.json": "357f56d8f8d059120de603071ea2d5347b0a55f91de08815e1eb79899b1a6e3d",
+    "upstream-domain-15.stderr.txt": "ee2708a3f5cc9cf3e6aa2b9e40175e97cd0bdee1ee3eb3ba32a8b08dbc96e92e",
+    "upstream-domain-15.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-16.json": "5374518acf146e9ac4d0c6c8394fd4a66acf8923a500d5edd71b297d29a58b5e",
+    "upstream-domain-16.stderr.txt": "ce4e5707765b54162e2878f9e0faa0290d088758f5509a090cf4f28e7721798d",
+    "upstream-domain-16.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-17.json": "222aea032371c553a29c310b01672a0ce1adbaa58b4a1b26c5d03ae2639c68df",
+    "upstream-domain-17.stderr.txt": "1720b8b8d8faeedb9e31924cbe7c3eeba16793ce8b6966a2ffccc8cc10d5b741",
+    "upstream-domain-17.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-2.json": "fae57f8f6f115f91bbc0f8a39c8fb3c8a7b77359dcb1b3a5f9bfce130973f15c",
+    "upstream-domain-2.stderr.txt": "f9b977e3882fdaefee1463a2192df98a37a87778875ddc4024c4772a607a425c",
+    "upstream-domain-2.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-3.json": "2eee2a75d8cefde5d84e483b74e6428f0527e9e88dce0c3db84fc21f28acdef1",
+    "upstream-domain-3.stderr.txt": "ba429bad4d4c56047ff61eebd2fb2925b8e9453c74ca1bcbcaecdef363eb9746",
+    "upstream-domain-3.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-4.json": "10dfd2bccf9fbd69b55f363e615ad09aabd8749b7d0bb80975642e547b917c18",
+    "upstream-domain-4.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-4.stdout.txt": "83e7616162047f2aa23691020926f775b43e3ae4adf00582cc963dd57df7fa11",
+    "upstream-domain-5.json": "715a4483882fa1b0322e47f13fde6bb5e163d3ebc01356bac874b3cdb2c0be6b",
+    "upstream-domain-5.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-5.stdout.txt": "16fa5ae5e1043e4ee3cef11fdeb640688c07e564b040fd2f486d0de5e1affcb5",
+    "upstream-domain-8.json": "78064d2f51316bfc46beca9ffad6f17ce55b326f5998ea0c17ef92a21cc88f0e",
+    "upstream-domain-8.stderr.txt": "99df893aca5122a4fac0714f9197ab5abbe8c774031fb478fa1ee816c76585dd",
+    "upstream-domain-8.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-9.json": "9ee7c4547dfc79bfeecfe5bba67edf4f5d1203f11d47c87587a959be5b9bf06b",
+    "upstream-domain-9.stderr.txt": "1ec08a357eb5fb1044df8c0efdb2fa0b64499a486d32b8c41966e7be1bcd9614",
+    "upstream-domain-9.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-readonly.json": "911199170660ca264b4406d48c135217f633dfec57f7b05107d4708e14e10fd3",
+    "upstream-tests.json": "bfd7d7fe3c2768a011c0158b4c7dde50fe27a4877c84fb18850885b3bf79bcbf",
+    "vera-audit-command.log": "05d8e48430c4b6703ca1ce714355ddd85e1396cc80af0d8abc8b7f055b8ba3e2",
+    "vera-checkpoint-path-diagnostic.log": "4786cde568c1613207e7b6b1d6fdd03a85c0da8e7d90e39c1af9ac6b67a5c095",
+    "vera-demo-cards.log": "e70ed10ccdb49fee6118cfec12275205c04f2d5995e1a702f5340aa1c6c79836",
+    "vera-demo-conformance.log": "8451ea1362b6f0168accde8ab52734d5838c1a25ed98e5254346054e5ed133fa",
+    "vera-demo-empty.log": "fe5cb48f2ee2daa513ae1249ae8e6354fac44687ce5413046893184f19907bc7",
+    "vera-dialect-command.log": "16bcf7dcb818869f1750c66917da05f46a268bcfc743820ded83b085a881e913",
+    "vera-distributions-command.log": "606d4cfff3b855144d7cefef0698196605c6247071a9b7bcaf99d39b5ab81e2a",
+    "vera-final-delivery.json": "0920f9ee66fa4b9006404e31ade9d1f0bc204ffe0927bc6e25bc23211afa7202",
+    "vera-first-fresh-command.log": "7080cfc4c4fc8fa4824fc0157fbfb7f8d49bc9fff8c728494ae6e0ed60ab1612",
+    "vera-first-fresh-integration.log": "8877fbf557d82e20d31e93979bc47a284678603eaa210b121e86f4a9d0355a33",
+    "vera-full-test-command.log": "9275a4629fdecfae7eec7d9ae6220cbadc5eeb2b56a12ed2f010c4a7498647be",
+    "vera-package-command.log": "62be93b51c9368607cb8f2f81f0974fbf58b8cba57f93d4b30211312d693ba15",
+    "vera-repository-command.log": "55ec0fd415633578f7b72d173de8b7ee94bc26e5652bc9ae553c1813048c18fc",
+    "vera-verify-command.log": "dff8779f4bb6c0091347ce16dd155998700419648417f5b8159c94a82fc5a3a2",
+    "verify.json": "b5b97ca226058c1cb961ea1d6f096534afe208473af4e932efecc3d265c67eb3"
+  },
+  "preservation": {
+    "status": "PASS",
+    "source_hashes": {
+      "data/cycles/cycle_01/primes/status.json": "6dc178b8c5d544d8e497ee71eba63031e30291fec7399e09e2caf441be6685be",
+      "data/cycles/cycle_01/primes/working-model.json": "5f2d6ab23fe76d0193bc1185dc401412a8db3cd2781d0d6048c1b69792baf82b",
+      "data/cycles/cycle_01/utilities/restore_prime.json": "033ce2b76f65625530359475fb0cecde3bc1ae92f5ba157f61274a31597071f2",
+      "data/game/match.json": "17440fa774ec3a7048b450966cd32401e5212ce5054f94f1cf041702947149e7",
+      "data/game/pass-04-runtime.json": "02788120c5aa0caaf9c656b97c8cfe0b68600ba46196fab7d38a3328be6e2e38",
+      "data/topology/configuration-spaces.json": "6a7d59774fad10c9f92d6eb6ccd07299a368639427e890b52a45ad502f133b90",
+      "development/modules/core-game/HOST_RUNTIME_RISKS.json": "558b5705cd943b6516f8bfd69efefc338769e99269f424218bacdb9b4ec4a82b",
+      "data/cycles/cycle_01/field_generators/objects.json": "c8bd56021e95d80ffb677e31f69a864f4ff02bf6db97304edba9dfe8fa879e62",
+      "data/qmo/manifolds/objects.json": "d8c66b09e7f98e32e0d937afa231a99e15b3fb3924fcfd0546eebdec1eb2cde2",
+      "data/qmo/fusion/objects.json": "0e48912b56d112f9f14f21fe6c5252500d43d57d68343dfd96369c5366c86c23",
+      "data/qmo/emergent/objects.json": "fd2a2a31f90848bde0ff4c533c6d62580d37efdbc97d6d070f719b07e50e725c",
+      "data/qmo/cycle1/derived_qmos.json": "4cd701f1335eb41c944c12ce92fb0e93ec5bc5b7d358631ffeff389864c19325",
+      "data/qmo/cycle1/atlas.json": "2febd32e9e2ee218ae3e71c63f975525cdbeed05f11e40d97a794997bf067b12",
+      "data/qmo/cycle1/manifold_pair_relations.json": "558ddaae14cb21a54e2cc42333971fbb11c94f10b7c91ea9b1f29e28418fd6a7",
+      "data/qmo/generators/compatibility.json": "0f7aa8b8097757a9e38724ea0f016926a6344ef71451c9f4686f63770df9d0bc",
+      "data/qmo/cycle1/playfield_summary.json": "66217cd20aca5f8509d775cb822f641cf9311117d92743da3b8baf2ee5ed3eaf",
+      "data/qmo/cycle1/qmo.sqlite": "2945e86691165f9105aad6d29ec31f5a6cdde72fab0f5a929e3a254efdd588eb",
+      "data/render_specs/cycle_01/catalog.json": "383bed873f5a4c5f519d2848e1e1b3cd30498cb21d94f758910de4b08cd27530"
+    },
+    "qmo_sources": 11,
+    "inherited_test_files": 67,
+    "pouch_sha256": "d0c8a763eb0a4901a118611742a8abfd0075227f4f0ad1b3bba4784eead8830a"
+  },
+  "migration_predecessor": {
+    "status": "PASS",
+    "source_commit": "63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+    "verified_files": 1190,
+    "checkpoint": {
+      "name": "24454d3ded504127b5574637dee4b3c1",
+      "sha256": "92be41943435f7cc7d961f4c1bb43cd781a056e91dee412f30d2411debd72347",
+      "root": "3af4efd54b7aaab495357963cb818465d58a129ea30bcc5429626818d101ddbe"
+    },
+    "prime_values": {
+      "pass05-historical-migration-sample:55336355630a6ccc50995c67bfcebd9c": {
+        "id": "pass05-historical-migration-sample:55336355630a6ccc50995c67bfcebd9c",
+        "slot": "player_1_prime_1",
+        "catalog": "source:data/cycles/cycle_01/primes/status.json#/objects/0",
+        "identity_key": "restore_yellow",
+        "family": "Restore",
+        "rank": "Yellow",
+        "H_max": 3,
+        "C_max": 3,
+        "H": 3,
+        "C": 2,
+        "state": "OPERATIONAL_CHARGED",
+        "revision": 2
+      },
+      "pass05-historical-migration-sample:fb24c49b178266e4de7d7d59e566b9b9": {
+        "id": "pass05-historical-migration-sample:fb24c49b178266e4de7d7d59e566b9b9",
+        "slot": "player_1_prime_2",
+        "catalog": "source:data/cycles/cycle_01/primes/status.json#/objects/13",
+        "identity_key": "universal_green",
+        "family": "Universal",
+        "rank": "Green",
+        "H_max": 4,
+        "C_max": 4,
+        "H": 4,
+        "C": 1,
+        "state": "OPERATIONAL_CHARGED",
+        "revision": 1
+      },
+      "pass05-historical-migration-sample:3335a73782e10f1c2c03045a076650e7": {
+        "id": "pass05-historical-migration-sample:3335a73782e10f1c2c03045a076650e7",
+        "slot": "player_1_prime_3",
+        "catalog": "source:data/cycles/cycle_01/primes/status.json#/objects/5",
+        "identity_key": "degrade_yellow",
+        "family": "Degrade",
+        "rank": "Yellow",
+        "H_max": 3,
+        "C_max": 3,
+        "H": 3,
+        "C": 3,
+        "state": "OPERATIONAL_CHARGED",
+        "revision": 1
+      }
+    },
+    "binding_contract": "365dce2ef1352cc9b3bd4c1f6086779fa8b977b8516d2632b1a5588fa23310eb",
+    "application_binding_contract": "dbfbc0d41571564114fa496edb4664fd15e00bd80831e972e2e6f304e9fa7b42",
+    "package_sha256": "dcf511852fcc4f4ab074f41d5459719e74bf14fc913a1fd5596b150311a6af1a",
+    "manifest_commitment": "4ea80fcf2226264f3c192c60ea1d734984b6fad32a66a57aaae2a74365a77722"
+  },
+  "compiled_sources": {
+    "game/core/genesis_horizon/src/boot.gen": {
+      "source_sha256": "dc533af3e0fc6a4dd6c7d07aa1cacfa3c069f31fa5462c961d1ad38dc1f3f431",
+      "bytecode_sha256": "ab651f3e3871b2a30c4e2533e8fbe50f352ebaad5ce48b567cd038db87352fca",
+      "artifact_directory": "boot-6b1ec63b98bf",
+      "artifact_hashes": {
+        "linked.json": "0b33cde622a1a0c241fb281c8eeab430e88fb315bd05ac7997109e9d622bcdb1",
+        "lowered.json": "7ee82403a906e23704302ba5ae256767f1699fb722f25fd3f0b1757472a0599d",
+        "program.asm": "050df2a54f4181222365bf40950fd99e43f71ccf4c11c8ec262fc7a044018f5a",
+        "program.gvm": "ab651f3e3871b2a30c4e2533e8fbe50f352ebaad5ce48b567cd038db87352fca",
+        "receipt.json": "82f4470466754b58c192a3bb98c1fcaeda8ac85de4d6b09a848de2baaa571318"
+      }
+    },
+    "game/core/genesis_horizon/src/lifecycle.gen": {
+      "source_sha256": "eab1984e21d9e94cbbcac6fdb751f000b258d07ff6bccff9ffb6de922b661d7c",
+      "bytecode_sha256": "586b9b9fc01efc4525ab8a6f58eb8abaa875deabd8440eb87008a6d661f201ab",
+      "artifact_directory": "lifecycle-5dc5241c0614",
+      "artifact_hashes": {
+        "linked.json": "e1c30169428d3c2df81d57b1c51f2982f280c71cde2c78d28e90f6fd86bb64b6",
+        "lowered.json": "3e3212e8ad553bf183390feb80e694fd08c7921200c07a95cc6bbb1dd0174f8a",
+        "program.asm": "8cbba6ef06004f71cc4e5c8fcde41d7e0c206cfd54b7ae85642b19b23a377fd5",
+        "program.gvm": "586b9b9fc01efc4525ab8a6f58eb8abaa875deabd8440eb87008a6d661f201ab",
+        "receipt.json": "288c78354a6953590ab8c04d6d6a26123dbef1cd434174781e42cf6d5b9f77c4"
+      }
+    },
+    "game/core/genesis_horizon/src/road_in.gen": {
+      "source_sha256": "78635ee0b6f8a1623e6295b4332be7d449ebef4f98e05af4306aae24ba6834da",
+      "bytecode_sha256": "1434d3fca68782a3ff228736515a46b17864f822192b88d0c0ba9bafb5e6b9f6",
+      "artifact_directory": "road_in-ae95cab2b468",
+      "artifact_hashes": {
+        "linked.json": "a63a9d55cd829633b8a408849155f6b638b7f4afb9b54990b64c0f2ba37e71da",
+        "lowered.json": "cd87b6c17bb536e868ae907b7a0f3de4f8ec492b2865be3951c8476a21f8a66f",
+        "program.asm": "565a407cde8a36339e689d8acf2926139498bc6758b40cde9c2a65b021bafcdb",
+        "program.gvm": "1434d3fca68782a3ff228736515a46b17864f822192b88d0c0ba9bafb5e6b9f6",
+        "receipt.json": "89469a846824d5c408e20eccaca267cc4b822570d51c52643a4574d6076dc775"
+      }
+    },
+    "game/core/genesis_horizon/src/road_out.gen": {
+      "source_sha256": "52af72060c96a7294147782a696b233da06df05aaad2353041640b93ca261ecc",
+      "bytecode_sha256": "94d841934e7dd7b18ca56ca0930bc906b446e8c18e036ad04adceb09c91ea7f4",
+      "artifact_directory": "road_out-d810c124e8c2",
+      "artifact_hashes": {
+        "linked.json": "cc3524c2233177356cd150c8ffd6e39a721a3488dcba7688f8a40cb21b4d0b28",
+        "lowered.json": "eb58eb8054870ee4c6c1114b49345856325400e6c6d9b263880b28c7c5b811d6",
+        "program.asm": "9c1d04fbab59cd4c75da3c822fb2924400c2caeed3b77a3e5908471b59846a45",
+        "program.gvm": "94d841934e7dd7b18ca56ca0930bc906b446e8c18e036ad04adceb09c91ea7f4",
+        "receipt.json": "81ac3d607b1566cda57bcfd46bd0b0a44855ae7a8d4630fa8130f906e2a49dd7"
+      }
+    },
+    "game/core/genesis_horizon/src/state.gen": {
+      "source_sha256": "144e202958462a0ccd099801476c05bc276fd0a9fdeb77fa26bcfbb5aedfe844",
+      "bytecode_sha256": "e80e89b139026830c58e8c3ca216aa0493b338caa071c8e41aec678eb3b08c86",
+      "artifact_directory": "state-cb288750fc4d",
+      "artifact_hashes": {
+        "linked.json": "f909cbf77de511bf0e51c937c868b76c40dafea9c6c44db3c586cd5caa3a0ea0",
+        "lowered.json": "839425e341c0902df465b7e9f8a7a3b7325d562271b4e6d5874dc6d790e2b246",
+        "program.asm": "3c5d00af5553f7f61e86480c0992535a4ce034bbd9ef6db194eee44833e8a147",
+        "program.gvm": "e80e89b139026830c58e8c3ca216aa0493b338caa071c8e41aec678eb3b08c86",
+        "receipt.json": "e4182f3c7931929a71f1aca698e66414aa454c47b5020b6de729727a1ea33727"
+      }
+    },
+    "tests/integration/genesis_horizon/application/observe.gen": {
+      "source_sha256": "3b1e143fe249a0265d3e528b44da6afb19df68a71a7da709faa01303d1e165d5",
+      "bytecode_sha256": "fb39a0aefa00ff62c29882c3a71a1f0b540a749157d5b321ca73a84bb0166ffb",
+      "artifact_directory": "observe-a30cac51a821",
+      "artifact_hashes": {
+        "linked.json": "4eaf205398489e9e94c63cc2492afc6fa610d1d3a5ac915b049fd3c0297b21e9",
+        "lowered.json": "176567bfc56d97a9812ceb5c856963af11363c71599f488a3ba1b9a9096fbb5e",
+        "program.asm": "81bc0b00f1699493c20cadf6cfcdf1ff2022168bda9e248f90f754aa8c92fecb",
+        "program.gvm": "fb39a0aefa00ff62c29882c3a71a1f0b540a749157d5b321ca73a84bb0166ffb",
+        "receipt.json": "cbcaf66b6f73d1c9b495a684da10b8b7ad74a79c06307ce1615e6b23306584ca"
+      }
+    },
+    "tests/integration/genesis_horizon/application/realize.gen": {
+      "source_sha256": "e51beb13f64233bac570f9de54372cbb33882c554fd32e79c5625f525eefb3df",
+      "bytecode_sha256": "194d731e0a8ba3f4765a6d16e644494df2ea05623a675162eb4f4a2a40ea242d",
+      "artifact_directory": "realize-11229ef43ba1",
+      "artifact_hashes": {
+        "linked.json": "6a8e593154867c1482537d9c4eeae9afe97c4d945b359cb09789938b2d2cf0ed",
+        "lowered.json": "59cf2716bb1185f65c8c03e3d56f539d679f5f456cfa631a28cea32aaabde3f9",
+        "program.asm": "89597edaa2b83ea3e7a370fcc6cf64aa0f3a8a2db728ea11ef515588ba9766aa",
+        "program.gvm": "194d731e0a8ba3f4765a6d16e644494df2ea05623a675162eb4f4a2a40ea242d",
+        "receipt.json": "387b2483a34f49e2cface0461cb26dfeed5f80e24034fc4cedd8d8d7b43cecad"
+      }
+    },
+    "tests/integration/genesis_horizon/application/relate.gen": {
+      "source_sha256": "d0bf5fa5c34ce950450ccbbd773f21c277675f72bb8766e1e7364d48250b6798",
+      "bytecode_sha256": "bf5e32a366eadc9b308bbc8d1f7b640387bef43372a000f9836cbc9f426e5b73",
+      "artifact_directory": "relate-3458acd46d38",
+      "artifact_hashes": {
+        "linked.json": "5d98d089cc013c2350895aa4082db386a1cafa324b00320f7c2b169869c2bf32",
+        "lowered.json": "274bd2543aa84b0f9540925883870190d69841b95ce15f69ea12a1e07891265c",
+        "program.asm": "e31af314357d17ecb50e0971c1fc391755224fb649f1eba35c86de284d9cf88c",
+        "program.gvm": "bf5e32a366eadc9b308bbc8d1f7b640387bef43372a000f9836cbc9f426e5b73",
+        "receipt.json": "7c3a22e7a3cf74dc5bcfb17fbedc3d2fff35533a67c282a29ca003afc876753f"
+      }
+    },
+    "tests/integration/genesis_horizon/application/transform.gen": {
+      "source_sha256": "474c068858ee91075abf0563694b26a9a50c3dfbe0ad0d1cae9659d69d3f5829",
+      "bytecode_sha256": "3fff5dcb0576dccaaf515d4fab3f507f3ea247bc4d12c8d174511fabd1b7f3b3",
+      "artifact_directory": "transform-f85b1f50890c",
+      "artifact_hashes": {
+        "linked.json": "f29f8ad0c0e9d57e0b0eedf51d08f24118ed8cf618df6b35a0afbb4d497239fd",
+        "lowered.json": "ba1d2a4934b53978f7c75559f5407796b00c00744e9ca26b699c7aca802d506f",
+        "program.asm": "6635dba415b436a3d7246a4a6ad0d32a61bc35a831c51ed4a4642ea3fa3bf0ff",
+        "program.gvm": "3fff5dcb0576dccaaf515d4fab3f507f3ea247bc4d12c8d174511fabd1b7f3b3",
+        "receipt.json": "62a977bbcfd57286a54fa83e6a3f7c1a6fd3aad1ee4069f6c8ddd8bb204969cf"
+      }
+    },
+    "game/core/raeon/application/add_configuration_space.gen": {
+      "source_sha256": "80f837ad7a6ed83fa080dda69e4eaa70a0cf71c46e607225435352556b003385",
+      "bytecode_sha256": "e4715df18fad110383a14d887cac28040179d65984093e7e59646e3f622da70e",
+      "artifact_directory": "add_configuration_space-6c5153002770",
+      "artifact_hashes": {
+        "linked.json": "2221492c381b1ef127918d1e9271e0d1148089a9bcd758ede90ad87fa1030bd5",
+        "lowered.json": "62ef5b296789604acb35faef79f003f8a1cbd01f24dad35b1bd1cb17e63c317a",
+        "program.asm": "ab02467c323b259cdff0c989ba75d08f6aa57117702fe17a5b2df451429262c8",
+        "program.gvm": "e4715df18fad110383a14d887cac28040179d65984093e7e59646e3f622da70e",
+        "receipt.json": "2c027311f1a8d702a721102fc4c41d27454e7aef83212d38ef463e2545ee2f42"
+      }
+    },
+    "game/core/raeon/application/batch_to_hand.gen": {
+      "source_sha256": "709803db2779a4700ae1ef33eebb40c4c46faa537808e28260a3b7593ca15a00",
+      "bytecode_sha256": "a5959b24507ca296e76762ec07304d0dd0c6012d8690b56dce5d61cd4cfcc1b7",
+      "artifact_directory": "batch_to_hand-d3c66093dc18",
+      "artifact_hashes": {
+        "linked.json": "9048a4b52acd6331d0b57ef6185fe3bd7a83612ec68ac14068c7fd3fcf3c5c66",
+        "lowered.json": "c926a18956355e18c2bbd55b9861b635fd24bc9479e05e43bb6bab49e32a297a",
+        "program.asm": "7b7f37909e9062a976f24c50d49438a4984c9988d35db4573cf81da9b7a86c1c",
+        "program.gvm": "a5959b24507ca296e76762ec07304d0dd0c6012d8690b56dce5d61cd4cfcc1b7",
+        "receipt.json": "5480f9ffb093c14879b5917d6a95519f4ee92c28bfc3be5a0b8e3a75ee1b48d1"
+      }
+    },
+    "game/core/raeon/application/bind_prime.gen": {
+      "source_sha256": "11bc3bd75b7d89d6481b7d50720d7649426127ae8fea40227dd42b8eb4facbca",
+      "bytecode_sha256": "262f8c3091e50503685bbc9ebbb96776e6f2f7e9ce6163d5012f18d46614dbe3",
+      "artifact_directory": "bind_prime-2dadb4093e2c",
+      "artifact_hashes": {
+        "linked.json": "8fb5bc02634f1c01b16d5b55f5d63e1316a589453a57b957797ce14cf6fc277e",
+        "lowered.json": "9d5a59ea2077983fc5ef0ae47e3a88c95f07e1c149122b2c8a7f52213650a731",
+        "program.asm": "1a1a081bf236db5e39add73b66f4df00e20634ab1a3bb20c059d3d81ef89f514",
+        "program.gvm": "262f8c3091e50503685bbc9ebbb96776e6f2f7e9ce6163d5012f18d46614dbe3",
+        "receipt.json": "165377928cab9d4c2ad11219200db5881eddff70f502feb4594c3acecf65bd8a"
+      }
+    },
+    "game/core/raeon/application/commit_fg.gen": {
+      "source_sha256": "399638a3e81b85bd09ac100b606cbda58b05500ddf3edcf3f653089357d68578",
+      "bytecode_sha256": "6dcbb3f39fb5affa156c3ef3c22ad7c6365a339b04e082089b1474722cfc3323",
+      "artifact_directory": "commit_fg-f38e46ecd439",
+      "artifact_hashes": {
+        "linked.json": "df0dda09072a781c93c34bcdf61895e14be702dc7ea081b2b71f0c54ff3e551b",
+        "lowered.json": "c4fe1328acde00bc6df24772ef80fb19bb208f76c2e52c53c6d2e04c2caca59b",
+        "program.asm": "c14da96c723610e9ded871613ac0eb9c985afe458bd8ccf80b78cbb6eb6cd10e",
+        "program.gvm": "6dcbb3f39fb5affa156c3ef3c22ad7c6365a339b04e082089b1474722cfc3323",
+        "receipt.json": "b56b30916a99c808e4aee48a9104534856ff1f9c9906fa34ae8aecc1b8470c25"
+      }
+    },
+    "game/core/raeon/application/draw_one.gen": {
+      "source_sha256": "004238c04332b86437ed7bb2f4a0f4360882b9f65080e8ad9a537a49152c2d61",
+      "bytecode_sha256": "c874e6b00b73e7b5c91d7eb06fc3aac7952d1ba739234ec7decd39cd96185b16",
+      "artifact_directory": "draw_one-16b9743592d4",
+      "artifact_hashes": {
+        "linked.json": "946982c3e8a7d57c3dc1a329755c6b1385cd4b3c71f60a10cf5b20cfe6121f30",
+        "lowered.json": "544a44ec6db1c42d75dab2ec5959410f3aa360f13b7720e4d0a0e7256022c5b9",
+        "program.asm": "e269c5b9a2cd552959feee5a71a3e285bf9d9f3fcce926c38cf28a8b75c75ae9",
+        "program.gvm": "c874e6b00b73e7b5c91d7eb06fc3aac7952d1ba739234ec7decd39cd96185b16",
+        "receipt.json": "e8aae84721cb7ee2024e5f54dfa2adaf4e558184e00abfcb92cefa72f160f53c"
+      }
+    },
+    "game/core/raeon/application/generate_field.gen": {
+      "source_sha256": "94e14c6725c396795ad463e605682fdbb8eaa593263b389523911972cb014f70",
+      "bytecode_sha256": "70680e6d34cfad6e5453c422c0f7660619fcd1da6f12ab41bc5693e0ceddb69f",
+      "artifact_directory": "generate_field-fcd531dbfe43",
+      "artifact_hashes": {
+        "linked.json": "7917351fffda66061c2587f2cebb5268308a69a5a49b1c5f15aa2fad234c6639",
+        "lowered.json": "f775fba8d2a1a14f1a87ebb0247a26d1492761f02cd7817eb640a9fedaa99586",
+        "program.asm": "3494f3709104ac2b554869da6650657527daa2fb8daaf37b6ee8cdfd188813b0",
+        "program.gvm": "70680e6d34cfad6e5453c422c0f7660619fcd1da6f12ab41bc5693e0ceddb69f",
+        "receipt.json": "63d5a2a1e806b1847ff947d4d36f1c4b810914ca9303d6d181dfd69063ae3da5"
+      }
+    },
+    "game/core/raeon/application/initialize_inventory.gen": {
+      "source_sha256": "9c86afd417566ef59dc52a2d51d2d4d0f92a96d886e46b74c08aa2b4e2e30412",
+      "bytecode_sha256": "dccf8961163520684e0719a5dee90db1d3d15992aa857f35a913da4ee954c6af",
+      "artifact_directory": "initialize_inventory-11d2196551a3",
+      "artifact_hashes": {
+        "linked.json": "aef37bebabab70a0d255332fc12ef0e010bf8e6c9ff1ad6774ab334cd73f73f2",
+        "lowered.json": "a4a6262a182b20d964df75fcee6745339a9cc003a72d92bad1aac1b4cfeaf61c",
+        "program.asm": "e1332c9ad4bf1ae3d9bc29a19266bff4dff4aa44e0cbc34b4e5fde1ad84ec361",
+        "program.gvm": "dccf8961163520684e0719a5dee90db1d3d15992aa857f35a913da4ee954c6af",
+        "receipt.json": "5f976e5ad3dac2767f710b721fced6d3fc1c5edbfe9d2ab585b6ebd0db24d902"
+      }
+    },
+    "game/core/raeon/application/inspect_top.gen": {
+      "source_sha256": "6cf79eec29a8fcb2652a2bc78def8bf5fc1dbdf3567466ef19efa41c65acd87b",
+      "bytecode_sha256": "7cc1380a5a5d13c0d2181b60de080a686ff6206aa1ab1105f502bb312831dd85",
+      "artifact_directory": "inspect_top-be6633cbddcd",
+      "artifact_hashes": {
+        "linked.json": "926b6e993abb6c413eaf76ee0e117f293e50382e614443d2eb2f6b81190c277f",
+        "lowered.json": "312869c57009bd3b82795e9715d0c4f41d1b3a42c8177b461ef7bc2d52f2feb9",
+        "program.asm": "41be9a182ea95ab7302008a3e191a4cc7ef93b71915ae0a64c7b478ad656ea19",
+        "program.gvm": "7cc1380a5a5d13c0d2181b60de080a686ff6206aa1ab1105f502bb312831dd85",
+        "receipt.json": "7d3f06fe9d49a59d9a1227ff3c962f26c2d486ac3b420173eed640183b94f7ef"
+      }
+    },
+    "game/core/raeon/application/link_configuration.gen": {
+      "source_sha256": "a5dd7950e7dac275ccc4e296d613b1cf6fcba2bbd695676321e123e87452b207",
+      "bytecode_sha256": "876a95a43613bf3229067752b4518e5e4eb681608806d4eb3663b7ea8dc7f05b",
+      "artifact_directory": "link_configuration-13d5a96a2c55",
+      "artifact_hashes": {
+        "linked.json": "b8437890bc8c66b5f6838553b3ca1f0e4bea5f7c20193f4bb320d78ae2c8e666",
+        "lowered.json": "915b105de0e9e85df6fec877226c95677fabf36625890920932d6be532ee25e5",
+        "program.asm": "fe3abe4c7e3a191adf5d9cd496d784a8253f02f1c180b6c03314e23d44b657e4",
+        "program.gvm": "876a95a43613bf3229067752b4518e5e4eb681608806d4eb3663b7ea8dc7f05b",
+        "receipt.json": "c9a2d5c6671ecd2f7ae1c2be8cf721c8307947de0a84301615eef64f3a3eba0a"
+      }
+    },
+    "game/core/raeon/application/merge_configuration.gen": {
+      "source_sha256": "9308d4fc28ae1aa86476fe37ef5b7d6970571cf3dfe5a00958d53cef147a453d",
+      "bytecode_sha256": "ac383a9473ebee2e05c381d02b289da33f2180382de77aab5c20e324416b8152",
+      "artifact_directory": "merge_configuration-6fff17746cbb",
+      "artifact_hashes": {
+        "linked.json": "59ef7a9e19b26959d80722fd2c9c700f02b430839b22584605ff95761319c6b0",
+        "lowered.json": "b84cc9593b1387f48c76d9b4471df61ebe19f700dbf64e523ebbfb35737f2873",
+        "program.asm": "db20827829150bfd8a2366f4436f83a52cd2dab9efaeb1357de608aa7e8a3172",
+        "program.gvm": "ac383a9473ebee2e05c381d02b289da33f2180382de77aab5c20e324416b8152",
+        "receipt.json": "07df892d5132e534c1338f294a96e18f0844cf40bc9acd4fc44755a81ef231c7"
+      }
+    },
+    "game/core/raeon/application/native_instantiate.gen": {
+      "source_sha256": "e76e8e11f0bf28bd65a858805cc221a4a63f1da2c50f9e7fd0c7a4318aa3b30a",
+      "bytecode_sha256": "6082c1eb75d48080901cd46ee4f99cb8d79d4656dfb551375bbcb35c890d4842",
+      "artifact_directory": "native_instantiate-6121fc403ccc",
+      "artifact_hashes": {
+        "linked.json": "400b6e79895c89f82ec1cb4527ef327e14a8a91eb3920fbdd2447f60079a0a44",
+        "lowered.json": "bb9752460bb11c2fd73eb1b9d3252be49fd3cd68b3201bfa62e944c337852728",
+        "program.asm": "d256701f343bdb11bc76dbb7e1a4a379594c43d668fddad28f97476e1eb1b903",
+        "program.gvm": "6082c1eb75d48080901cd46ee4f99cb8d79d4656dfb551375bbcb35c890d4842",
+        "receipt.json": "57d65214e459118bf41d91fae817b64593538c512d740eb49e31cff4406a7a5c"
+      }
+    },
+    "game/core/raeon/application/native_relate.gen": {
+      "source_sha256": "0c1661f93c909f8661f9394028dc0aeb728a44ca4ceb72d74f44ae5b88033e5d",
+      "bytecode_sha256": "3b7cabf263d21a0ab77d74cc978c596aa713e3f7f5db63ebcfcfc78edabbf23f",
+      "artifact_directory": "native_relate-62fafed3e3b4",
+      "artifact_hashes": {
+        "linked.json": "cbfd9fdc750ca427ca2725975a6d266bc60a49683e78181b8eda917854f2e0a5",
+        "lowered.json": "e8091cedc377bca2dba0eb12b8cd8368e4ab94a89141e7d7d6fd9619bb14f5ba",
+        "program.asm": "6b49e7b6b29240fe4677ef48e164a349236c4b7673f113ff880ab5f8feeb9273",
+        "program.gvm": "3b7cabf263d21a0ab77d74cc978c596aa713e3f7f5db63ebcfcfc78edabbf23f",
+        "receipt.json": "ecac74e126bdb05bcac2e6e886d431dbe4f12f010e6a8b60521bfcee779df531"
+      }
+    },
+    "game/core/raeon/application/native_transport.gen": {
+      "source_sha256": "bcf64698ac20301c1ea4dcfd5dfbc0fe313d047990101c5d3182af7854d0ac1f",
+      "bytecode_sha256": "95914ad90027314c851d37dc4b2ed954d1485b01f448baa35a0f18ee2fcd72c0",
+      "artifact_directory": "native_transport-2708fb348e3a",
+      "artifact_hashes": {
+        "linked.json": "f2b162b91ff430a293d53d3f19d9411e7ee2db8fa57945bb382fd61bcafcb0c8",
+        "lowered.json": "99d59a05606b802693a6a42fecc0b6981d8c13bb8b514a53c6d8d9140ac4455a",
+        "program.asm": "93d62c3277d8b8106abf3d1fd492b55b1914d0cea3e26ca765d665bebc5305fc",
+        "program.gvm": "95914ad90027314c851d37dc4b2ed954d1485b01f448baa35a0f18ee2fcd72c0",
+        "receipt.json": "9ad5fd5d280c69b23ad41cb89692b584e667e092a4306f2d63c272e610ac9e67"
+      }
+    },
+    "game/core/raeon/application/raeon_observe.gen": {
+      "source_sha256": "06a54be1db2dfe491e0ea431ad2ba79a97db4cf4f009163c372058a149406e73",
+      "bytecode_sha256": "7b3e72909a3b095c8174142f5a53a121ea755dad230439b8a1c66835bc6d4b71",
+      "artifact_directory": "raeon_observe-9fc0cf2228ed",
+      "artifact_hashes": {
+        "linked.json": "d388b7454f077fb2d344b760a4e4ff5b195d56e4bc83186c0e1a8b058913795f",
+        "lowered.json": "7648c55acf139f7ae0e9395768c0871b18657c04cee6576b2461aba87b2ed9bb",
+        "program.asm": "2db459ac400d1a739797e4a2d4ae72126abb9d8e11b7ea20962b343b4697bef0",
+        "program.gvm": "7b3e72909a3b095c8174142f5a53a121ea755dad230439b8a1c66835bc6d4b71",
+        "receipt.json": "391b91e091f70d60b4de63153107a0356b84496ee4283a173f6abdd7804747e3"
+      }
+    },
+    "game/core/raeon/application/raeon_realize.gen": {
+      "source_sha256": "448cbfe495cd7133eb9576f8e9e462c32d7d3dc0e623714f9a0b9ebf46f3ff0a",
+      "bytecode_sha256": "3a4bbd14e4f4923ad1108ea2979bbd9b807bc745049627eb09bc236131d1973c",
+      "artifact_directory": "raeon_realize-9e71f54e9031",
+      "artifact_hashes": {
+        "linked.json": "90f5f787275bbea1193c26fc541f4f8b02ca0111d27f61bb7d77c06f462e3eeb",
+        "lowered.json": "cf968863edb6f7f9d1b5000facf2c1585891145aae6ca16e82d1924d666bacd7",
+        "program.asm": "d23a17a376c5a5a87a0a0ef3c2d07839d3ddd23d294bfc208c6134a03a4a9818",
+        "program.gvm": "3a4bbd14e4f4923ad1108ea2979bbd9b807bc745049627eb09bc236131d1973c",
+        "receipt.json": "2b9295f00b18d54fb1000766205b2adcac1a1b4a5a4cb49fa07000be6af5b4ed"
+      }
+    },
+    "game/core/raeon/application/recover_1.gen": {
+      "source_sha256": "4cb0ea5a0e32fed826e4b2760312b93aec86f6ea29597973dfb669cefad46440",
+      "bytecode_sha256": "dce3e45cf2af0ddb850e86f3ec2bcd1071885d39355c660320ad9bb9c35f0648",
+      "artifact_directory": "recover_1-86ab1c9e230b",
+      "artifact_hashes": {
+        "linked.json": "dd25a0ddb590b8e04206cac0a743f9275f63635658a7ea537e02502f7e81dbdb",
+        "lowered.json": "0e2818e6e912d27f1e054f5a6358775549d923a5da04882cf60656537d97de2b",
+        "program.asm": "4b3438bb9ea5fba5638df800b8eef4395d701f781d8851c8e8f5b177a378bb52",
+        "program.gvm": "dce3e45cf2af0ddb850e86f3ec2bcd1071885d39355c660320ad9bb9c35f0648",
+        "receipt.json": "cc61738b19d006299d5958261d7e0484a0b00738b78d456724b5f982bf4b6756"
+      }
+    },
+    "game/core/raeon/application/recover_2.gen": {
+      "source_sha256": "e4fc7f119c985372397a923b983f36acf588a885c0b022c38d9f34fb52498f6d",
+      "bytecode_sha256": "1a42617236aad5ea8f762572c3724de1b455fe3a46e37eed20d1bec023756cc1",
+      "artifact_directory": "recover_2-ed7ec6395cc2",
+      "artifact_hashes": {
+        "linked.json": "e59aafb4177485ef35b3abee4c3ce8e9a912daadfec96ab497613b2f8c1647e7",
+        "lowered.json": "5240b84c4777ff92b0bb38a7d0ce1f1afb377c1650d9a9600b391d5b30f56a64",
+        "program.asm": "9ccf5c93372034ad2166f1f19acb47f0b5a64e4a1835f73f50ecf0b750722fdd",
+        "program.gvm": "1a42617236aad5ea8f762572c3724de1b455fe3a46e37eed20d1bec023756cc1",
+        "receipt.json": "b6e293923df6bc42f73e631ad483ef629d4e7393049eed94035f6c5d0c9429ef"
+      }
+    },
+    "game/core/raeon/application/recover_3.gen": {
+      "source_sha256": "27ae030297e9637b0dbb7c2ca290a09b1deb2f36a6ec47dc9d74cb084e33c57f",
+      "bytecode_sha256": "dee85014c842d44163c4d49381cf74acad30fd3b812fc32f536003fd894abafd",
+      "artifact_directory": "recover_3-6246fb8fc503",
+      "artifact_hashes": {
+        "linked.json": "802f902b776f18dccf9303bcbe396c53bfa9a85cbe78a5bf54e3f4ee217a8bcc",
+        "lowered.json": "71c30032fc0f59c6bfe861c751f99a330e94b0cb6d458db0fda27d146cef1a8d",
+        "program.asm": "a52de4f6d8c12ea9941cfe29b360a95933e82ab9c30aa1ea8512a54c311d299c",
+        "program.gvm": "dee85014c842d44163c4d49381cf74acad30fd3b812fc32f536003fd894abafd",
+        "receipt.json": "0af2c32fecc3f839fb595610dd3437874ad1cdb00676d1acb712a6637a959217"
+      }
+    },
+    "game/core/raeon/application/recover_4.gen": {
+      "source_sha256": "c50f33bf211808bc31ed574f1da577057f2ad6e8714d7bfc1f141b43b5d038f3",
+      "bytecode_sha256": "e69af35acbb4dec445ec1f9c1dacde003deabaf810d2b4da53c13aade5d0346f",
+      "artifact_directory": "recover_4-1d5d7708f568",
+      "artifact_hashes": {
+        "linked.json": "8bc081df86779a7ec0ac45142a6c3a2afc8922a658af2723a33e323f34aee7a6",
+        "lowered.json": "0fa772c8fef8fd9105471fbc868694d16cb6729ec02af3ee38f11032f3c61a23",
+        "program.asm": "834aaa4c8331dd89066b0c35bfbf60637aa810b58b1092bd34ff6c2b932d109e",
+        "program.gvm": "e69af35acbb4dec445ec1f9c1dacde003deabaf810d2b4da53c13aade5d0346f",
+        "receipt.json": "f7dae2af8217190651bea96c8b0e42b4b87bca1607735323287a7fcd7d6ff806"
+      }
+    },
+    "game/core/raeon/application/recover_5.gen": {
+      "source_sha256": "87ce6dd002bd927b61a24833703103b342320c7ffb9c41c513299686ded03c65",
+      "bytecode_sha256": "eddeaf09744971914b6d2ee1258744ba9392c40b0c72adfa04352d741a170469",
+      "artifact_directory": "recover_5-724864ecd171",
+      "artifact_hashes": {
+        "linked.json": "59411b31df1735f2957ed442c9631324625fa792e4ab0cdb9c0c7ec943b31901",
+        "lowered.json": "8dfd4f1eb35558ce9436b77668b88eac81e352f105055f7a0cc785833217d289",
+        "program.asm": "73632e1f9363cda8936b1937ceecab27dd539be34da59ec1092138e31ce46f58",
+        "program.gvm": "eddeaf09744971914b6d2ee1258744ba9392c40b0c72adfa04352d741a170469",
+        "receipt.json": "05c83a8afbd48f2fbdd6a4a9a759b0185659d9e361d83691dc5acd4fae0dee6f"
+      }
+    },
+    "game/core/raeon/application/recover_6.gen": {
+      "source_sha256": "d2ed0e7c67486c3f584e17d2b188277d5ca15a5a20743846c98c0b26c78201e5",
+      "bytecode_sha256": "6cb7c4a408c0e07e4b424343f3f6c6fcdfb30130446e570256bd504a327a7779",
+      "artifact_directory": "recover_6-cb08db6250df",
+      "artifact_hashes": {
+        "linked.json": "4297083fb4b46d629e3d7bd02ce0dd4b1cb5c7a829a2df20acdff9fcd87c4486",
+        "lowered.json": "9f8afe0473e2efcb1a1f9dd70a8dbeab9258bdf6aaeaacb87ea28f571ebf3a99",
+        "program.asm": "7d40a8681e47198beb2b32c531178d0d84f06f8a4a24f0ea111650df29f63540",
+        "program.gvm": "6cb7c4a408c0e07e4b424343f3f6c6fcdfb30130446e570256bd504a327a7779",
+        "receipt.json": "7906afdf602025d96a593d09c7afe5237828fcfcfbd976a0aa3cf36ae66d79e6"
+      }
+    },
+    "game/core/raeon/application/refresh_fields.gen": {
+      "source_sha256": "ebc2ca991a1cbd5410340fae356f90dad1ea882ccae51dc0a9b7b7f961fac704",
+      "bytecode_sha256": "f4e8cab8d43021bf85022897fcc83734d3918c86aca4daedba0be000d84f6793",
+      "artifact_directory": "refresh_fields-d4d56d682300",
+      "artifact_hashes": {
+        "linked.json": "2ae4717cbb842fb9cc166902fdf00e9f4396970f463c91c8b8094215e7769f0f",
+        "lowered.json": "07443bce0b21c531fd8b12c05e4f88570c63e6d8eb7330cc1009ad323a003c10",
+        "program.asm": "0da364c327ab2c36304a98c8b679bc2c67f014402ab13c66eaba8aaa54d45317",
+        "program.gvm": "f4e8cab8d43021bf85022897fcc83734d3918c86aca4daedba0be000d84f6793",
+        "receipt.json": "5d2ffec007e15147cfafb319dbab370cba28b7a1a76e86d6ea547e7c7c138133"
+      }
+    },
+    "game/core/raeon/application/reopen_configuration.gen": {
+      "source_sha256": "61fa870d8f25682fddf4283ee0d5f4110259c7a73e5da8676e98713fe5682010",
+      "bytecode_sha256": "e605029d1eb3943201599fdd97542a16b53bb7ffb9b685c096517734402eda11",
+      "artifact_directory": "reopen_configuration-a616cd132475",
+      "artifact_hashes": {
+        "linked.json": "cee05dc946b5cd40bcca6b73f850f2682e65253592a6335b917265da02dc1f46",
+        "lowered.json": "3444a790ec091529a83be43424fb8fd0679b205705add86d5bc6bc639e974dfe",
+        "program.asm": "5a5e4cc06cb0d4ab784217adb300d143fe1a05ba0d45bb37c2f01e6258cadf33",
+        "program.gvm": "e605029d1eb3943201599fdd97542a16b53bb7ffb9b685c096517734402eda11",
+        "receipt.json": "3da96a3e320c881bdb26519134a7988cc2c60ebe8d2ab0692ad8c5d4e9eece68"
+      }
+    },
+    "game/core/raeon/application/reorder_top.gen": {
+      "source_sha256": "9a87ecb4d92d4a0a6f4c38d0988f2150a37ff78a12500c91d5c2c744d834a2e9",
+      "bytecode_sha256": "243c67b2ee59783d6d7fa1ff776bfc5f6e02e90371c982ad00de74ffe1a77efb",
+      "artifact_directory": "reorder_top-a01bffcff930",
+      "artifact_hashes": {
+        "linked.json": "5e7fd600cca3ccfb7e459f4d065733b218df32c61c95e6a71dc6f3b70e2daea4",
+        "lowered.json": "817d56d2248e0430d82c780d3ecafaed510cf93358665fd9bb47f11e08f157c1",
+        "program.asm": "0be3949867a0e5ffce21530908b053dd01166cccc5b26c9f957354f757614c0a",
+        "program.gvm": "243c67b2ee59783d6d7fa1ff776bfc5f6e02e90371c982ad00de74ffe1a77efb",
+        "receipt.json": "94297a4c61171db374860b3a96273b65483630571ba9b17fade7f39786bd1706"
+      }
+    },
+    "game/core/raeon/application/resolve_configuration.gen": {
+      "source_sha256": "4dd3a7e9cdb427be3816b91f82ae0ffb1d83c6d2db351670730970263622b689",
+      "bytecode_sha256": "5c197c604a2da638147199f3672fe980e13804ec2243feb5ef378c9ff958dd64",
+      "artifact_directory": "resolve_configuration-48b48c3f30e5",
+      "artifact_hashes": {
+        "linked.json": "2f282bc515b9bbbc7b57a670c4b09f877e0a984262da6a3afc33a14083c85834",
+        "lowered.json": "afffa1dc6bf3dc37cb21026045274aeed72303f4d10957cdb8186368fbdc18e3",
+        "program.asm": "f2d9050b3c382e1b7c100bccc0e7e1b583563184f7fe04d732430cd12c568b6a",
+        "program.gvm": "5c197c604a2da638147199f3672fe980e13804ec2243feb5ef378c9ff958dd64",
+        "receipt.json": "4845b416343118fe40b09ebd8d56ba4be9426e0e80aa1a596ac35a2102cd89a7"
+      }
+    },
+    "game/core/raeon/application/retire_cards.gen": {
+      "source_sha256": "dc7b00c52a7e902bcc15d9a623dfd1a32fcfc71957c90564e56791a1411e49e3",
+      "bytecode_sha256": "36c3ad861bf2342cc065dfca64a8703dadec9181f4b5a347b9c40e6d4785c1a0",
+      "artifact_directory": "retire_cards-566f6b8d495a",
+      "artifact_hashes": {
+        "linked.json": "4c97960d1a55b3a0deaab57f9ed6c0c885b07769089627cd97f81d57eb181b5d",
+        "lowered.json": "f0b935d920d007e4de91bfa244c182e30a95e0a60680b5cc2a957abb339a0f4b",
+        "program.asm": "1d27dcbcdb0762714535bcd5bebf3a8b3e75c27ae87c06a8d74941d78e39c45c",
+        "program.gvm": "36c3ad861bf2342cc065dfca64a8703dadec9181f4b5a347b9c40e6d4785c1a0",
+        "receipt.json": "bb7e30b6c121a3293a527c85912d49b2faa22d64a96fbdc49d4230477b604f1e"
+      }
+    },
+    "game/core/raeon/application/retire_support.gen": {
+      "source_sha256": "5daf6da5bc6513e0720ba2803a42640d040aef87469ce68bef2720ca5eb45e13",
+      "bytecode_sha256": "461fc666fb4cef7b9c3782010ad6c61887920ddbc3a91fc0e057ec86915d17ae",
+      "artifact_directory": "retire_support-96c40f0ade4b",
+      "artifact_hashes": {
+        "linked.json": "f2bb6e2c7db0aada3d9626924a998ca8b485e036b02e4eb3fbda09f50e61b967",
+        "lowered.json": "e7ce5e0393014ff36ac79bca88955097310c822a92074e844b43724fb49a5e4c",
+        "program.asm": "2e9c44de9fd3cf668c68853e93391f78c9949bf418393178785f60e9beaddb6c",
+        "program.gvm": "461fc666fb4cef7b9c3782010ad6c61887920ddbc3a91fc0e057ec86915d17ae",
+        "receipt.json": "5c0b388c179c943e1d746d56f179920830a7ddde51dc90825c8c3ead59a474ff"
+      }
+    },
+    "game/core/raeon/application/set_active_player.gen": {
+      "source_sha256": "8f7c27e9575afaf103ed58e234ee14129c3b9fd82e3a3cf4269fd9bde7997c8e",
+      "bytecode_sha256": "96d59cdf8865ebcc8181c429fd49a8c60533046b165d69410b529c1112ff6042",
+      "artifact_directory": "set_active_player-e62f869b37b5",
+      "artifact_hashes": {
+        "linked.json": "6fa371529dce091c510b87712b3271b3a4a628e0bc3341f9765c19431cf49f29",
+        "lowered.json": "298fe167afb121430978a44985e8aad2aa53164414c27766e1e7c5c22f7babfe",
+        "program.asm": "ecc7083eec39d6254d24e3cd545dc5e32beb14f004988639ce3ff9d800d9e775",
+        "program.gvm": "96d59cdf8865ebcc8181c429fd49a8c60533046b165d69410b529c1112ff6042",
+        "receipt.json": "e0d57796c48bb78ef30990601245f05648b951b4560b843012fad18c455b0d89"
+      }
+    },
+    "game/core/raeon/application/set_fg_poses.gen": {
+      "source_sha256": "33f5777e0d9ef83991f06a835c4364e8b3fdd1610b98ae81eba02619ea21b9f2",
+      "bytecode_sha256": "89a36b9c2c19f2fd04ef47b2b307ee68dc5d1d1b97d97788449fdb14819059f0",
+      "artifact_directory": "set_fg_poses-529b468d60d6",
+      "artifact_hashes": {
+        "linked.json": "85e93019ad910a6a57e4595adee5011bca09f6f18b2e96049893c8f499935fd7",
+        "lowered.json": "0d23a0031655db0062217dd44f0be679e997c00ff57d785390f2ae8b1a4cd759",
+        "program.asm": "3a04b5d45ed4ffb7d38199b38f2342eb7fc3f94beb959a344d9e0e4fcaf16e87",
+        "program.gvm": "89a36b9c2c19f2fd04ef47b2b307ee68dc5d1d1b97d97788449fdb14819059f0",
+        "receipt.json": "2ba4750f655daf13574551b970172a068cb2acaaa867d69d470c4bea8d5aace5"
+      }
+    },
+    "game/core/raeon/application/shuffle_deck.gen": {
+      "source_sha256": "807e4bae5a28655abe413d518cef1fa92ecee00eceeafc2910a0caa80129bfc1",
+      "bytecode_sha256": "d19129f2715e3fb2c89af3dba7917d7842e1ca3ec1f5b607ec2dc1c94c122b29",
+      "artifact_directory": "shuffle_deck-dd92c76bf03f",
+      "artifact_hashes": {
+        "linked.json": "586ec74e640d18f1e9144720f43822fb221b168bcd1d816f8ea05b11164450f1",
+        "lowered.json": "286c64e1fea1cce94a83915257d0b358838c6c8ea6afb9cb82b3404d286b75cd",
+        "program.asm": "2d6d117ffaf4e44ba81bac669e4b41b2616f89701024d7711cca916a2ccff620",
+        "program.gvm": "d19129f2715e3fb2c89af3dba7917d7842e1ca3ec1f5b607ec2dc1c94c122b29",
+        "receipt.json": "84998154079f1a671447883af9f49a55388d54b2250dead3f32656b340e2d882"
+      }
+    },
+    "game/core/raeon/application/spend_prime.gen": {
+      "source_sha256": "1c71586d4125dd62f4a764f0d6e384ddde28536d71a5115aeea79730fa273209",
+      "bytecode_sha256": "ca338dee4f6d0a55994dc0a08a4402a53cc7769ae49dc3ddfc4be7d08e04b115",
+      "artifact_directory": "spend_prime-718b71445eab",
+      "artifact_hashes": {
+        "linked.json": "85ca71a8f67dddf003bae90fbde70a6e34a22427d5498a1bdb68ba14f2fddf4f",
+        "lowered.json": "5ee79a87e5ec6eb3a6cd45215144cc88d9a94a3e91a0494442d8b0373a72513c",
+        "program.asm": "1b09f4506e9be813031863c9e717dcfdc538762404fdd51713d4d4f20c917218",
+        "program.gvm": "ca338dee4f6d0a55994dc0a08a4402a53cc7769ae49dc3ddfc4be7d08e04b115",
+        "receipt.json": "023e01fa97be4e358c8ee56a37ea6cffda9ae35864bbb86dda132de90817656b"
+      }
+    },
+    "game/core/raeon/application/white_restore_prime.gen": {
+      "source_sha256": "7379c05dab254f4acf9fc93c35559d85b6fb85fd1d531c1f926ce34c4d2511ce",
+      "bytecode_sha256": "78fc0c3e1ab973e14f1a57081820cf392165173377f8ed04bddff7e6a1fd473b",
+      "artifact_directory": "white_restore_prime-ecffaa6b7086",
+      "artifact_hashes": {
+        "linked.json": "67d7b9f452aa91020521279ba80f450ce70735c35e6c19829890895c4808ff1a",
+        "lowered.json": "9a95d3584a5817c942784c85d26949fe32e1e167723a1a4c2920bef650eb3ce8",
+        "program.asm": "80a94566ee678a4e5c9d339e2490537f1edbb5955b32060e44948a205c72c9b8",
+        "program.gvm": "78fc0c3e1ab973e14f1a57081820cf392165173377f8ed04bddff7e6a1fd473b",
+        "receipt.json": "155eaa3e1ba3939119a2d9ba36e91ac5301b64b3abac6cb81e2ddc5c1b90bd0d"
+      }
+    },
+    "tests/integration/genesis_horizon/pass_01_application/raeon_observe.gen": {
+      "source_sha256": "06a54be1db2dfe491e0ea431ad2ba79a97db4cf4f009163c372058a149406e73",
+      "bytecode_sha256": "d986cb9da035d8a95c8d15d0744cc4894244c8ee0063427a9dc42eabc6f3ddd0",
+      "artifact_directory": "raeon_observe-9e2e0051ed79",
+      "artifact_hashes": {
+        "linked.json": "fe4e796ec03678b230e9594bfb91711644626f8384fbf2d096af1d9204c4534b",
+        "lowered.json": "a158afd660a1587059fb43be9fb52978ee019c6c9cfd01f68a10d0455d78c5ad",
+        "program.asm": "2db459ac400d1a739797e4a2d4ae72126abb9d8e11b7ea20962b343b4697bef0",
+        "program.gvm": "d986cb9da035d8a95c8d15d0744cc4894244c8ee0063427a9dc42eabc6f3ddd0",
+        "receipt.json": "4b11aba6d322f08500fd715a56197618432a14cbfa602ea7352ada9c80e681eb"
+      }
+    },
+    "tests/integration/genesis_horizon/pass_01_application/raeon_realize.gen": {
+      "source_sha256": "448cbfe495cd7133eb9576f8e9e462c32d7d3dc0e623714f9a0b9ebf46f3ff0a",
+      "bytecode_sha256": "a0962cbb7a15b1303204d758f4e607ba3f8daaea48e075969468e0aec3aebdfc",
+      "artifact_directory": "raeon_realize-adf89dbe2c74",
+      "artifact_hashes": {
+        "linked.json": "cbdacad0f284869e1e0577e4623ea97c55817412d2c9e4b21abe7aa68325729d",
+        "lowered.json": "ab61d927de4076afcde30ef4b95dbc62f8a112aa17f30bb7a5c8bde0e1115bec",
+        "program.asm": "d23a17a376c5a5a87a0a0ef3c2d07839d3ddd23d294bfc208c6134a03a4a9818",
+        "program.gvm": "a0962cbb7a15b1303204d758f4e607ba3f8daaea48e075969468e0aec3aebdfc",
+        "receipt.json": "6c044e03d7e92d1fd9ee6826b3e7c5e6c86e2d4dc4aae45926456731a71401a7"
+      }
+    },
+    "game/core/genesis_horizon/src/values/add.gen": {
+      "source_sha256": "be3099f6f0e2e9450140542c43de4ac9c537dd4f32924643459ab0a5e20d3de2",
+      "bytecode_sha256": "06cb18de745f25aafedf813b9848a7bebb4b14dd993a4cda59d8db83fc2036fb",
+      "artifact_directory": "add-253d8601f18d",
+      "artifact_hashes": {
+        "program.asm": "71cdea7409b248b7e948d00c3932b665f0c0abecd46a623c3170be9449935226",
+        "program.gvm": "06cb18de745f25aafedf813b9848a7bebb4b14dd993a4cda59d8db83fc2036fb",
+        "receipt.json": "f6e1df219856a5f80cd8ef08992bfd0a17f8e107c7192cb3ebc51bb9cb908f06"
+      }
+    },
+    "game/core/genesis_horizon/src/values/at_most.gen": {
+      "source_sha256": "602879c10cc110bccc3c8636d077e63d92b8ea1060d9e0a83db3755b3b82667d",
+      "bytecode_sha256": "66ae93b65c9b88d7bb63bf35a85e39c5f7496e38f939c84d92550bfec72f0de9",
+      "artifact_directory": "at_most-40012b8baf75",
+      "artifact_hashes": {
+        "program.asm": "17e2fcf4f7911ca74637034faa7966a16bd7d8a0ff14260d9168f347076f631e",
+        "program.gvm": "66ae93b65c9b88d7bb63bf35a85e39c5f7496e38f939c84d92550bfec72f0de9",
+        "receipt.json": "f6e1df219856a5f80cd8ef08992bfd0a17f8e107c7192cb3ebc51bb9cb908f06"
+      }
+    },
+    "game/core/genesis_horizon/src/values/equal.gen": {
+      "source_sha256": "878e14fecf38e94bd5f9b495e21d5b3e1516b4a4a0a314d4cc6a60dd57c533ef",
+      "bytecode_sha256": "635568dda16732931866e0c12e213b6523d88db98581ae367da11fc25ba4f7e5",
+      "artifact_directory": "equal-feb27df1a244",
+      "artifact_hashes": {
+        "program.asm": "53ea29b6e715d924ffb21037ef7bd764be531d8bdbbf26ba1a93506e89d59730",
+        "program.gvm": "635568dda16732931866e0c12e213b6523d88db98581ae367da11fc25ba4f7e5",
+        "receipt.json": "f6e1df219856a5f80cd8ef08992bfd0a17f8e107c7192cb3ebc51bb9cb908f06"
+      }
+    }
+  }
+}

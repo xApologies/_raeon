@@ -36,3 +36,11 @@ See the current execution record and receipt under `development/modules/core-gam
 The exact Pass-1 application remains in the historical integration fixture.
 Complete Utility play, field/QMO resolution, Prime combat and native Port apps
 remain outside Pass 2. Whole-game phase remains PREPRODUCTION.
+
+## Pass-05 current authority
+
+The 0.5 package adds explicit match setup, turn advancement, canonical Prime charge nodes and one post-Degrade DEFENSE opportunity. The fourteen new handlers use the established Genesis 0.1 admission/transform/closure form; no language syntax is invented. The original handlers remain byte-identical for historical conformance, and cannot bypass an adopted live match.
+
+Current rules are pinned in `data/game/pass-05-runtime.json`. Utilities have zero generic resource cost but require a real Hand source, explicit effect-specific timing and unchanged target/mathematical admission. The compensation object's physical native identity is not a finalized catalog ID. General Utility disposition and unresolved timing are not inferred.
+
+Checkpoint upgrades require an explicit owner capability and an exact declared predecessor binding/package/manifest match. Native file hashes, old compiled bytecodes and the original semantic root are verified before publication. The subsequent compiled `ADOPT_PASS05` action performs C-to-N/R migration. Default restore remains strict.

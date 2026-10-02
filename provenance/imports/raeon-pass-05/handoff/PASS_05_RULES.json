@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "authority": "USER_ACCEPTED_PASS_05_DESIGN",
+  "baseline": {
+    "repository": "xApologies/_raeon",
+    "required_base_sha": "63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+    "pass04_implementation_sha": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+    "pass04_receipt_sha": "f1b5aede39be01d4835e433fdb98429c249b2538",
+    "main_sha": "69a0030805b8c3858c877a514e2f50644421115a",
+    "bricked_read_only_sha": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+  },
+  "color_magnitude": {
+    "None": 0,
+    "Red": 1,
+    "Orange": 2,
+    "Yellow": 3,
+    "Green": 4,
+    "Blue": 5,
+    "Violet": 6,
+    "White": 7
+  },
+  "match_setup": {
+    "constructed_deck_size": 60,
+    "opening_hand_cards_from_deck": 7,
+    "hand_maximum": 10,
+    "mulligan": {
+      "enabled": true,
+      "procedure": "OPEN",
+      "implementation_rule": "DO_NOT_INVENT"
+    },
+    "first_player": {
+      "selection": "FAIR_TWO_OUTCOME_RANDOM_COIN_TOSS",
+      "authoritative_outcome_recorded_in_genesis_state": true,
+      "rng_implementation": "OPEN",
+      "runtime_rule": "Accept/record a trusted setup outcome; do not invent a PRNG."
+    },
+    "second_player_compensation": {
+      "accepted": true,
+      "kind": "SINGLE_USE_DRAW_ONE_COMPENSATION_CARD",
+      "ordinary_opening_cards_remain": 7,
+      "placement": "HAND_AFTER_OPENING_HAND",
+      "drawn_from_deck": false,
+      "effect": "DRAW_1",
+      "resource_cost": 0,
+      "counts_toward_hand_maximum": true,
+      "may_be_held_until_used": true,
+      "final_name_id_flavor": "OPEN",
+      "exact_timing_window": "OPEN",
+      "implementation_rule": "Represent accepted setup object/effect without inventing unresolved timing."
+    }
+  },
+  "draw": {
+    "normal_draw_per_own_turn": 1,
+    "draw_source": "NEXT_TOP_DECK_CARD",
+    "additional_draw": "CARD_EFFECTS_SUCH_AS_UTILITIES",
+    "hand_overflow_behavior": "OPEN",
+    "overflow_guard": "No draw/effect may silently discard, exile, burn, or exceed 10. Preserve source state on rejected admission."
+  },
+  "turn": {
+    "skeleton": [
+      "REFRESH",
+      "DRAW",
+      "ACTIVE",
+      "END"
+    ],
+    "refresh_boundary": "BEGINNING_OF_OWN_TURN",
+    "refresh_effect": "ALL_OWNED_LIVE_ORDINARY_USED_CONFIGURATION_FIELDS_BECOME_READY",
+    "active_end_refreshes_fields": false,
+    "player_switch_refreshes_fields": false,
+    "active_authority": {
+      "RESTORE": "FRIENDLY_SIDE",
+      "DEGRADE": "HOSTILE_SIDE"
+    },
+    "defending_authority": {
+      "RESTORE": "FRIENDLY_SIDE_ONLY",
+      "DEGRADE": "PROHIBITED"
+    },
+    "action_points": "NONE",
+    "active_player_may_end_turn_voluntarily": true
+  },
+  "defense": {
+    "name": "DEFENSE",
+    "trigger": "A_HOSTILE_DEGRADE_RESOLVES_AGAINST_DEFENDER",
+    "ordering": [
+      "DECLARE_AND_ADMIT_DEGRADE",
+      "RESOLVE_DEGRADE",
+      "APPLY_AUTHORITATIVE_STATE_CONSEQUENCES",
+      "CHECK_TERMINAL_CONDITION",
+      "IF_NONTERMINAL_CHECK_LEGAL_DEFENSE",
+      "IF_LEGAL_OPEN_SHORT_DEFENSE_WINDOW",
+      "DEFENDER_RESTORE_OR_PASS",
+      "CLOSE_WINDOW",
+      "RETURN_AUTHORITY_TO_ACTIVE_PLAYER"
+    ],
+    "damage_is_prevented": false,
+    "damage_resolves_before_restore": true,
+    "response_target": "THE_SURVIVING_OBJECT_JUST_DEGRADED",
+    "response_count_per_hostile_degrade": 1,
+    "legal_response": "ONE_FRIENDLY_RESTORE_OR_PASS",
+    "legal_sources": [
+      "STORED_CHARGE_IN_AN_ADMITTED_RESTORE_OR_UNIVERSAL_PRIME",
+      "ONE_READY_FIELD_ROUTED_THROUGH_EXISTING_PRIME_RAINBOW_ROAD_PATH"
+    ],
+    "field_assisted_prime_mediation_counts_as_one_defense_response": true,
+    "no_legal_response": "NO_WINDOW_IMMEDIATE_CONTINUATION",
+    "timeout": {
+      "bounded": true,
+      "exact_seconds": "OPEN_TUNABLE",
+      "expiry_result": "PASS",
+      "early_restore_or_pass_closes_immediately": true,
+      "genesis_state_owns_legality_not_wall_clock": true
+    },
+    "destroyed_field_can_be_ordinary_restored_in_same_window": false,
+    "inactive_prime_can_be_ordinary_restored_in_same_window": false,
+    "terminal_match_opens_defense_window": false
+  },
+  "prime_charge_nodes": {
+    "identity_and_native_rank_immutable": true,
+    "intrinsic_health_maximum": "NATIVE_RANK",
+    "storage_model": {
+      "H": "0..rank",
+      "N": "nonnegative completed native-color charge-node count",
+      "R": "partial charge remainder magnitude, 0..rank-1",
+      "Q": "N*rank + R",
+      "partial_color": "None when R=0, otherwise color of magnitude R",
+      "completed_node_color": "PRIME_NATIVE_COLOR",
+      "game_rule_node_cap": "NONE_ACCEPTED_NO_ARTIFICIAL_CAP"
+    },
+    "states": {
+      "HEALTHY_UNCHARGED": "H=rank and Q=0",
+      "OPERATIONAL_CHARGED": "H=rank and Q>0",
+      "DAMAGED_NON_OPERATIONAL": "0<H<rank and Q=0",
+      "INACTIVE": "H=0 and Q=0"
+    },
+    "restore": {
+      "inactive_requires_explicit_white_reactivation": true,
+      "order": [
+        "INTRINSIC_HEALTH",
+        "STORED_CHARGE"
+      ],
+      "charge_requires_full_intrinsic_health": true,
+      "overflow_behavior": "CARRY_INTO_NEXT_NODE",
+      "node_completion": "Whenever stored charge crosses a multiple of rank, increment N and retain remainder R.",
+      "no_discard_of_excess": true
+    },
+    "degrade": {
+      "order": [
+        "STORED_CHARGE_Q",
+        "INTRINSIC_HEALTH_H"
+      ],
+      "recompute_nodes_after_loss": true,
+      "if_H_below_rank_then_Q_must_be_zero": true
+    },
+    "spend": {
+      "source": "Q",
+      "partial_allowed": true,
+      "maximum": "CURRENT_Q",
+      "repeat_while_healthy_and_charge_remains": true,
+      "once_per_turn_tap_limited": false,
+      "changes_H": false,
+      "recompute_N_R_after_spend": true,
+      "aggregate_magnitude_is_not_a_new_color_identity": true
+    },
+    "self_restore": {
+      "prime_source_may_target_itself": false,
+      "field_source_may_restore_or_charge_a_prime": true
+    },
+    "white_reactivation": {
+      "from": {
+        "H": 0,
+        "N": 0,
+        "R": 0
+      },
+      "to": {
+        "H": 1,
+        "N": 0,
+        "R": 0
+      },
+      "identity_and_slot_unchanged": true
+    },
+    "pass04_migration": {
+      "old": "(H,C) with 0<=C<=rank",
+      "new": "(H,N,R)",
+      "mapping": "N = C // rank; R = C % rank; Q preserved exactly",
+      "examples": [
+        {
+          "rank": 3,
+          "old": {
+            "H": 3,
+            "C": 2
+          },
+          "new": {
+            "H": 3,
+            "N": 0,
+            "R": 2,
+            "Q": 2
+          }
+        },
+        {
+          "rank": 3,
+          "old": {
+            "H": 3,
+            "C": 3
+          },
+          "new": {
+            "H": 3,
+            "N": 1,
+            "R": 0,
+            "Q": 3
+          }
+        }
+      ]
+    },
+    "canonical_example": {
+      "prime": "Yellow",
+      "rank": 3,
+      "H": 3,
+      "N": 2,
+      "R": 2,
+      "partial_color": "Orange",
+      "Q": 8,
+      "meaning": "Two completed Yellow charge nodes plus one Orange partial charge. Total available stored magnitude is 8; it is not automatically Black."
+    },
+    "projection": {
+      "node_count_public": true,
+      "partial_color_public": true,
+      "total_Q_derived_public": true
+    }
+  },
+  "utility": {
+    "resource_cost": 0,
+    "requires_card_in_hand": true,
+    "mathematical_legality_still_binding": true,
+    "exact_generic_timing": "OPEN",
+    "effect_specific_targeting_duration_ids": "PRESERVE_EXISTING_OPEN_STATUS",
+    "implementation_rule": "Do not invent a mana/energy/color payment system."
+  },
+  "victory": {
+    "loss_condition": "ALL_THREE_OWNED_PRIME_FIELDS_ARE_INACTIVE",
+    "win_condition": "OPPONENT_LOSS_CONDITION",
+    "evaluation_timing": "IMMEDIATELY_AFTER_EACH_AUTHORITATIVE_STATE_CHANGING_ACTION",
+    "terminal_precedes_defense_window": true,
+    "post_terminal_actions_allowed": false,
+    "simultaneous_terminal_resolution": "OPEN"
+  },
+  "deck_exhaustion": {
+    "concept_status": "ACCEPTED_PARTIAL_DESIGN_NOT_RUNTIME_COMPLETE",
+    "failed_normal_draw_causes_forced_degrade": true,
+    "escalation_first_six_failed_draws": [
+      {
+        "failed_draw": 1,
+        "magnitude": 1,
+        "color": "Red"
+      },
+      {
+        "failed_draw": 2,
+        "magnitude": 2,
+        "color": "Orange"
+      },
+      {
+        "failed_draw": 3,
+        "magnitude": 3,
+        "color": "Yellow"
+      },
+      {
+        "failed_draw": 4,
+        "magnitude": 4,
+        "color": "Green"
+      },
+      {
+        "failed_draw": 5,
+        "magnitude": 5,
+        "color": "Blue"
+      },
+      {
+        "failed_draw": 6,
+        "magnitude": 6,
+        "color": "Violet"
+      }
+    ],
+    "target_selection": "OPEN",
+    "post_violet_escalation": "OPEN",
+    "implementation_rule": "Record accepted escalation intent; do not invent target sequence or stage-7+ behavior."
+  }
+}

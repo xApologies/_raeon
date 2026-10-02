@@ -1,0 +1,1136 @@
+{
+  "schema_version": 1,
+  "pass": "05",
+  "title": "Match Tempo / Prime Charge / Turn Authority",
+  "required_base_sha": "63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+  "target_branch": "codex/raeon-pass-05",
+  "total": 140,
+  "policy": {
+    "positive_case_requires_actual_execution": true,
+    "open_guard_passes_only_if_rule_not_invented": true,
+    "prior_tests_may_not_be_weakened": true,
+    "all_mandatory": true
+  },
+  "cases": [
+    {
+      "id": "P5-001",
+      "group": "ENTRY",
+      "title": "baseline sealed Pass4 head",
+      "expected": "branch ancestry begins at 63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-002",
+      "group": "ENTRY",
+      "title": "Pass4 108/108 receipt inherited",
+      "expected": "sealed receipt unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-003",
+      "group": "ENTRY",
+      "title": "main not modified",
+      "expected": "main remains 69a0030805b8c3858c877a514e2f50644421115a unless separately authorized",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-004",
+      "group": "ENTRY",
+      "title": "_bricked read-only",
+      "expected": "no writes; pin/reference c89676fc26000ae6f5fdad66a56e118b285d9b1d",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-005",
+      "group": "ENTRY",
+      "title": "QMO corpus preserved",
+      "expected": "120/60/343/1691/2094 unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-006",
+      "group": "ENTRY",
+      "title": "Pass2 privacy preserved",
+      "expected": "all privacy tests retained",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-007",
+      "group": "ENTRY",
+      "title": "prior fixtures preserved",
+      "expected": "no weakening/deletion",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-008",
+      "group": "ENTRY",
+      "title": "HOST-RUNTIME-001 preserved",
+      "expected": "OPEN_QUALIFIED",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-009",
+      "group": "ENTRY",
+      "title": "Rainbow Road sole color transport",
+      "expected": "no bypass",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-010",
+      "group": "ENTRY",
+      "title": "Genesis State gameplay authority",
+      "expected": "Python not owner of semantics",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-011",
+      "group": "HAND_DRAW",
+      "title": "opening hand seven",
+      "expected": "exactly 7 Deck cards",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-012",
+      "group": "HAND_DRAW",
+      "title": "hand maximum ten",
+      "expected": "capacity 10",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-013",
+      "group": "HAND_DRAW",
+      "title": "capacity prechecked",
+      "expected": "11th admission no partial mutation",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-014",
+      "group": "HAND_DRAW",
+      "title": "overflow remains OPEN",
+      "expected": "no guessed burn/discard/exile",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-015",
+      "group": "HAND_DRAW",
+      "title": "normal draw one",
+      "expected": "one draw attempt per own turn",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-016",
+      "group": "HAND_DRAW",
+      "title": "draw top card",
+      "expected": "ordered Deck semantics",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-017",
+      "group": "HAND_DRAW",
+      "title": "extra draw requires effect",
+      "expected": "no implicit extra draw",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-018",
+      "group": "HAND_DRAW",
+      "title": "mulligan enabled",
+      "expected": "accepted metadata",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-019",
+      "group": "HAND_DRAW",
+      "title": "mulligan procedure not invented",
+      "expected": "OPEN guard",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-020",
+      "group": "HAND_DRAW",
+      "title": "first player binary",
+      "expected": "player_1 or player_2 only",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-021",
+      "group": "HAND_DRAW",
+      "title": "first player recorded",
+      "expected": "authoritative State",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-022",
+      "group": "HAND_DRAW",
+      "title": "no invented PRNG",
+      "expected": "trusted setup outcome accepted",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-023",
+      "group": "HAND_DRAW",
+      "title": "second-player compensation",
+      "expected": "one Draw-1 compensation object",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-024",
+      "group": "HAND_DRAW",
+      "title": "compensation non-Deck",
+      "expected": "Deck count unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-025",
+      "group": "HAND_DRAW",
+      "title": "compensation occupies Hand",
+      "expected": "counts toward max 10",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-026",
+      "group": "HAND_DRAW",
+      "title": "compensation timing OPEN",
+      "expected": "no play window invented",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-027",
+      "group": "TURN",
+      "title": "turn skeleton",
+      "expected": "REFRESH->DRAW->ACTIVE->END",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-028",
+      "group": "TURN",
+      "title": "own-turn refresh",
+      "expected": "owned eligible USED fields -> READY",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-029",
+      "group": "TURN",
+      "title": "READY idempotent",
+      "expected": "READY remains READY",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-030",
+      "group": "TURN",
+      "title": "refresh no color heal",
+      "expected": "magnitude unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-031",
+      "group": "TURN",
+      "title": "refresh no QMO change",
+      "expected": "identity/topology unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-032",
+      "group": "TURN",
+      "title": "refresh owner-only",
+      "expected": "opponent unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-033",
+      "group": "TURN",
+      "title": "end ACTIVE no refresh",
+      "expected": "USED persists",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-034",
+      "group": "TURN",
+      "title": "switch no refresh",
+      "expected": "USED persists",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-035",
+      "group": "TURN",
+      "title": "ACTIVE friendly Restore",
+      "expected": "admitted",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-036",
+      "group": "TURN",
+      "title": "ACTIVE hostile Degrade",
+      "expected": "admitted",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-037",
+      "group": "TURN",
+      "title": "DEFENSE Degrade rejected",
+      "expected": "no counterattack",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-038",
+      "group": "TURN",
+      "title": "DEFENSE Restore constrained",
+      "expected": "response window only",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-039",
+      "group": "TURN",
+      "title": "no action points",
+      "expected": "no AP pool invented",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-040",
+      "group": "TURN",
+      "title": "END -> opponent REFRESH",
+      "expected": "common boundary exact",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-041",
+      "group": "DEFENSE",
+      "title": "Degrade before defense",
+      "expected": "target changes first",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-042",
+      "group": "DEFENSE",
+      "title": "consequences before defense",
+      "expected": "destruction/inactivation first",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-043",
+      "group": "DEFENSE",
+      "title": "terminal before defense",
+      "expected": "third inactive ends match",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-044",
+      "group": "DEFENSE",
+      "title": "no defense after terminal",
+      "expected": "MATCH_COMPLETE",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-045",
+      "group": "DEFENSE",
+      "title": "no legal restore no pause",
+      "expected": "ACTIVE continues",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-046",
+      "group": "DEFENSE",
+      "title": "legal restore opens window",
+      "expected": "one bounded opportunity",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-047",
+      "group": "DEFENSE",
+      "title": "target bound to degraded object",
+      "expected": "no unrelated heal",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-048",
+      "group": "DEFENSE",
+      "title": "one response",
+      "expected": "Restore or Pass",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-049",
+      "group": "DEFENSE",
+      "title": "Pass closes",
+      "expected": "return to active",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-050",
+      "group": "DEFENSE",
+      "title": "timeout equals Pass",
+      "expected": "explicit event",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-051",
+      "group": "DEFENSE",
+      "title": "timer seconds OPEN",
+      "expected": "no guessed hard-code",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-052",
+      "group": "DEFENSE",
+      "title": "Restore closes immediately",
+      "expected": "no timer waiting",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-053",
+      "group": "DEFENSE",
+      "title": "defense not prevention",
+      "expected": "Degrade transition persists",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-054",
+      "group": "DEFENSE",
+      "title": "destroyed field no ordinary restore",
+      "expected": "same-window restore rejected",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-055",
+      "group": "DEFENSE",
+      "title": "inactive Prime no ordinary restore",
+      "expected": "White policy required",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-056",
+      "group": "DEFENSE",
+      "title": "stored Restore Prime responds",
+      "expected": "legal source",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-057",
+      "group": "DEFENSE",
+      "title": "stored Universal responds",
+      "expected": "RESTORE only",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-058",
+      "group": "DEFENSE",
+      "title": "Degrade Prime cannot defend",
+      "expected": "counterattack rejected",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-059",
+      "group": "DEFENSE",
+      "title": "READY field supports response",
+      "expected": "Rainbow Road mediation",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-060",
+      "group": "DEFENSE",
+      "title": "field-assisted response atomic",
+      "expected": "rollback whole response",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-061",
+      "group": "DEFENSE",
+      "title": "Prime self-Restore rejected",
+      "expected": "source != target",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-062",
+      "group": "DEFENSE",
+      "title": "field->Prime is not self-Restore",
+      "expected": "legal when admitted",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-063",
+      "group": "PRIME_NODES",
+      "title": "H_max remains rank",
+      "expected": "intrinsic health immutable",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-064",
+      "group": "PRIME_NODES",
+      "title": "N integer",
+      "expected": "N>=0",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-065",
+      "group": "PRIME_NODES",
+      "title": "R range",
+      "expected": "0<=R<rank",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-066",
+      "group": "PRIME_NODES",
+      "title": "Q derivation",
+      "expected": "Q=N*rank+R",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-067",
+      "group": "PRIME_NODES",
+      "title": "no node cap",
+      "expected": "no artificial game-rule maximum",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-068",
+      "group": "PRIME_NODES",
+      "title": "node native color",
+      "expected": "completed nodes inherit Prime color",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-069",
+      "group": "PRIME_NODES",
+      "title": "remainder color",
+      "expected": "derived from R",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-070",
+      "group": "PRIME_NODES",
+      "title": "Q no identity change",
+      "expected": "rank/family stable",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-071",
+      "group": "PRIME_NODES",
+      "title": "healthy uncharged",
+      "expected": "H=rank,Q=0",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-072",
+      "group": "PRIME_NODES",
+      "title": "operational charged",
+      "expected": "H=rank,Q>0",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-073",
+      "group": "PRIME_NODES",
+      "title": "damaged nonoperational",
+      "expected": "0<H<rank,Q=0",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-074",
+      "group": "PRIME_NODES",
+      "title": "inactive",
+      "expected": "H=0,Q=0",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-075",
+      "group": "PRIME_NODES",
+      "title": "damaged cannot retain Q",
+      "expected": "validator rejects",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-076",
+      "group": "PRIME_NODES",
+      "title": "inactive cannot retain Q",
+      "expected": "validator rejects",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-077",
+      "group": "PRIME_NODES",
+      "title": "Restore heals H first",
+      "expected": "ordering exact",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-078",
+      "group": "PRIME_NODES",
+      "title": "charge only after full H",
+      "expected": "gate exact",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-079",
+      "group": "PRIME_NODES",
+      "title": "overflow next node",
+      "expected": "no overflow rejection",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-080",
+      "group": "PRIME_NODES",
+      "title": "multi-node carry",
+      "expected": "one input may complete multiple nodes",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-081",
+      "group": "PRIME_NODES",
+      "title": "Restore remainder canonical",
+      "expected": "quotient/remainder exact",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-082",
+      "group": "PRIME_NODES",
+      "title": "Degrade consumes Q first",
+      "expected": "shield behavior",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-083",
+      "group": "PRIME_NODES",
+      "title": "Degrade reaches H after Q zero",
+      "expected": "ordering exact",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-084",
+      "group": "PRIME_NODES",
+      "title": "Degrade recomputes nodes",
+      "expected": "canonical N/R",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-085",
+      "group": "PRIME_NODES",
+      "title": "spend from Q",
+      "expected": "legacy bounded C gone",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-086",
+      "group": "PRIME_NODES",
+      "title": "partial spend",
+      "expected": "0<s<=Q",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-087",
+      "group": "PRIME_NODES",
+      "title": "spend leaves H",
+      "expected": "H unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-088",
+      "group": "PRIME_NODES",
+      "title": "repeat spend",
+      "expected": "while H full and Q remains",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-089",
+      "group": "PRIME_NODES",
+      "title": "no tap limit",
+      "expected": "Prime not READY/USED",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-090",
+      "group": "PRIME_NODES",
+      "title": "spend recomputes N/R",
+      "expected": "canonical",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-091",
+      "group": "PRIME_NODES",
+      "title": "aggregate 8 not Black",
+      "expected": "no synthesized identity",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-092",
+      "group": "PRIME_NODES",
+      "title": "Pass4 migration preserves Q",
+      "expected": "N=C//r,R=C%r",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-093",
+      "group": "PRIME_NODES",
+      "title": "old full C -> one node",
+      "expected": "C=rank => N1,R0",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-094",
+      "group": "PRIME_NODES",
+      "title": "migration preserves identity/slot",
+      "expected": "stable Prime",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-095",
+      "group": "PRIME_NODES",
+      "title": "White reactivation 1/0/0",
+      "expected": "exact",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-096",
+      "group": "PRIME_NODES",
+      "title": "Yellow example",
+      "expected": "r3,H3,N2,R2,Q8, Orange remainder",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-097",
+      "group": "UTILITY",
+      "title": "Utility cost zero",
+      "expected": "no generic payment",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-098",
+      "group": "UTILITY",
+      "title": "Utility in Hand",
+      "expected": "source-zone requirement",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-099",
+      "group": "UTILITY",
+      "title": "zero cost not timing bypass",
+      "expected": "timing required",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-100",
+      "group": "UTILITY",
+      "title": "zero cost not target bypass",
+      "expected": "target required",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-101",
+      "group": "UTILITY",
+      "title": "zero cost not math bypass",
+      "expected": "QMO law retained",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-102",
+      "group": "UTILITY",
+      "title": "generic timing OPEN",
+      "expected": "no universal scheduler",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-103",
+      "group": "UTILITY",
+      "title": "51-slot structure preserved",
+      "expected": "no catalog regeneration",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-104",
+      "group": "VICTORY",
+      "title": "three inactive lose",
+      "expected": "terminal condition",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-105",
+      "group": "VICTORY",
+      "title": "opponent wins",
+      "expected": "winner exact",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-106",
+      "group": "VICTORY",
+      "title": "one/two inactive nonterminal",
+      "expected": "match live",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-107",
+      "group": "VICTORY",
+      "title": "check after action",
+      "expected": "deterministic point",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-108",
+      "group": "VICTORY",
+      "title": "terminal precedes defense",
+      "expected": "no recovery after third inactive",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-109",
+      "group": "VICTORY",
+      "title": "post-terminal mutation rejected",
+      "expected": "match closed",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-110",
+      "group": "VICTORY",
+      "title": "White restore after terminal rejected",
+      "expected": "no resurrection",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-111",
+      "group": "VICTORY",
+      "title": "simultaneous terminal OPEN",
+      "expected": "no tie policy invented",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-112",
+      "group": "DECK_EXHAUSTION",
+      "title": "deck exhaustion not immediate loss",
+      "expected": "escalation design",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-113",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage1 Red1",
+      "expected": "encoded",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-114",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage2 Orange2",
+      "expected": "encoded",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-115",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage3 Yellow3",
+      "expected": "encoded",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-116",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage4 Green4",
+      "expected": "encoded",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-117",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage5 Blue5",
+      "expected": "encoded",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-118",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage6 Violet6",
+      "expected": "encoded",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-119",
+      "group": "DECK_EXHAUSTION",
+      "title": "target remains OPEN",
+      "expected": "no damage target invented",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-120",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage7+ remains OPEN",
+      "expected": "no continuation invented",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-121",
+      "group": "INTEGRATION",
+      "title": "charge checkpoint roundtrip",
+      "expected": "H/N/R stable",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-122",
+      "group": "INTEGRATION",
+      "title": "charge deterministic replay",
+      "expected": "same actions same State",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-123",
+      "group": "INTEGRATION",
+      "title": "defense replay order",
+      "expected": "Degrade before Restore",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-124",
+      "group": "INTEGRATION",
+      "title": "turn checkpoint roundtrip",
+      "expected": "phase/player/availability stable",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-125",
+      "group": "INTEGRATION",
+      "title": "failed defense rollback",
+      "expected": "no partial spend",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-126",
+      "group": "INTEGRATION",
+      "title": "failed hand admission rollback",
+      "expected": "Deck/Hand unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-127",
+      "group": "INTEGRATION",
+      "title": "Road history exact",
+      "expected": "closed Road evidence",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-128",
+      "group": "INTEGRATION",
+      "title": "privacy preserved",
+      "expected": "Hand/Deck views",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-129",
+      "group": "INTEGRATION",
+      "title": "field carryover preserved",
+      "expected": "Pass4 law",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-130",
+      "group": "INTEGRATION",
+      "title": "zero destruction preserved",
+      "expected": "support retirement exact",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-131",
+      "group": "INTEGRATION",
+      "title": "emergent loss preserved",
+      "expected": "incident only",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-132",
+      "group": "INTEGRATION",
+      "title": "offline self-contained",
+      "expected": "no Git/_bricked runtime reads",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-133",
+      "group": "DELIVERY",
+      "title": "inherited suites rerun",
+      "expected": "no skipped historical suite",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-134",
+      "group": "DELIVERY",
+      "title": "all cases accounted",
+      "expected": "case count exact",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-135",
+      "group": "DELIVERY",
+      "title": "receipt honesty",
+      "expected": "unrun/failed not marked PASS",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-136",
+      "group": "DELIVERY",
+      "title": "OPEN ledger emitted",
+      "expected": "all OPEN preserved",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-137",
+      "group": "DELIVERY",
+      "title": "changed-file inventory",
+      "expected": "complete",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-138",
+      "group": "DELIVERY",
+      "title": "hash manifest emitted",
+      "expected": "pouch/implementation identities",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-139",
+      "group": "DELIVERY",
+      "title": "branch clean pushed",
+      "expected": "exact remote SHA",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    },
+    {
+      "id": "P5-140",
+      "group": "DELIVERY",
+      "title": "whole game PREPRODUCTION",
+      "expected": "no release claim",
+      "kind": "MUST_PASS",
+      "mandatory": true
+    }
+  ]
+}

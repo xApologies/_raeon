@@ -1,3 +1,4 @@
+import {projectPass05File} from './pass-05-contract.mjs';
 import {matchesPass03b} from './pass-03b-contract.mjs';
 import {matchesRuntimeNavigation} from './genesis-runtime-contract.mjs';
 import fs from 'node:fs';
@@ -34,7 +35,7 @@ export function projectBeforeGameDefinition(root, state) {
   return reverseAmendments(state, loadGameDefinitionContract(root).semantic_changes);
 }
 export function projectGameDefinitionFile(root, file, value) {
-  return reverseAmendments(value, loadGameDefinitionContract(root).json_changes[file] ?? []);
+  return reverseAmendments(projectPass05File(root,file,value), loadGameDefinitionContract(root).json_changes[file] ?? []);
 }
 export function projectGameDefinitionText(root, file, text) {
   for (const change of loadGameDefinitionContract(root).text_changes[file] ?? []) {

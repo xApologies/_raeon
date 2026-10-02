@@ -1,0 +1,2086 @@
+{
+  "schema_version": 1,
+  "authority": "GAME_CANON",
+  "abi": "raeon-match-tempo-v1",
+  "source_pouch_sha256": "d0c8a763eb0a4901a118611742a8abfd0075227f4f0ad1b3bba4784eead8830a",
+  "historical_conformance_abi": "raeon-color-prime-values-v1",
+  "rules": {
+    "opening_draw": 7,
+    "hand_maximum": 10,
+    "normal_draw": 1,
+    "constructed_deck": 60,
+    "mulligan_enabled": true,
+    "mulligan_procedure": "OPEN",
+    "hand_overflow": "OPEN_ATOMIC_REJECTION",
+    "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+    "first_player_prng": "OPEN",
+    "compensation": {
+      "count": 1,
+      "ordinary_deck_card": false,
+      "occupies_hand": true,
+      "draw": 1,
+      "single_use": true,
+      "resource_cost": 0,
+      "identity_name_flavor": "OPEN",
+      "timing": "OPEN"
+    },
+    "phases": [
+      "REFRESH",
+      "DRAW",
+      "ACTIVE",
+      "END"
+    ],
+    "refresh": "OWN_TURN_BEGINNING_ONLY",
+    "end_or_switch_refresh": false,
+    "refresh_heals": false,
+    "refresh_changes_topology": false,
+    "charge": {
+      "storage": [
+        "H",
+        "N",
+        "R"
+      ],
+      "quantity": "Q=N*rank+R",
+      "health_maximum": "native_rank",
+      "node_cap": null,
+      "restore_order": [
+        "H",
+        "Q"
+      ],
+      "degrade_order": [
+        "Q",
+        "H"
+      ],
+      "migration": "N=C//rank; R=C%rank",
+      "self_restore": false,
+      "white_reactivation": [
+        1,
+        0,
+        0
+      ]
+    },
+    "defense": {
+      "order": [
+        "DEGRADE",
+        "CONSEQUENCES",
+        "TERMINAL_CHECK",
+        "LEGAL_OPTIONS",
+        "ONE_RESTORE_OR_PASS"
+      ],
+      "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+      "seconds": "OPEN",
+      "timeout": "EXPLICIT_PASS_EVENT",
+      "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+      "degrade_source_allowed": false
+    },
+    "utility": {
+      "generic_resource_cost": 0,
+      "requires": [
+        "HAND_SOURCE",
+        "ADMITTED_TIMING",
+        "TARGET",
+        "MATHEMATICS",
+        "EFFECT"
+      ],
+      "generic_timing": "OPEN",
+      "generic_disposition": "UNSUPPLIED"
+    },
+    "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+    "terminal_before_defense": true,
+    "post_terminal_gameplay": false,
+    "simultaneous_terminal": "OPEN",
+    "exhaustion": [
+      {
+        "stage": 1,
+        "color": "RED",
+        "magnitude": 1
+      },
+      {
+        "stage": 2,
+        "color": "ORANGE",
+        "magnitude": 2
+      },
+      {
+        "stage": 3,
+        "color": "YELLOW",
+        "magnitude": 3
+      },
+      {
+        "stage": 4,
+        "color": "GREEN",
+        "magnitude": 4
+      },
+      {
+        "stage": 5,
+        "color": "BLUE",
+        "magnitude": 5
+      },
+      {
+        "stage": 6,
+        "color": "VIOLET",
+        "magnitude": 6
+      }
+    ],
+    "exhaustion_target": "OPEN",
+    "exhaustion_stage_7_plus": "OPEN",
+    "exhaustion_applies_damage": false
+  },
+  "open_items": [
+    {
+      "id": "P5-OPEN-001",
+      "topic": "mulligan procedure",
+      "detail": "Which cards may be replaced, replacement count, repeated mulligans, and shuffle-back timing."
+    },
+    {
+      "id": "P5-OPEN-002",
+      "topic": "second-player compensation timing/name",
+      "detail": "Final identity/name/flavor and exact legal timing window for the draw-one compensation card."
+    },
+    {
+      "id": "P5-OPEN-003",
+      "topic": "hand overflow",
+      "detail": "What happens when a draw/effect would exceed the 10-card hand maximum."
+    },
+    {
+      "id": "P5-OPEN-004",
+      "topic": "defense timer duration",
+      "detail": "Exact seconds. Model a bounded window and explicit PASS/timeout event without guessing duration."
+    },
+    {
+      "id": "P5-OPEN-005",
+      "topic": "simultaneous terminal resolution",
+      "detail": "Tie/draw law if both players satisfy terminal loss simultaneously."
+    },
+    {
+      "id": "P5-OPEN-006",
+      "topic": "deck exhaustion target law",
+      "detail": "Which field/Prime receives each forced Degrade and target progression."
+    },
+    {
+      "id": "P5-OPEN-007",
+      "topic": "deck exhaustion stage 7+",
+      "detail": "Behavior after Violet/6."
+    },
+    {
+      "id": "P5-OPEN-008",
+      "topic": "generic Utility timing",
+      "detail": "Utilities cost no resource, but general windows and many effect-specific timing rules remain unresolved."
+    },
+    {
+      "id": "P5-OPEN-009",
+      "topic": "temporary Configuration Space expiry",
+      "detail": "Lifetime/expiry of effect-created spaces."
+    },
+    {
+      "id": "P5-OPEN-010",
+      "topic": "derived-field additions and splitting",
+      "detail": "No law for adding to or splitting derived/fused spaces."
+    },
+    {
+      "id": "P5-OPEN-011",
+      "topic": "recursive fusion/emergence",
+      "detail": "No authorization for fusion-of-fusion or recursive emergence."
+    },
+    {
+      "id": "P5-OPEN-012",
+      "topic": "derived/emergent production cadence",
+      "detail": "No new output-generation cadence for derived/emergent objects."
+    },
+    {
+      "id": "P5-OPEN-013",
+      "topic": "match timer",
+      "detail": "Approximate 15-minute target is not a hard timer."
+    },
+    {
+      "id": "P5-OPEN-014",
+      "topic": "native presentation",
+      "detail": "UI/graphics/animation/device performance remain outside Pass 5."
+    },
+    {
+      "id": "P5-OPEN-015",
+      "topic": "HOST-RUNTIME-001",
+      "detail": "Unrestricted repeated native-runtime lifetime stability on Windows remains OPEN_QUALIFIED."
+    },
+    {
+      "id": "P5-OPEN-016",
+      "topic": "final Utility catalog",
+      "detail": "Final names/IDs/wording for ordinary Utility slots remain outside this pass."
+    }
+  ],
+  "actions": {
+    "ADOPT_PASS05": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "ADOPT_PASS05",
+      "effect_source": "conformance:pass05:adopt_pass05",
+      "requires": [
+        "EXACT_HISTORICAL_VALUES",
+        "PRESERVE_IDENTITY_REVISION_HISTORY",
+        "CANONICAL_N_R"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    },
+    "SETUP_MATCH": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "SETUP_MATCH",
+      "effect_source": "conformance:pass05:setup_match",
+      "requires": [
+        "TWO_CONSTRUCTED_INVENTORIES",
+        "EMPTY_HANDS",
+        "OPENING_SEVEN",
+        "MAX_TEN",
+        "FAIR_BINARY_RESULT",
+        "NON_DECK_COMPENSATION"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    },
+    "BEGIN_TURN": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "BEGIN_TURN",
+      "effect_source": "conformance:pass05:begin_turn",
+      "requires": [
+        "OWN_REFRESH_PHASE",
+        "OWN_LIVE_ORDINARY_USED_ONLY",
+        "NO_HEAL",
+        "NO_TOPOLOGY_CHANGE"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    },
+    "NORMAL_DRAW": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "NORMAL_DRAW",
+      "effect_source": "conformance:pass05:normal_draw",
+      "requires": [
+        "OWN_DRAW_PHASE",
+        "ONCE_PER_TURN",
+        "TOP_CARD",
+        "CAPACITY_PRECHECK",
+        "EXHAUSTION_OPEN_BOUNDARY"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    },
+    "END_ACTIVE": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "END_ACTIVE",
+      "effect_source": "conformance:pass05:end_active",
+      "requires": [
+        "OWN_ACTIVE",
+        "NO_OPEN_DEFENSE",
+        "NO_REFRESH"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    },
+    "ADVANCE_TURN": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "ADVANCE_TURN",
+      "effect_source": "conformance:pass05:advance_turn",
+      "requires": [
+        "END_PHASE",
+        "OPPONENT_REFRESH_PHASE",
+        "NO_REFRESH"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    },
+    "GENERATE_CHARGE": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "GENERATE_CHARGE",
+      "effect_source": "conformance:pass05:generate_charge",
+      "requires": [
+        "OWN_ACTIVE",
+        "READY_ORDINARY_SOURCE",
+        "HEALTH_FIRST",
+        "UNBOUNDED_CHARGE",
+        "ROAD_CLOSE"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    },
+    "SPEND_CHARGE": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "SPEND_CHARGE",
+      "effect_source": "conformance:pass05:spend_charge",
+      "requires": [
+        "OWN_ACTIVE",
+        "HEALTHY_CHARGED",
+        "PARTIAL_REPEATED_SPEND",
+        "FAMILY_SIDE",
+        "NO_SELF_RESTORE",
+        "Q_BEFORE_H",
+        "CANONICAL_N_R",
+        "ROAD_CLOSE",
+        "CONSEQUENCES_TERMINAL_THEN_DEFENSE"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    },
+    "DEFENSE_RESTORE": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "DEFENSE_RESTORE",
+      "effect_source": "conformance:pass05:defense_restore",
+      "requires": [
+        "OPEN_WINDOW",
+        "DEFENDER",
+        "BOUND_SURVIVING_TARGET",
+        "RESTORE_OR_UNIVERSAL",
+        "STORED_OR_ONE_READY_FIELD",
+        "ATOMIC_COMPOUND_ROAD",
+        "CLOSE_IMMEDIATELY"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    },
+    "DEFENSE_PASS": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "DEFENSE_PASS",
+      "effect_source": "conformance:pass05:defense_pass",
+      "requires": [
+        "OPEN_WINDOW",
+        "DEFENDER",
+        "PASS_OR_TRUSTED_TIMEOUT",
+        "NO_TIMER_SECONDS"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    },
+    "EFFECT_DRAW": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "EFFECT_DRAW",
+      "effect_source": "conformance:pass05:effect_draw",
+      "requires": [
+        "UTILITY_IN_HAND",
+        "EXPLICIT_EFFECT_TIMING",
+        "SOURCE_DECLARED_DRAW_COUNT",
+        "ZERO_GENERIC_COST",
+        "TOP_CARDS",
+        "CAPACITY_PRECHECK"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    },
+    "USE_COMPENSATION": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "USE_COMPENSATION",
+      "effect_source": "conformance:pass05:use_compensation",
+      "requires": [
+        "OWN_UNSPENT_SETUP_OBJECT_IN_HAND",
+        "EXPLICIT_EFFECT_TIMING",
+        "ZERO_GENERIC_COST",
+        "DRAW_ONE",
+        "ATOMIC_CONSUMPTION"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    },
+    "WHITE_REACTIVATE": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "WHITE_REACTIVATE",
+      "effect_source": "conformance:pass05:white_reactivate",
+      "requires": [
+        "WHITE_UTILITY_IN_HAND",
+        "EXPLICIT_EFFECT_TIMING",
+        "ZERO_GENERIC_COST",
+        "FRIENDLY_INACTIVE",
+        "H1_N0_R0",
+        "ROAD_CLOSE"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    },
+    "REQUEST_OPEN_RULE": {
+      "kind": "extension",
+      "abi": "raeon-match-tempo-v1",
+      "operation": "REQUEST_OPEN_RULE",
+      "effect_source": "conformance:pass05:request_open_rule",
+      "requires": [
+        "OPEN_ITEMS_ALWAYS_REJECT",
+        "NO_INVENTED_RULE"
+      ],
+      "rules": {
+        "opening_draw": 7,
+        "hand_maximum": 10,
+        "normal_draw": 1,
+        "constructed_deck": 60,
+        "mulligan_enabled": true,
+        "mulligan_procedure": "OPEN",
+        "hand_overflow": "OPEN_ATOMIC_REJECTION",
+        "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+        "first_player_prng": "OPEN",
+        "compensation": {
+          "count": 1,
+          "ordinary_deck_card": false,
+          "occupies_hand": true,
+          "draw": 1,
+          "single_use": true,
+          "resource_cost": 0,
+          "identity_name_flavor": "OPEN",
+          "timing": "OPEN"
+        },
+        "phases": [
+          "REFRESH",
+          "DRAW",
+          "ACTIVE",
+          "END"
+        ],
+        "refresh": "OWN_TURN_BEGINNING_ONLY",
+        "end_or_switch_refresh": false,
+        "refresh_heals": false,
+        "refresh_changes_topology": false,
+        "charge": {
+          "storage": [
+            "H",
+            "N",
+            "R"
+          ],
+          "quantity": "Q=N*rank+R",
+          "health_maximum": "native_rank",
+          "node_cap": null,
+          "restore_order": [
+            "H",
+            "Q"
+          ],
+          "degrade_order": [
+            "Q",
+            "H"
+          ],
+          "migration": "N=C//rank; R=C%rank",
+          "self_restore": false,
+          "white_reactivation": [
+            1,
+            0,
+            0
+          ]
+        },
+        "defense": {
+          "order": [
+            "DEGRADE",
+            "CONSEQUENCES",
+            "TERMINAL_CHECK",
+            "LEGAL_OPTIONS",
+            "ONE_RESTORE_OR_PASS"
+          ],
+          "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+          "seconds": "OPEN",
+          "timeout": "EXPLICIT_PASS_EVENT",
+          "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+          "degrade_source_allowed": false
+        },
+        "utility": {
+          "generic_resource_cost": 0,
+          "requires": [
+            "HAND_SOURCE",
+            "ADMITTED_TIMING",
+            "TARGET",
+            "MATHEMATICS",
+            "EFFECT"
+          ],
+          "generic_timing": "OPEN",
+          "generic_disposition": "UNSUPPLIED"
+        },
+        "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+        "terminal_before_defense": true,
+        "post_terminal_gameplay": false,
+        "simultaneous_terminal": "OPEN",
+        "exhaustion": [
+          {
+            "stage": 1,
+            "color": "RED",
+            "magnitude": 1
+          },
+          {
+            "stage": 2,
+            "color": "ORANGE",
+            "magnitude": 2
+          },
+          {
+            "stage": 3,
+            "color": "YELLOW",
+            "magnitude": 3
+          },
+          {
+            "stage": 4,
+            "color": "GREEN",
+            "magnitude": 4
+          },
+          {
+            "stage": 5,
+            "color": "BLUE",
+            "magnitude": 5
+          },
+          {
+            "stage": 6,
+            "color": "VIOLET",
+            "magnitude": 6
+          }
+        ],
+        "exhaustion_target": "OPEN",
+        "exhaustion_stage_7_plus": "OPEN",
+        "exhaustion_applies_damage": false
+      }
+    }
+  }
+}

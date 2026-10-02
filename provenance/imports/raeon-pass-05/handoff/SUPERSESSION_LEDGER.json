@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "principle": "Pass 4 remains historically correct under its authority. Pass 5 supersedes only the named rules below.",
+  "baseline_pass04_head": "63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+  "entries": [
+    {
+      "id": "SUP-01",
+      "old": "Hand normal capacity = 7",
+      "new": "Opening hand drawn from deck = 7; hand maximum = 10",
+      "affected_authority": [
+        "data/game/match.json",
+        "data/board/genesis-horizon.json"
+      ]
+    },
+    {
+      "id": "SUP-02",
+      "old": "starting hand / normal draw / first player = OPEN",
+      "new": "opening hand 7; normal draw 1 per own turn; fair binary first-player selection; second-player draw-one compensation design accepted",
+      "affected_authority": [
+        "data/game/match.json"
+      ]
+    },
+    {
+      "id": "SUP-03",
+      "old": "exact refresh boundary = OPEN; trusted refresh primitive only",
+      "new": "owner refreshes all eligible USED ordinary fields at beginning of own turn; switching player/end ACTIVE never refreshes",
+      "affected_authority": [
+        "data/game/match.json",
+        "data/game/pass-04-runtime.json"
+      ]
+    },
+    {
+      "id": "SUP-04",
+      "old": "action/reaction ordering = OPEN",
+      "new": "Degrade resolves first; nonterminal eligible defender then receives one short Restore-or-Pass DEFENSE window; timeout auto-PASS",
+      "affected_authority": [
+        "data/game/match.json",
+        "data/game/pass-04-runtime.json"
+      ]
+    },
+    {
+      "id": "SUP-05",
+      "old": "Prime C bounded by rank; overflow rejected",
+      "new": "Prime charge storage is Q=N*rank+R with repeated completed native-color nodes and a partial remainder; overflow rolls into subsequent nodes",
+      "affected_authority": [
+        "data/cycles/cycle_01/primes/working-model.json",
+        "game/primes/state.py",
+        "data/game/pass-04-runtime.json"
+      ]
+    },
+    {
+      "id": "SUP-06",
+      "old": "Prime self-spend target rejected because no authority",
+      "new": "Prime self-Restore explicitly prohibited as GAME_CANON; field-origin Restore/charge remains legal when otherwise admitted",
+      "affected_authority": [
+        "data/game/match.json",
+        "game/primes/state.py"
+      ]
+    },
+    {
+      "id": "SUP-07",
+      "old": "victory/loss = OPEN",
+      "new": "a player loses immediately when all three owned Prime Fields are INACTIVE",
+      "affected_authority": [
+        "data/game/match.json"
+      ]
+    },
+    {
+      "id": "SUP-08",
+      "old": "generic Utility cost = OPEN",
+      "new": "Utilities have zero resource cost; Hand/timing/target/math admission still applies",
+      "affected_authority": [
+        "design/cards/cycle_01/utilities/SYSTEM.md",
+        "data/cycles/cycle_01/utilities/overview.json"
+      ]
+    }
+  ]
+}

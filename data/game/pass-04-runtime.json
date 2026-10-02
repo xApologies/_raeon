@@ -108,5 +108,11 @@
     "Derived additions/splitting/recursive fusion-emergence and derived/emergent production cadence",
     "Native UI/graphics and unrestricted host-runtime stability"
   ],
-  "whole_game_phase": "PREPRODUCTION"
+  "whole_game_phase": "PREPRODUCTION",
+  "effective_authority": {
+    "pass": "05",
+    "rules": "data/game/pass-05-runtime.json#/rules",
+    "supersession_ledger": "provenance/imports/raeon-pass-05/handoff/SUPERSESSION_LEDGER.json",
+    "legacy_payload_scope": "SEALED_PASS_04_CONFORMANCE; superseded entries are not live Pass-05 authority"
+  }
 }

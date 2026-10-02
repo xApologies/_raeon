@@ -1,5 +1,8 @@
 # Utility system
 
+Current Pass-05 authority: [match tempo and charge-node rules](../../../../data/game/pass-05-runtime.json). The named supersessions in that contract govern current matches. The earlier text below remains the sealed design/conformance record; its superseded capacities, bounded charge, and OPEN timing entries do not govern an adopted Pass-05 match. Whole-game PREPRODUCTION and unaccepted module gates remain unchanged.
+
+
 <!-- raeon:current-spec utilities -->
 
 Authority: GAME_CANON / STRUCTURALLY DEFINED. All 51 ordinary Utility slots are accounted for: the prior 50 remain unchanged and White Restore Prime is additive. Module status DESIGN; exact catalog PARTIALLY FORMALIZED, not implementation-ready. Balance/gameplay UNTESTED; runtime OPEN / UNIMPLEMENTED.

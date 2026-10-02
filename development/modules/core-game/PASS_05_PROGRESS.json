@@ -1,0 +1,11 @@
+{
+  "status": "IN_PROGRESS",
+  "base_sha": "63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+  "branch": "codex/raeon-pass-05",
+  "acceptance": {
+    "total": 140,
+    "status": "NOT_YET_RUN"
+  },
+  "whole_game_phase": "PREPRODUCTION",
+  "HOST-RUNTIME-001": "OPEN_QUALIFIED"
+}

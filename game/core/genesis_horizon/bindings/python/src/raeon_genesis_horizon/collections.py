@@ -29,6 +29,11 @@ def validate_arguments(arguments, schema):
         if rule['type'] == 'text':
             if type(value) is not str or not 0 < len(value) <= rule.get('maximum', 256):
                 deny()
+        elif rule['type'] == 'natural':
+            # Canonical positive decimal INT, within the existing frame budget.
+            # Decimal text preserves precision across the safe-number Port ABI.
+            if type(value) is not str or not value.isascii() or not value.isdecimal() or value[0] == '0':
+                deny()
         elif rule['type'] == 'texts':
             if type(value) is not list or len(value) > rule['maximum']:
                 deny()
@@ -197,6 +202,8 @@ class Collections:
         effect = self.context['grant']['effect']
         if effect.get('source') != spec['effect_source']:
             deny()
+        if self.extension and hasattr(self.extension, 'authorize_action'):
+            self.extension.authorize_action(spec)
         plan = {'spec': spec, 'kind': spec['kind']}
         if spec['kind'] == 'materialize':
             owner = self.context['owner']
@@ -280,6 +287,8 @@ class Collections:
             plan = self.extension.admit(spec)
         else:
             deny()
+        if self.extension and hasattr(self.extension, 'admit_plan'):
+            self.extension.admit_plan(plan)
         self.admitted = plan
         return self.b._put('ADMISSION', {'source': geo['resource_id'], 'operation': 'COLLECTION_TRANSACTION',
                                        'plan': digest(plan), 'admitted': True}, [geo['resource_id']])

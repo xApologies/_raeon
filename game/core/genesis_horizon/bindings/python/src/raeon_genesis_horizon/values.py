@@ -31,6 +31,16 @@ class IntegerInterpreter:
     def run(self, operation, left, right):
         if any(type(v) is not int or abs(v) > 2**53 for v in [left, right]):
             raise ValueError('ADMISSION_REJECTED')
+        return self.run_integer(operation, left, right)
+
+    def run_integer(self, operation, left, right):
+        """Native INT values; wire/frame resource bounds are a separate ABI.
+
+        The pinned VM supports arbitrary precision INT. This entry does not
+        silently convert through floating point or impose a domain magnitude.
+        """
+        if any(type(v) is not int for v in [left, right]):
+            raise ValueError('ADMISSION_REJECTED')
         template, slots = self.programs[operation]
         program = copy.deepcopy(template)
         replacements = {slots['left']: left, slots['right']: right}

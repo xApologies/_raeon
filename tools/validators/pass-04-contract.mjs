@@ -1,3 +1,4 @@
+import {matchesPass05} from './pass-05-contract.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
@@ -15,17 +16,19 @@ export function pass04(root) {
   if (decision.starting_sha !== 'd644a361aa2ce788a1da991b15e3b8e3be5c7cba' ||
       decision.whole_game_phase !== 'PREPRODUCTION') throw new Error('Pass-4 lineage or maturity drift');
   for (const [file, expected] of Object.entries({...decision.sources, ...decision.preserved_tests, ...decision.qmo_sources})) {
-    if (hash(fs.readFileSync(path.join(root, file))) !== expected) throw new Error('Pass-4 source integrity: ' + file);
+    const actual = hash(fs.readFileSync(path.join(root, file)));
+    if (actual !== expected && !matchesPass05(root,file,actual,expected)) throw new Error('Pass-4 source integrity: ' + file);
   }
   for (const [file, entry] of Object.entries(decision.changes)) {
-    if (hash(fs.readFileSync(path.join(root, file))) !== entry.after_sha256) throw new Error('Pass-4 changed source integrity: ' + file);
+    const actual = hash(fs.readFileSync(path.join(root, file)));
+    if (actual !== entry.after_sha256 && !matchesPass05(root,file,actual,entry.after_sha256)) throw new Error('Pass-4 changed source integrity: ' + file);
   }
   return decision;
 }
 
 export function matchesPass04(root, file, actual, historical) {
   const entry = pass04(root)?.changes[file];
-  return Boolean(entry && entry.before_sha256 === historical && entry.after_sha256 === actual);
+  return Boolean(entry && entry.before_sha256 === historical && (entry.after_sha256 === actual || matchesPass05(root,file,actual,entry.after_sha256))) || matchesPass05(root,file,actual,historical);
 }
 
 export function pass04Sources(root, inventory, prior) {

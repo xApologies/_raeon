@@ -138,8 +138,15 @@ def audit(root, output):
     repo=read('repository-validation.json')
     repo_ok=repo.get('status')=='PASS' and repo.get('implementation_sha256')==digest
     mark([99,100,101],repo_ok,['repository-validation.json','all validators / regression tests / gameplay specs'])
-    mark([102],read('verify.json').get('deterministic_rebuild') is True and read('verify.json').get('compiled_sources')==46,
-         ['46-source deterministic Genesis verify.json'])
+    from genesis_runtime_pass05 import successor
+    following=successor(root,branch)
+    preserved_compile=read('verify.json').get('compiled_sources')==46
+    if following:
+        predecessor=json.loads((root/'provenance/imports/raeon-pass-05/entry.json').read_text())['compiled_sources']
+        built=read('build.json').get('artifacts',{})
+        preserved_compile=len(predecessor)==46 and all(all(built.get(p,{}).get(k)==v[k] for k in ('source_sha256','bytecode_sha256')) for p,v in predecessor.items())
+    mark([102],read('verify.json').get('deterministic_rebuild') is True and preserved_compile,
+         ['all 46 inherited sources and bytecode commitments preserved in deterministic verify.json'])
     dist=read('distribution-verification.json')
     fresh=dist.get('status')=='PASS' and dist.get('pass04_scene')=='PASS' and len(dist.get('archives',{}))==2 and all(
         a['implementation_sha256']==digest and sha(a['path'])==a['sha256'] for a in dist['archives'].values())
@@ -153,7 +160,10 @@ def audit(root, output):
         receipt.get('starting_sha')==START and receipt.get('main_sha')==MAIN and
         receipt.get('ending_sha')==receipt.get('remote_sha')==archive_commit and
         receipt.get('implementation_sha256')==digest and receipt.get('receipt_scope')=='VALIDATED_IMPLEMENTATION_AND_ARCHIVES')
-    mark([105],ancestry and branch=='codex/raeon-pass-04' and remote and remote[0]==head and clean and main==MAIN and
+    if following:
+        successor_decision=json.loads((root/'provenance/decisions/raeon-pass-05.json').read_text())
+        exact_receipt=all(sha(p)==v for p,v in successor_decision['sealed_receipts'].items())
+    mark([105],ancestry and (following or branch=='codex/raeon-pass-04') and remote and remote[0]==head and clean and main==MAIN and
          exact_receipt and (root/'development/modules/core-game/PASS_04_RECEIPT.md').is_file(),
          ['exact implementation start/end/remote/main SHA; live final HEAD/remote in this audit','PASS_04_RECEIPT.md','PASS_04_PROGRESS.json'])
     contract=json.loads((root/'data/game/pass-04-runtime.json').read_text())

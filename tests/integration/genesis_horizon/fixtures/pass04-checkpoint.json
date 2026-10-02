@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "source_commit": "63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+  "verified_files": 1190,
+  "checkpoint": {
+    "name": "24454d3ded504127b5574637dee4b3c1",
+    "sha256": "92be41943435f7cc7d961f4c1bb43cd781a056e91dee412f30d2411debd72347",
+    "root": "3af4efd54b7aaab495357963cb818465d58a129ea30bcc5429626818d101ddbe"
+  },
+  "prime_values": {
+    "pass05-historical-migration-sample:55336355630a6ccc50995c67bfcebd9c": {
+      "id": "pass05-historical-migration-sample:55336355630a6ccc50995c67bfcebd9c",
+      "slot": "player_1_prime_1",
+      "catalog": "source:data/cycles/cycle_01/primes/status.json#/objects/0",
+      "identity_key": "restore_yellow",
+      "family": "Restore",
+      "rank": "Yellow",
+      "H_max": 3,
+      "C_max": 3,
+      "H": 3,
+      "C": 2,
+      "state": "OPERATIONAL_CHARGED",
+      "revision": 2
+    },
+    "pass05-historical-migration-sample:fb24c49b178266e4de7d7d59e566b9b9": {
+      "id": "pass05-historical-migration-sample:fb24c49b178266e4de7d7d59e566b9b9",
+      "slot": "player_1_prime_2",
+      "catalog": "source:data/cycles/cycle_01/primes/status.json#/objects/13",
+      "identity_key": "universal_green",
+      "family": "Universal",
+      "rank": "Green",
+      "H_max": 4,
+      "C_max": 4,
+      "H": 4,
+      "C": 1,
+      "state": "OPERATIONAL_CHARGED",
+      "revision": 1
+    },
+    "pass05-historical-migration-sample:3335a73782e10f1c2c03045a076650e7": {
+      "id": "pass05-historical-migration-sample:3335a73782e10f1c2c03045a076650e7",
+      "slot": "player_1_prime_3",
+      "catalog": "source:data/cycles/cycle_01/primes/status.json#/objects/5",
+      "identity_key": "degrade_yellow",
+      "family": "Degrade",
+      "rank": "Yellow",
+      "H_max": 3,
+      "C_max": 3,
+      "H": 3,
+      "C": 3,
+      "state": "OPERATIONAL_CHARGED",
+      "revision": 1
+    }
+  },
+  "binding_contract": "365dce2ef1352cc9b3bd4c1f6086779fa8b977b8516d2632b1a5588fa23310eb",
+  "application_binding_contract": "dbfbc0d41571564114fa496edb4664fd15e00bd80831e972e2e6f304e9fa7b42",
+  "package_sha256": "dcf511852fcc4f4ab074f41d5459719e74bf14fc913a1fd5596b150311a6af1a",
+  "manifest_commitment": "4ea80fcf2226264f3c192c60ea1d734984b6fad32a66a57aaae2a74365a77722",
+  "archive_sha256": "e709e2bd1cd9f74209efc7510fa274f797690c118e00b416176cb59bf347318c"
+}

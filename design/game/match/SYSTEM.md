@@ -1,5 +1,8 @@
 # Match and turn design
 
+Current Pass-05 authority: [match tempo and charge-node rules](../../../data/game/pass-05-runtime.json). The named supersessions in that contract govern current matches. The earlier text below remains the sealed design/conformance record; its superseded capacities, bounded charge, and OPEN timing entries do not govern an adopted Pass-05 match. Whole-game PREPRODUCTION and unaccepted module gates remain unchanged.
+
+
 <!-- raeon:current-spec match -->
 
 Authority: GAME_CANON for the 2026-09-30 rules below. [Structured match rules](../../../data/game/match.json) distinguish accepted constraints from unresolved sequencing.

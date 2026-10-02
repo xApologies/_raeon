@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "pouch": "RAEON_DIPLOMATIC_POUCH_PASS_05_2026-10-01",
+  "repository": "xApologies/_raeon",
+  "target_branch": "codex/raeon-pass-05",
+  "required_base": "63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+  "pass04_validated_implementation_sha": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+  "pass04_receipt_sha": "f1b5aede39be01d4835e433fdb98429c249b2538",
+  "main_sha_at_design_freeze": "69a0030805b8c3858c877a514e2f50644421115a",
+  "upstream_repository": "xApologies/_bricked",
+  "upstream_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d",
+  "upstream_policy": "READ_ONLY",
+  "whole_game_phase": "PREPRODUCTION",
+  "pass04_status": "AUDITED_PASS_108_OF_108",
+  "host_runtime_risk": "HOST-RUNTIME-001 OPEN_QUALIFIED",
+  "architecture_lock": {
+    "genesis_horizon_domains": [
+      "SEA",
+      "SHELL",
+      "NEXUS",
+      "STATE"
+    ],
+    "gameplay_truth": "GENESIS_STATE",
+    "sole_internal_color_transport": "RAINBOW_ROAD",
+    "python_role": "TRUSTED_HOST_REFERENCE_INTEGRATION_NOT_GAMEPLAY_AUTHORITY",
+    "shipped_runtime_dependency_on_github_or_bricked": false
+  },
+  "pass05_scope": [
+    "prime charge-node storage and Pass-4 H/C migration",
+    "opening hand and hand-capacity update",
+    "normal draw cadence",
+    "first-player random outcome and second-player compensation design",
+    "own-turn refresh boundary",
+    "turn skeleton",
+    "post-Degrade DEFENSE recovery window",
+    "Prime no-self-Restore invariant",
+    "zero-resource Utility cost law",
+    "three-INACTIVE-Prime terminal condition",
+    "deck-exhaustion escalation design record with unresolved target law preserved OPEN"
+  ]
+}

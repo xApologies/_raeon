@@ -148,7 +148,8 @@ def audit(root, output):
          and read('repository-validation.json').get('implementation_sha256')==implementation,
          ['runtime 74 / Pass-2 83 / privacy 8','repository-validation.json','tests-integration.json'])
     mark([82],previous.get('total')==98 and previous.get('failed')==0,['pass-03-acceptance.json'])
-    mark([83],ancestry and (branch=='codex/raeon-pass-03b' or (branch=='codex/raeon-pass-04' and subprocess.run(['git','merge-base','--is-ancestor','d644a361aa2ce788a1da991b15e3b8e3be5c7cba','HEAD'],cwd=root).returncode==0)) and bool(remote) and remote[0]==head and clean and main==MAIN
+    from genesis_runtime_pass05 import successor
+    mark([83],ancestry and (successor(root,branch) or branch=='codex/raeon-pass-03b' or (branch=='codex/raeon-pass-04' and subprocess.run(['git','merge-base','--is-ancestor','d644a361aa2ce788a1da991b15e3b8e3be5c7cba','HEAD'],cwd=root).returncode==0)) and bool(remote) and remote[0]==head and clean and main==MAIN
          and (root/'development/modules/core-game/PASS_03B_RECEIPT.md').is_file(),['Git ancestry/HEAD/remote/clean/main','PASS_03B_RECEIPT.md'])
     mark([84],decision['whole_game_phase']=='PREPRODUCTION',['raeon-pass-03b.json'])
     pass04_present=(root/'provenance/decisions/raeon-pass-04.json').is_file()

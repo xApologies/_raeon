@@ -467,7 +467,7 @@ class Horizon:
             (target / 'manifest.json').write_bytes(canonical(manifest))
             return {'name': name, 'sha256': digest(manifest), 'root': self._state['root']}
 
-    def restore(self, checkpoint_ref, authority, budget=100000):
+    def restore(self, checkpoint_ref, authority, budget=100000, upgrade_package=None):
         with self._mutex:
             if not authority.get('restore'):
                 raise HorizonError('AUTHORITY_DENIED')
@@ -486,10 +486,33 @@ class Horizon:
             payload = envelope['payload']
             if digest(payload) != envelope['sha256'] or payload['upstream'] != self.lock['upstream_commit']:
                 raise HorizonError('RUNTIME_FAULT')
-            if payload['native'].get('application_values'):
-                if payload.get('binding_contract') != self._binding_contract():
+            replacement = None
+            if upgrade_package is not None:
+                if not authority.get('upgrade'):
+                    raise HorizonError('AUTHORITY_DENIED')
+                path = (self.root / upgrade_package['path']).resolve()
+                if not any(path.is_relative_to(allowed) for allowed in self.application_roots):
+                    raise HorizonError('AUTHORITY_DENIED')
+                new_manifest, definitions, sources = load_package(path, upgrade_package['sha256'])
+                old_app = payload['state']['application']
+                predecessor = {'binding_contract':payload.get('binding_contract'),
+                    'application_binding_contract':payload.get('application_binding_contract'),
+                    'package_sha256':old_app['package_sha256'],'manifest_commitment':digest(old_app['manifest'])}
+                if (predecessor not in new_manifest.get('checkpoint_predecessors',[]) or
+                        path.parent.relative_to(self.root).as_posix() != old_app['directory'] or
+                        new_manifest['id'] != old_app['id'] or
+                        new_manifest['files'][new_manifest['definitions']] != old_app['manifest']['files'][old_app['manifest']['definitions']] or
+                        any(payload['native']['application_definitions'].get(key) != value for key, value in definitions.items()) or
+                        new_manifest['realization_relations'] != payload['native']['realization_relations']):
                     raise HorizonError('RUNTIME_FAULT')
-                if payload.get('application_binding_contract') != self._application_binding_contract(payload['state']['application']['manifest']):
+                # Compatible code metadata only. The preserved semantic root and
+                # every old bytecode commitment are still checked below. Actual
+                # value migration requires a separately executed application action.
+                replacement = (new_manifest, upgrade_package['sha256'], sources)
+            if payload['native'].get('application_values'):
+                if replacement is None and payload.get('binding_contract') != self._binding_contract():
+                    raise HorizonError('RUNTIME_FAULT')
+                if replacement is None and payload.get('application_binding_contract') != self._application_binding_contract(payload['state']['application']['manifest']):
                     raise HorizonError('RUNTIME_FAULT')
             profile = json.loads((self.root / 'data/platform/genesis-horizon-profile.json').read_text(encoding='utf8'))
             if digest(profile) != payload['profile_hash']:
@@ -512,6 +535,7 @@ class Horizon:
                 return value
             payload = relocate(payload)
             old = (self._backend, self._state, getattr(self, 'profile', None), getattr(self, 'identity', None), self.storage)
+            old_builds = dict(self._builds)
             candidate = None
             try:
                 self.profile = profile
@@ -520,6 +544,8 @@ class Horizon:
                 self._backend = candidate
                 self._restore_record(payload['native'])
                 app = payload['state']['application']
+                if replacement:
+                    app.update(manifest=replacement[0],package_sha256=replacement[1])
                 if app and app['manifest'].get('schema_version') == 3:
                     from .collections import Collections
                     path = self.root / app['directory'] / 'manifest.json'
@@ -533,6 +559,10 @@ class Horizon:
                     self._builds[relative] = build
                 if self._semantic_root(payload['state']) != payload['state']['root']:
                     raise HorizonError('RUNTIME_FAULT')
+                if replacement:
+                    for name in sorted(replacement[2]):
+                        relative = app['directory'] + '/' + name
+                        self._builds[relative] = compile_paths([self.root/relative],self.root,Path(name).stem)
                 self._core('lifecycle', budget)
                 self.storage = candidate_root
                 self._save(payload['state'])
@@ -540,6 +570,7 @@ class Horizon:
                 if candidate:
                     candidate.close()
                 self._backend, self._state, self.profile, self.identity, self.storage = old
+                self._builds = old_builds
                 raise
             if old[0] and self.lifecycle != 'STOPPED':
                 old[0].close()

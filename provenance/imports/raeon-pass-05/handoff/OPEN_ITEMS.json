@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "hard_rule": "Codex MUST NOT silently resolve any OPEN item.",
+  "open": [
+    {
+      "id": "P5-OPEN-001",
+      "topic": "mulligan procedure",
+      "detail": "Which cards may be replaced, replacement count, repeated mulligans, and shuffle-back timing."
+    },
+    {
+      "id": "P5-OPEN-002",
+      "topic": "second-player compensation timing/name",
+      "detail": "Final identity/name/flavor and exact legal timing window for the draw-one compensation card."
+    },
+    {
+      "id": "P5-OPEN-003",
+      "topic": "hand overflow",
+      "detail": "What happens when a draw/effect would exceed the 10-card hand maximum."
+    },
+    {
+      "id": "P5-OPEN-004",
+      "topic": "defense timer duration",
+      "detail": "Exact seconds. Model a bounded window and explicit PASS/timeout event without guessing duration."
+    },
+    {
+      "id": "P5-OPEN-005",
+      "topic": "simultaneous terminal resolution",
+      "detail": "Tie/draw law if both players satisfy terminal loss simultaneously."
+    },
+    {
+      "id": "P5-OPEN-006",
+      "topic": "deck exhaustion target law",
+      "detail": "Which field/Prime receives each forced Degrade and target progression."
+    },
+    {
+      "id": "P5-OPEN-007",
+      "topic": "deck exhaustion stage 7+",
+      "detail": "Behavior after Violet/6."
+    },
+    {
+      "id": "P5-OPEN-008",
+      "topic": "generic Utility timing",
+      "detail": "Utilities cost no resource, but general windows and many effect-specific timing rules remain unresolved."
+    },
+    {
+      "id": "P5-OPEN-009",
+      "topic": "temporary Configuration Space expiry",
+      "detail": "Lifetime/expiry of effect-created spaces."
+    },
+    {
+      "id": "P5-OPEN-010",
+      "topic": "derived-field additions and splitting",
+      "detail": "No law for adding to or splitting derived/fused spaces."
+    },
+    {
+      "id": "P5-OPEN-011",
+      "topic": "recursive fusion/emergence",
+      "detail": "No authorization for fusion-of-fusion or recursive emergence."
+    },
+    {
+      "id": "P5-OPEN-012",
+      "topic": "derived/emergent production cadence",
+      "detail": "No new output-generation cadence for derived/emergent objects."
+    },
+    {
+      "id": "P5-OPEN-013",
+      "topic": "match timer",
+      "detail": "Approximate 15-minute target is not a hard timer."
+    },
+    {
+      "id": "P5-OPEN-014",
+      "topic": "native presentation",
+      "detail": "UI/graphics/animation/device performance remain outside Pass 5."
+    },
+    {
+      "id": "P5-OPEN-015",
+      "topic": "HOST-RUNTIME-001",
+      "detail": "Unrestricted repeated native-runtime lifetime stability on Windows remains OPEN_QUALIFIED."
+    },
+    {
+      "id": "P5-OPEN-016",
+      "topic": "final Utility catalog",
+      "detail": "Final names/IDs/wording for ordinary Utility slots remain outside this pass."
+    }
+  ]
+}

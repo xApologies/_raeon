@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "repository": "xApologies/_raeon",
+  "branch_at_handoff": "codex/raeon-pass-04",
+  "sealed_head": "63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+  "validated_implementation": "0c0bfe128cfd45655075ddea28d14e3e00c5388e",
+  "receipt_audit_commit": "f1b5aede39be01d4835e433fdb98429c249b2538",
+  "main": "69a0030805b8c3858c877a514e2f50644421115a",
+  "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d",
+  "pass04_pouch_sha256": "078b7d8c4c052dc506336337645950b2457655826a3eca160c79c116f3b07dbf",
+  "known_authority_sha256_from_pass04_provenance": {
+    "data/cycles/cycle_01/primes/status.json": "6dc178b8c5d544d8e497ee71eba63031e30291fec7399e09e2caf441be6685be",
+    "data/cycles/cycle_01/primes/working-model.json": "5f2d6ab23fe76d0193bc1185dc401412a8db3cd2781d0d6048c1b69792baf82b",
+    "data/cycles/cycle_01/utilities/restore_prime.json": "033ce2b76f65625530359475fb0cecde3bc1ae92f5ba157f61274a31597071f2",
+    "data/game/match.json": "17440fa774ec3a7048b450966cd32401e5212ce5054f94f1cf041702947149e7",
+    "data/game/pass-04-runtime.json": "02788120c5aa0caaf9c656b97c8cfe0b68600ba46196fab7d38a3328be6e2e38",
+    "data/topology/configuration-spaces.json": "6a7d59774fad10c9f92d6eb6ccd07299a368639427e890b52a45ad502f133b90",
+    "development/modules/core-game/HOST_RUNTIME_RISKS.json": "558b5705cd943b6516f8bfd69efefc338769e99269f424218bacdb9b4ec4a82b"
+  },
+  "qmo_preservation": {
+    "field_generators": 120,
+    "base_manifolds": 60,
+    "fusion_objects": 343,
+    "emergent_objects": 1691,
+    "atlas_objects": 2094,
+    "rule": "Do not regenerate or rewrite QMO mathematics."
+  }
+}

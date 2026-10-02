@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "pouch": "RAEON_DIPLOMATIC_POUCH_PASS_05_2026-10-01",
+  "date": "2026-10-01",
+  "repository": "xApologies/_raeon",
+  "required_base_sha": "63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+  "target_branch": "codex/raeon-pass-05",
+  "acceptance_case_count": 140,
+  "payloads": {
+    "00_EXECUTE_THIS_FIRST.md": {
+      "bytes": 1635,
+      "sha256": "e27f4441695b0e69ed49fd47e435a86a349c68b211709655ec02acfa8c5dda40"
+    },
+    "CODEX_EXECUTION_PLAN.md": {
+      "bytes": 2081,
+      "sha256": "cb424b40a0f4e2b855ca53ba31feedba6732a68b4667a857e808b21047df610a"
+    },
+    "CURRENT_STATE.json": {
+      "bytes": 1638,
+      "sha256": "3e903a4468459e74a670e0cf6872984286f22552809e99f2f5387d978e922bf2"
+    },
+    "HAND_SETUP_DRAW_CONTRACT.md": {
+      "bytes": 652,
+      "sha256": "1d8b1b249c3e49b8cb54db8ffb3806c9ce4ed08c7beb7f9443a6fc22520c2494"
+    },
+    "OPEN_ITEMS.json": {
+      "bytes": 2862,
+      "sha256": "d4164f70cd561541941f8295cedfb7ae38c5952eedf67d86f8b0a2066602fb42"
+    },
+    "PASS_05_ACCEPTANCE.json": {
+      "bytes": 27837,
+      "sha256": "9de44af88f02edda36e7bb1604821793dfce3a790008014b5066a8c6a79bf4f8"
+    },
+    "PASS_05_RULES.json": {
+      "bytes": 8768,
+      "sha256": "5ecd688be9f221851ed4f1ea56ce029e6179b8ca208d1549d24368aace7f6b88"
+    },
+    "PASS_05_RULES.md": {
+      "bytes": 3142,
+      "sha256": "5902b7bc9e924157602adf4eca63e0f19597d15965be1d3e8a23363786db1e7f"
+    },
+    "PRIME_CHARGE_NODE_CONTRACT.md": {
+      "bytes": 1447,
+      "sha256": "e85711d45d91ab032aab3bfe0027b3cf59d7add7a6dcdc757f0239eaf203eacc"
+    },
+    "README.md": {
+      "bytes": 1409,
+      "sha256": "54ff38b0a14b1f76ad2fba9c64d77bb39a811bb17974417ab1a82ea0c881727f"
+    },
+    "SOURCE_ANCHORS.json": {
+      "bytes": 1615,
+      "sha256": "fb3a2ee4a78f74be817e963ae102f83f853aa9da2901e840df7f5977ba7ee5ff"
+    },
+    "SUPERSESSION_LEDGER.json": {
+      "bytes": 2825,
+      "sha256": "980b6bcf7f2c945a0bef104cf0e0d05ed8f267b2c0477a5b689f444fda601df7"
+    },
+    "TURN_AND_DEFENSE_CONTRACT.md": {
+      "bytes": 1463,
+      "sha256": "e58d8e17bb660fc495b5ae3ce4b7ddaab8f1ac84da76f23899436a1eda8ef6a4"
+    },
+    "UTILITY_COST_CONTRACT.md": {
+      "bytes": 370,
+      "sha256": "124627814585452e2775dd5b1250cff5d9a5669d258b88b239d611dae3326df1"
+    },
+    "VERA_AUDIT_RUBRIC.md": {
+      "bytes": 1135,
+      "sha256": "f69535e65199dda7eaa91710ec8b93d535112b6670641508a23a7dff656d40a4"
+    },
+    "VERIFY_POUCH.py": {
+      "bytes": 1768,
+      "sha256": "d580ecbb75ffeee54778d1fc3607adf2ad8dd9f15c482550ce90bc0e2ac37a4b"
+    },
+    "VICTORY_AND_DECK_EXHAUSTION.md": {
+      "bytes": 678,
+      "sha256": "a4742bc5010ad93f0bb19f26046985118957feaae3a4658997819ebf609d88e2"
+    }
+  }
+}
