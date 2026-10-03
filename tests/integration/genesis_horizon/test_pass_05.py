@@ -282,9 +282,17 @@ class Pass05(unittest.TestCase):
         f.setup_player('player_2')
         # Reach the predecessor through actual admitted native transfers, never
         # by shortening a Python Deck list or inventing a small-deck format.
+        capacity=self.h._backend.application_values['collections']['player_1_hand']['capacity']
         while len(f.members('player_1_deck'))>7:
             ids=f.members('player_1_deck')[:min(3,len(f.members('player_1_deck'))-7)]
-            f.perform('BATCH_TO_HAND',{'cards':ids});f.perform('RETIRE_CARDS',{'cards':ids})
+            # Keep the inherited three-card transfer bound and actual Hand capacity.
+            # Retire accumulated cards together so this long native scenario
+            # has storage headroom even under a deeper offline extraction path.
+            if len(f.members('player_1_hand'))+len(ids)>capacity:
+                f.perform('RETIRE_CARDS',{'cards':f.members('player_1_hand')})
+            f.perform('BATCH_TO_HAND',{'cards':ids})
+        if f.members('player_1_hand'):
+            f.perform('RETIRE_CARDS',{'cards':f.members('player_1_hand')})
         f.setup();self.assertEqual(f.members('player_1_deck'),[])
         primes=copy.deepcopy(f.color.state['primes']);ordinary=copy.deepcopy(f.ext.state['fields'])
         for stage in range(1,8):

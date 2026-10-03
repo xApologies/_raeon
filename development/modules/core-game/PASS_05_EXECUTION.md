@@ -22,6 +22,8 @@ Generic Utility cost is zero. Real Hand source, effect-specific timing, target l
 
 ## Validation and delivery
 
+The first implementation snapshot `b188a1bc569c25f4fdca6b4206774ccef5a4ac4e` passed the full local gate, but its fresh offline exhaustion scenario hit the unchanged 256 MiB native-storage bound after a committed action. Delivery and teardown reported backpressure. The deeper extraction path increased retained native resource metadata. That failed archive run is retained and is not final acceptance evidence. The new exhaustion fixture now accumulates admitted three-card transfers within the actual predecessor Hand capacity and retires those cards together; Pass-05 setup subsequently applies capacity ten. An initial fixture adjustment assuming capacity ten before setup was correctly rejected by the inherited capacity-seven guard and was corrected before final validation. Every card still moves through real native operations; every gameplay assertion, inherited test, runtime storage limit, and game rule is preserved. The corrected fixture requires fresh validation.
+
 Implementation validation is in progress. No Pass-05 case is claimed PASS by this execution description. Actual suites, compiler identities, per-case acceptance, changed-file hashes, implementation commit and final remote evidence will be recorded in [progress](PASS_05_PROGRESS.json) and [receipt](PASS_05_RECEIPT.md).
 
 Whole game remains PREPRODUCTION. HOST-RUNTIME-001 remains OPEN_QUALIFIED under CPython3.12.10, default allocator and processor mask65536. No native device/presentation or unrestricted host-lifetime closure is claimed. `_bricked` remains read-only; all upstream tools execute only from ignored dependency copies.

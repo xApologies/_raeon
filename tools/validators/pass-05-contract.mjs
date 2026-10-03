@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 
 export const pass05Decision = 'provenance/decisions/raeon-pass-05.json';
-const acceptedDecisionHash = '5ea484b3f393c3528df618c836c0cf9ac7b5ec85ab6d9ff6e37b4de2ee49d1f4';
+const acceptedDecisionHash = '297f9ffc790ee5ff15c2ca871dec3d171f24c747686dc94b1ff442e7da325642';
 const hash = value => createHash('sha256').update(value).digest('hex');
 
 function declaration(root) {

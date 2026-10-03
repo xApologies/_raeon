@@ -47,7 +47,7 @@
     "tests/integration/genesis_horizon/fixtures/pass04-checkpoint.json": "6361a1820b5f1e7263aec9c28e0410983219d78d3d4318a90c78daf1d9b2b893",
     "tests/integration/genesis_horizon/fixtures/pass04-checkpoint.zip": "e709e2bd1cd9f74209efc7510fa274f797690c118e00b416176cb59bf347318c",
     "tests/integration/genesis_horizon/pass_05_support.py": "fd1b59ef940e778ec39a80ed283a37b0ab6da32bdf86967b3a8eb2160acbf158",
-    "tests/integration/genesis_horizon/test_pass_05.py": "b58b31da7597c68703b930ba50b14bb4ee75664b47826b9b7c80f530eac8613b",
+    "tests/integration/genesis_horizon/test_pass_05.py": "28f53eceab230b089b0ad2469454b6d4aada141b02d85012c9a5cdea988b6c3e",
     "tests/integration/genesis_horizon/test_pass_05_values.py": "6d180e37f30e2fc6bc73b746539b3233e8441cf96f580bd3818b3a89e857a75c",
     "tests/regression/pass-05-contract.test.mjs": "95d45e4b39507991470621fe474fc2a78821dfb62e46f25496b2d7839a028d94",
     "tools/genesis_runtime_pass05.py": "5e7e8f8459ba59ba9766bcf00ab71b5ae46ba51372e80b55d437049745930384"
