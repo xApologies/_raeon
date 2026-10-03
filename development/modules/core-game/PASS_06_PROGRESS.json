@@ -1,9 +1,3400 @@
 {
   "schema_version": 1,
-  "status": "IN_PROGRESS",
-  "starting_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+  "status": "PASS",
   "branch": "codex/raeon-pass-06",
-  "acceptance": "NOT_YET_COMPLETE",
+  "base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+  "ending_sha": "eaf1d457bbcda9b35ed614ca53dd93cd1a902306",
+  "remote_sha": "eaf1d457bbcda9b35ed614ca53dd93cd1a902306",
+  "main_sha": "69a0030805b8c3858c877a514e2f50644421115a",
+  "clean": true,
+  "implementation_sha256": "0b3bfba273198f33c0ad2391c2e5df3a9e0e390b814096e646afd03ed98af56e",
+  "total": 108,
+  "passed": 108,
+  "failed": 0,
+  "blocked": 0,
+  "cases": [
+    {
+      "id": "P6-001",
+      "group": "ENTRY",
+      "title": "base",
+      "expected": "388a241ba5674c157131601aad677ab52350f2c6",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "entry.json",
+        "sealed base and fetched predecessor branch",
+        "Git ancestor"
+      ]
+    },
+    {
+      "id": "P6-002",
+      "group": "ENTRY",
+      "title": "P5",
+      "expected": "140/140 preserved",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "fresh inherited 140/140 audit",
+        "sealed Pass05 receipts unchanged"
+      ]
+    },
+    {
+      "id": "P6-003",
+      "group": "ENTRY",
+      "title": "QMO",
+      "expected": "unchanged",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "unchanged original QMO SHA256 map"
+      ]
+    },
+    {
+      "id": "P6-004",
+      "group": "ENTRY",
+      "title": "privacy",
+      "expected": "preserved",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "all eight original projection privacy cases"
+      ]
+    },
+    {
+      "id": "P6-005",
+      "group": "ENTRY",
+      "title": "_bricked",
+      "expected": "read-only",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "clean pinned _bricked read-only comparison"
+      ]
+    },
+    {
+      "id": "P6-006",
+      "group": "ENTRY",
+      "title": "State",
+      "expected": "authority",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "compiled admission/closure mutation and Road bypass rejections",
+        "test_pass_06_security.Pass06Security.test_compiled_admission_closure_and_road_are_required"
+      ]
+    },
+    {
+      "id": "P6-007",
+      "group": "ENTRY",
+      "title": "Road",
+      "expected": "sole transport",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "compiled admission/closure mutation and Road bypass rejections",
+        "test_pass_06_security.Pass06Security.test_compiled_admission_closure_and_road_are_required"
+      ]
+    },
+    {
+      "id": "P6-008",
+      "group": "ENTRY",
+      "title": "HOST",
+      "expected": "OPEN_QUALIFIED",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "HOST-RUNTIME-001 preserved",
+        "actual qualified host process"
+      ]
+    },
+    {
+      "id": "P6-009",
+      "group": "ENTRY",
+      "title": "main",
+      "expected": "unmerged",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "local and remote main unchanged"
+      ]
+    },
+    {
+      "id": "P6-010",
+      "group": "MULLIGAN",
+      "title": "opportunity",
+      "expected": "one",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_mulligan_zero_seven_repeat_replay_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-011",
+      "group": "MULLIGAN",
+      "title": "0 cards",
+      "expected": "legal",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_mulligan_zero_seven_repeat_replay_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-012",
+      "group": "MULLIGAN",
+      "title": "7 cards",
+      "expected": "legal",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_mulligan_zero_seven_repeat_replay_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-013",
+      "group": "MULLIGAN",
+      "title": "return",
+      "expected": "Deck",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_mulligan_zero_seven_repeat_replay_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-014",
+      "group": "MULLIGAN",
+      "title": "shuffle",
+      "expected": "after return",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_mulligan_zero_seven_repeat_replay_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-015",
+      "group": "MULLIGAN",
+      "title": "redraw",
+      "expected": "same count",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_mulligan_zero_seven_repeat_replay_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-016",
+      "group": "MULLIGAN",
+      "title": "repeat",
+      "expected": "reject",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_mulligan_zero_seven_repeat_replay_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-017",
+      "group": "MULLIGAN",
+      "title": "penalty",
+      "expected": "none",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_mulligan_zero_seven_repeat_replay_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-018",
+      "group": "HAND",
+      "title": "max",
+      "expected": "10",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-019",
+      "group": "HAND",
+      "title": "full draw",
+      "expected": "0",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-020",
+      "group": "HAND",
+      "title": "8+Draw3",
+      "expected": "2",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-021",
+      "group": "HAND",
+      "title": "undrawn",
+      "expected": "remain ordered",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-022",
+      "group": "HAND",
+      "title": "burn",
+      "expected": "none",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-023",
+      "group": "HAND",
+      "title": "exile",
+      "expected": "none",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-024",
+      "group": "HAND",
+      "title": "effect draw",
+      "expected": "capacity",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-025",
+      "group": "HAND",
+      "title": "compensation",
+      "expected": "capacity",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-026",
+      "group": "MATCH",
+      "title": "compensation",
+      "expected": "own ACTIVE",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-027",
+      "group": "MATCH",
+      "title": "single",
+      "expected": "yes",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-028",
+      "group": "MATCH",
+      "title": "cost",
+      "expected": "0",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-029",
+      "group": "MATCH",
+      "title": "draw",
+      "expected": "1",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-030",
+      "group": "MATCH",
+      "title": "name",
+      "expected": "OPEN",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-031",
+      "group": "MATCH",
+      "title": "simultaneous",
+      "expected": "DRAW",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_simultaneous_consequence_boundary_draw_native_candidate",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-032",
+      "group": "MATCH",
+      "title": "post terminal",
+      "expected": "reject",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_prime_match_deterministic_replay_restart_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-033",
+      "group": "EXHAUSTION",
+      "title": "1",
+      "expected": "R1",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-034",
+      "group": "EXHAUSTION",
+      "title": "2",
+      "expected": "O2",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-035",
+      "group": "EXHAUSTION",
+      "title": "3",
+      "expected": "Y3",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-036",
+      "group": "EXHAUSTION",
+      "title": "4",
+      "expected": "G4",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-037",
+      "group": "EXHAUSTION",
+      "title": "5",
+      "expected": "B5",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-038",
+      "group": "EXHAUSTION",
+      "title": "6",
+      "expected": "V6",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-039",
+      "group": "EXHAUSTION",
+      "title": "7",
+      "expected": "W7",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-040",
+      "group": "EXHAUSTION",
+      "title": "8+",
+      "expected": "W7",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-041",
+      "group": "EXHAUSTION",
+      "title": "A",
+      "expected": "until inactive",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-042",
+      "group": "EXHAUSTION",
+      "title": "B",
+      "expected": "next",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-043",
+      "group": "EXHAUSTION",
+      "title": "C",
+      "expected": "next",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-044",
+      "group": "EXHAUSTION",
+      "title": "order",
+      "expected": "A->B->C",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-045",
+      "group": "EXHAUSTION",
+      "title": "damage",
+      "expected": "Q then H",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-046",
+      "group": "EXHAUSTION",
+      "title": "defense",
+      "expected": "normal",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-047",
+      "group": "EXHAUSTION",
+      "title": "third",
+      "expected": "terminal",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-048",
+      "group": "EXHAUSTION",
+      "title": "failed draw",
+      "expected": "no card",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-049",
+      "group": "TRANSDUCTION",
+      "title": "count",
+      "expected": "18",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-050",
+      "group": "TRANSDUCTION",
+      "title": "Restore",
+      "expected": "1..6",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_transduction_restore_six_native_amounts",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-051",
+      "group": "TRANSDUCTION",
+      "title": "Degrade",
+      "expected": "1..6",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_transduction_degrade_six_native_amounts_and_zero_cost",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-052",
+      "group": "TRANSDUCTION",
+      "title": "Universal",
+      "expected": "±1..±6",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_transduction_universal_six_both_resolution_choices",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-053",
+      "group": "TRANSDUCTION",
+      "title": "choice",
+      "expected": "resolution",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_transduction_universal_six_both_resolution_choices",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-054",
+      "group": "TRANSDUCTION",
+      "title": "authority",
+      "expected": "ACTIVE",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-055",
+      "group": "TRANSDUCTION",
+      "title": "White dedicated",
+      "expected": "absent",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-056",
+      "group": "DRAW",
+      "title": "Draw1",
+      "expected": "yes",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_deck_survey_selection_open_boundary_exchange_and_deep_survey",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-057",
+      "group": "DRAW",
+      "title": "Draw2",
+      "expected": "yes",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_deck_survey_selection_open_boundary_exchange_and_deep_survey",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-058",
+      "group": "DRAW",
+      "title": "Draw3",
+      "expected": "yes",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "actual 8+Draw3 transfers two; full Hand transfers zero; preserved Deck order"
+      ]
+    },
+    {
+      "id": "P6-059",
+      "group": "DRAW",
+      "title": "Survey",
+      "expected": "top3",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_deck_survey_selection_open_boundary_exchange_and_deep_survey",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-060",
+      "group": "DRAW",
+      "title": "Selection",
+      "expected": "top3",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_deck_survey_selection_open_boundary_exchange_and_deep_survey",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-061",
+      "group": "DRAW",
+      "title": "remainder order",
+      "expected": "OPEN",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_selection_unordered_bottom_cannot_be_drawn_or_observed_inventedly",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-062",
+      "group": "DRAW",
+      "title": "Exchange",
+      "expected": "graveyard then draw",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_deck_survey_selection_open_boundary_exchange_and_deep_survey",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-063",
+      "group": "DRAW",
+      "title": "Exchange cap",
+      "expected": "partial",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_short_deck_effects_and_unresolved_selection_order_guard",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-064",
+      "group": "DRAW",
+      "title": "Deep Survey",
+      "expected": "top7",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_deck_survey_selection_open_boundary_exchange_and_deep_survey",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-065",
+      "group": "DRAW",
+      "title": "short deck",
+      "expected": "available only",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_short_deck_effects_and_unresolved_selection_order_guard",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-066",
+      "group": "DRAW",
+      "title": "source",
+      "expected": "Hand",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_deck_survey_selection_open_boundary_exchange_and_deep_survey",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-067",
+      "group": "DRAW",
+      "title": "cost",
+      "expected": "0",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_draw_deck_survey_selection_open_boundary_exchange_and_deep_survey",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-068",
+      "group": "RECOVERY",
+      "title": "FG1",
+      "expected": "Hand",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_recovery_six_effects_capacity_identity_topology_and_prime_refusal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-069",
+      "group": "RECOVERY",
+      "title": "FG2",
+      "expected": "Hand",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_recovery_six_effects_capacity_identity_topology_and_prime_refusal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-070",
+      "group": "RECOVERY",
+      "title": "FG3",
+      "expected": "Hand",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_recovery_six_effects_capacity_identity_topology_and_prime_refusal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-071",
+      "group": "RECOVERY",
+      "title": "Utility1",
+      "expected": "Hand",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_recovery_six_effects_capacity_identity_topology_and_prime_refusal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-072",
+      "group": "RECOVERY",
+      "title": "nonPrime1",
+      "expected": "Hand",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_recovery_six_effects_capacity_identity_topology_and_prime_refusal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-073",
+      "group": "RECOVERY",
+      "title": "up3",
+      "expected": "Deck top",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_recovery_six_effects_capacity_identity_topology_and_prime_refusal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-074",
+      "group": "RECOVERY",
+      "title": "Prime",
+      "expected": "reject",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_recovery_six_effects_capacity_identity_topology_and_prime_refusal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-075",
+      "group": "RECOVERY",
+      "title": "capacity",
+      "expected": "enforce",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_recovery_six_effects_capacity_identity_topology_and_prime_refusal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-076",
+      "group": "RECOVERY",
+      "title": "topology",
+      "expected": "not resurrected",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_recovery_six_effects_capacity_identity_topology_and_prime_refusal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-077",
+      "group": "WHITE",
+      "title": "reactivate",
+      "expected": "yes",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-078",
+      "group": "WHITE",
+      "title": "state",
+      "expected": "H1N0R0",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-079",
+      "group": "WHITE",
+      "title": "identity",
+      "expected": "same",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-080",
+      "group": "WHITE",
+      "title": "timing",
+      "expected": "own ACTIVE",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-081",
+      "group": "WHITE",
+      "title": "cost",
+      "expected": "0",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-082",
+      "group": "WHITE",
+      "title": "noninactive",
+      "expected": "reject",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-083",
+      "group": "RESERVED",
+      "title": "Activation7",
+      "expected": "reserved",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_reserved_activation_seven_nonadmitted",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-084",
+      "group": "RESERVED",
+      "title": "Sandbox6",
+      "expected": "reserved",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_reserved_sandbox_six_nonadmitted",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-085",
+      "group": "RESERVED",
+      "title": "Stability6",
+      "expected": "reserved",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_reserved_stability_six_nonadmitted",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-086",
+      "group": "RESERVED",
+      "title": "structural",
+      "expected": "51",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_reserved_stability_six_nonadmitted",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-087",
+      "group": "RESERVED",
+      "title": "runtime",
+      "expected": "32",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_reserved_stability_six_nonadmitted",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-088",
+      "group": "RESERVED",
+      "title": "config ordinary",
+      "expected": "preserved",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_defense_rollback_restart_timeout_privacy_and_configuration",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-089",
+      "group": "RESERVED",
+      "title": "advanced",
+      "expected": "OPEN",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-090",
+      "group": "HEADLESS",
+      "title": "complete match",
+      "expected": "setup->terminal",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_prime_match_deterministic_replay_restart_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-091",
+      "group": "HEADLESS",
+      "title": "Prime terminal",
+      "expected": "deterministic",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_prime_match_deterministic_replay_restart_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-092",
+      "group": "HEADLESS",
+      "title": "exhaustion terminal",
+      "expected": "deterministic",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-093",
+      "group": "HEADLESS",
+      "title": "mulligan replay",
+      "expected": "deterministic",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_prime_match_deterministic_replay_restart_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-094",
+      "group": "HEADLESS",
+      "title": "defense replay",
+      "expected": "ordered",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_prime_match_deterministic_replay_restart_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-095",
+      "group": "HEADLESS",
+      "title": "Utilities",
+      "expected": "participate",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_prime_match_deterministic_replay_restart_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-096",
+      "group": "HEADLESS",
+      "title": "checkpoint",
+      "expected": "restart",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_prime_match_deterministic_replay_restart_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-097",
+      "group": "HEADLESS",
+      "title": "privacy",
+      "expected": "midmatch",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_defense_rollback_restart_timeout_privacy_and_configuration",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-098",
+      "group": "HEADLESS",
+      "title": "rollback",
+      "expected": "atomic",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_defense_rollback_restart_timeout_privacy_and_configuration",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-099",
+      "group": "HEADLESS",
+      "title": "Road evidence",
+      "expected": "audited",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_complete_prime_match_deterministic_replay_restart_and_terminal",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-100",
+      "group": "HEADLESS",
+      "title": "offline",
+      "expected": "self-contained",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "fresh offline extraction",
+        "all inherited and Pass06 native suites",
+        "both complete endings",
+        "independent isolation probes and audit traces"
+      ]
+    },
+    {
+      "id": "P6-101",
+      "group": "HEADLESS",
+      "title": "historical",
+      "expected": "rerun",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "all discovered suites actually rerun",
+        "all inherited test/fixture bytes unchanged",
+        "60 inherited compiler commitments unchanged",
+        "repository/dialect/upstream evidence"
+      ]
+    },
+    {
+      "id": "P6-102",
+      "group": "DELIVERY",
+      "title": "cases",
+      "expected": "accounted",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "108 mandatory IDs accounted with actual executed evidence or preserved OPEN guard"
+      ]
+    },
+    {
+      "id": "P6-103",
+      "group": "DELIVERY",
+      "title": "OPEN",
+      "expected": "preserved",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P6-104",
+      "group": "DELIVERY",
+      "title": "files",
+      "expected": "inventory",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "exact sealed-base-to-HEAD changed-file list and SHA256 map"
+      ]
+    },
+    {
+      "id": "P6-105",
+      "group": "DELIVERY",
+      "title": "hashes",
+      "expected": "manifest",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "pouch manifest/hashes",
+        "current executable/authority digest",
+        "changed-file hashes"
+      ]
+    },
+    {
+      "id": "P6-106",
+      "group": "DELIVERY",
+      "title": "branch",
+      "expected": "clean/pushed",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "exact branch / final SHA / remote SHA / clean tree"
+      ]
+    },
+    {
+      "id": "P6-107",
+      "group": "DELIVERY",
+      "title": "status",
+      "expected": "PREPRODUCTION",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "accepted-state.json",
+        "unchanged unaccepted module gates"
+      ]
+    },
+    {
+      "id": "P6-108",
+      "group": "DELIVERY",
+      "title": "Pass7",
+      "expected": "not silently implemented",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "Pass07 explicitly deferred",
+        "exact changed-file inventory"
+      ]
+    }
+  ],
+  "changed_files": [
+    ".gitattributes",
+    "AGENTS.md",
+    "data/game/pass-06-runtime.json",
+    "data/manifests/current-files.json",
+    "development/modules/core-game/PASS_06_EXECUTION.md",
+    "development/modules/core-game/PASS_06_PROGRESS.json",
+    "development/modules/core-game/PASS_06_RECEIPT.md",
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/adapter.py",
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/native.py",
+    "game/core/raeon/application/manifest.json",
+    "game/core/raeon/application/pass06_advance_turn.gen",
+    "game/core/raeon/application/pass06_begin_turn.gen",
+    "game/core/raeon/application/pass06_defense_pass.gen",
+    "game/core/raeon/application/pass06_defense_restore.gen",
+    "game/core/raeon/application/pass06_end_active.gen",
+    "game/core/raeon/application/pass06_generate_charge.gen",
+    "game/core/raeon/application/pass06_look_utility.gen",
+    "game/core/raeon/application/pass06_mulligan.gen",
+    "game/core/raeon/application/pass06_normal_draw.gen",
+    "game/core/raeon/application/pass06_open_guard.gen",
+    "game/core/raeon/application/pass06_setup_match.gen",
+    "game/core/raeon/application/pass06_spend_charge.gen",
+    "game/core/raeon/application/pass06_use_compensation.gen",
+    "game/core/raeon/application/pass06_utility.gen",
+    "game/match/closure.py",
+    "game/match/state.py",
+    "game/sandbox/topology.py",
+    "provenance/decisions/raeon-pass-06.json",
+    "provenance/imports/raeon-pass-06/RAEON_DIPLOMATIC_POUCH_PASS_06_2026-10-03.zip",
+    "provenance/imports/raeon-pass-06/entry.json",
+    "provenance/imports/raeon-pass-06/handoff/CODEX_HANDOFF_PROMPT.md",
+    "provenance/imports/raeon-pass-06/handoff/CONFIGURATION_SCOPE.md",
+    "provenance/imports/raeon-pass-06/handoff/MANIFEST.json",
+    "provenance/imports/raeon-pass-06/handoff/MATCH_LIFECYCLE_CONTRACT.md",
+    "provenance/imports/raeon-pass-06/handoff/OPEN_ITEMS.json",
+    "provenance/imports/raeon-pass-06/handoff/PASS_06_ACCEPTANCE.json",
+    "provenance/imports/raeon-pass-06/handoff/PASS_06_RULES.json",
+    "provenance/imports/raeon-pass-06/handoff/README.md",
+    "provenance/imports/raeon-pass-06/handoff/UTILITY_RUNTIME_CONTRACT.md",
+    "provenance/imports/raeon-pass-06/handoff/VERA_AUDIT_RUBRIC.md",
+    "provenance/imports/raeon-pass-06/handoff/VERIFY_POUCH.py",
+    "tests/integration/genesis_horizon/pass_06_matches.py",
+    "tests/integration/genesis_horizon/pass_06_support.py",
+    "tests/integration/genesis_horizon/test_pass_06.py",
+    "tests/integration/genesis_horizon/test_pass_06_security.py",
+    "tests/regression/pass-06-contract.test.mjs",
+    "tools/genesis_runtime.py",
+    "tools/genesis_runtime_distribution.py",
+    "tools/genesis_runtime_pass05.py",
+    "tools/genesis_runtime_pass06.py",
+    "tools/validators/genesis-runtime-contract.mjs",
+    "tools/validators/pass-05-contract.mjs",
+    "tools/validators/pass-06-contract.mjs"
+  ],
+  "pouch_sha256": "1cdc6a070c3492f791a37166bb55ae3b88ce5b03ae7ae1228f72bba8fe977242",
+  "tests": {
+    "tests-unit.json": {
+      "run": 6,
+      "passed": [
+        "test_codec.CodecTests.test_fragment_assembly_and_unbound_scope",
+        "test_codec.CodecTests.test_independent_vector",
+        "test_codec.CodecTests.test_json_unicode_duplicates_constants",
+        "test_codec.CodecTests.test_numeric_and_shape_validation_on_both_paths",
+        "test_codec.CodecTests.test_outgoing_schema_and_bounded_drain",
+        "test_codec.CodecTests.test_versions_direction_and_lengths"
+      ],
+      "failures": 0,
+      "errors": 0,
+      "discovered": [
+        "test_codec.CodecTests.test_fragment_assembly_and_unbound_scope",
+        "test_codec.CodecTests.test_independent_vector",
+        "test_codec.CodecTests.test_json_unicode_duplicates_constants",
+        "test_codec.CodecTests.test_numeric_and_shape_validation_on_both_paths",
+        "test_codec.CodecTests.test_outgoing_schema_and_bounded_drain",
+        "test_codec.CodecTests.test_versions_direction_and_lengths"
+      ],
+      "process_isolation": true,
+      "processes": [
+        {
+          "test": "test_codec.CodecTests.test_fragment_assembly_and_unbound_scope",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_codec.CodecTests.test_independent_vector",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_codec.CodecTests.test_json_unicode_duplicates_constants",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_codec.CodecTests.test_numeric_and_shape_validation_on_both_paths",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_codec.CodecTests.test_outgoing_schema_and_bounded_drain",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_codec.CodecTests.test_versions_direction_and_lengths",
+          "process_exit_code": 0,
+          "status": "PASS"
+        }
+      ]
+    },
+    "tests-integration.json": {
+      "run": 155,
+      "passed": [
+        "test_distribution.ArchiveIntegrityTests.test_exact_manifest_and_negative_cases",
+        "test_pass_01.Pass01Tests.test_application_cannot_inherit_or_mutate_machine_domains",
+        "test_pass_01.Pass01Tests.test_checkpoint_restart_and_two_player_sessions",
+        "test_pass_01.Pass01Tests.test_conflicting_application_rejected",
+        "test_pass_01.Pass01Tests.test_duplicate_and_conflicting_identity_rejected",
+        "test_pass_01.Pass01Tests.test_exact_topology_and_empty_containers",
+        "test_pass_01.Pass01Tests.test_explicit_relations_and_stable_unique_identity",
+        "test_pass_01.Pass01Tests.test_missing_or_undeclared_relation_rejected",
+        "test_pass_01.Pass01Tests.test_no_pass_two_rules_exposed",
+        "test_pass_01.Pass01Tests.test_observation_and_idempotence_do_not_duplicate",
+        "test_pass_01.Pass01Tests.test_observation_operation_receipt_has_no_native_diagnostics",
+        "test_pass_01.Pass01Tests.test_owner_opponent_privacy_and_no_native_leak",
+        "test_pass_01.Pass01Tests.test_package_and_source_hash_tamper_rejected",
+        "test_pass_01.Pass01Tests.test_path_escape_rejected",
+        "test_pass_01.Pass01Tests.test_prepublication_failure_and_budget_roll_back",
+        "test_pass_01.Pass01Tests.test_production_bytecode_is_deterministic",
+        "test_pass_01.Pass01Tests.test_production_manifest_and_real_genesis",
+        "test_pass_01.Pass01Tests.test_unauthorized_realization_rejected",
+        "test_pass_01.Pass01Tests.test_undeclared_and_malformed_source_rejected",
+        "test_pass_02.Pass02.test_actual_draw_and_commit_preserve_identity",
+        "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+        "test_pass_02_adversarial.Adversarial.test_catalog_tamper_and_physical_path_determinism",
+        "test_pass_02_adversarial.Adversarial.test_checkpoint_corruption_and_new_process_restore",
+        "test_pass_02_adversarial.Adversarial.test_concurrent_requests_and_semantic_order",
+        "test_pass_02_adversarial.Adversarial.test_input_bounds_code_and_card_only_containment",
+        "test_pass_02_adversarial.Adversarial.test_inspection_reorder_batch_helpers_grant_limits",
+        "test_pass_02_adversarial.Adversarial.test_native_route_and_handler_closure_cannot_be_bypassed",
+        "test_pass_02_adversarial.Adversarial.test_recovery_profiles_and_batch_capacity",
+        "test_pass_02_adversarial.Adversarial.test_seeded_conservation_two_owners",
+        "test_pass_02_adversarial.Adversarial.test_semantic_replay_across_storage_and_epoch",
+        "test_pass_02_adversarial.Adversarial.test_setup_rollback_and_exact_idempotent_multiset",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_live_merge_cannot_restore_private_relations",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_public_view_cannot_inherit_private_hand",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_same_actor_public_cannot_inherit_inspection",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_inspection_scope_includes_application_view_owner_and_actor",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_owner_opponent_and_public_controls",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_private_inspection_delta_reconnect_restore_and_expiry",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_inspect_admission_rejected_atomically",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_live_geometry_delta_and_reconnect",
+        "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+        "test_pass_02_transactions.Transactions.test_checkpoint_nonempty_preserves_native_state_and_retry",
+        "test_pass_02_transactions.Transactions.test_delivery_loss_retry_conflict_and_stale_revision",
+        "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+        "test_pass_02_transactions.Transactions.test_failed_candidate_rolls_back_grant_rng_membership",
+        "test_pass_02_transactions.Transactions.test_hand_capacity_empty_deck_and_forged_arguments",
+        "test_pass_02_transactions.Transactions.test_live_private_views_and_detached_values",
+        "test_pass_02_transactions.Transactions.test_retirement_recovery_order_and_whole_support",
+        "test_pass_02_transactions.Transactions.test_shuffle_independent_full_vector_and_idempotency",
+        "test_pass_02_transactions.Transactions.test_structural_prime_slots_without_combat",
+        "test_pass_03.Pass03.test_batch_atomic_rollback_retry_and_post_commit_delivery",
+        "test_pass_03.Pass03.test_catalog_not_live_closure_and_read_only_exhaustive_query",
+        "test_pass_03.Pass03.test_concurrent_stale_pose_and_nonempty_checkpoint",
+        "test_pass_03.Pass03.test_corpus_full_sqlite_and_json_agree",
+        "test_pass_03.Pass03.test_handler_predicate_omission_and_road_closure_matter",
+        "test_pass_03.Pass03.test_native_hydration_duplicate_copies_and_source_bytes",
+        "test_pass_03.Pass03.test_numeric_bounds_zero_rotation_and_no_z_or_reflection_input",
+        "test_pass_03.Pass03.test_owner_membership_stale_and_no_individual_extraction",
+        "test_pass_03.Pass03.test_pair_lookup_preserves_all_outcomes_and_addresses",
+        "test_pass_03.Pass03.test_pose_bytes_full_3d_canonical_equivalence_and_identity",
+        "test_pass_03.Pass03.test_public_byte_delta_and_reconnect_with_topology",
+        "test_pass_03.Pass03.test_public_view_only_exposes_deployed_source_and_no_inventory_hints",
+        "test_pass_03.Pass03.test_reopen_merge_preview_and_gated_mutations_preserve_copies",
+        "test_pass_03.Pass03.test_retired_recovered_copy_does_not_keep_prior_space_pose",
+        "test_pass_03.Pass03.test_small_population_duplicates_wrong_family_and_budget",
+        "test_pass_03.Pass03.test_source_extension_and_checkpoint_abi_tamper_rejected",
+        "test_pass_03.Pass03.test_source_integrity_missing_corpus_and_exact_render_integer",
+        "test_pass_03b.AllBaseFields.test_all_60_source_witnesses_resolve_through_actual_package",
+        "test_pass_03b.Pass03B.test_configuring_resolved_checkpoint_and_public_byte_reconnect",
+        "test_pass_03b.Pass03B.test_deterministic_replay_different_paths",
+        "test_pass_03b.Pass03B.test_dynamic_nine_spaces_and_fusion_preserve_region_identity",
+        "test_pass_03b.Pass03B.test_emergent_instances_no_qmo_alias_and_atomic_support_publication",
+        "test_pass_03b.Pass03B.test_fusion_rollback_source_negative_owner_and_no_recursive_split",
+        "test_pass_03b.Pass03B.test_genesis_positive_predicates_transform_and_road_are_required",
+        "test_pass_03b.Pass03B.test_invalid_source_fusion_preserves_distinct_duplicate_copies",
+        "test_pass_03b.Pass03B.test_live_base_lock_identity_native_color_and_explicit_reopen",
+        "test_pass_03b.Pass03B.test_passive_three_pair_emergents_selective_loss_and_nontargetability",
+        "test_pass_03b.Pass03B.test_positive_fusion_exact_union_frames_width_and_subsumed_provenance",
+        "test_pass_03b.Pass03B.test_resolution_rollback_retry_and_postcommit_delivery",
+        "test_pass_03b.Pass03B.test_shape_orientation_partial_feedback_and_magnetic_hysteresis",
+        "test_pass_03b.Pass03B.test_stale_pose_witness_and_concurrent_resolution",
+        "test_pass_03b_math.RealizationMath.test_all_witness_memberships_edges_and_rotation_matrices",
+        "test_pass_03b_math.RealizationMath.test_candidate_magnetization_release_and_shape_only_never_lock",
+        "test_pass_03b_math.RealizationMath.test_membership_and_authority_tamper_fail_closed",
+        "test_pass_03b_math.RealizationMath.test_quaternion_sign_classes_and_thresholds",
+        "test_pass_03b_math.RealizationMath.test_reflection_scale_and_identity_permutation_are_not_equivalence",
+        "test_pass_03b_math.RealizationMath.test_se2_translation_rotation_exact_and_shared_yaw_targets",
+        "test_pass_03b_math.RealizationMath.test_simultaneous_edges_tethers_and_no_face_socket_exclusivity",
+        "test_pass_04.Pass04.test_A_generate_current_color_once_through_road",
+        "test_pass_04.Pass04.test_B_partial_repeated_spending_keeps_health_and_shield",
+        "test_pass_04.Pass04.test_C_D_shield_first_damage_and_health_first_restore",
+        "test_pass_04.Pass04.test_E_same_topology_carryover_no_implicit_heal_or_refresh",
+        "test_pass_04.Pass04.test_F_zero_color_atomic_graveyard_and_selective_emergence_loss",
+        "test_pass_04.Pass04.test_G_H_authority_windows_reservations_and_no_switch_refresh",
+        "test_pass_04.Pass04.test_Genesis_admission_transform_and_Road_cannot_be_bypassed",
+        "test_pass_04.Pass04.test_I_inactive_stays_fixed_and_white_restores_only_one_health",
+        "test_pass_04.Pass04.test_J_checkpoint_restart_deterministic_replay_and_filtered_deltas",
+        "test_pass_04.Pass04.test_atomic_generation_spend_retry_and_lost_delivery",
+        "test_pass_04.Pass04.test_catalog_binding_identity_initial_states_and_fixed_slots",
+        "test_pass_04.Pass04.test_concurrent_use_spend_and_stale_object_revisions",
+        "test_pass_04.Pass04.test_overflow_and_unsupported_targets_fail_without_consuming",
+        "test_pass_04.Pass04.test_selected_view_color_deltas_preserve_private_boundaries",
+        "test_pass_04_math.PrimeMath.test_all_health_charge_restore_degrade_states_and_overflow",
+        "test_pass_04_math.PrimeMath.test_carryover_uses_latest_pose_revision_independent_of_record_order",
+        "test_pass_04_math.PrimeMath.test_catalog_exact_fourteen_and_accepted_magnitudes",
+        "test_pass_04_math.PrimeMath.test_open_scheduler_overflow_and_nonordinary_production_not_invented",
+        "test_pass_04_math.PrimeMath.test_required_examples_and_bounded_white_reactivation",
+        "test_pass_05.Pass05.test_current_checkpoint_restart_replay_defense_order_and_road_history",
+        "test_pass_05.Pass05.test_current_genesis_admission_closure_and_road_cannot_be_bypassed",
+        "test_pass_05.Pass05.test_current_zero_retirement_selective_emergence_and_open_guards",
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "test_pass_05.Pass05.test_real_pass04_checkpoint_upgrade_and_canonical_migration",
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+        "test_pass_05_values.NodeValues.test_exact_authority_pointer_amendments_do_not_allow_corpus_changes",
+        "test_pass_05_values.NodeValues.test_native_health_first_shield_first_partial_spend_and_states",
+        "test_pass_05_values.NodeValues.test_native_integer_no_node_cap_and_exact_canonical_encoding",
+        "test_pass_05_values.NodeValues.test_negative_node_invariants_and_legacy_charge_rejected",
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "test_pass_06.Pass06.test_complete_prime_match_deterministic_replay_restart_and_terminal",
+        "test_pass_06.Pass06.test_defense_rollback_restart_timeout_privacy_and_configuration",
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "test_pass_06.Pass06.test_draw_deck_survey_selection_open_boundary_exchange_and_deep_survey",
+        "test_pass_06.Pass06.test_mulligan_zero_seven_repeat_replay_and_privacy",
+        "test_pass_06.Pass06.test_recovery_six_effects_capacity_identity_topology_and_prime_refusal",
+        "test_pass_06.Pass06.test_reserved_activation_seven_nonadmitted",
+        "test_pass_06.Pass06.test_reserved_sandbox_six_nonadmitted",
+        "test_pass_06.Pass06.test_reserved_stability_six_nonadmitted",
+        "test_pass_06.Pass06.test_selection_unordered_bottom_cannot_be_drawn_or_observed_inventedly",
+        "test_pass_06.Pass06.test_short_deck_effects_and_unresolved_selection_order_guard",
+        "test_pass_06.Pass06.test_simultaneous_consequence_boundary_draw_native_candidate",
+        "test_pass_06.Pass06.test_transduction_degrade_six_native_amounts_and_zero_cost",
+        "test_pass_06.Pass06.test_transduction_restore_six_native_amounts",
+        "test_pass_06.Pass06.test_transduction_universal_six_both_resolution_choices",
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "test_pass_06_security.Pass06Security.test_compiled_admission_closure_and_road_are_required",
+        "test_pass_06_security.Pass06Security.test_exact_utility_registry_source_and_open_authority",
+        "test_runtime.RuntimeTests.test_application_cannot_inherit_machine_domains",
+        "test_runtime.RuntimeTests.test_backpressure_before_mutation",
+        "test_runtime.RuntimeTests.test_candidate_rollback_and_budget",
+        "test_runtime.RuntimeTests.test_checkpoint_restart_corruption_and_confinement",
+        "test_runtime.RuntimeTests.test_delivery_failure_recovery",
+        "test_runtime.RuntimeTests.test_expired_retry_is_never_reexecuted",
+        "test_runtime.RuntimeTests.test_missing_and_tampered_sources",
+        "test_runtime.RuntimeTests.test_native_boot_identities_and_containment",
+        "test_runtime.RuntimeTests.test_output_delivery_failure_retains_committed_outcome",
+        "test_runtime.RuntimeTests.test_privacy_and_scope",
+        "test_runtime.RuntimeTests.test_projection_gap_receipt_clock_and_reconnect",
+        "test_runtime.RuntimeTests.test_quiesce_close_and_replay",
+        "test_runtime.RuntimeTests.test_real_joint_trace_and_identity_history",
+        "test_runtime.RuntimeTests.test_retry_conflict_concurrent_scope_and_stale",
+        "test_runtime.RuntimeTests.test_route_admission_and_open_resource_rejections"
+      ],
+      "failures": 0,
+      "errors": 0,
+      "discovered": [
+        "test_distribution.ArchiveIntegrityTests.test_exact_manifest_and_negative_cases",
+        "test_pass_01.Pass01Tests.test_application_cannot_inherit_or_mutate_machine_domains",
+        "test_pass_01.Pass01Tests.test_checkpoint_restart_and_two_player_sessions",
+        "test_pass_01.Pass01Tests.test_conflicting_application_rejected",
+        "test_pass_01.Pass01Tests.test_duplicate_and_conflicting_identity_rejected",
+        "test_pass_01.Pass01Tests.test_exact_topology_and_empty_containers",
+        "test_pass_01.Pass01Tests.test_explicit_relations_and_stable_unique_identity",
+        "test_pass_01.Pass01Tests.test_missing_or_undeclared_relation_rejected",
+        "test_pass_01.Pass01Tests.test_no_pass_two_rules_exposed",
+        "test_pass_01.Pass01Tests.test_observation_and_idempotence_do_not_duplicate",
+        "test_pass_01.Pass01Tests.test_observation_operation_receipt_has_no_native_diagnostics",
+        "test_pass_01.Pass01Tests.test_owner_opponent_privacy_and_no_native_leak",
+        "test_pass_01.Pass01Tests.test_package_and_source_hash_tamper_rejected",
+        "test_pass_01.Pass01Tests.test_path_escape_rejected",
+        "test_pass_01.Pass01Tests.test_prepublication_failure_and_budget_roll_back",
+        "test_pass_01.Pass01Tests.test_production_bytecode_is_deterministic",
+        "test_pass_01.Pass01Tests.test_production_manifest_and_real_genesis",
+        "test_pass_01.Pass01Tests.test_unauthorized_realization_rejected",
+        "test_pass_01.Pass01Tests.test_undeclared_and_malformed_source_rejected",
+        "test_pass_02.Pass02.test_actual_draw_and_commit_preserve_identity",
+        "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+        "test_pass_02_adversarial.Adversarial.test_catalog_tamper_and_physical_path_determinism",
+        "test_pass_02_adversarial.Adversarial.test_checkpoint_corruption_and_new_process_restore",
+        "test_pass_02_adversarial.Adversarial.test_concurrent_requests_and_semantic_order",
+        "test_pass_02_adversarial.Adversarial.test_input_bounds_code_and_card_only_containment",
+        "test_pass_02_adversarial.Adversarial.test_inspection_reorder_batch_helpers_grant_limits",
+        "test_pass_02_adversarial.Adversarial.test_native_route_and_handler_closure_cannot_be_bypassed",
+        "test_pass_02_adversarial.Adversarial.test_recovery_profiles_and_batch_capacity",
+        "test_pass_02_adversarial.Adversarial.test_seeded_conservation_two_owners",
+        "test_pass_02_adversarial.Adversarial.test_semantic_replay_across_storage_and_epoch",
+        "test_pass_02_adversarial.Adversarial.test_setup_rollback_and_exact_idempotent_multiset",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_live_merge_cannot_restore_private_relations",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_public_view_cannot_inherit_private_hand",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_same_actor_public_cannot_inherit_inspection",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_inspection_scope_includes_application_view_owner_and_actor",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_owner_opponent_and_public_controls",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_private_inspection_delta_reconnect_restore_and_expiry",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_inspect_admission_rejected_atomically",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_live_geometry_delta_and_reconnect",
+        "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+        "test_pass_02_transactions.Transactions.test_checkpoint_nonempty_preserves_native_state_and_retry",
+        "test_pass_02_transactions.Transactions.test_delivery_loss_retry_conflict_and_stale_revision",
+        "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+        "test_pass_02_transactions.Transactions.test_failed_candidate_rolls_back_grant_rng_membership",
+        "test_pass_02_transactions.Transactions.test_hand_capacity_empty_deck_and_forged_arguments",
+        "test_pass_02_transactions.Transactions.test_live_private_views_and_detached_values",
+        "test_pass_02_transactions.Transactions.test_retirement_recovery_order_and_whole_support",
+        "test_pass_02_transactions.Transactions.test_shuffle_independent_full_vector_and_idempotency",
+        "test_pass_02_transactions.Transactions.test_structural_prime_slots_without_combat",
+        "test_pass_03.Pass03.test_batch_atomic_rollback_retry_and_post_commit_delivery",
+        "test_pass_03.Pass03.test_catalog_not_live_closure_and_read_only_exhaustive_query",
+        "test_pass_03.Pass03.test_concurrent_stale_pose_and_nonempty_checkpoint",
+        "test_pass_03.Pass03.test_corpus_full_sqlite_and_json_agree",
+        "test_pass_03.Pass03.test_handler_predicate_omission_and_road_closure_matter",
+        "test_pass_03.Pass03.test_native_hydration_duplicate_copies_and_source_bytes",
+        "test_pass_03.Pass03.test_numeric_bounds_zero_rotation_and_no_z_or_reflection_input",
+        "test_pass_03.Pass03.test_owner_membership_stale_and_no_individual_extraction",
+        "test_pass_03.Pass03.test_pair_lookup_preserves_all_outcomes_and_addresses",
+        "test_pass_03.Pass03.test_pose_bytes_full_3d_canonical_equivalence_and_identity",
+        "test_pass_03.Pass03.test_public_byte_delta_and_reconnect_with_topology",
+        "test_pass_03.Pass03.test_public_view_only_exposes_deployed_source_and_no_inventory_hints",
+        "test_pass_03.Pass03.test_reopen_merge_preview_and_gated_mutations_preserve_copies",
+        "test_pass_03.Pass03.test_retired_recovered_copy_does_not_keep_prior_space_pose",
+        "test_pass_03.Pass03.test_small_population_duplicates_wrong_family_and_budget",
+        "test_pass_03.Pass03.test_source_extension_and_checkpoint_abi_tamper_rejected",
+        "test_pass_03.Pass03.test_source_integrity_missing_corpus_and_exact_render_integer",
+        "test_pass_03b.AllBaseFields.test_all_60_source_witnesses_resolve_through_actual_package",
+        "test_pass_03b.Pass03B.test_configuring_resolved_checkpoint_and_public_byte_reconnect",
+        "test_pass_03b.Pass03B.test_deterministic_replay_different_paths",
+        "test_pass_03b.Pass03B.test_dynamic_nine_spaces_and_fusion_preserve_region_identity",
+        "test_pass_03b.Pass03B.test_emergent_instances_no_qmo_alias_and_atomic_support_publication",
+        "test_pass_03b.Pass03B.test_fusion_rollback_source_negative_owner_and_no_recursive_split",
+        "test_pass_03b.Pass03B.test_genesis_positive_predicates_transform_and_road_are_required",
+        "test_pass_03b.Pass03B.test_invalid_source_fusion_preserves_distinct_duplicate_copies",
+        "test_pass_03b.Pass03B.test_live_base_lock_identity_native_color_and_explicit_reopen",
+        "test_pass_03b.Pass03B.test_passive_three_pair_emergents_selective_loss_and_nontargetability",
+        "test_pass_03b.Pass03B.test_positive_fusion_exact_union_frames_width_and_subsumed_provenance",
+        "test_pass_03b.Pass03B.test_resolution_rollback_retry_and_postcommit_delivery",
+        "test_pass_03b.Pass03B.test_shape_orientation_partial_feedback_and_magnetic_hysteresis",
+        "test_pass_03b.Pass03B.test_stale_pose_witness_and_concurrent_resolution",
+        "test_pass_03b_math.RealizationMath.test_all_witness_memberships_edges_and_rotation_matrices",
+        "test_pass_03b_math.RealizationMath.test_candidate_magnetization_release_and_shape_only_never_lock",
+        "test_pass_03b_math.RealizationMath.test_membership_and_authority_tamper_fail_closed",
+        "test_pass_03b_math.RealizationMath.test_quaternion_sign_classes_and_thresholds",
+        "test_pass_03b_math.RealizationMath.test_reflection_scale_and_identity_permutation_are_not_equivalence",
+        "test_pass_03b_math.RealizationMath.test_se2_translation_rotation_exact_and_shared_yaw_targets",
+        "test_pass_03b_math.RealizationMath.test_simultaneous_edges_tethers_and_no_face_socket_exclusivity",
+        "test_pass_04.Pass04.test_A_generate_current_color_once_through_road",
+        "test_pass_04.Pass04.test_B_partial_repeated_spending_keeps_health_and_shield",
+        "test_pass_04.Pass04.test_C_D_shield_first_damage_and_health_first_restore",
+        "test_pass_04.Pass04.test_E_same_topology_carryover_no_implicit_heal_or_refresh",
+        "test_pass_04.Pass04.test_F_zero_color_atomic_graveyard_and_selective_emergence_loss",
+        "test_pass_04.Pass04.test_G_H_authority_windows_reservations_and_no_switch_refresh",
+        "test_pass_04.Pass04.test_Genesis_admission_transform_and_Road_cannot_be_bypassed",
+        "test_pass_04.Pass04.test_I_inactive_stays_fixed_and_white_restores_only_one_health",
+        "test_pass_04.Pass04.test_J_checkpoint_restart_deterministic_replay_and_filtered_deltas",
+        "test_pass_04.Pass04.test_atomic_generation_spend_retry_and_lost_delivery",
+        "test_pass_04.Pass04.test_catalog_binding_identity_initial_states_and_fixed_slots",
+        "test_pass_04.Pass04.test_concurrent_use_spend_and_stale_object_revisions",
+        "test_pass_04.Pass04.test_overflow_and_unsupported_targets_fail_without_consuming",
+        "test_pass_04.Pass04.test_selected_view_color_deltas_preserve_private_boundaries",
+        "test_pass_04_math.PrimeMath.test_all_health_charge_restore_degrade_states_and_overflow",
+        "test_pass_04_math.PrimeMath.test_carryover_uses_latest_pose_revision_independent_of_record_order",
+        "test_pass_04_math.PrimeMath.test_catalog_exact_fourteen_and_accepted_magnitudes",
+        "test_pass_04_math.PrimeMath.test_open_scheduler_overflow_and_nonordinary_production_not_invented",
+        "test_pass_04_math.PrimeMath.test_required_examples_and_bounded_white_reactivation",
+        "test_pass_05.Pass05.test_current_checkpoint_restart_replay_defense_order_and_road_history",
+        "test_pass_05.Pass05.test_current_genesis_admission_closure_and_road_cannot_be_bypassed",
+        "test_pass_05.Pass05.test_current_zero_retirement_selective_emergence_and_open_guards",
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "test_pass_05.Pass05.test_real_pass04_checkpoint_upgrade_and_canonical_migration",
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+        "test_pass_05_values.NodeValues.test_exact_authority_pointer_amendments_do_not_allow_corpus_changes",
+        "test_pass_05_values.NodeValues.test_native_health_first_shield_first_partial_spend_and_states",
+        "test_pass_05_values.NodeValues.test_native_integer_no_node_cap_and_exact_canonical_encoding",
+        "test_pass_05_values.NodeValues.test_negative_node_invariants_and_legacy_charge_rejected",
+        "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+        "test_pass_06.Pass06.test_complete_prime_match_deterministic_replay_restart_and_terminal",
+        "test_pass_06.Pass06.test_defense_rollback_restart_timeout_privacy_and_configuration",
+        "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+        "test_pass_06.Pass06.test_draw_deck_survey_selection_open_boundary_exchange_and_deep_survey",
+        "test_pass_06.Pass06.test_mulligan_zero_seven_repeat_replay_and_privacy",
+        "test_pass_06.Pass06.test_recovery_six_effects_capacity_identity_topology_and_prime_refusal",
+        "test_pass_06.Pass06.test_reserved_activation_seven_nonadmitted",
+        "test_pass_06.Pass06.test_reserved_sandbox_six_nonadmitted",
+        "test_pass_06.Pass06.test_reserved_stability_six_nonadmitted",
+        "test_pass_06.Pass06.test_selection_unordered_bottom_cannot_be_drawn_or_observed_inventedly",
+        "test_pass_06.Pass06.test_short_deck_effects_and_unresolved_selection_order_guard",
+        "test_pass_06.Pass06.test_simultaneous_consequence_boundary_draw_native_candidate",
+        "test_pass_06.Pass06.test_transduction_degrade_six_native_amounts_and_zero_cost",
+        "test_pass_06.Pass06.test_transduction_restore_six_native_amounts",
+        "test_pass_06.Pass06.test_transduction_universal_six_both_resolution_choices",
+        "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+        "test_pass_06_security.Pass06Security.test_compiled_admission_closure_and_road_are_required",
+        "test_pass_06_security.Pass06Security.test_exact_utility_registry_source_and_open_authority",
+        "test_runtime.RuntimeTests.test_application_cannot_inherit_machine_domains",
+        "test_runtime.RuntimeTests.test_backpressure_before_mutation",
+        "test_runtime.RuntimeTests.test_candidate_rollback_and_budget",
+        "test_runtime.RuntimeTests.test_checkpoint_restart_corruption_and_confinement",
+        "test_runtime.RuntimeTests.test_delivery_failure_recovery",
+        "test_runtime.RuntimeTests.test_expired_retry_is_never_reexecuted",
+        "test_runtime.RuntimeTests.test_missing_and_tampered_sources",
+        "test_runtime.RuntimeTests.test_native_boot_identities_and_containment",
+        "test_runtime.RuntimeTests.test_output_delivery_failure_retains_committed_outcome",
+        "test_runtime.RuntimeTests.test_privacy_and_scope",
+        "test_runtime.RuntimeTests.test_projection_gap_receipt_clock_and_reconnect",
+        "test_runtime.RuntimeTests.test_quiesce_close_and_replay",
+        "test_runtime.RuntimeTests.test_real_joint_trace_and_identity_history",
+        "test_runtime.RuntimeTests.test_retry_conflict_concurrent_scope_and_stale",
+        "test_runtime.RuntimeTests.test_route_admission_and_open_resource_rejections"
+      ],
+      "process_isolation": true,
+      "processes": [
+        {
+          "test": "test_distribution.ArchiveIntegrityTests.test_exact_manifest_and_negative_cases",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_application_cannot_inherit_or_mutate_machine_domains",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_checkpoint_restart_and_two_player_sessions",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_conflicting_application_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_duplicate_and_conflicting_identity_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_exact_topology_and_empty_containers",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_explicit_relations_and_stable_unique_identity",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_missing_or_undeclared_relation_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_no_pass_two_rules_exposed",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_observation_and_idempotence_do_not_duplicate",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_observation_operation_receipt_has_no_native_diagnostics",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_owner_opponent_privacy_and_no_native_leak",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_package_and_source_hash_tamper_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_path_escape_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_prepublication_failure_and_budget_roll_back",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_production_bytecode_is_deterministic",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_production_manifest_and_real_genesis",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_unauthorized_realization_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_undeclared_and_malformed_source_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02.Pass02.test_actual_draw_and_commit_preserve_identity",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_catalog_tamper_and_physical_path_determinism",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_checkpoint_corruption_and_new_process_restore",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_concurrent_requests_and_semantic_order",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_input_bounds_code_and_card_only_containment",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_inspection_reorder_batch_helpers_grant_limits",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_native_route_and_handler_closure_cannot_be_bypassed",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_recovery_profiles_and_batch_capacity",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_seeded_conservation_two_owners",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_semantic_replay_across_storage_and_epoch",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_setup_rollback_and_exact_idempotent_multiset",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_live_merge_cannot_restore_private_relations",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_public_view_cannot_inherit_private_hand",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_same_actor_public_cannot_inherit_inspection",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_inspection_scope_includes_application_view_owner_and_actor",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_owner_opponent_and_public_controls",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_private_inspection_delta_reconnect_restore_and_expiry",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_inspect_admission_rejected_atomically",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_live_geometry_delta_and_reconnect",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_checkpoint_nonempty_preserves_native_state_and_retry",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_delivery_loss_retry_conflict_and_stale_revision",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_failed_candidate_rolls_back_grant_rng_membership",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_hand_capacity_empty_deck_and_forged_arguments",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_live_private_views_and_detached_values",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_retirement_recovery_order_and_whole_support",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_shuffle_independent_full_vector_and_idempotency",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_structural_prime_slots_without_combat",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_batch_atomic_rollback_retry_and_post_commit_delivery",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_catalog_not_live_closure_and_read_only_exhaustive_query",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_concurrent_stale_pose_and_nonempty_checkpoint",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_corpus_full_sqlite_and_json_agree",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_handler_predicate_omission_and_road_closure_matter",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_native_hydration_duplicate_copies_and_source_bytes",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_numeric_bounds_zero_rotation_and_no_z_or_reflection_input",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_owner_membership_stale_and_no_individual_extraction",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_pair_lookup_preserves_all_outcomes_and_addresses",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_pose_bytes_full_3d_canonical_equivalence_and_identity",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_public_byte_delta_and_reconnect_with_topology",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_public_view_only_exposes_deployed_source_and_no_inventory_hints",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_reopen_merge_preview_and_gated_mutations_preserve_copies",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_retired_recovered_copy_does_not_keep_prior_space_pose",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_small_population_duplicates_wrong_family_and_budget",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_source_extension_and_checkpoint_abi_tamper_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_source_integrity_missing_corpus_and_exact_render_integer",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.AllBaseFields.test_all_60_source_witnesses_resolve_through_actual_package",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_configuring_resolved_checkpoint_and_public_byte_reconnect",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_deterministic_replay_different_paths",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_dynamic_nine_spaces_and_fusion_preserve_region_identity",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_emergent_instances_no_qmo_alias_and_atomic_support_publication",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_fusion_rollback_source_negative_owner_and_no_recursive_split",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_genesis_positive_predicates_transform_and_road_are_required",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_invalid_source_fusion_preserves_distinct_duplicate_copies",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_live_base_lock_identity_native_color_and_explicit_reopen",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_passive_three_pair_emergents_selective_loss_and_nontargetability",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_positive_fusion_exact_union_frames_width_and_subsumed_provenance",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_resolution_rollback_retry_and_postcommit_delivery",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_shape_orientation_partial_feedback_and_magnetic_hysteresis",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_stale_pose_witness_and_concurrent_resolution",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_all_witness_memberships_edges_and_rotation_matrices",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_candidate_magnetization_release_and_shape_only_never_lock",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_membership_and_authority_tamper_fail_closed",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_quaternion_sign_classes_and_thresholds",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_reflection_scale_and_identity_permutation_are_not_equivalence",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_se2_translation_rotation_exact_and_shared_yaw_targets",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_simultaneous_edges_tethers_and_no_face_socket_exclusivity",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_A_generate_current_color_once_through_road",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_B_partial_repeated_spending_keeps_health_and_shield",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_C_D_shield_first_damage_and_health_first_restore",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_E_same_topology_carryover_no_implicit_heal_or_refresh",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_F_zero_color_atomic_graveyard_and_selective_emergence_loss",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_G_H_authority_windows_reservations_and_no_switch_refresh",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_Genesis_admission_transform_and_Road_cannot_be_bypassed",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_I_inactive_stays_fixed_and_white_restores_only_one_health",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_J_checkpoint_restart_deterministic_replay_and_filtered_deltas",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_atomic_generation_spend_retry_and_lost_delivery",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_catalog_binding_identity_initial_states_and_fixed_slots",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_concurrent_use_spend_and_stale_object_revisions",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_overflow_and_unsupported_targets_fail_without_consuming",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_selected_view_color_deltas_preserve_private_boundaries",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04_math.PrimeMath.test_all_health_charge_restore_degrade_states_and_overflow",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04_math.PrimeMath.test_carryover_uses_latest_pose_revision_independent_of_record_order",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04_math.PrimeMath.test_catalog_exact_fourteen_and_accepted_magnitudes",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04_math.PrimeMath.test_open_scheduler_overflow_and_nonordinary_production_not_invented",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04_math.PrimeMath.test_required_examples_and_bounded_white_reactivation",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_current_checkpoint_restart_replay_defense_order_and_road_history",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_current_genesis_admission_closure_and_road_cannot_be_bypassed",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_current_zero_retirement_selective_emergence_and_open_guards",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_real_pass04_checkpoint_upgrade_and_canonical_migration",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05_values.NodeValues.test_exact_authority_pointer_amendments_do_not_allow_corpus_changes",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05_values.NodeValues.test_native_health_first_shield_first_partial_spend_and_states",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05_values.NodeValues.test_native_integer_no_node_cap_and_exact_canonical_encoding",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05_values.NodeValues.test_negative_node_invariants_and_legacy_charge_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_complete_prime_match_deterministic_replay_restart_and_terminal",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_defense_rollback_restart_timeout_privacy_and_configuration",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_draw_deck_survey_selection_open_boundary_exchange_and_deep_survey",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_mulligan_zero_seven_repeat_replay_and_privacy",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_recovery_six_effects_capacity_identity_topology_and_prime_refusal",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_reserved_activation_seven_nonadmitted",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_reserved_sandbox_six_nonadmitted",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_reserved_stability_six_nonadmitted",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_selection_unordered_bottom_cannot_be_drawn_or_observed_inventedly",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_short_deck_effects_and_unresolved_selection_order_guard",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_simultaneous_consequence_boundary_draw_native_candidate",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_transduction_degrade_six_native_amounts_and_zero_cost",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_transduction_restore_six_native_amounts",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_transduction_universal_six_both_resolution_choices",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06_security.Pass06Security.test_compiled_admission_closure_and_road_are_required",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_06_security.Pass06Security.test_exact_utility_registry_source_and_open_authority",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_application_cannot_inherit_machine_domains",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_backpressure_before_mutation",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_candidate_rollback_and_budget",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_checkpoint_restart_corruption_and_confinement",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_delivery_failure_recovery",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_expired_retry_is_never_reexecuted",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_missing_and_tampered_sources",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_native_boot_identities_and_containment",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_output_delivery_failure_retains_committed_outcome",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_privacy_and_scope",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_projection_gap_receipt_clock_and_reconnect",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_quiesce_close_and_replay",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_real_joint_trace_and_identity_history",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_retry_conflict_concurrent_scope_and_stale",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_route_admission_and_open_resource_rejections",
+          "process_exit_code": 0,
+          "status": "PASS"
+        }
+      ]
+    },
+    "upstream-tests.json": {
+      "status": "PASS",
+      "upstream_commit": "c89676fc26000ae6f5fdad66a56e118b285d9b1d",
+      "baseline": {
+        "status": "PASS",
+        "execution_receipt": "receipt-e0bbca751087ac913a9d",
+        "artifacts": {
+          "upstream-build.json": "1a535b4a36251e47324dc16b1c9cf1ee9719115e2482b6160e62d54ec915c9cb",
+          "upstream-lower.json": "16c5170e3bdcb6d0ce123424cfc93e212dd3489294b1f88693661aa36bb0f47e",
+          "upstream-parse.json": "e8880d96cecbb965e68fda7569e781c435f68a5be2ce2a3b8fdcb502c44e2ebd",
+          "upstream-rainbow-road.gvm": "b5f96deddc738338a028802faf80a072b99070ad5b674303bd041bfab65cc041",
+          "upstream-run.json": "2770e37b8ac85df0d5fe0ea8622f39882ac9c430ee71154a2aeeb9b76cd17192"
+        }
+      },
+      "domains_passed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "repository-validation.json": {
+      "status": "PASS",
+      "implementation_sha256": "0b3bfba273198f33c0ad2391c2e5df3a9e0e390b814096e646afd03ed98af56e",
+      "results": [
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-bootstrap.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-design-state.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-normalization.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-continuity.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-cycle1-import.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-full-migration.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-game-definition.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "--test",
+            "tests/regression\\bootstrap-validator.test.mjs",
+            "tests/regression\\continuity-validator.test.mjs",
+            "tests/regression\\cycle1-import.test.mjs",
+            "tests/regression\\design-state-validator.test.mjs",
+            "tests/regression\\full-migration.test.mjs",
+            "tests/regression\\game-definition.test.mjs",
+            "tests/regression\\genesis-runtime-contract.test.mjs",
+            "tests/regression\\normalization-validator.test.mjs",
+            "tests/regression\\pass-01-contract.test.mjs",
+            "tests/regression\\pass-02-contract.test.mjs",
+            "tests/regression\\pass-02-projection-contract.test.mjs",
+            "tests/regression\\pass-03-contract.test.mjs",
+            "tests/regression\\pass-03b-contract.test.mjs",
+            "tests/regression\\pass-04-contract.test.mjs",
+            "tests/regression\\pass-05-contract.test.mjs",
+            "tests/regression\\pass-06-contract.test.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "--test",
+            "tests/gameplay/cards\\containers.test.mjs",
+            "tests/gameplay/manifolds\\relationships.test.mjs",
+            "tests/gameplay/primes\\constitution.test.mjs",
+            "tests/gameplay/sandbox\\configuration.test.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    "verify.json": {
+      "status": "PASS",
+      "compiled_sources": 74,
+      "deterministic_rebuild": true
+    }
+  },
+  "offline_distributions": {
+    "horizon": {
+      "bytes": 26812003,
+      "files": 1793,
+      "implementation_sha256": "0b3bfba273198f33c0ad2391c2e5df3a9e0e390b814096e646afd03ed98af56e",
+      "manifest": "distribution/horizon-manifest.json",
+      "path": "C:\\Users\\rando\\_raeon\\build\\genesis_runtime\\distributions\\genesis-horizon-0.6.0.zip",
+      "sha256": "df18dd203fd45a104a3400039bf50b8a9366ac04ddf06c6942f2549523395009",
+      "source_commit": "eaf1d457bbcda9b35ed614ca53dd93cd1a902306"
+    },
+    "hypervisor": {
+      "bytes": 17407,
+      "files": 18,
+      "implementation_sha256": "0b3bfba273198f33c0ad2391c2e5df3a9e0e390b814096e646afd03ed98af56e",
+      "manifest": "distribution/hypervisor-manifest.json",
+      "path": "C:\\Users\\rando\\_raeon\\build\\genesis_runtime\\distributions\\raeon-python-hypervisor-0.6.0.zip",
+      "sha256": "44ef5aa6a7576d2211bf51318c1b02bc5dc14333fcdba1b20249bfb54b8879a1",
+      "source_commit": "eaf1d457bbcda9b35ed614ca53dd93cd1a902306"
+    }
+  },
+  "open_items": [
+    {
+      "id": "P6-OPEN-001",
+      "topic": "compensation final name/id/flavor"
+    },
+    {
+      "id": "P6-OPEN-002",
+      "topic": "Selection remainder ordering"
+    },
+    {
+      "id": "P6-OPEN-003",
+      "topic": "Activation Utility rank differentiation/eligibility"
+    },
+    {
+      "id": "P6-OPEN-004",
+      "topic": "temporary Configuration Space expiry/destruction"
+    },
+    {
+      "id": "P6-OPEN-005",
+      "topic": "Stability/Protection rank/magnitude/duration/timing"
+    },
+    {
+      "id": "P6-OPEN-006",
+      "topic": "recursive fusion/emergence"
+    },
+    {
+      "id": "P6-OPEN-007",
+      "topic": "derived additions/splitting"
+    },
+    {
+      "id": "P6-OPEN-008",
+      "topic": "derived/emergent production cadence"
+    },
+    {
+      "id": "P6-OPEN-009",
+      "topic": "native graphics/presentation"
+    },
+    {
+      "id": "P6-OPEN-010",
+      "topic": "HOST-RUNTIME-001 OPEN_QUALIFIED"
+    },
+    {
+      "id": "P6-OPEN-011",
+      "topic": "final Utility names/flavor/IDs"
+    },
+    {
+      "id": "P6-OPEN-012",
+      "topic": "balance tuning after Pass-07 telemetry"
+    }
+  ],
+  "qualification": {
+    "python": "3.12.10",
+    "platform": "win32",
+    "processor_mask": 65536,
+    "host_risk": "HOST-RUNTIME-001",
+    "unrestricted_stability": "OPEN"
+  },
   "HOST-RUNTIME-001": "OPEN_QUALIFIED",
-  "whole_game_phase": "PREPRODUCTION"
+  "whole_game_phase": "PREPRODUCTION",
+  "native_devices": "NOT_RUN",
+  "simultaneous_fixture_scope": "controlled native consequence boundary; no invented public tie-causing action",
+  "utility_disposition": "inherited unspecified; no generic post-effect consumption invented",
+  "receipt_scope": "VALIDATED_IMPLEMENTATION_AND_ARCHIVES",
+  "implementation_sha": "eaf1d457bbcda9b35ed614ca53dd93cd1a902306",
+  "final_seal_attestation": "build/genesis_runtime/evidence/pass-06-acceptance.json after the documentation commit and push",
+  "git_snapshot_scope": "ending_sha and remote_sha identify the validated implementation; final documentation-seal/remote SHA is recorded by the post-seal audit and final delivery message",
+  "implementation_evidence_snapshot": "build/pass06-eaf1d45-validated/evidence",
+  "implementation_audit_sha256": "5dd6b0470d733f3d0b37be5c953fe4b4279fdd599f28b005494b2e734b9c676b",
+  "evidence_sha256": {
+    "acceptance-audit.log": "266e1abc61f345a2d49569fd5fb3a4708be153812fa00327623470e220d7770b",
+    "acceptance.json": "45c109bd49b1fdd795cbe26d154afed0003ea2109f4574c0200da33783892175",
+    "baseline-build.json": "528b95135d265ef99411e8814698e9b54b7e1ecf87cad001bb1999a7f59d1f2f",
+    "baseline-build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-build.stdout.txt": "1a535b4a36251e47324dc16b1c9cf1ee9719115e2482b6160e62d54ec915c9cb",
+    "baseline-lower.json": "a3d9df49745d7cd89a7b389a37d0b2752a7e7e72d8a00f1fbc3fac38af232328",
+    "baseline-lower.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-lower.stdout.txt": "16c5170e3bdcb6d0ce123424cfc93e212dd3489294b1f88693661aa36bb0f47e",
+    "baseline-parse.json": "eacbe779b660f7f165ab51f4993a8faf26a7d83b68c7908d907f093ed5d1a95d",
+    "baseline-parse.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-parse.stdout.txt": "e8880d96cecbb965e68fda7569e781c435f68a5be2ce2a3b8fdcb502c44e2ebd",
+    "baseline-run.json": "3329b7946c392098b5f4ecc67c707305c2506dd4a1fc2485680253b4243acd55",
+    "baseline-run.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-run.stdout.txt": "2770e37b8ac85df0d5fe0ea8622f39882ac9c430ee71154a2aeeb9b76cd17192",
+    "build.json": "55c2e7db30c8d233ef3a66bd0343f2f864ded72ed7a9e45755a73a046cfb4c3a",
+    "clean-extraction-run.log": "2ff36d19c1f7893d95241f55db54e34bbf6d7cc69fc65b7f3690e91d46943972",
+    "demo.json": "51374f1beecb7f5343cc70709fb5295b61c427976a27834859dd65a7b267f193",
+    "dependencies.json": "a78c30fff6bbb48fb374eae2e8fbe23bf49b52e3514399856486cbcd06dd02cb",
+    "dialect-callables.json": "3d8348907594ad396bfa5ec23751dfbbbe0658e9d808df314597c7abaeca2632",
+    "dialect-system-io.json": "25b07d36537d63fad107239cde170c93d42b6bcbdc034902da518cf0c1c29f28",
+    "dialects.json": "e9c64a4361f6a15f496f219aee769c9a29cceb0873e5f882c41859cb9a27bf26",
+    "distribution-build.log": "e5cff34dc43faec8cc58ace03950101633fe985f253c80c3d31780965e86f084",
+    "distribution-demo.log": "8b6b40e0f3c073a81d687196c95fae8039e6610bb4abf4026f5fdfceff05d0e8",
+    "distribution-dependencies.log": "a79e7a8a70e8609760e8bb2f7c8236bfccc0927f89736a63bf3609803fa30537",
+    "distribution-doctor.log": "e3cc59219e46c0f2b879387f5254e89f76a79e80e87b3e2db858cb217443a54a",
+    "distribution-install.log": "50ab3caca3187c2bc29e64f2bf14c2629544d85dbca0e3ce2a3846d0bfe0a783",
+    "distribution-installed-import.log": "334344b355e3a359b85a7fb603ac41013d42459474a23c327677ae0e269bcb67",
+    "distribution-integration-tests.log": "8fd431c6fa33f1fbe5af5ef2d21f0ef8d0b1bb67d9fb638eebcd58e11fb317cb",
+    "distribution-isolation-probes.log": "4b47f95a4e1936d7ce7b3b90066c71db54c0720b3f019c3a251881f886031a4a",
+    "distribution-missing-dependency.log": "88d90ec14fd9802cf9e6fee806dca72082101595a64fb5940cdbcf70ca027a79",
+    "distribution-missing-pass04-input.log": "227ed2bc4eadbd316cd8fa04d1b1fc74420dbe949289f805bad7e0bb0c2d6973",
+    "distribution-missing-pass05-input.log": "ac993ae616ab0d9f826330762cae2adb1ebeabdbec914f428a3e918158a88ae6",
+    "distribution-missing-pass06-input.log": "3f3470674199359543a8a0d568d1f97ee00e0fe775687066db5fc79c9eb9189b",
+    "distribution-missing-qmo.log": "583bac1cc2c9425f14c664eac94c0b73b3e8f1fb189de2ddb68d746943699b0d",
+    "distribution-pass-01-demo.log": "74bb706974b56d40268fe55cb4cf64dd4460ce7ca71e9415c0f677b57f682f94",
+    "distribution-pass-02-demo.log": "4d2d31f86eb1a8fad4ad3c712576ca73df2aa2299ac67f457d8a3bdfede1b2b3",
+    "distribution-pass-03-demo.log": "87d4603c22fa38a0f19c76791de1a9e8e9252450a53dad698e0fe9d704cbc520",
+    "distribution-pass-03b-demo.log": "3632ab76b24c9493e4abea96572539be78779631fb9ae6e090deb4f56c11c649",
+    "distribution-pass-04-demo.log": "6e01a0a314538db0bb4a7114e17935f5eb2e07a982a814b0ba91b5c24e022a53",
+    "distribution-pass-05-demo.log": "82823dda8c7b6fc6e6647dc00a0bd6bf30e0aab2896a85699a0e40411fde3c6a",
+    "distribution-pass-06-demo.log": "e99dd9e1bd2eb8536cdc55808b94e0038b6c8580f01389e01f1646fcec918800",
+    "distribution-unit-tests.log": "0395551599a754de907bcd4f29b8a144860395aac78e146b02399c110f6ccf3a",
+    "distribution-venv.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "distribution-verification.json": "55bd702579a9067846bf34626dc9ac64ee6e49f4ac510412790a0da4ab8993f2",
+    "distributions.json": "b30c9918d1b5303317ba4ab59f3466206ebffafbfbc667be2456f7e868f63077",
+    "final-build-command.log": "715fc81fa5e4e039bdadf02ae384d8d4c03d0185bc65ed48cde3f000cd5f2364",
+    "fresh-rebuild.json": "a4d2d62b36e7ab3ebc48b684a45659b8293e0a11c2c3c375760b573ad3b83f71",
+    "local-and-upstream.log": "8bb530c45c9ef66248f93a5e8e82591e2c158a9d556d65371d04727dbc048522",
+    "offline-debug-build.log": "dff8779f4bb6c0091347ce16dd155998700419648417f5b8159c94a82fc5a3a2",
+    "offline-debug-doctor.log": "a22f544996018d3d18faab0788b538a0fec85df6890650d8697e21092becdfbe",
+    "offline-debug-empty.log": "218b3062e7b4399cdfe0728584826679abb8ff58c114ab406be977dd0c441912",
+    "offline-debug-probes.log": "dd42370a2e8943248c538badf47f884bd017ab8d89c82872516488110700e447",
+    "pass-01-acceptance.json": "87bab4bd030521a84d06331165708d5a618e5db54fde303fac67d06a1c41b27c",
+    "pass-01-build.log": "d159363fa07d08f2d742360c3742dce94858ab0cc3e7e7102a3ed3e4af02413d",
+    "pass-01-conformance-demo.log": "3ea078a0a7fd20c763e97fec7e57ead907592603bd91eb951c5eb44e971bc86e",
+    "pass-01-demo-command.log": "8264690419a02df947200b2ef6e94681b5c6f68a262b452dedae2565fdae1792",
+    "pass-01-demo.json": "441dc53678a7e8723f991d61185c93e526e08e3c9760616713793e9b1d2e07d2",
+    "pass-01-dialects.log": "16bcf7dcb818869f1750c66917da05f46a268bcfc743820ded83b085a881e913",
+    "pass-01-distributions.log": "14bfa25a409b02b9d5f3300a8c74c5daeeb4c317703e393b29474b5a8f75f37d",
+    "pass-01-doctor.log": "3e5b80dcfb68f38986cccda56ff05e92650f17dd6ac45acdd153b925a436ec1e",
+    "pass-01-final-audit.log": "585d27aa20c9be133b436fc43d30e302f0617722bb6bcac5d3113ea31fd1cf2b",
+    "pass-01-package.log": "ee3bef7d3d0ad21985a7b55985ae568a3753c42b63ff5692d1efd5f673c7943c",
+    "pass-01-repository-test.log": "d88dc3518c3f6ec5903a415de2f368f09141c7ca91426a5ea11e3609c336eb5f",
+    "pass-01-runtime-test.log": "9c086bfad690ab6f62e7856688c4c6fc9128b809ac7784fb5a4c932a4a24e145",
+    "pass-02-acceptance.json": "be1d6244bc3509e1bf38b4ee13a3324ddffe54ebe528603aba4b7c51dbf59e1f",
+    "pass-02-adversarial.log": "9a9bbcd2ca36b18e8ddf4a52bda2fa3b28e2f8841e297eb8ad87631205afbd17",
+    "pass-02-audit-run.log": "5e4eab49633de3f9fb78514dbe1a48dfb3702d4f5f01f80bbc58fee6f816a573",
+    "pass-02-baseline-audit.log": "585d27aa20c9be133b436fc43d30e302f0617722bb6bcac5d3113ea31fd1cf2b",
+    "pass-02-baseline-conformance.log": "656db7a2082f4b774099b67b9079ab0cf745d545624b812eea70c885dce78ce3",
+    "pass-02-baseline-dependencies.log": "a78c30fff6bbb48fb374eae2e8fbe23bf49b52e3514399856486cbcd06dd02cb",
+    "pass-02-baseline-empty.log": "bceb80eb6a3a3118239718f4c148fc7aaa7d01718ac37db840f52b7a7615e30d",
+    "pass-02-baseline-tests.log": "fae30cf469ec0b258697c0e8b6aec4b90dc2542842584672dbbbfa5d92155e7c",
+    "pass-02-build.log": "dff8779f4bb6c0091347ce16dd155998700419648417f5b8159c94a82fc5a3a2",
+    "pass-02-demo-cards.json": "e70ed10ccdb49fee6118cfec12275205c04f2d5995e1a702f5340aa1c6c79836",
+    "pass-02-demo-empty.json": "55b61ecd9962bceaecaa379b69b847850e786919e0028c1c9945411d7e0fd302",
+    "pass-02-demo-run.log": "aadd0d8598563f1ca51cf869e811ba716998947a285970345c0c681a1ac67ca1",
+    "pass-02-full-test-run.log": "76422692546f914b91de2e4a870a1b4c47fb444d1cde0108860e2942a67353f7",
+    "pass-02-guard.log": "5a312c2ec121fd14b85096c9dfef09365b7941fe6d3691fc48a7058de6f85e0b",
+    "pass-02-offline-installer-debug.log": "2bb65c7203a3e4327e49d8042cae7a5d08f87c9f9aaadf88e258f0ca48a089d7",
+    "pass-02-offline-run.log": "709ceccbbb39f64b51e26d4c2b779ce92021bd9f9d78306c5d4e3a670bcb96cb",
+    "pass-02-package.log": "fe2368af8265cf3bbc5e16acbb3bd43b76fdd80d1f113e84780ed30bf0dad742",
+    "pass-02-repository-run.log": "ab21db6054008cc5d4861fc62405ae8ce64bbdc7c188aa41aa9e82ca0a657eed",
+    "pass-03-acceptance.json": "62fd449de27d50a6e569a34adbeaeb0cd15375dee8c37f4be4872386856d23be",
+    "pass-03-demo.json": "8a74a244141728dbf255ac7117331620f9600bc0000dbfef91e085e763b26870",
+    "pass-03b-acceptance.json": "6689bc935ef67953cdc53683e40466dc6df27a7f381267c57bbe700935d83696",
+    "pass-03b-all-base-fields.json": "1c6066a9d5279ef808a302767183ffb4bab388a52ed33cf3fd72dca364ad662a",
+    "pass-03b-demo.json": "8b69641881ec8fb8f0b71d00cbe30d327f95cf0b8b2796633b6b4a4465b72010",
+    "pass-04-acceptance.json": "312694cbdb8989a85f7c85067aa39bf2e6cb292b37d26fff2907440ac564c94a",
+    "pass-04-demo.json": "c4a04fd74c9782888cc205813a2dc4b2ab884eb525189cc09f9d22700bc3abb1",
+    "pass-05-acceptance.json": "f468e1579a0785bb561982933686448ceea32650e11d285596945d4b92830e10",
+    "pass-05-demo.json": "2074ca1eb7c55dd1f980ee305cf11f19fd0a3d7365ef847b31750500047f52fb",
+    "pass-06-acceptance.json": "5dd6b0470d733f3d0b37be5c953fe4b4279fdd599f28b005494b2e734b9c676b",
+    "pass-06-demo.json": "c59e0d708e62fce5c996aafb7630c4bb51a7992e22947912b15d859bf4de3875",
+    "projection-correction-acceptance.json": "b1b5e401db197982d57677dd58c4bb5f69d4b01aea53aad6b8f00aabecdaa2ca",
+    "projection-preservation.json": "000d597f256b4ed629cddf838921738fbe54f1b55ed1d76928470cf01c61fa29",
+    "projection-targeted.log": "1b1729115ef443a08beaec1c513ff6967da3ea1b980f922f11b8334da488c898",
+    "remote.json": "203ce1763295f543ffd5cd7826292657dee14b457defb9142ee251aaacc6c1af",
+    "repository-all.log": "7e7ef7872702f02cbdbb09c2a7834b0ba18c73c151cbb846b963d5e11e7781b2",
+    "repository-bootstrap.log": "2a9dee2132d20f99340356e01e29cd50ab03c9047c54f515243e3d13e2f66a27",
+    "repository-command-0.log": "cd3939cd7b2fadc4294a13749740d5171984ff7a599120126a6e3d50a37145ff",
+    "repository-command-1.log": "4c03f809eccae7ac977367e1049f5d56b5bba04a71f0903b7533b35872642fb7",
+    "repository-command-2.log": "ffa0df2524e88b8eded8155339af99fc4da3ec3b199a9633517dbd4e24ddb0f2",
+    "repository-command-3.log": "72c791e6394a4b2afffb891baa288a10a58e0713bd7d8bbbf7378d700737758d",
+    "repository-command-4.log": "00f3dc8fbc663a75330af8fa433452b15867a586f394a202baf5220a84873728",
+    "repository-command-5.log": "78c188e74b169636ec63586178318224509eef57ad934e4bbaf9cfc30bfb8cfb",
+    "repository-command-6.log": "5a312c2ec121fd14b85096c9dfef09365b7941fe6d3691fc48a7058de6f85e0b",
+    "repository-command-7.log": "32db2db1446bdc5334fe1357b221b8c8efdc6f4a32854b58e8f633c95c7d9933",
+    "repository-command-8.log": "832c130c92ff8f4077fd7b5f91b6c79c628d00b62c0cb5bfde798db802f967a5",
+    "repository-command-9.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "repository-continuity.log": "c5858b860c32a25394b2838d8a9af5b639b7119ca9465287285060304b803057",
+    "repository-cycle1-import.log": "00f3dc8fbc663a75330af8fa433452b15867a586f394a202baf5220a84873728",
+    "repository-design-state.log": "9fc1a3b493dead6a15155f7a0620f45866a2e4129961a759db0e272a9a599dc0",
+    "repository-full-migration.log": "78c188e74b169636ec63586178318224509eef57ad934e4bbaf9cfc30bfb8cfb",
+    "repository-game-definition.log": "5a312c2ec121fd14b85096c9dfef09365b7941fe6d3691fc48a7058de6f85e0b",
+    "repository-gameplay.log": "f99bf7c454dbae41c2da401c4c193944f0e53b0f287342eb8e1a3150e07e5858",
+    "repository-normalization.log": "19f4ee0ea1fa7ef683097282b7f666525b06c8ea1fa740b406a8f71e600589e8",
+    "repository-regression.log": "957052f648038ffe8169e3e514d265d89600c2bdb3e831de6e63453c422cb7e1",
+    "repository-validation.json": "243c68c9aeaeac9eb5a9dc75e48e697343754fd2379169019b0919b9b9b6f5ae",
+    "tests-integration-cases/000.json": "aee77c19d9788c2cc0ae8a7a10ded4440ab457ae8d02e87068f111e9287f56a8",
+    "tests-integration-cases/000.log": "6025b505e27e17d08e596403a34011c7fbe48796b01118d13aa930febadc2c4b",
+    "tests-integration-cases/001.json": "11a39c71f655c7995b9e2945aeb075e85c7c55af919e4e50be74d124014c1741",
+    "tests-integration-cases/001.log": "9ada46ef2cb1e5c5b272a7348deee49f6d0ed6c7286c416540e84e256284e638",
+    "tests-integration-cases/002.json": "08614941cba0e12837aa7acd7b8146520b2eb40d9d147dd9b5abe5d70b1ac7ae",
+    "tests-integration-cases/002.log": "eeaaa82c7d1420d72a6333fe25a40dfadaa0234d435352c54ff2d2081be9849a",
+    "tests-integration-cases/003.json": "45b2c181db7d52ddd4c84e03afc301809c420709650097576da5dbf754d7ab3e",
+    "tests-integration-cases/003.log": "b8df51e02c137c475c2e8a38397e2c163681a65f2d6e0340a88ed87d00fdfd84",
+    "tests-integration-cases/004.json": "9b0653d355f7de4b34ba6863263eb96118b84788fb0caccf9a2b4f15548fb18e",
+    "tests-integration-cases/004.log": "2d13b97fe256ee4bbdf48934e39858e32e1e6191bfb9f517c7d29af369e307ac",
+    "tests-integration-cases/005.json": "ca14a6fda27e5c761ec16f16f2e859492d08d2c4eafe743975fab336b5c33b4d",
+    "tests-integration-cases/005.log": "97486d46cbe9d9c5143676e79116fc50988a8408187eb8f5279b29d543ed342d",
+    "tests-integration-cases/006.json": "effec798d524d6ef062474450a123aca29893d215f0b67cdb2255b45e9cc6c78",
+    "tests-integration-cases/006.log": "cad3643031c718041a8e7380611817b961015995dc07dd2fa94a9ab08b06341a",
+    "tests-integration-cases/007.json": "4e3728526b331ea013d043921f598ae3c425d367af8c8e806cb1f9dce33ae639",
+    "tests-integration-cases/007.log": "0b3ddf145b038792de107e83d44ce4a97062f006adc24240f3c850533465200d",
+    "tests-integration-cases/008.json": "d098027a111774cbe59c36bd046e8d103fdfb39331b23b2e6eb520eb090af9f2",
+    "tests-integration-cases/008.log": "0a8e03e72aa858284f2e5d60ffa46aecdcf3355436c67f549347ced2d5a34363",
+    "tests-integration-cases/009.json": "e9f779ec0d23c17edae09675ecf72cc77d27391fd1d975410c15c44d4e90e121",
+    "tests-integration-cases/009.log": "39e4b37d0d8d8bee8c607a76a97b26cbccfc1dfe0ea2068a2753fefcc47506b4",
+    "tests-integration-cases/010.json": "e4b8938dbf185fa011e6190b44b6d5058f8002d1cef2614d92980dd145f9defc",
+    "tests-integration-cases/010.log": "f38665bc4715ebd146726f8490ece4c0e5571bbadfe45801a3fbe74de63c49f3",
+    "tests-integration-cases/011.json": "9cba4b13d8d45ed244e37eb722aae0fbc15d7f4fa5fd93ae4559d85d070b8d5c",
+    "tests-integration-cases/011.log": "0791efb244337026a7761b689db55ce19754408b9263031d5aecdfb1ba0aefb5",
+    "tests-integration-cases/012.json": "39f8bc7261bba6bf22b4fe3b8819dbd7885abe792069ec66f1891b1b8201530c",
+    "tests-integration-cases/012.log": "352c0d98b1c938e041a3a169754f96e52a65ec2920d8e478e12227aa07009e04",
+    "tests-integration-cases/013.json": "5afb6a1a7a5b39a33bd748113326f3238ac58d265af79a3bc7ba4cd9ee684abe",
+    "tests-integration-cases/013.log": "753e29c1093f5be8578fe17dfd4dcef94c01923ce772a27d7ffa27bfd335210a",
+    "tests-integration-cases/014.json": "42c7d1833e9962c50e721ef590c3ad43adbf3a762c35a80b8d09d91fcdc033b4",
+    "tests-integration-cases/014.log": "23eacfb81d6fb73c9abdb3e99b61cc6917efcaa1a406e86a8a61d42a90a94320",
+    "tests-integration-cases/015.json": "e24f571a1c828ede58c796b4fbef8a915977507bc4b5a06e29f7a2ad1ec203f1",
+    "tests-integration-cases/015.log": "4d323c1a532fb467007f0c4db892546d1b630233596d27f023ed193ae0ed0b1b",
+    "tests-integration-cases/016.json": "aa9c143200583d414ec26a8dfaaa659edafdddd753abb6710be0118e90968842",
+    "tests-integration-cases/016.log": "af2532205cab4d6a9e5590589a54caa50778650d0a9b1c67e9471378122a9d74",
+    "tests-integration-cases/017.json": "f8b23118934ee5fd3a0d9fcc4378d1164f2d82a8aa243fa637f598b4c6f44b4f",
+    "tests-integration-cases/017.log": "adb75b0d38cd7a9e12603a93c778fd42db1c80ad1ff43c60ba75b70453cce4b3",
+    "tests-integration-cases/018.json": "1f2efc033c41cb044edec2c11e916211b82508ce1b1a073d9cba47b569881ff6",
+    "tests-integration-cases/018.log": "40d13b42a255c1a899d3f49a7c27b35b1e79225bd1c4ab1e413f1035e4178a78",
+    "tests-integration-cases/019.json": "f0d18d1b3729657668a4984a95f7014f04dce4423745884ed0a1e1ef7a19fed7",
+    "tests-integration-cases/019.log": "ff64427a3b0788947db6886fd7a2f21d6993d1a055966455b8e5371850b5bd54",
+    "tests-integration-cases/020.json": "ef5fb5aa37bfa9f97538af2baf88ed26b75139d14edc69b255cc2f5e6019d93a",
+    "tests-integration-cases/020.log": "67ab7715a0153f65f6ab61e7f2bb3f0cef77e39a39c3df168087d8b209fe29b2",
+    "tests-integration-cases/021.json": "79f3da905664deac416c75bdc9af13220654ced2a4f347bdca69285fff0809c9",
+    "tests-integration-cases/021.log": "6cbed5cc4ac7551183e357445e9646e9e644688a603acb55fb203cbed4d59d3a",
+    "tests-integration-cases/022.json": "5dcab1e6317e2e7c0ab1a54ac4e269fddef197a55679560de59503fe6e917829",
+    "tests-integration-cases/022.log": "51305dac99748dd9f0e9aa7727fd6b00cf39a473abb583fbc89c447b574b678a",
+    "tests-integration-cases/023.json": "8df098493582a387b65a7531b44c933233b3994744576102c5a1f26c1884b985",
+    "tests-integration-cases/023.log": "257013ac82ef0732ecd845b98ad66874e08af739f7553b259ef467a9e58ca9a0",
+    "tests-integration-cases/024.json": "d8fda6d10c0d216c9e8d60e9db9d21639eddc7a7140c785406080b2982b59033",
+    "tests-integration-cases/024.log": "1c4d254292260e0f04d964544fe2fe6cb87dde8d4ad5542a81a6910a002fe237",
+    "tests-integration-cases/025.json": "fb2bee235fb05d52786ad3043be170ec68de85a32463f3d5d2c221dfc5092162",
+    "tests-integration-cases/025.log": "ade9ba8de84663b11d74fb7e0a89451892f6378dbaf7cb08851a5da8045bc73f",
+    "tests-integration-cases/026.json": "6c3501e46abb3cf5cfd889f3e6a289d8366450c73872c8dcc756130d7c43c108",
+    "tests-integration-cases/026.log": "54557966cc07507b8b0495fadd9f5ced796ecd3682a1785b90418e8223fd3a9e",
+    "tests-integration-cases/027.json": "a2f7ff8564d80c34b46dce72502fbb457b737efe3a182f3c01153687fa51bbf2",
+    "tests-integration-cases/027.log": "6e2fd018bde7a67c589bcff676039348920aa56ebe670eb423f2ce0c2e200222",
+    "tests-integration-cases/028.json": "7a8448cd09333e42eab7197c06063c775c03fa07cd44675c09967ade5ae09128",
+    "tests-integration-cases/028.log": "0bf1cfa9fc6fefd748529400006e87d44fd9d4c911e5a4aafb2b8879c4684175",
+    "tests-integration-cases/029.json": "cdca576882e8e9c0257d2f93607e9883659501f2cf949065e624ad983aa67854",
+    "tests-integration-cases/029.log": "5e0c22789ef4492fabf1ae55cb1a1eb13c281fcd1841346f6b9a0e0270bc807f",
+    "tests-integration-cases/030.json": "ebaab4ba315bb95f40fb2b1d791caacd3b82346eacc80db806954d8bb7ee6a49",
+    "tests-integration-cases/030.log": "cf03ed3b6400fa7715ec972ebe8bff531f2c9a782d5f03a159d7bbb1b84f26ca",
+    "tests-integration-cases/031.json": "f7bbe0ae937e5a0efc53fbb8c64f8b7ea003e2497722c5b58f949452c1b9da8d",
+    "tests-integration-cases/031.log": "e45618e3288b3d6dd61347dd2cf6427ab1ed1a5fec8bbe1d6db75ba3b781bc13",
+    "tests-integration-cases/032.json": "d16a502bfbe889f6e9584bb1639f377808547784156ac6cddc550118c6f65536",
+    "tests-integration-cases/032.log": "02aeb11ca305ace6797b471f0bf753e0d1a888a72155e69f33fb951bb1bfb7a6",
+    "tests-integration-cases/033.json": "783833036cac60bbeac7e351e6f03fea66aeaf0e815e9df091fbb27437fa8496",
+    "tests-integration-cases/033.log": "3fb0d532e898b208e50171804ec5328d08be90d97980d17a8e736814895acb68",
+    "tests-integration-cases/034.json": "9311fbaf4a2f3c1df9a12de78c4a39c0c4220173903b414841043f2f79996509",
+    "tests-integration-cases/034.log": "a8c84c4a5ecfb7ed5338ba272af6c7eeebeff46c9ade31f2014ea885d12b7bf1",
+    "tests-integration-cases/035.json": "5a76c1d93d0f6e25c2ec2a6ddd8b2def6844a9e8f2b9f605f70ebae84acd2ec0",
+    "tests-integration-cases/035.log": "9e5fbd305dec4df9a3e6d22e8ac55a8e65dd76b671eea07c729cc217ce518714",
+    "tests-integration-cases/036.json": "9149a85a6953828cf270ba17e82b161a2450a73c06813f73daffb7df8ad4b17e",
+    "tests-integration-cases/036.log": "e251e07469a3df82176ba8e2aeb4f372da1c09cba689afcc2b75562aea89b168",
+    "tests-integration-cases/037.json": "2d7622c6e812d7834c9a20b6a4228dd9859c7f85fccc58780f4c3a0662df6f3e",
+    "tests-integration-cases/037.log": "a19c6cec0d13819b58692cc87c88815cd40445fd3a39f4ac95ab8d3e873a8741",
+    "tests-integration-cases/038.json": "28fe5aca057eeae49dce4b5046c6d79f86d4302f22dbe94ed2e77bdc88ca7895",
+    "tests-integration-cases/038.log": "aaf76ecb3ceec7f6e494333c4a223fb3b3c3cef6f8fff50b31f3a26291588b9a",
+    "tests-integration-cases/039.json": "4beaf815c8ceb42f35b944dac484722809183f12181ec7af10e9897ce6f6f399",
+    "tests-integration-cases/039.log": "2057e4f7b6b1e3aa6e7d3455a8ef74cae20536173ae98a5126b192c7aa13d3dd",
+    "tests-integration-cases/040.json": "c8c33688d07bfdff5151caaa48f299732bf6acbab2bcdaa1dc30c471f4c1563e",
+    "tests-integration-cases/040.log": "cf41c46a955e6e999c79604a480e20fe633749d1651bc3b035bad3bfaf352a00",
+    "tests-integration-cases/041.json": "f389071aae9d2a3ca6a9967a5d60c4e1f8ae73df064af43b0991adce23e9734a",
+    "tests-integration-cases/041.log": "f485267a4594ee487142a1c127867911af75313841460b4be195f85667b73da7",
+    "tests-integration-cases/042.json": "9c213bb2619bc5a44ff520c7dbf99eeb2d6657db90a0bfd21c5aa0adb175a948",
+    "tests-integration-cases/042.log": "0318a1cb4723283d1679d67f3294e395067a22fa7b37a837e07bec314eed2458",
+    "tests-integration-cases/043.json": "e3ab091e845be463dcb19d8fc323ce7862120438d1c01e391f2fae7f637f04fb",
+    "tests-integration-cases/043.log": "e2ade9b23809ce697648200310a59d1e971f8bc68c4d6ca86bb10795670d78ad",
+    "tests-integration-cases/044.json": "7c0d48db58d6fc1832c00114bc3185d07f6ab2c90f07da3a9671954f798a512f",
+    "tests-integration-cases/044.log": "9f48140af8b274d1d058e67397e62ccc4c579f86585ee54da91f138020f17f1b",
+    "tests-integration-cases/045.json": "53614014ecf9f94bacabe642e9dbc0f2811d052c940782f34d2b491123abf3f1",
+    "tests-integration-cases/045.log": "411160bb13d522124f5323751fe84939c2a72650331c7200fb17096653846d7c",
+    "tests-integration-cases/046.json": "0d1ba3db2fbf2c17d3dedc10f8be75bf44d4a73370f5e803acd67961c039214c",
+    "tests-integration-cases/046.log": "03f22eb79989bbcf137c1fa2178c883e9745ed25cec036dee90095ae5875d8a8",
+    "tests-integration-cases/047.json": "99bc5f304d624b162ab5978cde20781b6c4323a470e15033849a46f122c4ecb3",
+    "tests-integration-cases/047.log": "cdb8776bf6b966e199c83be34ad28b64469bb15ab0debf9f092b5d7bb37ff37e",
+    "tests-integration-cases/048.json": "ff1351fa5f61e189e9fdaa68b2c7f303a1388906552375d57f45a5c3a36114df",
+    "tests-integration-cases/048.log": "2714a02a0bb709228024fa19916d528f9142c5ada99bc97918784170a90a36df",
+    "tests-integration-cases/049.json": "86e220250c4fec85fa767fb5a8c940d9bb161d8c927186aef3f506a499b4b94c",
+    "tests-integration-cases/049.log": "dc928f0011e69c8dbea0c129f2a3b05fa6439619df2e47021e2add822bfb5e93",
+    "tests-integration-cases/050.json": "667635defd1fb4081f2724ccffcad8da31275e1e870ae1e8e1ab74bcf8068006",
+    "tests-integration-cases/050.log": "f59453f8dfbc39b7f7c470a8a4b5fd40eabc6c0c34097f83be93490b00fc72cd",
+    "tests-integration-cases/051.json": "d1418e9e027c3d2753796d9078e8c745631c394f94e85327caf1eb98570b9322",
+    "tests-integration-cases/051.log": "84f4943a1a408acb26e37a28420f3e50276a12486eeb590724e23e538271131c",
+    "tests-integration-cases/052.json": "89361ad8d4e1d4a16bf9fc49fa85dd17256f4deb0f688b06d161740dbc67328a",
+    "tests-integration-cases/052.log": "19d40baea3fe414acf69464e846e0b23eb2309126271585e57e45a80febae0fe",
+    "tests-integration-cases/053.json": "fffa6da0aec62942fd599660ad7596b461569f3f8a2d1a025e170ac3dc2653b5",
+    "tests-integration-cases/053.log": "f1b3e237c00e48960dba7c66bf1f8f02f3fdfc1a108ebc4c3769b65be431e758",
+    "tests-integration-cases/054.json": "6a096d763214c47deeec80b3d422a679e27abe209e74eb60ce9366d205359dbc",
+    "tests-integration-cases/054.log": "d76c9764a9e5c41f9800137405ea6ec9c257ba2afd1ba6712607fe39bf5efa2e",
+    "tests-integration-cases/055.json": "21e84bca4cfde3c7bc20e808981689c68d5a93cff7e6729c72e9a728684e5017",
+    "tests-integration-cases/055.log": "52b1ffa5bfde1550e5b77d525e9d3aa49dd2d3c84ecb284fdd0499ee8931bf3a",
+    "tests-integration-cases/056.json": "9e73fb0ebf53e7831c9a5eaff1cd3e450a5336c332bec472b08db842be0d1384",
+    "tests-integration-cases/056.log": "ba42904c4578ae8778f43ee751573d79cb80d00e5ca7ce1b45255b719a8ec0d0",
+    "tests-integration-cases/057.json": "e172587c29b6481befd1faaa94769e04451dddccbf3e56b52fd07dcb58727fbd",
+    "tests-integration-cases/057.log": "9837c479aab5d689b9036b36f6e888a3f0b2e8181d28c44432dd67dade5102a3",
+    "tests-integration-cases/058.json": "fa12d1a49dd1ade49049d85576da01e085b0673f68b69862ae7d06d8a10815d6",
+    "tests-integration-cases/058.log": "2eba8bd1bfcbdc745d596aa073d040fe2a8c3a06fd9fb2dab4b860db29e4e2bb",
+    "tests-integration-cases/059.json": "53c74349617721f03a7d9631d4c7b4299bff51dc391394cebc18c7a94b14ae92",
+    "tests-integration-cases/059.log": "f8c798ef53473bf11686046844b435ce3dc55bbc37625011d67a2c77471274e4",
+    "tests-integration-cases/060.json": "2dedfbb4b9cafed39bfa284fa594e792a481dead19ca5ad773bbed49ea359351",
+    "tests-integration-cases/060.log": "c5f692b100ac4be11bb935fb742aa0f0252a83fbdf4dac67b5753a67335f82dc",
+    "tests-integration-cases/061.json": "a93a147321a1b7746d40daa12635e0b27f70eb1d88569bde028c341bef09dfe7",
+    "tests-integration-cases/061.log": "03fb96d656a0f7dadba29932457cd81b518908477e6cdb6b9d4b3db46cf49a7c",
+    "tests-integration-cases/062.json": "a32f3a770755e2c66299ff379d39f09b26a59ced35c678fa3d2b18bf1712977e",
+    "tests-integration-cases/062.log": "f20619b1f54078d07e807c4dfd838c6b7fe63c503f011638f7bab596897ed234",
+    "tests-integration-cases/063.json": "cad5f37efba0c412d3f2ce1542a561af56d13b9e7aaa9b9cc10843238d92c783",
+    "tests-integration-cases/063.log": "a1636a22f9881eeb13c1ad3535e5ab39457663ce55ff72ee166eaf09af489492",
+    "tests-integration-cases/064.json": "f01fcc73d02df1fdac100da48eb0f9cbfdb28264924433e5e4156f6008ac7ca0",
+    "tests-integration-cases/064.log": "5005e2f1d8784cc7a2816ac4e9a8aaa3e34b16601f8e540e82e0d60e14125a4d",
+    "tests-integration-cases/065.json": "4ebc39c2938be59800941763b56b48fea9c32b75ec6a3ec5e8e25f4cd5d98d5a",
+    "tests-integration-cases/065.log": "d2a359f23128a834088e76c3ab83c3a4ded07d2b61e33d457bbbc4e6eda77b24",
+    "tests-integration-cases/066.json": "daa0dfec2706c442ced58e02bd9efbabede9a70173ca80af7faed65694dfcea9",
+    "tests-integration-cases/066.log": "72cbcbfdadbc7c031c8b7d238a367daaf3324fe4bc803d2f0768dd1bf3cd7b05",
+    "tests-integration-cases/067.json": "9c18346db0572f9ae890f944bcff9966de8a08f65e9a42c79314c09f32b61332",
+    "tests-integration-cases/067.log": "404105f8b715cf71517158f0b322189ffa2c3b057669bc8695a4f1e65c0fd5bc",
+    "tests-integration-cases/068.json": "6cd8a87ad54424d1ae8e53c3dff64f44714c2476ab54acd1d9011f801028e75e",
+    "tests-integration-cases/068.log": "9a556402998aad743130db9794f78aaaa6800422f91571b3def3374ab8c39f6e",
+    "tests-integration-cases/069.json": "537d0bdddd3000959342fcaf41bd515e7aea6938079967e2076c2ae7efc51204",
+    "tests-integration-cases/069.log": "d2cdc5cb706877caeb148725ce70097feedc4b5f87cb09b40523041f0116bcda",
+    "tests-integration-cases/070.json": "dcf4c7bf1c65a7c0b8a36887d8e512c040713e313734397527b413785b520ae5",
+    "tests-integration-cases/070.log": "209e14e539d2717d8a1e6e182f3c1cfe6d149408e0cd316ed5fa5e8cca7e8b49",
+    "tests-integration-cases/071.json": "1fe72ea8b01088f5a43a183ea49236e3f10a83c0b6e7a7d8edabff1dadc6d551",
+    "tests-integration-cases/071.log": "3e99d8567c9157caa02edd9599f12fcd66f654dcbbffe29207a07ccf19ae0899",
+    "tests-integration-cases/072.json": "b5e5235f191834c1a7bb174d8b9f15da12d693b4b483ac266d52318589bfdcd4",
+    "tests-integration-cases/072.log": "a1022e77497584467261cc2a106733f56bc12a454c179e7db157071151224003",
+    "tests-integration-cases/073.json": "94935381a6b6b9a9a1456d2826c291ccd0683c7df898d338afc5ddf337f54695",
+    "tests-integration-cases/073.log": "04de4ef32e4c02d0342b8965769494b5f3499d94e8c6d010d56cc14712c2f3c1",
+    "tests-integration-cases/074.json": "9e51e86c6c087f11df1732c30326e42d3ed0df823182a7474b80bab542da4788",
+    "tests-integration-cases/074.log": "706041aaf0c1666199599b37baa03e7261289b3694c66ba91ea5232d262c1c1b",
+    "tests-integration-cases/075.json": "a328d6ce14f94dbc11eb4c9bbc9475f012c12031fcc20dfaf2c51b3209202fc5",
+    "tests-integration-cases/075.log": "fc34f41487bee9d258714d89f208a2e5e819e1c982cd55d27e723aac71c95238",
+    "tests-integration-cases/076.json": "b05af569947f7cb5ed5210516d0a98e6bd68666b22f9858b0368d98a6b4e50e9",
+    "tests-integration-cases/076.log": "644e69bf072a85cf951d9d76cbfa454a52fc45d47091c551afb41d1c5463e65e",
+    "tests-integration-cases/077.json": "b8d54012ce669ad2924fa424aad4a292331d3d6bb41f452172e4b7fe8a1d7979",
+    "tests-integration-cases/077.log": "6c3a2e4f7a54b799e1fc9afd63729fe6cbcd301884466f90eec09eac7e1afd1c",
+    "tests-integration-cases/078.json": "e5195db2faffe691e4a09ef314a961a793a8a4caecad0fb762e71ff608f2aaf2",
+    "tests-integration-cases/078.log": "82121e5f7f5a702687a23d254b5ae25e4233377583421826c9971e9e763a7246",
+    "tests-integration-cases/079.json": "82ec7dc43cf5fe0a54e6d7bcf4602e392fd0030239041ad74e781aad9db0dd63",
+    "tests-integration-cases/079.log": "85a1f55f1378220e1a7a23d83091ccd141352a9b98904343b0f4e174dc39ff06",
+    "tests-integration-cases/080.json": "822114c9345458d0cc9cc850e18d4fc58fed7630c2bebbd525ce2305e9b746fc",
+    "tests-integration-cases/080.log": "6aa164f643100eee74147ba89465edf2f43c59b2eb33dd5b29427ecf2482f2b9",
+    "tests-integration-cases/081.json": "88b2dfd43ee8d85d96b7169174ed77bc90d377201a7c6d2885a14e130cde0c29",
+    "tests-integration-cases/081.log": "a12dd7223655042e92508d525dd79f70cdaab0a7702b31f5501abe3b491ccb57",
+    "tests-integration-cases/082.json": "134c48eca0fdd05e7c18ed4921f3d6e7a7036ab4bd6be3fa3fdde78ae236ff96",
+    "tests-integration-cases/082.log": "973952ff22dc39e287c4179ede27c11405836263fdb6f3c4b9fe22113aa6270b",
+    "tests-integration-cases/083.json": "782b54cac15e36a57162810320365ab48038b016d43f635cae99a060958c5aaf",
+    "tests-integration-cases/083.log": "1bb77a0297844b0e9ac281a23524f6d9529834608a94cc109fca7defdf44daeb",
+    "tests-integration-cases/084.json": "a50129187e5a3955ae8fd9cf0da4a3202510412cf3977b80d9ff83d44edf24ac",
+    "tests-integration-cases/084.log": "ab39039557827cc08b7a13ad69acba4f02b031746cef7400b5b48ce05a1e6a92",
+    "tests-integration-cases/085.json": "2a9a99efcb2f4e07be8e5dd0567a5da8e34c1124e3a35e10669f4d04a339f9cc",
+    "tests-integration-cases/085.log": "501fb6180e4be51c8f32c8ce7897f70416501772a0939c18e1205619d1026229",
+    "tests-integration-cases/086.json": "664fda6bd5714c44c09ea3198d4a512cd233570bbbe1a7c144e0a85372680612",
+    "tests-integration-cases/086.log": "3d71a354feeec7997be9ea71112511352d6f5bdc9271e264c9049171771cdbd1",
+    "tests-integration-cases/087.json": "9d82cf05e0a54b545b98c35a6a045d3c040622ea2d201f2d32bfec9cd2579f43",
+    "tests-integration-cases/087.log": "3497b5a51def4637c1c00f4c7ab8a9c41b9e97344dd569536eea35fa3ce034a6",
+    "tests-integration-cases/088.json": "412030bde2ffd9e6365928935ba5dcdf8cf036cc6fc455e5da99b8f9dc53b759",
+    "tests-integration-cases/088.log": "1321eaa53f7eb785acbb2c4afb2cbf8443512910803cae343081735cb042a8af",
+    "tests-integration-cases/089.json": "94a8177cc1c966d60fa22c22159792b39046ae8028d9d2e22e230750fa659f69",
+    "tests-integration-cases/089.log": "a37820719b6215f57c8aa7247ddc9846c816baeec374bb4fb77d427a276832ce",
+    "tests-integration-cases/090.json": "61b0642d402eef3a1a4f7e394305c5213744b543f3ede9418529361d7fbedca8",
+    "tests-integration-cases/090.log": "8999f7e3c56963c2435bac86b4371da74c339fa458624f21efbb7c12bbb47445",
+    "tests-integration-cases/091.json": "6e5931087be1982623819447b2732edf624d49c7d7ff417b39aa16930ba2d382",
+    "tests-integration-cases/091.log": "38fb987eef9041f03c0e79fb797fb2940030c8c70dace07b0d5eaafff4ad3e71",
+    "tests-integration-cases/092.json": "ce780b819f711d2fdd6991f5eb9b2f11a6c9f7ff476b4c88b2f02524f3f4a4c2",
+    "tests-integration-cases/092.log": "40dbcab35ecce0abeb55dad941d42809dad67822d0f6f20cee372c9539794243",
+    "tests-integration-cases/093.json": "3feba2e37f025ffa950f09287742a01caaf9d4bf5c63b2c06df73e03046cb214",
+    "tests-integration-cases/093.log": "0c62fbac637ee7ee4f05af9557491901c2552f67ce348d4cdfe9e14253220154",
+    "tests-integration-cases/094.json": "d38e78c322d7d1518c2bc78830e19188a674b1c1a43ee731c0d7e9b99c29be5a",
+    "tests-integration-cases/094.log": "173bab713ad386bc2e98ad558155f67f0d9dbde4ff43551765f8248769f713ec",
+    "tests-integration-cases/095.json": "9c3d5b30f6f171d7a4b29bc22e873954b48a180e886805322578d4969247a920",
+    "tests-integration-cases/095.log": "ee513968570f0c747fe2d57a9c2af6a42b0ffa01ffb0235ec1c1010d44c38c3d",
+    "tests-integration-cases/096.json": "2f5fbb37d8c659968ea1e0ef3935cb87d03bbbac50d8e4c7b17948c341e588a9",
+    "tests-integration-cases/096.log": "d92c29ef5c566017dc6a98932ec378c0a5e164bf7a15446aae18daacabab6960",
+    "tests-integration-cases/097.json": "ee64e9d9a92f77b8d69617a84735a6babe8aa7da688a69e4d58e4f4e53dcbb70",
+    "tests-integration-cases/097.log": "891ad692456691a70bd6bf77459e81a7c1af85f4d67b3f9a38dcef64e36a1f30",
+    "tests-integration-cases/098.json": "20c4623cdf60a4d321e5d0e7bcd6eac27ef630eea25464d9ebe5b2c9d8eb17f8",
+    "tests-integration-cases/098.log": "bb98b98b00d73b8af0e4bb691fde115df7a3ffc381ab815e6d4cac7b7288d743",
+    "tests-integration-cases/099.json": "82bfec882a36b44fbe99065ae658ef466d02c5ea79d69a78df23bea46caa84f6",
+    "tests-integration-cases/099.log": "b1d59e14032025727a5c1e93cea8ea12e293393b0ef5efe36d17b5863e027797",
+    "tests-integration-cases/100.json": "226b9d6ac2a2d5fcc4fe966a958a1bff99d4c1ce8479ca4def158e94982e0b2b",
+    "tests-integration-cases/100.log": "8592401f244a4becef1d143f61c6e2d85308a406d6b64e80cdef0845d7b5531f",
+    "tests-integration-cases/101.json": "57963c7347529afc3446054e4c2ee298a78c06261c88c6a9661c05a31c2471ec",
+    "tests-integration-cases/101.log": "3642585defee5e4bcfea971d10d26143d0e3b599048434c26b93ac9d7e24b102",
+    "tests-integration-cases/102.json": "448b6a50f64aeb2913cb48e1aa3ad30f3b3ac80044fa6e93537ab5503f8e6f9d",
+    "tests-integration-cases/102.log": "28d692c08439befb10337691e9bcaf0dcab6c7026e5c9f5414e8fdbbd87b310e",
+    "tests-integration-cases/103.json": "07cead60c93e4dad6b71b373f743b12b1a298dc472611f897f90e5522b520120",
+    "tests-integration-cases/103.log": "3b5669d0b6e7f149d2d982d606c9512a0bf1f967e4b7c08c219d87da3e9c65b0",
+    "tests-integration-cases/104.json": "a86ec8907b24376a594c5566176d77dd3d19458e538d962489c67d71723ba54d",
+    "tests-integration-cases/104.log": "41bdce1297bbcae329f814324dbf3da749ed18ef6d906b5473957f744019f31c",
+    "tests-integration-cases/105.json": "62cc62ffcd0d83c4496801d17fe834af617b50bd9315ec83735b81a4eb4354b6",
+    "tests-integration-cases/105.log": "567f5163e90544eccc55bddbe8c5d8fceddcc4d7724a14d703e7a1e135bf8405",
+    "tests-integration-cases/106.json": "896400d2540ca3765a797274b120409d06fbcc6fe5bb1e46bf533274a7d38d0b",
+    "tests-integration-cases/106.log": "cf843fc9fee81c821ef7b610a126be01c3f42e98fc3bca2fb49f201650047d64",
+    "tests-integration-cases/107.json": "dac5556d903cf02b874f6cb861f2616786dc455365e13cc9cbbdc27389e5c341",
+    "tests-integration-cases/107.log": "790dfa95d2cfa9cc00b285cf5fd33a71f8912b845fff156b2adcae92b706d239",
+    "tests-integration-cases/108.json": "24feac761de3d6aa424fc1e33c486869ffef0e370a7f5b93b6823da5720ad779",
+    "tests-integration-cases/108.log": "6b7f3809920b1250da5a8051a85b758f704aadbcd349bd657f9fb7b7c90792dc",
+    "tests-integration-cases/109.json": "a04a20779fea63577b9ea577b1ddad8ce2c139ca1891b8c6448b624cdc243032",
+    "tests-integration-cases/109.log": "0a9b679b7562185aba1033f5c8e47461248a1a9fec6ca2663c28432f335b567e",
+    "tests-integration-cases/110.json": "d549905a9e3dbf3417d35c15b6230adeb89199e8992b3fca65e120c1a2004c3a",
+    "tests-integration-cases/110.log": "24e37affc5226ccc264d57b6e347aeabf4ca8d25813f00107ba0bd5f1a751b22",
+    "tests-integration-cases/111.json": "b19884efcf9dc273acc00db45e65118b28c4da9216a72c391bed89bd568c080c",
+    "tests-integration-cases/111.log": "83e27159d74f79e8360f91d6af2bf0790192c1a9102b34d05b6da42c90cb5d0d",
+    "tests-integration-cases/112.json": "d45260e52f8d0e17a86405f3aaa9821308f72807ec9d2df9990dcbf75f3e6940",
+    "tests-integration-cases/112.log": "7405e95e9a0ed289dd785fea1d2cced08cc4e07f5a5b98e4ecbb40432cdcacee",
+    "tests-integration-cases/113.json": "2435c669c3d95521802b1c3d82e9ea55f9a7c142d78dcf8687d0f8c7d8e9f787",
+    "tests-integration-cases/113.log": "2abf7301485e37d488bc5b994be9e725e36efd0f9d9534ff041f140513354fa9",
+    "tests-integration-cases/114.json": "14487a1d431501d757d4423f3cef805bb0d143c4c5216bec3b14c03356a27d97",
+    "tests-integration-cases/114.log": "5cce59198c0b6f58da69b979b4e62355a913da374b224b29277bf1b9fcb99ae3",
+    "tests-integration-cases/115.json": "08bf705e6bc6782b13721693926c128dc1e5276e96cefa107f8d22fc5f2e0dc1",
+    "tests-integration-cases/115.log": "36703a304718136c209a5d4403ad58681fbfdd5a5e9a4d9d85de51b160df9b05",
+    "tests-integration-cases/116.json": "bca72522d6d31569f42b7444594abbb86f6811db48ce9c45230abe497bf0e5f8",
+    "tests-integration-cases/116.log": "51bdbeacce30ad666f882877a7bcea376161801fcd5370fbe390b03448666799",
+    "tests-integration-cases/117.json": "91560b8e8e245c9eed0fb585943c31db2619c73b4637245c49ad1cf00f20c75e",
+    "tests-integration-cases/117.log": "a9e389119d2b2bea617b4cf4fd2c2e758da08838ca0cd98089781e1ebbef3a27",
+    "tests-integration-cases/118.json": "d686bfd5101fd67acbbc4ac61e3eb07eb1d11c0335d3855c88518db34649a153",
+    "tests-integration-cases/118.log": "0c3250f9f1084bfca62953f6c3b10d3f3b04ad0b50b886ad487184503d71cf82",
+    "tests-integration-cases/119.json": "c00a33fb653c7c9203d39ac9eb6f1dda36f085f0e48486b7403f18691f85dc5b",
+    "tests-integration-cases/119.log": "e89d7c963ff7e598755f55d7d2c6f8a0232d13207ad55e97e483202f86acbbe4",
+    "tests-integration-cases/120.json": "0ebad47bdb79d4ae1b910036f8852236570d871d17bcc7708255b68d5fadb1e1",
+    "tests-integration-cases/120.log": "b934b6719ee729b69470aa228a44bc40bf3067a3359389c2c424d33c8e7fc413",
+    "tests-integration-cases/121.json": "29b9d779c451a9078bad6de4ae1977c0f0587227a3cdd22e03d626d9b0ec3fcf",
+    "tests-integration-cases/121.log": "2b8f19897fd2a2cacce2d6d567b80347697a13b1736f86da67a2664d9766d837",
+    "tests-integration-cases/122.json": "7e2e8b5899e557cebbe71edb2285487ef3b0540a2fc0d06468dc0901ff2eb748",
+    "tests-integration-cases/122.log": "899f260b8a1ad45d7daf1adec69b76e938e81c90b3a10ded261ad30f64c504c9",
+    "tests-integration-cases/123.json": "1b0e04dd34a7137e5ecc4e496e3602faca132d181863ecc01b94cf356f6967cb",
+    "tests-integration-cases/123.log": "efa253a2e7de637a4d570ac25af6123c536e984c54c1ee63ef23a7cb11d083b6",
+    "tests-integration-cases/124.json": "259075059f2f90da65692a635d493ac506b59f7cef045bd978329e477c69f4e8",
+    "tests-integration-cases/124.log": "dd891669edc5f029fe9b1da870cf4f4f6112864d178b2782c9cb389fa271e70c",
+    "tests-integration-cases/125.json": "935fb59917cf2db4e27a9c1bf8eaffd1d660e5a03769092133a6b20c006cb014",
+    "tests-integration-cases/125.log": "e39834d0866bbaa228de110ddf82647d5a20c0e055d0900fc7763833f4f0a5f7",
+    "tests-integration-cases/126.json": "1b8dd689c7287edf7cf5d77ab669f1fa74b317707280faa610b0380bcc596698",
+    "tests-integration-cases/126.log": "97ff974fb7c47eddd46051fa6284026c8e4afec3268bc8cae4a3b60b1a0ea132",
+    "tests-integration-cases/127.json": "27fecce8977ffb226667fd79d716064786cf5fcec569b379942658b5c3ee3481",
+    "tests-integration-cases/127.log": "5ac44080d06e4d2e0d9c3fdf071d28f31c0295c983c5cf785464f5e341760b2b",
+    "tests-integration-cases/128.json": "c368cff92e14570fc4e73cadd98844c6c874f05ec6f1be87ff189fc5f51eeb20",
+    "tests-integration-cases/128.log": "e08fd0c9adf2395d4809efb034c68b67a3d2dc2b164d08fd23a51a788283ec20",
+    "tests-integration-cases/129.json": "c26846ffdbbd18314904e4204f47ab4148811669b0e03d204828d43aadc52019",
+    "tests-integration-cases/129.log": "2af1161d7e085c2b19f77c578d44fd1e900266c34500c1772f12f3b55d59fdc6",
+    "tests-integration-cases/130.json": "f787d4cb744f76978222c0ea53ae0ac15fe8daa3c56d84aebfbc0564a1513383",
+    "tests-integration-cases/130.log": "b91e834dfa9322e5ce4e29ce3c2e025d0f2a6d6df7399fb67a97aa4cccaae0a1",
+    "tests-integration-cases/131.json": "15b371f2d521e2c62d842343979afbe721f795d4fe1e25174a95ad6d24687c3d",
+    "tests-integration-cases/131.log": "34c641f2e793a04e0e426b0c8c269e078584aef4863f83d66f61e0ccc7464988",
+    "tests-integration-cases/132.json": "02687f4048cd790ed1c3a5c467c930c58d2b714fb1aecadb37a9d254e4840c8c",
+    "tests-integration-cases/132.log": "54def98d66b77c1d7da5cc13fcc8e32c763391d36ad3f88a49284d297e2c1ba3",
+    "tests-integration-cases/133.json": "0f2f691792b9ff8ade82f330191e5b734f5c7e99d9225b28e474501bb2c47acc",
+    "tests-integration-cases/133.log": "a32f63a72a4d60562b6173f291117bcda32f6949819ac699da9974cdc0023bb8",
+    "tests-integration-cases/134.json": "5c61e41f69e2833fb9e425ed48b3ddd545454738f2d7c9dfdae445a77272db74",
+    "tests-integration-cases/134.log": "6c2791e1c63f33fa6a819d3077885e0c9786d8eaf942a6317e9321fe04013cdc",
+    "tests-integration-cases/135.json": "beaf42ffb743b1b70022f908ff671b02a16512dbb6c3bf7d2c73a7a876cec410",
+    "tests-integration-cases/135.log": "5b20cb86662a0a6b79b1938b65c0d856825aa0f805a33f6ac14890fd80ffefc6",
+    "tests-integration-cases/136.json": "6ad75a75993636839e670803eabe0a88d9b5cc3dec44fbe7f44dde963bfcca22",
+    "tests-integration-cases/136.log": "40cb1d2d482f896df1db0030ee200e9340870da9b7815b47ae33a3fc1e4120b5",
+    "tests-integration-cases/137.json": "50f8dc608dc25d697cbddccec662603501de2f85a730b2d6d265d73027aacef3",
+    "tests-integration-cases/137.log": "d0ef1833a42f0605a9f0ce59d0fbbb9d7e46b3cccefddc6643a56048dabf8add",
+    "tests-integration-cases/138.json": "1a06b5ff3abc0541ed8750f6e0521386ea9b2796584f58b6dafc427ba0704905",
+    "tests-integration-cases/138.log": "c0c1bb86939e8586552716fca393e6781bfd77445d5f4a3848d883299f11a82b",
+    "tests-integration-cases/139.json": "23965d29ba333e49db215bb9c149bdf6ab877bfcb2039800cb9bb4fbb78bdbbf",
+    "tests-integration-cases/139.log": "4fed70b47a0d98e41c291b51c2c73464cd1a106c04fd49f37621dba2ee27298b",
+    "tests-integration-cases/140.json": "26f267a16a505ce196523e1d302035606183752438f797e69860487fc636d28d",
+    "tests-integration-cases/140.log": "2e29787eb8b79321d1eb183dc34bce467939200b27cdd0b826e74786801a3053",
+    "tests-integration-cases/141.json": "ab4d0c8dd632c911e636246fb8c8c645edcc3267eeacfdd160e9765f2b0967f9",
+    "tests-integration-cases/141.log": "ad8db4b6247cc85a49337ea4398f45ac216cdb9e6d071e0e5e18a8ea97f192ca",
+    "tests-integration-cases/142.json": "4f49fb018df25b7cd1031055667559868bd4c35240bc8cad4c7cec437ceb3e1d",
+    "tests-integration-cases/142.log": "6c0849aeecf9dc76c6fe184d6a614b30fd9fe326d25b2654f7f6c230f455c482",
+    "tests-integration-cases/143.json": "69277ece63ee30acae40c9f7ca612eb3fffb905838d3fef5d0349b0179c71e57",
+    "tests-integration-cases/143.log": "f0fc741d599b627a0813edd410ac6d9b69ed937f4b31efd5ede46c86755b6013",
+    "tests-integration-cases/144.json": "cb5a813015d2746fcd0318a5cb15e966471dacbbabe241498126786e5833ecdf",
+    "tests-integration-cases/144.log": "81f331531d3ea765274818f8647cfcd9f86a6389d81a8f8d380a89a31e5e4888",
+    "tests-integration-cases/145.json": "f570a89fcef6754c4d4eab8a5770f0a55d6518455e593e01cb846d73ca2128fe",
+    "tests-integration-cases/145.log": "35e875b6db3e6ac85825bc3cc2c4616881e060f902dcba6e58c48ea49b617172",
+    "tests-integration-cases/146.json": "e71a41e354344a4f46e6295ba1b8fed92eb7ef62d3ba79012cd7e171c4005959",
+    "tests-integration-cases/146.log": "56951329d78490849aaf67ba032e27919f15443a9aaa7e256b2dd721f906ce3b",
+    "tests-integration-cases/147.json": "262e4c2dd9ee0e451c8c2baf34919b7f39be7fcbddf158627986b0aca01c7541",
+    "tests-integration-cases/147.log": "8d2f15dbb55bb84a813b2b0c2c5630ac5fb4bec37259141380dbe2fb5fcfd358",
+    "tests-integration-cases/148.json": "c67072b24ac287df98fea64c534027c7d65a7bc497d5165314c718b91a4f4c81",
+    "tests-integration-cases/148.log": "8f40d5f3fabd11a7233b222090d5a92a845300b8f04f4e07c60bce3753ebc353",
+    "tests-integration-cases/149.json": "45b0c5b52106e1e406775d2c5d3deb1e6c9fe6baf63a032bd6dbd568b8ddfd88",
+    "tests-integration-cases/149.log": "9d1f0516f493730eab85b117b6631dcf2f391e81d6721cc4f6aecc4f06150ff2",
+    "tests-integration-cases/150.json": "a182af112bc6226aa41b204ad085e03b43303999d4a42018c8dda77c1832e178",
+    "tests-integration-cases/150.log": "72d6f1b90adb908a6b2c3363a16d9b86b4d35b59d6de7fdbe95eac1eed1d599a",
+    "tests-integration-cases/151.json": "a53e30f0b0222af77449b81fc9f44b89b4f9c96fd58203d3743263463f48cc2b",
+    "tests-integration-cases/151.log": "faf76df1e09a07a6c76226d488f314d4022b87389fd46aa1cca41569e0a0510a",
+    "tests-integration-cases/152.json": "4da67bc5607578e4c2949b6d0445f8a4845eec1b73d72485c55d73f847485d9c",
+    "tests-integration-cases/152.log": "a628f106738ab78ec8106314ed1e85798b360626327c2cf2a6c3c84973988b98",
+    "tests-integration-cases/153.json": "2cdac903309e52a4256c30dcd74dad3aace390cb2dad92d45ee1289513fe75a3",
+    "tests-integration-cases/153.log": "89b65f3e47209445214597c855670fa11e796eafa9a310f85adf572fe0de1b0b",
+    "tests-integration-cases/154.json": "f56dc702910f770cc0ed8201d2ed76d44cb37514e12c50a794784ecfa91810c4",
+    "tests-integration-cases/154.log": "7e02aa01e428c9b184c7a432674272b35c58ee15f7f8cdb79eab3e46f7f8a1a8",
+    "tests-integration.json": "ab2e552358817b48382faf59283988d7f33b5dee35f7e52cff879a7a4d01ab69",
+    "tests-integration.log": "0fa3e30964958bcdc1aea7a5c1ee79f2e4d6f5fc4003f27b2c5af2a2a02a64bb",
+    "tests-source.json": "e4b6136c37655f8bf3d073b196dc8e58dfef845bb44de04b5c373a4f2f3bfd04",
+    "tests-unit-cases/000.json": "eab10fa96880368c67a4d0e3aa6675cd24a494ca400669170985660e04156e51",
+    "tests-unit-cases/000.log": "2f0a0354b550d7cb7e7f99940af082e6fb08b3050bf7f77137a8283b99955958",
+    "tests-unit-cases/001.json": "937ed208687401f7bdbf2a1b95fc815cc32903fb395eba8c8ad5b165bce85ca6",
+    "tests-unit-cases/001.log": "2943dfc5e8078e6e72e1be1224cb1d9576a392fea769f6243f101c78f66f505f",
+    "tests-unit-cases/002.json": "a867cc5713ee3ff284afcf45db81dd347b1e28bc37f9bc87a9c7db751b05f60b",
+    "tests-unit-cases/002.log": "1f10219d6c3549a4aefa596c2bb5a49d71b33aae50f03ba24e2bd211ef090da3",
+    "tests-unit-cases/003.json": "6f621605b6596aefebfc7b0aaa3e34352b57e1102ca691c3ac30df694d90b5ff",
+    "tests-unit-cases/003.log": "d5aa04e295ed1ce0a20285879d76193327949c9b45f568a0f27f6bcbbc3562ee",
+    "tests-unit-cases/004.json": "54eae078ca2bb3cc65b64d5763ed2412a41b8139d3a31bb913a4e955afc4cd72",
+    "tests-unit-cases/004.log": "7b72cd6635faf0ae41cd26ce346f3f919f83a049ddaeb5518e1891da52c7a40b",
+    "tests-unit-cases/005.json": "e7ea20a07f882de42c99d92c812439a5a089134c2c5f2149f0a73f94809c86c5",
+    "tests-unit-cases/005.log": "ca060ef9a59cfe9631ce89df4fc1877b8bd7befabc4d70061bd594ede1d8bfca",
+    "tests-unit.json": "7f4d44e1a37071772fa6557a31bcceb46238fec08c1e71a09f58a1b0610daabb",
+    "tests-unit.log": "c76789a0d39cc36611ef2a27d3c4e54ad1b82d5ce2dbee84faac131bf9c1af3e",
+    "upstream-domain-1.json": "350c1bd1f5dd68e95f6f2a348091bf8a0eac44009441c6727791519e38f6c329",
+    "upstream-domain-1.stderr.txt": "1393d4986dec5bffe56acce074a566ac524b07cbef451a14785402e013ef21c0",
+    "upstream-domain-1.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-10.json": "2e8780ab248c2f2c135a57105979b64ef70fc4b7fab39f655aa9a3fed1c7806d",
+    "upstream-domain-10.stderr.txt": "ab0366d271527f2f55c76dea5fa15cb5b9f37df78a3b501c6d2ef920fb673fd4",
+    "upstream-domain-10.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-13.json": "191d18e139492fd4a99efef969ac23c7af8b6817f85957545be1fadac8a2a7ea",
+    "upstream-domain-13.stderr.txt": "2bb192b5b2c5f023194c68ec98228a81f162f6d541a7696f9fbbf295310b1da9",
+    "upstream-domain-13.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-14.json": "9c8003bbdccb25a15ad55a64fd6590323c4e44056e81f74050a611e31a00333c",
+    "upstream-domain-14.stderr.txt": "2d7badc2fb019cb257a99e8471577f7270acb298791e66b611aea692b9919b38",
+    "upstream-domain-14.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-15.json": "c01f4df7a2fa3e5d260128756df7409353ea803c38c7fd5f7b4dba02ee568d9c",
+    "upstream-domain-15.stderr.txt": "a44004753637e40a00482e14d1f1378d4a7e563bfa739e49fe2676d29d670932",
+    "upstream-domain-15.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-16.json": "d8fc6cf895eec663f849d556a437f357b0b7d4960cad5711477c54dc8f9844c6",
+    "upstream-domain-16.stderr.txt": "4c7f08b25205e77c935bd1581e4769ff4d44d11db73f6fda5a02121aa6a9db6c",
+    "upstream-domain-16.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-17.json": "08fe20c2bb0008c7f0ffbaa220509a47fdb865632d68f3101f1d6778c66e0baf",
+    "upstream-domain-17.stderr.txt": "fa29c36c508cdd9430c1ec678a8dafdb573a945d26099bc63e7f02b3f0c76422",
+    "upstream-domain-17.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-2.json": "e873bd0278fc7bae329b39dfbd48aa4ae1fc0aeea66476bdef7b1d2142373d18",
+    "upstream-domain-2.stderr.txt": "dd42f3a0835965a5b4bf566f54fa791afe11aeae04a9c65e5628358a869123af",
+    "upstream-domain-2.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-3.json": "012b807b0d88b093825a2c80e2a3b7899876ff005591f107e8d6085bb25d5725",
+    "upstream-domain-3.stderr.txt": "3e74541c12d7753946152e929f049ffc3157041eaa2915dda755d6f3ce939891",
+    "upstream-domain-3.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-4.json": "10dfd2bccf9fbd69b55f363e615ad09aabd8749b7d0bb80975642e547b917c18",
+    "upstream-domain-4.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-4.stdout.txt": "83e7616162047f2aa23691020926f775b43e3ae4adf00582cc963dd57df7fa11",
+    "upstream-domain-5.json": "715a4483882fa1b0322e47f13fde6bb5e163d3ebc01356bac874b3cdb2c0be6b",
+    "upstream-domain-5.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-5.stdout.txt": "16fa5ae5e1043e4ee3cef11fdeb640688c07e564b040fd2f486d0de5e1affcb5",
+    "upstream-domain-8.json": "af84e012fc8af7a139bbce7541762895a3cfde0eb5eab90261c684c6321a4dc8",
+    "upstream-domain-8.stderr.txt": "259e42cc03502eeacd253bfff7208c88d4ff5f4ee2d2294267efef7c9711dc5c",
+    "upstream-domain-8.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-domain-9.json": "9ee7c4547dfc79bfeecfe5bba67edf4f5d1203f11d47c87587a959be5b9bf06b",
+    "upstream-domain-9.stderr.txt": "1ec08a357eb5fb1044df8c0efdb2fa0b64499a486d32b8c41966e7be1bcd9614",
+    "upstream-domain-9.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "upstream-readonly.json": "911199170660ca264b4406d48c135217f633dfec57f7b05107d4708e14e10fd3",
+    "upstream-tests.json": "bfd7d7fe3c2768a011c0158b4c7dde50fe27a4877c84fb18850885b3bf79bcbf",
+    "vera-audit-command.log": "05d8e48430c4b6703ca1ce714355ddd85e1396cc80af0d8abc8b7f055b8ba3e2",
+    "vera-checkpoint-path-diagnostic.log": "4786cde568c1613207e7b6b1d6fdd03a85c0da8e7d90e39c1af9ac6b67a5c095",
+    "vera-demo-cards.log": "e70ed10ccdb49fee6118cfec12275205c04f2d5995e1a702f5340aa1c6c79836",
+    "vera-demo-conformance.log": "8451ea1362b6f0168accde8ab52734d5838c1a25ed98e5254346054e5ed133fa",
+    "vera-demo-empty.log": "fe5cb48f2ee2daa513ae1249ae8e6354fac44687ce5413046893184f19907bc7",
+    "vera-dialect-command.log": "16bcf7dcb818869f1750c66917da05f46a268bcfc743820ded83b085a881e913",
+    "vera-distributions-command.log": "606d4cfff3b855144d7cefef0698196605c6247071a9b7bcaf99d39b5ab81e2a",
+    "vera-final-delivery.json": "0920f9ee66fa4b9006404e31ade9d1f0bc204ffe0927bc6e25bc23211afa7202",
+    "vera-first-fresh-command.log": "7080cfc4c4fc8fa4824fc0157fbfb7f8d49bc9fff8c728494ae6e0ed60ab1612",
+    "vera-first-fresh-integration.log": "8877fbf557d82e20d31e93979bc47a284678603eaa210b121e86f4a9d0355a33",
+    "vera-full-test-command.log": "9275a4629fdecfae7eec7d9ae6220cbadc5eeb2b56a12ed2f010c4a7498647be",
+    "vera-package-command.log": "62be93b51c9368607cb8f2f81f0974fbf58b8cba57f93d4b30211312d693ba15",
+    "vera-repository-command.log": "55ec0fd415633578f7b72d173de8b7ee94bc26e5652bc9ae553c1813048c18fc",
+    "vera-verify-command.log": "dff8779f4bb6c0091347ce16dd155998700419648417f5b8159c94a82fc5a3a2",
+    "verify.json": "8c1d65e40da593668f05cb3d16c00f609c678ccbe1f45454d9310aa5770d4b5b"
+  },
+  "implementation_changed_file_sha256": {
+    ".gitattributes": "df661e2dc1d612bc297097e24932a0d0e42dbf4efa2513677948a3640e90657e",
+    "AGENTS.md": "88ebe1791c2a6aef80fab13cbde0eccb6ba60e371765837915c1e01f2f57e53b",
+    "data/game/pass-06-runtime.json": "0d5171399bdcd2eed3e38b6f17ab34914dfb1890065275a2d86c634ea25e31a7",
+    "data/manifests/current-files.json": "3815e5f36410b16cceca3d132c8c28f9ec8c8bf30e5e18df17f5434653047331",
+    "development/modules/core-game/PASS_06_EXECUTION.md": "79c8bead2b8be96fb33ce721460ec1fccf633ed4ef305bb38a865b01f100ed28",
+    "development/modules/core-game/PASS_06_PROGRESS.json": "18f10aae2f2c0c24d11c2469070a6282497dde655703004d859449cec3016fa0",
+    "development/modules/core-game/PASS_06_RECEIPT.md": "fc431c2249797e5b326b22a4b53b0378899e2c28c2e91d2bbf1c9af937a60c87",
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/adapter.py": "892c99d0b7b45b29dde8fe5406bb10cd32dc485c28538b52a23554a2ad471db7",
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/native.py": "4d01b6b2f848928ecdd9d9573de2c82e4f2266e9fb2ff291c2179b3072431ed3",
+    "game/core/raeon/application/manifest.json": "eb9de82343dba530a739284c0a649acbe8b2c281696ddf5509cd23e92a9629d1",
+    "game/core/raeon/application/pass06_advance_turn.gen": "82478f370894638967bf40817e42632dd8a7b7d67a311471abb23ae04dc61286",
+    "game/core/raeon/application/pass06_begin_turn.gen": "784b75da560435038b5ea0c8c0cf5cba8c7c5a0a00aaf0c84e570b6a5aa0a522",
+    "game/core/raeon/application/pass06_defense_pass.gen": "3d0337bd4bca948fd198a39b6a8d8dd7b796b70ca150f54ac69006c17fc7a95c",
+    "game/core/raeon/application/pass06_defense_restore.gen": "6ebcd02adaf84cbfa94f1b279614d8293396cd3d4fdaf5aa4a2dcb403fb765cb",
+    "game/core/raeon/application/pass06_end_active.gen": "d09d0fe86fb76761f89943f0657cccb627331c49aa53a1e7bf507650bb224433",
+    "game/core/raeon/application/pass06_generate_charge.gen": "a6f714b84ebc8052a7d26bc11f36bcd1d2beae749595e7f5a402d7018764dc82",
+    "game/core/raeon/application/pass06_look_utility.gen": "20c6a0fae8745b7f98ad2491117ff371c471c8c98a1d780526f779c4d3084c41",
+    "game/core/raeon/application/pass06_mulligan.gen": "cdc10a26d421393943597b4873496f5674abc043d476a889961150dd415b1844",
+    "game/core/raeon/application/pass06_normal_draw.gen": "e5f164b947866df8a1520082ca2288f48be189d860b69dc421d74b94d08c2335",
+    "game/core/raeon/application/pass06_open_guard.gen": "c81567be709376308491b063bb52718ea3f551fc224392fc764a1b66212325bc",
+    "game/core/raeon/application/pass06_setup_match.gen": "47c2c71d1435e0f2c4437676b40b3ddb80a55c1fbfddc2b3ac435696d5c147d4",
+    "game/core/raeon/application/pass06_spend_charge.gen": "9c24f23d728bc17b05b04b16551324259665bbcab3c8ed862dd50d1baa0cf2d2",
+    "game/core/raeon/application/pass06_use_compensation.gen": "dc06c8987ebf565894371655eacd248c5ccb88cd83bc0b269af225fe8ca0b8b1",
+    "game/core/raeon/application/pass06_utility.gen": "c504ebe108fb77967795b48d7e8650a7a244f41dd694c2c1149ee04ba4634e4a",
+    "game/match/closure.py": "da1e04d778e5a3b02bbbe3594f5e3236a082a16248efbfc1aab94f141759fe65",
+    "game/match/state.py": "2017e0229f348b93e924002049c2e1781f6a5f611d7422c86e14c957e3ad80df",
+    "game/sandbox/topology.py": "aba6b97d5233188fb2e8d4740a1c48a5f88e35583ccb1c7a61e2620f7982983b",
+    "provenance/decisions/raeon-pass-06.json": "6a6298211ced90801c2fc7fa05d03a15c097e73ba4b80f169319bfec0f391d4d",
+    "provenance/imports/raeon-pass-06/RAEON_DIPLOMATIC_POUCH_PASS_06_2026-10-03.zip": "1cdc6a070c3492f791a37166bb55ae3b88ce5b03ae7ae1228f72bba8fe977242",
+    "provenance/imports/raeon-pass-06/entry.json": "4cfcdccd49a758b752bf8536e82d40653512ff703b7097e57faa811cfa83f414",
+    "provenance/imports/raeon-pass-06/handoff/CODEX_HANDOFF_PROMPT.md": "b0ba178db3ba10c52a6ae910e3638f1bfc146e7b3b081a51b33e08b98e2b87f3",
+    "provenance/imports/raeon-pass-06/handoff/CONFIGURATION_SCOPE.md": "ac36bb609201e5a2bf0275642c7860c717e64ea7c27461656fe1c31ac0e838b7",
+    "provenance/imports/raeon-pass-06/handoff/MANIFEST.json": "7b49d75705a6b65efe7088e8c0abe1fa91720d76eb7df781ea6b3b30d7976bb0",
+    "provenance/imports/raeon-pass-06/handoff/MATCH_LIFECYCLE_CONTRACT.md": "b328809b6b26e2c80ec423147abf84fe9fa3d87b2f4ca7c2094284f104d0abdc",
+    "provenance/imports/raeon-pass-06/handoff/OPEN_ITEMS.json": "0beeeda0c29d4ab504c0c434f7583929d81b48ee7459e98163786a899a182f82",
+    "provenance/imports/raeon-pass-06/handoff/PASS_06_ACCEPTANCE.json": "60ecb7f5d6234acf8477ef44701df421bf1a7923e4f5d1bfb7dc19cbb61cce22",
+    "provenance/imports/raeon-pass-06/handoff/PASS_06_RULES.json": "8361d32a3731b40e618e15c2356ca141f9432a88b7bd276c00a11e34c9eff33b",
+    "provenance/imports/raeon-pass-06/handoff/README.md": "e45f88c010ce4b862ac5b5dc6c90ac130de9b804a77464b99a1be92a5b6732ac",
+    "provenance/imports/raeon-pass-06/handoff/UTILITY_RUNTIME_CONTRACT.md": "12653914a25354418e9d890b454bcbd9a25b78267af18433d60f0044d51de704",
+    "provenance/imports/raeon-pass-06/handoff/VERA_AUDIT_RUBRIC.md": "e6fb84c5fdb71e27f98822af27c748d9a6336cefbe45155e95b870cc8cd4e90f",
+    "provenance/imports/raeon-pass-06/handoff/VERIFY_POUCH.py": "6997844a638e2946b9ba0b4879b6ceb0faf05f5859cda91c5e1d73e494dac201",
+    "tests/integration/genesis_horizon/pass_06_matches.py": "52cc29711de51118ba2ba392b8caabdd09221c7be27a8873bc7cbee46e3b4ad6",
+    "tests/integration/genesis_horizon/pass_06_support.py": "cb623dfbc905e817cd6489f053201200e4c45b8dd2800ef5f515fcfc2409cf8b",
+    "tests/integration/genesis_horizon/test_pass_06.py": "e9dfeafbd49ad93cb50f804ca517b23b4034241d14693225acebde2cc657f899",
+    "tests/integration/genesis_horizon/test_pass_06_security.py": "5c0784950e8527101b28c21868311b89daa4c7d8aa367a9eef63900840644100",
+    "tests/regression/pass-06-contract.test.mjs": "518a25e3bd7f5bf853ed502fb644da6a67547a826c32f91ac77dab31171b8ee3",
+    "tools/genesis_runtime.py": "f3deecb559452562803b0bff62a3e01f82f698742edb651950e42587f3b94d81",
+    "tools/genesis_runtime_distribution.py": "5a896901251612106d64ed0415898cd37e7d9e94abc0937f3b17c70228f126cb",
+    "tools/genesis_runtime_pass05.py": "fc817448f95ec85b1ce857858446c8e9ceddb76628d42d3edde9db5d636a24ee",
+    "tools/genesis_runtime_pass06.py": "672056788f73ca015f165387bfd58259836f2a6a178f07b4a5bcc517cf0aca11",
+    "tools/validators/genesis-runtime-contract.mjs": "42f705767b91726299454355c508ce9aa6b5bc0a022ffbfc201a853a189015a6",
+    "tools/validators/pass-05-contract.mjs": "2bc05d8d19cae34ed537f9fc5af51f80c8622b3683c36bb3a5b1dc9224cffd49",
+    "tools/validators/pass-06-contract.mjs": "42d75652c31004c63c417ea60cadd6c0d0bbb9dc243bed7427a962022d67ed57"
+  },
+  "test_totals": {
+    "local_unit": 6,
+    "local_integration": 155,
+    "upstream": 575,
+    "repository_regressions": 256,
+    "gameplay_specifications": 17,
+    "repository_validators": 7,
+    "offline_unit": 6,
+    "offline_integration": 155,
+    "compiled_sources": 74,
+    "unchanged_inherited_compiled_sources": 60
+  }
 }
