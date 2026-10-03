@@ -1,11 +1,3414 @@
 {
-  "status": "IN_PROGRESS",
-  "base_sha": "63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+  "schema_version": 1,
+  "implementation_evidence_snapshot": "build/pass05-0889e5e-validated/evidence",
+  "status": "PASS",
   "branch": "codex/raeon-pass-05",
-  "acceptance": {
-    "total": 140,
-    "status": "NOT_YET_RUN"
+  "base_sha": "63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+  "ending_sha": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+  "remote_sha": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+  "main_sha": "69a0030805b8c3858c877a514e2f50644421115a",
+  "clean": true,
+  "implementation_sha256": "4733bdecbc397a8a4a2c260d1d449594393cb40d348caee143b43dca112061ea",
+  "total": 140,
+  "passed": 140,
+  "failed": 0,
+  "blocked": 0,
+  "cases": [
+    {
+      "id": "P5-001",
+      "group": "ENTRY",
+      "title": "baseline sealed Pass4 head",
+      "expected": "branch ancestry begins at 63771ab37dfec9a0c9de907c60f6f8b2f7a3f670",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "exact sealed ancestor",
+        "entry.json",
+        "fresh complete inherited gate before implementation"
+      ]
+    },
+    {
+      "id": "P5-002",
+      "group": "ENTRY",
+      "title": "Pass4 108/108 receipt inherited",
+      "expected": "sealed receipt unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "sealed Pass-04 receipts byte-identical",
+        "fresh 108/108 entry audit"
+      ]
+    },
+    {
+      "id": "P5-003",
+      "group": "ENTRY",
+      "title": "main not modified",
+      "expected": "main remains 69a0030805b8c3858c877a514e2f50644421115a unless separately authorized",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "local and remote main SHA"
+      ]
+    },
+    {
+      "id": "P5-004",
+      "group": "ENTRY",
+      "title": "_bricked read-only",
+      "expected": "no writes; pin/reference c89676fc26000ae6f5fdad66a56e118b285d9b1d",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "upstream-readonly.json"
+      ]
+    },
+    {
+      "id": "P5-005",
+      "group": "ENTRY",
+      "title": "QMO corpus preserved",
+      "expected": "120/60/343/1691/2094 unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "eleven unchanged original QMO source hashes"
+      ]
+    },
+    {
+      "id": "P5-006",
+      "group": "ENTRY",
+      "title": "Pass2 privacy preserved",
+      "expected": "all privacy tests retained",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "all eight original privacy regressions"
+      ]
+    },
+    {
+      "id": "P5-007",
+      "group": "ENTRY",
+      "title": "prior fixtures preserved",
+      "expected": "no weakening/deletion",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "67 inherited test/fixture hashes unchanged"
+      ]
+    },
+    {
+      "id": "P5-008",
+      "group": "ENTRY",
+      "title": "HOST-RUNTIME-001 preserved",
+      "expected": "OPEN_QUALIFIED",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "HOST_RUNTIME_RISKS.json",
+        "current qualified process"
+      ]
+    },
+    {
+      "id": "P5-009",
+      "group": "ENTRY",
+      "title": "Rainbow Road sole color transport",
+      "expected": "no bypass",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_current_genesis_admission_closure_and_road_cannot_be_bypassed",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-010",
+      "group": "ENTRY",
+      "title": "Genesis State gameplay authority",
+      "expected": "Python not owner of semantics",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_current_genesis_admission_closure_and_road_cannot_be_bypassed",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-011",
+      "group": "HAND_DRAW",
+      "title": "opening hand seven",
+      "expected": "exactly 7 Deck cards",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-012",
+      "group": "HAND_DRAW",
+      "title": "hand maximum ten",
+      "expected": "capacity 10",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-013",
+      "group": "HAND_DRAW",
+      "title": "capacity prechecked",
+      "expected": "11th admission no partial mutation",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-014",
+      "group": "HAND_DRAW",
+      "title": "overflow remains OPEN",
+      "expected": "no guessed burn/discard/exile",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-015",
+      "group": "HAND_DRAW",
+      "title": "normal draw one",
+      "expected": "one draw attempt per own turn",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-016",
+      "group": "HAND_DRAW",
+      "title": "draw top card",
+      "expected": "ordered Deck semantics",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-017",
+      "group": "HAND_DRAW",
+      "title": "extra draw requires effect",
+      "expected": "no implicit extra draw",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-018",
+      "group": "HAND_DRAW",
+      "title": "mulligan enabled",
+      "expected": "accepted metadata",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-019",
+      "group": "HAND_DRAW",
+      "title": "mulligan procedure not invented",
+      "expected": "OPEN guard",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-020",
+      "group": "HAND_DRAW",
+      "title": "first player binary",
+      "expected": "player_1 or player_2 only",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-021",
+      "group": "HAND_DRAW",
+      "title": "first player recorded",
+      "expected": "authoritative State",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-022",
+      "group": "HAND_DRAW",
+      "title": "no invented PRNG",
+      "expected": "trusted setup outcome accepted",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-023",
+      "group": "HAND_DRAW",
+      "title": "second-player compensation",
+      "expected": "one Draw-1 compensation object",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-024",
+      "group": "HAND_DRAW",
+      "title": "compensation non-Deck",
+      "expected": "Deck count unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-025",
+      "group": "HAND_DRAW",
+      "title": "compensation occupies Hand",
+      "expected": "counts toward max 10",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-026",
+      "group": "HAND_DRAW",
+      "title": "compensation timing OPEN",
+      "expected": "no play window invented",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-027",
+      "group": "TURN",
+      "title": "turn skeleton",
+      "expected": "REFRESH->DRAW->ACTIVE->END",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-028",
+      "group": "TURN",
+      "title": "own-turn refresh",
+      "expected": "owned eligible USED fields -> READY",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-029",
+      "group": "TURN",
+      "title": "READY idempotent",
+      "expected": "READY remains READY",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-030",
+      "group": "TURN",
+      "title": "refresh no color heal",
+      "expected": "magnitude unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-031",
+      "group": "TURN",
+      "title": "refresh no QMO change",
+      "expected": "identity/topology unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-032",
+      "group": "TURN",
+      "title": "refresh owner-only",
+      "expected": "opponent unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-033",
+      "group": "TURN",
+      "title": "end ACTIVE no refresh",
+      "expected": "USED persists",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-034",
+      "group": "TURN",
+      "title": "switch no refresh",
+      "expected": "USED persists",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-035",
+      "group": "TURN",
+      "title": "ACTIVE friendly Restore",
+      "expected": "admitted",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-036",
+      "group": "TURN",
+      "title": "ACTIVE hostile Degrade",
+      "expected": "admitted",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-037",
+      "group": "TURN",
+      "title": "DEFENSE Degrade rejected",
+      "expected": "no counterattack",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-038",
+      "group": "TURN",
+      "title": "DEFENSE Restore constrained",
+      "expected": "response window only",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-039",
+      "group": "TURN",
+      "title": "no action points",
+      "expected": "no AP pool invented",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-040",
+      "group": "TURN",
+      "title": "END -> opponent REFRESH",
+      "expected": "common boundary exact",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-041",
+      "group": "DEFENSE",
+      "title": "Degrade before defense",
+      "expected": "target changes first",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-042",
+      "group": "DEFENSE",
+      "title": "consequences before defense",
+      "expected": "destruction/inactivation first",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-043",
+      "group": "DEFENSE",
+      "title": "terminal before defense",
+      "expected": "third inactive ends match",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-044",
+      "group": "DEFENSE",
+      "title": "no defense after terminal",
+      "expected": "MATCH_COMPLETE",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-045",
+      "group": "DEFENSE",
+      "title": "no legal restore no pause",
+      "expected": "ACTIVE continues",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-046",
+      "group": "DEFENSE",
+      "title": "legal restore opens window",
+      "expected": "one bounded opportunity",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-047",
+      "group": "DEFENSE",
+      "title": "target bound to degraded object",
+      "expected": "no unrelated heal",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-048",
+      "group": "DEFENSE",
+      "title": "one response",
+      "expected": "Restore or Pass",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-049",
+      "group": "DEFENSE",
+      "title": "Pass closes",
+      "expected": "return to active",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-050",
+      "group": "DEFENSE",
+      "title": "timeout equals Pass",
+      "expected": "explicit event",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-051",
+      "group": "DEFENSE",
+      "title": "timer seconds OPEN",
+      "expected": "no guessed hard-code",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-052",
+      "group": "DEFENSE",
+      "title": "Restore closes immediately",
+      "expected": "no timer waiting",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-053",
+      "group": "DEFENSE",
+      "title": "defense not prevention",
+      "expected": "Degrade transition persists",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-054",
+      "group": "DEFENSE",
+      "title": "destroyed field no ordinary restore",
+      "expected": "same-window restore rejected",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-055",
+      "group": "DEFENSE",
+      "title": "inactive Prime no ordinary restore",
+      "expected": "White policy required",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-056",
+      "group": "DEFENSE",
+      "title": "stored Restore Prime responds",
+      "expected": "legal source",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-057",
+      "group": "DEFENSE",
+      "title": "stored Universal responds",
+      "expected": "RESTORE only",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-058",
+      "group": "DEFENSE",
+      "title": "Degrade Prime cannot defend",
+      "expected": "counterattack rejected",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-059",
+      "group": "DEFENSE",
+      "title": "READY field supports response",
+      "expected": "Rainbow Road mediation",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-060",
+      "group": "DEFENSE",
+      "title": "field-assisted response atomic",
+      "expected": "rollback whole response",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-061",
+      "group": "DEFENSE",
+      "title": "Prime self-Restore rejected",
+      "expected": "source != target",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-062",
+      "group": "DEFENSE",
+      "title": "field->Prime is not self-Restore",
+      "expected": "legal when admitted",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-063",
+      "group": "PRIME_NODES",
+      "title": "H_max remains rank",
+      "expected": "intrinsic health immutable",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-064",
+      "group": "PRIME_NODES",
+      "title": "N integer",
+      "expected": "N>=0",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-065",
+      "group": "PRIME_NODES",
+      "title": "R range",
+      "expected": "0<=R<rank",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-066",
+      "group": "PRIME_NODES",
+      "title": "Q derivation",
+      "expected": "Q=N*rank+R",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-067",
+      "group": "PRIME_NODES",
+      "title": "no node cap",
+      "expected": "no artificial game-rule maximum",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05_values.NodeValues.test_native_integer_no_node_cap_and_exact_canonical_encoding",
+        "actual native charge-node gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-068",
+      "group": "PRIME_NODES",
+      "title": "node native color",
+      "expected": "completed nodes inherit Prime color",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-069",
+      "group": "PRIME_NODES",
+      "title": "remainder color",
+      "expected": "derived from R",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-070",
+      "group": "PRIME_NODES",
+      "title": "Q no identity change",
+      "expected": "rank/family stable",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-071",
+      "group": "PRIME_NODES",
+      "title": "healthy uncharged",
+      "expected": "H=rank,Q=0",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-072",
+      "group": "PRIME_NODES",
+      "title": "operational charged",
+      "expected": "H=rank,Q>0",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-073",
+      "group": "PRIME_NODES",
+      "title": "damaged nonoperational",
+      "expected": "0<H<rank,Q=0",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-074",
+      "group": "PRIME_NODES",
+      "title": "inactive",
+      "expected": "H=0,Q=0",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-075",
+      "group": "PRIME_NODES",
+      "title": "damaged cannot retain Q",
+      "expected": "validator rejects",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05_values.NodeValues.test_negative_node_invariants_and_legacy_charge_rejected",
+        "actual native charge-node gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-076",
+      "group": "PRIME_NODES",
+      "title": "inactive cannot retain Q",
+      "expected": "validator rejects",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05_values.NodeValues.test_negative_node_invariants_and_legacy_charge_rejected",
+        "actual native charge-node gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-077",
+      "group": "PRIME_NODES",
+      "title": "Restore heals H first",
+      "expected": "ordering exact",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-078",
+      "group": "PRIME_NODES",
+      "title": "charge only after full H",
+      "expected": "gate exact",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-079",
+      "group": "PRIME_NODES",
+      "title": "overflow next node",
+      "expected": "no overflow rejection",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-080",
+      "group": "PRIME_NODES",
+      "title": "multi-node carry",
+      "expected": "one input may complete multiple nodes",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-081",
+      "group": "PRIME_NODES",
+      "title": "Restore remainder canonical",
+      "expected": "quotient/remainder exact",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-082",
+      "group": "PRIME_NODES",
+      "title": "Degrade consumes Q first",
+      "expected": "shield behavior",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-083",
+      "group": "PRIME_NODES",
+      "title": "Degrade reaches H after Q zero",
+      "expected": "ordering exact",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-084",
+      "group": "PRIME_NODES",
+      "title": "Degrade recomputes nodes",
+      "expected": "canonical N/R",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-085",
+      "group": "PRIME_NODES",
+      "title": "spend from Q",
+      "expected": "legacy bounded C gone",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-086",
+      "group": "PRIME_NODES",
+      "title": "partial spend",
+      "expected": "0<s<=Q",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-087",
+      "group": "PRIME_NODES",
+      "title": "spend leaves H",
+      "expected": "H unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-088",
+      "group": "PRIME_NODES",
+      "title": "repeat spend",
+      "expected": "while H full and Q remains",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-089",
+      "group": "PRIME_NODES",
+      "title": "no tap limit",
+      "expected": "Prime not READY/USED",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-090",
+      "group": "PRIME_NODES",
+      "title": "spend recomputes N/R",
+      "expected": "canonical",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-091",
+      "group": "PRIME_NODES",
+      "title": "aggregate 8 not Black",
+      "expected": "no synthesized identity",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-092",
+      "group": "PRIME_NODES",
+      "title": "Pass4 migration preserves Q",
+      "expected": "N=C//r,R=C%r",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_real_pass04_checkpoint_upgrade_and_canonical_migration",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-093",
+      "group": "PRIME_NODES",
+      "title": "old full C -> one node",
+      "expected": "C=rank => N1,R0",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_real_pass04_checkpoint_upgrade_and_canonical_migration",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-094",
+      "group": "PRIME_NODES",
+      "title": "migration preserves identity/slot",
+      "expected": "stable Prime",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_real_pass04_checkpoint_upgrade_and_canonical_migration",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-095",
+      "group": "PRIME_NODES",
+      "title": "White reactivation 1/0/0",
+      "expected": "exact",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-096",
+      "group": "PRIME_NODES",
+      "title": "Yellow example",
+      "expected": "r3,H3,N2,R2,Q8, Orange remainder",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-097",
+      "group": "UTILITY",
+      "title": "Utility cost zero",
+      "expected": "no generic payment",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-098",
+      "group": "UTILITY",
+      "title": "Utility in Hand",
+      "expected": "source-zone requirement",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-099",
+      "group": "UTILITY",
+      "title": "zero cost not timing bypass",
+      "expected": "timing required",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-100",
+      "group": "UTILITY",
+      "title": "zero cost not target bypass",
+      "expected": "target required",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-101",
+      "group": "UTILITY",
+      "title": "zero cost not math bypass",
+      "expected": "QMO law retained",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_current_genesis_admission_closure_and_road_cannot_be_bypassed",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-102",
+      "group": "UTILITY",
+      "title": "generic timing OPEN",
+      "expected": "no universal scheduler",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-103",
+      "group": "UTILITY",
+      "title": "51-slot structure preserved",
+      "expected": "no catalog regeneration",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "unchanged source-derived 185-record / 51-Utility catalog"
+      ]
+    },
+    {
+      "id": "P5-104",
+      "group": "VICTORY",
+      "title": "three inactive lose",
+      "expected": "terminal condition",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-105",
+      "group": "VICTORY",
+      "title": "opponent wins",
+      "expected": "winner exact",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-106",
+      "group": "VICTORY",
+      "title": "one/two inactive nonterminal",
+      "expected": "match live",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-107",
+      "group": "VICTORY",
+      "title": "check after action",
+      "expected": "deterministic point",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-108",
+      "group": "VICTORY",
+      "title": "terminal precedes defense",
+      "expected": "no recovery after third inactive",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-109",
+      "group": "VICTORY",
+      "title": "post-terminal mutation rejected",
+      "expected": "match closed",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-110",
+      "group": "VICTORY",
+      "title": "White restore after terminal rejected",
+      "expected": "no resurrection",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-111",
+      "group": "VICTORY",
+      "title": "simultaneous terminal OPEN",
+      "expected": "no tie policy invented",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-112",
+      "group": "DECK_EXHAUSTION",
+      "title": "deck exhaustion not immediate loss",
+      "expected": "escalation design",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-113",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage1 Red1",
+      "expected": "encoded",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-114",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage2 Orange2",
+      "expected": "encoded",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-115",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage3 Yellow3",
+      "expected": "encoded",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-116",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage4 Green4",
+      "expected": "encoded",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-117",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage5 Blue5",
+      "expected": "encoded",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-118",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage6 Violet6",
+      "expected": "encoded",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-119",
+      "group": "DECK_EXHAUSTION",
+      "title": "target remains OPEN",
+      "expected": "no damage target invented",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-120",
+      "group": "DECK_EXHAUSTION",
+      "title": "stage7+ remains OPEN",
+      "expected": "no continuation invented",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-121",
+      "group": "INTEGRATION",
+      "title": "charge checkpoint roundtrip",
+      "expected": "H/N/R stable",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_current_checkpoint_restart_replay_defense_order_and_road_history",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-122",
+      "group": "INTEGRATION",
+      "title": "charge deterministic replay",
+      "expected": "same actions same State",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_current_checkpoint_restart_replay_defense_order_and_road_history",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-123",
+      "group": "INTEGRATION",
+      "title": "defense replay order",
+      "expected": "Degrade before Restore",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_current_checkpoint_restart_replay_defense_order_and_road_history",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-124",
+      "group": "INTEGRATION",
+      "title": "turn checkpoint roundtrip",
+      "expected": "phase/player/availability stable",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_current_checkpoint_restart_replay_defense_order_and_road_history",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-125",
+      "group": "INTEGRATION",
+      "title": "failed defense rollback",
+      "expected": "no partial spend",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-126",
+      "group": "INTEGRATION",
+      "title": "failed hand admission rollback",
+      "expected": "Deck/Hand unchanged",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-127",
+      "group": "INTEGRATION",
+      "title": "Road history exact",
+      "expected": "closed Road evidence",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-128",
+      "group": "INTEGRATION",
+      "title": "privacy preserved",
+      "expected": "Hand/Deck views",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-129",
+      "group": "INTEGRATION",
+      "title": "field carryover preserved",
+      "expected": "Pass4 law",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-130",
+      "group": "INTEGRATION",
+      "title": "zero destruction preserved",
+      "expected": "support retirement exact",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-131",
+      "group": "INTEGRATION",
+      "title": "emergent loss preserved",
+      "expected": "incident only",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "test_pass_05.Pass05.test_current_zero_retirement_selective_emergence_and_open_guards",
+        "tests-integration.json",
+        "tests-source.json"
+      ]
+    },
+    {
+      "id": "P5-132",
+      "group": "INTEGRATION",
+      "title": "offline self-contained",
+      "expected": "no Git/_bricked runtime reads",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "distribution-verification.json",
+        "self-contained migration fixture",
+        "fresh extraction / Git-network-original-checkout denial probes"
+      ]
+    },
+    {
+      "id": "P5-133",
+      "group": "DELIVERY",
+      "title": "inherited suites rerun",
+      "expected": "no skipped historical suite",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "all inherited denominators unchanged",
+        "all discovered native cases executed",
+        "repository / compiler / dialect / upstream evidence"
+      ]
+    },
+    {
+      "id": "P5-134",
+      "group": "DELIVERY",
+      "title": "all cases accounted",
+      "expected": "case count exact",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "all 140 mandatory IDs accounted with explicit execution or guard evidence"
+      ]
+    },
+    {
+      "id": "P5-135",
+      "group": "DELIVERY",
+      "title": "receipt honesty",
+      "expected": "unrun/failed not marked PASS",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "source-bound execution receipts; absent or failed cases never promoted"
+      ]
+    },
+    {
+      "id": "P5-136",
+      "group": "DELIVERY",
+      "title": "OPEN ledger emitted",
+      "expected": "all OPEN preserved",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "all sixteen original OPEN items emitted; actual refusal tests mapped above"
+      ]
+    },
+    {
+      "id": "P5-137",
+      "group": "DELIVERY",
+      "title": "changed-file inventory",
+      "expected": "complete",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "complete sealed-base-to-HEAD changed-file inventory and SHA256 map"
+      ]
+    },
+    {
+      "id": "P5-138",
+      "group": "DELIVERY",
+      "title": "hash manifest emitted",
+      "expected": "pouch/implementation identities",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "pouch SHA256",
+        "current implementation digest",
+        "changed-file SHA256 map"
+      ]
+    },
+    {
+      "id": "P5-139",
+      "group": "DELIVERY",
+      "title": "branch clean pushed",
+      "expected": "exact remote SHA",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "exact branch / local HEAD / remote SHA / clean status"
+      ]
+    },
+    {
+      "id": "P5-140",
+      "group": "DELIVERY",
+      "title": "whole game PREPRODUCTION",
+      "expected": "no release claim",
+      "kind": "MUST_PASS",
+      "mandatory": true,
+      "status": "PASS",
+      "evidence": [
+        "accepted-state.json",
+        "unchanged module gates"
+      ]
+    }
+  ],
+  "changed_files": [
+    "AGENTS.md",
+    "data/board/genesis-horizon.json",
+    "data/cycles/cycle_01/primes/working-model.json",
+    "data/cycles/cycle_01/utilities/overview.json",
+    "data/game/match.json",
+    "data/game/pass-04-runtime.json",
+    "data/game/pass-05-runtime.json",
+    "data/manifests/current-files.json",
+    "design/cards/cycle_01/utilities/SYSTEM.md",
+    "design/game/board/SYSTEM.md",
+    "design/game/match/SYSTEM.md",
+    "development/modules/core-game/HOST_RUNTIME_RISKS.json",
+    "development/modules/core-game/PASS_05_EXECUTION.md",
+    "development/modules/core-game/PASS_05_PROGRESS.json",
+    "development/modules/core-game/PASS_05_RECEIPT.md",
+    "development/modules/core-game/README.md",
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/adapter.py",
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/collections.py",
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/values.py",
+    "game/core/raeon/application/README.md",
+    "game/core/raeon/application/adopt_pass05.gen",
+    "game/core/raeon/application/advance_turn.gen",
+    "game/core/raeon/application/begin_turn.gen",
+    "game/core/raeon/application/defense_pass.gen",
+    "game/core/raeon/application/defense_restore.gen",
+    "game/core/raeon/application/effect_draw.gen",
+    "game/core/raeon/application/end_active.gen",
+    "game/core/raeon/application/generate_charge.gen",
+    "game/core/raeon/application/manifest.json",
+    "game/core/raeon/application/normal_draw.gen",
+    "game/core/raeon/application/request_open_rule.gen",
+    "game/core/raeon/application/setup_match.gen",
+    "game/core/raeon/application/spend_charge.gen",
+    "game/core/raeon/application/use_compensation.gen",
+    "game/core/raeon/application/white_reactivate.gen",
+    "game/match/README.md",
+    "game/match/state.py",
+    "game/primes/README.md",
+    "game/primes/nodes.py",
+    "game/sandbox/topology.py",
+    "provenance/decisions/raeon-pass-05.json",
+    "provenance/imports/raeon-pass-05/RAEON_DIPLOMATIC_POUCH_PASS_05_2026-10-01.zip",
+    "provenance/imports/raeon-pass-05/entry.json",
+    "provenance/imports/raeon-pass-05/handoff/00_EXECUTE_THIS_FIRST.md",
+    "provenance/imports/raeon-pass-05/handoff/CODEX_EXECUTION_PLAN.md",
+    "provenance/imports/raeon-pass-05/handoff/CURRENT_STATE.json",
+    "provenance/imports/raeon-pass-05/handoff/HAND_SETUP_DRAW_CONTRACT.md",
+    "provenance/imports/raeon-pass-05/handoff/MANIFEST.json",
+    "provenance/imports/raeon-pass-05/handoff/OPEN_ITEMS.json",
+    "provenance/imports/raeon-pass-05/handoff/PASS_05_ACCEPTANCE.json",
+    "provenance/imports/raeon-pass-05/handoff/PASS_05_RULES.json",
+    "provenance/imports/raeon-pass-05/handoff/PASS_05_RULES.md",
+    "provenance/imports/raeon-pass-05/handoff/PRIME_CHARGE_NODE_CONTRACT.md",
+    "provenance/imports/raeon-pass-05/handoff/README.md",
+    "provenance/imports/raeon-pass-05/handoff/SOURCE_ANCHORS.json",
+    "provenance/imports/raeon-pass-05/handoff/SUPERSESSION_LEDGER.json",
+    "provenance/imports/raeon-pass-05/handoff/TURN_AND_DEFENSE_CONTRACT.md",
+    "provenance/imports/raeon-pass-05/handoff/UTILITY_COST_CONTRACT.md",
+    "provenance/imports/raeon-pass-05/handoff/VERA_AUDIT_RUBRIC.md",
+    "provenance/imports/raeon-pass-05/handoff/VERIFY_POUCH.py",
+    "provenance/imports/raeon-pass-05/handoff/VICTORY_AND_DECK_EXHAUSTION.md",
+    "tests/integration/genesis_horizon/fixtures/pass04-checkpoint.json",
+    "tests/integration/genesis_horizon/fixtures/pass04-checkpoint.zip",
+    "tests/integration/genesis_horizon/pass_05_support.py",
+    "tests/integration/genesis_horizon/test_pass_05.py",
+    "tests/integration/genesis_horizon/test_pass_05_values.py",
+    "tests/regression/pass-05-contract.test.mjs",
+    "tools/genesis_runtime.py",
+    "tools/genesis_runtime_acceptance.py",
+    "tools/genesis_runtime_distribution.py",
+    "tools/genesis_runtime_pass02.py",
+    "tools/genesis_runtime_pass03.py",
+    "tools/genesis_runtime_pass03b.py",
+    "tools/genesis_runtime_pass04.py",
+    "tools/genesis_runtime_pass05.py",
+    "tools/validators/game-definition-contract.mjs",
+    "tools/validators/genesis-runtime-contract.mjs",
+    "tools/validators/pass-04-contract.mjs",
+    "tools/validators/pass-05-contract.mjs"
+  ],
+  "pouch_sha256": "d0c8a763eb0a4901a118611742a8abfd0075227f4f0ad1b3bba4784eead8830a",
+  "tests": {
+    "tests-unit.json": {
+      "run": 6,
+      "passed": [
+        "test_codec.CodecTests.test_fragment_assembly_and_unbound_scope",
+        "test_codec.CodecTests.test_independent_vector",
+        "test_codec.CodecTests.test_json_unicode_duplicates_constants",
+        "test_codec.CodecTests.test_numeric_and_shape_validation_on_both_paths",
+        "test_codec.CodecTests.test_outgoing_schema_and_bounded_drain",
+        "test_codec.CodecTests.test_versions_direction_and_lengths"
+      ],
+      "failures": 0,
+      "errors": 0,
+      "discovered": [
+        "test_codec.CodecTests.test_fragment_assembly_and_unbound_scope",
+        "test_codec.CodecTests.test_independent_vector",
+        "test_codec.CodecTests.test_json_unicode_duplicates_constants",
+        "test_codec.CodecTests.test_numeric_and_shape_validation_on_both_paths",
+        "test_codec.CodecTests.test_outgoing_schema_and_bounded_drain",
+        "test_codec.CodecTests.test_versions_direction_and_lengths"
+      ],
+      "process_isolation": true,
+      "processes": [
+        {
+          "test": "test_codec.CodecTests.test_fragment_assembly_and_unbound_scope",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_codec.CodecTests.test_independent_vector",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_codec.CodecTests.test_json_unicode_duplicates_constants",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_codec.CodecTests.test_numeric_and_shape_validation_on_both_paths",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_codec.CodecTests.test_outgoing_schema_and_bounded_drain",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_codec.CodecTests.test_versions_direction_and_lengths",
+          "process_exit_code": 0,
+          "status": "PASS"
+        }
+      ]
+    },
+    "tests-integration.json": {
+      "run": 136,
+      "passed": [
+        "test_distribution.ArchiveIntegrityTests.test_exact_manifest_and_negative_cases",
+        "test_pass_01.Pass01Tests.test_application_cannot_inherit_or_mutate_machine_domains",
+        "test_pass_01.Pass01Tests.test_checkpoint_restart_and_two_player_sessions",
+        "test_pass_01.Pass01Tests.test_conflicting_application_rejected",
+        "test_pass_01.Pass01Tests.test_duplicate_and_conflicting_identity_rejected",
+        "test_pass_01.Pass01Tests.test_exact_topology_and_empty_containers",
+        "test_pass_01.Pass01Tests.test_explicit_relations_and_stable_unique_identity",
+        "test_pass_01.Pass01Tests.test_missing_or_undeclared_relation_rejected",
+        "test_pass_01.Pass01Tests.test_no_pass_two_rules_exposed",
+        "test_pass_01.Pass01Tests.test_observation_and_idempotence_do_not_duplicate",
+        "test_pass_01.Pass01Tests.test_observation_operation_receipt_has_no_native_diagnostics",
+        "test_pass_01.Pass01Tests.test_owner_opponent_privacy_and_no_native_leak",
+        "test_pass_01.Pass01Tests.test_package_and_source_hash_tamper_rejected",
+        "test_pass_01.Pass01Tests.test_path_escape_rejected",
+        "test_pass_01.Pass01Tests.test_prepublication_failure_and_budget_roll_back",
+        "test_pass_01.Pass01Tests.test_production_bytecode_is_deterministic",
+        "test_pass_01.Pass01Tests.test_production_manifest_and_real_genesis",
+        "test_pass_01.Pass01Tests.test_unauthorized_realization_rejected",
+        "test_pass_01.Pass01Tests.test_undeclared_and_malformed_source_rejected",
+        "test_pass_02.Pass02.test_actual_draw_and_commit_preserve_identity",
+        "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+        "test_pass_02_adversarial.Adversarial.test_catalog_tamper_and_physical_path_determinism",
+        "test_pass_02_adversarial.Adversarial.test_checkpoint_corruption_and_new_process_restore",
+        "test_pass_02_adversarial.Adversarial.test_concurrent_requests_and_semantic_order",
+        "test_pass_02_adversarial.Adversarial.test_input_bounds_code_and_card_only_containment",
+        "test_pass_02_adversarial.Adversarial.test_inspection_reorder_batch_helpers_grant_limits",
+        "test_pass_02_adversarial.Adversarial.test_native_route_and_handler_closure_cannot_be_bypassed",
+        "test_pass_02_adversarial.Adversarial.test_recovery_profiles_and_batch_capacity",
+        "test_pass_02_adversarial.Adversarial.test_seeded_conservation_two_owners",
+        "test_pass_02_adversarial.Adversarial.test_semantic_replay_across_storage_and_epoch",
+        "test_pass_02_adversarial.Adversarial.test_setup_rollback_and_exact_idempotent_multiset",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_live_merge_cannot_restore_private_relations",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_public_view_cannot_inherit_private_hand",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_same_actor_public_cannot_inherit_inspection",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_inspection_scope_includes_application_view_owner_and_actor",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_owner_opponent_and_public_controls",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_private_inspection_delta_reconnect_restore_and_expiry",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_inspect_admission_rejected_atomically",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_live_geometry_delta_and_reconnect",
+        "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+        "test_pass_02_transactions.Transactions.test_checkpoint_nonempty_preserves_native_state_and_retry",
+        "test_pass_02_transactions.Transactions.test_delivery_loss_retry_conflict_and_stale_revision",
+        "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+        "test_pass_02_transactions.Transactions.test_failed_candidate_rolls_back_grant_rng_membership",
+        "test_pass_02_transactions.Transactions.test_hand_capacity_empty_deck_and_forged_arguments",
+        "test_pass_02_transactions.Transactions.test_live_private_views_and_detached_values",
+        "test_pass_02_transactions.Transactions.test_retirement_recovery_order_and_whole_support",
+        "test_pass_02_transactions.Transactions.test_shuffle_independent_full_vector_and_idempotency",
+        "test_pass_02_transactions.Transactions.test_structural_prime_slots_without_combat",
+        "test_pass_03.Pass03.test_batch_atomic_rollback_retry_and_post_commit_delivery",
+        "test_pass_03.Pass03.test_catalog_not_live_closure_and_read_only_exhaustive_query",
+        "test_pass_03.Pass03.test_concurrent_stale_pose_and_nonempty_checkpoint",
+        "test_pass_03.Pass03.test_corpus_full_sqlite_and_json_agree",
+        "test_pass_03.Pass03.test_handler_predicate_omission_and_road_closure_matter",
+        "test_pass_03.Pass03.test_native_hydration_duplicate_copies_and_source_bytes",
+        "test_pass_03.Pass03.test_numeric_bounds_zero_rotation_and_no_z_or_reflection_input",
+        "test_pass_03.Pass03.test_owner_membership_stale_and_no_individual_extraction",
+        "test_pass_03.Pass03.test_pair_lookup_preserves_all_outcomes_and_addresses",
+        "test_pass_03.Pass03.test_pose_bytes_full_3d_canonical_equivalence_and_identity",
+        "test_pass_03.Pass03.test_public_byte_delta_and_reconnect_with_topology",
+        "test_pass_03.Pass03.test_public_view_only_exposes_deployed_source_and_no_inventory_hints",
+        "test_pass_03.Pass03.test_reopen_merge_preview_and_gated_mutations_preserve_copies",
+        "test_pass_03.Pass03.test_retired_recovered_copy_does_not_keep_prior_space_pose",
+        "test_pass_03.Pass03.test_small_population_duplicates_wrong_family_and_budget",
+        "test_pass_03.Pass03.test_source_extension_and_checkpoint_abi_tamper_rejected",
+        "test_pass_03.Pass03.test_source_integrity_missing_corpus_and_exact_render_integer",
+        "test_pass_03b.AllBaseFields.test_all_60_source_witnesses_resolve_through_actual_package",
+        "test_pass_03b.Pass03B.test_configuring_resolved_checkpoint_and_public_byte_reconnect",
+        "test_pass_03b.Pass03B.test_deterministic_replay_different_paths",
+        "test_pass_03b.Pass03B.test_dynamic_nine_spaces_and_fusion_preserve_region_identity",
+        "test_pass_03b.Pass03B.test_emergent_instances_no_qmo_alias_and_atomic_support_publication",
+        "test_pass_03b.Pass03B.test_fusion_rollback_source_negative_owner_and_no_recursive_split",
+        "test_pass_03b.Pass03B.test_genesis_positive_predicates_transform_and_road_are_required",
+        "test_pass_03b.Pass03B.test_invalid_source_fusion_preserves_distinct_duplicate_copies",
+        "test_pass_03b.Pass03B.test_live_base_lock_identity_native_color_and_explicit_reopen",
+        "test_pass_03b.Pass03B.test_passive_three_pair_emergents_selective_loss_and_nontargetability",
+        "test_pass_03b.Pass03B.test_positive_fusion_exact_union_frames_width_and_subsumed_provenance",
+        "test_pass_03b.Pass03B.test_resolution_rollback_retry_and_postcommit_delivery",
+        "test_pass_03b.Pass03B.test_shape_orientation_partial_feedback_and_magnetic_hysteresis",
+        "test_pass_03b.Pass03B.test_stale_pose_witness_and_concurrent_resolution",
+        "test_pass_03b_math.RealizationMath.test_all_witness_memberships_edges_and_rotation_matrices",
+        "test_pass_03b_math.RealizationMath.test_candidate_magnetization_release_and_shape_only_never_lock",
+        "test_pass_03b_math.RealizationMath.test_membership_and_authority_tamper_fail_closed",
+        "test_pass_03b_math.RealizationMath.test_quaternion_sign_classes_and_thresholds",
+        "test_pass_03b_math.RealizationMath.test_reflection_scale_and_identity_permutation_are_not_equivalence",
+        "test_pass_03b_math.RealizationMath.test_se2_translation_rotation_exact_and_shared_yaw_targets",
+        "test_pass_03b_math.RealizationMath.test_simultaneous_edges_tethers_and_no_face_socket_exclusivity",
+        "test_pass_04.Pass04.test_A_generate_current_color_once_through_road",
+        "test_pass_04.Pass04.test_B_partial_repeated_spending_keeps_health_and_shield",
+        "test_pass_04.Pass04.test_C_D_shield_first_damage_and_health_first_restore",
+        "test_pass_04.Pass04.test_E_same_topology_carryover_no_implicit_heal_or_refresh",
+        "test_pass_04.Pass04.test_F_zero_color_atomic_graveyard_and_selective_emergence_loss",
+        "test_pass_04.Pass04.test_G_H_authority_windows_reservations_and_no_switch_refresh",
+        "test_pass_04.Pass04.test_Genesis_admission_transform_and_Road_cannot_be_bypassed",
+        "test_pass_04.Pass04.test_I_inactive_stays_fixed_and_white_restores_only_one_health",
+        "test_pass_04.Pass04.test_J_checkpoint_restart_deterministic_replay_and_filtered_deltas",
+        "test_pass_04.Pass04.test_atomic_generation_spend_retry_and_lost_delivery",
+        "test_pass_04.Pass04.test_catalog_binding_identity_initial_states_and_fixed_slots",
+        "test_pass_04.Pass04.test_concurrent_use_spend_and_stale_object_revisions",
+        "test_pass_04.Pass04.test_overflow_and_unsupported_targets_fail_without_consuming",
+        "test_pass_04.Pass04.test_selected_view_color_deltas_preserve_private_boundaries",
+        "test_pass_04_math.PrimeMath.test_all_health_charge_restore_degrade_states_and_overflow",
+        "test_pass_04_math.PrimeMath.test_carryover_uses_latest_pose_revision_independent_of_record_order",
+        "test_pass_04_math.PrimeMath.test_catalog_exact_fourteen_and_accepted_magnitudes",
+        "test_pass_04_math.PrimeMath.test_open_scheduler_overflow_and_nonordinary_production_not_invented",
+        "test_pass_04_math.PrimeMath.test_required_examples_and_bounded_white_reactivation",
+        "test_pass_05.Pass05.test_current_checkpoint_restart_replay_defense_order_and_road_history",
+        "test_pass_05.Pass05.test_current_genesis_admission_closure_and_road_cannot_be_bypassed",
+        "test_pass_05.Pass05.test_current_zero_retirement_selective_emergence_and_open_guards",
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "test_pass_05.Pass05.test_real_pass04_checkpoint_upgrade_and_canonical_migration",
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+        "test_pass_05_values.NodeValues.test_exact_authority_pointer_amendments_do_not_allow_corpus_changes",
+        "test_pass_05_values.NodeValues.test_native_health_first_shield_first_partial_spend_and_states",
+        "test_pass_05_values.NodeValues.test_native_integer_no_node_cap_and_exact_canonical_encoding",
+        "test_pass_05_values.NodeValues.test_negative_node_invariants_and_legacy_charge_rejected",
+        "test_runtime.RuntimeTests.test_application_cannot_inherit_machine_domains",
+        "test_runtime.RuntimeTests.test_backpressure_before_mutation",
+        "test_runtime.RuntimeTests.test_candidate_rollback_and_budget",
+        "test_runtime.RuntimeTests.test_checkpoint_restart_corruption_and_confinement",
+        "test_runtime.RuntimeTests.test_delivery_failure_recovery",
+        "test_runtime.RuntimeTests.test_expired_retry_is_never_reexecuted",
+        "test_runtime.RuntimeTests.test_missing_and_tampered_sources",
+        "test_runtime.RuntimeTests.test_native_boot_identities_and_containment",
+        "test_runtime.RuntimeTests.test_output_delivery_failure_retains_committed_outcome",
+        "test_runtime.RuntimeTests.test_privacy_and_scope",
+        "test_runtime.RuntimeTests.test_projection_gap_receipt_clock_and_reconnect",
+        "test_runtime.RuntimeTests.test_quiesce_close_and_replay",
+        "test_runtime.RuntimeTests.test_real_joint_trace_and_identity_history",
+        "test_runtime.RuntimeTests.test_retry_conflict_concurrent_scope_and_stale",
+        "test_runtime.RuntimeTests.test_route_admission_and_open_resource_rejections"
+      ],
+      "failures": 0,
+      "errors": 0,
+      "discovered": [
+        "test_distribution.ArchiveIntegrityTests.test_exact_manifest_and_negative_cases",
+        "test_pass_01.Pass01Tests.test_application_cannot_inherit_or_mutate_machine_domains",
+        "test_pass_01.Pass01Tests.test_checkpoint_restart_and_two_player_sessions",
+        "test_pass_01.Pass01Tests.test_conflicting_application_rejected",
+        "test_pass_01.Pass01Tests.test_duplicate_and_conflicting_identity_rejected",
+        "test_pass_01.Pass01Tests.test_exact_topology_and_empty_containers",
+        "test_pass_01.Pass01Tests.test_explicit_relations_and_stable_unique_identity",
+        "test_pass_01.Pass01Tests.test_missing_or_undeclared_relation_rejected",
+        "test_pass_01.Pass01Tests.test_no_pass_two_rules_exposed",
+        "test_pass_01.Pass01Tests.test_observation_and_idempotence_do_not_duplicate",
+        "test_pass_01.Pass01Tests.test_observation_operation_receipt_has_no_native_diagnostics",
+        "test_pass_01.Pass01Tests.test_owner_opponent_privacy_and_no_native_leak",
+        "test_pass_01.Pass01Tests.test_package_and_source_hash_tamper_rejected",
+        "test_pass_01.Pass01Tests.test_path_escape_rejected",
+        "test_pass_01.Pass01Tests.test_prepublication_failure_and_budget_roll_back",
+        "test_pass_01.Pass01Tests.test_production_bytecode_is_deterministic",
+        "test_pass_01.Pass01Tests.test_production_manifest_and_real_genesis",
+        "test_pass_01.Pass01Tests.test_unauthorized_realization_rejected",
+        "test_pass_01.Pass01Tests.test_undeclared_and_malformed_source_rejected",
+        "test_pass_02.Pass02.test_actual_draw_and_commit_preserve_identity",
+        "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+        "test_pass_02_adversarial.Adversarial.test_catalog_tamper_and_physical_path_determinism",
+        "test_pass_02_adversarial.Adversarial.test_checkpoint_corruption_and_new_process_restore",
+        "test_pass_02_adversarial.Adversarial.test_concurrent_requests_and_semantic_order",
+        "test_pass_02_adversarial.Adversarial.test_input_bounds_code_and_card_only_containment",
+        "test_pass_02_adversarial.Adversarial.test_inspection_reorder_batch_helpers_grant_limits",
+        "test_pass_02_adversarial.Adversarial.test_native_route_and_handler_closure_cannot_be_bypassed",
+        "test_pass_02_adversarial.Adversarial.test_recovery_profiles_and_batch_capacity",
+        "test_pass_02_adversarial.Adversarial.test_seeded_conservation_two_owners",
+        "test_pass_02_adversarial.Adversarial.test_semantic_replay_across_storage_and_epoch",
+        "test_pass_02_adversarial.Adversarial.test_setup_rollback_and_exact_idempotent_multiset",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_live_merge_cannot_restore_private_relations",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_public_view_cannot_inherit_private_hand",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_same_actor_public_cannot_inherit_inspection",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_inspection_scope_includes_application_view_owner_and_actor",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_owner_opponent_and_public_controls",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_private_inspection_delta_reconnect_restore_and_expiry",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_inspect_admission_rejected_atomically",
+        "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_live_geometry_delta_and_reconnect",
+        "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+        "test_pass_02_transactions.Transactions.test_checkpoint_nonempty_preserves_native_state_and_retry",
+        "test_pass_02_transactions.Transactions.test_delivery_loss_retry_conflict_and_stale_revision",
+        "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+        "test_pass_02_transactions.Transactions.test_failed_candidate_rolls_back_grant_rng_membership",
+        "test_pass_02_transactions.Transactions.test_hand_capacity_empty_deck_and_forged_arguments",
+        "test_pass_02_transactions.Transactions.test_live_private_views_and_detached_values",
+        "test_pass_02_transactions.Transactions.test_retirement_recovery_order_and_whole_support",
+        "test_pass_02_transactions.Transactions.test_shuffle_independent_full_vector_and_idempotency",
+        "test_pass_02_transactions.Transactions.test_structural_prime_slots_without_combat",
+        "test_pass_03.Pass03.test_batch_atomic_rollback_retry_and_post_commit_delivery",
+        "test_pass_03.Pass03.test_catalog_not_live_closure_and_read_only_exhaustive_query",
+        "test_pass_03.Pass03.test_concurrent_stale_pose_and_nonempty_checkpoint",
+        "test_pass_03.Pass03.test_corpus_full_sqlite_and_json_agree",
+        "test_pass_03.Pass03.test_handler_predicate_omission_and_road_closure_matter",
+        "test_pass_03.Pass03.test_native_hydration_duplicate_copies_and_source_bytes",
+        "test_pass_03.Pass03.test_numeric_bounds_zero_rotation_and_no_z_or_reflection_input",
+        "test_pass_03.Pass03.test_owner_membership_stale_and_no_individual_extraction",
+        "test_pass_03.Pass03.test_pair_lookup_preserves_all_outcomes_and_addresses",
+        "test_pass_03.Pass03.test_pose_bytes_full_3d_canonical_equivalence_and_identity",
+        "test_pass_03.Pass03.test_public_byte_delta_and_reconnect_with_topology",
+        "test_pass_03.Pass03.test_public_view_only_exposes_deployed_source_and_no_inventory_hints",
+        "test_pass_03.Pass03.test_reopen_merge_preview_and_gated_mutations_preserve_copies",
+        "test_pass_03.Pass03.test_retired_recovered_copy_does_not_keep_prior_space_pose",
+        "test_pass_03.Pass03.test_small_population_duplicates_wrong_family_and_budget",
+        "test_pass_03.Pass03.test_source_extension_and_checkpoint_abi_tamper_rejected",
+        "test_pass_03.Pass03.test_source_integrity_missing_corpus_and_exact_render_integer",
+        "test_pass_03b.AllBaseFields.test_all_60_source_witnesses_resolve_through_actual_package",
+        "test_pass_03b.Pass03B.test_configuring_resolved_checkpoint_and_public_byte_reconnect",
+        "test_pass_03b.Pass03B.test_deterministic_replay_different_paths",
+        "test_pass_03b.Pass03B.test_dynamic_nine_spaces_and_fusion_preserve_region_identity",
+        "test_pass_03b.Pass03B.test_emergent_instances_no_qmo_alias_and_atomic_support_publication",
+        "test_pass_03b.Pass03B.test_fusion_rollback_source_negative_owner_and_no_recursive_split",
+        "test_pass_03b.Pass03B.test_genesis_positive_predicates_transform_and_road_are_required",
+        "test_pass_03b.Pass03B.test_invalid_source_fusion_preserves_distinct_duplicate_copies",
+        "test_pass_03b.Pass03B.test_live_base_lock_identity_native_color_and_explicit_reopen",
+        "test_pass_03b.Pass03B.test_passive_three_pair_emergents_selective_loss_and_nontargetability",
+        "test_pass_03b.Pass03B.test_positive_fusion_exact_union_frames_width_and_subsumed_provenance",
+        "test_pass_03b.Pass03B.test_resolution_rollback_retry_and_postcommit_delivery",
+        "test_pass_03b.Pass03B.test_shape_orientation_partial_feedback_and_magnetic_hysteresis",
+        "test_pass_03b.Pass03B.test_stale_pose_witness_and_concurrent_resolution",
+        "test_pass_03b_math.RealizationMath.test_all_witness_memberships_edges_and_rotation_matrices",
+        "test_pass_03b_math.RealizationMath.test_candidate_magnetization_release_and_shape_only_never_lock",
+        "test_pass_03b_math.RealizationMath.test_membership_and_authority_tamper_fail_closed",
+        "test_pass_03b_math.RealizationMath.test_quaternion_sign_classes_and_thresholds",
+        "test_pass_03b_math.RealizationMath.test_reflection_scale_and_identity_permutation_are_not_equivalence",
+        "test_pass_03b_math.RealizationMath.test_se2_translation_rotation_exact_and_shared_yaw_targets",
+        "test_pass_03b_math.RealizationMath.test_simultaneous_edges_tethers_and_no_face_socket_exclusivity",
+        "test_pass_04.Pass04.test_A_generate_current_color_once_through_road",
+        "test_pass_04.Pass04.test_B_partial_repeated_spending_keeps_health_and_shield",
+        "test_pass_04.Pass04.test_C_D_shield_first_damage_and_health_first_restore",
+        "test_pass_04.Pass04.test_E_same_topology_carryover_no_implicit_heal_or_refresh",
+        "test_pass_04.Pass04.test_F_zero_color_atomic_graveyard_and_selective_emergence_loss",
+        "test_pass_04.Pass04.test_G_H_authority_windows_reservations_and_no_switch_refresh",
+        "test_pass_04.Pass04.test_Genesis_admission_transform_and_Road_cannot_be_bypassed",
+        "test_pass_04.Pass04.test_I_inactive_stays_fixed_and_white_restores_only_one_health",
+        "test_pass_04.Pass04.test_J_checkpoint_restart_deterministic_replay_and_filtered_deltas",
+        "test_pass_04.Pass04.test_atomic_generation_spend_retry_and_lost_delivery",
+        "test_pass_04.Pass04.test_catalog_binding_identity_initial_states_and_fixed_slots",
+        "test_pass_04.Pass04.test_concurrent_use_spend_and_stale_object_revisions",
+        "test_pass_04.Pass04.test_overflow_and_unsupported_targets_fail_without_consuming",
+        "test_pass_04.Pass04.test_selected_view_color_deltas_preserve_private_boundaries",
+        "test_pass_04_math.PrimeMath.test_all_health_charge_restore_degrade_states_and_overflow",
+        "test_pass_04_math.PrimeMath.test_carryover_uses_latest_pose_revision_independent_of_record_order",
+        "test_pass_04_math.PrimeMath.test_catalog_exact_fourteen_and_accepted_magnitudes",
+        "test_pass_04_math.PrimeMath.test_open_scheduler_overflow_and_nonordinary_production_not_invented",
+        "test_pass_04_math.PrimeMath.test_required_examples_and_bounded_white_reactivation",
+        "test_pass_05.Pass05.test_current_checkpoint_restart_replay_defense_order_and_road_history",
+        "test_pass_05.Pass05.test_current_genesis_admission_closure_and_road_cannot_be_bypassed",
+        "test_pass_05.Pass05.test_current_zero_retirement_selective_emergence_and_open_guards",
+        "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+        "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+        "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+        "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+        "test_pass_05.Pass05.test_real_pass04_checkpoint_upgrade_and_canonical_migration",
+        "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+        "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+        "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+        "test_pass_05_values.NodeValues.test_exact_authority_pointer_amendments_do_not_allow_corpus_changes",
+        "test_pass_05_values.NodeValues.test_native_health_first_shield_first_partial_spend_and_states",
+        "test_pass_05_values.NodeValues.test_native_integer_no_node_cap_and_exact_canonical_encoding",
+        "test_pass_05_values.NodeValues.test_negative_node_invariants_and_legacy_charge_rejected",
+        "test_runtime.RuntimeTests.test_application_cannot_inherit_machine_domains",
+        "test_runtime.RuntimeTests.test_backpressure_before_mutation",
+        "test_runtime.RuntimeTests.test_candidate_rollback_and_budget",
+        "test_runtime.RuntimeTests.test_checkpoint_restart_corruption_and_confinement",
+        "test_runtime.RuntimeTests.test_delivery_failure_recovery",
+        "test_runtime.RuntimeTests.test_expired_retry_is_never_reexecuted",
+        "test_runtime.RuntimeTests.test_missing_and_tampered_sources",
+        "test_runtime.RuntimeTests.test_native_boot_identities_and_containment",
+        "test_runtime.RuntimeTests.test_output_delivery_failure_retains_committed_outcome",
+        "test_runtime.RuntimeTests.test_privacy_and_scope",
+        "test_runtime.RuntimeTests.test_projection_gap_receipt_clock_and_reconnect",
+        "test_runtime.RuntimeTests.test_quiesce_close_and_replay",
+        "test_runtime.RuntimeTests.test_real_joint_trace_and_identity_history",
+        "test_runtime.RuntimeTests.test_retry_conflict_concurrent_scope_and_stale",
+        "test_runtime.RuntimeTests.test_route_admission_and_open_resource_rejections"
+      ],
+      "process_isolation": true,
+      "processes": [
+        {
+          "test": "test_distribution.ArchiveIntegrityTests.test_exact_manifest_and_negative_cases",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_application_cannot_inherit_or_mutate_machine_domains",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_checkpoint_restart_and_two_player_sessions",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_conflicting_application_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_duplicate_and_conflicting_identity_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_exact_topology_and_empty_containers",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_explicit_relations_and_stable_unique_identity",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_missing_or_undeclared_relation_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_no_pass_two_rules_exposed",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_observation_and_idempotence_do_not_duplicate",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_observation_operation_receipt_has_no_native_diagnostics",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_owner_opponent_privacy_and_no_native_leak",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_package_and_source_hash_tamper_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_path_escape_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_prepublication_failure_and_budget_roll_back",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_production_bytecode_is_deterministic",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_production_manifest_and_real_genesis",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_unauthorized_realization_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_01.Pass01Tests.test_undeclared_and_malformed_source_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02.Pass02.test_actual_draw_and_commit_preserve_identity",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_catalog_tamper_and_physical_path_determinism",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_checkpoint_corruption_and_new_process_restore",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_concurrent_requests_and_semantic_order",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_input_bounds_code_and_card_only_containment",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_inspection_reorder_batch_helpers_grant_limits",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_native_route_and_handler_closure_cannot_be_bypassed",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_recovery_profiles_and_batch_capacity",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_seeded_conservation_two_owners",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_semantic_replay_across_storage_and_epoch",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_adversarial.Adversarial.test_setup_rollback_and_exact_idempotent_multiset",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_live_merge_cannot_restore_private_relations",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_public_view_cannot_inherit_private_hand",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_same_actor_public_cannot_inherit_inspection",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_inspection_scope_includes_application_view_owner_and_actor",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_owner_opponent_and_public_controls",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_private_inspection_delta_reconnect_restore_and_expiry",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_inspect_admission_rejected_atomically",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_live_geometry_delta_and_reconnect",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_checkpoint_nonempty_preserves_native_state_and_retry",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_delivery_loss_retry_conflict_and_stale_revision",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_failed_candidate_rolls_back_grant_rng_membership",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_hand_capacity_empty_deck_and_forged_arguments",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_live_private_views_and_detached_values",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_retirement_recovery_order_and_whole_support",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_shuffle_independent_full_vector_and_idempotency",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_02_transactions.Transactions.test_structural_prime_slots_without_combat",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_batch_atomic_rollback_retry_and_post_commit_delivery",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_catalog_not_live_closure_and_read_only_exhaustive_query",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_concurrent_stale_pose_and_nonempty_checkpoint",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_corpus_full_sqlite_and_json_agree",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_handler_predicate_omission_and_road_closure_matter",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_native_hydration_duplicate_copies_and_source_bytes",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_numeric_bounds_zero_rotation_and_no_z_or_reflection_input",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_owner_membership_stale_and_no_individual_extraction",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_pair_lookup_preserves_all_outcomes_and_addresses",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_pose_bytes_full_3d_canonical_equivalence_and_identity",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_public_byte_delta_and_reconnect_with_topology",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_public_view_only_exposes_deployed_source_and_no_inventory_hints",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_reopen_merge_preview_and_gated_mutations_preserve_copies",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_retired_recovered_copy_does_not_keep_prior_space_pose",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_small_population_duplicates_wrong_family_and_budget",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_source_extension_and_checkpoint_abi_tamper_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03.Pass03.test_source_integrity_missing_corpus_and_exact_render_integer",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.AllBaseFields.test_all_60_source_witnesses_resolve_through_actual_package",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_configuring_resolved_checkpoint_and_public_byte_reconnect",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_deterministic_replay_different_paths",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_dynamic_nine_spaces_and_fusion_preserve_region_identity",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_emergent_instances_no_qmo_alias_and_atomic_support_publication",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_fusion_rollback_source_negative_owner_and_no_recursive_split",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_genesis_positive_predicates_transform_and_road_are_required",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_invalid_source_fusion_preserves_distinct_duplicate_copies",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_live_base_lock_identity_native_color_and_explicit_reopen",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_passive_three_pair_emergents_selective_loss_and_nontargetability",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_positive_fusion_exact_union_frames_width_and_subsumed_provenance",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_resolution_rollback_retry_and_postcommit_delivery",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_shape_orientation_partial_feedback_and_magnetic_hysteresis",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b.Pass03B.test_stale_pose_witness_and_concurrent_resolution",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_all_witness_memberships_edges_and_rotation_matrices",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_candidate_magnetization_release_and_shape_only_never_lock",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_membership_and_authority_tamper_fail_closed",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_quaternion_sign_classes_and_thresholds",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_reflection_scale_and_identity_permutation_are_not_equivalence",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_se2_translation_rotation_exact_and_shared_yaw_targets",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_03b_math.RealizationMath.test_simultaneous_edges_tethers_and_no_face_socket_exclusivity",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_A_generate_current_color_once_through_road",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_B_partial_repeated_spending_keeps_health_and_shield",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_C_D_shield_first_damage_and_health_first_restore",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_E_same_topology_carryover_no_implicit_heal_or_refresh",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_F_zero_color_atomic_graveyard_and_selective_emergence_loss",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_G_H_authority_windows_reservations_and_no_switch_refresh",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_Genesis_admission_transform_and_Road_cannot_be_bypassed",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_I_inactive_stays_fixed_and_white_restores_only_one_health",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_J_checkpoint_restart_deterministic_replay_and_filtered_deltas",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_atomic_generation_spend_retry_and_lost_delivery",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_catalog_binding_identity_initial_states_and_fixed_slots",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_concurrent_use_spend_and_stale_object_revisions",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_overflow_and_unsupported_targets_fail_without_consuming",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04.Pass04.test_selected_view_color_deltas_preserve_private_boundaries",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04_math.PrimeMath.test_all_health_charge_restore_degrade_states_and_overflow",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04_math.PrimeMath.test_carryover_uses_latest_pose_revision_independent_of_record_order",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04_math.PrimeMath.test_catalog_exact_fourteen_and_accepted_magnitudes",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04_math.PrimeMath.test_open_scheduler_overflow_and_nonordinary_production_not_invented",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_04_math.PrimeMath.test_required_examples_and_bounded_white_reactivation",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_current_checkpoint_restart_replay_defense_order_and_road_history",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_current_genesis_admission_closure_and_road_cannot_be_bypassed",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_current_zero_retirement_selective_emergence_and_open_guards",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_real_pass04_checkpoint_upgrade_and_canonical_migration",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05_values.NodeValues.test_exact_authority_pointer_amendments_do_not_allow_corpus_changes",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05_values.NodeValues.test_native_health_first_shield_first_partial_spend_and_states",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05_values.NodeValues.test_native_integer_no_node_cap_and_exact_canonical_encoding",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_pass_05_values.NodeValues.test_negative_node_invariants_and_legacy_charge_rejected",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_application_cannot_inherit_machine_domains",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_backpressure_before_mutation",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_candidate_rollback_and_budget",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_checkpoint_restart_corruption_and_confinement",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_delivery_failure_recovery",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_expired_retry_is_never_reexecuted",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_missing_and_tampered_sources",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_native_boot_identities_and_containment",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_output_delivery_failure_retains_committed_outcome",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_privacy_and_scope",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_projection_gap_receipt_clock_and_reconnect",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_quiesce_close_and_replay",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_real_joint_trace_and_identity_history",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_retry_conflict_concurrent_scope_and_stale",
+          "process_exit_code": 0,
+          "status": "PASS"
+        },
+        {
+          "test": "test_runtime.RuntimeTests.test_route_admission_and_open_resource_rejections",
+          "process_exit_code": 0,
+          "status": "PASS"
+        }
+      ]
+    },
+    "upstream-tests.json": {
+      "status": "PASS",
+      "upstream_commit": "c89676fc26000ae6f5fdad66a56e118b285d9b1d",
+      "baseline": {
+        "status": "PASS",
+        "execution_receipt": "receipt-e0bbca751087ac913a9d",
+        "artifacts": {
+          "upstream-build.json": "1a535b4a36251e47324dc16b1c9cf1ee9719115e2482b6160e62d54ec915c9cb",
+          "upstream-lower.json": "16c5170e3bdcb6d0ce123424cfc93e212dd3489294b1f88693661aa36bb0f47e",
+          "upstream-parse.json": "e8880d96cecbb965e68fda7569e781c435f68a5be2ce2a3b8fdcb502c44e2ebd",
+          "upstream-rainbow-road.gvm": "b5f96deddc738338a028802faf80a072b99070ad5b674303bd041bfab65cc041",
+          "upstream-run.json": "2770e37b8ac85df0d5fe0ea8622f39882ac9c430ee71154a2aeeb9b76cd17192"
+        }
+      },
+      "domains_passed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "repository-validation.json": {
+      "status": "PASS",
+      "implementation_sha256": "4733bdecbc397a8a4a2c260d1d449594393cb40d348caee143b43dca112061ea",
+      "results": [
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-bootstrap.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-design-state.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-normalization.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-continuity.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-cycle1-import.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-full-migration.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "tools/validators/validate-game-definition.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "--test",
+            "tests/regression\\bootstrap-validator.test.mjs",
+            "tests/regression\\continuity-validator.test.mjs",
+            "tests/regression\\cycle1-import.test.mjs",
+            "tests/regression\\design-state-validator.test.mjs",
+            "tests/regression\\full-migration.test.mjs",
+            "tests/regression\\game-definition.test.mjs",
+            "tests/regression\\genesis-runtime-contract.test.mjs",
+            "tests/regression\\normalization-validator.test.mjs",
+            "tests/regression\\pass-01-contract.test.mjs",
+            "tests/regression\\pass-02-contract.test.mjs",
+            "tests/regression\\pass-02-projection-contract.test.mjs",
+            "tests/regression\\pass-03-contract.test.mjs",
+            "tests/regression\\pass-03b-contract.test.mjs",
+            "tests/regression\\pass-04-contract.test.mjs",
+            "tests/regression\\pass-05-contract.test.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "--test",
+            "tests/gameplay/cards\\containers.test.mjs",
+            "tests/gameplay/manifolds\\relationships.test.mjs",
+            "tests/gameplay/primes\\constitution.test.mjs",
+            "tests/gameplay/sandbox\\configuration.test.mjs"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    "verify.json": {
+      "status": "PASS",
+      "compiled_sources": 60,
+      "deterministic_rebuild": true
+    }
   },
+  "offline_distributions": {
+    "horizon": {
+      "bytes": 26533437,
+      "files": 1687,
+      "implementation_sha256": "4733bdecbc397a8a4a2c260d1d449594393cb40d348caee143b43dca112061ea",
+      "manifest": "distribution/horizon-manifest.json",
+      "path": "C:\\Users\\rando\\_raeon\\build\\genesis_runtime\\distributions\\genesis-horizon-0.5.0.zip",
+      "sha256": "0155b3dd25ac73b2d560f326ac292c624dd57e0241c989338f8b486c7fe4dbf5",
+      "source_commit": "0889e5eccd45d2019c71ac6de35edd31b5becf27"
+    },
+    "hypervisor": {
+      "bytes": 17404,
+      "files": 18,
+      "implementation_sha256": "4733bdecbc397a8a4a2c260d1d449594393cb40d348caee143b43dca112061ea",
+      "manifest": "distribution/hypervisor-manifest.json",
+      "path": "C:\\Users\\rando\\_raeon\\build\\genesis_runtime\\distributions\\raeon-python-hypervisor-0.5.0.zip",
+      "sha256": "1dbae7c0ee79b52472ec8bf6af28960d09bdf6e1fddd318ae221df8dfd06c7fd",
+      "source_commit": "0889e5eccd45d2019c71ac6de35edd31b5becf27"
+    }
+  },
+  "open_items": [
+    {
+      "id": "P5-OPEN-001",
+      "topic": "mulligan procedure",
+      "detail": "Which cards may be replaced, replacement count, repeated mulligans, and shuffle-back timing."
+    },
+    {
+      "id": "P5-OPEN-002",
+      "topic": "second-player compensation timing/name",
+      "detail": "Final identity/name/flavor and exact legal timing window for the draw-one compensation card."
+    },
+    {
+      "id": "P5-OPEN-003",
+      "topic": "hand overflow",
+      "detail": "What happens when a draw/effect would exceed the 10-card hand maximum."
+    },
+    {
+      "id": "P5-OPEN-004",
+      "topic": "defense timer duration",
+      "detail": "Exact seconds. Model a bounded window and explicit PASS/timeout event without guessing duration."
+    },
+    {
+      "id": "P5-OPEN-005",
+      "topic": "simultaneous terminal resolution",
+      "detail": "Tie/draw law if both players satisfy terminal loss simultaneously."
+    },
+    {
+      "id": "P5-OPEN-006",
+      "topic": "deck exhaustion target law",
+      "detail": "Which field/Prime receives each forced Degrade and target progression."
+    },
+    {
+      "id": "P5-OPEN-007",
+      "topic": "deck exhaustion stage 7+",
+      "detail": "Behavior after Violet/6."
+    },
+    {
+      "id": "P5-OPEN-008",
+      "topic": "generic Utility timing",
+      "detail": "Utilities cost no resource, but general windows and many effect-specific timing rules remain unresolved."
+    },
+    {
+      "id": "P5-OPEN-009",
+      "topic": "temporary Configuration Space expiry",
+      "detail": "Lifetime/expiry of effect-created spaces."
+    },
+    {
+      "id": "P5-OPEN-010",
+      "topic": "derived-field additions and splitting",
+      "detail": "No law for adding to or splitting derived/fused spaces."
+    },
+    {
+      "id": "P5-OPEN-011",
+      "topic": "recursive fusion/emergence",
+      "detail": "No authorization for fusion-of-fusion or recursive emergence."
+    },
+    {
+      "id": "P5-OPEN-012",
+      "topic": "derived/emergent production cadence",
+      "detail": "No new output-generation cadence for derived/emergent objects."
+    },
+    {
+      "id": "P5-OPEN-013",
+      "topic": "match timer",
+      "detail": "Approximate 15-minute target is not a hard timer."
+    },
+    {
+      "id": "P5-OPEN-014",
+      "topic": "native presentation",
+      "detail": "UI/graphics/animation/device performance remain outside Pass 5."
+    },
+    {
+      "id": "P5-OPEN-015",
+      "topic": "HOST-RUNTIME-001",
+      "detail": "Unrestricted repeated native-runtime lifetime stability on Windows remains OPEN_QUALIFIED."
+    },
+    {
+      "id": "P5-OPEN-016",
+      "topic": "final Utility catalog",
+      "detail": "Final names/IDs/wording for ordinary Utility slots remain outside this pass."
+    }
+  ],
+  "qualification": {
+    "python": "3.12.10",
+    "platform": "win32",
+    "processor_mask": 65536,
+    "host_risk": "HOST-RUNTIME-001",
+    "unrestricted_stability": "OPEN"
+  },
+  "HOST-RUNTIME-001": "OPEN_QUALIFIED",
   "whole_game_phase": "PREPRODUCTION",
-  "HOST-RUNTIME-001": "OPEN_QUALIFIED"
+  "native_devices": "NOT_RUN",
+  "receipt_scope": "VALIDATED_IMPLEMENTATION_AND_ARCHIVES",
+  "implementation_sha": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+  "final_seal_attestation": "build/genesis_runtime/evidence/pass-05-acceptance.json after the documentation commit and push",
+  "git_snapshot_scope": "ending_sha and remote_sha identify the validated implementation; the final documentation-seal SHA is reported by the post-seal audit and final delivery message",
+  "implementation_audit_sha256": "9ebf19b696073e08593ed0c2a58175f04c13e37034b6910838cc42459c69a7e2",
+  "evidence_sha256": {
+    "build.json": "ba3480649cbc4757260344d6c7f5f6c656bc1f8ad0a288a608867216e3e6b196",
+    "verify.json": "6eec3064f31d6a7ae5e4fb0eb988af9f3993476a08c3427217977c5254b4a763",
+    "dialects.json": "e9c64a4361f6a15f496f219aee769c9a29cceb0873e5f882c41859cb9a27bf26",
+    "tests-unit.json": "7f4d44e1a37071772fa6557a31bcceb46238fec08c1e71a09f58a1b0610daabb",
+    "tests-integration.json": "136fc4086a51acd156feab37bac6e5da31a2b179e2909d6f933288b3ba77640a",
+    "tests-source.json": "eb332a50fe6030fd399d07b13530f25c7fc38b89849f8cda732abd322e02b69a",
+    "upstream-tests.json": "bfd7d7fe3c2768a011c0158b4c7dde50fe27a4877c84fb18850885b3bf79bcbf",
+    "repository-validation.json": "931094df9f540adb7c83ee4c46b2c68fc94635003632d40044485acaa1294947",
+    "distribution-verification.json": "a634a98c58c87710400e2e6601417b6c8dcef320295e23c2f7797768adabd3fc",
+    "acceptance.json": "0b6220171fac5174f59f96b6abdc6fa2935469e21664d775c677f72c0c49c6b1",
+    "pass-02-acceptance.json": "195fd9473cd28caa285342fbadf6d738ef296fc2968a54f44f02f2f8abaed328",
+    "projection-correction-acceptance.json": "7645fbb6cdbcb6aec845791bea938788764900602b6548cd0f87013079e50b02",
+    "pass-03-acceptance.json": "f050142897b680552679abcc20177e17532b48aa9009e161064895481ce1555a",
+    "pass-03b-acceptance.json": "7ef0a6368632ee2670050f5afd551cbf078cbd843bd5406047a38d26ae53dfde",
+    "pass-04-acceptance.json": "de8539523593ba29332d6bfa657da96c66952367770067e5836e5de81d599065"
+  },
+  "implementation_changed_file_sha256": {
+    "AGENTS.md": "6e268c0a86d491fa2ebf96f6a9c786c17479c64432f6d9dd8fa6ee4e2fe73400",
+    "data/board/genesis-horizon.json": "0b6f9bac4199da9ec5dd071547802fdd9ca23515aad6e663185e2c02842ea5ea",
+    "data/cycles/cycle_01/primes/working-model.json": "76ea4c6e9c9f2fafb00d41a55eca5481eb7f65d0a3745dfdd80c4f6849059abb",
+    "data/cycles/cycle_01/utilities/overview.json": "ab6dcbd7ce2b735d36ab8b3a237554f89ed6e318026cafbb20ebff1a1b1359f3",
+    "data/game/match.json": "05c8b2b0e8ae7bde0c8c1bd722c9675f24b874f72a2c0e2adb94d595e82daca0",
+    "data/game/pass-04-runtime.json": "06bddad8e1a986abbf8e518d9db52b07665830407204227c00e0f6a88d7f720c",
+    "data/game/pass-05-runtime.json": "36442a7a4350d8ee73defc3d29361a1afe5810fd9c9a17d5dda6fbcb8bb0202d",
+    "data/manifests/current-files.json": "3ec5f2d230963806deadf95d99aab7a124a5ff9f148fa3e27289f6ce54f8bd83",
+    "design/cards/cycle_01/utilities/SYSTEM.md": "885b0144e66540ef3b6fcd8b2f4ec6bfa7f78c84c2dccf89ed0d2e2233a01006",
+    "design/game/board/SYSTEM.md": "6a8999ecc09a95d6d3cd7f502c1270493d9a1f4b9f1cbaa4952f88bdf9a6d986",
+    "design/game/match/SYSTEM.md": "0ce29a259004912255a2c4a401eae47bfcb9b0af65ded072cf77cba368751051",
+    "development/modules/core-game/HOST_RUNTIME_RISKS.json": "3820deddeac2401c65acab42b379f3860632f09ece0d3409a4412f2d9748eeea",
+    "development/modules/core-game/PASS_05_EXECUTION.md": "02da2aac302ae77e20c78fce1732f796e392487fd20a9ae13a6affcd5d158b54",
+    "development/modules/core-game/PASS_05_PROGRESS.json": "64fd230d0fee2ba30b7a2ae4ff88f53ec48bf39eb5603cdd69e5ef1bb963f68f",
+    "development/modules/core-game/PASS_05_RECEIPT.md": "2fb9d7e1cde956aa9dd06ee60a67761cfb389fcb2edd6189f581505ed8736be6",
+    "development/modules/core-game/README.md": "6626cf23f84a1b9459de5936a8ed79f84930e63dc6cf74485a1eb662ad634c32",
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/adapter.py": "506214e62be06ae521f8970ef0582ee7c80087778dde30c2d6a4491dfcb8f7ed",
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/collections.py": "1d4ab0b152cbb33c718bc2edf3ee68eece14d41f6e8987efc3f212cc6f84e130",
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/values.py": "75fbafac483391999ff5138314ed05f267721c4c830a456565a5b22d5bcfc598",
+    "game/core/raeon/application/README.md": "5385a97dcbfe91af4c2cffda1273d989814ee9be78428e606ae138118cdec896",
+    "game/core/raeon/application/adopt_pass05.gen": "3d8cba5efc30cd05635d851558f184ede8977540cd9a10c1d6ad465491e2cbff",
+    "game/core/raeon/application/advance_turn.gen": "18a41c78868ca3f8e5facb989c079d7861161cce6e6241d75645dceb5d863f8e",
+    "game/core/raeon/application/begin_turn.gen": "00309639475ad2681731063c985966ebb391ff1a1431d51e56fc5c49e7bf9106",
+    "game/core/raeon/application/defense_pass.gen": "05f4dd981859282691dc4450e2d2e6d2951d84f8319b965bd068bc0b73b3caff",
+    "game/core/raeon/application/defense_restore.gen": "9d9ccd81792ff1570b6bb824af5bea450057e709bd13221ef3fb48d9229508f8",
+    "game/core/raeon/application/effect_draw.gen": "774e1c5f4ae0811ca4a3b87591c9f7873c3f23cf9c647067bb75226ceaa0bb8d",
+    "game/core/raeon/application/end_active.gen": "0a11933fe8dbb3a1b923d339e8cee900bab43fb7fb6a26c0d064e9c782c16284",
+    "game/core/raeon/application/generate_charge.gen": "6ee5034620e072deae5129218372161e9a41eadb0001df69faa1425e32a509c1",
+    "game/core/raeon/application/manifest.json": "cfaae1587e6b2632b0e3f013a71225d7b83bf2fb8e59b782b45cb3b18204c9d7",
+    "game/core/raeon/application/normal_draw.gen": "46a0a243983df7b9baa200bd9227f82a8237ebf903eede80bf1711376e0aac3f",
+    "game/core/raeon/application/request_open_rule.gen": "916c96ece5492566d921366dd8d4d0026df95829b40a9294796e4536c2440dbc",
+    "game/core/raeon/application/setup_match.gen": "3d6fd843dfb7d975c5dce27440016f62d857fa05150e72bed3fa859ff48761cf",
+    "game/core/raeon/application/spend_charge.gen": "054103eb8d82ac45918d624962570273a0709b868c20bf86710d991ef7ac1c6d",
+    "game/core/raeon/application/use_compensation.gen": "8e2ee6548f5c51a8f3b73823490fc771015d6525dba450f5059909df473dc812",
+    "game/core/raeon/application/white_reactivate.gen": "5ac8562a18c8829e73e60ade55443b8f367352e8f69ef22bb8dc2c66c82f5273",
+    "game/match/README.md": "39f8a4b81bf6df92ff629cf1de5fde8c2f7b1e68312314845a63b305d6d82003",
+    "game/match/state.py": "0fd5883e6e998e74487ff6d6f406dfc5c18f2f92294ac260d06a1cd62197d210",
+    "game/primes/README.md": "2015edb40950113244778496ac289bbfdfe29b8b4ded86e9a39801fbf3f1095a",
+    "game/primes/nodes.py": "49dde1b918a69e024c439f260ba5e81246df9971c3bb396e7114e6183e29e57f",
+    "game/sandbox/topology.py": "8f4364c735b342cf54eaeb6380b73cb5976d586b95e35fecab7e35475f07543b",
+    "provenance/decisions/raeon-pass-05.json": "55dd525aa9cabb7edf8147c056cd272ccea5ac3852a4764e23b5c183f027ab68",
+    "provenance/imports/raeon-pass-05/RAEON_DIPLOMATIC_POUCH_PASS_05_2026-10-01.zip": "d0c8a763eb0a4901a118611742a8abfd0075227f4f0ad1b3bba4784eead8830a",
+    "provenance/imports/raeon-pass-05/entry.json": "9f9d997fcfc3a149cbfb64e36e466d99a59e662a98f67a59d914b6908d847b6a",
+    "provenance/imports/raeon-pass-05/handoff/00_EXECUTE_THIS_FIRST.md": "e27f4441695b0e69ed49fd47e435a86a349c68b211709655ec02acfa8c5dda40",
+    "provenance/imports/raeon-pass-05/handoff/CODEX_EXECUTION_PLAN.md": "cb424b40a0f4e2b855ca53ba31feedba6732a68b4667a857e808b21047df610a",
+    "provenance/imports/raeon-pass-05/handoff/CURRENT_STATE.json": "3e903a4468459e74a670e0cf6872984286f22552809e99f2f5387d978e922bf2",
+    "provenance/imports/raeon-pass-05/handoff/HAND_SETUP_DRAW_CONTRACT.md": "1d8b1b249c3e49b8cb54db8ffb3806c9ce4ed08c7beb7f9443a6fc22520c2494",
+    "provenance/imports/raeon-pass-05/handoff/MANIFEST.json": "a28a0c386914da05714cf657d0e74c440f545d87e569fe82b06d727ae382e0d9",
+    "provenance/imports/raeon-pass-05/handoff/OPEN_ITEMS.json": "d4164f70cd561541941f8295cedfb7ae38c5952eedf67d86f8b0a2066602fb42",
+    "provenance/imports/raeon-pass-05/handoff/PASS_05_ACCEPTANCE.json": "9de44af88f02edda36e7bb1604821793dfce3a790008014b5066a8c6a79bf4f8",
+    "provenance/imports/raeon-pass-05/handoff/PASS_05_RULES.json": "5ecd688be9f221851ed4f1ea56ce029e6179b8ca208d1549d24368aace7f6b88",
+    "provenance/imports/raeon-pass-05/handoff/PASS_05_RULES.md": "5902b7bc9e924157602adf4eca63e0f19597d15965be1d3e8a23363786db1e7f",
+    "provenance/imports/raeon-pass-05/handoff/PRIME_CHARGE_NODE_CONTRACT.md": "e85711d45d91ab032aab3bfe0027b3cf59d7add7a6dcdc757f0239eaf203eacc",
+    "provenance/imports/raeon-pass-05/handoff/README.md": "54ff38b0a14b1f76ad2fba9c64d77bb39a811bb17974417ab1a82ea0c881727f",
+    "provenance/imports/raeon-pass-05/handoff/SOURCE_ANCHORS.json": "fb3a2ee4a78f74be817e963ae102f83f853aa9da2901e840df7f5977ba7ee5ff",
+    "provenance/imports/raeon-pass-05/handoff/SUPERSESSION_LEDGER.json": "980b6bcf7f2c945a0bef104cf0e0d05ed8f267b2c0477a5b689f444fda601df7",
+    "provenance/imports/raeon-pass-05/handoff/TURN_AND_DEFENSE_CONTRACT.md": "e58d8e17bb660fc495b5ae3ce4b7ddaab8f1ac84da76f23899436a1eda8ef6a4",
+    "provenance/imports/raeon-pass-05/handoff/UTILITY_COST_CONTRACT.md": "124627814585452e2775dd5b1250cff5d9a5669d258b88b239d611dae3326df1",
+    "provenance/imports/raeon-pass-05/handoff/VERA_AUDIT_RUBRIC.md": "f69535e65199dda7eaa91710ec8b93d535112b6670641508a23a7dff656d40a4",
+    "provenance/imports/raeon-pass-05/handoff/VERIFY_POUCH.py": "d580ecbb75ffeee54778d1fc3607adf2ad8dd9f15c482550ce90bc0e2ac37a4b",
+    "provenance/imports/raeon-pass-05/handoff/VICTORY_AND_DECK_EXHAUSTION.md": "a4742bc5010ad93f0bb19f26046985118957feaae3a4658997819ebf609d88e2",
+    "tests/integration/genesis_horizon/fixtures/pass04-checkpoint.json": "6361a1820b5f1e7263aec9c28e0410983219d78d3d4318a90c78daf1d9b2b893",
+    "tests/integration/genesis_horizon/fixtures/pass04-checkpoint.zip": "e709e2bd1cd9f74209efc7510fa274f797690c118e00b416176cb59bf347318c",
+    "tests/integration/genesis_horizon/pass_05_support.py": "fd1b59ef940e778ec39a80ed283a37b0ab6da32bdf86967b3a8eb2160acbf158",
+    "tests/integration/genesis_horizon/test_pass_05.py": "28f53eceab230b089b0ad2469454b6d4aada141b02d85012c9a5cdea988b6c3e",
+    "tests/integration/genesis_horizon/test_pass_05_values.py": "3c8a29616c5de91a291e3a03367cb6136dc73d4b655c80851bc3cc320d325471",
+    "tests/regression/pass-05-contract.test.mjs": "95d45e4b39507991470621fe474fc2a78821dfb62e46f25496b2d7839a028d94",
+    "tools/genesis_runtime.py": "c9674b44df3d83f2d7ab086b57d4b1df3d2bc0d16e3b41b0a08d3ffaae8241df",
+    "tools/genesis_runtime_acceptance.py": "1283d6cdd1383ad6afbbd44a1529010426cf2d8b5c85d904b2f98e5a6ca4404b",
+    "tools/genesis_runtime_distribution.py": "0c9d8b91ab25f8a80251051bf4a021032df7e7ab3665386bf46179096ac0cba1",
+    "tools/genesis_runtime_pass02.py": "2654e441aea89e053cdf9ca44f7eb7da07e4841856673a0eb3a92f88bc76fbe4",
+    "tools/genesis_runtime_pass03.py": "e5cf55c92ad64219c9e58c87b56ba3f7822a7cd677c96b9fae25f55042d51a0b",
+    "tools/genesis_runtime_pass03b.py": "19397b319fc76f61ebc7006faba6b9451b65994267fc6a5f9236f20e12673829",
+    "tools/genesis_runtime_pass04.py": "dafbbbce882537b39e6a00b33425fffd97cba9052fb32507e691193d46078acf",
+    "tools/genesis_runtime_pass05.py": "2999b056c7b7bee641c6fa3b949a7de6fac339915f52b4a5df3e57bd6d2051d8",
+    "tools/validators/game-definition-contract.mjs": "19797a64833281fe5c77d8372acccf93ec86dc1034f4ee47dab3694ebd3f0f94",
+    "tools/validators/genesis-runtime-contract.mjs": "3cdac36ff046d90458df8c52dbf1f80f3a95d36de59128188fe77fe266377b96",
+    "tools/validators/pass-04-contract.mjs": "7f60acb6780a8e64e069754f305acf714317495d862193ae4c75ba9009ed9c21",
+    "tools/validators/pass-05-contract.mjs": "88ab38c91e374a94eb62d07d90f5ecc4b6a83a1716fe397b93d9970505fa6584"
+  },
+  "test_totals": {
+    "local_unit": 6,
+    "local_integration": 136,
+    "upstream": 575,
+    "repository_regressions": 252,
+    "gameplay_specifications": 17,
+    "offline_unit": 6,
+    "offline_integration": 136,
+    "native_base_manifold_scenes_nested_in_integration": 60
+  }
 }
