@@ -468,6 +468,10 @@ class Mechanics:
             count=sum(self.s.b.resources[r]['payload']['source']==hand and self.s.b.resources[r]['payload']['target']==obj['id'] and
                       self.s.b.resources[r]['payload']['relation']=='contains' for r in self.s.b.relations)
             if count!=int(not obj['consumed']):reject()
+        self.validate_terminal()
+        self.validate_defense()
+
+    def validate_terminal(self):
         losers=self.losers()
         if len(losers)>1 or (losers and self.state['status']!='MATCH_COMPLETE'):reject()
         if self.state['status']=='MATCH_COMPLETE':
@@ -475,7 +479,9 @@ class Mechanics:
             values=[p for p in self.c.state['primes'].values() if self.c.owner(p)==loser]
             if losers!=[loser] or len(values)!=3 or not all(p['H']==0 for p in values) or self.state['winner']!=opponent(loser) or self.defense_open:reject()
         elif self.state['phase']!='SETUP':
-            if self.c.state['active_player'] not in PLAYERS or self.state['first_player'] not in PLAYERS or not obj:reject()
+            if self.c.state['active_player'] not in PLAYERS or self.state['first_player'] not in PLAYERS or not self.state['compensation']:reject()
+
+    def validate_defense(self):
         if self.defense_open:
             d=self.state['defense']; target=self.c.state['primes'].get(d['target']) or self.t.state['fields'].get(d['target'])
             if not target or self.state['phase']!='ACTIVE' or self.c.owner(target)!=d['owner'] or d['owner']==self.c.state['active_player'] or d['options']!=self.legal_options(d['target']):reject()

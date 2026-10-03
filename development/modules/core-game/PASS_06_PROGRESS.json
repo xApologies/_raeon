@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "IN_PROGRESS",
+  "starting_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+  "branch": "codex/raeon-pass-06",
+  "acceptance": "NOT_YET_COMPLETE",
+  "HOST-RUNTIME-001": "OPEN_QUALIFIED",
+  "whole_game_phase": "PREPRODUCTION"
+}

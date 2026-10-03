@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "hard_rule": "DO_NOT_INVENT",
+  "open": [
+    {
+      "id": "P6-OPEN-001",
+      "topic": "compensation final name/id/flavor"
+    },
+    {
+      "id": "P6-OPEN-002",
+      "topic": "Selection remainder ordering"
+    },
+    {
+      "id": "P6-OPEN-003",
+      "topic": "Activation Utility rank differentiation/eligibility"
+    },
+    {
+      "id": "P6-OPEN-004",
+      "topic": "temporary Configuration Space expiry/destruction"
+    },
+    {
+      "id": "P6-OPEN-005",
+      "topic": "Stability/Protection rank/magnitude/duration/timing"
+    },
+    {
+      "id": "P6-OPEN-006",
+      "topic": "recursive fusion/emergence"
+    },
+    {
+      "id": "P6-OPEN-007",
+      "topic": "derived additions/splitting"
+    },
+    {
+      "id": "P6-OPEN-008",
+      "topic": "derived/emergent production cadence"
+    },
+    {
+      "id": "P6-OPEN-009",
+      "topic": "native graphics/presentation"
+    },
+    {
+      "id": "P6-OPEN-010",
+      "topic": "HOST-RUNTIME-001 OPEN_QUALIFIED"
+    },
+    {
+      "id": "P6-OPEN-011",
+      "topic": "final Utility names/flavor/IDs"
+    },
+    {
+      "id": "P6-OPEN-012",
+      "topic": "balance tuning after Pass-07 telemetry"
+    }
+  ]
+}

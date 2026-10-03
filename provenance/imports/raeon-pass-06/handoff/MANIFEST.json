@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "pouch": "RAEON_DIPLOMATIC_POUCH_PASS_06_2026-10-03",
+  "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+  "target_branch": "codex/raeon-pass-06",
+  "acceptance_case_count": 108,
+  "payloads": {
+    "CODEX_HANDOFF_PROMPT.md": {
+      "bytes": 3641,
+      "sha256": "b0ba178db3ba10c52a6ae910e3638f1bfc146e7b3b081a51b33e08b98e2b87f3"
+    },
+    "CONFIGURATION_SCOPE.md": {
+      "bytes": 425,
+      "sha256": "ac36bb609201e5a2bf0275642c7860c717e64ea7c27461656fe1c31ac0e838b7"
+    },
+    "MATCH_LIFECYCLE_CONTRACT.md": {
+      "bytes": 664,
+      "sha256": "b328809b6b26e2c80ec423147abf84fe9fa3d87b2f4ca7c2094284f104d0abdc"
+    },
+    "OPEN_ITEMS.json": {
+      "bytes": 1196,
+      "sha256": "0beeeda0c29d4ab504c0c434f7583929d81b48ee7459e98163786a899a182f82"
+    },
+    "PASS_06_ACCEPTANCE.json": {
+      "bytes": 15376,
+      "sha256": "60ecb7f5d6234acf8477ef44701df421bf1a7923e4f5d1bfb7dc19cbb61cce22"
+    },
+    "PASS_06_RULES.json": {
+      "bytes": 2192,
+      "sha256": "8361d32a3731b40e618e15c2356ca141f9432a88b7bd276c00a11e34c9eff33b"
+    },
+    "README.md": {
+      "bytes": 390,
+      "sha256": "e45f88c010ce4b862ac5b5dc6c90ac130de9b804a77464b99a1be92a5b6732ac"
+    },
+    "UTILITY_RUNTIME_CONTRACT.md": {
+      "bytes": 1128,
+      "sha256": "12653914a25354418e9d890b454bcbd9a25b78267af18433d60f0044d51de704"
+    },
+    "VERA_AUDIT_RUBRIC.md": {
+      "bytes": 455,
+      "sha256": "e6fb84c5fdb71e27f98822af27c748d9a6336cefbe45155e95b870cc8cd4e90f"
+    },
+    "VERIFY_POUCH.py": {
+      "bytes": 724,
+      "sha256": "6997844a638e2946b9ba0b4879b6ceb0faf05f5859cda91c5e1d73e494dac201"
+    }
+  }
+}

@@ -40,7 +40,8 @@ class Extension:
         self.corpus = modules['corpus'].Corpus(service.h.root)
         self.realization = modules['realization'].Realization(service.h.root, self.corpus)
         self.color = modules['color'].Mechanics(self)
-        self.tempo = modules['tempo'].Mechanics(self, modules['nodes'])
+        self.tempo = (modules['closure'].bind(modules['tempo']).Mechanics(self, modules['nodes'])
+                      if 'closure' in modules else modules['tempo'].Mechanics(self, modules['nodes']))
 
     @property
     def state(self):
@@ -86,6 +87,10 @@ class Extension:
             space = self.state['spaces'].setdefault(name, {'members': [], 'membership_revision': 0,
                 'pose_revision': 0, 'active_field': None, 'lifecycle': 'EMPTY', 'capture': None})
             if space['members'] != collection['members']:
+                added = set(collection['members'])-set(space['members'])
+                if (added and space['active_field'] and not space.get('derived') and
+                        getattr(self.tempo, 'current', False) and self.s.context['intent']['operation']=='COMMIT_FG'):
+                    self.reopen(name, space)
                 # No new capacity/addition policy for derived or subsumed spaces.
                 if space['lifecycle'] == 'SUBSUMED' or (set(collection['members'])-set(space['members']) and
                         (space['active_field'] or space.get('derived'))):
@@ -126,7 +131,7 @@ class Extension:
         self.corpus.verify()
         self.realization.verify()
         args = self.s.context['arguments']
-        if spec.get('abi') == self.tempo.contract['abi']:
+        if spec.get('abi') in (self.tempo.contract['abi'], getattr(self.tempo, 'next_abi', None)):
             return self.tempo.admission(spec)
         if spec.get('abi') == self.color.state['abi']:
             return self.color.admission(spec)
@@ -264,8 +269,21 @@ class Extension:
     def route_allowed(self, name, source, target):
         return self.color.route_allowed(name,source,target)
 
+    def reopen(self, name, space):
+        for identity in space['members']:
+            successor=self.round_trip(identity,name)
+            self.s.state['cards'][identity]['history'].append({'from':name,'to':name,
+                'reason':'reopen','version':successor['payload']['native']['instance_id']})
+            value=self.state['poses'][identity]['value']
+            if value and 'symbolic' in value:
+                # Keep canonical coordinates but relinquish the live lock.
+                value.pop('symbolic');value['mapping_status']='REALIZED'
+                self.state['poses'][identity]['revision']+=1
+        self.deactivate(space)
+        space['pose_revision']+=1
+
     def transform(self, plan):
-        if plan['spec'].get('abi') == self.tempo.contract['abi']:
+        if plan['spec'].get('abi') in (self.tempo.contract['abi'], getattr(self.tempo, 'next_abi', None)):
             return self.tempo.transform(plan)
         if plan['spec'].get('abi') == self.color.state['abi']:
             return self.color.transform(plan)
@@ -280,17 +298,7 @@ class Extension:
                 self.s.h._fault('after_pose')
             space['pose_revision']+=1
         elif op=='reopen':
-            for identity in space['members']:
-                successor=self.round_trip(identity,name)
-                self.s.state['cards'][identity]['history'].append({'from':name,'to':name,
-                    'reason':'reopen','version':successor['payload']['native']['instance_id']})
-                value=self.state['poses'][identity]['value']
-                if value and 'symbolic' in value:
-                    # Keep canonical coordinates but relinquish the live lock.
-                    value.pop('symbolic');value['mapping_status']='REALIZED'
-                    self.state['poses'][identity]['revision']+=1
-            self.deactivate(space)
-            space['pose_revision']+=1
+            self.reopen(name, space)
         elif op=='resolve':
             if plan['dependency']!=self.query(name)['dependency']:reject()
             proof=plan['realization']

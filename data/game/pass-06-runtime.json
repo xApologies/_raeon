@@ -1,0 +1,2613 @@
+{
+  "schema_version": 1,
+  "abi": "raeon-headless-closure-v1",
+  "accepted_rules": {
+    "schema_version": 1,
+    "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+    "title": "Headless Gameplay Closure",
+    "baseline": {
+      "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+      "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+      "target_branch": "codex/raeon-pass-06",
+      "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+    },
+    "mulligan": {
+      "opportunities": 1,
+      "select": "0..7",
+      "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+      "penalty": 0,
+      "repeat": false
+    },
+    "hand": {
+      "max": 10,
+      "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+    },
+    "compensation": {
+      "window": "SECOND_PLAYER_OWN_ACTIVE",
+      "single_use": true,
+      "draw": 1,
+      "cost": 0,
+      "name_id_flavor": "OPEN"
+    },
+    "simultaneous_terminal": "DRAW",
+    "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+    "exhaustion": {
+      "stages": [
+        [
+          "RED",
+          1
+        ],
+        [
+          "ORANGE",
+          2
+        ],
+        [
+          "YELLOW",
+          3
+        ],
+        [
+          "GREEN",
+          4
+        ],
+        [
+          "BLUE",
+          5
+        ],
+        [
+          "VIOLET",
+          6
+        ],
+        [
+          "WHITE",
+          7
+        ]
+      ],
+      "stage_8_plus": [
+        "WHITE",
+        7
+      ],
+      "slots": [
+        "A",
+        "B",
+        "C"
+      ],
+      "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+      "defense": true
+    },
+    "utilities": {
+      "runtime": {
+        "transduction": 18,
+        "draw_deck": 7,
+        "graveyard_recovery": 6,
+        "white_restore_prime": 1
+      },
+      "runtime_total": 32,
+      "reserved": {
+        "activation": 7,
+        "sandbox_activation": 6,
+        "stability_protection": 6
+      },
+      "reserved_total": 19,
+      "structural_total": 51,
+      "generic_cost": 0
+    },
+    "configuration": {
+      "ordinary": [
+        "EMPTY",
+        "CONFIGURING",
+        "RESOLVED"
+      ],
+      "advanced_open": [
+        "temporary expiry/destruction",
+        "derived additions/splitting",
+        "recursive fusion/emergence",
+        "derived/emergent production cadence"
+      ]
+    },
+    "whole_game": "PREPRODUCTION",
+    "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+  },
+  "rules": {
+    "opening_draw": 7,
+    "hand_maximum": 10,
+    "normal_draw": 1,
+    "constructed_deck": 60,
+    "mulligan_enabled": true,
+    "mulligan_procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+    "hand_overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER",
+    "first_player": "TRUSTED_FAIR_BINARY_OUTCOME",
+    "first_player_prng": "OPEN",
+    "compensation": {
+      "count": 1,
+      "ordinary_deck_card": false,
+      "occupies_hand": true,
+      "draw": 1,
+      "single_use": true,
+      "resource_cost": 0,
+      "identity_name_flavor": "OPEN",
+      "timing": "OWN_ACTIVE"
+    },
+    "phases": [
+      "REFRESH",
+      "DRAW",
+      "ACTIVE",
+      "END"
+    ],
+    "refresh": "OWN_TURN_BEGINNING_ONLY",
+    "end_or_switch_refresh": false,
+    "refresh_heals": false,
+    "refresh_changes_topology": false,
+    "charge": {
+      "storage": [
+        "H",
+        "N",
+        "R"
+      ],
+      "quantity": "Q=N*rank+R",
+      "health_maximum": "native_rank",
+      "node_cap": null,
+      "restore_order": [
+        "H",
+        "Q"
+      ],
+      "degrade_order": [
+        "Q",
+        "H"
+      ],
+      "migration": "N=C//rank; R=C%rank",
+      "self_restore": false,
+      "white_reactivation": [
+        1,
+        0,
+        0
+      ]
+    },
+    "defense": {
+      "order": [
+        "DEGRADE",
+        "CONSEQUENCES",
+        "TERMINAL_CHECK",
+        "LEGAL_OPTIONS",
+        "ONE_RESTORE_OR_PASS"
+      ],
+      "target": "JUST_DEGRADED_SURVIVING_OBJECT",
+      "seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+      "timeout": "EXPLICIT_PASS_EVENT",
+      "field_assisted_response": "ONE_ATOMIC_RESPONSE",
+      "degrade_source_allowed": false
+    },
+    "utility": {
+      "generic_resource_cost": 0,
+      "requires": [
+        "HAND_SOURCE",
+        "ADMITTED_TIMING",
+        "TARGET",
+        "MATHEMATICS",
+        "EFFECT"
+      ],
+      "generic_timing": "OWN_ACTIVE",
+      "generic_disposition": "UNSUPPLIED"
+    },
+    "loss": "ALL_THREE_OWNED_BOUND_PRIMES_INACTIVE",
+    "terminal_before_defense": true,
+    "post_terminal_gameplay": false,
+    "simultaneous_terminal": "DRAW",
+    "exhaustion": [
+      [
+        "RED",
+        1
+      ],
+      [
+        "ORANGE",
+        2
+      ],
+      [
+        "YELLOW",
+        3
+      ],
+      [
+        "GREEN",
+        4
+      ],
+      [
+        "BLUE",
+        5
+      ],
+      [
+        "VIOLET",
+        6
+      ],
+      [
+        "WHITE",
+        7
+      ]
+    ],
+    "exhaustion_target": "A_UNTIL_INACTIVE_THEN_B_THEN_C",
+    "exhaustion_stage_7_plus": "WHITE_7",
+    "exhaustion_applies_damage": true
+  },
+  "utilities": {
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/restore/0": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 1,
+        "directions": [
+          "RESTORE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "75db6071afcf03f8530b7a6c606ed19925b271022939ff714ed4258ad244f86e"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/restore/1": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 2,
+        "directions": [
+          "RESTORE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "7699c2677aa68cda0e8089625fa6dad2faa0c8bf2695e41bd0fe0a18854ff024"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/restore/2": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 3,
+        "directions": [
+          "RESTORE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "7e8b2e7c156d4c4721e129db7e79b6ef294f4d5111406921a39bbf529c45d7f5"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/restore/3": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 4,
+        "directions": [
+          "RESTORE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "32bbfe7169306a16af5bf4e532e48ac21756b0267edc48d4d50ede80b8a3f5cc"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/restore/4": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 5,
+        "directions": [
+          "RESTORE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "9182f23117166808d1d1a8b26a62938302a28b3d5c1b24154e3860eba4f04812"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/restore/5": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 6,
+        "directions": [
+          "RESTORE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "aac2aa22dcd62207a6ce14abfbbb2589a7959586d05451eae8ffe0904b8fa282"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/degrade/0": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 1,
+        "directions": [
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "4d91d05086bc26a43451db48878327dc8638388f797813638db6d2a81fcf0a91"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/degrade/1": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 2,
+        "directions": [
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "408c015111df1b8f432f5c947b554a1c9a215feda4d9ddf103b199e29a250610"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/degrade/2": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 3,
+        "directions": [
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "5b3e18e74dac71a718cc6fe3185ea7edb9643b90608319ce9a6ac5a7eee44662"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/degrade/3": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 4,
+        "directions": [
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "b0b892cd92286164d08916de75a3214dae460d32cc0691e36760a6f385543630"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/degrade/4": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 5,
+        "directions": [
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "433de21420d6564004b3692ebff8d5028e1b2472ab8f0a7f9ae8b436cd117ca8"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/degrade/5": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 6,
+        "directions": [
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "33d0b8dacbaa9f07973f5d5672bb3fb2886dc038c6cd63cdee517e058b670d5b"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/universal/0": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 1,
+        "directions": [
+          "RESTORE",
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "849081dc86ee5e9194d8582ba5139d4d02c1289133df0bb109fc6f6213d1f64a"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/universal/1": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 2,
+        "directions": [
+          "RESTORE",
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "7eff7dd631fe390222e2500cf05783582b084ea6854db1352d8ae95429a4248a"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/universal/2": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 3,
+        "directions": [
+          "RESTORE",
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "8ef164d71f2195dfd7a8d7072378366bb2e39592a8dbd32330ff761b47323a4a"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/universal/3": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 4,
+        "directions": [
+          "RESTORE",
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "2ccfbdd69945bafac58aa6df7adf1d11d35d01a78186cacd91ae282c7fddfce9"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/universal/4": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 5,
+        "directions": [
+          "RESTORE",
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "d0fcaa9034496f880b03382894c523b67498ab41d06fa1816b5430c4855dc420"
+    },
+    "source:data/cycles/cycle_01/utilities/transduction.json#/values/universal/5": {
+      "family": "transduction",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "transduction",
+        "magnitude": 6,
+        "directions": [
+          "RESTORE",
+          "DEGRADE"
+        ],
+        "choice_time": "resolution"
+      },
+      "source": "data/cycles/cycle_01/utilities/transduction.json",
+      "source_sha256": "fa13709db489578a18e5f9438364ddf662b18df922bbbcae9d0e96036ee4b080",
+      "record_sha256": "5d806893bc06dad5f197aee7781c1fa5a73bfa2950df709a1b8d9fa0fc22f766"
+    },
+    "source:data/cycles/cycle_01/utilities/activation.json#/values/ranks/0": {
+      "family": "activation",
+      "admission": "RESERVED",
+      "effect": {},
+      "source": "data/cycles/cycle_01/utilities/activation.json",
+      "source_sha256": "e5f81218ce7a96598675a9d41c7b614d0c465a09efb322a1c58ea97f681a807f",
+      "record_sha256": "16e79cb27d1acbcda77da120423a313f29c000f570758c95be6aea264e2ca60d"
+    },
+    "source:data/cycles/cycle_01/utilities/activation.json#/values/ranks/1": {
+      "family": "activation",
+      "admission": "RESERVED",
+      "effect": {},
+      "source": "data/cycles/cycle_01/utilities/activation.json",
+      "source_sha256": "e5f81218ce7a96598675a9d41c7b614d0c465a09efb322a1c58ea97f681a807f",
+      "record_sha256": "c0791affd499286958457d3494b695be868f28bd7b588da06ea54872111820d9"
+    },
+    "source:data/cycles/cycle_01/utilities/activation.json#/values/ranks/2": {
+      "family": "activation",
+      "admission": "RESERVED",
+      "effect": {},
+      "source": "data/cycles/cycle_01/utilities/activation.json",
+      "source_sha256": "e5f81218ce7a96598675a9d41c7b614d0c465a09efb322a1c58ea97f681a807f",
+      "record_sha256": "205c1562679017d637268d76555c84920581471d335e58ca531ff553390271e7"
+    },
+    "source:data/cycles/cycle_01/utilities/activation.json#/values/ranks/3": {
+      "family": "activation",
+      "admission": "RESERVED",
+      "effect": {},
+      "source": "data/cycles/cycle_01/utilities/activation.json",
+      "source_sha256": "e5f81218ce7a96598675a9d41c7b614d0c465a09efb322a1c58ea97f681a807f",
+      "record_sha256": "02ac55d109715929995782bc57f42f7408550b371f3b6291cdaac1d33a76df4c"
+    },
+    "source:data/cycles/cycle_01/utilities/activation.json#/values/ranks/4": {
+      "family": "activation",
+      "admission": "RESERVED",
+      "effect": {},
+      "source": "data/cycles/cycle_01/utilities/activation.json",
+      "source_sha256": "e5f81218ce7a96598675a9d41c7b614d0c465a09efb322a1c58ea97f681a807f",
+      "record_sha256": "8556e70474c7700ba044362a8636c07e33c4ccff2b3f485bd394a12d93a00fb2"
+    },
+    "source:data/cycles/cycle_01/utilities/activation.json#/values/ranks/5": {
+      "family": "activation",
+      "admission": "RESERVED",
+      "effect": {},
+      "source": "data/cycles/cycle_01/utilities/activation.json",
+      "source_sha256": "e5f81218ce7a96598675a9d41c7b614d0c465a09efb322a1c58ea97f681a807f",
+      "record_sha256": "e8100355436d3c31cb74b361c6950abf7d9da321a41195f23f53ce704568583c"
+    },
+    "source:data/cycles/cycle_01/utilities/activation.json#/values/ranks/6": {
+      "family": "activation",
+      "admission": "RESERVED",
+      "effect": {},
+      "source": "data/cycles/cycle_01/utilities/activation.json",
+      "source_sha256": "e5f81218ce7a96598675a9d41c7b614d0c465a09efb322a1c58ea97f681a807f",
+      "record_sha256": "44866e4d8a839726873d7d7240dda6d125c8de35f798c01edd42a70a233fb6c2"
+    },
+    "source:data/cycles/cycle_01/utilities/sandbox_activation.json#/values/ranks/0": {
+      "family": "sandbox_activation",
+      "admission": "RESERVED",
+      "effect": {},
+      "source": "data/cycles/cycle_01/utilities/sandbox_activation.json",
+      "source_sha256": "0a1049420e6d5d1f7bf98be13b76df60833db1e13c6e44a2244f6f44e4bb8c45",
+      "record_sha256": "16e79cb27d1acbcda77da120423a313f29c000f570758c95be6aea264e2ca60d"
+    },
+    "source:data/cycles/cycle_01/utilities/sandbox_activation.json#/values/ranks/1": {
+      "family": "sandbox_activation",
+      "admission": "RESERVED",
+      "effect": {},
+      "source": "data/cycles/cycle_01/utilities/sandbox_activation.json",
+      "source_sha256": "0a1049420e6d5d1f7bf98be13b76df60833db1e13c6e44a2244f6f44e4bb8c45",
+      "record_sha256": "c0791affd499286958457d3494b695be868f28bd7b588da06ea54872111820d9"
+    },
+    "source:data/cycles/cycle_01/utilities/sandbox_activation.json#/values/ranks/2": {
+      "family": "sandbox_activation",
+      "admission": "RESERVED",
+      "effect": {},
+      "source": "data/cycles/cycle_01/utilities/sandbox_activation.json",
+      "source_sha256": "0a1049420e6d5d1f7bf98be13b76df60833db1e13c6e44a2244f6f44e4bb8c45",
+      "record_sha256": "205c1562679017d637268d76555c84920581471d335e58ca531ff553390271e7"
+    },
+    "source:data/cycles/cycle_01/utilities/sandbox_activation.json#/values/ranks/3": {
+      "family": "sandbox_activation",
+      "admission": "RESERVED",
+      "effect": {},
+      "source": "data/cycles/cycle_01/utilities/sandbox_activation.json",
+      "source_sha256": "0a1049420e6d5d1f7bf98be13b76df60833db1e13c6e44a2244f6f44e4bb8c45",
+      "record_sha256": "02ac55d109715929995782bc57f42f7408550b371f3b6291cdaac1d33a76df4c"
+    },
+    "source:data/cycles/cycle_01/utilities/sandbox_activation.json#/values/ranks/4": {
+      "family": "sandbox_activation",
+      "admission": "RESERVED",
+      "effect": {},
+      "source": "data/cycles/cycle_01/utilities/sandbox_activation.json",
+      "source_sha256": "0a1049420e6d5d1f7bf98be13b76df60833db1e13c6e44a2244f6f44e4bb8c45",
+      "record_sha256": "8556e70474c7700ba044362a8636c07e33c4ccff2b3f485bd394a12d93a00fb2"
+    },
+    "source:data/cycles/cycle_01/utilities/sandbox_activation.json#/values/ranks/5": {
+      "family": "sandbox_activation",
+      "admission": "RESERVED",
+      "effect": {},
+      "source": "data/cycles/cycle_01/utilities/sandbox_activation.json",
+      "source_sha256": "0a1049420e6d5d1f7bf98be13b76df60833db1e13c6e44a2244f6f44e4bb8c45",
+      "record_sha256": "e8100355436d3c31cb74b361c6950abf7d9da321a41195f23f53ce704568583c"
+    },
+    "source:data/cycles/cycle_01/utilities/draw_deck.json#/values/slots/0": {
+      "family": "draw_deck",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "draw",
+        "count": 1
+      },
+      "source": "data/cycles/cycle_01/utilities/draw_deck.json",
+      "source_sha256": "7eb07dd1d1612a3db63c2ba254c8689501f3334a5394d32b619c6cd4c066acb8",
+      "record_sha256": "36a44c69caeec597c7a28127f1b70f92082b007c4293fcbb3b19309749b225d1"
+    },
+    "source:data/cycles/cycle_01/utilities/draw_deck.json#/values/slots/1": {
+      "family": "draw_deck",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "draw",
+        "count": 2
+      },
+      "source": "data/cycles/cycle_01/utilities/draw_deck.json",
+      "source_sha256": "7eb07dd1d1612a3db63c2ba254c8689501f3334a5394d32b619c6cd4c066acb8",
+      "record_sha256": "70baf360fd9cf4efcac5a393a5c72b45a61f26c3da541eacef3e21394921469f"
+    },
+    "source:data/cycles/cycle_01/utilities/draw_deck.json#/values/slots/2": {
+      "family": "draw_deck",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "draw",
+        "count": 3
+      },
+      "source": "data/cycles/cycle_01/utilities/draw_deck.json",
+      "source_sha256": "7eb07dd1d1612a3db63c2ba254c8689501f3334a5394d32b619c6cd4c066acb8",
+      "record_sha256": "7bcf89778528ed694f43d5341d0ba0265fdd1626c1198cc6a3d1c3e1e24c3d7c"
+    },
+    "source:data/cycles/cycle_01/utilities/draw_deck.json#/values/slots/3": {
+      "family": "draw_deck",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "survey",
+        "look_top": 3,
+        "return_to": "deck top",
+        "order": "any",
+        "direct_card_advantage": 0
+      },
+      "source": "data/cycles/cycle_01/utilities/draw_deck.json",
+      "source_sha256": "7eb07dd1d1612a3db63c2ba254c8689501f3334a5394d32b619c6cd4c066acb8",
+      "record_sha256": "f9fd7c79e98f03ce9c9ed3120b2cb09067a0e7acf8245e06cedcdde5919daea6"
+    },
+    "source:data/cycles/cycle_01/utilities/draw_deck.json#/values/slots/4": {
+      "family": "draw_deck",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "select",
+        "look_top": 3,
+        "take_to_hand": 1,
+        "remainder_to": "deck bottom",
+        "remainder_order": "OPEN"
+      },
+      "source": "data/cycles/cycle_01/utilities/draw_deck.json",
+      "source_sha256": "7eb07dd1d1612a3db63c2ba254c8689501f3334a5394d32b619c6cd4c066acb8",
+      "record_sha256": "7c045ed2e701480b7e6a873de77bfa3aa26e0c677a56277489c0c17bfdf73db0"
+    },
+    "source:data/cycles/cycle_01/utilities/draw_deck.json#/values/slots/5": {
+      "family": "draw_deck",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "exchange",
+        "discard_from": "hand",
+        "discard_count": "any number",
+        "draw_count": "same number discarded",
+        "net_hand_count_change": 0,
+        "interacts_with_recovery": true
+      },
+      "source": "data/cycles/cycle_01/utilities/draw_deck.json",
+      "source_sha256": "7eb07dd1d1612a3db63c2ba254c8689501f3334a5394d32b619c6cd4c066acb8",
+      "record_sha256": "6cd5d0ac6774a8a14c153cb15fd1115c08c3f7ff9bb6c5d8e607fe1e97b56c8d"
+    },
+    "source:data/cycles/cycle_01/utilities/draw_deck.json#/values/slots/6": {
+      "family": "draw_deck",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "deep_survey",
+        "look_top": 7,
+        "take_to_hand": 1,
+        "remainder": "shuffle back into deck",
+        "unrestricted_exact_card_tutor": false
+      },
+      "source": "data/cycles/cycle_01/utilities/draw_deck.json",
+      "source_sha256": "7eb07dd1d1612a3db63c2ba254c8689501f3334a5394d32b619c6cd4c066acb8",
+      "record_sha256": "53b64dd4fa76ee9d3c48e56183e797caeb194eaaf8deeeb3ff954273634f77a4"
+    },
+    "source:data/cycles/cycle_01/utilities/recovery.json#/values/slots/0": {
+      "family": "graveyard_recovery",
+      "admission": "MATURE",
+      "effect": {
+        "card_type": "Field Generator",
+        "count": 1,
+        "destination": "hand",
+        "operation": "recover"
+      },
+      "source": "data/cycles/cycle_01/utilities/recovery.json",
+      "source_sha256": "278c81d300eb62b9db1d89eaa8a8accd5f4eefa5c67e25b7c48fe1134e4714e8",
+      "record_sha256": "f784c03f6b2df1a59ba5c0b497ea902e8f60284fa8b333ac951c3e065dc00872"
+    },
+    "source:data/cycles/cycle_01/utilities/recovery.json#/values/slots/1": {
+      "family": "graveyard_recovery",
+      "admission": "MATURE",
+      "effect": {
+        "card_type": "Field Generator",
+        "count": 2,
+        "destination": "hand",
+        "operation": "recover"
+      },
+      "source": "data/cycles/cycle_01/utilities/recovery.json",
+      "source_sha256": "278c81d300eb62b9db1d89eaa8a8accd5f4eefa5c67e25b7c48fe1134e4714e8",
+      "record_sha256": "bdd7f3f583853d435f1c109395412bb62d7644a335a824932f44891146a2286c"
+    },
+    "source:data/cycles/cycle_01/utilities/recovery.json#/values/slots/2": {
+      "family": "graveyard_recovery",
+      "admission": "MATURE",
+      "effect": {
+        "card_type": "Field Generator",
+        "count": 3,
+        "destination": "hand",
+        "operation": "recover"
+      },
+      "source": "data/cycles/cycle_01/utilities/recovery.json",
+      "source_sha256": "278c81d300eb62b9db1d89eaa8a8accd5f4eefa5c67e25b7c48fe1134e4714e8",
+      "record_sha256": "55e9922a8c5c3f9fda3b40c52cd560173ce91218dca591a3158a80a8dbdd1518"
+    },
+    "source:data/cycles/cycle_01/utilities/recovery.json#/values/slots/3": {
+      "family": "graveyard_recovery",
+      "admission": "MATURE",
+      "effect": {
+        "card_type": "Utility",
+        "count": 1,
+        "destination": "hand",
+        "operation": "recover"
+      },
+      "source": "data/cycles/cycle_01/utilities/recovery.json",
+      "source_sha256": "278c81d300eb62b9db1d89eaa8a8accd5f4eefa5c67e25b7c48fe1134e4714e8",
+      "record_sha256": "e7a124f8c3b9828452eaa8fe0cb2cb1337bbf64c2eb79e42f987f7925af10856"
+    },
+    "source:data/cycles/cycle_01/utilities/recovery.json#/values/slots/4": {
+      "family": "graveyard_recovery",
+      "admission": "MATURE",
+      "effect": {
+        "card_type": "non-Prime",
+        "count": 1,
+        "destination": "hand",
+        "operation": "recover"
+      },
+      "source": "data/cycles/cycle_01/utilities/recovery.json",
+      "source_sha256": "278c81d300eb62b9db1d89eaa8a8accd5f4eefa5c67e25b7c48fe1134e4714e8",
+      "record_sha256": "2ce34f625108a96f191e90147762e0cea5ce1c84dde4ac17034b92c44af7a092"
+    },
+    "source:data/cycles/cycle_01/utilities/recovery.json#/values/slots/5": {
+      "family": "graveyard_recovery",
+      "admission": "MATURE",
+      "effect": {
+        "card_type": "non-Prime",
+        "maximum_count": 3,
+        "destination": "deck top",
+        "order": "any chosen",
+        "operation": "recover"
+      },
+      "source": "data/cycles/cycle_01/utilities/recovery.json",
+      "source_sha256": "278c81d300eb62b9db1d89eaa8a8accd5f4eefa5c67e25b7c48fe1134e4714e8",
+      "record_sha256": "e7c67f0dcb9aff19feaa1768696a4acd7bcf23d773a2c5502bea87ce536e4dac"
+    },
+    "source:data/cycles/cycle_01/utilities/stability.json#/values/slots/0": {
+      "family": "stability",
+      "admission": "RESERVED",
+      "effect": {
+        "operation": "absorb_next_degradation",
+        "amount": "OPEN"
+      },
+      "source": "data/cycles/cycle_01/utilities/stability.json",
+      "source_sha256": "ecd3d9a9fef1d121e3c67a64e4eb6493b4146558acb22102389ac97c6c83b163",
+      "record_sha256": "bdbe83838270893950be70c6ad67b4a45ecbee971eab574b706458ba6e8f9a7f"
+    },
+    "source:data/cycles/cycle_01/utilities/stability.json#/values/slots/1": {
+      "family": "stability",
+      "admission": "RESERVED",
+      "effect": {
+        "operation": "protect_next_eligible_degradation",
+        "object": "one Prime"
+      },
+      "source": "data/cycles/cycle_01/utilities/stability.json",
+      "source_sha256": "ecd3d9a9fef1d121e3c67a64e4eb6493b4146558acb22102389ac97c6c83b163",
+      "record_sha256": "e485ad0f0d0ba23dea987f076e302e8ff1164b8f88858e7eb7cd52be71683b0b"
+    },
+    "source:data/cycles/cycle_01/utilities/stability.json#/values/slots/2": {
+      "family": "stability",
+      "admission": "RESERVED",
+      "effect": {
+        "operation": "protect_next_eligible_degradation",
+        "object": "one Local Manifold"
+      },
+      "source": "data/cycles/cycle_01/utilities/stability.json",
+      "source_sha256": "ecd3d9a9fef1d121e3c67a64e4eb6493b4146558acb22102389ac97c6c83b163",
+      "record_sha256": "1241ba9c8763cb144b3d0cf6259cff2f667f9d88e6ed771fcdff86d6ace554b6"
+    },
+    "source:data/cycles/cycle_01/utilities/stability.json#/values/slots/3": {
+      "family": "stability",
+      "admission": "RESERVED",
+      "effect": {
+        "operation": "temporarily_prevent_degradation",
+        "object": "existing Prime shield"
+      },
+      "source": "data/cycles/cycle_01/utilities/stability.json",
+      "source_sha256": "ecd3d9a9fef1d121e3c67a64e4eb6493b4146558acb22102389ac97c6c83b163",
+      "record_sha256": "f0c46904f4e2954d2fb07abe6cbd27138bb64025834b25fd120524e0ef313448"
+    },
+    "source:data/cycles/cycle_01/utilities/stability.json#/values/slots/4": {
+      "family": "stability",
+      "admission": "RESERVED",
+      "effect": {
+        "operation": "survive_next_otherwise_lethal_degradation",
+        "object": "one already-valid Local Manifold",
+        "survival_color": "Red",
+        "survival_charge": 1,
+        "bypasses_closure": false
+      },
+      "source": "data/cycles/cycle_01/utilities/stability.json",
+      "source_sha256": "ecd3d9a9fef1d121e3c67a64e4eb6493b4146558acb22102389ac97c6c83b163",
+      "record_sha256": "548f7a00618d66ae63a32f0e54d30ffbb199ca171462c0c6a4fe3d65fd1b64d1"
+    },
+    "source:data/cycles/cycle_01/utilities/stability.json#/values/slots/5": {
+      "family": "stability",
+      "admission": "RESERVED",
+      "effect": {
+        "operation": "increase_active_emergent_charge",
+        "charge_delta": 1,
+        "maximum_color": "Violet",
+        "maximum_charge": 6,
+        "creates_field": false,
+        "changes_support_relation": false,
+        "makes_targetable": false,
+        "preserves_after_support_loss": false
+      },
+      "source": "data/cycles/cycle_01/utilities/stability.json",
+      "source_sha256": "ecd3d9a9fef1d121e3c67a64e4eb6493b4146558acb22102389ac97c6c83b163",
+      "record_sha256": "23200f0f194f8bc38084a99d28c9490e6c5f201e5a2281e6615a01d03a7e0631"
+    },
+    "source:data/cycles/cycle_01/utilities/restore_prime.json#": {
+      "family": "white_restore_prime",
+      "admission": "MATURE",
+      "effect": {
+        "operation": "REACTIVATE_PRIME",
+        "target": "one INACTIVE Prime",
+        "from": {
+          "H": 0,
+          "C": 0
+        },
+        "to": {
+          "H": 1,
+          "C": 0
+        },
+        "position_unchanged": true,
+        "identity_unchanged": true,
+        "graveyard_recovery": false,
+        "fully_heals": false,
+        "fully_charges": false
+      },
+      "source": "data/cycles/cycle_01/utilities/restore_prime.json",
+      "source_sha256": "033ce2b76f65625530359475fb0cecde3bc1ae92f5ba157f61274a31597071f2",
+      "record_sha256": "45a64dcde87edcb500fb9d7eff2714091bc2304756d17f857ab5cdbc43fca4f4"
+    }
+  },
+  "actions": {
+    "P6_SETUP_MATCH": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_SETUP_MATCH",
+      "effect_source": "conformance:pass06:setup_match",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    },
+    "P6_BEGIN_TURN": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_BEGIN_TURN",
+      "effect_source": "conformance:pass06:begin_turn",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    },
+    "P6_NORMAL_DRAW": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_NORMAL_DRAW",
+      "effect_source": "conformance:pass06:normal_draw",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    },
+    "P6_END_ACTIVE": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_END_ACTIVE",
+      "effect_source": "conformance:pass06:end_active",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    },
+    "P6_ADVANCE_TURN": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_ADVANCE_TURN",
+      "effect_source": "conformance:pass06:advance_turn",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    },
+    "P6_GENERATE_CHARGE": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_GENERATE_CHARGE",
+      "effect_source": "conformance:pass06:generate_charge",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    },
+    "P6_SPEND_CHARGE": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_SPEND_CHARGE",
+      "effect_source": "conformance:pass06:spend_charge",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    },
+    "P6_DEFENSE_RESTORE": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_DEFENSE_RESTORE",
+      "effect_source": "conformance:pass06:defense_restore",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    },
+    "P6_DEFENSE_PASS": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_DEFENSE_PASS",
+      "effect_source": "conformance:pass06:defense_pass",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    },
+    "P6_USE_COMPENSATION": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_USE_COMPENSATION",
+      "effect_source": "conformance:pass06:use_compensation",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    },
+    "P6_MULLIGAN": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_MULLIGAN",
+      "effect_source": "conformance:pass06:mulligan",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    },
+    "P6_UTILITY": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_UTILITY",
+      "effect_source": "conformance:pass06:utility",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    },
+    "P6_LOOK_UTILITY": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_LOOK_UTILITY",
+      "effect_source": "conformance:pass06:look_utility",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    },
+    "P6_OPEN_GUARD": {
+      "kind": "extension",
+      "abi": "raeon-headless-closure-v1",
+      "operation": "P6_OPEN_GUARD",
+      "effect_source": "conformance:pass06:open_guard",
+      "requires": [
+        "SOURCE_PINNED_STATE",
+        "ATOMIC_ADMISSION_TRANSFORM_CLOSURE",
+        "RAINBOW_ROAD",
+        "NO_POST_TERMINAL_MUTATION",
+        "EXACT_PASS06_CONTRACT"
+      ],
+      "accepted_rules": {
+        "schema_version": 1,
+        "authority": "USER_ACCEPTED_PASS_06_DESIGN",
+        "title": "Headless Gameplay Closure",
+        "baseline": {
+          "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+          "validated_pass05_implementation": "0889e5eccd45d2019c71ac6de35edd31b5becf27",
+          "target_branch": "codex/raeon-pass-06",
+          "bricked_pin": "c89676fc26000ae6f5fdad66a56e118b285d9b1d"
+        },
+        "mulligan": {
+          "opportunities": 1,
+          "select": "0..7",
+          "procedure": "RETURN_TO_DECK_SHUFFLE_REDRAW_SAME_COUNT",
+          "penalty": 0,
+          "repeat": false
+        },
+        "hand": {
+          "max": 10,
+          "overflow": "DRAW_UP_TO_CAPACITY_UNDRAWN_REMAIN_IN_DECK_EXISTING_ORDER"
+        },
+        "compensation": {
+          "window": "SECOND_PLAYER_OWN_ACTIVE",
+          "single_use": true,
+          "draw": 1,
+          "cost": 0,
+          "name_id_flavor": "OPEN"
+        },
+        "simultaneous_terminal": "DRAW",
+        "defense_timer_seconds": "CLIENT_TUNABLE_NOT_GENESIS_SEMANTIC",
+        "exhaustion": {
+          "stages": [
+            [
+              "RED",
+              1
+            ],
+            [
+              "ORANGE",
+              2
+            ],
+            [
+              "YELLOW",
+              3
+            ],
+            [
+              "GREEN",
+              4
+            ],
+            [
+              "BLUE",
+              5
+            ],
+            [
+              "VIOLET",
+              6
+            ],
+            [
+              "WHITE",
+              7
+            ]
+          ],
+          "stage_8_plus": [
+            "WHITE",
+            7
+          ],
+          "slots": [
+            "A",
+            "B",
+            "C"
+          ],
+          "policy": "CURRENT_SLOT_UNTIL_INACTIVE_THEN_NEXT",
+          "defense": true
+        },
+        "utilities": {
+          "runtime": {
+            "transduction": 18,
+            "draw_deck": 7,
+            "graveyard_recovery": 6,
+            "white_restore_prime": 1
+          },
+          "runtime_total": 32,
+          "reserved": {
+            "activation": 7,
+            "sandbox_activation": 6,
+            "stability_protection": 6
+          },
+          "reserved_total": 19,
+          "structural_total": 51,
+          "generic_cost": 0
+        },
+        "configuration": {
+          "ordinary": [
+            "EMPTY",
+            "CONFIGURING",
+            "RESOLVED"
+          ],
+          "advanced_open": [
+            "temporary expiry/destruction",
+            "derived additions/splitting",
+            "recursive fusion/emergence",
+            "derived/emergent production cadence"
+          ]
+        },
+        "whole_game": "PREPRODUCTION",
+        "next_pass": "PASS_07_HEADLESS_PLAYTEST_HARNESS"
+      },
+      "utility_registry_sha256": "45ff7d4f95663949594bdb02e6ce4d55676e2c27ae4951760c79b0a10d720789"
+    }
+  },
+  "open_items": [
+    {
+      "id": "P6-OPEN-001",
+      "topic": "compensation final name/id/flavor"
+    },
+    {
+      "id": "P6-OPEN-002",
+      "topic": "Selection remainder ordering"
+    },
+    {
+      "id": "P6-OPEN-003",
+      "topic": "Activation Utility rank differentiation/eligibility"
+    },
+    {
+      "id": "P6-OPEN-004",
+      "topic": "temporary Configuration Space expiry/destruction"
+    },
+    {
+      "id": "P6-OPEN-005",
+      "topic": "Stability/Protection rank/magnitude/duration/timing"
+    },
+    {
+      "id": "P6-OPEN-006",
+      "topic": "recursive fusion/emergence"
+    },
+    {
+      "id": "P6-OPEN-007",
+      "topic": "derived additions/splitting"
+    },
+    {
+      "id": "P6-OPEN-008",
+      "topic": "derived/emergent production cadence"
+    },
+    {
+      "id": "P6-OPEN-009",
+      "topic": "native graphics/presentation"
+    },
+    {
+      "id": "P6-OPEN-010",
+      "topic": "HOST-RUNTIME-001 OPEN_QUALIFIED"
+    },
+    {
+      "id": "P6-OPEN-011",
+      "topic": "final Utility names/flavor/IDs"
+    },
+    {
+      "id": "P6-OPEN-012",
+      "topic": "balance tuning after Pass-07 telemetry"
+    }
+  ],
+  "selection_remainder": "UNORDERED_BOTTOM_BAND; ordered access refuses until a separately authorized shuffle resolves it",
+  "utility_disposition": "INHERITED_UNSUPPLIED; effect admission does not invent generic consumption"
+}

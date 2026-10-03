@@ -1,3 +1,4 @@
+import {pass06Sources} from './pass-06-contract.mjs';
 import {pass05Sources} from './pass-05-contract.mjs';
 import {pass04Sources} from './pass-04-contract.mjs';
 import {pass03bSources} from './pass-03b-contract.mjs';
@@ -24,7 +25,7 @@ export function validateRuntimeSources(root, inventory) {
     const original = {...decision.compiled_sources, ...pass01Sources(root, inventory)};
     const additions = pass02Sources(root, inventory);
     for (const file of Object.keys(additions)) if (file in original) throw new Error('Pass-2 cannot override earlier compiled source authority');
-    const compiled = pass05Sources(root, inventory, pass04Sources(root, inventory, pass03bSources(root, inventory, pass03Sources(root, inventory, {...original, ...additions}))));
+    const compiled = pass06Sources(root, inventory, pass05Sources(root, inventory, pass04Sources(root, inventory, pass03bSources(root, inventory, pass03Sources(root, inventory, {...original, ...additions})))));
     if (JSON.stringify(sources) !== JSON.stringify(Object.keys(compiled).sort()))
       errors.push('Executable Genesis inventory differs from the exact authorized source set');
     for (const [source, evidence] of Object.entries(compiled)) {

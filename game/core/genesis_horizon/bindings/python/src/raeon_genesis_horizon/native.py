@@ -6,6 +6,8 @@ retained as architectural types; no mathematical embedding is asserted.
 from __future__ import annotations
 
 import copy
+import json
+from dataclasses import asdict
 from pathlib import Path
 
 import numpy as np
@@ -80,6 +82,49 @@ class NativeBackend(ReferenceBackend):
         manager = RoadCapacityManager(capacity, RoadLedger(self.working / 'road-bus.jsonl'))
         portal = PortalEngine(self.fabric, self.allocator, graph, manager, self.working / 'portals')
         self.road_engine = RainbowRoadEngine(portal, manager, self.working / 'roads')
+        # Checkpoints retain the append-only native trace. Continue its chain;
+        # candidate rollback restores capacity state, never forensic log bytes.
+        for ledger, path in [(capacity, capacity.ledger_path), (manager.ledger, manager.ledger.path),
+                             (portal.ledger, portal.ledger.path), (self.road_engine.ledger, self.road_engine.ledger.path)]:
+            if path.exists():
+                with path.open(encoding='utf8') as stream:
+                    for line in stream:
+                        entry = json.loads(line)
+                        ledger.prev = entry['entry_hash']
+                        event = entry.get('event', {})
+                        # Historical checkpoints did not serialize reservation
+                        # ordinals. Their native ledgers preserve those entries.
+                        if ledger is capacity and event['kind'] in ('ROUTE_CAPACITY_RESERVED', 'ROUTE_CAPACITY_RELEASED'):
+                            capacity.reservations[event['reservation_id']] = {k:v for k,v in event.items() if k != 'kind'}
+                        if ledger is manager.ledger and event['kind'] in ('ROAD_PORTAL_SUBRESERVED', 'ROAD_PORTAL_SUBRELEASED'):
+                            manager.subreservations[event['reservation_id']] = {k:v for k,v in event.items() if k != 'kind'}
+
+    def transport_record(self):
+        manager = self.road_engine.capacity
+        return {'schema': 1, 'edges': [asdict(e) for e in self.local_graph.edges.values()],
+                'capacity': copy.deepcopy(self.local_capacity.capacity),
+                'reservations': copy.deepcopy(self.local_capacity.reservations),
+                'active': manager.active, 'holds': copy.deepcopy(manager.holds),
+                'subreservations': copy.deepcopy(manager.subreservations)}
+
+    def restore_transport(self, record):
+        if record is None:
+            return  # Explicit historical checkpoint upgrade; ledgers recovered above.
+        if record['schema'] != 1:
+            raise BindingError('TRANSPORT_CHECKPOINT_INTEGRITY')
+        graph = self.local_graph
+        graph.edges.clear(); graph.out.clear()
+        for row in record['edges']:
+            row = copy.deepcopy(row)
+            for key in ('sectors', 'chirality_classes', 'residue_classes'):
+                row[key] = tuple(row[key])
+            graph.add_edge(CorridorEdge(**row))
+        self.local_capacity.capacity = copy.deepcopy(record['capacity'])
+        self.local_capacity.reservations = copy.deepcopy(record['reservations'])
+        manager = self.road_engine.capacity
+        manager.active = record['active']
+        manager.holds = copy.deepcopy(record['holds'])
+        manager.subreservations = copy.deepcopy(record['subreservations'])
 
     def _put(self, *args, **kwargs):
         if len(self.resources) >= self.profile['limits']['native_resources']:

@@ -1,0 +1,570 @@
+{
+  "schema_version": 1,
+  "id": "raeon-pass-06",
+  "status": "IMPLEMENTED_WITH_SEPARATE_FINAL_ACCEPTANCE_RECEIPT",
+  "starting_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+  "branch": "codex/raeon-pass-06",
+  "source_pouch_sha256": "1cdc6a070c3492f791a37166bb55ae3b88ce5b03ae7ae1228f72bba8fe977242",
+  "source_authority": "Explicit user instruction to execute the verified Pass06 handoff exactly",
+  "sources": {
+    "data/game/pass-06-runtime.json": "0d5171399bdcd2eed3e38b6f17ab34914dfb1890065275a2d86c634ea25e31a7",
+    "game/core/raeon/application/pass06_advance_turn.gen": "82478f370894638967bf40817e42632dd8a7b7d67a311471abb23ae04dc61286",
+    "game/core/raeon/application/pass06_begin_turn.gen": "784b75da560435038b5ea0c8c0cf5cba8c7c5a0a00aaf0c84e570b6a5aa0a522",
+    "game/core/raeon/application/pass06_defense_pass.gen": "3d0337bd4bca948fd198a39b6a8d8dd7b796b70ca150f54ac69006c17fc7a95c",
+    "game/core/raeon/application/pass06_defense_restore.gen": "6ebcd02adaf84cbfa94f1b279614d8293396cd3d4fdaf5aa4a2dcb403fb765cb",
+    "game/core/raeon/application/pass06_end_active.gen": "d09d0fe86fb76761f89943f0657cccb627331c49aa53a1e7bf507650bb224433",
+    "game/core/raeon/application/pass06_generate_charge.gen": "a6f714b84ebc8052a7d26bc11f36bcd1d2beae749595e7f5a402d7018764dc82",
+    "game/core/raeon/application/pass06_look_utility.gen": "20c6a0fae8745b7f98ad2491117ff371c471c8c98a1d780526f779c4d3084c41",
+    "game/core/raeon/application/pass06_mulligan.gen": "cdc10a26d421393943597b4873496f5674abc043d476a889961150dd415b1844",
+    "game/core/raeon/application/pass06_normal_draw.gen": "e5f164b947866df8a1520082ca2288f48be189d860b69dc421d74b94d08c2335",
+    "game/core/raeon/application/pass06_open_guard.gen": "c81567be709376308491b063bb52718ea3f551fc224392fc764a1b66212325bc",
+    "game/core/raeon/application/pass06_setup_match.gen": "47c2c71d1435e0f2c4437676b40b3ddb80a55c1fbfddc2b3ac435696d5c147d4",
+    "game/core/raeon/application/pass06_spend_charge.gen": "9c24f23d728bc17b05b04b16551324259665bbcab3c8ed862dd50d1baa0cf2d2",
+    "game/core/raeon/application/pass06_use_compensation.gen": "dc06c8987ebf565894371655eacd248c5ccb88cd83bc0b269af225fe8ca0b8b1",
+    "game/core/raeon/application/pass06_utility.gen": "c504ebe108fb77967795b48d7e8650a7a244f41dd694c2c1149ee04ba4634e4a",
+    "game/match/closure.py": "da1e04d778e5a3b02bbbe3594f5e3236a082a16248efbfc1aab94f141759fe65",
+    "provenance/imports/raeon-pass-06/RAEON_DIPLOMATIC_POUCH_PASS_06_2026-10-03.zip": "1cdc6a070c3492f791a37166bb55ae3b88ce5b03ae7ae1228f72bba8fe977242",
+    "provenance/imports/raeon-pass-06/entry.json": "4cfcdccd49a758b752bf8536e82d40653512ff703b7097e57faa811cfa83f414",
+    "provenance/imports/raeon-pass-06/handoff/CODEX_HANDOFF_PROMPT.md": "b0ba178db3ba10c52a6ae910e3638f1bfc146e7b3b081a51b33e08b98e2b87f3",
+    "provenance/imports/raeon-pass-06/handoff/CONFIGURATION_SCOPE.md": "ac36bb609201e5a2bf0275642c7860c717e64ea7c27461656fe1c31ac0e838b7",
+    "provenance/imports/raeon-pass-06/handoff/MANIFEST.json": "7b49d75705a6b65efe7088e8c0abe1fa91720d76eb7df781ea6b3b30d7976bb0",
+    "provenance/imports/raeon-pass-06/handoff/MATCH_LIFECYCLE_CONTRACT.md": "b328809b6b26e2c80ec423147abf84fe9fa3d87b2f4ca7c2094284f104d0abdc",
+    "provenance/imports/raeon-pass-06/handoff/OPEN_ITEMS.json": "0beeeda0c29d4ab504c0c434f7583929d81b48ee7459e98163786a899a182f82",
+    "provenance/imports/raeon-pass-06/handoff/PASS_06_ACCEPTANCE.json": "60ecb7f5d6234acf8477ef44701df421bf1a7923e4f5d1bfb7dc19cbb61cce22",
+    "provenance/imports/raeon-pass-06/handoff/PASS_06_RULES.json": "8361d32a3731b40e618e15c2356ca141f9432a88b7bd276c00a11e34c9eff33b",
+    "provenance/imports/raeon-pass-06/handoff/README.md": "e45f88c010ce4b862ac5b5dc6c90ac130de9b804a77464b99a1be92a5b6732ac",
+    "provenance/imports/raeon-pass-06/handoff/UTILITY_RUNTIME_CONTRACT.md": "12653914a25354418e9d890b454bcbd9a25b78267af18433d60f0044d51de704",
+    "provenance/imports/raeon-pass-06/handoff/VERA_AUDIT_RUBRIC.md": "e6fb84c5fdb71e27f98822af27c748d9a6336cefbe45155e95b870cc8cd4e90f",
+    "provenance/imports/raeon-pass-06/handoff/VERIFY_POUCH.py": "6997844a638e2946b9ba0b4879b6ceb0faf05f5859cda91c5e1d73e494dac201",
+    "tests/integration/genesis_horizon/pass_06_matches.py": "52cc29711de51118ba2ba392b8caabdd09221c7be27a8873bc7cbee46e3b4ad6",
+    "tests/integration/genesis_horizon/pass_06_support.py": "cb623dfbc905e817cd6489f053201200e4c45b8dd2800ef5f515fcfc2409cf8b",
+    "tests/integration/genesis_horizon/test_pass_06.py": "e9dfeafbd49ad93cb50f804ca517b23b4034241d14693225acebde2cc657f899",
+    "tests/integration/genesis_horizon/test_pass_06_security.py": "5c0784950e8527101b28c21868311b89daa4c7d8aa367a9eef63900840644100",
+    "tests/regression/pass-06-contract.test.mjs": "518a25e3bd7f5bf853ed502fb644da6a67547a826c32f91ac77dab31171b8ee3",
+    "tools/genesis_runtime_pass06.py": "672056788f73ca015f165387bfd58259836f2a6a178f07b4a5bcc517cf0aca11"
+  },
+  "changes": {
+    "AGENTS.md": {
+      "before_sha256": "6e268c0a86d491fa2ebf96f6a9c786c17479c64432f6d9dd8fa6ee4e2fe73400",
+      "after_sha256": "88ebe1791c2a6aef80fab13cbde0eccb6ba60e371765837915c1e01f2f57e53b"
+    },
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/adapter.py": {
+      "before_sha256": "506214e62be06ae521f8970ef0582ee7c80087778dde30c2d6a4491dfcb8f7ed",
+      "after_sha256": "892c99d0b7b45b29dde8fe5406bb10cd32dc485c28538b52a23554a2ad471db7"
+    },
+    "game/core/genesis_horizon/bindings/python/src/raeon_genesis_horizon/native.py": {
+      "before_sha256": "1b91acb7f3106e5cfdea610ca0b8032ef7951b28d87e2a1178d1d5cbf3c575f3",
+      "after_sha256": "4d01b6b2f848928ecdd9d9573de2c82e4f2266e9fb2ff291c2179b3072431ed3"
+    },
+    "game/core/raeon/application/manifest.json": {
+      "before_sha256": "cfaae1587e6b2632b0e3f013a71225d7b83bf2fb8e59b782b45cb3b18204c9d7",
+      "after_sha256": "eb9de82343dba530a739284c0a649acbe8b2c281696ddf5509cd23e92a9629d1"
+    },
+    "game/match/state.py": {
+      "before_sha256": "0fd5883e6e998e74487ff6d6f406dfc5c18f2f92294ac260d06a1cd62197d210",
+      "after_sha256": "2017e0229f348b93e924002049c2e1781f6a5f611d7422c86e14c957e3ad80df"
+    },
+    "game/sandbox/topology.py": {
+      "before_sha256": "8f4364c735b342cf54eaeb6380b73cb5976d586b95e35fecab7e35475f07543b",
+      "after_sha256": "aba6b97d5233188fb2e8d4740a1c48a5f88e35583ccb1c7a61e2620f7982983b"
+    },
+    "tools/genesis_runtime.py": {
+      "before_sha256": "c9674b44df3d83f2d7ab086b57d4b1df3d2bc0d16e3b41b0a08d3ffaae8241df",
+      "after_sha256": "f3deecb559452562803b0bff62a3e01f82f698742edb651950e42587f3b94d81"
+    },
+    "tools/genesis_runtime_distribution.py": {
+      "before_sha256": "0c9d8b91ab25f8a80251051bf4a021032df7e7ab3665386bf46179096ac0cba1",
+      "after_sha256": "5a896901251612106d64ed0415898cd37e7d9e94abc0937f3b17c70228f126cb"
+    },
+    "tools/genesis_runtime_pass05.py": {
+      "before_sha256": "2999b056c7b7bee641c6fa3b949a7de6fac339915f52b4a5df3e57bd6d2051d8",
+      "after_sha256": "fc817448f95ec85b1ce857858446c8e9ceddb76628d42d3edde9db5d636a24ee"
+    },
+    "tools/validators/genesis-runtime-contract.mjs": {
+      "before_sha256": "3cdac36ff046d90458df8c52dbf1f80f3a95d36de59128188fe77fe266377b96",
+      "after_sha256": "42f705767b91726299454355c508ce9aa6b5bc0a022ffbfc201a853a189015a6"
+    },
+    "tools/validators/pass-05-contract.mjs": {
+      "before_sha256": "88ab38c91e374a94eb62d07d90f5ecc4b6a83a1716fe397b93d9970505fa6584",
+      "after_sha256": "2bc05d8d19cae34ed537f9fc5af51f80c8622b3683c36bb3a5b1dc9224cffd49"
+    }
+  },
+  "compiled_sources": {
+    "game/core/raeon/application/pass06_advance_turn.gen": {
+      "source_sha256": "82478f370894638967bf40817e42632dd8a7b7d67a311471abb23ae04dc61286",
+      "bytecode_sha256": "7742043c941ab3118fabcfd9c3a3c0e3588ad7b9aea8a5cb7901149634dc9aea",
+      "artifact_directory": "pass06_advance_turn-395d9c8b5ad6",
+      "artifact_hashes": {
+        "linked.json": "41985580422af63747ff62ef734a85b3b3527aedbcbca6456de024db98f9f00b",
+        "lowered.json": "30b6d978511183a4f4d35c81f97d92e815f1af1ec6d45b2d94ababb2a3e5784a",
+        "program.asm": "eff0033515bfbde83c08b16958c44d724e01fcd9e36e2776801bfa1d6a074610",
+        "program.gvm": "7742043c941ab3118fabcfd9c3a3c0e3588ad7b9aea8a5cb7901149634dc9aea",
+        "receipt.json": "55b616bb2646d464b7c55736b07502e16b495b2e9052e31b67c0811b918bb423"
+      }
+    },
+    "game/core/raeon/application/pass06_begin_turn.gen": {
+      "source_sha256": "784b75da560435038b5ea0c8c0cf5cba8c7c5a0a00aaf0c84e570b6a5aa0a522",
+      "bytecode_sha256": "31eb97e5104081c08494cbf686b3b42fcca1af8b9c90c4440d2569a0062f3979",
+      "artifact_directory": "pass06_begin_turn-884a6d0af83d",
+      "artifact_hashes": {
+        "linked.json": "18a8e287f690e735bc30d3fb1c98644780945fc06d7a3643c66251aa48afca3a",
+        "lowered.json": "bbf8d6e86d0c74679ec23bf5e227defecc19879581bcb519f3bba40d947fb71e",
+        "program.asm": "521600ebaa2573f3fd4214106ec601338a808aa5a0e84a39d4098d1444b27707",
+        "program.gvm": "31eb97e5104081c08494cbf686b3b42fcca1af8b9c90c4440d2569a0062f3979",
+        "receipt.json": "4410179d4b7586cbec2a574cbd2733f1c88a8d4f07b04e4db970d63ab524ca8d"
+      }
+    },
+    "game/core/raeon/application/pass06_defense_pass.gen": {
+      "source_sha256": "3d0337bd4bca948fd198a39b6a8d8dd7b796b70ca150f54ac69006c17fc7a95c",
+      "bytecode_sha256": "bfd14986675ecdafefdb7c333878af9feb379df44f932f444a02a413609a0c34",
+      "artifact_directory": "pass06_defense_pass-b98137006680",
+      "artifact_hashes": {
+        "linked.json": "6d4ebe12d5f86edafa536088750c379962995121b850f12ebb53b8775a9f3eb7",
+        "lowered.json": "6b913d2e27de4152f1ab88847ab7edc0bdcd0f32b3aa7d0d0a9770ffd436d212",
+        "program.asm": "db4b60065bd076615f21f07e1c20bab5bf32f6b96f3989f660705b2c7ef77125",
+        "program.gvm": "bfd14986675ecdafefdb7c333878af9feb379df44f932f444a02a413609a0c34",
+        "receipt.json": "49cf29b1c301bb2473e3413b296ae8feaaf09ca1b267da1437ca8116b518825c"
+      }
+    },
+    "game/core/raeon/application/pass06_defense_restore.gen": {
+      "source_sha256": "6ebcd02adaf84cbfa94f1b279614d8293396cd3d4fdaf5aa4a2dcb403fb765cb",
+      "bytecode_sha256": "b24089f897641936a349608e7a104322b8a231cf3995a06c91effa486b9f914b",
+      "artifact_directory": "pass06_defense_restore-02764a05d2b5",
+      "artifact_hashes": {
+        "linked.json": "6d65e0c10e2b030e1141c3bc718d2a85ec5ceab1a7273bf08cca9b84ff1fc374",
+        "lowered.json": "455e18ca61792c64bdce78f8f9a2d453fa04f1c8e99fca2c3f990f0c3cfc23d3",
+        "program.asm": "bcd3f5af8614016587c2da0a9831dd4498dc15d1f374dc08ed79c67efcdc6aee",
+        "program.gvm": "b24089f897641936a349608e7a104322b8a231cf3995a06c91effa486b9f914b",
+        "receipt.json": "334402ae9b32fb6f11aaef95beafe88e47a7304855d5d52866008b91e4627455"
+      }
+    },
+    "game/core/raeon/application/pass06_end_active.gen": {
+      "source_sha256": "d09d0fe86fb76761f89943f0657cccb627331c49aa53a1e7bf507650bb224433",
+      "bytecode_sha256": "8d64caee96a3ab0c8767f0c55fd964147ad53d092a523f743f797c40af01e74b",
+      "artifact_directory": "pass06_end_active-404a8c8728e3",
+      "artifact_hashes": {
+        "linked.json": "1c8317c578915a9abd5b49370aa8b9e9eeff79e5800567241bc36d276d71f9aa",
+        "lowered.json": "bc33095598d97f3346c61e9911426ce86000354d327e7b50c3f08954e7c371fe",
+        "program.asm": "890dbab7163c1bfdef820cbe8a0718076927b0873b8dca9e9e5a61579f110bd1",
+        "program.gvm": "8d64caee96a3ab0c8767f0c55fd964147ad53d092a523f743f797c40af01e74b",
+        "receipt.json": "6af849b6e9cb4c535b930494aaac339e5746c1a2c70724d13b5cc7c7f957b144"
+      }
+    },
+    "game/core/raeon/application/pass06_generate_charge.gen": {
+      "source_sha256": "a6f714b84ebc8052a7d26bc11f36bcd1d2beae749595e7f5a402d7018764dc82",
+      "bytecode_sha256": "3fff4231447fe511588c75a3af6754c83eb3949dbb2f7a67dffe350d9254bf98",
+      "artifact_directory": "pass06_generate_charge-c1bb1ef1ec0d",
+      "artifact_hashes": {
+        "linked.json": "61d8d27b104d98dbac25c683079c41190f7df24c2783e460cd93a7d46559bef3",
+        "lowered.json": "fa106aa7eb6b6b3f7d9d0a0f29e96af33fd433af43ec5941c16b3f4963cdabd7",
+        "program.asm": "81905ee0131191d78bf1ed3b94284ed71c17b7db738932e4bc8856a546425af9",
+        "program.gvm": "3fff4231447fe511588c75a3af6754c83eb3949dbb2f7a67dffe350d9254bf98",
+        "receipt.json": "11abcf44cce3d22a3f467dbec05aba55218161672dd358c408a93637c1e068a9"
+      }
+    },
+    "game/core/raeon/application/pass06_look_utility.gen": {
+      "source_sha256": "20c6a0fae8745b7f98ad2491117ff371c471c8c98a1d780526f779c4d3084c41",
+      "bytecode_sha256": "ea8c5c7aad4c6aac3b40879a41b4b9827a1e81f4c9dffdbd0a61ad679c96b9bd",
+      "artifact_directory": "pass06_look_utility-27777c972e90",
+      "artifact_hashes": {
+        "linked.json": "54b17844fa90044ba4ba2bb26214efb6bc45868cce36bbc7edce54170f8a9cd1",
+        "lowered.json": "3fbaec086cc560c13ace294f89b00063eb2e6f8c07b84c8ff7b4e9bc7eb53fb7",
+        "program.asm": "e90e8f04e3e85cefc2f3cc7589da6caa65353c9c94864427ec4d98d8768c92c5",
+        "program.gvm": "ea8c5c7aad4c6aac3b40879a41b4b9827a1e81f4c9dffdbd0a61ad679c96b9bd",
+        "receipt.json": "cd03cd5d5e8bfc5655bd74dff57173011daad0e553ccdf18c93457bbf2128015"
+      }
+    },
+    "game/core/raeon/application/pass06_mulligan.gen": {
+      "source_sha256": "cdc10a26d421393943597b4873496f5674abc043d476a889961150dd415b1844",
+      "bytecode_sha256": "6e0aacb05036e63f2cb5acb8808c0d4926800c52aa3cfcef6824cc759b66ba39",
+      "artifact_directory": "pass06_mulligan-a3a7f1101cdb",
+      "artifact_hashes": {
+        "linked.json": "a5e56458ee89e8f6789a37e6308a436180d275ac6ddda5612c83be4bc55da91f",
+        "lowered.json": "b01db11f361457fecee0be729001c202599b20b92a12d0a3e58eef06c8d541d0",
+        "program.asm": "161feeb68a2d439d08b68f714357442528aa3d568b819ecbcd1cca6522c5a7e1",
+        "program.gvm": "6e0aacb05036e63f2cb5acb8808c0d4926800c52aa3cfcef6824cc759b66ba39",
+        "receipt.json": "802fb418243cddcf813d7600a30e8b2eb5385e504776219985fb96742506ba15"
+      }
+    },
+    "game/core/raeon/application/pass06_normal_draw.gen": {
+      "source_sha256": "e5f164b947866df8a1520082ca2288f48be189d860b69dc421d74b94d08c2335",
+      "bytecode_sha256": "5546ec704f1e1558598cf0b0b99518d1f66a8617d3727b820dda4f7710e23a7d",
+      "artifact_directory": "pass06_normal_draw-1e4d27c6da46",
+      "artifact_hashes": {
+        "linked.json": "5c8118bb56cf5196f7299d0e1ff6cca587fb7499309ddec7028bbf08ae222885",
+        "lowered.json": "80e8c28d6377e1a77cc67be57e8af2e08f5f5af8e7197baa8f10718434842dd1",
+        "program.asm": "f4435fe82b587936c2e9a91c7534ae36a37f3381944023b40f902d6b2c2117ca",
+        "program.gvm": "5546ec704f1e1558598cf0b0b99518d1f66a8617d3727b820dda4f7710e23a7d",
+        "receipt.json": "f5eaa25e5a91fa1499830a1f98e5dd3cdb83c7a9a3b725a7968efeeb10958f1f"
+      }
+    },
+    "game/core/raeon/application/pass06_open_guard.gen": {
+      "source_sha256": "c81567be709376308491b063bb52718ea3f551fc224392fc764a1b66212325bc",
+      "bytecode_sha256": "6c696ba35b1bfc386815c75bcc85b2ad4dc9fdffe14755aa67f2a76ade844c17",
+      "artifact_directory": "pass06_open_guard-8ceb5ca86ce0",
+      "artifact_hashes": {
+        "linked.json": "3960f3652a2d1493f993ef19ac61c499c893cdba1c4816bffd504cd157df5b79",
+        "lowered.json": "47a5afcbe414d248c94f26e45dc28e1ef650fded0e5d1ccf8feddf5215e9216a",
+        "program.asm": "c89c9593556dd01694e5a8caa71f647b26fafb5ce0fcaffc97c6898bf239af83",
+        "program.gvm": "6c696ba35b1bfc386815c75bcc85b2ad4dc9fdffe14755aa67f2a76ade844c17",
+        "receipt.json": "b2d07de03c4b03156e8d8b835d79e617fc8bff5d66cb0909f14a936dd62b40ca"
+      }
+    },
+    "game/core/raeon/application/pass06_setup_match.gen": {
+      "source_sha256": "47c2c71d1435e0f2c4437676b40b3ddb80a55c1fbfddc2b3ac435696d5c147d4",
+      "bytecode_sha256": "303d6ad14193afd2b0540c28eaeb2c4322fa1c5bf0b7b85d22744f041f639010",
+      "artifact_directory": "pass06_setup_match-f4541f608989",
+      "artifact_hashes": {
+        "linked.json": "e18edaf0fbb7fd4aabd0c8ca681ee09b8fc749d02c45292c173e04964a60e0a6",
+        "lowered.json": "0ac76b15a4ebaad081778ccef99e5b4ade73dd08b4623cc44dcad3dff2873182",
+        "program.asm": "c081b467f97c74f29631601f1bc30f4e090a06b251eed22c68258e4cf1084e0b",
+        "program.gvm": "303d6ad14193afd2b0540c28eaeb2c4322fa1c5bf0b7b85d22744f041f639010",
+        "receipt.json": "b023ef41894e4e142531ccc7046024c7f47d68555f4fab618ea27c5e6f84eafa"
+      }
+    },
+    "game/core/raeon/application/pass06_spend_charge.gen": {
+      "source_sha256": "9c24f23d728bc17b05b04b16551324259665bbcab3c8ed862dd50d1baa0cf2d2",
+      "bytecode_sha256": "a456ea6d521a7be8e8989ed5bc639a584da8f09858af6e2d7a98161d9365b8b6",
+      "artifact_directory": "pass06_spend_charge-d905dcf32a93",
+      "artifact_hashes": {
+        "linked.json": "b9e38e2cbef2cfa7fdab9004b455ad7961db01346e2b9b483271e3365db14a60",
+        "lowered.json": "eee80595f788d040ea4d15ff426c0ba4e62606a18936f8adcbaf727209e65fe6",
+        "program.asm": "565e40b8fa889136b6e134a49d5c0b27199d1c6f1b111af1370679dd49a6ebd7",
+        "program.gvm": "a456ea6d521a7be8e8989ed5bc639a584da8f09858af6e2d7a98161d9365b8b6",
+        "receipt.json": "89c991c937e09f51b6dd3b06a456440563a41a46a89d98098639e749b4b0d22e"
+      }
+    },
+    "game/core/raeon/application/pass06_use_compensation.gen": {
+      "source_sha256": "dc06c8987ebf565894371655eacd248c5ccb88cd83bc0b269af225fe8ca0b8b1",
+      "bytecode_sha256": "ff78bf73d8a22b73fad482f573e38c6c799c3677d387ad97faa9cc10c77dd727",
+      "artifact_directory": "pass06_use_compensation-cbe990fb96a9",
+      "artifact_hashes": {
+        "linked.json": "8a5e0ab4e8972929e493c380f6f9c781c7a690e2c4967bd9c893d49ebd9d40ce",
+        "lowered.json": "5fca0dde8e78dee86d5f751e93898b6d75763eb002f024c0e7544c63f53bec9e",
+        "program.asm": "4974355f95de9ae8ba59d07a0ca1ec8ddcb4daed35cbf3568b6bc31279d1bc7f",
+        "program.gvm": "ff78bf73d8a22b73fad482f573e38c6c799c3677d387ad97faa9cc10c77dd727",
+        "receipt.json": "e0c84370ac8fcb03b2911616f310c8a9b47af05af4847768ab0a1e1803c4d033"
+      }
+    },
+    "game/core/raeon/application/pass06_utility.gen": {
+      "source_sha256": "c504ebe108fb77967795b48d7e8650a7a244f41dd694c2c1149ee04ba4634e4a",
+      "bytecode_sha256": "aa785c67151a3418d9f8f5553b4dbab85612421c4e402e59680f555a4df619c0",
+      "artifact_directory": "pass06_utility-da5d3d1da69c",
+      "artifact_hashes": {
+        "linked.json": "a968b396b7cd5177650a3e8263e0f8bd61736536f44bef7bed1674a7a20f6701",
+        "lowered.json": "d53269b74cc8cfb5e49cc61663ac60f8015d2c9a9cd93e5a0de27156583e11ea",
+        "program.asm": "c4e75af2f96fa8bb0d2fc24df2e56017f415840cc074eb2e42cc4ac35aed6487",
+        "program.gvm": "aa785c67151a3418d9f8f5553b4dbab85612421c4e402e59680f555a4df619c0",
+        "receipt.json": "7286a36e9092b7aaea8db05eb8a811109193c39d46f4b268c10986150329acbe"
+      }
+    }
+  },
+  "compiled_total": 74,
+  "integration_total": 155,
+  "required_integration_cases": [
+    "test_distribution.ArchiveIntegrityTests.test_exact_manifest_and_negative_cases",
+    "test_pass_01.Pass01Tests.test_application_cannot_inherit_or_mutate_machine_domains",
+    "test_pass_01.Pass01Tests.test_checkpoint_restart_and_two_player_sessions",
+    "test_pass_01.Pass01Tests.test_conflicting_application_rejected",
+    "test_pass_01.Pass01Tests.test_duplicate_and_conflicting_identity_rejected",
+    "test_pass_01.Pass01Tests.test_exact_topology_and_empty_containers",
+    "test_pass_01.Pass01Tests.test_explicit_relations_and_stable_unique_identity",
+    "test_pass_01.Pass01Tests.test_missing_or_undeclared_relation_rejected",
+    "test_pass_01.Pass01Tests.test_no_pass_two_rules_exposed",
+    "test_pass_01.Pass01Tests.test_observation_and_idempotence_do_not_duplicate",
+    "test_pass_01.Pass01Tests.test_observation_operation_receipt_has_no_native_diagnostics",
+    "test_pass_01.Pass01Tests.test_owner_opponent_privacy_and_no_native_leak",
+    "test_pass_01.Pass01Tests.test_package_and_source_hash_tamper_rejected",
+    "test_pass_01.Pass01Tests.test_path_escape_rejected",
+    "test_pass_01.Pass01Tests.test_prepublication_failure_and_budget_roll_back",
+    "test_pass_01.Pass01Tests.test_production_bytecode_is_deterministic",
+    "test_pass_01.Pass01Tests.test_production_manifest_and_real_genesis",
+    "test_pass_01.Pass01Tests.test_unauthorized_realization_rejected",
+    "test_pass_01.Pass01Tests.test_undeclared_and_malformed_source_rejected",
+    "test_pass_02.Pass02.test_actual_draw_and_commit_preserve_identity",
+    "test_pass_02.Pass02.test_empty_baseline_and_native_inventory",
+    "test_pass_02_adversarial.Adversarial.test_catalog_tamper_and_physical_path_determinism",
+    "test_pass_02_adversarial.Adversarial.test_checkpoint_corruption_and_new_process_restore",
+    "test_pass_02_adversarial.Adversarial.test_concurrent_requests_and_semantic_order",
+    "test_pass_02_adversarial.Adversarial.test_input_bounds_code_and_card_only_containment",
+    "test_pass_02_adversarial.Adversarial.test_inspection_reorder_batch_helpers_grant_limits",
+    "test_pass_02_adversarial.Adversarial.test_native_route_and_handler_closure_cannot_be_bypassed",
+    "test_pass_02_adversarial.Adversarial.test_recovery_profiles_and_batch_capacity",
+    "test_pass_02_adversarial.Adversarial.test_seeded_conservation_two_owners",
+    "test_pass_02_adversarial.Adversarial.test_semantic_replay_across_storage_and_epoch",
+    "test_pass_02_adversarial.Adversarial.test_setup_rollback_and_exact_idempotent_multiset",
+    "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_live_merge_cannot_restore_private_relations",
+    "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_public_view_cannot_inherit_private_hand",
+    "test_pass_02_projection_privacy.ProjectionPrivacy.test_audited_same_actor_public_cannot_inherit_inspection",
+    "test_pass_02_projection_privacy.ProjectionPrivacy.test_inspection_scope_includes_application_view_owner_and_actor",
+    "test_pass_02_projection_privacy.ProjectionPrivacy.test_owner_opponent_and_public_controls",
+    "test_pass_02_projection_privacy.ProjectionPrivacy.test_private_inspection_delta_reconnect_restore_and_expiry",
+    "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_inspect_admission_rejected_atomically",
+    "test_pass_02_projection_privacy.ProjectionPrivacy.test_public_live_geometry_delta_and_reconnect",
+    "test_pass_02_transactions.Transactions.test_catalog_roster_limits_unknown_and_no_reset",
+    "test_pass_02_transactions.Transactions.test_checkpoint_nonempty_preserves_native_state_and_retry",
+    "test_pass_02_transactions.Transactions.test_delivery_loss_retry_conflict_and_stale_revision",
+    "test_pass_02_transactions.Transactions.test_dynamic_regions_native_capacity_and_repeat_color",
+    "test_pass_02_transactions.Transactions.test_failed_candidate_rolls_back_grant_rng_membership",
+    "test_pass_02_transactions.Transactions.test_hand_capacity_empty_deck_and_forged_arguments",
+    "test_pass_02_transactions.Transactions.test_live_private_views_and_detached_values",
+    "test_pass_02_transactions.Transactions.test_retirement_recovery_order_and_whole_support",
+    "test_pass_02_transactions.Transactions.test_shuffle_independent_full_vector_and_idempotency",
+    "test_pass_02_transactions.Transactions.test_structural_prime_slots_without_combat",
+    "test_pass_03.Pass03.test_batch_atomic_rollback_retry_and_post_commit_delivery",
+    "test_pass_03.Pass03.test_catalog_not_live_closure_and_read_only_exhaustive_query",
+    "test_pass_03.Pass03.test_concurrent_stale_pose_and_nonempty_checkpoint",
+    "test_pass_03.Pass03.test_corpus_full_sqlite_and_json_agree",
+    "test_pass_03.Pass03.test_handler_predicate_omission_and_road_closure_matter",
+    "test_pass_03.Pass03.test_native_hydration_duplicate_copies_and_source_bytes",
+    "test_pass_03.Pass03.test_numeric_bounds_zero_rotation_and_no_z_or_reflection_input",
+    "test_pass_03.Pass03.test_owner_membership_stale_and_no_individual_extraction",
+    "test_pass_03.Pass03.test_pair_lookup_preserves_all_outcomes_and_addresses",
+    "test_pass_03.Pass03.test_pose_bytes_full_3d_canonical_equivalence_and_identity",
+    "test_pass_03.Pass03.test_public_byte_delta_and_reconnect_with_topology",
+    "test_pass_03.Pass03.test_public_view_only_exposes_deployed_source_and_no_inventory_hints",
+    "test_pass_03.Pass03.test_reopen_merge_preview_and_gated_mutations_preserve_copies",
+    "test_pass_03.Pass03.test_retired_recovered_copy_does_not_keep_prior_space_pose",
+    "test_pass_03.Pass03.test_small_population_duplicates_wrong_family_and_budget",
+    "test_pass_03.Pass03.test_source_extension_and_checkpoint_abi_tamper_rejected",
+    "test_pass_03.Pass03.test_source_integrity_missing_corpus_and_exact_render_integer",
+    "test_pass_03b.AllBaseFields.test_all_60_source_witnesses_resolve_through_actual_package",
+    "test_pass_03b.Pass03B.test_configuring_resolved_checkpoint_and_public_byte_reconnect",
+    "test_pass_03b.Pass03B.test_deterministic_replay_different_paths",
+    "test_pass_03b.Pass03B.test_dynamic_nine_spaces_and_fusion_preserve_region_identity",
+    "test_pass_03b.Pass03B.test_emergent_instances_no_qmo_alias_and_atomic_support_publication",
+    "test_pass_03b.Pass03B.test_fusion_rollback_source_negative_owner_and_no_recursive_split",
+    "test_pass_03b.Pass03B.test_genesis_positive_predicates_transform_and_road_are_required",
+    "test_pass_03b.Pass03B.test_invalid_source_fusion_preserves_distinct_duplicate_copies",
+    "test_pass_03b.Pass03B.test_live_base_lock_identity_native_color_and_explicit_reopen",
+    "test_pass_03b.Pass03B.test_passive_three_pair_emergents_selective_loss_and_nontargetability",
+    "test_pass_03b.Pass03B.test_positive_fusion_exact_union_frames_width_and_subsumed_provenance",
+    "test_pass_03b.Pass03B.test_resolution_rollback_retry_and_postcommit_delivery",
+    "test_pass_03b.Pass03B.test_shape_orientation_partial_feedback_and_magnetic_hysteresis",
+    "test_pass_03b.Pass03B.test_stale_pose_witness_and_concurrent_resolution",
+    "test_pass_03b_math.RealizationMath.test_all_witness_memberships_edges_and_rotation_matrices",
+    "test_pass_03b_math.RealizationMath.test_candidate_magnetization_release_and_shape_only_never_lock",
+    "test_pass_03b_math.RealizationMath.test_membership_and_authority_tamper_fail_closed",
+    "test_pass_03b_math.RealizationMath.test_quaternion_sign_classes_and_thresholds",
+    "test_pass_03b_math.RealizationMath.test_reflection_scale_and_identity_permutation_are_not_equivalence",
+    "test_pass_03b_math.RealizationMath.test_se2_translation_rotation_exact_and_shared_yaw_targets",
+    "test_pass_03b_math.RealizationMath.test_simultaneous_edges_tethers_and_no_face_socket_exclusivity",
+    "test_pass_04.Pass04.test_A_generate_current_color_once_through_road",
+    "test_pass_04.Pass04.test_B_partial_repeated_spending_keeps_health_and_shield",
+    "test_pass_04.Pass04.test_C_D_shield_first_damage_and_health_first_restore",
+    "test_pass_04.Pass04.test_E_same_topology_carryover_no_implicit_heal_or_refresh",
+    "test_pass_04.Pass04.test_F_zero_color_atomic_graveyard_and_selective_emergence_loss",
+    "test_pass_04.Pass04.test_G_H_authority_windows_reservations_and_no_switch_refresh",
+    "test_pass_04.Pass04.test_Genesis_admission_transform_and_Road_cannot_be_bypassed",
+    "test_pass_04.Pass04.test_I_inactive_stays_fixed_and_white_restores_only_one_health",
+    "test_pass_04.Pass04.test_J_checkpoint_restart_deterministic_replay_and_filtered_deltas",
+    "test_pass_04.Pass04.test_atomic_generation_spend_retry_and_lost_delivery",
+    "test_pass_04.Pass04.test_catalog_binding_identity_initial_states_and_fixed_slots",
+    "test_pass_04.Pass04.test_concurrent_use_spend_and_stale_object_revisions",
+    "test_pass_04.Pass04.test_overflow_and_unsupported_targets_fail_without_consuming",
+    "test_pass_04.Pass04.test_selected_view_color_deltas_preserve_private_boundaries",
+    "test_pass_04_math.PrimeMath.test_all_health_charge_restore_degrade_states_and_overflow",
+    "test_pass_04_math.PrimeMath.test_carryover_uses_latest_pose_revision_independent_of_record_order",
+    "test_pass_04_math.PrimeMath.test_catalog_exact_fourteen_and_accepted_magnitudes",
+    "test_pass_04_math.PrimeMath.test_open_scheduler_overflow_and_nonordinary_production_not_invented",
+    "test_pass_04_math.PrimeMath.test_required_examples_and_bounded_white_reactivation",
+    "test_pass_05.Pass05.test_current_checkpoint_restart_replay_defense_order_and_road_history",
+    "test_pass_05.Pass05.test_current_genesis_admission_closure_and_road_cannot_be_bypassed",
+    "test_pass_05.Pass05.test_current_zero_retirement_selective_emergence_and_open_guards",
+    "test_pass_05.Pass05.test_defense_stored_sources_pass_timeout_compound_rollback_and_destruction",
+    "test_pass_05.Pass05.test_exhaustion_actual_empty_deck_six_stages_and_open_seventh",
+    "test_pass_05.Pass05.test_field_origin_defense_health_first_and_degrade_mediator_guard",
+    "test_pass_05.Pass05.test_nodes_turn_boundaries_partial_repeat_and_current_carryover",
+    "test_pass_05.Pass05.test_real_pass04_checkpoint_upgrade_and_canonical_migration",
+    "test_pass_05.Pass05.test_setup_hand_draw_compensation_capacity_and_privacy",
+    "test_pass_05.Pass05.test_three_inactive_terminal_before_defense_and_no_later_gameplay",
+    "test_pass_05.Pass05.test_zero_cost_utilities_require_hand_timing_target_and_white_exactness",
+    "test_pass_05_values.NodeValues.test_exact_authority_pointer_amendments_do_not_allow_corpus_changes",
+    "test_pass_05_values.NodeValues.test_native_health_first_shield_first_partial_spend_and_states",
+    "test_pass_05_values.NodeValues.test_native_integer_no_node_cap_and_exact_canonical_encoding",
+    "test_pass_05_values.NodeValues.test_negative_node_invariants_and_legacy_charge_rejected",
+    "test_pass_06.Pass06.test_complete_exhaustion_match_stages_order_defense_and_terminal",
+    "test_pass_06.Pass06.test_complete_prime_match_deterministic_replay_restart_and_terminal",
+    "test_pass_06.Pass06.test_defense_rollback_restart_timeout_privacy_and_configuration",
+    "test_pass_06.Pass06.test_draw_capacity_order_and_compensation_own_active_single_use",
+    "test_pass_06.Pass06.test_draw_deck_survey_selection_open_boundary_exchange_and_deep_survey",
+    "test_pass_06.Pass06.test_mulligan_zero_seven_repeat_replay_and_privacy",
+    "test_pass_06.Pass06.test_recovery_six_effects_capacity_identity_topology_and_prime_refusal",
+    "test_pass_06.Pass06.test_reserved_activation_seven_nonadmitted",
+    "test_pass_06.Pass06.test_reserved_sandbox_six_nonadmitted",
+    "test_pass_06.Pass06.test_reserved_stability_six_nonadmitted",
+    "test_pass_06.Pass06.test_selection_unordered_bottom_cannot_be_drawn_or_observed_inventedly",
+    "test_pass_06.Pass06.test_short_deck_effects_and_unresolved_selection_order_guard",
+    "test_pass_06.Pass06.test_simultaneous_consequence_boundary_draw_native_candidate",
+    "test_pass_06.Pass06.test_transduction_degrade_six_native_amounts_and_zero_cost",
+    "test_pass_06.Pass06.test_transduction_restore_six_native_amounts",
+    "test_pass_06.Pass06.test_transduction_universal_six_both_resolution_choices",
+    "test_pass_06.Pass06.test_white_reactivation_identity_own_active_and_open_guards",
+    "test_pass_06_security.Pass06Security.test_compiled_admission_closure_and_road_are_required",
+    "test_pass_06_security.Pass06Security.test_exact_utility_registry_source_and_open_authority",
+    "test_runtime.RuntimeTests.test_application_cannot_inherit_machine_domains",
+    "test_runtime.RuntimeTests.test_backpressure_before_mutation",
+    "test_runtime.RuntimeTests.test_candidate_rollback_and_budget",
+    "test_runtime.RuntimeTests.test_checkpoint_restart_corruption_and_confinement",
+    "test_runtime.RuntimeTests.test_delivery_failure_recovery",
+    "test_runtime.RuntimeTests.test_expired_retry_is_never_reexecuted",
+    "test_runtime.RuntimeTests.test_missing_and_tampered_sources",
+    "test_runtime.RuntimeTests.test_native_boot_identities_and_containment",
+    "test_runtime.RuntimeTests.test_output_delivery_failure_retains_committed_outcome",
+    "test_runtime.RuntimeTests.test_privacy_and_scope",
+    "test_runtime.RuntimeTests.test_projection_gap_receipt_clock_and_reconnect",
+    "test_runtime.RuntimeTests.test_quiesce_close_and_replay",
+    "test_runtime.RuntimeTests.test_real_joint_trace_and_identity_history",
+    "test_runtime.RuntimeTests.test_retry_conflict_concurrent_scope_and_stale",
+    "test_runtime.RuntimeTests.test_route_admission_and_open_resource_rejections"
+  ],
+  "preserved_tests": {
+    "tests/README.md": "be54cec5c460795ee97ec3b7a2978acd50da27c0d910177be6b1df8d3bd4eb70",
+    "tests/adversarial/README.md": "e48040bb18f9edcf530517c1c83b608ef10cfb203053a77a070c74bb7b0415ec",
+    "tests/gameplay/README.md": "3f993c4254c5a2c687441bf0d8d6f8db5ca1447fd0b235b813a6ea807a0400e9",
+    "tests/gameplay/cards/README.md": "6db204711098a4046586c129363a252c794d371fc26918cbd6f29a17761a0eae",
+    "tests/gameplay/cards/containers.test.mjs": "31d2f93747b420cb288837adb02988dd4e82be208b86dedf4bb702a4980244c4",
+    "tests/gameplay/manifolds/README.md": "27ab09fdfec91b8367090c85addee0ba377fbb67b6873744578ee3235b8dd063",
+    "tests/gameplay/manifolds/relationships.test.mjs": "79356f89e64109627136275724e3e07634a2a3d8768f76e534b97458ad98214d",
+    "tests/gameplay/primes/README.md": "7d820bd990d83bc54b1dabdf54d7a44f2727c2bc3ffd5e33ed52241a28554f36",
+    "tests/gameplay/primes/constitution.test.mjs": "07acbd12c4751fdf11803d1991adc34fb87440c34747cc5c2a9d3fb03ea68091",
+    "tests/gameplay/rule-model.mjs": "ff0db390050b0e565f007e122c33fa4b6d311dce625fbc58cc261ae347c02b0a",
+    "tests/gameplay/sandbox/README.md": "fd6a098c1f610baef3c02ae448085913a44a8e2c3bef01e22e7a0ef3676c7f93",
+    "tests/gameplay/sandbox/configuration.test.mjs": "0ea61d2a502551d06b147e6d10dfa983d48f69b3f3a9f65c636134da16c45b49",
+    "tests/gameplay/transduction/README.md": "f9bca5541d3668e3636b3deebf6abaa688126b955dac3edd31caeeaf0637dada",
+    "tests/gameplay/utilities/README.md": "6d3e98f4701cc42a3ec4b4b42ae7a2b441ac9c7ada14e6d5467c3d166b568918",
+    "tests/integration/README.md": "0b4ee3dcb54da33bacfae312fb59680aa03f1f8eff78142f169e01ab6bbf8f4a",
+    "tests/integration/genesis_horizon/application/manifest.json": "5b75f8ba699ac232506deb36daf8cbed7ada820296504aa1c9b5b72ca3f6fc0d",
+    "tests/integration/genesis_horizon/application/observe.gen": "3b1e143fe249a0265d3e528b44da6afb19df68a71a7da709faa01303d1e165d5",
+    "tests/integration/genesis_horizon/application/realize.gen": "e51beb13f64233bac570f9de54372cbb33882c554fd32e79c5625f525eefb3df",
+    "tests/integration/genesis_horizon/application/relate.gen": "d0bf5fa5c34ce950450ccbbd773f21c277675f72bb8766e1e7364d48250b6798",
+    "tests/integration/genesis_horizon/application/transform.gen": "474c068858ee91075abf0563694b26a9a50c3dfbe0ad0d1cae9659d69d3f5829",
+    "tests/integration/genesis_horizon/cases/acceptance.json": "43c45859588439a674c5c97461cdd0213f9f54a7ac474ba8d8729b3cd96f04b3",
+    "tests/integration/genesis_horizon/cases/pass_01_acceptance.json": "a9d79f83731fd2508843b8e5852e95822c02f0e6aa159cd76d5319a3c1a41b4c",
+    "tests/integration/genesis_horizon/fixtures/pass04-checkpoint.json": "6361a1820b5f1e7263aec9c28e0410983219d78d3d4318a90c78daf1d9b2b893",
+    "tests/integration/genesis_horizon/fixtures/pass04-checkpoint.zip": "e709e2bd1cd9f74209efc7510fa274f797690c118e00b416176cb59bf347318c",
+    "tests/integration/genesis_horizon/pass_01_application/README.md": "c791863b5d63eab9da164ac95a843f5960b0d08e8a1e10300b3bd503b00610ec",
+    "tests/integration/genesis_horizon/pass_01_application/definitions.json": "32963db30b12111662940652e7da412f5d58139322e4dd52f0225257183bc9e3",
+    "tests/integration/genesis_horizon/pass_01_application/manifest.json": "45b4bfa719f6523ef0bda399c40887ec772e752be862e4e274fb5cdf93f65eec",
+    "tests/integration/genesis_horizon/pass_01_application/raeon_observe.gen": "06a54be1db2dfe491e0ea431ad2ba79a97db4cf4f009163c372058a149406e73",
+    "tests/integration/genesis_horizon/pass_01_application/raeon_realize.gen": "448cbfe495cd7133eb9576f8e9e462c32d7d3dc0e623714f9a0b9ebf46f3ff0a",
+    "tests/integration/genesis_horizon/pass_01_support.py": "dd8dcccaf6903f02deeedb6bfac8dbfd20b9c620f0c59a3afba3877ba6ef5e90",
+    "tests/integration/genesis_horizon/pass_02_acceptance.json": "4a66fd935799d5d3783d3bc1b060ef377e139538b2e24cf837ec3511f8083079",
+    "tests/integration/genesis_horizon/pass_02_support.py": "0988e3d034092cb332e423da17b2009403a32f66d5255bce51059f783cbee6e7",
+    "tests/integration/genesis_horizon/pass_03b_support.py": "dd8b9b3d5e3b418e3364d01fd35b50fa5e292ab281648eae4ec78251a9e67dfe",
+    "tests/integration/genesis_horizon/pass_04_support.py": "fef3c4470272238c8aaa9b7fc67a1db3b635746ee9241945c0ef3c098064ecf1",
+    "tests/integration/genesis_horizon/pass_05_support.py": "fd1b59ef940e778ec39a80ed283a37b0ab6da32bdf86967b3a8eb2160acbf158",
+    "tests/integration/genesis_horizon/support.py": "e28c0da3485ef89e1546426e7f9f09044181918b08b78bd469694658243e311c",
+    "tests/integration/genesis_horizon/test_distribution.py": "ece22f4f5249b9ede994f83f94d55fbd08601e102868e8a20396f0eae2848948",
+    "tests/integration/genesis_horizon/test_pass_01.py": "fe6eb0218f2b17c133d898547e168420b56fec529b779944fdd535502e95eba5",
+    "tests/integration/genesis_horizon/test_pass_02.py": "0b51116359aa171a47ec87b3f74728da0ed3ec31e23701031cecce968853ef3e",
+    "tests/integration/genesis_horizon/test_pass_02_adversarial.py": "17620307457133570a06ac9b33f4b21c5a57b0f13dd2b5c842d8e051f3afaf82",
+    "tests/integration/genesis_horizon/test_pass_02_projection_privacy.py": "1180a6c2d3168b73bc91b5b24f7e633240a2d2ac6e42ef9f5fb3d742e304e6d1",
+    "tests/integration/genesis_horizon/test_pass_02_transactions.py": "53d87e1149a904aa597db96ebd095d04eabe5f87e40b4eb9cabd6fad7a9ae8c1",
+    "tests/integration/genesis_horizon/test_pass_03.py": "14ae833120768e80f02c5efadfa5bf782231a3b1e63c5f22799c751187f2fe37",
+    "tests/integration/genesis_horizon/test_pass_03b.py": "5a6aff2ec82a5bcfe07f432b5dde4b4304ea0d227c5649a5bda35823806e09a4",
+    "tests/integration/genesis_horizon/test_pass_03b_math.py": "8ccb8c48e4190ae6d23f27da2afa5a4a0ff6dd0878a90b0d957e7c6267dc77c2",
+    "tests/integration/genesis_horizon/test_pass_04.py": "d0e1ee5cb4583a2e49088c6747b236c481fd765e97c3e08d3850ed99751af203",
+    "tests/integration/genesis_horizon/test_pass_04_math.py": "32eb82e3392b3f124ebcd1f3fabbe893d64732307ffc7156f8a21d0adc421fb8",
+    "tests/integration/genesis_horizon/test_pass_05.py": "28f53eceab230b089b0ad2469454b6d4aada141b02d85012c9a5cdea988b6c3e",
+    "tests/integration/genesis_horizon/test_pass_05_values.py": "3c8a29616c5de91a291e3a03367cb6136dc73d4b655c80851bc3cc320d325471",
+    "tests/integration/genesis_horizon/test_runtime.py": "cb3296dc16a6c1f9985330f3c6ea66bc6622eb6eb0c9f4968052789a3b75f750",
+    "tests/multiplayer/README.md": "3bbebdcc1326452a7124f26ddb7c542fa3daf73786809b3558cf2b792425d0a8",
+    "tests/performance/README.md": "8bd0739d827fa0a94aa094a5702e5dc72d5a839eb2566f413bd33764b0698256",
+    "tests/qmo/README.md": "d3fb7c70e1915d6be0a0c81a10e16a5f82c847a34ce14b6c4034282aee9981de",
+    "tests/regression/README.md": "19636c93c185b3e2f4cf763f1106d967998e89759d74f94a29d5126e1f953371",
+    "tests/regression/bootstrap-validator.test.mjs": "27cbb5270ea5285bfccce82ee6ced6c5519f632b6f63bc21c94329a6236e5c04",
+    "tests/regression/continuity-validator.test.mjs": "1f530403a6c856374be2a148c3e9405342901939542e9dbcd40fc4d75ad83c8f",
+    "tests/regression/cycle1-import.test.mjs": "d5df7f90d4e180406ed543f464e6d5ff317513221da23843c533b8a8eff88301",
+    "tests/regression/design-state-validator.test.mjs": "8baae115e0043b7f27e2dfa827122adfd393c2e6739a1cf993fe8c44e0ca3a83",
+    "tests/regression/fixture-files.mjs": "9a341142285e0a50f741ff9126c8233a6ca24f60df9e69570819fc86408ea86a",
+    "tests/regression/full-migration.test.mjs": "895651b9f4dacd0406e9b7e99bc19c669121e6458d061db8b34987c66d117b41",
+    "tests/regression/game-definition.test.mjs": "3a89ea93d52b0344427f4e55bfeddf08e1529a319330b2b2b591c0a84d273e4e",
+    "tests/regression/genesis-runtime-contract.test.mjs": "2da63239e198956430d63ca3d13055eb8373f931a60344b46e528c5ad218ebec",
+    "tests/regression/normalization-validator.test.mjs": "f9adab71b10eb3550e2deefc7ca6ff91e6582656c15561c3e8e463a6a23c8102",
+    "tests/regression/pass-01-contract.test.mjs": "18710bea35305e4b838a5ff0b5e2c6445b210d6c5efcfb36b7ab316dd44cfc1e",
+    "tests/regression/pass-02-contract.test.mjs": "7f5a3005e709bf84f66def4b9099d57bc98d72bc427d0a88ad7ed6b26d532b95",
+    "tests/regression/pass-02-projection-contract.test.mjs": "8cc76c1777e079fd2034584b70832837f1830530b2fdf5d2841b6042f2be5e4e",
+    "tests/regression/pass-03-contract.test.mjs": "760521ccac2c56107440f9c8989f92d9ffba9cfa3e90fad384629445cf16f01e",
+    "tests/regression/pass-03b-contract.test.mjs": "2a4ca0988ec67c2d4c3903563297b2970f484fcbc6da6f04babf96131adc044b",
+    "tests/regression/pass-04-contract.test.mjs": "0798f89fcb3709eae619369bd5bdf36172b5b0478f8368c58c5b7d74fb2cb8e2",
+    "tests/regression/pass-05-contract.test.mjs": "95d45e4b39507991470621fe474fc2a78821dfb62e46f25496b2d7839a028d94",
+    "tests/rendering/README.md": "30ce1193d07e4a43d6fcc4337e63e58baa8d83f1ac4655bd3761910dc7387bf2",
+    "tests/unit/README.md": "10baecdb96d8a6d92ed05c4c43e6b8c83ee229c53095e39326658de61fcb7fad",
+    "tests/unit/hypervisor/test_codec.py": "53572e2cf19ae2475377c9768efaf7173581ea02d32308725d07ddd4915fbbae"
+  },
+  "sealed_receipts": {
+    "development/modules/core-game/PASS_05_EXECUTION.md": "83fb65157a7bd3ea8e08fea43dc7382559231be782327ade5a632ca5b7c0cdc9",
+    "development/modules/core-game/PASS_05_PROGRESS.json": "f0c64786c337b4241a385cb009a6cfdc56c97764837a092f0633adac7959b09b",
+    "development/modules/core-game/PASS_05_RECEIPT.md": "85a5a26c24679871fa6c9c259bd997fe7dc367c3dc54f258b4b946f6ad1909b1"
+  },
+  "qmo_sources": {
+    "data/cycles/cycle_01/field_generators/objects.json": "c8bd56021e95d80ffb677e31f69a864f4ff02bf6db97304edba9dfe8fa879e62",
+    "data/qmo/manifolds/objects.json": "d8c66b09e7f98e32e0d937afa231a99e15b3fb3924fcfd0546eebdec1eb2cde2",
+    "data/qmo/fusion/objects.json": "0e48912b56d112f9f14f21fe6c5252500d43d57d68343dfd96369c5366c86c23",
+    "data/qmo/emergent/objects.json": "fd2a2a31f90848bde0ff4c533c6d62580d37efdbc97d6d070f719b07e50e725c",
+    "data/qmo/cycle1/derived_qmos.json": "4cd701f1335eb41c944c12ce92fb0e93ec5bc5b7d358631ffeff389864c19325",
+    "data/qmo/cycle1/atlas.json": "2febd32e9e2ee218ae3e71c63f975525cdbeed05f11e40d97a794997bf067b12",
+    "data/qmo/cycle1/manifold_pair_relations.json": "558ddaae14cb21a54e2cc42333971fbb11c94f10b7c91ea9b1f29e28418fd6a7",
+    "data/qmo/generators/compatibility.json": "0f7aa8b8097757a9e38724ea0f016926a6344ef71451c9f4686f63770df9d0bc",
+    "data/qmo/cycle1/playfield_summary.json": "66217cd20aca5f8509d775cb822f641cf9311117d92743da3b8baf2ee5ed3eaf",
+    "data/qmo/cycle1/qmo.sqlite": "2945e86691165f9105aad6d29ec31f5a6cdde72fab0f5a929e3a254efdd588eb",
+    "data/render_specs/cycle_01/catalog.json": "383bed873f5a4c5f519d2848e1e1b3cd30498cb21d94f758910de4b08cd27530"
+  },
+  "catalog_sha256": "81d3cecc107d46e1c5d99dd8b1fe719fcd4569c461e9fbb115c428ddf0fba26a",
+  "open_items": [
+    {
+      "id": "P6-OPEN-001",
+      "topic": "compensation final name/id/flavor"
+    },
+    {
+      "id": "P6-OPEN-002",
+      "topic": "Selection remainder ordering"
+    },
+    {
+      "id": "P6-OPEN-003",
+      "topic": "Activation Utility rank differentiation/eligibility"
+    },
+    {
+      "id": "P6-OPEN-004",
+      "topic": "temporary Configuration Space expiry/destruction"
+    },
+    {
+      "id": "P6-OPEN-005",
+      "topic": "Stability/Protection rank/magnitude/duration/timing"
+    },
+    {
+      "id": "P6-OPEN-006",
+      "topic": "recursive fusion/emergence"
+    },
+    {
+      "id": "P6-OPEN-007",
+      "topic": "derived additions/splitting"
+    },
+    {
+      "id": "P6-OPEN-008",
+      "topic": "derived/emergent production cadence"
+    },
+    {
+      "id": "P6-OPEN-009",
+      "topic": "native graphics/presentation"
+    },
+    {
+      "id": "P6-OPEN-010",
+      "topic": "HOST-RUNTIME-001 OPEN_QUALIFIED"
+    },
+    {
+      "id": "P6-OPEN-011",
+      "topic": "final Utility names/flavor/IDs"
+    },
+    {
+      "id": "P6-OPEN-012",
+      "topic": "balance tuning after Pass-07 telemetry"
+    }
+  ],
+  "whole_game_phase": "PREPRODUCTION",
+  "pass07_implemented": false,
+  "selection_boundary": "Unordered remainder band; ordered access rejects, authorized shuffle resolves",
+  "utility_disposition": "Inherited unspecified; no generic consumption law invented",
+  "simultaneous_fixture": "Controlled native consequence boundary; no public action invented"
+}

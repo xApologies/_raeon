@@ -86,7 +86,8 @@ class Horizon:
         return {'bindings': b.bindings, 'relations': b.relations, 'resources': b.resources,
                 'ledger': b.ledger, 'allocator': b.allocator.snapshot(), 'road_history': b.road_history,
                 'native_receipts': b.native_receipts, 'application_definitions': b.application_definitions,
-                'realization_relations': b.realization_relations, 'application_values': b.application_values}
+                'realization_relations': b.realization_relations, 'application_values': b.application_values,
+                'transport': b.transport_record()}
 
     def _restore_record(self, record):
         b = self._backend
@@ -97,6 +98,7 @@ class Horizon:
         b.realization_relations = copy.deepcopy(record.get('realization_relations', []))
         b.allocator.entries = copy.deepcopy(record['allocator']['entries'])
         b.application_values = copy.deepcopy(record.get('application_values', {}))
+        b.restore_transport(record.get('transport'))
         if not b.application_values:
             b.collections = None
         b.pending = {}

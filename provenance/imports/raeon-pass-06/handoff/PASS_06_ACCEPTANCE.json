@@ -1,0 +1,766 @@
+{
+  "schema_version": 1,
+  "pass": "06",
+  "title": "Headless Gameplay Closure",
+  "required_base_sha": "388a241ba5674c157131601aad677ab52350f2c6",
+  "target_branch": "codex/raeon-pass-06",
+  "total": 108,
+  "cases": [
+    {
+      "id": "P6-001",
+      "group": "ENTRY",
+      "title": "base",
+      "expected": "388a241ba5674c157131601aad677ab52350f2c6",
+      "mandatory": true
+    },
+    {
+      "id": "P6-002",
+      "group": "ENTRY",
+      "title": "P5",
+      "expected": "140/140 preserved",
+      "mandatory": true
+    },
+    {
+      "id": "P6-003",
+      "group": "ENTRY",
+      "title": "QMO",
+      "expected": "unchanged",
+      "mandatory": true
+    },
+    {
+      "id": "P6-004",
+      "group": "ENTRY",
+      "title": "privacy",
+      "expected": "preserved",
+      "mandatory": true
+    },
+    {
+      "id": "P6-005",
+      "group": "ENTRY",
+      "title": "_bricked",
+      "expected": "read-only",
+      "mandatory": true
+    },
+    {
+      "id": "P6-006",
+      "group": "ENTRY",
+      "title": "State",
+      "expected": "authority",
+      "mandatory": true
+    },
+    {
+      "id": "P6-007",
+      "group": "ENTRY",
+      "title": "Road",
+      "expected": "sole transport",
+      "mandatory": true
+    },
+    {
+      "id": "P6-008",
+      "group": "ENTRY",
+      "title": "HOST",
+      "expected": "OPEN_QUALIFIED",
+      "mandatory": true
+    },
+    {
+      "id": "P6-009",
+      "group": "ENTRY",
+      "title": "main",
+      "expected": "unmerged",
+      "mandatory": true
+    },
+    {
+      "id": "P6-010",
+      "group": "MULLIGAN",
+      "title": "opportunity",
+      "expected": "one",
+      "mandatory": true
+    },
+    {
+      "id": "P6-011",
+      "group": "MULLIGAN",
+      "title": "0 cards",
+      "expected": "legal",
+      "mandatory": true
+    },
+    {
+      "id": "P6-012",
+      "group": "MULLIGAN",
+      "title": "7 cards",
+      "expected": "legal",
+      "mandatory": true
+    },
+    {
+      "id": "P6-013",
+      "group": "MULLIGAN",
+      "title": "return",
+      "expected": "Deck",
+      "mandatory": true
+    },
+    {
+      "id": "P6-014",
+      "group": "MULLIGAN",
+      "title": "shuffle",
+      "expected": "after return",
+      "mandatory": true
+    },
+    {
+      "id": "P6-015",
+      "group": "MULLIGAN",
+      "title": "redraw",
+      "expected": "same count",
+      "mandatory": true
+    },
+    {
+      "id": "P6-016",
+      "group": "MULLIGAN",
+      "title": "repeat",
+      "expected": "reject",
+      "mandatory": true
+    },
+    {
+      "id": "P6-017",
+      "group": "MULLIGAN",
+      "title": "penalty",
+      "expected": "none",
+      "mandatory": true
+    },
+    {
+      "id": "P6-018",
+      "group": "HAND",
+      "title": "max",
+      "expected": "10",
+      "mandatory": true
+    },
+    {
+      "id": "P6-019",
+      "group": "HAND",
+      "title": "full draw",
+      "expected": "0",
+      "mandatory": true
+    },
+    {
+      "id": "P6-020",
+      "group": "HAND",
+      "title": "8+Draw3",
+      "expected": "2",
+      "mandatory": true
+    },
+    {
+      "id": "P6-021",
+      "group": "HAND",
+      "title": "undrawn",
+      "expected": "remain ordered",
+      "mandatory": true
+    },
+    {
+      "id": "P6-022",
+      "group": "HAND",
+      "title": "burn",
+      "expected": "none",
+      "mandatory": true
+    },
+    {
+      "id": "P6-023",
+      "group": "HAND",
+      "title": "exile",
+      "expected": "none",
+      "mandatory": true
+    },
+    {
+      "id": "P6-024",
+      "group": "HAND",
+      "title": "effect draw",
+      "expected": "capacity",
+      "mandatory": true
+    },
+    {
+      "id": "P6-025",
+      "group": "HAND",
+      "title": "compensation",
+      "expected": "capacity",
+      "mandatory": true
+    },
+    {
+      "id": "P6-026",
+      "group": "MATCH",
+      "title": "compensation",
+      "expected": "own ACTIVE",
+      "mandatory": true
+    },
+    {
+      "id": "P6-027",
+      "group": "MATCH",
+      "title": "single",
+      "expected": "yes",
+      "mandatory": true
+    },
+    {
+      "id": "P6-028",
+      "group": "MATCH",
+      "title": "cost",
+      "expected": "0",
+      "mandatory": true
+    },
+    {
+      "id": "P6-029",
+      "group": "MATCH",
+      "title": "draw",
+      "expected": "1",
+      "mandatory": true
+    },
+    {
+      "id": "P6-030",
+      "group": "MATCH",
+      "title": "name",
+      "expected": "OPEN",
+      "mandatory": true
+    },
+    {
+      "id": "P6-031",
+      "group": "MATCH",
+      "title": "simultaneous",
+      "expected": "DRAW",
+      "mandatory": true
+    },
+    {
+      "id": "P6-032",
+      "group": "MATCH",
+      "title": "post terminal",
+      "expected": "reject",
+      "mandatory": true
+    },
+    {
+      "id": "P6-033",
+      "group": "EXHAUSTION",
+      "title": "1",
+      "expected": "R1",
+      "mandatory": true
+    },
+    {
+      "id": "P6-034",
+      "group": "EXHAUSTION",
+      "title": "2",
+      "expected": "O2",
+      "mandatory": true
+    },
+    {
+      "id": "P6-035",
+      "group": "EXHAUSTION",
+      "title": "3",
+      "expected": "Y3",
+      "mandatory": true
+    },
+    {
+      "id": "P6-036",
+      "group": "EXHAUSTION",
+      "title": "4",
+      "expected": "G4",
+      "mandatory": true
+    },
+    {
+      "id": "P6-037",
+      "group": "EXHAUSTION",
+      "title": "5",
+      "expected": "B5",
+      "mandatory": true
+    },
+    {
+      "id": "P6-038",
+      "group": "EXHAUSTION",
+      "title": "6",
+      "expected": "V6",
+      "mandatory": true
+    },
+    {
+      "id": "P6-039",
+      "group": "EXHAUSTION",
+      "title": "7",
+      "expected": "W7",
+      "mandatory": true
+    },
+    {
+      "id": "P6-040",
+      "group": "EXHAUSTION",
+      "title": "8+",
+      "expected": "W7",
+      "mandatory": true
+    },
+    {
+      "id": "P6-041",
+      "group": "EXHAUSTION",
+      "title": "A",
+      "expected": "until inactive",
+      "mandatory": true
+    },
+    {
+      "id": "P6-042",
+      "group": "EXHAUSTION",
+      "title": "B",
+      "expected": "next",
+      "mandatory": true
+    },
+    {
+      "id": "P6-043",
+      "group": "EXHAUSTION",
+      "title": "C",
+      "expected": "next",
+      "mandatory": true
+    },
+    {
+      "id": "P6-044",
+      "group": "EXHAUSTION",
+      "title": "order",
+      "expected": "A->B->C",
+      "mandatory": true
+    },
+    {
+      "id": "P6-045",
+      "group": "EXHAUSTION",
+      "title": "damage",
+      "expected": "Q then H",
+      "mandatory": true
+    },
+    {
+      "id": "P6-046",
+      "group": "EXHAUSTION",
+      "title": "defense",
+      "expected": "normal",
+      "mandatory": true
+    },
+    {
+      "id": "P6-047",
+      "group": "EXHAUSTION",
+      "title": "third",
+      "expected": "terminal",
+      "mandatory": true
+    },
+    {
+      "id": "P6-048",
+      "group": "EXHAUSTION",
+      "title": "failed draw",
+      "expected": "no card",
+      "mandatory": true
+    },
+    {
+      "id": "P6-049",
+      "group": "TRANSDUCTION",
+      "title": "count",
+      "expected": "18",
+      "mandatory": true
+    },
+    {
+      "id": "P6-050",
+      "group": "TRANSDUCTION",
+      "title": "Restore",
+      "expected": "1..6",
+      "mandatory": true
+    },
+    {
+      "id": "P6-051",
+      "group": "TRANSDUCTION",
+      "title": "Degrade",
+      "expected": "1..6",
+      "mandatory": true
+    },
+    {
+      "id": "P6-052",
+      "group": "TRANSDUCTION",
+      "title": "Universal",
+      "expected": "\u00b11..\u00b16",
+      "mandatory": true
+    },
+    {
+      "id": "P6-053",
+      "group": "TRANSDUCTION",
+      "title": "choice",
+      "expected": "resolution",
+      "mandatory": true
+    },
+    {
+      "id": "P6-054",
+      "group": "TRANSDUCTION",
+      "title": "authority",
+      "expected": "ACTIVE",
+      "mandatory": true
+    },
+    {
+      "id": "P6-055",
+      "group": "TRANSDUCTION",
+      "title": "White dedicated",
+      "expected": "absent",
+      "mandatory": true
+    },
+    {
+      "id": "P6-056",
+      "group": "DRAW",
+      "title": "Draw1",
+      "expected": "yes",
+      "mandatory": true
+    },
+    {
+      "id": "P6-057",
+      "group": "DRAW",
+      "title": "Draw2",
+      "expected": "yes",
+      "mandatory": true
+    },
+    {
+      "id": "P6-058",
+      "group": "DRAW",
+      "title": "Draw3",
+      "expected": "yes",
+      "mandatory": true
+    },
+    {
+      "id": "P6-059",
+      "group": "DRAW",
+      "title": "Survey",
+      "expected": "top3",
+      "mandatory": true
+    },
+    {
+      "id": "P6-060",
+      "group": "DRAW",
+      "title": "Selection",
+      "expected": "top3",
+      "mandatory": true
+    },
+    {
+      "id": "P6-061",
+      "group": "DRAW",
+      "title": "remainder order",
+      "expected": "OPEN",
+      "mandatory": true
+    },
+    {
+      "id": "P6-062",
+      "group": "DRAW",
+      "title": "Exchange",
+      "expected": "graveyard then draw",
+      "mandatory": true
+    },
+    {
+      "id": "P6-063",
+      "group": "DRAW",
+      "title": "Exchange cap",
+      "expected": "partial",
+      "mandatory": true
+    },
+    {
+      "id": "P6-064",
+      "group": "DRAW",
+      "title": "Deep Survey",
+      "expected": "top7",
+      "mandatory": true
+    },
+    {
+      "id": "P6-065",
+      "group": "DRAW",
+      "title": "short deck",
+      "expected": "available only",
+      "mandatory": true
+    },
+    {
+      "id": "P6-066",
+      "group": "DRAW",
+      "title": "source",
+      "expected": "Hand",
+      "mandatory": true
+    },
+    {
+      "id": "P6-067",
+      "group": "DRAW",
+      "title": "cost",
+      "expected": "0",
+      "mandatory": true
+    },
+    {
+      "id": "P6-068",
+      "group": "RECOVERY",
+      "title": "FG1",
+      "expected": "Hand",
+      "mandatory": true
+    },
+    {
+      "id": "P6-069",
+      "group": "RECOVERY",
+      "title": "FG2",
+      "expected": "Hand",
+      "mandatory": true
+    },
+    {
+      "id": "P6-070",
+      "group": "RECOVERY",
+      "title": "FG3",
+      "expected": "Hand",
+      "mandatory": true
+    },
+    {
+      "id": "P6-071",
+      "group": "RECOVERY",
+      "title": "Utility1",
+      "expected": "Hand",
+      "mandatory": true
+    },
+    {
+      "id": "P6-072",
+      "group": "RECOVERY",
+      "title": "nonPrime1",
+      "expected": "Hand",
+      "mandatory": true
+    },
+    {
+      "id": "P6-073",
+      "group": "RECOVERY",
+      "title": "up3",
+      "expected": "Deck top",
+      "mandatory": true
+    },
+    {
+      "id": "P6-074",
+      "group": "RECOVERY",
+      "title": "Prime",
+      "expected": "reject",
+      "mandatory": true
+    },
+    {
+      "id": "P6-075",
+      "group": "RECOVERY",
+      "title": "capacity",
+      "expected": "enforce",
+      "mandatory": true
+    },
+    {
+      "id": "P6-076",
+      "group": "RECOVERY",
+      "title": "topology",
+      "expected": "not resurrected",
+      "mandatory": true
+    },
+    {
+      "id": "P6-077",
+      "group": "WHITE",
+      "title": "reactivate",
+      "expected": "yes",
+      "mandatory": true
+    },
+    {
+      "id": "P6-078",
+      "group": "WHITE",
+      "title": "state",
+      "expected": "H1N0R0",
+      "mandatory": true
+    },
+    {
+      "id": "P6-079",
+      "group": "WHITE",
+      "title": "identity",
+      "expected": "same",
+      "mandatory": true
+    },
+    {
+      "id": "P6-080",
+      "group": "WHITE",
+      "title": "timing",
+      "expected": "own ACTIVE",
+      "mandatory": true
+    },
+    {
+      "id": "P6-081",
+      "group": "WHITE",
+      "title": "cost",
+      "expected": "0",
+      "mandatory": true
+    },
+    {
+      "id": "P6-082",
+      "group": "WHITE",
+      "title": "noninactive",
+      "expected": "reject",
+      "mandatory": true
+    },
+    {
+      "id": "P6-083",
+      "group": "RESERVED",
+      "title": "Activation7",
+      "expected": "reserved",
+      "mandatory": true
+    },
+    {
+      "id": "P6-084",
+      "group": "RESERVED",
+      "title": "Sandbox6",
+      "expected": "reserved",
+      "mandatory": true
+    },
+    {
+      "id": "P6-085",
+      "group": "RESERVED",
+      "title": "Stability6",
+      "expected": "reserved",
+      "mandatory": true
+    },
+    {
+      "id": "P6-086",
+      "group": "RESERVED",
+      "title": "structural",
+      "expected": "51",
+      "mandatory": true
+    },
+    {
+      "id": "P6-087",
+      "group": "RESERVED",
+      "title": "runtime",
+      "expected": "32",
+      "mandatory": true
+    },
+    {
+      "id": "P6-088",
+      "group": "RESERVED",
+      "title": "config ordinary",
+      "expected": "preserved",
+      "mandatory": true
+    },
+    {
+      "id": "P6-089",
+      "group": "RESERVED",
+      "title": "advanced",
+      "expected": "OPEN",
+      "mandatory": true
+    },
+    {
+      "id": "P6-090",
+      "group": "HEADLESS",
+      "title": "complete match",
+      "expected": "setup->terminal",
+      "mandatory": true
+    },
+    {
+      "id": "P6-091",
+      "group": "HEADLESS",
+      "title": "Prime terminal",
+      "expected": "deterministic",
+      "mandatory": true
+    },
+    {
+      "id": "P6-092",
+      "group": "HEADLESS",
+      "title": "exhaustion terminal",
+      "expected": "deterministic",
+      "mandatory": true
+    },
+    {
+      "id": "P6-093",
+      "group": "HEADLESS",
+      "title": "mulligan replay",
+      "expected": "deterministic",
+      "mandatory": true
+    },
+    {
+      "id": "P6-094",
+      "group": "HEADLESS",
+      "title": "defense replay",
+      "expected": "ordered",
+      "mandatory": true
+    },
+    {
+      "id": "P6-095",
+      "group": "HEADLESS",
+      "title": "Utilities",
+      "expected": "participate",
+      "mandatory": true
+    },
+    {
+      "id": "P6-096",
+      "group": "HEADLESS",
+      "title": "checkpoint",
+      "expected": "restart",
+      "mandatory": true
+    },
+    {
+      "id": "P6-097",
+      "group": "HEADLESS",
+      "title": "privacy",
+      "expected": "midmatch",
+      "mandatory": true
+    },
+    {
+      "id": "P6-098",
+      "group": "HEADLESS",
+      "title": "rollback",
+      "expected": "atomic",
+      "mandatory": true
+    },
+    {
+      "id": "P6-099",
+      "group": "HEADLESS",
+      "title": "Road evidence",
+      "expected": "audited",
+      "mandatory": true
+    },
+    {
+      "id": "P6-100",
+      "group": "HEADLESS",
+      "title": "offline",
+      "expected": "self-contained",
+      "mandatory": true
+    },
+    {
+      "id": "P6-101",
+      "group": "HEADLESS",
+      "title": "historical",
+      "expected": "rerun",
+      "mandatory": true
+    },
+    {
+      "id": "P6-102",
+      "group": "DELIVERY",
+      "title": "cases",
+      "expected": "accounted",
+      "mandatory": true
+    },
+    {
+      "id": "P6-103",
+      "group": "DELIVERY",
+      "title": "OPEN",
+      "expected": "preserved",
+      "mandatory": true
+    },
+    {
+      "id": "P6-104",
+      "group": "DELIVERY",
+      "title": "files",
+      "expected": "inventory",
+      "mandatory": true
+    },
+    {
+      "id": "P6-105",
+      "group": "DELIVERY",
+      "title": "hashes",
+      "expected": "manifest",
+      "mandatory": true
+    },
+    {
+      "id": "P6-106",
+      "group": "DELIVERY",
+      "title": "branch",
+      "expected": "clean/pushed",
+      "mandatory": true
+    },
+    {
+      "id": "P6-107",
+      "group": "DELIVERY",
+      "title": "status",
+      "expected": "PREPRODUCTION",
+      "mandatory": true
+    },
+    {
+      "id": "P6-108",
+      "group": "DELIVERY",
+      "title": "Pass7",
+      "expected": "not silently implemented",
+      "mandatory": true
+    }
+  ]
+}

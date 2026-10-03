@@ -1,0 +1,2 @@
+# Vera Audit Rubric
+Reject for wrong ancestry; weakened inherited tests/QMO/privacy; _bricked writes; Python gameplay authority; Rainbow Road bypass; wrong mulligan/overflow/compensation/exhaustion/simultaneous-terminal semantics; exhaustion bypassing ordinary DEFENSE; guessed behavior for reserved 19 Utilities or advanced Configuration; lost 51-slot structure; erased HOST-RUNTIME-001; production/graphics claims; or unexecuted acceptance marked PASS.

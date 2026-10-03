@@ -59,6 +59,10 @@ def protected_sources_preserved(root,baseline,changed,prefixes):
 
 
 def successor(root,branch):
+    if branch=='codex/raeon-pass-06':
+        from genesis_runtime_pass06 import successor as pass06_successor
+        if not pass06_successor(root,branch):return False
+        branch='codex/raeon-pass-05'
     if branch!='codex/raeon-pass-05':return False
     entry=root/'provenance/imports/raeon-pass-05/entry.json'
     if not entry.is_file():return False
@@ -147,10 +151,16 @@ def audit(root,output):
     inherited=all(read(name).get('status')=='PASS' and read(name).get('passed')==count for name,count in [
         ('acceptance.json',74),('pass-02-acceptance.json',83),('projection-correction-acceptance.json',8),
         ('pass-03-acceptance.json',98),('pass-03b-acceptance.json',85),('pass-04-acceptance.json',108)])
+    expected_compiled,expected_tests=60,136
+    if branch=='codex/raeon-pass-06' and ancestry:
+        following=data('provenance/decisions/raeon-pass-06.json')
+        expected_compiled,expected_tests=following['compiled_total'],following['integration_total']
+        preserved=data('provenance/imports/raeon-pass-06/entry.json')['compiled_sources']
+        original_preserved=original_preserved and len(preserved)==60 and all(all(build.get(p,{}).get(k)==v[k] for k in ('source_sha256','bytecode_sha256')) for p,v in preserved.items())
     mark([133],current and inherited and original_preserved and repo.get('status')=='PASS' and repo.get('implementation_sha256')==implementation and
-         verify.get('deterministic_rebuild') is True and verify.get('compiled_sources')==60 and read('upstream-tests.json').get('status')=='PASS' and
+         verify.get('deterministic_rebuild') is True and verify.get('compiled_sources')==expected_compiled and read('upstream-tests.json').get('status')=='PASS' and
          read('tests-unit.json').get('run')==6 and read('tests-unit.json').get('failures')==read('tests-unit.json').get('errors')==0 and
-         tests.get('run')==len(passed)==len(tests.get('discovered',[]))==136 and all(p['status']=='PASS' and p['process_exit_code']==0 for p in tests.get('processes',[])),
+         tests.get('run')==len(passed)==len(tests.get('discovered',[]))==expected_tests and all(p['status']=='PASS' and p['process_exit_code']==0 for p in tests.get('processes',[])),
          ['all inherited denominators unchanged','all discovered native cases executed','repository / compiler / dialect / upstream evidence'])
     mark([135],current and (root/'development/modules/core-game/PASS_05_RECEIPT.md').is_file() and
          all(row['evidence'] for key,row in cases.items() if row['status']=='PASS'),['source-bound execution receipts; absent or failed cases never promoted'])

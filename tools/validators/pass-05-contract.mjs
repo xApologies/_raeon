@@ -1,3 +1,4 @@
+import {matchesPass06} from './pass-06-contract.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
@@ -24,10 +25,12 @@ export function pass05(root) {
   if (!decision) return null;
   for (const [file, expected] of Object.entries({...decision.sources, ...decision.preserved_tests,
       ...decision.qmo_sources, ...decision.sealed_receipts})) {
-    if (hash(fs.readFileSync(path.join(root,file))) !== expected) throw new Error('Pass-5 source integrity: '+file);
+    const actual=hash(fs.readFileSync(path.join(root,file)));
+    if (actual !== expected && !matchesPass06(root,file,actual,expected)) throw new Error('Pass-5 source integrity: '+file);
   }
   for (const [file, entry] of Object.entries(decision.changes)) {
-    if (hash(fs.readFileSync(path.join(root,file))) !== entry.after_sha256) throw new Error('Pass-5 changed source integrity: '+file);
+    const actual=hash(fs.readFileSync(path.join(root,file)));
+    if (actual !== entry.after_sha256 && !matchesPass06(root,file,actual,entry.after_sha256)) throw new Error('Pass-5 changed source integrity: '+file);
   }
   return decision;
 }
@@ -36,7 +39,8 @@ export function matchesPass05(root,file,actual,historical) {
   // The caller already hashed this file. Match exactly the authenticated
   // amendment for it; the full new source set is checked by pass05Sources.
   const entry = declaration(root)?.changes[file];
-  return Boolean(entry && entry.before_sha256 === historical && entry.after_sha256 === actual);
+  return Boolean(entry && entry.before_sha256 === historical &&
+    (entry.after_sha256 === actual || matchesPass06(root,file,actual,entry.after_sha256))) || matchesPass06(root,file,actual,historical);
 }
 
 export function projectPass05File(root,file,value) {
