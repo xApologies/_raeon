@@ -1,5 +1,8 @@
 """Supplemental native INT/codec checks; full gameplay is in test_pass_05.py."""
 import importlib.util
+import hashlib
+import json
+import sys
 import unittest
 from support import ROOT
 from raeon_genesis_horizon.toolchain import initialize
@@ -17,6 +20,23 @@ class NodeValues(unittest.TestCase):
 
     def prime(self,h,n,r,rank):
         return {'H':h,'N':n,'R':r,'H_max':rank,'revision':0,'state':nodes.state(h,n*rank+r,rank)}
+
+    def test_exact_authority_pointer_amendments_do_not_allow_corpus_changes(self):
+        sys.path.insert(0,str(ROOT/'tools'))
+        from genesis_runtime_pass05 import approved_authority_pointer
+        decision=json.loads((ROOT/'provenance/decisions/raeon-pass-05.json').read_text(encoding='utf8'))
+        paths=['data/cycles/cycle_01/primes/working-model.json','data/cycles/cycle_01/utilities/overview.json',
+               'design/cards/cycle_01/utilities/SYSTEM.md','design/game/board/SYSTEM.md','design/game/match/SYSTEM.md']
+        for path in paths:
+            row=decision['changes'][path];actual=hashlib.sha256((ROOT/path).read_bytes()).hexdigest()
+            with self.subTest(path=path):
+                self.assertTrue(approved_authority_pointer(path,row['before_sha256'],actual))
+                self.assertFalse(approved_authority_pointer(path,'0'*64,actual))
+                self.assertFalse(approved_authority_pointer(path,row['before_sha256'],'0'*64))
+                self.assertFalse(approved_authority_pointer(path.upper(),row['before_sha256'],actual))
+                for protected in ['data/qmo/cycle1/manifold_pair_relations.json','mathematics/unknown.json',
+                                  'data/cycles/cycle_01/utilities/catalog.json','design/game/unknown.md']:
+                    self.assertFalse(approved_authority_pointer(protected,row['before_sha256'],actual))
 
     def test_native_integer_no_node_cap_and_exact_canonical_encoding(self):
         n=2**100+17;p=self.prime(3,n,2,3)

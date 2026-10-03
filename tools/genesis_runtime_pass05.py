@@ -28,6 +28,35 @@ TESTS={
 VALUE_TESTS={'test_native_integer_no_node_cap_and_exact_canonical_encoding':[67],
              'test_negative_node_invariants_and_legacy_charge_rejected':[75,76]}
 
+# Exact user-authorized pointer additions, not permission to rewrite these trees.
+# The legacy payloads and every FG/QMO/mathematics source remain protected.
+AUTHORITY_POINTER_HASHES={
+ 'data/cycles/cycle_01/primes/working-model.json':('5f2d6ab23fe76d0193bc1185dc401412a8db3cd2781d0d6048c1b69792baf82b','76ea4c6e9c9f2fafb00d41a55eca5481eb7f65d0a3745dfdd80c4f6849059abb'),
+ 'data/cycles/cycle_01/utilities/overview.json':('884c0f4ccb7f4ff35d3811cf6b7a728012436e96c075e9a6c86b35f5344328e7','ab6dcbd7ce2b735d36ab8b3a237554f89ed6e318026cafbb20ebff1a1b1359f3'),
+ 'design/cards/cycle_01/utilities/SYSTEM.md':('792866932e52d4e892537f23a946c6a70ae1ad9e22b5661378d533e973a2b5fc','885b0144e66540ef3b6fcd8b2f4ec6bfa7f78c84c2dccf89ed0d2e2233a01006'),
+ 'design/game/board/SYSTEM.md':('7131cb473e21ade6fce55b772ae6274cf86103d91828aa283229aab95f87fe1f','6a8999ecc09a95d6d3cd7f502c1270493d9a1f4b9f1cbaa4952f88bdf9a6d986'),
+ 'design/game/match/SYSTEM.md':('80d282e5a204df03b412a360266eb9a7e99114cc79cc15b3d383b4b91a068419','0ce29a259004912255a2c4a401eae47bfcb9b0af65ded072cf77cba368751051'),
+}
+
+
+def approved_authority_pointer(path,before_sha256,after_sha256):
+    return AUTHORITY_POINTER_HASHES.get(path)==(before_sha256,after_sha256)
+
+
+def protected_sources_preserved(root,baseline,changed,prefixes):
+    protected=[p for p in changed if p.startswith(prefixes)]
+    if not protected:return True
+    branch=subprocess.check_output(['git','branch','--show-current'],cwd=root,text=True).strip()
+    if not successor(root,branch):return False
+    pouch=root/'provenance/imports/raeon-pass-05/RAEON_DIPLOMATIC_POUCH_PASS_05_2026-10-01.zip'
+    if hashlib.sha256(pouch.read_bytes()).hexdigest()!=POUCH:return False
+    for path in protected:
+        if path not in AUTHORITY_POINTER_HASHES:return False
+        before=subprocess.check_output(['git','show',baseline+':'+path],cwd=root)
+        after=(root/path).read_bytes()
+        if not approved_authority_pointer(path,hashlib.sha256(before).hexdigest(),hashlib.sha256(after).hexdigest()):return False
+    return True
+
 
 def successor(root,branch):
     if branch!='codex/raeon-pass-05':return False
@@ -121,7 +150,7 @@ def audit(root,output):
     mark([133],current and inherited and original_preserved and repo.get('status')=='PASS' and repo.get('implementation_sha256')==implementation and
          verify.get('deterministic_rebuild') is True and verify.get('compiled_sources')==60 and read('upstream-tests.json').get('status')=='PASS' and
          read('tests-unit.json').get('run')==6 and read('tests-unit.json').get('failures')==read('tests-unit.json').get('errors')==0 and
-         tests.get('run')==len(passed)==len(tests.get('discovered',[]))==135 and all(p['status']=='PASS' and p['process_exit_code']==0 for p in tests.get('processes',[])),
+         tests.get('run')==len(passed)==len(tests.get('discovered',[]))==136 and all(p['status']=='PASS' and p['process_exit_code']==0 for p in tests.get('processes',[])),
          ['all inherited denominators unchanged','all discovered native cases executed','repository / compiler / dialect / upstream evidence'])
     mark([135],current and (root/'development/modules/core-game/PASS_05_RECEIPT.md').is_file() and
          all(row['evidence'] for key,row in cases.items() if row['status']=='PASS'),['source-bound execution receipts; absent or failed cases never promoted'])

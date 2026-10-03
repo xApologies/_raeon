@@ -90,8 +90,9 @@ def audit(root, output):
     mark([12],(root/'development/modules/core-game/PASS_03_POLICY_GATES.json').is_file(),
          ['PASS_03_POLICY_GATES.json','PASS_03_EXECUTION.md','original nested v0.2 mathematics and generator skeleton'])
     changed = git('diff','--name-only',CORRECTED,'HEAD').splitlines()
-    preserved = not any(p.startswith(('data/cycles/','data/qmo/','data/render_specs/','mathematics/','design/','provenance/sources/')) for p in changed)
-    mark([14],preserved,['Git source-byte preservation comparison with '+CORRECTED])
+    from genesis_runtime_pass05 import protected_sources_preserved
+    preserved = protected_sources_preserved(root,CORRECTED,changed,('data/cycles/','data/qmo/','data/render_specs/','mathematics/','design/','provenance/sources/'))
+    mark([14],preserved,['Git source-byte comparison with '+CORRECTED+'; only five exact Pass-05 authority-pointer hash pairs permitted'])
     legacy = json.loads((root/'provenance/decisions/raeon-pass-03.json').read_text())['preserved_tests']
     import hashlib
     unchanged = all(hashlib.sha256((root/p).read_bytes()).hexdigest()==sha for p,sha in legacy.items())

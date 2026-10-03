@@ -13,6 +13,7 @@ VERSION = '0.5.0'
 PREFIXES = {
     'hypervisor': ['platform/shared/python_hypervisor/', 'tests/unit/hypervisor/'],
     'horizon': ['game/match/', 'tools/genesis_runtime_pass05.py', 'provenance/decisions/raeon-pass-05.json',
+                'design/cards/cycle_01/utilities/SYSTEM.md', 'design/game/board/SYSTEM.md', 'design/game/match/SYSTEM.md',
                 'provenance/imports/raeon-pass-05/', 'development/modules/core-game/PASS_05_EXECUTION.md',
                 'game/primes/', 'data/topology/configuration-spaces.json', 'tools/genesis_runtime_pass04.py',
                 'provenance/decisions/raeon-pass-04.json', 'provenance/imports/raeon-pass-04/',

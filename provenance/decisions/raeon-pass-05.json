@@ -48,9 +48,9 @@
     "tests/integration/genesis_horizon/fixtures/pass04-checkpoint.zip": "e709e2bd1cd9f74209efc7510fa274f797690c118e00b416176cb59bf347318c",
     "tests/integration/genesis_horizon/pass_05_support.py": "fd1b59ef940e778ec39a80ed283a37b0ab6da32bdf86967b3a8eb2160acbf158",
     "tests/integration/genesis_horizon/test_pass_05.py": "28f53eceab230b089b0ad2469454b6d4aada141b02d85012c9a5cdea988b6c3e",
-    "tests/integration/genesis_horizon/test_pass_05_values.py": "6d180e37f30e2fc6bc73b746539b3233e8441cf96f580bd3818b3a89e857a75c",
+    "tests/integration/genesis_horizon/test_pass_05_values.py": "3c8a29616c5de91a291e3a03367cb6136dc73d4b655c80851bc3cc320d325471",
     "tests/regression/pass-05-contract.test.mjs": "95d45e4b39507991470621fe474fc2a78821dfb62e46f25496b2d7839a028d94",
-    "tools/genesis_runtime_pass05.py": "5e7e8f8459ba59ba9766bcf00ab71b5ae46ba51372e80b55d437049745930384"
+    "tools/genesis_runtime_pass05.py": "2999b056c7b7bee641c6fa3b949a7de6fac339915f52b4a5df3e57bd6d2051d8"
   },
   "changes": {
     "AGENTS.md": {
@@ -139,15 +139,15 @@
     },
     "tools/genesis_runtime_distribution.py": {
       "before_sha256": "44575d3adfe4204627f7aac787ac06f6832eb445baa48e2cd5b0dce2991007c7",
-      "after_sha256": "2b2116f3c807e470a2b2575514c752e70e25e3867d410ba0c837ea9bf6ca603a"
+      "after_sha256": "0c9d8b91ab25f8a80251051bf4a021032df7e7ab3665386bf46179096ac0cba1"
     },
     "tools/genesis_runtime_pass02.py": {
       "before_sha256": "3694d2e213bc0d1639d94fef6ff3f75ce51e855040dec4609588cee8e480dc7e",
-      "after_sha256": "50077260b5cc5681d2e4bae9f9eead3e30b257558cb715b207754b48502c4e75"
+      "after_sha256": "2654e441aea89e053cdf9ca44f7eb7da07e4841856673a0eb3a92f88bc76fbe4"
     },
     "tools/genesis_runtime_pass03.py": {
       "before_sha256": "291d2725a9aeac9d65b800202eedbe0b85c8c76570404771f1afbf87f07714b5",
-      "after_sha256": "e042e47f15a1a7e37ad91d9a54fadf9bb327b4c3c10c41d5a62c7c9cd3384533"
+      "after_sha256": "e5cf55c92ad64219c9e58c87b56ba3f7822a7cd677c96b9fae25f55042d51a0b"
     },
     "tools/genesis_runtime_pass03b.py": {
       "before_sha256": "e6a32ef7c4f2d449501682e16e357ee71fe4230860ed47bde34f9ab469256b4e",

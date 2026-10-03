@@ -103,10 +103,11 @@ def audit(root, output):
          ['pass-02-baseline/pass-01-acceptance.json', 'test_empty_baseline_and_native_inventory'])
     mark([3], read('upstream-readonly.json').get('status') == 'PASS', ['upstream-readonly.json'])
     changed = git('diff', '--name-only', START, 'HEAD').splitlines()
-    preserved = not any(p.startswith(('data/cycles/', 'data/qmo/', 'mathematics/', 'design/')) for p in changed)
+    from genesis_runtime_pass05 import protected_sources_preserved
+    preserved = protected_sources_preserved(root, START, changed, ('data/cycles/', 'data/qmo/', 'mathematics/', 'design/'))
     repository = read('repository-validation.json')
     repo_ok = repository.get('status') == 'PASS' and repository.get('implementation_sha256') == implementation
-    mark([10, 76], preserved and repo_ok, ['Git changed-path check', 'repository-validation.json'])
+    mark([10, 76], preserved and repo_ok, ['Git source-byte check; only five exact Pass-05 authority-pointer hash pairs permitted', 'repository-validation.json'])
     # All declared handlers have concrete behavior tests, including all six recovery profiles.
     all_operations = all(name in passed for name in TESTS)
     mark([12], all_operations and read('build.json').get('status') == 'PASS', ['build.json', *TESTS])
